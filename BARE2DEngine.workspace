@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="BARE2DEngine" Database="" Version="10000">
+  <Project Name="BARE2DEngine" Path="BARE2DEngine.project" Active="No"/>
+  <Project Name="BARETests" Path="BARETests/BARETests.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="BARE2DEngine" ConfigName="Release"/>
+      <Project Name="BARETests" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="no">
+      <Environment/>
+      <Project Name="BARE2DEngine" ConfigName="Release"/>
+      <Project Name="BARETests" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
