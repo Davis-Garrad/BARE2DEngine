@@ -1,4 +1,4 @@
-#include "InputManager.h"
+#include "InputManager.hpp"
 
 namespace BARE2D {
 

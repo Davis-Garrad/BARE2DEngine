@@ -1,17 +1,17 @@
-Release/Source_App.cpp.o: Source/App.cpp Source/App.h Source/BAREErrors.h \
- Source/ScreenList.h Source/BARE2DEngine.h Source/InputManager.h \
- Source/Screen.h Source/Window.h
+Release/Source_App.cpp.o: Source/App.cpp Source/App.hpp \
+ Source/BAREErrors.hpp Source/ScreenList.hpp Source/BARE2DEngine.hpp \
+ Source/InputManager.hpp Source/Screen.hpp Source/Window.hpp
 
-Source/App.h:
+Source/App.hpp:
 
-Source/BAREErrors.h:
+Source/BAREErrors.hpp:
 
-Source/ScreenList.h:
+Source/ScreenList.hpp:
 
-Source/BARE2DEngine.h:
+Source/BARE2DEngine.hpp:
 
-Source/InputManager.h:
+Source/InputManager.hpp:
 
-Source/Screen.h:
+Source/Screen.hpp:
 
-Source/Window.h:
+Source/Window.hpp:

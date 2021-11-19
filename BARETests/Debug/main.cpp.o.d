@@ -1,17 +1,17 @@
-Debug/main.cpp.o: main.cpp ../Source/BARE2DEngine.h \
- ../Source/BAREErrors.h ../Source/App.h ../Source/ScreenList.h \
- ../Source/Window.h TestScreen.h ../Source/Screen.h
+Debug/main.cpp.o: main.cpp ../Source/BARE2DEngine.hpp ../Source/App.hpp \
+ ../Source/BAREErrors.hpp ../Source/ScreenList.hpp ../Source/Window.hpp \
+ TestScreen.h ../Source/Screen.hpp
 
-../Source/BARE2DEngine.h:
+../Source/BARE2DEngine.hpp:
 
-../Source/BAREErrors.h:
+../Source/App.hpp:
 
-../Source/App.h:
+../Source/BAREErrors.hpp:
 
-../Source/ScreenList.h:
+../Source/ScreenList.hpp:
 
-../Source/Window.h:
+../Source/Window.hpp:
 
 TestScreen.h:
 
-../Source/Screen.h:
+../Source/Screen.hpp:

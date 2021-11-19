@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-#include <BARE2DEngine.h>
-#include <App.h>
-#include <Window.h>
+#include <BARE2DEngine.hpp>
+#include <App.hpp>
+#include <Window.hpp>
 
 #include "TestScreen.h"
 

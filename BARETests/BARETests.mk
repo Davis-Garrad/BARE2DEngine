@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Davis-Dev
-Date                   :=15/11/21
+Date                   :=19/11/21
 CodeLitePath           :=/home/davis-dev/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/TestScreen.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/TestScreen.cpp$(ObjectSuffix) 
 
 
 
@@ -98,17 +98,17 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/TestScreen.cpp$(ObjectSuffix): TestScreen.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/TestScreen.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/TestScreen.cpp$(DependSuffix) -MM TestScreen.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/TestScreen.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/TestScreen.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/TestScreen.cpp$(PreprocessSuffix): TestScreen.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/TestScreen.cpp$(PreprocessSuffix) TestScreen.cpp
-
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
+$(IntermediateDirectory)/TestScreen.cpp$(ObjectSuffix): TestScreen.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/TestScreen.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/TestScreen.cpp$(DependSuffix) -MM TestScreen.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/TestScreen.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/TestScreen.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/TestScreen.cpp$(PreprocessSuffix): TestScreen.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/TestScreen.cpp$(PreprocessSuffix) TestScreen.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

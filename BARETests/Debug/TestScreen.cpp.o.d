@@ -1,8 +1,8 @@
-Debug/TestScreen.cpp.o: TestScreen.cpp TestScreen.h ../Source/Screen.h \
- ../Source/Logger.h
+Debug/TestScreen.cpp.o: TestScreen.cpp TestScreen.h ../Source/Screen.hpp \
+ ../Source/Logger.hpp
 
 TestScreen.h:
 
-../Source/Screen.h:
+../Source/Screen.hpp:
 
-../Source/Logger.h:
+../Source/Logger.hpp:

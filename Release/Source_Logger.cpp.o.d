@@ -1,6 +1,6 @@
-Release/Source_Logger.cpp.o: Source/Logger.cpp Source/Logger.h \
- Source/BAREErrors.h
+Release/Source_Logger.cpp.o: Source/Logger.cpp Source/Logger.hpp \
+ Source/BAREErrors.hpp
 
-Source/Logger.h:
+Source/Logger.hpp:
 
-Source/BAREErrors.h:
+Source/BAREErrors.hpp:

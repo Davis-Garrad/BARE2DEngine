@@ -1,6 +1,6 @@
-#include "ScreenList.h"
+#include "ScreenList.hpp"
 
-#include "Screen.h"
+#include "Screen.hpp"
 
 namespace BARE2D {
 

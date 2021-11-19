@@ -1,21 +1,18 @@
-#include "App.h"
+#include "App.hpp"
 
 #include <SDL2/SDL.h>
 #include <GL/gl.h>
 
-#include "BARE2DEngine.h"
-#include "InputManager.h"
-#include "Screen.h"
-#include "Window.h"
+#include "BARE2DEngine.hpp"
+#include "InputManager.hpp"
+#include "Screen.hpp"
+#include "Window.hpp"
 
 namespace BARE2D {
 
 	App::App()
 	{
-		BAREError err = init();
-		if(err != BAREError::NONE) {
-			throwFatalError(getErrString(err));
-		}
+		init();
 	}
 
 	App::~App()
@@ -29,10 +26,7 @@ namespace BARE2D {
 	{
 		// Init if we haven't already
 		if(!m_isInited) {
-			BAREError err = init();
-			if(err != BAREError::NONE) {
-				throwFatalError(getErrString(err));
-			}
+			init();
 		}
 		
 		// Start the gameloop!
@@ -60,17 +54,16 @@ namespace BARE2D {
 	}
 
 
-	BAREError App::init()
+	void App::init()
 	{
 		// Make sure not to init twice
-		if(m_isInited) return BAREError::DOUBLE_INIT;
+		if(m_isInited) throwFatalError(BAREError::DOUBLE_INIT);
 		
 		// Init the screen list
 		m_screenList = std::make_unique<ScreenList>();
 		
 		// Init the engine
-		BAREError err = BARE2D::init();
-		if(err != BAREError::NONE) return err; // Error has occured!
+		BARE2D::init();
 		
 		// Uncomment this to require hardware acceleration: (defaults to allow accelerated OR accept non-accelerated)
 		// SDL_GL_SetAttribute(SDL_GL_ACCELERATED_VISUAL, 1);
@@ -80,12 +73,10 @@ namespace BARE2D {
 		
 		// Init the window
 		m_window = new Window();
-		err = m_window->create(0);
-		if(err != BAREError::NONE) return err; // Error has occured!
+		m_window->create(0);
 		
 		// Make sure we don't double init by setting this var to true
 		m_isInited = true;
-		return BAREError::NONE; // No err
 	}
 
 	void App::update()

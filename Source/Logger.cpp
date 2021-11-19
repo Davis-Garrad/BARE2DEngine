@@ -1,8 +1,8 @@
-#include "Logger.h"
+#include "Logger.hpp"
 
 #include <chrono>
 
-#include "BAREErrors.h"
+#include "BAREErrors.hpp"
 
 namespace BARE2D {
 

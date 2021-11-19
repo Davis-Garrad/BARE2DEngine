@@ -1,6 +1,6 @@
 Release/Source_ScreenList.cpp.o: Source/ScreenList.cpp \
- Source/ScreenList.h Source/Screen.h
+ Source/ScreenList.hpp Source/Screen.hpp
 
-Source/ScreenList.h:
+Source/ScreenList.hpp:
 
-Source/Screen.h:
+Source/Screen.hpp:

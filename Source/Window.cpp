@@ -1,8 +1,8 @@
-#include "Window.h"
+#include "Window.hpp"
 
 #include <GL/glew.h>
 
-#include "Logger.h"
+#include "Logger.hpp"
 
 namespace BARE2D {
 
@@ -14,7 +14,7 @@ namespace BARE2D {
 	{
 	}
 	
-	BAREError Window::create(unsigned int flags) {
+	void Window::create(unsigned int flags) {
 		// Since we are creating an OpenGL application, this is mandatory.
 		Uint32 windowFlags = SDL_WINDOW_OPENGL;
 		
@@ -30,7 +30,7 @@ namespace BARE2D {
 		
 		// Check if creation was successful
 		if(m_SDLWindow == nullptr) {
-			return BAREError::SDL_FAILURE;
+			throwFatalError(BAREError::SDL_FAILURE);
 		}
 		
 		// This enables glew's experimental mode, where we can use core profiles, etc.
@@ -41,7 +41,7 @@ namespace BARE2D {
 		
 		// Check if creation was successful
 		if(m_GLContext == nullptr) {
-			return BAREError::SDL_FAILURE;
+			throwFatalError(BAREError::SDL_FAILURE);
 		}
 		
 		// Now that we actually have a GL context, we need to set it up - done with the help of GLEW!
@@ -49,7 +49,7 @@ namespace BARE2D {
 		
 		// Check for errors
 		if(err != GLEW_OK) {
-			return BAREError::GLEW_FAILURE;
+			throwFatalError(BAREError::GLEW_FAILURE);
 		}
 		
 		// Now log the OpenGL verion used, just a useful piece of info
@@ -64,8 +64,6 @@ namespace BARE2D {
 		// Enable alpha blend
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-		
-		return BAREError::NONE;
 	}
 
 	void Window::setTitle(std::string newTitle) {

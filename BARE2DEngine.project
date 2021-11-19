@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="BARE2DEngine" Version="11000" InternalType="Library">
   <VirtualDirectory Name="Headers">
-    <File Name="Source/Window.h"/>
-    <File Name="Source/ScreenList.h"/>
-    <File Name="Source/Screen.h"/>
-    <File Name="Source/Logger.h"/>
-    <File Name="Source/InputManager.h"/>
-    <File Name="Source/BAREErrors.h"/>
-    <File Name="Source/BARE2DEngine.h"/>
-    <File Name="Source/App.h"/>
+    <File Name="Source/ShaderProgram.hpp"/>
+    <File Name="Source/GLContextManager.hpp"/>
+    <File Name="Source/IOManager.hpp"/>
+    <File Name="Source/Window.hpp"/>
+    <File Name="Source/Texture.hpp"/>
+    <File Name="Source/Sound.hpp"/>
+    <File Name="Source/Script.hpp"/>
+    <File Name="Source/ScreenList.hpp"/>
+    <File Name="Source/Screen.hpp"/>
+    <File Name="Source/ResourceManager.hpp"/>
+    <File Name="Source/MutableTexture.hpp"/>
+    <File Name="Source/Logger.hpp"/>
+    <File Name="Source/InputManager.hpp"/>
+    <File Name="Source/Font.hpp"/>
+    <File Name="Source/BAREErrors.hpp"/>
+    <File Name="Source/BARE2DEngine.hpp"/>
+    <File Name="Source/App.hpp"/>
+    <File Name="Source/PicoPNG.hpp"/>
+    <File Name="Source/Cache.hpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="Source">
+    <File Name="Source/ShaderProgram.cpp"/>
+    <File Name="Source/GLContextManager.cpp"/>
+    <File Name="Source/IOManager.cpp"/>
+    <File Name="Source/PicoPNG.cpp"/>
+    <File Name="Source/MutableTexture.cpp"/>
+    <File Name="Source/Font.cpp"/>
+    <File Name="Source/Script.cpp"/>
+    <File Name="Source/Sound.cpp"/>
+    <File Name="Source/Cache.cpp"/>
+    <File Name="Source/ResourceManager.cpp" ExcludeProjConfig=""/>
     <File Name="Source/Logger.cpp"/>
     <File Name="Source/Window.cpp"/>
     <File Name="Source/BARE2DEngine.cpp"/>
@@ -33,7 +54,7 @@
       <ResourceCompiler Options=""/>
     </GlobalSettings>
     <Configuration Name="Release" CompilerType="GCC" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-g" C_Options="" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+      <Compiler Options="-g;-std=c++17" C_Options="" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
       </Compiler>
       <Linker Options=" -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW" Required="yes">

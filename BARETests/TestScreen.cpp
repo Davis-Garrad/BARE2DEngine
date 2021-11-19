@@ -2,7 +2,7 @@
 
 #include <math.h>
 #include <GL/gl.h>
-#include <Logger.h>
+#include <Logger.hpp>
 
 TestScreen::TestScreen() : BARE2D::Screen()
 {
