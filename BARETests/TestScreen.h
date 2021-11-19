@@ -1,11 +1,14 @@
 #pragma once
 
 #include <Screen.hpp>
+#include <Window.hpp>
+#include <ShaderProgram.hpp>
+#include <Texture.hpp>
 
 class TestScreen : public BARE2D::Screen
 {
 public:
-    TestScreen();
+    TestScreen(BARE2D::Window* window);
     ~TestScreen();
 	
     virtual void initScreen() override;
@@ -20,4 +23,8 @@ public:
     virtual unsigned int getNextScreenIndex() override;
 private:
 	float m_time = 0;
+	
+	BARE2D::Window* m_window = nullptr;
+	BARE2D::ShaderProgram m_textureShader;
+	BARE2D::Texture m_texture;
 };

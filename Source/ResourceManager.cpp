@@ -1,6 +1,7 @@
 #include "ResourceManager.hpp"
 
 #include <vector>
+#include <string>
 
 #include "IOManager.hpp"
 #include "BAREErrors.hpp"
@@ -9,11 +10,27 @@
 
 namespace BARE2D {
 
-	Cache<Texture>* ResourceManager::m_textures = nullptr;
-	Cache<MutableTexture>* ResourceManager::m_mutableTextures = nullptr;
-	Cache<Sound>* ResourceManager::m_sounds = nullptr;
-	Cache<Script>* ResourceManager::m_scripts = nullptr;
-	Cache<Font>* ResourceManager::m_fonts = nullptr;
+	Cache<Texture>* ResourceManager::m_textures = new Cache<Texture>();
+	Cache<MutableTexture>* ResourceManager::m_mutableTextures = new Cache<MutableTexture>();
+	Cache<Sound>* ResourceManager::m_sounds = new Cache<Sound>();
+	Cache<Script>* ResourceManager::m_scripts = new Cache<Script>();
+	Cache<Font>* ResourceManager::m_fonts = new Cache<Font>();
+	
+	ShaderProgram ResourceManager::loadShaders(std::string& vertShaderSource, std::string& fragShaderSource) {
+		ShaderProgram newProgram;
+		
+		newProgram.compileShaders(vertShaderSource.c_str(), fragShaderSource.c_str());
+		
+		return newProgram;
+	}
+	
+	ShaderProgram ResourceManager::loadShadersFromSource(std::string& vertShaderSource, std::string& fragShaderSource) {
+		ShaderProgram newProgram;
+		
+		newProgram.compileShadersFromSource(vertShaderSource.c_str(), fragShaderSource.c_str());
+		
+		return newProgram;
+	}
 	
 	Texture ResourceManager::loadTexture(std::string& texturePath)
 	{

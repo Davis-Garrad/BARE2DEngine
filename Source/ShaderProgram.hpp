@@ -22,7 +22,7 @@ namespace BARE2D {
 		 * @param vertexShaderPath The path to the vertex shader
 		 * @param fragmentShaderPath The path to the fragment shader.
 		 */
-		void compileShaders(const std::string& vertexShaderPath, const std::string& fragmentShaderPath);
+		void compileShaders(const char* vertexShaderPath, const char* fragmentShaderPath);
 		
 		/**
 		 * @brief Similar to compileShaders, this just compiles the shaders.

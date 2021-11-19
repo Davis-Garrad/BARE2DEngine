@@ -19,7 +19,7 @@ namespace BARE2D {
 	{
 	public:
 		/**
-		 * @brief Loads some shaders if they aren't already in the cache. Combines both to give a full shader program.
+		 * @brief Loads some shaders. Combines both to give a full shader program. Does not cache.
 		 * @param vertShaderPath The path to the vertex shader
 		 * @param fragShaderPath The path to the fragment shader
 		 * @return A GLSL program of type ShaderProgram instance which is the compiled version of vertShader + fragShader.
@@ -27,14 +27,12 @@ namespace BARE2D {
 		static ShaderProgram loadShaders(std::string& vertShaderPath, std::string& fragShaderPath);
 		
 		/**
-		 * @brief Loads some shaders from their source if they don't exist in the cache. Caches these under given key.
+		 * @brief Loads some shaders from their source. Does not cache
 		 * @param vertShaderSource The source to compile from.
-		 * @param vertShaderKey The key to cache the vertex shader under.
 		 * @param fragShaderSource The source to compile from.
-		 * @param fragShaderKey The key to cache the fragment shader under.
 		 * @return 
 		 */
-		static ShaderProgram loadShadersFromSource(std::string& vertShaderSource, std::string& vertShaderKey, std::string& fragShaderSource, std::string& fragShaderKey);
+		static ShaderProgram loadShadersFromSource(std::string& vertShaderSource, std::string& fragShaderSource);
 	
 		/**
 		 * @brief Loads a texture if it isn't already in the cache. 

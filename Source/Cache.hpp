@@ -34,9 +34,10 @@ namespace BARE2D {
 		void clear();
 		
 	private:
-		std::unordered_map<T*, std::string> m_data;
+		std::unordered_map<std::string, T*> m_data;
 
 	};
 
 }
 
+#include "Cache_impl.tcc"

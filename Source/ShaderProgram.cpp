@@ -12,11 +12,9 @@ namespace BARE2D {
 
 	ShaderProgram::~ShaderProgram()
 	{
-		// As of right now, we don't really need to do anything here except make sure that we've dispose()'d ourselves
-		destroy();
 	}
 
-	void ShaderProgram::compileShaders(const std::string& vertexShaderPath, const std::string& fragmentShaderPath)
+	void ShaderProgram::compileShaders(const char* vertexShaderPath, const char* fragmentShaderPath)
 	{
 		// Just read the two shaders and compile them
 		
@@ -37,6 +35,12 @@ namespace BARE2D {
 		// Now to actually compile them
 		// Tell OpenGL to give us an ID
 		m_programID = glCreateProgram();
+		
+		// Check for errors
+		if(m_programID == 0) {
+			// Error occurred!
+			throwFatalError(BAREError::GLSL_PROGRAM_FAILURE);
+		}
 		
 		// Do the same for the vertex and fragment shaders
 		m_vertexShaderID = glCreateShader(GL_VERTEX_SHADER);
@@ -79,7 +83,7 @@ namespace BARE2D {
 		
 		// Check if they're linked now (error check)
 		GLint linked = GL_FALSE;
-		glGetProgramiv(m_programID, GL_LINK_STATUS, (int*)&linked);
+		glGetProgramiv(m_programID, GL_LINK_STATUS, &linked);
 		
 		// Error check
 		if(linked == GL_FALSE) {
@@ -99,7 +103,7 @@ namespace BARE2D {
 			
 			// Throw fatal error, we cannot continue.
 			throwError(BAREError::SHADER_LINK_FAILURE);
-			throwFatalError("Shaders failed to link: " + std::string(&(errorLog[0])));
+			throwFatalError("Shaders failed to link: " + std::string(errorLog.begin(), errorLog.end()));
 		}
 		
 		// Now that we have everything all linked up and it's all good, we can just detach the shaders and delete them. They're now in the program.
@@ -114,7 +118,7 @@ namespace BARE2D {
 	GLint ShaderProgram::getUniformLocation(const std::string& uniform)
 	{
 		// Just use OpenGL's calls, then check for errors
-		GLint location = glGetUniformLocation(m_programID, uniform.c_str());
+		unsigned int location = glGetUniformLocation(m_programID, uniform.c_str());
 		
 		// Error check
 		if(location == GL_INVALID_INDEX) {
@@ -178,18 +182,18 @@ namespace BARE2D {
 			// Not compiled! It should be, but it ain't.
 			// Get the length of the log
 			GLint maxLength = 0;
-			glGetShaderiv(m_programID, GL_INFO_LOG_LENGTH, &maxLength);
+			glGetShaderiv(id, GL_INFO_LOG_LENGTH, &maxLength);
 			
 			// Get the actual log (null-terminated, but maxLength accounts for that)
 			std::vector<char> errorLog(maxLength);
-			glGetShaderInfoLog(m_programID, maxLength, &maxLength, &errorLog[0]);
+			glGetShaderInfoLog(id, maxLength, &maxLength, &errorLog[0]);
 			
 			// Now that the compilation has failed and given us the info we want, we can dispose of the shader.
 			glDeleteShader(id);
 			
 			// Throw fatal error, we cannot continue.
 			throwError(BAREError::SHADER_COMPILE_FAILURE);
-			throwFatalError("Shader failed to compile: " + name);
+			throwFatalError("Shader failed to compile: " + name + "\n\n" + std::string(errorLog.begin(), errorLog.end()));
 		}
 	}
 

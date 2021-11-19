@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 	BARE2D::App app;
 	app.getWindow()->setSize(800, 600);
 	
-	TestScreen* screen = new TestScreen();
+	TestScreen* screen = new TestScreen(app.getWindow());
 	
 	app.getScreenList()->addEntryScreen(screen);
 	

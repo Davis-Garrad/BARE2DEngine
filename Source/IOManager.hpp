@@ -20,7 +20,7 @@ namespace BARE2D {
 		
 		
 		
-		static bool readFileToBuffer(const std::string& filepath, std::string& buf, std::ios_base::openmode mode = std::ios::binary);
+		static bool readFileToBuffer(const char* filepath, std::string& buf, std::ios_base::openmode mode = std::ios::binary);
 		
 		// Other functions...
 
@@ -28,3 +28,4 @@ namespace BARE2D {
 
 }
 
+#include "IOManager_impl.tcc"

@@ -1,9 +1,11 @@
 
 
 
-### LOG: Thu Nov 18 22:41:23 2021 ###
+### LOG: Fri Nov 19 15:09:56 2021 ###
 
 Thanks for using BARE2D! Original engine by Davis Garrad
 
-Entering screen! Will display pretty colours for a bit.
-Leaving screen!
+Entering screen! Will display pretty colours for a bit, then shrink, then leave!
+Cycles: 2000
+Cycles: 4000
+Cycles: 6000
