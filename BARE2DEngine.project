@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="BARE2DEngine" Version="11000" InternalType="Library">
   <VirtualDirectory Name="Headers">
+    <File Name="Source/Vertex.hpp"/>
+    <File Name="Source/BasicRenderer.hpp"/>
+    <File Name="Source/VAO.hpp"/>
+    <File Name="Source/RenderBatch.hpp"/>
+    <File Name="Source/Renderer.hpp"/>
     <File Name="Source/IOManager_impl.tcc"/>
     <File Name="Source/Cache_impl.tcc"/>
     <File Name="Source/ShaderProgram.hpp"/>
@@ -24,6 +29,9 @@
     <File Name="Source/Cache.hpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="Source">
+    <File Name="Source/BasicRenderer.cpp"/>
+    <File Name="Source/VAO.cpp"/>
+    <File Name="Source/Renderer.cpp"/>
     <File Name="Source/ShaderProgram.cpp"/>
     <File Name="Source/GLContextManager.cpp"/>
     <File Name="Source/IOManager.cpp"/>

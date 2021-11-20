@@ -4,6 +4,7 @@
 #include <Window.hpp>
 #include <ShaderProgram.hpp>
 #include <Texture.hpp>
+#include <BasicRenderer.hpp>
 
 class TestScreen : public BARE2D::Screen
 {
@@ -25,6 +26,6 @@ private:
 	float m_time = 0;
 	
 	BARE2D::Window* m_window = nullptr;
-	BARE2D::ShaderProgram m_textureShader;
+	BARE2D::BasicRenderer* m_renderer = nullptr;
 	BARE2D::Texture m_texture;
 };

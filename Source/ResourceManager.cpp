@@ -73,23 +73,23 @@ namespace BARE2D {
 			// Our data is good, so actually generate the texture, etc.
 			glGenTextures((GLsizei)1, &(loadedTex->id));
 			
-			// Bind the texture object (GLContext just makes sure the texture isn't already bound, but we know it ain't. We just made it.)
-			glBindTexture(GL_TEXTURE_2D, loadedTex->id);
+			// Bind the texture object
+			GLContextManager::getContext()->bindTexture(GL_TEXTURE_2D, loadedTex->id);
 			
 			// Upload pixel data
 			glTexImage2D(GL_TEXTURE_2D, (GLint)0, GL_RGBA, (GLsizei)loadedTex->width, (GLsizei)loadedTex->height, (GLint)0, GL_RGBA, GL_UNSIGNED_BYTE, &(textureData[0]));
 			
 			// Set some basic parameters
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
+			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
 			
 			// Generate mipmaps
 			glGenerateMipmap(GL_TEXTURE_2D);
 			
-			// Finally, unbind the texture! This should return us to our last state, just to avoid trouble.
-			glBindTexture(GL_TEXTURE_2D, GLContextManager::getContext()->getBoundTexture());
+			// Finally, unbind the texture.
+			GLContextManager::getContext()->bindTexture(GL_TEXTURE_2D, 0);
 		}
 		
 		// Now that we know our texture definitely exists, we just return an instance of it!

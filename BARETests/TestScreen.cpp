@@ -19,8 +19,16 @@ void TestScreen::destroyScreen()
 
 void TestScreen::draw()
 {
+	
+	//glClearColor(std::cos(m_time / 10000.0f)/2.0f + 0.5f, std::cos(m_time / 20000.0f)/2.0f + 0.5f, std::cos(m_time / 30000.0f)/2.0f + 0.5f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glClearColor(std::cos(m_time / 10000.0f)/2.0f + 0.5f, std::cos(m_time / 20000.0f)/2.0f + 0.5f, std::cos(m_time / 30000.0f)/2.0f + 0.5f, 1.0f);
+	
+	m_renderer->begin();
+	
+	m_renderer->draw(glm::vec4(-0.8f, -0.8f, 1.6f, 1.6f), glm::vec4(0.0f, 0.0f, 1.0f, 1.0f), m_texture.id, 0.0f);
+
+	m_renderer->end();
+	m_renderer->render();
 }
 
 unsigned int TestScreen::getNextScreenIndex()
@@ -43,8 +51,9 @@ void TestScreen::onEntry()
 	// Load a shader
 	std::string vShaderPath = "/home/davis-dev/Downloads/Shader.vert";
 	std::string fShaderPath = "/home/davis-dev/Downloads/Shader.frag";
-	m_textureShader = BARE2D::ResourceManager::loadShaders(vShaderPath, fShaderPath);
-	m_textureShader.linkShaders({"vertexPosition", "vertexColour", "vertexUV"});
+	
+	m_renderer = new BARE2D::BasicRenderer(fShaderPath, vShaderPath);
+	m_renderer->init();
 }
 
 void TestScreen::onExit()
