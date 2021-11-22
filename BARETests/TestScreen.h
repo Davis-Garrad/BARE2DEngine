@@ -6,6 +6,7 @@
 #include <Texture.hpp>
 #include <BasicRenderer.hpp>
 #include <FontRenderer.hpp>
+#include <DebugRenderer.hpp>
 
 class TestScreen : public BARE2D::Screen
 {
@@ -31,6 +32,7 @@ private:
 	BARE2D::Window* m_window = nullptr;
 	BARE2D::BasicRenderer* m_renderer = nullptr;
 	BARE2D::FontRenderer* m_fontRenderer = nullptr;
+	BARE2D::DebugRenderer* m_debugRenderer = nullptr;
 	BARE2D::Texture m_texture;
 	BARE2D::Font m_font_openSans;
 	

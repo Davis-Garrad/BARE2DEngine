@@ -36,6 +36,18 @@ void TestScreen::draw()
 	m_fontRenderer->end();
 	m_fontRenderer->render();
 	
+	float radians = m_time * M_PI * 2.0f / 60.0f;
+	float x = 0.6f * std::cos(radians);
+	float y = 0.6f * std::sin(radians);
+	
+	m_debugRenderer->begin();
+	m_debugRenderer->drawCircle(glm::vec2(0.0f, 0.0f), 3.0f, 0.6f, BARE2D::Colour(0, 255, 0, 64));
+	m_debugRenderer->drawLine(glm::vec2(0.0f, 0.0f), glm::vec2(x, y), 9.0f, BARE2D::Colour(255, 255, 255, 255));
+	m_debugRenderer->drawLine(glm::vec2(0.0f, 0.0f), glm::vec2(-x, y), 3.0f, BARE2D::Colour(255, 255, 255, 255));
+	m_debugRenderer->drawRectangle(glm::vec4(0.0f, 0.0f, 0.4f, 0.4f), 3.0f, BARE2D::Colour(255, 255, 255, 64));
+	m_debugRenderer->end();
+	m_debugRenderer->render();
+	
 	renderCount++;
 	
 	for(unsigned int i = 0; i < slowFactor; i++) {
@@ -75,6 +87,9 @@ void TestScreen::onEntry()
 	
 	m_fontRenderer = new BARE2D::FontRenderer(fShaderPath, vShaderPath);
 	m_fontRenderer->init();
+	
+	m_debugRenderer = new BARE2D::DebugRenderer();
+	m_debugRenderer->init();
 }
 
 void TestScreen::onExit()
@@ -86,18 +101,18 @@ void TestScreen::update(double dt)
 {
 	m_time++;
 	
-	if(std::abs(m_time - 120.0f) <= 0.01f || std::abs(m_time - 360.0f) <= 0.01f) {
+	if(std::abs(m_time - 240.0f) <= 0.01f || std::abs(m_time - 720.0f) <= 0.01f) {
 		m_window->setSize(300, 300);
 		BARE2D::Logger::getInstance()->log("Shrinking!");
 	}
-	if(std::abs(m_time - 240.0f) <= 0.01f) {
+	if(std::abs(m_time - 480.0f) <= 0.01f) {
 		slowFactor = 200000000;
 		m_window->setSize(800, 600);
 		BARE2D::Logger::getInstance()->log("Now emulating very very heavy rendering. " + std::to_string(renderCount) + " renders versus " + std::to_string(updateCount) + " updates.");
 		renderCount = 0;
 		updateCount = 0;
 	}
-	if(m_time >= 480.0f) {
+	if(m_time >= 960.0f) {
 		m_screenState = BARE2D::ScreenState::EXIT_APPLICATION;
 		BARE2D::Logger::getInstance()->log("Finished heavy rendering. " + std::to_string(renderCount) + " renders versus " + std::to_string(updateCount) + " updates.");
 	}
