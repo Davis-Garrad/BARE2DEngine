@@ -1,55 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="BARE2DEngine" Version="11000" InternalType="Library">
-  <VirtualDirectory Name="Headers">
-    <File Name="Source/Vertex.hpp"/>
-    <File Name="Source/BasicRenderer.hpp"/>
-    <File Name="Source/VAO.hpp"/>
-    <File Name="Source/RenderBatch.hpp"/>
-    <File Name="Source/Renderer.hpp"/>
-    <File Name="Source/IOManager_impl.tcc"/>
-    <File Name="Source/Cache_impl.tcc"/>
-    <File Name="Source/ShaderProgram.hpp"/>
-    <File Name="Source/GLContextManager.hpp"/>
-    <File Name="Source/IOManager.hpp"/>
-    <File Name="Source/Window.hpp"/>
-    <File Name="Source/Texture.hpp"/>
+  <VirtualDirectory Name="Source">
+    <File Name="Source/Timer.cpp"/>
+    <File Name="Source/Timer.hpp"/>
+    <File Name="Source/Script.cpp"/>
+    <VirtualDirectory Name="HardwareInterface">
+      <File Name="Source/ResourceManager.cpp"/>
+      <File Name="Source/ResourceManager.hpp"/>
+      <File Name="Source/Logger.hpp"/>
+      <File Name="Source/Logger.cpp"/>
+      <File Name="Source/IOManager_impl.tcc"/>
+      <File Name="Source/IOManager.hpp"/>
+      <File Name="Source/IOManager.cpp"/>
+      <File Name="Source/InputManager.hpp"/>
+      <File Name="Source/InputManager.cpp"/>
+    </VirtualDirectory>
     <File Name="Source/Sound.hpp"/>
     <File Name="Source/Script.hpp"/>
-    <File Name="Source/ScreenList.hpp"/>
-    <File Name="Source/Screen.hpp"/>
-    <File Name="Source/ResourceManager.hpp"/>
-    <File Name="Source/MutableTexture.hpp"/>
-    <File Name="Source/Logger.hpp"/>
-    <File Name="Source/InputManager.hpp"/>
     <File Name="Source/Font.hpp"/>
-    <File Name="Source/BAREErrors.hpp"/>
-    <File Name="Source/BARE2DEngine.hpp"/>
-    <File Name="Source/App.hpp"/>
-    <File Name="Source/PicoPNG.hpp"/>
+    <File Name="Source/Cache_impl.tcc"/>
     <File Name="Source/Cache.hpp"/>
-  </VirtualDirectory>
-  <VirtualDirectory Name="Source">
-    <File Name="Source/BasicRenderer.cpp"/>
-    <File Name="Source/VAO.cpp"/>
-    <File Name="Source/Renderer.cpp"/>
-    <File Name="Source/ShaderProgram.cpp"/>
-    <File Name="Source/GLContextManager.cpp"/>
-    <File Name="Source/IOManager.cpp"/>
-    <File Name="Source/PicoPNG.cpp"/>
-    <File Name="Source/MutableTexture.cpp"/>
+    <VirtualDirectory Name="Structure">
+      <File Name="Source/Screen.cpp"/>
+      <File Name="Source/Screen.hpp"/>
+      <File Name="Source/ScreenList.hpp"/>
+      <File Name="Source/ScreenList.cpp"/>
+      <File Name="Source/BAREErrors.hpp"/>
+      <File Name="Source/BAREErrors.cpp"/>
+      <File Name="Source/BARE2DEngine.hpp"/>
+      <File Name="Source/BARE2DEngine.cpp"/>
+      <File Name="Source/App.cpp"/>
+      <File Name="Source/App.hpp"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Graphics">
+      <VirtualDirectory Name="Renderers">
+        <File Name="Source/FontRenderer.cpp"/>
+        <File Name="Source/FontRenderer.hpp"/>
+        <File Name="Source/Renderer.cpp"/>
+        <File Name="Source/Renderer.hpp"/>
+        <File Name="Source/BasicRenderer.hpp"/>
+        <File Name="Source/BasicRenderer.cpp"/>
+      </VirtualDirectory>
+      <File Name="Source/Window.hpp"/>
+      <File Name="Source/Window.cpp"/>
+      <File Name="Source/Vertex.hpp"/>
+      <File Name="Source/VAO.hpp"/>
+      <File Name="Source/VAO.cpp"/>
+      <File Name="Source/Texture.hpp"/>
+      <File Name="Source/ShaderProgram.hpp"/>
+      <File Name="Source/ShaderProgram.cpp"/>
+      <File Name="Source/RenderBatch.hpp"/>
+      <File Name="Source/PicoPNG.hpp"/>
+      <File Name="Source/PicoPNG.cpp"/>
+      <File Name="Source/MutableTexture.hpp"/>
+      <File Name="Source/MutableTexture.cpp"/>
+      <File Name="Source/GLContextManager.hpp"/>
+      <File Name="Source/GLContextManager.cpp"/>
+    </VirtualDirectory>
     <File Name="Source/Font.cpp"/>
-    <File Name="Source/Script.cpp"/>
     <File Name="Source/Sound.cpp"/>
     <File Name="Source/Cache.cpp"/>
-    <File Name="Source/ResourceManager.cpp" ExcludeProjConfig=""/>
-    <File Name="Source/Logger.cpp"/>
-    <File Name="Source/Window.cpp"/>
-    <File Name="Source/BARE2DEngine.cpp"/>
-    <File Name="Source/Screen.cpp"/>
-    <File Name="Source/ScreenList.cpp"/>
-    <File Name="Source/BAREErrors.cpp"/>
-    <File Name="Source/InputManager.cpp"/>
-    <File Name="Source/App.cpp"/>
   </VirtualDirectory>
   <Description/>
   <Dependencies/>

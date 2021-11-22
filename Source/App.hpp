@@ -4,6 +4,7 @@
 
 #include "BAREErrors.hpp"
 #include "ScreenList.hpp"
+#include "Timer.hpp"
 
 namespace BARE2D
 {
@@ -44,6 +45,8 @@ namespace BARE2D
 		
 		InputManager* m_inputManager = nullptr;
 		
+		Timer* m_timer = nullptr;
+		
 		Window* m_window = nullptr;
 
 		/**
@@ -54,7 +57,7 @@ namespace BARE2D
 		/**
 		 * @brief Updates input, output, etc. Only for internal use.
 		 */
-		void update();
+		void update(double dt);
 		
 		/**
 		 * @brief Draws the current screen, based on that screen's drawing protocol.

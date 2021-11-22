@@ -47,7 +47,7 @@ namespace BARE2D {
 		/**
 		 * @brief Updates all necessary things!
 		 */
-		virtual void update() = 0;
+		virtual void update(double dt) = 0;
 		
 		/**
 		 * @brief Returns the index of the next screen. It is recommended to keep a file, say, ScreenIndices.h, where all indices are defined.

@@ -80,9 +80,10 @@ namespace BARE2D {
 		/**
 		 * @brief Loads a font to the cache.
 		 * @param fontPath The path to load the font from
+		 * @param size The size of the font to load it as.
 		 * @return An instance of the font.
 		 */
-		static Font loadFont(std::string& fontPath);
+		static Font loadFont(std::string& fontPath, int size);
 		
 		/**
 		 * @brief Clears the various caches. This is useful for debugging.

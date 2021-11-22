@@ -12,6 +12,9 @@ namespace BARE2D {
 
 	Window::~Window()
 	{
+		SDL_GL_DeleteContext(m_GLContext);
+		SDL_DestroyWindow(m_SDLWindow);
+		SDL_Quit();
 	}
 	
 	void Window::create(unsigned int flags) {

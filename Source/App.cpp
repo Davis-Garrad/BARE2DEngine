@@ -20,6 +20,7 @@ namespace BARE2D {
 		if(m_isGameRunning) {
 			exitApp();
 		}
+		delete m_window;
 	}
 
 	void App::run()
@@ -37,9 +38,19 @@ namespace BARE2D {
 		
 		// Gameloop
 		while(m_isGameRunning) {
-			update();
+			m_timer->startTimer();
+			while(m_timer->integrateFrame()) {
+				update(m_timer->getDeltaTime());
+			}
 			draw();
 			m_window->swapBuffer();
+			m_timer->endTimer();
+		}
+		
+		// Exit the app!
+		if(m_screenList) {
+			m_screenList->getCurrentScreen()->onExit();
+			m_screenList.reset(); // Destroy the screenList
 		}
 	}
 	
@@ -75,18 +86,22 @@ namespace BARE2D {
 		m_window = new Window();
 		m_window->create(0);
 		
+		// Init the timer
+		m_timer = new Timer();
+		m_timer->setDeltaTimeLimit(1.0/60.0);
+		
 		// Make sure we don't double init by setting this var to true
 		m_isInited = true;
 	}
 
-	void App::update()
+	void App::update(double dt)
 	{
 		// Update everything
 		updateInput();
 		
 		switch(m_screenList->getCurrentScreen()->getState()) {
 			case ScreenState::RUNNING:
-				m_screenList->getCurrentScreen()->update();
+				m_screenList->getCurrentScreen()->update(dt);
 				break;
 			case ScreenState::CHANGE_NEXT:
 				m_screenList->moveToNextScreen();
@@ -148,10 +163,6 @@ namespace BARE2D {
 
 	void App::exitApp()
 	{
-		if(m_screenList) {
-			m_screenList->getCurrentScreen()->onExit();
-			m_screenList.reset(); // Destroy the screenList
-		}
 		m_isGameRunning = false;
 	}
 

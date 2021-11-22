@@ -117,8 +117,24 @@ namespace BARE2D {
 	{
 	}
 
-	Font ResourceManager::loadFont(std::string& fontPath)
+	Font ResourceManager::loadFont(std::string& fontPath, int size)
 	{
+		std::string path = fontPath + std::to_string(size);
+		
+		// Check we haven't cached it
+		{
+			Font* cached = m_fonts->findItem(path);
+			
+			if(cached) 
+				return *cached;
+		}
+		
+		// We don't already have it. Time to create it!
+		Font* font = m_fonts->createItem(path);
+		
+		font->init(fontPath.c_str(), size);
+		
+		return *font;
 	}
 
 	void ResourceManager::clearCaches()
