@@ -1,5 +1,8 @@
 #include "ShaderProgram.hpp"
 
+#include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 #include "IOManager.hpp"
 #include "BAREErrors.hpp"
 
@@ -17,7 +20,6 @@ namespace BARE2D {
 	void ShaderProgram::compileShaders(const char* vertexShaderPath, const char* fragmentShaderPath)
 	{
 		// Just read the two shaders and compile them
-		
 		std::string vertexSource, fragmentSource;
 		
 		IOManager::readFileToBuffer(vertexShaderPath, vertexSource);
@@ -195,6 +197,83 @@ namespace BARE2D {
 			throwError(BAREError::SHADER_COMPILE_FAILURE);
 			throwFatalError("Shader failed to compile: " + name + "\n\n" + std::string(errorLog.begin(), errorLog.end()));
 		}
+	}
+	
+	
+	// Template specializations
+	
+
+	template<>
+	void ShaderProgram::setUniform<int>(const std::string uniform, int data) {
+		// First, get the location
+		GLint loc = getUniformLocation(uniform);
+		
+		// Now, call glUniform{whatever}
+		glUniform1i(loc, data);
+	}
+	template<>
+	void ShaderProgram::setUniform<unsigned int>(const std::string uniform, unsigned int data) {
+		// First, get the location
+		GLint loc = getUniformLocation(uniform);
+		
+		// Now, call glUniform{whatever}
+		glUniform1ui(loc, data);
+	}
+	template<>
+	void ShaderProgram::setUniform<float>(const std::string uniform, float data) {
+		// First, get the location
+		GLint loc = getUniformLocation(uniform);
+		
+		// Now, call glUniform{whatever}
+		glUniform1f(loc, data);
+	}
+	template<>
+	void ShaderProgram::setUniform<glm::vec2>(const std::string uniform, glm::vec2 data) {
+		// First, get the location
+		GLint loc = getUniformLocation(uniform);
+		
+		// Now, call glUniform{whatever}
+		glUniform2fv(loc, 1, glm::value_ptr(data));
+	}
+	template<>
+	void ShaderProgram::setUniform<glm::vec3>(const std::string uniform, glm::vec3 data) {
+		// First, get the location
+		GLint loc = getUniformLocation(uniform);
+		
+		// Now, call glUniform{whatever}
+		glUniform3fv(loc, 1, glm::value_ptr(data));
+	}
+	template<>
+	void ShaderProgram::setUniform<glm::vec4>(const std::string uniform, glm::vec4 data) {
+		// First, get the location
+		GLint loc = getUniformLocation(uniform);
+		
+		// Now, call glUniform{whatever}
+		glUniform4fv(loc, 1, glm::value_ptr(data));
+	}
+	template<>
+	void ShaderProgram::setUniform<glm::ivec2>(const std::string uniform, glm::ivec2 data) {
+		// First, get the location
+		GLint loc = getUniformLocation(uniform);
+		
+		// Now, call glUniform{whatever}
+		glUniform2iv(loc, 1, glm::value_ptr(data));
+	}
+	template<>
+	void ShaderProgram::setUniform<glm::ivec3>(const std::string uniform, glm::ivec3 data) {
+		// First, get the location
+		GLint loc = getUniformLocation(uniform);
+		
+		// Now, call glUniform{whatever}
+		glUniform3iv(loc, 1, glm::value_ptr(data));
+	}
+	template<>
+	void ShaderProgram::setUniform<glm::ivec4>(const std::string uniform, glm::ivec4 data) {
+		// First, get the location
+		GLint loc = getUniformLocation(uniform);
+		
+		// Now, call glUniform{whatever}
+		glUniform4iv(loc, 1, glm::value_ptr(data));
 	}
 
 }

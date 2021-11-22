@@ -45,8 +45,7 @@ namespace BARE2D {
 		Renderer::begin();
 		
 		// We also need to define a texture sampler for textures!
-		GLint textureUniform = m_shader.getUniformLocation("textureSampler");
-		glUniform1i(textureUniform, 0);
+		m_shader.setUniform("textureSampler", 0);
 	}
 	
 	void BasicRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth) {

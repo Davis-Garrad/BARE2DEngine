@@ -1,39 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARE2DEngine.workspace">
-  <int Value="3" Name="m_selectedTab"/>
+  <int Value="2" Name="m_selectedTab"/>
   <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARE2DEngine.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/App.cpp" Name="FileName"/>
-      <int Value="26" Name="FirstVisibleLine"/>
-      <int Value="27" Name="CurrentLine"/>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/ShaderProgram.hpp" Name="FileName"/>
+      <int Value="78" Name="FirstVisibleLine"/>
+      <int Value="97" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/App.hpp" Name="FileName"/>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/ShaderProgram.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/Font.hpp" Name="FileName"/>
-      <int Value="5" Name="FirstVisibleLine"/>
-      <int Value="7" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/Font.cpp" Name="FileName"/>
-      <int Value="152" Name="FirstVisibleLine"/>
-      <int Value="154" Name="CurrentLine"/>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/ShaderProgram.tcc" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="4" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
   </TabInfoArray>
   <SerializedObject Name="m_breakpoints">
-    <long Value="0" Name="Count"/>
+    <long Value="1" Name="Count"/>
+    <SerializedObject Name="Breakpoint0">
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/FontRenderer.cpp" Name="file"/>
+      <int Value="48" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
   </SerializedObject>
   <wxString Value="*.c;*.cpp;*.cxx;*.cc;*.h;*.hpp;*.inc;*.mm;*.m;*.xrc;*.xml;*.json;*.sql;*.txt;*.plist;CMakeLists.txt;*.rc;*.iss" Name="m_findInFilesMask"/>
 </Session>

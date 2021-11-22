@@ -22,12 +22,12 @@ void TestScreen::draw()
 	glClearColor(std::cos(m_time / 10.0f)/2.0f + 0.5f, std::cos(m_time / 20.0f)/2.0f + 0.5f, std::cos(m_time / 30.0f)/2.0f + 0.5f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
-	/*m_renderer->begin();
+	m_renderer->begin();
 	
-	m_renderer->draw(glm::vec4(m_position.x, m_position.y, 1.6f, 1.0f), glm::vec4(0.0f, 0.0f, 1.0f, 1.0f), m_texture.id, 0.0f);
+	m_renderer->draw(glm::vec4(100.0f, 100.0f, 400.0f, 400.0f), glm::vec4(0.0f, 0.0f, 1.0f, 1.0f), m_texture.id, 0.0f);
 
 	m_renderer->end();
-	m_renderer->render();*/
+	m_renderer->render();
 	
 	m_fontRenderer->begin();
 	
@@ -59,17 +59,17 @@ void TestScreen::onEntry()
 	BARE2D::Logger::getInstance()->log("Entering screen! Will display pretty colours for a bit, then shrink, then leave!");
 	
 	// Load a texture
-	std::string texPath = "/home/davis-dev/Downloads/0000.png";
+	std::string texPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/0000.png";
 	m_texture = BARE2D::ResourceManager::loadTexture(texPath);
 	
 	// Load a shader
-	std::string vShaderPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/Shader.vert";
-	std::string fShaderPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/Shader.frag";
+	std::string vShaderPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Shader.vert";
+	std::string fShaderPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Shader.frag";
 	
 	m_renderer = new BARE2D::BasicRenderer(fShaderPath, vShaderPath);
 	m_renderer->init();
 	
-	std::string fontPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/OpenSans-Regular.ttf";
+	std::string fontPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/OpenSans-Regular.ttf";
 	
 	m_font_openSans = BARE2D::ResourceManager::loadFont(fontPath, 128);
 	

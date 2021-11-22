@@ -33,6 +33,7 @@
       <File Name="Source/App.hpp"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Graphics">
+      <File Name="Source/ShaderProgram.tcc"/>
       <VirtualDirectory Name="Renderers">
         <File Name="Source/FontRenderer.cpp"/>
         <File Name="Source/FontRenderer.hpp"/>

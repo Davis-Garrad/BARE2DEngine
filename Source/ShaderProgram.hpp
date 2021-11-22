@@ -38,11 +38,23 @@ namespace BARE2D {
 		void linkShaders(std::initializer_list<std::string> attributes);
 		
 		/**
-		 * @brief Gets the location of a uniform in a program
-		 * @param uniform The name of the uniform to find.
-		 * @return The location of the uniform.
+		 * @brief A generalized wrapper to find and set a uniform for this shader.
+		 * @param uniform The name of the uniform in the shader
+		 * @param data The variable to actually set the uniform's value to. This can be a glm::{i,ui,f}vec{1,2,3,4}, an unsigned int, an int, or a float
 		 */
-		GLint getUniformLocation(const std::string& uniform);
+		template<class T>
+		void setUniform(const std::string uniform, T data);
+		
+		/**
+		 * @brief Similar to setUniform.
+		 * @param uniform The name of the uniform in the shader
+		 * @param xSize The x dimension of the matrix - can be 2,3,4
+		 * @param ySize The y dimension of the matrix - can be 2,3,4
+		 * @param transpose Should the matrix be transposed when converted? If false, each matrix is assumed to be supplied in column major order. Else, row major order
+		 * @param data A pointer to the matrix, which is a 1D array of floats, ints, or unsigned ints.
+		 */
+		template<class T>
+		void setUniformMatrix(const std::string uniform, unsigned int xSize, unsigned int ySize, bool transpose, T* data);
 		
 		/**
 		 * @brief Activates this shader program for the renderer to use.
@@ -72,8 +84,15 @@ namespace BARE2D {
 		 * @param id The ID of the shader that has been created with OpenGL calls.
 		 */
 		void compileShaderFromSource(const char* source, const std::string& name, GLuint id);
-
+		
+		/**
+		 * @brief Gets the location of a uniform in a program
+		 * @param uniform The name of the uniform to find.
+		 * @return The location of the uniform.
+		 */
+		GLint getUniformLocation(const std::string& uniform);
 	};
 
 }
 
+#include "ShaderProgram.tcc"
