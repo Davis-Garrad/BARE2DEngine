@@ -53,5 +53,10 @@ namespace BARE2D {
 	 */
 	extern void displayErrors();
 	
+	/**
+	 * @brief Initializes the GL Debug Message Callback function, and enables debug output straight from OpenGL
+	 */
+	extern void initGLErrorCallback();
+	
 	extern std::vector<BAREError> thrownErrors;
 }

@@ -5,6 +5,7 @@
 #include <Logger.hpp>
 #include <Window.hpp>
 #include <ResourceManager.hpp>
+#include <Camera2D.hpp>
 
 TestScreen::TestScreen(BARE2D::Window* window) : BARE2D::Screen(), m_window(window)
 {
@@ -19,34 +20,49 @@ void TestScreen::destroyScreen()
 
 void TestScreen::draw()
 {	
-	glClearColor(std::cos(m_time / 10.0f)/2.0f + 0.5f, std::cos(m_time / 20.0f)/2.0f + 0.5f, std::cos(m_time / 30.0f)/2.0f + 0.5f, 1.0f);
+	glClearColor(0.6f, 0.6f, 0.6f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
 	m_renderer->begin();
 	
-	m_renderer->draw(glm::vec4(100.0f, 100.0f, 400.0f, 400.0f), glm::vec4(0.0f, 0.0f, 1.0f, 1.0f), m_texture.id, 0.0f);
-
+	for(unsigned int i = 0; i < 55; i++) {
+		for(unsigned int j = 0; j < 25; j++) {
+			glm::vec2 pos = glm::vec2(-350.0f, -250.0f);
+			glm::vec2 size = glm::vec2(126.0f, 201.0f) * 0.1f;
+			
+			m_renderer->draw(glm::vec4(pos.x + i * size.x, pos.y + j * size.y, size.x, size.y), glm::vec4(0.0f, 0.0f, 1.0f, 1.0f), m_texture.id, 0.0f);
+		}
+	}
+	
 	m_renderer->end();
 	m_renderer->render();
 	
 	m_fontRenderer->begin();
 	
-	m_fontRenderer->draw(m_font_openSans, glm::vec2(1.0f), glm::vec4(0.0f, 0.0f, 1.0f, 1.0f), "Test Text", 0.0f, BARE2D::Colour(0, 255, 0, 255));
+	float fps = (60.0/updateCount)*renderCount;
+	
+	m_fontRenderer->draw(m_font_openSans, glm::vec2(0.005f), glm::vec4(-1.0f, -1.0f, 1.0f, 1.0f), std::string("Updates: " + std::to_string((int)(updateCount)) + "\nDraw Calls: " + std::to_string((int)renderCount) + "\nFPS: " + std::to_string(fps)).c_str(), 0.0f, BARE2D::Colour(255, 255, 255, 255));
 	
 	m_fontRenderer->end();
 	m_fontRenderer->render();
 	
-	float radians = m_time * M_PI * 2.0f / 60.0f;
-	float x = 0.6f * std::cos(radians);
-	float y = 0.6f * std::sin(radians);
+	// Debug rendering demo.
+	/*float radians = m_time * M_PI * 2.0f / 60.0f;
+	float radiansCycle = m_time * M_PI * 2.0f / 240.0f;
+	float radiusSeconds = 0.6f;
+	float radiusCycles = 0.4f;
+	float x0 = radiusSeconds * std::sin(radians);
+	float y0 = radiusSeconds * std::cos(radians);
+	float x1 = radiusCycles * std::sin(radiansCycle);
+	float y1 = radiusCycles * std::cos(radiansCycle);
 	
 	m_debugRenderer->begin();
 	m_debugRenderer->drawCircle(glm::vec2(0.0f, 0.0f), 3.0f, 0.6f, BARE2D::Colour(0, 255, 0, 64));
-	m_debugRenderer->drawLine(glm::vec2(0.0f, 0.0f), glm::vec2(x, y), 9.0f, BARE2D::Colour(255, 255, 255, 255));
-	m_debugRenderer->drawLine(glm::vec2(0.0f, 0.0f), glm::vec2(-x, y), 3.0f, BARE2D::Colour(255, 255, 255, 255));
+	m_debugRenderer->drawLine(glm::vec2(0.0f, 0.0f), glm::vec2(x0, y0), 2.0f, BARE2D::Colour(255, 255, 255, 255));
+	m_debugRenderer->drawLine(glm::vec2(0.0f, 0.0f), glm::vec2(x1, y1), 4.0f, BARE2D::Colour(255, 255, 255, 255));
 	m_debugRenderer->drawRectangle(glm::vec4(0.0f, 0.0f, 0.4f, 0.4f), 3.0f, BARE2D::Colour(255, 255, 255, 64));
 	m_debugRenderer->end();
-	m_debugRenderer->render();
+	m_debugRenderer->render();*/
 	
 	renderCount++;
 	
@@ -66,6 +82,8 @@ void TestScreen::initScreen()
 
 void TestScreen::onEntry()
 {
+	BARE2D::initGLErrorCallback();
+	
 	m_position = glm::vec2(0.0f);
 	
 	BARE2D::Logger::getInstance()->log("Entering screen! Will display pretty colours for a bit, then shrink, then leave!");
@@ -78,12 +96,11 @@ void TestScreen::onEntry()
 	std::string vShaderPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Shader.vert";
 	std::string fShaderPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Shader.frag";
 	
-	m_renderer = new BARE2D::BasicRenderer(fShaderPath, vShaderPath);
+	m_renderer = new BARE2D::CameraRenderer(fShaderPath, vShaderPath, m_window->getWidth(), m_window->getHeight());
 	m_renderer->init();
 	
 	std::string fontPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/OpenSans-Regular.ttf";
-	
-	m_font_openSans = BARE2D::ResourceManager::loadFont(fontPath, 128);
+	m_font_openSans = BARE2D::ResourceManager::loadFont(fontPath, 36);
 	
 	m_fontRenderer = new BARE2D::FontRenderer(fShaderPath, vShaderPath);
 	m_fontRenderer->init();
@@ -103,7 +120,9 @@ void TestScreen::update(double dt)
 	
 	if(std::abs(m_time - 240.0f) <= 0.01f || std::abs(m_time - 720.0f) <= 0.01f) {
 		m_window->setSize(300, 300);
-		BARE2D::Logger::getInstance()->log("Shrinking!");
+		BARE2D::Logger::getInstance()->log("Shrinking! " + std::to_string(renderCount) + " renders versus " + std::to_string(updateCount) + " updates.");
+		renderCount = 0;
+		updateCount = 0;
 	}
 	if(std::abs(m_time - 480.0f) <= 0.01f) {
 		slowFactor = 200000000;

@@ -60,74 +60,78 @@ namespace BARE2D {
 		int i = 0, advance;
 		
 		// Loop through every character
-		for(char c = m_regStart; c < LAST_PRINTABLE_CHAR; c++) {
+		for(char c = m_regStart; c < m_regStart + m_regLength; c++) {
 			// Get the metrics for the character
-			TTF_GlyphMetrics(font, c, &glyphRectangles[i].x, &glyphRectangles[i].z, &glyphRectangles[i].w, &glyphRectangles[i].w, &advance);
+			const char str[2] = { c, '\0' };
 			
-			// Turn from (point A), (point B) to (0, 0), (size) rectangle
-			glyphRectangles[i].z -= glyphRectangles[i].x;
-			glyphRectangles[i].x = 0;
-			glyphRectangles[i].w -= glyphRectangles[i].y;
-			glyphRectangles[i].y = 0;
+			// Gets the size of a piece of text with the font, with a null-terminated c_str.
+			TTF_SizeText(font, str, &glyphRectangles[i].z, &glyphRectangles[i].w);
+			
 			i++;
 		}
 		
-		// Now that we have the sizes of all the glyphs, figure out which is the best partitioning sequence
-		// Various variables for optimization
-		unsigned int rows = 1;
-		int width, height, bestWidth = 0, bestHeight = 0, area = MAX_TEXTURE_RES*MAX_TEXTURE_RES, bestRows = 0;
+		unsigned int bestWidth = 0, bestHeight = 0, bestRows = 0;
 		std::vector<int>* bestPartition = nullptr;
-		// Gradually try more and more rows until we reach optimal partitioning
-		while(rows <= m_regLength) {
-			// Set the height of the texture
-			height = rows * (padding + m_height) + padding;
-			
-			// Create a partition using the createRows function to determine if it's good!
-			std::vector<int>* trialPartition = createRows(glyphRectangles, m_regLength, rows, padding, width);
-			
-			// Set width and height of final texture to the closest power of two. OpenGL is going to do this anyways in memory so its equivalent for optimization
-			width = closestPow2(width);
-			height = closestPow2(height);
-			
-			// First check if the texture breaks our restrictions
-			if(width > MAX_TEXTURE_RES || height > MAX_TEXTURE_RES) {
-				// Obviously this is not going to work. Try again with one more row.
-				rows++;
-				delete[] trialPartition;
-				continue;
+		
+		{
+			// Now that we have the sizes of all the glyphs, figure out which is the best partitioning sequence
+			// Various variables for optimization
+			unsigned int rows = 1;
+			int width, height, area = MAX_TEXTURE_RES*MAX_TEXTURE_RES;
+			// Gradually try more and more rows until we reach optimal partitioning
+			while(rows <= m_regLength) {
+				
+				// Set the height of the texture
+				height = rows * (padding + m_height) + padding;
+				
+				// Create a partition using the createRows function to determine if it's good!
+				// Also, record the minimum texture width we need (the maximum character width)
+				std::vector<int>* trialPartition = createRows(glyphRectangles, m_regLength, rows, padding, width);
+				
+				// Set width and height of final texture to the next highest power of two. OpenGL is going to do this anyways in memory so its equivalent for optimization
+				width = closestPow2(width);
+				height = closestPow2(height);
+				
+				// First check if the texture breaks our restrictions
+				if(width > MAX_TEXTURE_RES || height > MAX_TEXTURE_RES) {
+					// Obviously this is not going to work. Try again with one more row.
+					rows++;
+					delete[] trialPartition;
+					continue;
+				}
+				
+				// We are within our restrictions, now check if it's optimal. We want the least area (data) that we can possibly accomodate all the letters with.
+				if(area >= width * height) {
+					// This trial's area is smaller than our current best - that's good!
+					// Get rid of the old best
+					if(bestPartition) delete[] bestPartition;
+					
+					// Set the best to this one
+					bestPartition = trialPartition;
+					bestWidth = width;
+					bestHeight = height;
+					bestRows = rows;
+					area = bestWidth*bestHeight;
+					
+					// Now keep searching for a better one!
+					rows++;
+				} else {
+					// This trial is discarded as we already know of a better one.
+					delete[] trialPartition;
+					
+					// We can actually just break out of the loop if our optimization yields a worse result than the last feasible.
+					break;
+				}
 			}
 			
-			// We are within our restrictions, now check if it's optimal
-			if(area >= width * height) {
-				// This trial's area is better than our current best - that's good!
-				// Get rid of the old best
-				if(bestPartition) delete[] bestPartition;
-				
-				// Set the best to this one
-				bestPartition = trialPartition;
-				bestWidth = width;
-				bestHeight = height;
-				bestRows = rows;
-				area = bestWidth*bestHeight;
-				
-				// Now keep searching for a better one!
-				rows++;
-			} else {
-				// This trial is discarded as we already know of a better one.
-				delete[] trialPartition;
-				
-				// We can actually just break out of the loop if our optimization yields a worse result than the last feasible.
-				break;
+			// Now we know how our glyphs should be arranged in the texture, so let's do that.
+		
+			// First, check if a font can be made at all
+			if(!bestPartition) {
+				// We never actually found a feasible font arrangement
+				throwError(BAREError::FONT_FAILURE);
+				throwFatalError("Failed to create font texture. Try a lower resolution.");
 			}
-		}
-		
-		// Now we know how our glyphs should be arranged in the texture, so let's do that.
-		
-		// First, check if a font can be made at all
-		if(!bestPartition) {
-			// We never actually found a feasible font arrangement
-			throwError(BAREError::FONT_FAILURE);
-			throwFatalError("Failed to create font texture. Try a lower resolution.");
 		}
 		
 		// Create the actual texture.
@@ -150,9 +154,9 @@ namespace BARE2D {
 				int glyph = bestPartition[row][column];
 				
 				// Get what SDL gives us for the actual rendering surface
-				SDL_Surface* glyphSurface = TTF_RenderGlyph_Blended(font, (char)(FIRST_PRINTABLE_CHAR + glyph), foreground);
+				SDL_Surface* glyphSurface = TTF_RenderGlyph_Blended(font, (unsigned int)(FIRST_PRINTABLE_CHAR + glyph), foreground);
 				
-				// This is what's called pre-multiplication. It seems to blend the alpha channel into the RGB?
+				// This is what's called pre-multiplication. It multiplies the alpha of each pixel into the r, g, and b. I think?
 				unsigned char* sp = (unsigned char*)glyphSurface->pixels;
 				int cp = glyphSurface->w * glyphSurface->h * 4;
 				for(int i = 0; i < cp; i+= 4) {
@@ -163,8 +167,8 @@ namespace BARE2D {
 				}
 				
 				// Upload to the texture
-				glTexSubImage2D(GL_TEXTURE_2D, 0, xOff, bestHeight - yOff - 1 - glyphSurface->h, glyphSurface->w, glyphSurface->h, GL_BGRA, GL_UNSIGNED_BYTE, glyphSurface->pixels);
-				
+				glTexSubImage2D(GL_TEXTURE_2D, 0, xOff, bestHeight - yOff - 1 - glyphSurface->h, glyphSurface->w, glyphSurface->h, GL_BGRA, GL_UNSIGNED_BYTE, sp);
+
 				// Update coordinates to what they are in the texture
 				glyphRectangles[glyph].x = xOff;
 				glyphRectangles[glyph].y = yOff;
@@ -284,13 +288,17 @@ namespace BARE2D {
 		std::vector<int>* ret = new std::vector<int>[rows]();
 		
 		// initialize some column widths. Initially, just the padding. Adding glyphs adds width obviously
-		int* columnWidths = new int[rows]{padding};
+		int* columnWidths = new int[rows]();
+		// Set initial values.
+		for(int i = 0; i < rows; i++) {
+			columnWidths[i] = padding;
+		}
 		
 		// Loop through every glyph, adding them as necessary
 		for(int i = 0; i < rectanglesLength; i++) {
 			// Find what row this should be in (the thinnest)
 			int rowIndex = 0;
-			for(int rowIndexTest = 1; rowIndexTest < rows; rowIndexTest++) {
+			for(int rowIndexTest = 0; rowIndexTest < rows; rowIndexTest++) {
 				// Test each row index, search for least wide
 				if(columnWidths[rowIndexTest] < columnWidths[rowIndex]) rowIndex = rowIndexTest;
 			}

@@ -48,6 +48,8 @@ namespace BARE2D {
 		// First we must bind the vertex array object and vertex buffer object
 		m_vertexArrayObject.bind();
 		
+		preRender();
+		
 		// Now we can render each renderbatch, uploading their texture data respectively.
 		for(unsigned int i = 0; i < m_batches.size(); i++) {
 			// Bind the texture information to the texture "slot" 

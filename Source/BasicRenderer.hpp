@@ -30,7 +30,7 @@ namespace BARE2D {
 		~BasicRenderer();
 		
 		virtual void init() override;
-		virtual void begin() override;
+		virtual void preRender() override;
 		
 		virtual void draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth);
 	

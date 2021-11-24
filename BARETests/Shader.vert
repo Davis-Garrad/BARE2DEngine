@@ -10,10 +10,14 @@ out vec3 fragmentPosition;
 out vec4 fragmentColour;
 out vec2 fragmentUV;
 
-void main() {
-	gl_Position = vec4(vertexPosition.xyz/2000.0, 1.0);
+uniform mat4 P = mat4(1.0);
 
-	fragmentPosition = vertexPosition/2000.0;
+void main() {
+	gl_Position.xy = vec4(P * vec4(vertexPosition.xyz, 1.0)).xy;
+	gl_Position.z = 0.0;
+	gl_Position.w = 1.0;
+
+	fragmentPosition = vertexPosition;
 	fragmentUV = vec2(vertexUV.x, 1.0 - vertexUV.y);
 	fragmentColour = vertexColour;
 }

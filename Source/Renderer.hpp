@@ -45,6 +45,11 @@ namespace BARE2D {
 		
 	protected:
 		/**
+		 * @brief Does stuff inside of the render function, within the shader's use.
+		 */
+		virtual void preRender() {};
+		
+		/**
 		 * @brief Constructs all of the render batches from data given by, say, draw() calls.
 		 */
 		virtual void createRenderBatches() = 0;

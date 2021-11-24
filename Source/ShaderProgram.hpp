@@ -43,18 +43,16 @@ namespace BARE2D {
 		 * @param data The variable to actually set the uniform's value to. This can be a glm::{i,ui,f}vec{1,2,3,4}, an unsigned int, an int, or a float
 		 */
 		template<class T>
-		void setUniform(const std::string uniform, T data);
+		void setUniform(const std::string uniform, T& data);
 		
 		/**
 		 * @brief Similar to setUniform.
 		 * @param uniform The name of the uniform in the shader
-		 * @param xSize The x dimension of the matrix - can be 2,3,4
-		 * @param ySize The y dimension of the matrix - can be 2,3,4
 		 * @param transpose Should the matrix be transposed when converted? If false, each matrix is assumed to be supplied in column major order. Else, row major order
 		 * @param data A pointer to the matrix, which is a 1D array of floats, ints, or unsigned ints.
 		 */
 		template<class T>
-		void setUniformMatrix(const std::string uniform, unsigned int xSize, unsigned int ySize, bool transpose, T* data);
+		void setUniformMatrix(const std::string uniform, bool transpose, T& data);
 		
 		/**
 		 * @brief Activates this shader program for the renderer to use.
@@ -70,6 +68,7 @@ namespace BARE2D {
 		 * @brief Releases all bound objects and deletes any allocated stuff.
 		 */
 		void destroy();
+		
 	private:
 		unsigned int m_numberAttributes = 0;
 		

@@ -41,11 +41,10 @@ namespace BARE2D {
 		m_vertexArrayObject.addVertexAttribute(2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, uv));
 	}
 	
-	void BasicRenderer::begin() {
-		Renderer::begin();
-		
+	void BasicRenderer::preRender() {
 		// We also need to define a texture sampler for textures!
-		m_shader.setUniform("textureSampler", 0);
+		GLint textureUniform = 0;
+		m_shader.setUniform("textureSampler", textureUniform);
 	}
 	
 	void BasicRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth) {

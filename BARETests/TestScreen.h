@@ -4,7 +4,7 @@
 #include <Window.hpp>
 #include <ShaderProgram.hpp>
 #include <Texture.hpp>
-#include <BasicRenderer.hpp>
+#include <CameraRenderer.hpp>
 #include <FontRenderer.hpp>
 #include <DebugRenderer.hpp>
 
@@ -30,7 +30,7 @@ private:
 	float m_time = 0;
 	
 	BARE2D::Window* m_window = nullptr;
-	BARE2D::BasicRenderer* m_renderer = nullptr;
+	BARE2D::CameraRenderer* m_renderer = nullptr;
 	BARE2D::FontRenderer* m_fontRenderer = nullptr;
 	BARE2D::DebugRenderer* m_debugRenderer = nullptr;
 	BARE2D::Texture m_texture;
