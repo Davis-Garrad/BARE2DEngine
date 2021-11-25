@@ -16,6 +16,10 @@ namespace BARE2D {
 		
 		virtual void draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth) override;
 		
+		Camera2D* getCamera() {
+			return m_camera;
+		}
+		
 	protected:
 		virtual void preRender() override;
 		

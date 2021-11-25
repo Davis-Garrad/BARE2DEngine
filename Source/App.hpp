@@ -36,6 +36,11 @@ namespace BARE2D
 		 * @return Returns a pointer to the window, so that the client can change its size, title, etc.
 		 */
 		Window* getWindow();
+		
+		/**
+		 * @return The input manager pointer. 
+		 */
+		InputManager* getInputManager();
 	
 	private:
 		bool m_isGameRunning = false;

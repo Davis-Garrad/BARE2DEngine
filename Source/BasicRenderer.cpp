@@ -51,6 +51,10 @@ namespace BARE2D {
 		m_glyphs.emplace_back(destRect, uvRect, texture, depth, Colour(255, 255, 255, 255));
 	}
 	
+	void BasicRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour) {
+		m_glyphs.emplace_back(destRect, uvRect, texture, depth, colour);
+	}
+	
 	void BasicRenderer::createRenderBatches() {
 		// Create all the render batches (based on the draw()'n glyphs) for rendering
 		// THey're going to end up as vertices

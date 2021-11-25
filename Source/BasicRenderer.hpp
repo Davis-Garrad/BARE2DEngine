@@ -33,6 +33,7 @@ namespace BARE2D {
 		virtual void preRender() override;
 		
 		virtual void draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth);
+		virtual void draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour);
 	
 	protected:
 		virtual void createRenderBatches() override;

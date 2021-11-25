@@ -47,8 +47,8 @@ namespace BARE2D {
 	
 	bool CameraRenderer::isRectInScene(glm::vec4& rectangle) {
 		// Create the scene's rectangle.
-		glm::vec2 pos0 = m_camera->getPosition();
-		glm::vec2 pos1 = glm::vec2(m_camera->getScreenWidth(), m_camera->getScreenHeight()) / m_camera->getScale();
+		glm::vec2 pos0 = m_camera->getPosition() - (glm::vec2(m_camera->getScreenWidth() / 2, m_camera->getScreenHeight() / 2) / m_camera->getScale());
+		glm::vec2 pos1 = m_camera->getPosition() + glm::vec2(m_camera->getScreenWidth() / 2, m_camera->getScreenHeight() / 2) / m_camera->getScale();
 		
 		// Check if either of the positive x or negative x sides are too far to be seen
 		if(rectangle.x + rectangle.z + m_camera->getScreenWidth()/2 < pos0.x || rectangle.x > pos1.x) {

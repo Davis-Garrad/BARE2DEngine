@@ -64,6 +64,10 @@ namespace BARE2D {
 		return m_window;
 	}
 
+	InputManager* App::getInputManager() {
+		return m_inputManager;
+	}
+
 
 	void App::init()
 	{
