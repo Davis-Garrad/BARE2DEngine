@@ -2,11 +2,10 @@ Debug/main.cpp.o: main.cpp ../Source/BARE2DEngine.hpp ../Source/App.hpp \
  ../Source/BAREErrors.hpp ../Source/ScreenList.hpp ../Source/Timer.hpp \
  ../Source/Window.hpp TestScreen.h ../Source/Screen.hpp \
  ../Source/ShaderProgram.hpp ../Source/ShaderProgram.tcc \
- ../Source/Texture.hpp ../Source/CameraRenderer.hpp \
- ../Source/BasicRenderer.hpp ../Source/Renderer.hpp ../Source/VAO.hpp \
- ../Source/RenderBatch.hpp ../Source/Vertex.hpp \
- ../Source/FontRenderer.hpp ../Source/Font.hpp \
- ../Source/DebugRenderer.hpp
+ ../Source/Texture.hpp ../Source/BasicRenderer.hpp ../Source/Renderer.hpp \
+ ../Source/VAO.hpp ../Source/RenderBatch.hpp ../Source/Vertex.hpp \
+ ../Source/Camera2D.hpp ../Source/FontRenderer.hpp ../Source/Font.hpp \
+ ../Source/DebugRenderer.hpp ../Source/InputManager.hpp
 
 ../Source/BARE2DEngine.hpp:
 
@@ -30,8 +29,6 @@ TestScreen.h:
 
 ../Source/Texture.hpp:
 
-../Source/CameraRenderer.hpp:
-
 ../Source/BasicRenderer.hpp:
 
 ../Source/Renderer.hpp:
@@ -42,8 +39,12 @@ TestScreen.h:
 
 ../Source/Vertex.hpp:
 
+../Source/Camera2D.hpp:
+
 ../Source/FontRenderer.hpp:
 
 ../Source/Font.hpp:
 
 ../Source/DebugRenderer.hpp:
+
+../Source/InputManager.hpp:

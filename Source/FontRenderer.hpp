@@ -22,9 +22,9 @@ namespace BARE2D {
 	class FontRenderer : public BasicRenderer
 	{
 	public:
-		FontRenderer(std::string& fragShader, std::string& vertShader);
+		FontRenderer(std::string& fragShader, std::string& vertShader, unsigned int perspectiveWidth = 2, unsigned int perspectiveHeight = 2);
 		~FontRenderer();
-		
+
 		virtual void draw(Font& font, glm::vec2 scaling, glm::vec4 destRect, const char* text, float depth, Colour tint, Justification just = Justification::LEFT, glm::vec4 uvRect = glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
 		
 	};

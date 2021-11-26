@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Davis-Dev
-Date                   :=24/11/21
+Date                   :=25/11/21
 CodeLitePath           :=/home/davis-dev/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/Body.cpp$(ObjectSuffix) $(IntermediateDirectory)/OrbitScreen.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/OrbitScreen.cpp$(ObjectSuffix) $(IntermediateDirectory)/Body.cpp$(ObjectSuffix) 
 
 
 
@@ -98,11 +98,11 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/Body.cpp$(ObjectSuffix): Body.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Body.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Body.cpp$(DependSuffix) -MM Body.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Orbiter/Body.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Body.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Body.cpp$(PreprocessSuffix): Body.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Body.cpp$(PreprocessSuffix) Body.cpp
+$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Orbiter/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
 $(IntermediateDirectory)/OrbitScreen.cpp$(ObjectSuffix): OrbitScreen.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/OrbitScreen.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/OrbitScreen.cpp$(DependSuffix) -MM OrbitScreen.cpp
@@ -110,11 +110,11 @@ $(IntermediateDirectory)/OrbitScreen.cpp$(ObjectSuffix): OrbitScreen.cpp
 $(IntermediateDirectory)/OrbitScreen.cpp$(PreprocessSuffix): OrbitScreen.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/OrbitScreen.cpp$(PreprocessSuffix) OrbitScreen.cpp
 
-$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Orbiter/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+$(IntermediateDirectory)/Body.cpp$(ObjectSuffix): Body.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Body.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Body.cpp$(DependSuffix) -MM Body.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Orbiter/Body.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Body.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Body.cpp$(PreprocessSuffix): Body.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Body.cpp$(PreprocessSuffix) Body.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

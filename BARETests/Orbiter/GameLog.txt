@@ -1,8 +1,10 @@
 
 
 
-### LOG: Wed Nov 24 19:58:22 2021 ###
+### LOG: Thu Nov 25 22:30:34 2021 ###
 
 Thanks for using BARE2D! Original engine by Davis Garrad
 
-Failed to load file to buffer: /home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Planet.png
+Cleared all caches.
+Cleared all caches.
+Cleared all caches.

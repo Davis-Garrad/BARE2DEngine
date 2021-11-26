@@ -182,5 +182,24 @@ namespace BARE2D {
 	{
 		return m_cameraMatrix;
 	}
+	
+	bool Camera2D::isRectInScene(glm::vec4& rectangle) {
+		// Create the scene's rectangle.
+		glm::vec2 pos0 = m_position - (glm::vec2(m_screenWidth / 2, m_screenHeight / 2) / m_scale);
+		glm::vec2 pos1 = m_position + (glm::vec2(m_screenWidth / 2, m_screenHeight / 2) / m_scale);
+		
+		// Check if either of the positive x or negative x sides are too far to be seen
+		if(rectangle.x + rectangle.z + m_screenWidth/2 < pos0.x || rectangle.x > pos1.x) {
+			return false;
+		}
+		
+		// Check if the y value causes un-seeability
+		if(rectangle.y + rectangle.w + m_screenHeight/2 < pos0.y || rectangle.y > pos1.y) {
+			return false;
+		}
+		
+		return true;
+	}
+
 
 }

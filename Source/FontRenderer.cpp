@@ -2,7 +2,7 @@
 
 namespace BARE2D {
 
-	FontRenderer::FontRenderer(std::string& fragShader, std::string& vertShader) : BasicRenderer(fragShader, vertShader)
+	FontRenderer::FontRenderer(std::string& fragShader, std::string& vertShader, unsigned int perspectiveWidth, unsigned int perspectiveHeight) : BasicRenderer(fragShader, vertShader, perspectiveWidth, perspectiveHeight)
 	{
 	}
 

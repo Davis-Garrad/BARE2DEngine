@@ -139,6 +139,13 @@ namespace BARE2D {
 
 	void ResourceManager::clearCaches()
 	{
+		m_textures->clear();
+		m_mutableTextures->clear();
+		m_sounds->clear();
+		m_scripts->clear();
+		m_fonts->clear();
+		
+		Logger::getInstance()->log("Cleared all caches.");
 	}
 
 

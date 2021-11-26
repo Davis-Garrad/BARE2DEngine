@@ -7,7 +7,7 @@
 #include <ResourceManager.hpp>
 #include <Camera2D.hpp>
 
-TestScreen::TestScreen(BARE2D::Window* window) : BARE2D::Screen(), m_window(window)
+TestScreen::TestScreen(BARE2D::Window* window, BARE2D::InputManager* input) : BARE2D::Screen(), m_window(window), m_inputManager(input)
 {
 }
 
@@ -41,7 +41,7 @@ void TestScreen::draw()
 	
 	float fps = (60.0/updateCount)*renderCount;
 	
-	m_fontRenderer->draw(m_font_openSans, glm::vec2(0.005f), glm::vec4(-1.0f, -1.0f, 1.0f, 1.0f), std::string("Updates: " + std::to_string((int)(updateCount)) + "\nDraw Calls: " + std::to_string((int)renderCount) + "\nFPS: " + std::to_string(fps)).c_str(), 0.0f, BARE2D::Colour(255, 255, 255, 255));
+	m_fontRenderer->draw(m_font_openSans, glm::vec2(1.0f), glm::vec4(-400.0f, -300.0f, 1.0f, 1.0f), std::string("Updates: " + std::to_string((int)(updateCount)) + "\nDraw Calls: " + std::to_string((int)renderCount) + "\nFPS: " + std::to_string(fps)).c_str(), 0.0f, BARE2D::Colour(255, 255, 255, 255));
 	
 	m_fontRenderer->end();
 	m_fontRenderer->render();
@@ -96,7 +96,7 @@ void TestScreen::onEntry()
 	std::string vShaderPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Shader.vert";
 	std::string fShaderPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Shader.frag";
 	
-	m_renderer = new BARE2D::CameraRenderer(fShaderPath, vShaderPath, m_window->getWidth(), m_window->getHeight());
+	m_renderer = new BARE2D::BasicRenderer(fShaderPath, vShaderPath, m_window->getWidth(), m_window->getHeight());
 	m_renderer->init();
 	
 	std::string fontPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/OpenSans-Regular.ttf";
@@ -104,6 +104,7 @@ void TestScreen::onEntry()
 	
 	m_fontRenderer = new BARE2D::FontRenderer(fShaderPath, vShaderPath);
 	m_fontRenderer->init();
+	m_fontRenderer->setCamera(m_renderer->getCamera());
 	
 	m_debugRenderer = new BARE2D::DebugRenderer();
 	m_debugRenderer->init();
@@ -134,6 +135,11 @@ void TestScreen::update(double dt)
 	if(m_time >= 960.0f) {
 		m_screenState = BARE2D::ScreenState::EXIT_APPLICATION;
 		BARE2D::Logger::getInstance()->log("Finished heavy rendering. " + std::to_string(renderCount) + " renders versus " + std::to_string(updateCount) + " updates.");
+	}
+	
+	if(m_inputManager->isKeyPressed(SDLK_F1)) {
+		// Reload cache
+		BARE2D::ResourceManager::clearCaches();
 	}
 	
 	updateCount++;

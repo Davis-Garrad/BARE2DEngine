@@ -87,6 +87,13 @@ namespace BARE2D {
 		 */
 		const glm::mat4& getCameraMatrix() const;
 		
+		/**
+		 * @brief Checks if a rectangle is within the scene covered by the camera
+		 * @param rectangle The rectangle to check against (format: x0, y0, w, h)
+		 * @return True if the rectangle is see-able
+		 */
+		bool isRectInScene(glm::vec4& rectangle);
+		
 	private:
 		// The position of the camera
 		glm::vec2 m_position = glm::vec2(0.0f);

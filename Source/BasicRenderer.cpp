@@ -20,13 +20,14 @@ namespace BARE2D {
 		topRight.setUV(uvRect.x + uvRect.z, uvRect.y + uvRect.w);
 	}
 
-	BasicRenderer::BasicRenderer(std::string& fragShader, std::string& vertShader) : Renderer(), m_fragShader(fragShader), m_vertShader(vertShader)
+	BasicRenderer::BasicRenderer(std::string& fragShader, std::string& vertShader, unsigned int perspectiveWidth, unsigned int perspectiveHeight) : Renderer(), m_fragShader(fragShader), m_vertShader(vertShader)
 	{
+		m_camera = std::make_shared<Camera2D>();
+		m_camera->init(perspectiveWidth, perspectiveHeight);
 	}
 
 	BasicRenderer::~BasicRenderer()
 	{
-		
 	}
 	
 	void BasicRenderer::init() {
@@ -41,17 +42,46 @@ namespace BARE2D {
 		m_vertexArrayObject.addVertexAttribute(2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, uv));
 	}
 	
+	void BasicRenderer::setCamera(std::shared_ptr<Camera2D> camera) {
+		m_camera = camera;
+	}
+	
+	std::shared_ptr<Camera2D> BasicRenderer::getCamera() {
+		return m_camera;
+	}
+	
 	void BasicRenderer::preRender() {
 		// We also need to define a texture sampler for textures!
+		
+		m_camera->update();
+		
 		GLint textureUniform = 0;
 		m_shader.setUniform("textureSampler", textureUniform);
+		glm::mat4 projectionMatrix = m_camera->getCameraMatrix();
+		m_shader.setUniformMatrix("projectionMatrix", GL_FALSE, projectionMatrix);
 	}
 	
 	void BasicRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth) {
+		// Make sure it's actually in the scene.
+		if(!m_camera->isRectInScene(destRect))
+			return;
+		
+		// At this point we can just scale the size (the position should be translated in the shader) and draw it
+		glm::vec2 size = m_camera->getScreenSizeFromViewedSize(glm::vec2(destRect.z, destRect.w));
+		
+		// Just add the glyph
 		m_glyphs.emplace_back(destRect, uvRect, texture, depth, Colour(255, 255, 255, 255));
 	}
 	
 	void BasicRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour) {
+		// Make sure it's actually in the scene.
+		if(!m_camera->isRectInScene(destRect))
+			return;
+		
+		// At this point we can just scale the size (the position should be translated in the shader) and draw it
+		glm::vec2 size = m_camera->getScreenSizeFromViewedSize(glm::vec2(destRect.z, destRect.w));
+		
+		// Just add the glyph
 		m_glyphs.emplace_back(destRect, uvRect, texture, depth, colour);
 	}
 	
