@@ -25,7 +25,7 @@ namespace BARE2D {
 	void Renderer::init()
 	{
 		// Set depth range so that we can actually write depth values.
-		glDepthRange(0.0f, 100.0f);
+		glDepthRange(0.0f, 1.0f);
 		
 		m_vertexArrayObject.init();
 	}

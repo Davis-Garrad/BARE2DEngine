@@ -33,10 +33,13 @@
       <File Name="Source/App.hpp"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Graphics">
+      <File Name="Source/Vertex.cpp"/>
       <File Name="Source/Camera2D.cpp"/>
       <File Name="Source/Camera2D.hpp"/>
       <File Name="Source/ShaderProgram.tcc"/>
       <VirtualDirectory Name="Renderers">
+        <File Name="Source/FBORenderer.cpp"/>
+        <File Name="Source/FBORenderer.hpp"/>
         <File Name="Source/DebugRenderer.cpp"/>
         <File Name="Source/DebugRenderer.hpp"/>
         <File Name="Source/FontRenderer.cpp"/>

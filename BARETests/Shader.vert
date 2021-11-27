@@ -14,7 +14,7 @@ uniform mat4 projectionMatrix = mat4(1.0);
 
 void main() {
 	gl_Position.xy = vec4(projectionMatrix * vec4(vertexPosition.xyz, 1.0)).xy;
-	gl_Position.z = 0.0;
+	gl_Position.z = vertexPosition.z;
 	gl_Position.w = 1.0;
 
 	fragmentPosition = vertexPosition;

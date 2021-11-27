@@ -29,6 +29,11 @@ namespace BARE2D {
 		}
 	}
 	
+	void GLContext::unbindTexture(GLenum target, GLenum textureslot) {
+		setActiveTexture(textureslot);
+		bindTexture(target, 0);
+	}
+	
 	GLuint GLContext::getBoundTexture() {
 		unsigned int index = (unsigned int)(m_activeTexture - GL_TEXTURE0);
 		return m_boundTextureIDs[index];

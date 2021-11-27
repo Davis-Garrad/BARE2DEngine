@@ -1,5 +1,8 @@
 #pragma once
 
+#include <GL/glew.h>
+#include <glm/glm.hpp>
+
 namespace BARE2D {
 
 	/**
@@ -75,5 +78,22 @@ namespace BARE2D {
 			uv.u = u;
 			uv.v = v;
 		}
+	};
+	
+	/**
+	 * @class Glyph
+	 * @brief The glyph represents a renderbatch's primitive data, which is created from each draw call in the basic renderer.
+	 */
+	class Glyph {
+	public:
+		Glyph(glm::vec4& destRect, glm::vec4& uvRect, GLuint Texture, float Depth, Colour colour);
+		
+		// Texture handle from opengl
+		GLuint texture;
+		// Depth for depth-culling.
+		float depth;
+		
+		// Vertices prettty much just hold vertex data together. Useful in creating render batches
+		Vertex topLeft, bottomLeft, topRight, bottomRight;
 	};
 }

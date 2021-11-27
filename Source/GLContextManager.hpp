@@ -21,6 +21,13 @@ namespace BARE2D {
 		 */
 		void bindTexture(GLenum target, GLenum texture);
 		
+		/**
+		 * @brief Unbinds a texture
+		 * @param target The target (GL_TEXTURE_2D generally)
+		 * @param textureslot The texture to be unbound (GL_TEXTURE0-8)
+		 */
+		void unbindTexture(GLenum target, GLenum textureslot);
+		
 		GLuint getBoundTexture();
 
 	private:

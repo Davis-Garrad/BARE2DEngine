@@ -19,23 +19,33 @@ void TestScreen::destroyScreen()
 }
 
 void TestScreen::draw()
-{	
+{
 	glClearColor(0.6f, 0.6f, 0.6f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
+	m_fbo->begin();
+	
 	m_renderer->begin();
+	
+	float depth = -1.0f;
 	
 	for(unsigned int i = 0; i < 55; i++) {
 		for(unsigned int j = 0; j < 25; j++) {
 			glm::vec2 pos = glm::vec2(-350.0f, -250.0f);
 			glm::vec2 size = glm::vec2(126.0f, 201.0f) * 0.1f;
 			
-			m_renderer->draw(glm::vec4(pos.x + i * size.x, pos.y + j * size.y, size.x, size.y), glm::vec4(0.0f, 0.0f, 1.0f, 1.0f), m_texture.id, 0.0f);
+			depth += 1.6f / (55.0f*25.0f);
+			
+			m_renderer->draw(glm::vec4(pos.x + i * size.x, pos.y + j * size.y, size.x, size.y), glm::vec4(0.0f, 0.0f, 1.0f, 1.0f), m_texture.id, depth);
 		}
 	}
 	
 	m_renderer->end();
 	m_renderer->render();
+	
+	m_fbo->end();
+	
+	m_fbo->render();
 	
 	m_fontRenderer->begin();
 	
@@ -96,8 +106,14 @@ void TestScreen::onEntry()
 	std::string vShaderPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Shader.vert";
 	std::string fShaderPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Shader.frag";
 	
+	// Load another FBO shader
+	std::string fShaderPath_fbo = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/ShaderFBO.frag";
+	
 	m_renderer = new BARE2D::BasicRenderer(fShaderPath, vShaderPath, m_window->getWidth(), m_window->getHeight());
 	m_renderer->init();
+	
+	m_fbo = new BARE2D::FBORenderer(fShaderPath_fbo, vShaderPath, m_window->getWidth(), m_window->getHeight(), glm::vec2(m_window->getWidth(), m_window->getHeight()));
+	m_fbo->init();
 	
 	std::string fontPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/OpenSans-Regular.ttf";
 	m_font_openSans = BARE2D::ResourceManager::loadFont(fontPath, 36);
@@ -126,7 +142,7 @@ void TestScreen::update(double dt)
 		updateCount = 0;
 	}
 	if(std::abs(m_time - 480.0f) <= 0.01f) {
-		slowFactor = 200000000;
+		slowFactor = 80000000;
 		m_window->setSize(800, 600);
 		BARE2D::Logger::getInstance()->log("Now emulating very very heavy rendering. " + std::to_string(renderCount) + " renders versus " + std::to_string(updateCount) + " updates.");
 		renderCount = 0;
@@ -135,11 +151,6 @@ void TestScreen::update(double dt)
 	if(m_time >= 960.0f) {
 		m_screenState = BARE2D::ScreenState::EXIT_APPLICATION;
 		BARE2D::Logger::getInstance()->log("Finished heavy rendering. " + std::to_string(renderCount) + " renders versus " + std::to_string(updateCount) + " updates.");
-	}
-	
-	if(m_inputManager->isKeyPressed(SDLK_F1)) {
-		// Reload cache
-		BARE2D::ResourceManager::clearCaches();
 	}
 	
 	updateCount++;

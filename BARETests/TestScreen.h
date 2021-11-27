@@ -5,6 +5,7 @@
 #include <ShaderProgram.hpp>
 #include <Texture.hpp>
 #include <BasicRenderer.hpp>
+#include <FBORenderer.hpp>
 #include <FontRenderer.hpp>
 #include <DebugRenderer.hpp>
 #include <InputManager.hpp>
@@ -33,6 +34,7 @@ private:
 	BARE2D::Window* m_window = nullptr;
 	BARE2D::InputManager* m_inputManager = nullptr;
 	
+	BARE2D::FBORenderer* m_fbo = nullptr;
 	BARE2D::BasicRenderer* m_renderer = nullptr;
 	BARE2D::FontRenderer* m_fontRenderer = nullptr;
 	BARE2D::DebugRenderer* m_debugRenderer = nullptr;

@@ -30,8 +30,8 @@ namespace BARE2D {
 				newPosition.x = destRect.x;
 			} else {
 				// Check to make sure we have the glyph in the font
-				int glyphIndex = c - FIRST_PRINTABLE_CHAR;
-				if(glyphIndex < 0 || glyphIndex > font.getCharacters()) {
+				int glyphIndex = c - (int)FIRST_PRINTABLE_CHAR;
+				if(glyphIndex < 0 || (unsigned int)glyphIndex > font.getCharacters()) {
 					// We don't support this character, set the index to the "unsupported" glyph
 					glyphIndex = font.getCharacters();
 				}

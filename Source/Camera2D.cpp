@@ -21,7 +21,7 @@ namespace BARE2D {
 		
 	}
 
-	void Camera2D::init(unsigned int screenWidth, unsigned int screenHeight)
+	void Camera2D::init(float screenWidth, float screenHeight)
 	{
 		// Set the necessary bits
 		m_screenWidth = screenWidth;
@@ -158,12 +158,12 @@ namespace BARE2D {
 		m_matrixNeedsUpdate = true;
 	}
 
-	unsigned int Camera2D::getScreenWidth() const
+	float Camera2D::getScreenWidth() const
 	{
 		return m_screenWidth;
 	}
 
-	unsigned int Camera2D::getScreenHeight() const
+	float Camera2D::getScreenHeight() const
 	{
 		return m_screenHeight;
 	}

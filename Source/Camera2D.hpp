@@ -15,7 +15,7 @@ namespace BARE2D {
 		 * @param screenWidth The width of the screen or FBO the camera needs to transform things within. The 'visual field'
 		 * @param screenHeight The height of the screen or FBO the camera needs to transform things within. The 'visual field'
 		 */
-		void init(unsigned int screenWidth, unsigned int screenHeight);
+		void init(float screenWidth, float screenHeight);
 		
 		/**
 		 * @brief Updates the matrix if necessary
@@ -69,11 +69,11 @@ namespace BARE2D {
 		/**
 		 * @return The screen width 
 		 */
-		unsigned int getScreenWidth() const;
+		float getScreenWidth() const;
 		/**
 		 * @return The screen height 
 		 */
-		unsigned int getScreenHeight() const;
+		float getScreenHeight() const;
 		/**
 		 * @return The camera position 
 		 */
@@ -98,7 +98,7 @@ namespace BARE2D {
 		// The position of the camera
 		glm::vec2 m_position = glm::vec2(0.0f);
 		// The size of the screen (the camera's viewing field)
-		int m_screenWidth, m_screenHeight;
+		float m_screenWidth, m_screenHeight;
 		// How much the camera is zoomed in
 		float m_scale = 1.0f;
 		
