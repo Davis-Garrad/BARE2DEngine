@@ -9,7 +9,7 @@ namespace BARE2D {
 
 	/**
 	 * @class FBORenderer
-	 * @brief The FBORenderer represents and manages an entire FrameBufferObject. This allows one to draw entire scenes first to a texture, then perform some operations on that texture, then draw that texture to the screen.
+	 * @brief The FBORenderer represents and manages an entire FrameBufferObject. This allows one to draw entire scenes first to a texture, then perform some operations on that texture, then draw that texture to the screen. Shaders have uniforms projectionMatrix (mat4), colourTexture (sampler2D), and depthTexture (sampler2D)
 	 */
 	class FBORenderer : public Renderer
 	{
@@ -64,6 +64,9 @@ namespace BARE2D {
 		
 		// The fragment and vertex shader paths for the GLSL shader program
 		std::string m_fragmentShaderPath, m_vertexShaderPath;
+		
+		// Some shaders won't touch the depth buffer.
+		bool m_shaderHasDepth = false;
 	};
 
 }

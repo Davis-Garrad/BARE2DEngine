@@ -15,7 +15,7 @@ namespace BARE2D {
 		
 		// Make sure we can load it.
 		if(m_logFile.fail()) {
-			throwFatalError("Logger failed to open log file.");
+			throwFatalError(BAREError::LOGGER_FAILURE, "Logger failed to open log file.");
 			return;
 		}
 		

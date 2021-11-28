@@ -105,8 +105,7 @@ namespace BARE2D {
 			glDeleteShader(m_fragmentShaderID);
 			
 			// Throw fatal error, we cannot continue.
-			throwError(BAREError::SHADER_LINK_FAILURE);
-			throwFatalError("Shaders failed to link: " + std::string(errorLog.begin(), errorLog.end()));
+			throwFatalError(BAREError::SHADER_LINK_FAILURE, "Shaders failed to link: " + std::string(errorLog.begin(), errorLog.end()));
 		}
 		
 		// Now that we have everything all linked up and it's all good, we can just detach the shaders and delete them. They're now in the program.
@@ -121,13 +120,14 @@ namespace BARE2D {
 	GLint ShaderProgram::getUniformLocation(const std::string& uniform)
 	{
 		// Just use OpenGL's calls, then check for errors
-		unsigned int location = glGetUniformLocation(m_programID, uniform.c_str());
+		GLint location = glGetUniformLocation(m_programID, uniform.c_str());
 		
 		// Error check
 		if(location == GL_INVALID_INDEX) {
 			// Error!
-			throwError(BAREError::UNIFORM_NOT_FOUND);
-			throwFatalError("Uniform name: " + uniform);
+			throwError(BAREError::UNIFORM_NOT_FOUND, "Uniform name: " + uniform);
+			
+			// Location, upon querying a non-existent uniform, will already be -1.
 		}
 		
 		return location;
@@ -195,9 +195,15 @@ namespace BARE2D {
 			glDeleteShader(id);
 			
 			// Throw fatal error, we cannot continue.
-			throwError(BAREError::SHADER_COMPILE_FAILURE);
-			throwFatalError("Shader failed to compile: " + name + "\n\n" + std::string(errorLog.begin(), errorLog.end()));
+			throwFatalError(BAREError::SHADER_COMPILE_FAILURE, "Shader failed to compile: " + name + "\n\n" + std::string(errorLog.begin(), errorLog.end()));
 		}
+	}
+	
+	bool ShaderProgram::doesUniformExist(const std::string uniform) {
+		GLint loc = getUniformLocation(uniform);
+		
+		if(loc == -1) return false;
+		return true;
 	}
 	
 	
@@ -209,6 +215,9 @@ namespace BARE2D {
 		// First, get the location
 		GLint loc = getUniformLocation(uniform);
 		
+		// Now check for errors.
+		if(loc == -1) return;
+		
 		// Now, call glUniform{whatever}
 		glUniform1i(loc, data);
 	}
@@ -216,6 +225,9 @@ namespace BARE2D {
 	void ShaderProgram::setUniform<unsigned int>(const std::string uniform, unsigned int& data) {
 		// First, get the location
 		GLint loc = getUniformLocation(uniform);
+		
+		// Now check for errors.
+		if(loc == -1) return;
 		
 		// Now, call glUniform{whatever}
 		glUniform1ui(loc, data);
@@ -225,6 +237,9 @@ namespace BARE2D {
 		// First, get the location
 		GLint loc = getUniformLocation(uniform);
 		
+		// Now check for errors.
+		if(loc == -1) return;
+		
 		// Now, call glUniform{whatever}
 		glUniform1f(loc, data);
 	}
@@ -232,6 +247,9 @@ namespace BARE2D {
 	void ShaderProgram::setUniform<glm::vec2>(const std::string uniform, glm::vec2& data) {
 		// First, get the location
 		GLint loc = getUniformLocation(uniform);
+		
+		// Now check for errors.
+		if(loc == -1) return;
 		
 		// Now, call glUniform{whatever}
 		glUniform2fv(loc, 1, glm::value_ptr(data));
@@ -241,6 +259,9 @@ namespace BARE2D {
 		// First, get the location
 		GLint loc = getUniformLocation(uniform);
 		
+		// Now check for errors.
+		if(loc == -1) return;
+		
 		// Now, call glUniform{whatever}
 		glUniform3fv(loc, 1, glm::value_ptr(data));
 	}
@@ -248,6 +269,9 @@ namespace BARE2D {
 	void ShaderProgram::setUniform<glm::vec4>(const std::string uniform, glm::vec4& data) {
 		// First, get the location
 		GLint loc = getUniformLocation(uniform);
+		
+		// Now check for errors.
+		if(loc == -1) return;
 		
 		// Now, call glUniform{whatever}
 		glUniform4fv(loc, 1, glm::value_ptr(data));
@@ -257,6 +281,9 @@ namespace BARE2D {
 		// First, get the location
 		GLint loc = getUniformLocation(uniform);
 		
+		// Now check for errors.
+		if(loc == -1) return;
+		
 		// Now, call glUniform{whatever}
 		glUniform2iv(loc, 1, glm::value_ptr(data));
 	}
@@ -264,6 +291,9 @@ namespace BARE2D {
 	void ShaderProgram::setUniform<glm::ivec3>(const std::string uniform, glm::ivec3& data) {
 		// First, get the location
 		GLint loc = getUniformLocation(uniform);
+		
+		// Now check for errors.
+		if(loc == -1) return;
 		
 		// Now, call glUniform{whatever}
 		glUniform3iv(loc, 1, glm::value_ptr(data));
@@ -273,6 +303,9 @@ namespace BARE2D {
 		// First, get the location
 		GLint loc = getUniformLocation(uniform);
 		
+		// Now check for errors.
+		if(loc == -1) return;
+		
 		// Now, call glUniform{whatever}
 		glUniform4iv(loc, 1, glm::value_ptr(data));
 	}
@@ -281,6 +314,9 @@ namespace BARE2D {
 	void ShaderProgram::setUniformMatrix<glm::mat4>(const std::string uniform, bool transpose, glm::mat4& data) {
 		// First, get the location
 		GLint loc = getUniformLocation(uniform);
+		
+		// Now check for errors.
+		if(loc == -1) return;
 		
 		// Now call glUniformMatrix{whatever}
 		glUniformMatrix4fv(loc, 1, transpose, glm::value_ptr(data));

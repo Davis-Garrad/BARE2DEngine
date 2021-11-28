@@ -47,7 +47,11 @@ namespace BARE2D {
 		// Now, for convenience, set the uniforms of the FBO shader program
 		GLint colourTexture = 0, depthTexture = 1;
 		m_shader.setUniform("colourTexture", colourTexture);
-		m_shader.setUniform("depthTexture", depthTexture);
+		
+		m_shaderHasDepth = m_shader.doesUniformExist("depthTexture");
+		if(m_shaderHasDepth) {
+			m_shader.setUniform("depthTexture", depthTexture);
+		}
 		
 		m_shader.unuse();
 		
@@ -84,6 +88,7 @@ namespace BARE2D {
 		// Make sure that we clear the actual buffer objects
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glClearColor(1.0, 0.0f, .863f, 0.0f);
+		glClearDepth(1.0f);
 		
 		// Enable writing to the depth attachment
 		glEnable(GL_DEPTH_TEST);
@@ -109,13 +114,15 @@ namespace BARE2D {
 	}
 	
 	void FBORenderer::preRender() {
-		// Make sure that we aren't just re-writing over the depth texture again!
+		// Make sure that the FBO is written as a single texture, essentially - not depth-tested by parts.
 		glDisable(GL_DEPTH_TEST);
 		
 		// Pre-render is going to be pretty bare, as our shader just needs to be called for the uploading of texture data (in createRenderBatches()), and the only uniforms used are constants.
-		m_shader.setUniformMatrix("projectionMatrix", GL_FALSE, *glm::value_ptr(m_camera->getCameraMatrix()));
+		//glm::mat4 matrix = m_camera->getCameraMatrix();
+		//m_shader.setUniformMatrix("projectionMatrix", GL_FALSE, matrix);
+		/// The camera should only be used to actually draw the FBO.
 		
-		// Set GL_TEXTURE1 (GL_TEXTURE0 is set within the regular render function)
+		// Set GL_TEXTURE1 & GL_TEXTURE0
 		GLContextManager::getContext()->setActiveTexture(GL_TEXTURE1);
 		GLContextManager::getContext()->bindTexture(GL_TEXTURE_2D, m_textureIDs[1]);
 		GLContextManager::getContext()->setActiveTexture(GL_TEXTURE0);
@@ -190,8 +197,7 @@ namespace BARE2D {
 					glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH24_STENCIL8, m_size.x, m_size.y, 0, GL_DEPTH_STENCIL, GL_UNSIGNED_INT_24_8, nullptr);
 					break;
 				default:
-					throwError(BAREError::FBO_FAILURE);
-					throwFatalError("Too many attachments: " + std::to_string(i));
+					throwFatalError(BAREError::FBO_FAILURE, "Too many attachments: " + std::to_string(i));
 			}
 			
 			// Give the texture some more basic settings.

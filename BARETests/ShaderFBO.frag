@@ -12,7 +12,8 @@ uniform sampler2D depthTexture;
 void main() {
 	float depth = (texture(depthTexture, fragmentUV.xy)).r;
 
-	colour.rgba = texture(colourTexture, fragmentUV.xy) * fragmentColour;
-	colour.r *= depth;
+	vec4 texColour = texture(colourTexture, fragmentUV.xy);
+
+	colour = texColour * fragmentColour;
 }
 

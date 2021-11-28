@@ -55,6 +55,12 @@ namespace BARE2D {
 		void setUniformMatrix(const std::string uniform, bool transpose, T& data);
 		
 		/**
+		 * @param uniform The uniform to check for
+		 * @return True if the uniform is in the compiled shader program, false otherwise.
+		 */
+		bool doesUniformExist(const std::string uniform);
+		
+		/**
 		 * @brief Activates this shader program for the renderer to use.
 		 */
 		void use();

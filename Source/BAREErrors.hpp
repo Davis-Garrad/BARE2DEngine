@@ -21,7 +21,8 @@ namespace BARE2D {
 		SHADER_LINK_FAILURE,
 		GLSL_PROGRAM_FAILURE,
 		FONT_FAILURE,
-		FBO_FAILURE
+		FBO_FAILURE,
+		LOGGER_FAILURE
 	};
 	
 	/**
@@ -32,22 +33,18 @@ namespace BARE2D {
 	extern std::string getErrString(BAREError err);
 	
 	/**
-	 * @brief Throws an error message, printing a message directly into the terminal (bypassing the logger). Ends the program.
-	 * @param message The message to print.
-	 */
-	extern void throwFatalError(std::string message);
-	
-	/**
 	 * @brief Throws an error (fatal). Also calls displayErrors and exits the program.
 	 * @param err The type of error to throw.
+	 * @param message (Optional) The message to display along with the error.
 	 */
-	extern void throwFatalError(BAREError err);
+	extern void throwFatalError(BAREError err, std::string message = "");
 	
 	/**
 	 * @brief Throws an error silently. Adds it to the pile.
 	 * @param err The error to throw.
+	 * @param message (Optional) The message to display along with the error.
 	 */
-	extern void throwError(BAREError err);
+	extern void throwError(BAREError err, std::string message = "");
 	
 	/**
 	 * @brief Displays the latest thrown errors (really just all the thrown errors) in the console.

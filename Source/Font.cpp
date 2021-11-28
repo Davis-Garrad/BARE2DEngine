@@ -40,8 +40,7 @@ namespace BARE2D {
 		
 		// Check to make sure it was loaded properly
 		if(font == nullptr) {
-			throwError(BAREError::FONT_FAILURE);
-			throwFatalError("Failed to load font " + std::string(fontFile));
+			throwFatalError(BAREError::FONT_FAILURE, "Failed to load font " + std::string(fontFile));
 		}
 		
 		// Initialize some member variables.
@@ -129,8 +128,7 @@ namespace BARE2D {
 			// First, check if a font can be made at all
 			if(!bestPartition) {
 				// We never actually found a feasible font arrangement
-				throwError(BAREError::FONT_FAILURE);
-				throwFatalError("Failed to create font texture. Try a lower resolution.");
+				throwFatalError(BAREError::FONT_FAILURE, "Failed to create font texture. Try a lower resolution.");
 			}
 		}
 		
