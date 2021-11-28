@@ -1,9 +1,0 @@
-
-
-
-### LOG: Sun Nov 28 02:02:36 2021 ###
-
-Thanks for using BARE2D! Original engine by Davis Garrad
-
-Entering screen! Will display pretty colours for a bit, then shrink, then leave!
-Leaving screen!

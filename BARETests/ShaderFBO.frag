@@ -15,5 +15,6 @@ void main() {
 	vec4 texColour = texture(colourTexture, fragmentUV.xy);
 
 	colour = texColour * fragmentColour;
+	colour.rgb *= depth;
 }
 

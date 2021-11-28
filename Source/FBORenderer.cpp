@@ -86,9 +86,9 @@ namespace BARE2D {
 		bind();
 		
 		// Make sure that we clear the actual buffer objects
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glClearColor(1.0, 0.0f, .863f, 0.0f);
 		glClearDepth(1.0f);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 		
 		// Enable writing to the depth attachment
 		glEnable(GL_DEPTH_TEST);

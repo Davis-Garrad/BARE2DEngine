@@ -78,10 +78,10 @@ namespace BARE2D {
 		}
 		
 		// Give the camera position back its offset to make it screen-space again
-		viewedPosition += glm::vec2(m_screenWidth/2, m_screenHeight/2);
+		//viewedPosition -= glm::vec2(m_screenWidth/2, m_screenHeight/2);
 		
 		// Lastly, (un?)invert the Y direction again.
-		viewedPosition.y = m_screenHeight - viewedPosition.y;
+		//viewedPosition.y = m_screenHeight - viewedPosition.y;
 	
 		// Now we have our result!
 		return viewedPosition;
@@ -94,7 +94,7 @@ namespace BARE2D {
 		screenPosition.y = m_screenHeight - screenPosition.y;
 		
 		// Centre the screen coordinates
-		screenPosition -= glm::vec2(m_screenWidth/2, m_screenHeight/2);
+		//screenPosition += glm::vec2(m_screenWidth/2, m_screenHeight/2);
 	
 		// Scale them to the camera world
 		// Make sure we aren't inverting them with a teeny scale somehow or dividing by zero
