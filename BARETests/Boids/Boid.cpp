@@ -26,6 +26,9 @@ void Boid::update(std::vector<Boid*>& others) {
 	// For cohesion
 	glm::vec2 centreMass(0.0f);
 	
+	// To make sure they don't run too far away!
+	glm::vec2 centreMassHerd(0.0f);
+	
 	// For separation
 	glm::vec2 avgNeighbours(0.0f);
 	
@@ -42,7 +45,9 @@ void Boid::update(std::vector<Boid*>& others) {
 		
 		float agreeance = glm::dot(dirToOther, direction);
 		
-		if(distance < threshold && agreeance > (1.0f - viewCone)) {
+		centreMassHerd += other-self;
+		
+		if(distance < maxThreshold && agreeance > (1.0f - viewCone)) {
 			numNeighbours++;
 			
 			avgDirection += others[i]->direction / std::pow(distance/threshold, 2.0f);
@@ -55,11 +60,14 @@ void Boid::update(std::vector<Boid*>& others) {
 		avgDirection /= numNeighbours;
 		centreMass /= numNeighbours;
 		avgNeighbours /= numNeighbours;
-		
-		glm::vec2 newDirection = (avgDirection * alignmentWeight + centreMass * cohesionWeight - avgNeighbours * separationWeight) / (alignmentWeight + cohesionWeight + separationWeight);
-
-		direction += glm::normalize(newDirection) / smoothness;
-		direction = glm::normalize(direction);
 	}
+	centreMassHerd /= others.size();
+	
+	glm::vec2 centreDirection = glm::normalize(glm::vec2(x, y) - centreMass) * glm::distance(glm::vec2(x, y), centreMass) / herdOrbitRadius;
+	
+	glm::vec2 newDirection = (avgDirection * alignmentWeight + centreMass * cohesionWeight - avgNeighbours * separationWeight - centreDirection * herdCohesionWeight) / (herdCohesionWeight + alignmentWeight + cohesionWeight + separationWeight);
+
+	direction += glm::normalize(newDirection) / smoothness;
+	direction = glm::normalize(direction);
 }
 

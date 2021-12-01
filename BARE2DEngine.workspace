@@ -12,7 +12,7 @@
       <Project Name="BARETests" ConfigName="Debug"/>
       <Project Name="BAREBoids" ConfigName="Debug"/>
     </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="Release" Selected="yes">
+    <WorkspaceConfiguration Name="Release" Selected="no">
       <Environment/>
       <Project Name="BARE2DEngine" ConfigName="Release"/>
       <Project Name="BARETest_ThreeBody" ConfigName="Release"/>

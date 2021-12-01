@@ -1,1 +1,1 @@
-Debug/Boid.cpp.o Debug/AppScreen.cpp.o Debug/main.cpp.o
+Debug/main.cpp.o Debug/AppScreen.cpp.o Debug/Boid.cpp.o
