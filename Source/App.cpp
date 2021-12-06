@@ -33,6 +33,10 @@ namespace BARE2D {
 		// Start the gameloop!
 		m_isGameRunning = true;
 		
+		// Make sure we actually have an entry point
+		if(!m_screenList->getCurrentScreen())
+			return;
+		
 		// Make sure to actually "enter" the entry screen
 		m_screenList->getCurrentScreen()->onEntry();
 		

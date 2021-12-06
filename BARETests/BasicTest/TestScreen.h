@@ -43,5 +43,7 @@ private:
 	
 	glm::vec2 m_position;
 	
+	glm::vec2 m_lastMouse;
+	
 	unsigned int renderCount = 0, updateCount = 0;
 };

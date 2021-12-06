@@ -6,4 +6,5 @@
 -I/usr/include/x86_64-linux-gnu
 -I/usr/include
 -I/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine
+-I/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/include
 -std=c++17

@@ -19,7 +19,7 @@ namespace BARE2D {
 		
 		virtual void init() override;
 		
-		virtual void setPosition(glm::vec2 position);
+		Camera2D* getCamera();
 		
 		virtual void preRender() override;
 		

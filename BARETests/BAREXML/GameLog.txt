@@ -1,0 +1,47 @@
+
+
+
+### LOG: Mon Dec  6 01:18:54 2021 ###
+
+Thanks for using BARE2D! Original engine by Davis Garrad
+
+Contextual information: 
+Custom float data to be manipulated: 69.696899
+Custom vector data: 1.000000, 1.000000, 2.000000, 3.000000, 5.000000, 8.000000, 13.000000
+
+### BEGIN WRITE OPERATION ###
+
+Creating new cache for XML Data: testDataType
+Beginning XML Data Write.
+Starting XML data save to file
+	Wrote XML: testDataType: Some pointless name here (420)
+Finished XML data save to file
+XML Data Write Complete.
+
+### FILE WRITTEN. CLEARING CACHE ###
+
+
+### BEGIN READ/COPY OPERATION ###
+
+Beginning XML Data Load.
+Starting XML data read from file
+Creating new cache for XML Data: testDataType
+	Read XML: testDataType: Some pointless name here (420)
+Finished XML data read from file
+XML Data Load Complete.
+Beginning XML Data Write.
+Starting XML data save to file
+	Wrote XML: testDataType: Some pointless name here (420)
+Finished XML data save to file
+XML Data Write Complete.
+
+### FILE READ AND COPIED ###
+
+
+### RESULTS: ###
+
+Lone float: 69.696899
+Vector of floats: 1.000000, 1.000000, 2.000000, 3.000000, 5.000000, 8.000000, 13.000000
+
+### END ###
+

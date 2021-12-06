@@ -22,8 +22,8 @@ namespace BARE2D {
 	{
 	}
 	
-	void FBORenderer::setPosition(glm::vec2 position) {
-		m_camera->setPosition(position);
+	Camera2D* FBORenderer::getCamera() {
+		return m_camera;
 	}
 
 	void FBORenderer::init()
@@ -107,8 +107,6 @@ namespace BARE2D {
 
 	void FBORenderer::end()
 	{
-		Renderer::end();
-		
 		// All we need to do is unbind the FBO and associated textures.
 		unbind();
 	}
@@ -127,6 +125,8 @@ namespace BARE2D {
 		GLContextManager::getContext()->bindTexture(GL_TEXTURE_2D, m_textureIDs[1]);
 		GLContextManager::getContext()->setActiveTexture(GL_TEXTURE0);
 		GLContextManager::getContext()->bindTexture(GL_TEXTURE_2D, m_textureIDs[0]);
+		
+		m_camera->update();
 	}
 
 	void FBORenderer::createRenderBatches()

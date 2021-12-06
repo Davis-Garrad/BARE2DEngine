@@ -56,15 +56,17 @@ namespace BARE2D {
 		
 		/**
 		 * @brief Sets the scale of the camera
-		 * @param newScale The scale to set ot
+		 * @param newScaleX The scale to set ot
+		 * @param newScaleY The scale to set ot
 		 */
-		void setScale(float newScale);
+		void setScale(float newScaleX, float newScaleY);
 		
 		/**
 		 * @brief Offsets the scale by some increment 
-		 * @param offset The increment of scale to add.
+		 * @param offsetX The increment of scale to add.
+		 * @param offsetY The increment of scale to add.
 		 */
-		void offsetScale(float offset);
+		void offsetScale(float offsetX, float offsetY);
 		
 		/**
 		 * @return The screen width 
@@ -81,7 +83,8 @@ namespace BARE2D {
 		/**
 		 * @return The zoom level 
 		 */
-		float getScale() const;
+		float getScaleX() const;
+		float getScaleY() const;
 		/**
 		 * @return The camera matrix. 
 		 */
@@ -100,7 +103,7 @@ namespace BARE2D {
 		// The size of the screen (the camera's viewing field)
 		float m_screenWidth, m_screenHeight;
 		// How much the camera is zoomed in
-		float m_scale = 1.0f;
+		float m_scaleX = 1.0f, m_scaleY = 1.0f;
 		
 		// Some matrices for math purposes.
 		glm::mat4 m_cameraMatrix, m_orthographicMatrix;

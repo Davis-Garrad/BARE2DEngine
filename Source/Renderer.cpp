@@ -18,8 +18,7 @@ namespace BARE2D {
 	}
 	
 	void Renderer::end() {
-		// Create RenderBatches in preparation for render() call.
-		createRenderBatches();
+		// Nothing special really needs to be done here.
 	}
 
 	void Renderer::init()
@@ -49,6 +48,9 @@ namespace BARE2D {
 		m_vertexArrayObject.bind();
 		
 		preRender();
+		
+		// Create RenderBatches (uploading them to the bound texture, so that we can actually draw them next.
+		createRenderBatches();
 		
 		// Now we can render each renderbatch, uploading their texture data respectively.
 		for(unsigned int i = 0; i < m_batches.size(); i++) {

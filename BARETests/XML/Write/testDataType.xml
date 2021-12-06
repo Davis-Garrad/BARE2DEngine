@@ -1,0 +1,5 @@
+<testDataType id="420" name="Some pointless name here">
+	<customDataFloatVector>{1.000000}{1.000000}{2.000000}{3.000000}{5.000000}{8.000000}{13.000000}</customDataFloatVector>
+	<customDataFloat>69.696899</customDataFloat>
+</testDataType>
+

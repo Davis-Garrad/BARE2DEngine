@@ -91,11 +91,11 @@ namespace BARE2D {
 		static void clearCaches();
 		
 	private:
-		static Cache<Texture>* m_textures;
-		static Cache<MutableTexture>* m_mutableTextures;
-		static Cache<Sound>* m_sounds;
-		static Cache<Script>* m_scripts;
-		static Cache<Font>* m_fonts;
+		static Cache<std::string, Texture>* m_textures;
+		static Cache<std::string, MutableTexture>* m_mutableTextures;
+		static Cache<std::string, Sound>* m_sounds;
+		static Cache<std::string, Script>* m_scripts;
+		static Cache<std::string, Font>* m_fonts;
 
 	};
 

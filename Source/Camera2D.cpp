@@ -8,7 +8,8 @@ namespace BARE2D {
 							m_position(glm::vec2(0.0f)), 
 							m_screenWidth(400), 
 							m_screenHeight(400), 
-							m_scale(1.0f), 
+							m_scaleX(1.0f), 
+							m_scaleY(1.0f), 
 							m_cameraMatrix(glm::mat4(0.0f)), 
 							m_orthographicMatrix(glm::mat4(0.0f)), 
 							m_matrixNeedsUpdate(true)
@@ -28,7 +29,8 @@ namespace BARE2D {
 		m_screenHeight = screenHeight;
 		
 		// Reset the necessary bits
-		m_scale = 1.0f;
+		m_scaleX = 1.0f;
+		m_scaleY = 1.0f; 
 		m_position.x = 0.0f;
 		m_position.y = 0.0f;
 		
@@ -54,7 +56,7 @@ namespace BARE2D {
 			
 			
 			// Find the scale of the camera
-			glm::vec3 scale = glm::vec3(m_scale, m_scale, 0.0f);
+			glm::vec3 scale = glm::vec3(m_scaleX, m_scaleY, 0.0f);
 			
 			// Multiply by our scale matrix.
 			m_cameraMatrix = glm::scale(glm::mat4(1.0f), scale) * m_cameraMatrix;
@@ -73,8 +75,9 @@ namespace BARE2D {
 		
 		// Scale them to the screen-space world
 		// Make sure they aren't just getting destroyed if scale == 0.0f
-		if(m_scale > 0.0f) {
-			viewedPosition *= m_scale;
+		if(m_scaleX > 0.0f && m_scaleY > 0.0f) {
+			viewedPosition.x *= m_scaleX;
+			viewedPosition.y *= m_scaleY;
 		}
 		
 		// Give the camera position back its offset to make it screen-space again
@@ -98,8 +101,9 @@ namespace BARE2D {
 	
 		// Scale them to the camera world
 		// Make sure we aren't inverting them with a teeny scale somehow or dividing by zero
-		if(m_scale > 0.0f) {
-			screenPosition /= m_scale;
+		if(m_scaleX > 0.0f && m_scaleY > 0.0f) {
+			screenPosition.x /= m_scaleX;
+			screenPosition.y /= m_scaleY;
 		}
 		
 		// Now move em along to the camera position
@@ -114,7 +118,8 @@ namespace BARE2D {
 		// Converts an in-camera size to a screen-space size.
 		// Offsets and stuff are unnecessary.
 		// Just scale:
-		viewedSize *= m_scale;
+		viewedSize.x *= m_scaleX;
+		viewedSize.y *= m_scaleY;
 		
 		// And since sizes are relative to their container, divide by the "scale" of the screen - the screenWidth and Height
 		viewedSize /= glm::vec2(m_screenWidth/2, m_screenHeight/2);
@@ -129,7 +134,8 @@ namespace BARE2D {
 		screenSize *= glm::vec2(m_screenWidth/2, m_screenHeight/2);
 		
 		// Divides by the camera's scale to put it back into the camera world
-		screenSize /= m_scale;
+		screenSize.x /= m_scaleX;
+		screenSize.y /= m_scaleY;
 		
 		return screenSize;
 	}
@@ -146,15 +152,17 @@ namespace BARE2D {
 		m_matrixNeedsUpdate = true;
 	}
 
-	void Camera2D::setScale(float newScale)
+	void Camera2D::setScale(float newScaleX, float newScaleY)
 	{
-		m_scale = newScale;
+		m_scaleX = newScaleX;
+		m_scaleY = newScaleY;
 		m_matrixNeedsUpdate = true;
 	}
 
-	void Camera2D::offsetScale(float offset)
+	void Camera2D::offsetScale(float offsetX, float offsetY)
 	{
-		m_scale += offset;
+		m_scaleX += offsetX;
+		m_scaleY += offsetY;
 		m_matrixNeedsUpdate = true;
 	}
 
@@ -173,9 +181,14 @@ namespace BARE2D {
 		return m_position;
 	}
 
-	float Camera2D::getScale() const
+	float Camera2D::getScaleX() const
 	{
-		return m_scale;
+		return m_scaleX;
+	}
+
+	float Camera2D::getScaleY() const
+	{
+		return m_scaleY;
 	}
 
 	const glm::mat4& Camera2D::getCameraMatrix() const
@@ -185,8 +198,9 @@ namespace BARE2D {
 	
 	bool Camera2D::isRectInScene(glm::vec4& rectangle) {
 		// Create the scene's rectangle.
-		glm::vec2 pos0 = m_position - (glm::vec2(m_screenWidth / 2, m_screenHeight / 2) / m_scale);
-		glm::vec2 pos1 = m_position + (glm::vec2(m_screenWidth / 2, m_screenHeight / 2) / m_scale);
+		glm::vec2 scale(m_scaleX, m_scaleY);
+		glm::vec2 pos0 = m_position - (glm::vec2(m_screenWidth / 2, m_screenHeight / 2) / scale);
+		glm::vec2 pos1 = m_position + (glm::vec2(m_screenWidth / 2, m_screenHeight / 2) / scale);
 		
 		// Check if either of the positive x or negative x sides are too far to be seen
 		if(rectangle.x + rectangle.z + m_screenWidth/2 < pos0.x || rectangle.x > pos1.x) {

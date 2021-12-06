@@ -10,11 +10,11 @@
 
 namespace BARE2D {
 
-	Cache<Texture>* ResourceManager::m_textures = new Cache<Texture>();
-	Cache<MutableTexture>* ResourceManager::m_mutableTextures = new Cache<MutableTexture>();
-	Cache<Sound>* ResourceManager::m_sounds = new Cache<Sound>();
-	Cache<Script>* ResourceManager::m_scripts = new Cache<Script>();
-	Cache<Font>* ResourceManager::m_fonts = new Cache<Font>();
+	Cache<std::string, Texture>* ResourceManager::m_textures = new Cache<std::string, Texture>();
+	Cache<std::string, MutableTexture>* ResourceManager::m_mutableTextures = new Cache<std::string, MutableTexture>();
+	Cache<std::string, Sound>* ResourceManager::m_sounds = new Cache<std::string, Sound>();
+	Cache<std::string, Script>* ResourceManager::m_scripts = new Cache<std::string, Script>();
+	Cache<std::string, Font>* ResourceManager::m_fonts = new Cache<std::string, Font>();
 	
 	ShaderProgram ResourceManager::loadShaders(std::string& vertShaderSource, std::string& fragShaderSource) {
 		ShaderProgram newProgram;

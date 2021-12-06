@@ -28,7 +28,7 @@ void TestScreen::draw()
 	m_renderer->begin();
 	
 	float depth = -1.0f;
-	
+
 	for(unsigned int i = 0; i < 55; i++) {
 		for(unsigned int j = 0; j < 25; j++) {
 			glm::vec2 pos = glm::vec2(-350.0f, -250.0f);
@@ -154,4 +154,18 @@ void TestScreen::update(double dt)
 	}
 	
 	updateCount++;
+	
+	float scroll = m_inputManager->getMouseScrollwheelPosition();
+	
+	if(std::abs(scroll) > 0.000001f) {
+		float scaleNudge = scroll * m_fbo->getCamera()->getScaleX() / 2.0f;
+		m_fbo->getCamera()->offsetScale(scaleNudge, scaleNudge);
+	}
+		
+	if(m_inputManager->isKeyDown(SDL_BUTTON_LEFT)) {
+		glm::vec2 thisPosition = m_fbo->getCamera()->getViewedPositionFromScreenPosition(m_inputManager->getMousePosition());
+		glm::vec2 movement = m_fbo->getCamera()->getScreenSizeFromViewedSize(thisPosition - m_lastMouse);
+		m_fbo->getCamera()->offsetPosition(movement);
+	}
+	m_lastMouse = m_fbo->getCamera()->getViewedPositionFromScreenPosition(m_inputManager->getMousePosition());
 }
