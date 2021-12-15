@@ -37,6 +37,11 @@ void OrbitScreen::draw()
 	
 	m_renderer->end();
 	m_renderer->render();
+	
+	m_debugRenderer->begin();
+	m_debugRenderer->drawLine(glm::vec2(0.5f), glm::vec2(1.0f, 0.0f), 5.0f, BARE2D::Colour(255, 255, 255, 255));
+	m_debugRenderer->end();
+	m_debugRenderer->render();
 }
 
 unsigned int OrbitScreen::getNextScreenIndex()
@@ -91,6 +96,9 @@ void OrbitScreen::loadAssets() {
 	m_renderer = new BARE2D::BasicRenderer(fragShader, vertShader, m_window->getWidth(), m_window->getHeight());
 	m_renderer->init();
 	
+	m_debugRenderer = new BARE2D::DebugRenderer();
+	m_debugRenderer->init();
+	
 	
 	m_regrenderer = new BARE2D::BasicRenderer(fragShader, vertShader);
 	m_regrenderer->init();
@@ -105,14 +113,18 @@ void OrbitScreen::update(double dt)
 	float scroll = m_input->getMouseScrollwheelPosition();
 	
 	if(std::abs(scroll) > 0.000001f)
-		m_renderer->getCamera()->offsetScale(scroll * m_renderer->getCamera()->getScale() / 2.0f);
+		m_renderer->getCamera()->offsetScale(scroll * m_renderer->getCamera()->getScaleX() / 2.0f, scroll * m_renderer->getCamera()->getScaleY() / 2.0f);
 		
 	if(m_input->isKeyDown(SDL_BUTTON_LEFT)) {
 		glm::vec2 movement = m_lastMouse - m_input->getMousePosition() * glm::vec2(1.0f, -1.0f);
-		movement /= m_renderer->getCamera()->getScale();
+		movement /= m_renderer->getCamera()->getScaleX();
 		m_renderer->getCamera()->offsetPosition(movement);
 	}
 	m_lastMouse = m_input->getMousePosition() * glm::vec2(1.0f, -1.0f);
+	
+	if(m_input->isKeyPressed(SDL_BUTTON_RIGHT) || (m_input->isKeyDown(SDL_BUTTON_RIGHT) && m_input->isKeyDown(SDLK_LCTRL))) {
+		m_bodies.push_back(new Body(m_renderer->getCamera()->getViewedPositionFromScreenPosition(m_input->getMousePosition() - glm::vec2(m_window->getWidth()/2.0f, -(float)(m_window->getHeight()/2.0f))), glm::vec2(0.0f, 0.0f), 7.30e17, 1.7e3));
+	}
 	
 	if(m_input->isKeyPressed(SDLK_F1)) {
 		// Reload cache
@@ -121,3 +133,4 @@ void OrbitScreen::update(double dt)
 		loadAssets();
 	}
 }
+

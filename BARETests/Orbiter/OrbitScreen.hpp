@@ -2,6 +2,7 @@
 
 #include <Screen.hpp>
 #include <BasicRenderer.hpp>
+#include <DebugRenderer.hpp>
 #include <Window.hpp>
 #include <ResourceManager.hpp>
 #include <InputManager.hpp>
@@ -33,6 +34,7 @@ private:
 	
 	BARE2D::BasicRenderer* m_renderer = nullptr;
 	BARE2D::BasicRenderer* m_regrenderer = nullptr;
+	BARE2D::DebugRenderer* m_debugRenderer = nullptr;
 	BARE2D::Window* m_window;
 	BARE2D::Texture m_planetTexture;
 	BARE2D::Texture m_starsTexture;

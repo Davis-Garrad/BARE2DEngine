@@ -102,11 +102,11 @@ void AppScreen::update(double dt)
 	float scroll = m_inputManager->getMouseScrollwheelPosition();
 	
 	if(std::abs(scroll) > 0.000001f)
-		m_renderer->getCamera()->offsetScale(scroll * m_renderer->getCamera()->getScale() / 2.0f);
+		m_renderer->getCamera()->offsetScale(scroll * m_renderer->getCamera()->getScaleX() / 2.0f, scroll * m_renderer->getCamera()->getScaleY() / 2.0f);
 		
 	if(m_inputManager->isKeyDown(SDL_BUTTON_LEFT)) {
 		glm::vec2 movement = m_lastMouse - m_inputManager->getMousePosition() * glm::vec2(1.0f, -1.0f);
-		movement /= m_renderer->getCamera()->getScale();
+		movement /= m_renderer->getCamera()->getScaleX();
 		m_renderer->getCamera()->offsetPosition(movement);
 	}
 	m_lastMouse = m_inputManager->getMousePosition() * glm::vec2(1.0f, -1.0f);

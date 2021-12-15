@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="BARE2DEngine" Version="11000" InternalType="Library">
+  <Reconciliation>
+    <Regexes/>
+    <Excludepaths/>
+    <Ignorefiles/>
+    <Extensions>
+      <![CDATA[*.cpp;*.c;*.h;*.hpp;*.xrc;*.wxcp;*.fbp]]>
+    </Extensions>
+    <Topleveldir>/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine</Topleveldir>
+  </Reconciliation>
+  <VirtualDirectory Name="UTF8">
+    <File Name="Other_Libraries/utf8/unchecked.h"/>
+    <File Name="Other_Libraries/utf8/core.h"/>
+    <File Name="Other_Libraries/utf8/checked.h"/>
+    <File Name="Other_Libraries/utf8.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="PicoPNG">
+    <File Name="Other_Libraries/PicoPNG.hpp"/>
+    <File Name="Other_Libraries/PicoPNG.cpp"/>
+  </VirtualDirectory>
   <VirtualDirectory Name="Source">
+    <VirtualDirectory Name="GUI">
+      <File Name="Source/BARECEGUI.hpp"/>
+      <File Name="Source/BARECEGUI.cpp"/>
+    </VirtualDirectory>
     <VirtualDirectory Name="Files">
       <File Name="Source/XMLDataManager.tcc"/>
       <File Name="Source/XMLDataTypes.tcc"/>
@@ -68,8 +91,6 @@
       <File Name="Source/ShaderProgram.hpp"/>
       <File Name="Source/ShaderProgram.cpp"/>
       <File Name="Source/RenderBatch.hpp"/>
-      <File Name="Source/PicoPNG.hpp"/>
-      <File Name="Source/PicoPNG.cpp"/>
       <File Name="Source/MutableTexture.hpp"/>
       <File Name="Source/MutableTexture.cpp"/>
       <File Name="Source/GLContextManager.hpp"/>
@@ -97,6 +118,8 @@
         <IncludePath Value="."/>
         <IncludePath Value="include"/>
         <IncludePath Value="/usr/include"/>
+        <IncludePath Value="/usr/include/x86_64-linux-gnu/cegui-0.8.7/"/>
+        <IncludePath Value="./Other_Libraries"/>
       </Compiler>
       <Linker Options="-lboost_filesystem -lboost_system -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW" Required="yes">
         <LibraryPath Value="."/>
