@@ -1,0 +1,5 @@
+<map id="BARE2D::Camera2D::update" name="BARE2D::Camera2D::update">
+<area shape="rect" id="node1" title="Updates the matrix if necessary." alt="" coords="224,46,419,73"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_basic_renderer.html#aaf24fe92216128173a92b9c23dc4dd56" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="5,5,176,47"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a6a0113b8f8806828e460e41bd7697b6c" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="9,71,173,112"/>
+</map>

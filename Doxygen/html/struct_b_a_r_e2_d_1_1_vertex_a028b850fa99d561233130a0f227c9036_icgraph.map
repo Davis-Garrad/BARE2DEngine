@@ -1,0 +1,5 @@
+<map id="BARE2D::Vertex::setUV" name="BARE2D::Vertex::setUV">
+<area shape="rect" id="node1" title="Sets the UV coords/dimensions." alt="" coords="425,13,592,39"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_glyph.html#adad467cb32d0a44c940901a61d2178c4" title=" " alt="" coords="217,13,377,39"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aa6da4902046ce59bb009570f12f0aaaa" title="Constructs all of the render batches from data given by, say, draw() calls." alt="" coords="5,5,169,47"/>
+</map>

@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace>
-  <VirtualFoldersColours/>
+  <VirtualFoldersColours>
+    <VirtualFolder Path="BARE2DEngine/BAREXML" Colour="#2B6C00"/>
+    <VirtualFolder Path="BARE2DEngine/BARETests" Colour="#6B5400"/>
+    <VirtualFolder Path="BARE2DEngine/BARETest_ThreeBody" Colour="#953400"/>
+    <VirtualFolder Path="BARE2DEngine/BAREBoids" Colour="#870000"/>
+    <VirtualFolder Path="BARE2DEngine/BARE2DEngine" Colour="#000257"/>
+  </VirtualFoldersColours>
 </Workspace>

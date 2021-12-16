@@ -1,0 +1,75 @@
+\hypertarget{_b_a_r_e_errors_8hpp_source}{}\doxysection{B\+A\+R\+E\+Errors.\+hpp}
+\label{_b_a_r_e_errors_8hpp_source}\index{Source/BAREErrors.hpp@{Source/BAREErrors.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{string}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{vector}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{comment}{/// PLEASE NOTE THAT IF MINGW BREAKS, THIS IS PROBABLY WHY}}
+\DoxyCodeLine{00007 \textcolor{comment}{/**}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * @brief De-\/mangles a typeid.name() return value}}
+\DoxyCodeLine{00009 \textcolor{comment}{ * @param mangled The mangled typeid.name() return value}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * @return A demangled version of mangled.}}
+\DoxyCodeLine{00011 \textcolor{comment}{ */}}
+\DoxyCodeLine{00012 \textcolor{keyword}{extern} std::string \mbox{\hyperlink{_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6}{demangle}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* mangled);}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00015     \textcolor{comment}{/**}}
+\DoxyCodeLine{00016 \textcolor{comment}{    * @brief Represents a specific type of error that has occured.}}
+\DoxyCodeLine{00017 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00018}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{00018}}     \textcolor{keyword}{enum} \textcolor{keyword}{class} \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} \{}
+\DoxyCodeLine{00019         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a2eea2c536f4e062c3b1832f9cea1356d}{SDL\_FAILURE}},}
+\DoxyCodeLine{00020         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aac184187fe6248f102d81fc64e36c57d}{GL\_FAILURE\_VERSION}},}
+\DoxyCodeLine{00021         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aed6ff68f5f52346f2c0754edb81b83ed}{DOUBLE\_INIT}},}
+\DoxyCodeLine{00022         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aa4c46509c81b14752ae8ff94452ff486}{GLEW\_FAILURE}},}
+\DoxyCodeLine{00023         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a804b6ec52f621f93ab2f5026201f0d76}{FILE\_FAILURE}},}
+\DoxyCodeLine{00024         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a875ae376eb2fbd99c364b0c2ed42fedc}{TEXTURE\_FAILURE}},}
+\DoxyCodeLine{00025         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a1f208845587ac9c0c53c388d4d385b1a}{VERTEX\_SHADER\_FAILURE}},}
+\DoxyCodeLine{00026         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad860107dd407ff9736d6208998d710f6}{FRAGMENT\_SHADER\_FAILURE}},}
+\DoxyCodeLine{00027         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad6e29903fb0c6eb8c57d20d9ad478d9e}{UNIFORM\_NOT\_FOUND}},}
+\DoxyCodeLine{00028         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abaa8fdfa9df78eba172c4aaa8b8046a2}{SHADER\_COMPILE\_FAILURE}},}
+\DoxyCodeLine{00029         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15af2f6cbcd601921a638724130311f22cd}{SHADER\_LINK\_FAILURE}},}
+\DoxyCodeLine{00030         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8bc03ea7709e07920eab3b6c56df1fd8}{GLSL\_PROGRAM\_FAILURE}},}
+\DoxyCodeLine{00031         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a59e2044a4165c83216dbbca34417462b}{FONT\_FAILURE}},}
+\DoxyCodeLine{00032         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a56134db1e8559ae4b32bf967c15fc4df}{FBO\_FAILURE}},}
+\DoxyCodeLine{00033         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a396430326452fe792ad9891baac4e76b}{LOGGER\_FAILURE}},}
+\DoxyCodeLine{00034         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{XML\_FAILURE}}}
+\DoxyCodeLine{00035     \};}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037     \textcolor{comment}{/**}}
+\DoxyCodeLine{00038 \textcolor{comment}{     * @brief Returns the string representing/explaining the error that occurred.}}
+\DoxyCodeLine{00039 \textcolor{comment}{     * @param err The error enum, which a function returns.}}
+\DoxyCodeLine{00040 \textcolor{comment}{     * @return The representative string.}}
+\DoxyCodeLine{00041 \textcolor{comment}{     */}}
+\DoxyCodeLine{00042     \textcolor{keyword}{extern} std::string \mbox{\hyperlink{namespace_b_a_r_e2_d_a7951c5decc1f7edc3c4f78ed2f579c85}{getErrString}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} err);}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00044     \textcolor{comment}{/**}}
+\DoxyCodeLine{00045 \textcolor{comment}{     * @brief Throws an error (fatal). Also calls displayErrors and exits the program.}}
+\DoxyCodeLine{00046 \textcolor{comment}{     * @param err The type of error to throw.}}
+\DoxyCodeLine{00047 \textcolor{comment}{     * @param message (Optional) The message to display along with the error.}}
+\DoxyCodeLine{00048 \textcolor{comment}{     */}}
+\DoxyCodeLine{00049     \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} err, std::string message = \textcolor{stringliteral}{""});}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051     \textcolor{comment}{/**}}
+\DoxyCodeLine{00052 \textcolor{comment}{     * @brief Throws an error silently. Adds it to the pile.}}
+\DoxyCodeLine{00053 \textcolor{comment}{     * @param err The error to throw.}}
+\DoxyCodeLine{00054 \textcolor{comment}{     * @param message (Optional) The message to display along with the error.}}
+\DoxyCodeLine{00055 \textcolor{comment}{     */}}
+\DoxyCodeLine{00056     \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} err, std::string message = \textcolor{stringliteral}{""});}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058     \textcolor{comment}{/**}}
+\DoxyCodeLine{00059 \textcolor{comment}{     * @brief Displays the latest thrown errors (really just all the thrown errors) in the console.}}
+\DoxyCodeLine{00060 \textcolor{comment}{     */}}
+\DoxyCodeLine{00061     \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{displayErrors}}();}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063     \textcolor{comment}{/**}}
+\DoxyCodeLine{00064 \textcolor{comment}{     * @brief Initializes the GL Debug Message Callback function, and enables debug output straight from OpenGL}}
+\DoxyCodeLine{00065 \textcolor{comment}{     */}}
+\DoxyCodeLine{00066     \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_a4085763ff0085d40686c3cd0bc1a5182}{initGLErrorCallback}}();}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068     \textcolor{keyword}{extern} std::vector<\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}> \mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{thrownErrors}};}
+\DoxyCodeLine{00069 \}}
+
+\end{DoxyCode}

@@ -5,9 +5,9 @@ namespace BARE2D {
 	Screen::Screen()
 	{
 	}
-
-	Screen::~Screen()
-	{
+	
+	Screen::~Screen() {
+	
 	}
 	
 	ScreenState Screen::getState() {

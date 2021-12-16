@@ -26,7 +26,7 @@
         <IncludePath Value="/usr/include"/>
       </Compiler>
       <Linker Options="-lboost_filesystem -lboost_system -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW" Required="yes">
-        <LibraryPath Value="../../Release/"/>
+        <LibraryPath Value="../../Debug/"/>
         <LibraryPath Value="/usr/lib/x86_64-linux-gnu/"/>
         <Library Value="libBARE2DEngine.a"/>
       </Linker>
@@ -65,11 +65,17 @@
       </Completion>
     </Configuration>
     <Configuration Name="Release" CompilerType="GCC" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-O2;-Wall" C_Options="-O2;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+      <Compiler Options="-g;-O3;-Wall" C_Options="-g;-O3;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
-        <Preprocessor Value="NDEBUG"/>
+        <IncludePath Value="../../Source/"/>
+        <IncludePath Value="include"/>
+        <IncludePath Value="/usr/include"/>
       </Compiler>
-      <Linker Options="" Required="yes"/>
+      <Linker Options="-lboost_filesystem -lboost_system -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW" Required="yes">
+        <LibraryPath Value="../../Release/"/>
+        <LibraryPath Value="/usr/lib/x86_64-linux-gnu/"/>
+        <Library Value="libBARE2DEngine.a"/>
+      </Linker>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="$(ConfigurationName)" Command="$(OutputFile)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>

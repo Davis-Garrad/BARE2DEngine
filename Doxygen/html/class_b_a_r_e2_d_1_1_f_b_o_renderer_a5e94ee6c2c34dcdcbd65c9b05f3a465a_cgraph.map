@@ -1,0 +1,9 @@
+<map id="BARE2D::FBORenderer::begin" name="BARE2D::FBORenderer::begin">
+<area shape="rect" id="node1" title="Clears the necessary vectors, etc. to prepare for draw() calls, etc." alt="" coords="5,41,169,83"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_renderer.html#a7b894142f30465231e74903f366cd70a" title="Clears the necessary vectors, etc. to prepare for draw() calls, etc." alt="" coords="217,19,393,46"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a5765d077d8aff3402f717863169a0176" title="Binds the FBO and appropriate texture attachments." alt="" coords="223,71,387,112"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a1815cdbe70cc6fdbc66ec69a7131b5be" title="Binds a texture to target in the currently active texture slot." alt="" coords="463,5,617,47"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_g_l_context_manager.html#a733646522bf07c33576f9a1e0bb76c28" title=" " alt="" coords="441,71,639,112"/>
+<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a529bb80b0bd7bbf86f10be7c30be514c" title="Sets the active texture &quot;slot&quot;. This can be GL_TEXTURE0 to GL_TEXTURE8 (I think. Check the literature..." alt="" coords="463,136,617,177"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a62f46a348cc1f4e91fe3ab48c9a5cc1b" title=" " alt="" coords="687,71,841,112"/>
+</map>

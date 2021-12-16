@@ -1,0 +1,40 @@
+\hypertarget{_i_o_manager__impl_8tcc_source}{}\doxysection{I\+O\+Manager\+\_\+impl.\+tcc}
+\label{_i_o_manager__impl_8tcc_source}\index{Source/IOManager\_impl.tcc@{Source/IOManager\_impl.tcc}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_logger_8hpp}{"Logger.hpp"}}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00008}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager_a37c40d993b4d47f41cc49d24820f763b}{00008}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager}{IOManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager_a37c40d993b4d47f41cc49d24820f763b}{readFileToBuffer}}(std::string\& filepath, std::vector<T>\& buf, std::ios\_base::openmode mode\textcolor{comment}{/** = std::ios::binary*/}) \{}
+\DoxyCodeLine{00009         std::ifstream file(filepath, mode);}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011         \textcolor{keywordflow}{if}(file.fail()) \{}
+\DoxyCodeLine{00012             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger}{Logger}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{getInstance}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{log}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{(}}\textcolor{stringliteral}{"Failed to load file to buffer: "} + filepath\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{)}};}
+\DoxyCodeLine{00013             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00014         \}}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016         \textcolor{comment}{// Seek to the end to get the file size}}
+\DoxyCodeLine{00017         file.seekg(0, std::ios::end);}
+\DoxyCodeLine{00018         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} fileSize = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})file.tellg();}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020         \textcolor{comment}{// Go back to the start}}
+\DoxyCodeLine{00021         file.seekg(0, std::ios::beg);}
+\DoxyCodeLine{00022         fileSize -\/= file.tellg();}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024         \textcolor{comment}{// Now read fileSize bytes}}
+\DoxyCodeLine{00025         buf.resize(fileSize);}
+\DoxyCodeLine{00026         file.read((\textcolor{keywordtype}{char}*)\&(buf[0]), fileSize);}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028         \textcolor{comment}{// Close it up and return! Job done.}}
+\DoxyCodeLine{00029         file.close();}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00032     \}}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034 \}}
+
+\end{DoxyCode}

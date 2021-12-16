@@ -1,0 +1,28 @@
+var class_b_a_r_e2_d_1_1_x_m_l_data_manager =
+[
+    [ "addData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#ab2c2021b2cb121395139f81735a82d35", null ],
+    [ "addDataType", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a4f7792c0a514c2f700cd1151d1eec238", null ],
+    [ "clearCache", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a4471f2cadfa727e9a3ef81b937ab8687", null ],
+    [ "getData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a8ca2d79250a0f9e24c013d593007a2c1", null ],
+    [ "getDataCache", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#aac1a58615a6a568a2f7d0e0f1e8f170c", null ],
+    [ "getDataCount", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#ad1eda009d1ee739e4795d954a9fba092", null ],
+    [ "getDataType", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a32e71d04c96275c732a1d8913c5eae54", null ],
+    [ "loadXML", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#ac4a9f3f5c2a496e2df493a10df0003d3", null ],
+    [ "readValue", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#afe95eafa0657855d0cb0ec302a192f5c", null ],
+    [ "readValue", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#aaefe53ce8b0f8cc23ee3b53c2fb41bf4", null ],
+    [ "readValue", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#aeafe7c60f29aba730eabb472e34dc65f", null ],
+    [ "readValue", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a11c18a72f2100c1406fe203979b1c333", null ],
+    [ "readValue", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a55e5ab64ecc21da971e5ab21295ab32b", null ],
+    [ "readValue", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a3362fd42cbb0523099cf50618f2fbbb1", null ],
+    [ "readValue", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#ad8a9cfa09a7a5901d79b50b7ab92a863", null ],
+    [ "readValue", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a5b5f29dbc39d46b6241cfd58514c30a3", null ],
+    [ "readValue", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a9869067f3dd378d45365f33492d0494d", null ],
+    [ "readValue", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a52c2b1c0d544d8a1314f09ec413df34b", null ],
+    [ "readValue", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#afd322778b8321b5e030784fa8d4168cc", null ],
+    [ "readXMLData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a85100a24e685d21a8f2af8f87def391a", null ],
+    [ "saveXML", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#af9f6c07f0c2cecffd0ffde59174d4621", null ],
+    [ "writeXMLData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a64420cd9463430e186035296d982c553", null ],
+    [ "XMLData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a5f37fe695198fde75eef3c1593991789", null ],
+    [ "m_dataTypes", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a1e53bb8af9bf46df94f700f34afab3e2", null ],
+    [ "m_storedData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a2de577045a9016c8f7fd538919d6e664", null ]
+];

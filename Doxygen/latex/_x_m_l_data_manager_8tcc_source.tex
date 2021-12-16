@@ -1,0 +1,51 @@
+\hypertarget{_x_m_l_data_manager_8tcc_source}{}\doxysection{X\+M\+L\+Data\+Manager.\+tcc}
+\label{_x_m_l_data_manager_8tcc_source}\index{Source/XMLDataManager.tcc@{Source/XMLDataManager.tcc}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00004     \textcolor{comment}{// Need to define getData()}}
+\DoxyCodeLine{00005     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_manager_8tcc_source_l00006}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a8ca2d79250a0f9e24c013d593007a2c1}{00006}}     T \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a8ca2d79250a0f9e24c013d593007a2c1}{getData}}(std::string dataType, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} key) \{}
+\DoxyCodeLine{00007         \textcolor{keywordflow}{return} *\textcolor{keyword}{static\_cast}<T*>((\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_aac1a58615a6a568a2f7d0e0f1e8f170c}{getDataCache}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_aac1a58615a6a568a2f7d0e0f1e8f170c}{(}}dataType\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_aac1a58615a6a568a2f7d0e0f1e8f170c}{)}})\mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a9b565e37194850c038b5bb3c3a784567}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a9b565e37194850c038b5bb3c3a784567}{findItem}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a9b565e37194850c038b5bb3c3a784567}{(}}key\mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a9b565e37194850c038b5bb3c3a784567}{)}});}
+\DoxyCodeLine{00008     \}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010     \textcolor{comment}{// Need to specialize XMLDataManager::readValue()}}
+\DoxyCodeLine{00011     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00012     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}(rapidxml::xml\_node<>* parent, std::string valueName, std::string\& variable);}
+\DoxyCodeLine{00013     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00014     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}(rapidxml::xml\_node<>* parent, std::string valueName, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& variable);}
+\DoxyCodeLine{00015     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00016     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}(rapidxml::xml\_node<>* parent, std::string valueName, std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>\& variable);}
+\DoxyCodeLine{00017     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00018     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}(rapidxml::xml\_node<>* parent, std::string valueName, \textcolor{keywordtype}{int}\& variable);}
+\DoxyCodeLine{00019     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00020     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}(rapidxml::xml\_node<>* parent, std::string valueName, \textcolor{keywordtype}{float}\& variable);}
+\DoxyCodeLine{00021     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00022     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}(rapidxml::xml\_node<>* parent, std::string valueName, std::vector<\textcolor{keywordtype}{float}>\& variable);}
+\DoxyCodeLine{00023     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00024     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}(rapidxml::xml\_node<>* parent, std::string valueName, \textcolor{keywordtype}{bool}\& variable);}
+\DoxyCodeLine{00025     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00026     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}(rapidxml::xml\_node<>* parent, std::string valueName, std::vector<\textcolor{keywordtype}{bool}>\& variable);}
+\DoxyCodeLine{00027     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00028     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}(rapidxml::xml\_node<>* parent, std::string valueName, glm::vec2\& variable);}
+\DoxyCodeLine{00029     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00030     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}(rapidxml::xml\_node<>* parent, std::string valueName, std::vector<glm::vec2>\& variable);}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_manager_8tcc_source_l00033}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a4f7792c0a514c2f700cd1151d1eec238}{00033}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a4f7792c0a514c2f700cd1151d1eec238}{addDataType}}() \{}
+\DoxyCodeLine{00034         \textcolor{comment}{//  Make sure that T is actually a child class of XMLData}}
+\DoxyCodeLine{00035         \textcolor{keyword}{static\_assert}(std::is\_base\_of<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}, T>::value, \textcolor{stringliteral}{"XML Data Type is not derived class of BARE2D::XMLData"});}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037         T sample; \textcolor{comment}{// Create a new XMLData of subtype T}}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}} splicedData(sample.getAttributes()); \textcolor{comment}{// Create a new basic XMLData to just stored attributes, name, etc.}}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041         \textcolor{comment}{// Add the data type to the Manager's list}}
+\DoxyCodeLine{00042         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}* dataType = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a1e53bb8af9bf46df94f700f34afab3e2}{m\_dataTypes}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a4a998f5952f2412d5f35f5291f8ff0c8}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a4a998f5952f2412d5f35f5291f8ff0c8}{createItem}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a4a998f5952f2412d5f35f5291f8ff0c8}{(}}sample.nodeName\mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a4a998f5952f2412d5f35f5291f8ff0c8}{)}};}
+\DoxyCodeLine{00043         *dataType = splicedData;}
+\DoxyCodeLine{00044     \}}
+\DoxyCodeLine{00045 \}}
+
+\end{DoxyCode}

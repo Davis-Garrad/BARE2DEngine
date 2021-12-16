@@ -1,0 +1,94 @@
+\hypertarget{_app_8hpp_source}{}\doxysection{App.\+hpp}
+\label{_app_8hpp_source}\index{Source/App.hpp@{Source/App.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{memory}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_b_a_r_e_errors_8hpp}{"BAREErrors.hpp"}}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_screen_list_8hpp}{"ScreenList.hpp"}}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_timer_8hpp}{"Timer.hpp"}}}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}}
+\DoxyCodeLine{00010 \{}
+\DoxyCodeLine{00011     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}};}
+\DoxyCodeLine{00012     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}};}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014     \textcolor{comment}{/**}}
+\DoxyCodeLine{00015 \textcolor{comment}{     * @class App}}
+\DoxyCodeLine{00016 \textcolor{comment}{     * @file App.h}}
+\DoxyCodeLine{00017 \textcolor{comment}{     * @brief The App class embodies the entire application. It controls the GL settings, the window, the screens, input, FPS -\/ in whole, the entire overarching input-\/output cycle.}}
+\DoxyCodeLine{00018 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_app_8hpp_source_l00019}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{00019}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}}
+\DoxyCodeLine{00020     \{}
+\DoxyCodeLine{00021     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a5940a478d28f6e4d9da675023aa26144}{App}}();}
+\DoxyCodeLine{00023         \string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1d75c4c19a39cb736ccdcd65582c3c0e}{App}}();}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025         \textcolor{comment}{/**}}
+\DoxyCodeLine{00026 \textcolor{comment}{         * @brief Runs the program! Starts the update-\/draw loop.}}
+\DoxyCodeLine{00027 \textcolor{comment}{         */}}
+\DoxyCodeLine{00028         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a767c055c78bbf86b34bbd47e4b05ee01}{run}}();}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030         \textcolor{comment}{/**}}
+\DoxyCodeLine{00031 \textcolor{comment}{         * @brief Returns the screen list, where the program can add more screens, set entry points, etc.}}
+\DoxyCodeLine{00032 \textcolor{comment}{         */}}
+\DoxyCodeLine{00033         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{ScreenList}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a14fe844e84cbfafc0c7e6f8f6f7d36e0}{getScreenList}}();}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035         \textcolor{comment}{/**}}
+\DoxyCodeLine{00036 \textcolor{comment}{         * @return Returns a pointer to the window, so that the client can change its size, title, etc.}}
+\DoxyCodeLine{00037 \textcolor{comment}{         */}}
+\DoxyCodeLine{00038         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae500d02161dd750e8f4c659369e1fe5d}{getWindow}}();}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040         \textcolor{comment}{/**}}
+\DoxyCodeLine{00041 \textcolor{comment}{         * @return The input manager pointer. }}
+\DoxyCodeLine{00042 \textcolor{comment}{         */}}
+\DoxyCodeLine{00043         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a2a603b736fe6fdb0767a636ee717455d}{getInputManager}}();}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_app_8hpp_source_l00046}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}{00046}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}{m\_isGameRunning}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_app_8hpp_source_l00047}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a390fbdf47a840a4c515fa25f98cc9758}{00047}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a390fbdf47a840a4c515fa25f98cc9758}{m\_isInited}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{\Hypertarget{_app_8hpp_source_l00049}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{00049}}         std::unique\_ptr<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{ScreenList}}> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}};}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{\Hypertarget{_app_8hpp_source_l00051}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{00051}}         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}} = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{\Hypertarget{_app_8hpp_source_l00053}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{00053}}         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer}{Timer}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}} = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{\Hypertarget{_app_8hpp_source_l00055}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{00055}}         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}} = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057         \textcolor{comment}{/**}}
+\DoxyCodeLine{00058 \textcolor{comment}{         * @brief Initializes the applet and engine. Creates a window, held within this App. Only for internal use.}}
+\DoxyCodeLine{00059 \textcolor{comment}{         */}}
+\DoxyCodeLine{00060         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{init}}();}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062         \textcolor{comment}{/**}}
+\DoxyCodeLine{00063 \textcolor{comment}{         * @brief Updates input, output, etc. Only for internal use.}}
+\DoxyCodeLine{00064 \textcolor{comment}{         */}}
+\DoxyCodeLine{00065         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}{update}}(\textcolor{keywordtype}{double} dt);}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067         \textcolor{comment}{/**}}
+\DoxyCodeLine{00068 \textcolor{comment}{         * @brief Draws the current screen, based on that screen's drawing protocol.}}
+\DoxyCodeLine{00069 \textcolor{comment}{         */}}
+\DoxyCodeLine{00070         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}{draw}}();}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{00072         \textcolor{comment}{/**}}
+\DoxyCodeLine{00073 \textcolor{comment}{         * @brief Updates any input, and throws it down the pipeline!}}
+\DoxyCodeLine{00074 \textcolor{comment}{         */}}
+\DoxyCodeLine{00075         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}{updateInput}}();}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077         \textcolor{comment}{/**}}
+\DoxyCodeLine{00078 \textcolor{comment}{         * @brief Polls inputs from SDL and updates the inputmanager as appropriate.}}
+\DoxyCodeLine{00079 \textcolor{comment}{         */}}
+\DoxyCodeLine{00080         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}{pollSDLInput}}();}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082         \textcolor{comment}{/**}}
+\DoxyCodeLine{00083 \textcolor{comment}{         * @brief Calls the screen's exit function, and then cleans this class up for destruction.}}
+\DoxyCodeLine{00084 \textcolor{comment}{         */}}
+\DoxyCodeLine{00085         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{exitApp}}();}
+\DoxyCodeLine{00086     \};}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{00088 \}}
+
+\end{DoxyCode}

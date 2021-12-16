@@ -1,0 +1,11 @@
+<map id="BARE2D::FBORenderer::createRenderBatches" name="BARE2D::FBORenderer::createRenderBatches">
+<area shape="rect" id="node1" title="Constructs all of the render batches from data given by, say, draw() calls." alt="" coords="5,129,169,170"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_v_a_o.html#aaaec16d98be94aa5cfed015df40dda70" title="Binds the VAO&#39;s VBO." alt="" coords="242,5,413,32"/>
+<area shape="rect" id="node3" href="$struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6" title=" " alt="" coords="243,56,411,83"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_camera2_d.html#aedfa05d39dcb04a580aa17f852f23b62" title=" " alt="" coords="217,107,437,133"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_camera2_d.html#ac5cb2034f0ba69eeec5ff52a20b49a74" title=" " alt="" coords="220,158,435,199"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_glyph.html#adad467cb32d0a44c940901a61d2178c4" title=" " alt="" coords="247,224,407,251"/>
+<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a10dd3e06e3929147edb6b249c94fdcee" title="Unbinds this VAO&#39;s VBO." alt="" coords="235,275,419,301"/>
+<area shape="rect" id="node7" href="$struct_b_a_r_e2_d_1_1_vertex.html#abc02c06e4c046c1db77747592534a8a2" title="Literally just sets the position. Convenient." alt="" coords="485,199,680,225"/>
+<area shape="rect" id="node8" href="$struct_b_a_r_e2_d_1_1_vertex.html#a028b850fa99d561233130a0f227c9036" title="Sets the UV coords/dimensions." alt="" coords="499,249,666,276"/>
+</map>

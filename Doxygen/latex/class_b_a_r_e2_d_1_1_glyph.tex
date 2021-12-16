@@ -1,0 +1,178 @@
+\hypertarget{class_b_a_r_e2_d_1_1_glyph}{}\doxysection{B\+A\+R\+E2D\+::Glyph Class Reference}
+\label{class_b_a_r_e2_d_1_1_glyph}\index{BARE2D::Glyph@{BARE2D::Glyph}}
+
+
+The glyph represents a renderbatch\textquotesingle{}s primitive data, which is created from each draw call in the basic renderer.  
+
+
+
+
+{\ttfamily \#include $<$Vertex.\+hpp$>$}
+
+
+
+Collaboration diagram for B\+A\+R\+E2D\+::Glyph\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_glyph__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_adad467cb32d0a44c940901a61d2178c4}{Glyph}} (glm\+::vec4 \&dest\+Rect, glm\+::vec4 \&uv\+Rect, G\+Luint \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}, float Depth, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}} colour)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a388878cd1c1726240f23ef913ad53635}{texture}}
+\item 
+float \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a03888563092c5edc8c1fa6d15cf6a90a}{depth}}
+\item 
+\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{top\+Left}}
+\item 
+\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{bottom\+Left}}
+\item 
+\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{top\+Right}}
+\item 
+\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottom\+Right}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The glyph represents a renderbatch\textquotesingle{}s primitive data, which is created from each draw call in the basic renderer. 
+
+Definition at line \mbox{\hyperlink{_vertex_8hpp_source_l00087}{87}} of file \mbox{\hyperlink{_vertex_8hpp_source}{Vertex.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_glyph_adad467cb32d0a44c940901a61d2178c4}\label{class_b_a_r_e2_d_1_1_glyph_adad467cb32d0a44c940901a61d2178c4}} 
+\index{BARE2D::Glyph@{BARE2D::Glyph}!Glyph@{Glyph}}
+\index{Glyph@{Glyph}!BARE2D::Glyph@{BARE2D::Glyph}}
+\doxysubsubsection{\texorpdfstring{Glyph()}{Glyph()}}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+Glyph\+::\+Glyph (\begin{DoxyParamCaption}\item[{glm\+::vec4 \&}]{dest\+Rect,  }\item[{glm\+::vec4 \&}]{uv\+Rect,  }\item[{G\+Luint}]{Texture,  }\item[{float}]{Depth,  }\item[{\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}}]{colour }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_vertex_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{_vertex_8cpp_source}{Vertex.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_vertex_8hpp_source_l00097}{bottom\+Left}}, \mbox{\hyperlink{_vertex_8hpp_source_l00097}{bottom\+Right}}, \mbox{\hyperlink{_vertex_8hpp_source_l00042}{B\+A\+R\+E2\+D\+::\+Vertex\+::colour}}, \mbox{\hyperlink{_vertex_8hpp_source_l00094}{depth}}, \mbox{\hyperlink{_vertex_8hpp_source_l00052}{B\+A\+R\+E2\+D\+::\+Vertex\+::set\+Position()}}, \mbox{\hyperlink{_vertex_8hpp_source_l00077}{B\+A\+R\+E2\+D\+::\+Vertex\+::set\+U\+V()}}, \mbox{\hyperlink{_vertex_8hpp_source_l00092}{texture}}, \mbox{\hyperlink{_vertex_8hpp_source_l00097}{top\+Left}}, and \mbox{\hyperlink{_vertex_8hpp_source_l00097}{top\+Right}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00132}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::create\+Render\+Batches()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_glyph_adad467cb32d0a44c940901a61d2178c4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_glyph_adad467cb32d0a44c940901a61d2178c4_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}\label{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}} 
+\index{BARE2D::Glyph@{BARE2D::Glyph}!bottomLeft@{bottomLeft}}
+\index{bottomLeft@{bottomLeft}!BARE2D::Glyph@{BARE2D::Glyph}}
+\doxysubsubsection{\texorpdfstring{bottomLeft}{bottomLeft}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}} B\+A\+R\+E2\+D\+::\+Glyph\+::bottom\+Left}
+
+
+
+Definition at line \mbox{\hyperlink{_vertex_8hpp_source_l00097}{97}} of file \mbox{\hyperlink{_vertex_8hpp_source}{Vertex.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00132}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::create\+Render\+Batches()}}, \mbox{\hyperlink{_basic_renderer_8cpp_source_l00070}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::create\+Render\+Batches()}}, and \mbox{\hyperlink{_vertex_8cpp_source_l00004}{Glyph()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}\label{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}} 
+\index{BARE2D::Glyph@{BARE2D::Glyph}!bottomRight@{bottomRight}}
+\index{bottomRight@{bottomRight}!BARE2D::Glyph@{BARE2D::Glyph}}
+\doxysubsubsection{\texorpdfstring{bottomRight}{bottomRight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}} B\+A\+R\+E2\+D\+::\+Glyph\+::bottom\+Right}
+
+
+
+Definition at line \mbox{\hyperlink{_vertex_8hpp_source_l00097}{97}} of file \mbox{\hyperlink{_vertex_8hpp_source}{Vertex.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00132}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::create\+Render\+Batches()}}, \mbox{\hyperlink{_basic_renderer_8cpp_source_l00070}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::create\+Render\+Batches()}}, and \mbox{\hyperlink{_vertex_8cpp_source_l00004}{Glyph()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_glyph_a03888563092c5edc8c1fa6d15cf6a90a}\label{class_b_a_r_e2_d_1_1_glyph_a03888563092c5edc8c1fa6d15cf6a90a}} 
+\index{BARE2D::Glyph@{BARE2D::Glyph}!depth@{depth}}
+\index{depth@{depth}!BARE2D::Glyph@{BARE2D::Glyph}}
+\doxysubsubsection{\texorpdfstring{depth}{depth}}
+{\footnotesize\ttfamily float B\+A\+R\+E2\+D\+::\+Glyph\+::depth}
+
+
+
+Definition at line \mbox{\hyperlink{_vertex_8hpp_source_l00094}{94}} of file \mbox{\hyperlink{_vertex_8hpp_source}{Vertex.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_vertex_8cpp_source_l00004}{Glyph()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_glyph_a388878cd1c1726240f23ef913ad53635}\label{class_b_a_r_e2_d_1_1_glyph_a388878cd1c1726240f23ef913ad53635}} 
+\index{BARE2D::Glyph@{BARE2D::Glyph}!texture@{texture}}
+\index{texture@{texture}!BARE2D::Glyph@{BARE2D::Glyph}}
+\doxysubsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily G\+Luint B\+A\+R\+E2\+D\+::\+Glyph\+::texture}
+
+
+
+Definition at line \mbox{\hyperlink{_vertex_8hpp_source_l00092}{92}} of file \mbox{\hyperlink{_vertex_8hpp_source}{Vertex.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00132}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::create\+Render\+Batches()}}, \mbox{\hyperlink{_basic_renderer_8cpp_source_l00070}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::create\+Render\+Batches()}}, and \mbox{\hyperlink{_vertex_8cpp_source_l00004}{Glyph()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}\label{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}} 
+\index{BARE2D::Glyph@{BARE2D::Glyph}!topLeft@{topLeft}}
+\index{topLeft@{topLeft}!BARE2D::Glyph@{BARE2D::Glyph}}
+\doxysubsubsection{\texorpdfstring{topLeft}{topLeft}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}} B\+A\+R\+E2\+D\+::\+Glyph\+::top\+Left}
+
+
+
+Definition at line \mbox{\hyperlink{_vertex_8hpp_source_l00097}{97}} of file \mbox{\hyperlink{_vertex_8hpp_source}{Vertex.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00132}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::create\+Render\+Batches()}}, \mbox{\hyperlink{_basic_renderer_8cpp_source_l00070}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::create\+Render\+Batches()}}, and \mbox{\hyperlink{_vertex_8cpp_source_l00004}{Glyph()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}\label{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}} 
+\index{BARE2D::Glyph@{BARE2D::Glyph}!topRight@{topRight}}
+\index{topRight@{topRight}!BARE2D::Glyph@{BARE2D::Glyph}}
+\doxysubsubsection{\texorpdfstring{topRight}{topRight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}} B\+A\+R\+E2\+D\+::\+Glyph\+::top\+Right}
+
+
+
+Definition at line \mbox{\hyperlink{_vertex_8hpp_source_l00097}{97}} of file \mbox{\hyperlink{_vertex_8hpp_source}{Vertex.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00132}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::create\+Render\+Batches()}}, \mbox{\hyperlink{_basic_renderer_8cpp_source_l00070}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::create\+Render\+Batches()}}, and \mbox{\hyperlink{_vertex_8cpp_source_l00004}{Glyph()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\mbox{\hyperlink{_vertex_8hpp}{Vertex.\+hpp}}\item 
+Source/\mbox{\hyperlink{_vertex_8cpp}{Vertex.\+cpp}}\end{DoxyCompactItemize}

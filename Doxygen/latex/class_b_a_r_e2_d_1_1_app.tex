@@ -1,0 +1,509 @@
+\hypertarget{class_b_a_r_e2_d_1_1_app}{}\doxysection{B\+A\+R\+E2D\+::App Class Reference}
+\label{class_b_a_r_e2_d_1_1_app}\index{BARE2D::App@{BARE2D::App}}
+
+
+{\ttfamily \#include $<$App.\+hpp$>$}
+
+
+
+Collaboration diagram for B\+A\+R\+E2D\+::App\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_app__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a5940a478d28f6e4d9da675023aa26144}{App}} ()
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1d75c4c19a39cb736ccdcd65582c3c0e}{$\sim$\+App}} ()
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a767c055c78bbf86b34bbd47e4b05ee01}{run}} ()
+\begin{DoxyCompactList}\small\item\em Runs the program! Starts the update-\/draw loop. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{Screen\+List}} $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a14fe844e84cbfafc0c7e6f8f6f7d36e0}{get\+Screen\+List}} ()
+\begin{DoxyCompactList}\small\item\em Returns the screen list, where the program can add more screens, set entry points, etc. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}} $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae500d02161dd750e8f4c659369e1fe5d}{get\+Window}} ()
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{Input\+Manager}} $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a2a603b736fe6fdb0767a636ee717455d}{get\+Input\+Manager}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the applet and engine. Creates a window, held within this \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}. Only for internal use. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}{update}} (double dt)
+\begin{DoxyCompactList}\small\item\em Updates input, output, etc. Only for internal use. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}{draw}} ()
+\begin{DoxyCompactList}\small\item\em Draws the current screen, based on that screen\textquotesingle{}s drawing protocol. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}{update\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Updates any input, and throws it down the pipeline! \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}{poll\+S\+D\+L\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Polls inputs from S\+DL and updates the inputmanager as appropriate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{exit\+App}} ()
+\begin{DoxyCompactList}\small\item\em Calls the screen\textquotesingle{}s exit function, and then cleans this class up for destruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}{m\+\_\+is\+Game\+Running}} = false
+\item 
+bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a390fbdf47a840a4c515fa25f98cc9758}{m\+\_\+is\+Inited}} = false
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{Screen\+List}} $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\+\_\+screen\+List}}
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{Input\+Manager}} $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\+\_\+input\+Manager}} = nullptr
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer}{Timer}} $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\+\_\+timer}} = nullptr
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}} $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\+\_\+window}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_app_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{_app_8hpp_source}{App.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_a5940a478d28f6e4d9da675023aa26144}\label{class_b_a_r_e2_d_1_1_app_a5940a478d28f6e4d9da675023aa26144}} 
+\index{BARE2D::App@{BARE2D::App}!App@{App}}
+\index{App@{App}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{App()}{App()}}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+App\+::\+App (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_app_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_app_8cpp_source}{App.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_app_8cpp_source_l00076}{init()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_app_a5940a478d28f6e4d9da675023aa26144_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_a1d75c4c19a39cb736ccdcd65582c3c0e}\label{class_b_a_r_e2_d_1_1_app_a1d75c4c19a39cb736ccdcd65582c3c0e}} 
+\index{BARE2D::App@{BARE2D::App}!````~App@{$\sim$App}}
+\index{````~App@{$\sim$App}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{$\sim$App()}{~App()}}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+App\+::$\sim$\+App (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_app_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{_app_8cpp_source}{App.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_app_8cpp_source_l00172}{exit\+App()}}, \mbox{\hyperlink{_app_8hpp_source_l00046}{m\+\_\+is\+Game\+Running}}, and \mbox{\hyperlink{_app_8hpp_source_l00055}{m\+\_\+window}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{class_b_a_r_e2_d_1_1_app_a1d75c4c19a39cb736ccdcd65582c3c0e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}\label{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}} 
+\index{BARE2D::App@{BARE2D::App}!draw@{draw}}
+\index{draw@{draw}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+App\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Draws the current screen, based on that screen\textquotesingle{}s drawing protocol. 
+
+
+
+Definition at line \mbox{\hyperlink{_app_8cpp_source_l00127}{127}} of file \mbox{\hyperlink{_app_8cpp_source}{App.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_abd0a8557f5ad544a0cf657b242197ad2}{B\+A\+R\+E2\+D\+::\+Screen\+::draw()}}, \mbox{\hyperlink{_screen_list_8cpp_source_l00069}{B\+A\+R\+E2\+D\+::\+Screen\+List\+::get\+Current\+Screen()}}, \mbox{\hyperlink{_window_8cpp_source_l00097}{B\+A\+R\+E2\+D\+::\+Window\+::get\+Height()}}, \mbox{\hyperlink{_screen_8cpp_source_l00013}{B\+A\+R\+E2\+D\+::\+Screen\+::get\+State()}}, \mbox{\hyperlink{_window_8cpp_source_l00093}{B\+A\+R\+E2\+D\+::\+Window\+::get\+Width()}}, \mbox{\hyperlink{_app_8hpp_source_l00049}{m\+\_\+screen\+List}}, \mbox{\hyperlink{_app_8hpp_source_l00055}{m\+\_\+window}}, and \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}{B\+A\+R\+E2\+D\+::\+R\+U\+N\+N\+I\+NG}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00026}{run()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}\label{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}} 
+\index{BARE2D::App@{BARE2D::App}!exitApp@{exitApp}}
+\index{exitApp@{exitApp}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{exitApp()}{exitApp()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+App\+::exit\+App (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calls the screen\textquotesingle{}s exit function, and then cleans this class up for destruction. 
+
+
+
+Definition at line \mbox{\hyperlink{_app_8cpp_source_l00172}{172}} of file \mbox{\hyperlink{_app_8cpp_source}{App.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_app_8hpp_source_l00046}{m\+\_\+is\+Game\+Running}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00143}{poll\+S\+D\+L\+Input()}}, \mbox{\hyperlink{_app_8cpp_source_l00105}{update()}}, and \mbox{\hyperlink{_app_8cpp_source_l00018}{$\sim$\+App()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_a2a603b736fe6fdb0767a636ee717455d}\label{class_b_a_r_e2_d_1_1_app_a2a603b736fe6fdb0767a636ee717455d}} 
+\index{BARE2D::App@{BARE2D::App}!getInputManager@{getInputManager}}
+\index{getInputManager@{getInputManager}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{getInputManager()}{getInputManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{Input\+Manager}} $\ast$ B\+A\+R\+E2\+D\+::\+App\+::get\+Input\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+The input manager pointer. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_app_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{_app_8cpp_source}{App.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_app_8hpp_source_l00051}{m\+\_\+input\+Manager}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_a14fe844e84cbfafc0c7e6f8f6f7d36e0}\label{class_b_a_r_e2_d_1_1_app_a14fe844e84cbfafc0c7e6f8f6f7d36e0}} 
+\index{BARE2D::App@{BARE2D::App}!getScreenList@{getScreenList}}
+\index{getScreenList@{getScreenList}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{getScreenList()}{getScreenList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{Screen\+List}} $\ast$ B\+A\+R\+E2\+D\+::\+App\+::get\+Screen\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the screen list, where the program can add more screens, set entry points, etc. 
+
+
+
+Definition at line \mbox{\hyperlink{_app_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{_app_8cpp_source}{App.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_app_8hpp_source_l00049}{m\+\_\+screen\+List}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_ae500d02161dd750e8f4c659369e1fe5d}\label{class_b_a_r_e2_d_1_1_app_ae500d02161dd750e8f4c659369e1fe5d}} 
+\index{BARE2D::App@{BARE2D::App}!getWindow@{getWindow}}
+\index{getWindow@{getWindow}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{getWindow()}{getWindow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}} $\ast$ B\+A\+R\+E2\+D\+::\+App\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Returns a pointer to the window, so that the client can change its size, title, etc. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_app_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{_app_8cpp_source}{App.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_app_8hpp_source_l00055}{m\+\_\+window}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}\label{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}} 
+\index{BARE2D::App@{BARE2D::App}!init@{init}}
+\index{init@{init}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+App\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initializes the applet and engine. Creates a window, held within this \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}. Only for internal use. 
+
+
+
+Definition at line \mbox{\hyperlink{_app_8cpp_source_l00076}{76}} of file \mbox{\hyperlink{_app_8cpp_source}{App.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_window_8cpp_source_l00020}{B\+A\+R\+E2\+D\+::\+Window\+::create()}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aed6ff68f5f52346f2c0754edb81b83ed}{B\+A\+R\+E2\+D\+::\+D\+O\+U\+B\+L\+E\+\_\+\+I\+N\+IT}}, \mbox{\hyperlink{_b_a_r_e2_d_engine_8cpp_source_l00010}{B\+A\+R\+E2\+D\+::init()}}, \mbox{\hyperlink{_input_manager_8cpp_source_l00005}{B\+A\+R\+E2\+D\+::\+Input\+Manager\+::\+Input\+Manager()}}, \mbox{\hyperlink{_app_8hpp_source_l00051}{m\+\_\+input\+Manager}}, \mbox{\hyperlink{_app_8hpp_source_l00047}{m\+\_\+is\+Inited}}, \mbox{\hyperlink{_app_8hpp_source_l00053}{m\+\_\+timer}}, \mbox{\hyperlink{_app_8hpp_source_l00055}{m\+\_\+window}}, \mbox{\hyperlink{_timer_8cpp_source_l00044}{B\+A\+R\+E2\+D\+::\+Timer\+::set\+Delta\+Time\+Limit()}}, \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00071}{B\+A\+R\+E2\+D\+::throw\+Fatal\+Error()}}, \mbox{\hyperlink{_timer_8cpp_source_l00009}{B\+A\+R\+E2\+D\+::\+Timer\+::\+Timer()}}, and \mbox{\hyperlink{_window_8cpp_source_l00009}{B\+A\+R\+E2\+D\+::\+Window\+::\+Window()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00013}{App()}}, and \mbox{\hyperlink{_app_8cpp_source_l00026}{run()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}\label{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}} 
+\index{BARE2D::App@{BARE2D::App}!pollSDLInput@{pollSDLInput}}
+\index{pollSDLInput@{pollSDLInput}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{pollSDLInput()}{pollSDLInput()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+App\+::poll\+S\+D\+L\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Polls inputs from S\+DL and updates the inputmanager as appropriate. 
+
+
+
+Definition at line \mbox{\hyperlink{_app_8cpp_source_l00143}{143}} of file \mbox{\hyperlink{_app_8cpp_source}{App.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_app_8cpp_source_l00172}{exit\+App()}}, \mbox{\hyperlink{_app_8hpp_source_l00051}{m\+\_\+input\+Manager}}, \mbox{\hyperlink{_input_manager_8cpp_source_l00026}{B\+A\+R\+E2\+D\+::\+Input\+Manager\+::press\+Key()}}, \mbox{\hyperlink{_input_manager_8cpp_source_l00032}{B\+A\+R\+E2\+D\+::\+Input\+Manager\+::release\+Key()}}, \mbox{\hyperlink{_input_manager_8cpp_source_l00038}{B\+A\+R\+E2\+D\+::\+Input\+Manager\+::set\+Mouse\+Position()}}, and \mbox{\hyperlink{_input_manager_8cpp_source_l00049}{B\+A\+R\+E2\+D\+::\+Input\+Manager\+::set\+Mouse\+Scrollwheel\+Position()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00136}{update\+Input()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_a767c055c78bbf86b34bbd47e4b05ee01}\label{class_b_a_r_e2_d_1_1_app_a767c055c78bbf86b34bbd47e4b05ee01}} 
+\index{BARE2D::App@{BARE2D::App}!run@{run}}
+\index{run@{run}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+App\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Runs the program! Starts the update-\/draw loop. 
+
+
+
+Definition at line \mbox{\hyperlink{_app_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{_app_8cpp_source}{App.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_app_8cpp_source_l00127}{draw()}}, \mbox{\hyperlink{_timer_8cpp_source_l00034}{B\+A\+R\+E2\+D\+::\+Timer\+::end\+Timer()}}, \mbox{\hyperlink{_screen_list_8cpp_source_l00069}{B\+A\+R\+E2\+D\+::\+Screen\+List\+::get\+Current\+Screen()}}, \mbox{\hyperlink{_timer_8cpp_source_l00024}{B\+A\+R\+E2\+D\+::\+Timer\+::get\+Delta\+Time()}}, \mbox{\hyperlink{_app_8cpp_source_l00076}{init()}}, \mbox{\hyperlink{_timer_8cpp_source_l00014}{B\+A\+R\+E2\+D\+::\+Timer\+::integrate\+Frame()}}, \mbox{\hyperlink{_app_8hpp_source_l00046}{m\+\_\+is\+Game\+Running}}, \mbox{\hyperlink{_app_8hpp_source_l00047}{m\+\_\+is\+Inited}}, \mbox{\hyperlink{_app_8hpp_source_l00049}{m\+\_\+screen\+List}}, \mbox{\hyperlink{_app_8hpp_source_l00053}{m\+\_\+timer}}, \mbox{\hyperlink{_app_8hpp_source_l00055}{m\+\_\+window}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{B\+A\+R\+E2\+D\+::\+Screen\+::on\+Entry()}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{B\+A\+R\+E2\+D\+::\+Screen\+::on\+Exit()}}, \mbox{\hyperlink{_timer_8cpp_source_l00029}{B\+A\+R\+E2\+D\+::\+Timer\+::start\+Timer()}}, \mbox{\hyperlink{_window_8cpp_source_l00089}{B\+A\+R\+E2\+D\+::\+Window\+::swap\+Buffer()}}, and \mbox{\hyperlink{_app_8cpp_source_l00105}{update()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_app_a767c055c78bbf86b34bbd47e4b05ee01_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}\label{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}} 
+\index{BARE2D::App@{BARE2D::App}!update@{update}}
+\index{update@{update}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+App\+::update (\begin{DoxyParamCaption}\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates input, output, etc. Only for internal use. 
+
+
+
+Definition at line \mbox{\hyperlink{_app_8cpp_source_l00105}{105}} of file \mbox{\hyperlink{_app_8cpp_source}{App.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253af1b095bb6b4fb743116b8e2910c87e2a}{B\+A\+R\+E2\+D\+::\+C\+H\+A\+N\+G\+E\+\_\+\+N\+E\+XT}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ad99b55eff583c9982c86312bdcfdb47c}{B\+A\+R\+E2\+D\+::\+C\+H\+A\+N\+G\+E\+\_\+\+P\+R\+EV}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ab8b26f3abe929349d415409c67b3b81e}{B\+A\+R\+E2\+D\+::\+E\+X\+I\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}}, \mbox{\hyperlink{_app_8cpp_source_l00172}{exit\+App()}}, \mbox{\hyperlink{_screen_list_8cpp_source_l00069}{B\+A\+R\+E2\+D\+::\+Screen\+List\+::get\+Current\+Screen()}}, \mbox{\hyperlink{_screen_8cpp_source_l00013}{B\+A\+R\+E2\+D\+::\+Screen\+::get\+State()}}, \mbox{\hyperlink{_app_8hpp_source_l00049}{m\+\_\+screen\+List}}, \mbox{\hyperlink{_screen_list_8cpp_source_l00033}{B\+A\+R\+E2\+D\+::\+Screen\+List\+::move\+To\+Next\+Screen()}}, \mbox{\hyperlink{_screen_list_8cpp_source_l00050}{B\+A\+R\+E2\+D\+::\+Screen\+List\+::move\+To\+Previous\+Screen()}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}{B\+A\+R\+E2\+D\+::\+R\+U\+N\+N\+I\+NG}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aa5bbb3a5fe737eb50d2dc2d27776f53e}{B\+A\+R\+E2\+D\+::\+Screen\+::update()}}, and \mbox{\hyperlink{_app_8cpp_source_l00136}{update\+Input()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00026}{run()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}\label{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}} 
+\index{BARE2D::App@{BARE2D::App}!updateInput@{updateInput}}
+\index{updateInput@{updateInput}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{updateInput()}{updateInput()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+App\+::update\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates any input, and throws it down the pipeline! 
+
+
+
+Definition at line \mbox{\hyperlink{_app_8cpp_source_l00136}{136}} of file \mbox{\hyperlink{_app_8cpp_source}{App.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_app_8hpp_source_l00051}{m\+\_\+input\+Manager}}, \mbox{\hyperlink{_app_8cpp_source_l00143}{poll\+S\+D\+L\+Input()}}, and \mbox{\hyperlink{_input_manager_8cpp_source_l00015}{B\+A\+R\+E2\+D\+::\+Input\+Manager\+::update()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00105}{update()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}\label{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}} 
+\index{BARE2D::App@{BARE2D::App}!m\_inputManager@{m\_inputManager}}
+\index{m\_inputManager@{m\_inputManager}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{m\_inputManager}{m\_inputManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{Input\+Manager}}$\ast$ B\+A\+R\+E2\+D\+::\+App\+::m\+\_\+input\+Manager = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_app_8hpp_source_l00051}{51}} of file \mbox{\hyperlink{_app_8hpp_source}{App.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00071}{get\+Input\+Manager()}}, \mbox{\hyperlink{_app_8cpp_source_l00076}{init()}}, \mbox{\hyperlink{_app_8cpp_source_l00143}{poll\+S\+D\+L\+Input()}}, and \mbox{\hyperlink{_app_8cpp_source_l00136}{update\+Input()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}\label{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}} 
+\index{BARE2D::App@{BARE2D::App}!m\_isGameRunning@{m\_isGameRunning}}
+\index{m\_isGameRunning@{m\_isGameRunning}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{m\_isGameRunning}{m\_isGameRunning}}
+{\footnotesize\ttfamily bool B\+A\+R\+E2\+D\+::\+App\+::m\+\_\+is\+Game\+Running = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_app_8hpp_source_l00046}{46}} of file \mbox{\hyperlink{_app_8hpp_source}{App.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00172}{exit\+App()}}, \mbox{\hyperlink{_app_8cpp_source_l00026}{run()}}, and \mbox{\hyperlink{_app_8cpp_source_l00018}{$\sim$\+App()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_a390fbdf47a840a4c515fa25f98cc9758}\label{class_b_a_r_e2_d_1_1_app_a390fbdf47a840a4c515fa25f98cc9758}} 
+\index{BARE2D::App@{BARE2D::App}!m\_isInited@{m\_isInited}}
+\index{m\_isInited@{m\_isInited}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{m\_isInited}{m\_isInited}}
+{\footnotesize\ttfamily bool B\+A\+R\+E2\+D\+::\+App\+::m\+\_\+is\+Inited = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_app_8hpp_source_l00047}{47}} of file \mbox{\hyperlink{_app_8hpp_source}{App.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00076}{init()}}, and \mbox{\hyperlink{_app_8cpp_source_l00026}{run()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}\label{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}} 
+\index{BARE2D::App@{BARE2D::App}!m\_screenList@{m\_screenList}}
+\index{m\_screenList@{m\_screenList}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{m\_screenList}{m\_screenList}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{Screen\+List}}$>$ B\+A\+R\+E2\+D\+::\+App\+::m\+\_\+screen\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_app_8hpp_source_l00049}{49}} of file \mbox{\hyperlink{_app_8hpp_source}{App.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00127}{draw()}}, \mbox{\hyperlink{_app_8cpp_source_l00062}{get\+Screen\+List()}}, \mbox{\hyperlink{_app_8cpp_source_l00026}{run()}}, and \mbox{\hyperlink{_app_8cpp_source_l00105}{update()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}\label{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}} 
+\index{BARE2D::App@{BARE2D::App}!m\_timer@{m\_timer}}
+\index{m\_timer@{m\_timer}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{m\_timer}{m\_timer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer}{Timer}}$\ast$ B\+A\+R\+E2\+D\+::\+App\+::m\+\_\+timer = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_app_8hpp_source_l00053}{53}} of file \mbox{\hyperlink{_app_8hpp_source}{App.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00076}{init()}}, and \mbox{\hyperlink{_app_8cpp_source_l00026}{run()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}\label{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}} 
+\index{BARE2D::App@{BARE2D::App}!m\_window@{m\_window}}
+\index{m\_window@{m\_window}!BARE2D::App@{BARE2D::App}}
+\doxysubsubsection{\texorpdfstring{m\_window}{m\_window}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}}$\ast$ B\+A\+R\+E2\+D\+::\+App\+::m\+\_\+window = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_app_8hpp_source_l00055}{55}} of file \mbox{\hyperlink{_app_8hpp_source}{App.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00127}{draw()}}, \mbox{\hyperlink{_app_8cpp_source_l00067}{get\+Window()}}, \mbox{\hyperlink{_app_8cpp_source_l00076}{init()}}, \mbox{\hyperlink{_app_8cpp_source_l00026}{run()}}, and \mbox{\hyperlink{_app_8cpp_source_l00018}{$\sim$\+App()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\mbox{\hyperlink{_app_8hpp}{App.\+hpp}}\item 
+Source/\mbox{\hyperlink{_app_8cpp}{App.\+cpp}}\end{DoxyCompactItemize}

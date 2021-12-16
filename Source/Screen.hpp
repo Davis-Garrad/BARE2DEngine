@@ -17,7 +17,7 @@ namespace BARE2D {
 	{
 	public:
 		Screen();
-		~Screen();
+		virtual ~Screen();
 		
 		/**
 		 * @brief This is called once, at the start of the program, when the screen is added to the screen list.

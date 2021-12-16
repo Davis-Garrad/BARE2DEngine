@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="BARE2DEngine" Database="" Version="10000">
-  <Project Name="BARE2DEngine" Path="BARE2DEngine.project" Active="Yes"/>
+  <Project Name="BARE2DEngine" Path="BARE2DEngine.project" Active="No"/>
   <Project Name="BARETest_ThreeBody" Path="BARETests/Orbiter/BARETest_ThreeBody.project" Active="No"/>
-  <Project Name="BARETests" Path="BARETests/BasicTest/BARETests.project" Active="No"/>
+  <Project Name="BARETests" Path="BARETests/BasicTest/BARETests.project" Active="Yes"/>
   <Project Name="BAREBoids" Path="BARETests/Boids/Boids.project" Active="No"/>
   <Project Name="BAREXML" Path="BARETests/BAREXML/BAREXML.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
-      <Project Name="BARE2DEngine" ConfigName="Release"/>
+      <Project Name="BARE2DEngine" ConfigName="Debug"/>
+      <Project Name="BAREBoids" ConfigName="Debug"/>
       <Project Name="BARETest_ThreeBody" ConfigName="Debug"/>
       <Project Name="BARETests" ConfigName="Debug"/>
-      <Project Name="BAREBoids" ConfigName="Debug"/>
       <Project Name="BAREXML" ConfigName="Debug"/>
     </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="Release" Selected="yes">
+    <WorkspaceConfiguration Name="Release" Selected="no">
       <Environment/>
       <Project Name="BARE2DEngine" ConfigName="Release"/>
+      <Project Name="BAREBoids" ConfigName="Release"/>
       <Project Name="BARETest_ThreeBody" ConfigName="Release"/>
       <Project Name="BARETests" ConfigName="Release"/>
-      <Project Name="BAREBoids" ConfigName="Release"/>
       <Project Name="BAREXML" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>

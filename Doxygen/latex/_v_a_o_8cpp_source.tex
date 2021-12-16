@@ -1,0 +1,90 @@
+\hypertarget{_v_a_o_8cpp_source}{}\doxysection{V\+A\+O.\+cpp}
+\label{_v_a_o_8cpp_source}\index{Source/VAO.cpp@{Source/VAO.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_v_a_o_8hpp}{"VAO.hpp"}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{\Hypertarget{_v_a_o_8cpp_source_l00005}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_ac45b220eb9ba688dfabd47d09f6f1d57}{00005}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_ac45b220eb9ba688dfabd47d09f6f1d57}{VAO}}()}
+\DoxyCodeLine{00006     \{}
+\DoxyCodeLine{00007         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a77436d8b9b995f2d47e72320b65641d0}{m\_numAttributes}} = 0;}
+\DoxyCodeLine{00008     \}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{\Hypertarget{_v_a_o_8cpp_source_l00010}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a2b7969dc6793136b2e8a62b514b4ac25}{00010}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}::\string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a2b7969dc6793136b2e8a62b514b4ac25}{VAO}}()}
+\DoxyCodeLine{00011     \{}
+\DoxyCodeLine{00012     \}}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{\Hypertarget{_v_a_o_8cpp_source_l00014}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a95e6c292d64ff927870783e464ad49cd}{00014}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a95e6c292d64ff927870783e464ad49cd}{init}}()}
+\DoxyCodeLine{00015     \{}
+\DoxyCodeLine{00016         \textcolor{comment}{// Generate VAO, VBO, and connect em up}}
+\DoxyCodeLine{00017         \textcolor{comment}{// Generate VAO}}
+\DoxyCodeLine{00018         glGenVertexArrays(1, \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_ae59d724f3a57d369415c859fe9d489a2}{m\_vaoHandle}});}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020         \textcolor{comment}{// Now bind it so the VBO is created as a part of it}}
+\DoxyCodeLine{00021         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}{bind}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}{)}};}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023         \textcolor{comment}{// Generate VBO inside of the VAO}}
+\DoxyCodeLine{00024         glGenBuffers(1, \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaf5b31995250a7652b2003cf93338add}{m\_vboHandle}});}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026         \textcolor{comment}{// Bind the VBO to the VAO}}
+\DoxyCodeLine{00027         glBindBuffer(GL\_ARRAY\_BUFFER, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaf5b31995250a7652b2003cf93338add}{m\_vboHandle}});}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029         \textcolor{comment}{// Unbind, we're done for now.}}
+\DoxyCodeLine{00030         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{unbind}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{)}};}
+\DoxyCodeLine{00031     \}}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{\Hypertarget{_v_a_o_8cpp_source_l00033}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a1932f8495f96a00b61f300b6220357da}{00033}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a1932f8495f96a00b61f300b6220357da}{destroy}}()}
+\DoxyCodeLine{00034     \{}
+\DoxyCodeLine{00035         \textcolor{comment}{// Unbind first!}}
+\DoxyCodeLine{00036         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{unbind}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{)}};}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038         \textcolor{comment}{// Disable all vertex attributes}}
+\DoxyCodeLine{00039         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a77436d8b9b995f2d47e72320b65641d0}{m\_numAttributes}}; i++) \{}
+\DoxyCodeLine{00040             glDisableVertexAttribArray(i);}
+\DoxyCodeLine{00041         \}}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043         \textcolor{comment}{// Delete buffers}}
+\DoxyCodeLine{00044         glDeleteBuffers(1, \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaf5b31995250a7652b2003cf93338add}{m\_vboHandle}});}
+\DoxyCodeLine{00045         glDeleteVertexArrays(1, \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_ae59d724f3a57d369415c859fe9d489a2}{m\_vaoHandle}});}
+\DoxyCodeLine{00046     \}}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{\Hypertarget{_v_a_o_8cpp_source_l00048}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}{00048}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}{bind}}()}
+\DoxyCodeLine{00049     \{}
+\DoxyCodeLine{00050         glBindVertexArray(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_ae59d724f3a57d369415c859fe9d489a2}{m\_vaoHandle}});}
+\DoxyCodeLine{00051     \}}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{\Hypertarget{_v_a_o_8cpp_source_l00053}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{00053}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{unbind}}() \{}
+\DoxyCodeLine{00054         glBindVertexArray(0);}
+\DoxyCodeLine{00055     \}}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{\Hypertarget{_v_a_o_8cpp_source_l00057}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{00057}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{bindVBO}}()}
+\DoxyCodeLine{00058     \{}
+\DoxyCodeLine{00059         glBindBuffer(GL\_ARRAY\_BUFFER, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaf5b31995250a7652b2003cf93338add}{m\_vboHandle}});}
+\DoxyCodeLine{00060     \}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{\Hypertarget{_v_a_o_8cpp_source_l00062}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}{00062}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}{unbindVBO}}() \{}
+\DoxyCodeLine{00063         glBindBuffer(GL\_ARRAY\_BUFFER, 0);}
+\DoxyCodeLine{00064     \}}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{\Hypertarget{_v_a_o_8cpp_source_l00066}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{00066}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}(GLint size, GLenum type, GLboolean normalized, GLsizei stride, \textcolor{keyword}{const} \textcolor{keywordtype}{void}* data)}
+\DoxyCodeLine{00067     \{}
+\DoxyCodeLine{00068         \textcolor{comment}{// Bind first -\/ It doesn't matter that this is inefficient because we're only calling this like 3 times in the whole program}}
+\DoxyCodeLine{00069         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}{bind}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}{)}};}
+\DoxyCodeLine{00070         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{bindVBO}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{)}};}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{00072         \textcolor{comment}{// Tell OpenGL what kind of data goes in that array}}
+\DoxyCodeLine{00073         glVertexAttribPointer(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a77436d8b9b995f2d47e72320b65641d0}{m\_numAttributes}}, size, type, normalized, stride, data);}
+\DoxyCodeLine{00074         \textcolor{comment}{// Enable the array}}
+\DoxyCodeLine{00075         glEnableVertexAttribArray(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a77436d8b9b995f2d47e72320b65641d0}{m\_numAttributes}});}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077         \textcolor{comment}{// Increment our number of attributes to reflect reality.}}
+\DoxyCodeLine{00078         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a77436d8b9b995f2d47e72320b65641d0}{m\_numAttributes}}++;}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080         \textcolor{comment}{// Unbind for safety!}}
+\DoxyCodeLine{00081         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{unbind}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{)}};}
+\DoxyCodeLine{00082     \}}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084 \}}
+
+\end{DoxyCode}

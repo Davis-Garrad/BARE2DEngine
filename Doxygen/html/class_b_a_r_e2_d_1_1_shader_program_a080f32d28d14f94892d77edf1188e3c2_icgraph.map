@@ -1,0 +1,13 @@
+<map id="BARE2D::ShaderProgram::getUniformLocation" name="BARE2D::ShaderProgram::getUniformLocation">
+<area shape="rect" id="node1" title="Gets the location of a uniform in a program." alt="" coords="449,267,624,308"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_shader_program.html#af711102689d9552b2b54c1c9da8f8589" title=" " alt="" coords="222,5,397,47"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_shader_program.html#ac8974fd3fe4ced68f3e2c3e77bc629ec" title=" " alt="" coords="222,71,397,112"/>
+<area shape="rect" id="node5" href="$namespace_b_a_r_e2_d.html#a801e1e5efc8c94d85331acee75eeaf01" title=" " alt="" coords="235,136,383,177"/>
+<area shape="rect" id="node6" href="$namespace_b_a_r_e2_d.html#ae78aa75d73235959f312e5cb234672aa" title=" " alt="" coords="235,201,383,243"/>
+<area shape="rect" id="node7" href="$namespace_b_a_r_e2_d.html#a084a6e5a281f2833ca8daac3bd5023df" title=" " alt="" coords="235,267,383,308"/>
+<area shape="rect" id="node8" href="$namespace_b_a_r_e2_d.html#a6d067546a069754a8369391b179da987" title=" " alt="" coords="235,332,383,373"/>
+<area shape="rect" id="node9" href="$namespace_b_a_r_e2_d.html#a6ad422394f72acbbd215708e34dd2a92" title=" " alt="" coords="235,397,383,439"/>
+<area shape="rect" id="node10" href="$namespace_b_a_r_e2_d.html#a3446cd1d390e7e152747127f2b787778" title=" " alt="" coords="235,463,383,504"/>
+<area shape="rect" id="node11" href="$namespace_b_a_r_e2_d.html#a705b866a6796e1986ed0ec474f7e3af1" title=" " alt="" coords="217,528,401,569"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="5,5,169,47"/>
+</map>

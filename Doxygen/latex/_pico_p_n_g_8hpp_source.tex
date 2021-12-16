@@ -1,0 +1,32 @@
+\hypertarget{_pico_p_n_g_8hpp_source}{}\doxysection{Pico\+P\+N\+G.\+hpp}
+\label{_pico_p_n_g_8hpp_source}\index{Other\_Libraries/PicoPNG.hpp@{Other\_Libraries/PicoPNG.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{vector}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005     \textcolor{comment}{/**}}
+\DoxyCodeLine{00006 \textcolor{comment}{     * @brief Loads a PNG from a file. That's... All I've got}}
+\DoxyCodeLine{00007 \textcolor{comment}{     * @param out\_image output parameter, this will contain the raw pixels after decoding. By default the output is 32-\/bit RGBA color. The std::vector is automatically resized to the correct size.}}
+\DoxyCodeLine{00008 \textcolor{comment}{     * @param image\_width output\_parameter, this will contain the width of the image in pixels.}}
+\DoxyCodeLine{00009 \textcolor{comment}{     * @param image\_height output\_parameter, this will contain the height of the image in pixels.}}
+\DoxyCodeLine{00010 \textcolor{comment}{     * @param in\_png pointer to the buffer of the PNG file in memory. To get it from a file on}}
+\DoxyCodeLine{00011 \textcolor{comment}{    disk, load it and store it in a memory buffer yourself first.}}
+\DoxyCodeLine{00012 \textcolor{comment}{     * @param in\_size size of the input PNG file in bytes.}}
+\DoxyCodeLine{00013 \textcolor{comment}{     * @param convert\_to\_rgba32 optional parameter, true by default.}}
+\DoxyCodeLine{00014 \textcolor{comment}{    Set to true to get the output in RGBA 32-\/bit (8 bit per channel) color format}}
+\DoxyCodeLine{00015 \textcolor{comment}{    no matter what color type the original PNG image had. This gives predictable,}}
+\DoxyCodeLine{00016 \textcolor{comment}{    useable data from any random input PNG.}}
+\DoxyCodeLine{00017 \textcolor{comment}{    Set to false to do no color conversion at all. The result then has the same data}}
+\DoxyCodeLine{00018 \textcolor{comment}{    type as the PNG image, which can range from 1 bit to 64 bits per pixel.}}
+\DoxyCodeLine{00019 \textcolor{comment}{    Information about the color type or palette colors are not provided. You need}}
+\DoxyCodeLine{00020 \textcolor{comment}{    to know this information yourself to be able to use the data so this only}}
+\DoxyCodeLine{00021 \textcolor{comment}{    works for trusted PNG files. Use LodePNG instead of picoPNG if you need this information.}}
+\DoxyCodeLine{00022 \textcolor{comment}{     * @return 0 if success, not 0 if some error occured.}}
+\DoxyCodeLine{00023 \textcolor{comment}{     */}}
+\DoxyCodeLine{00024     \textcolor{keyword}{extern} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_b_a_r_e2_d_a480b5f334854e31c2d7e026933129480}{decodePNG}}(std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}>\& out\_image, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}\& image\_width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}\& image\_height, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* in\_png, size\_t in\_size, \textcolor{keywordtype}{bool} convert\_to\_rgba32 = \textcolor{keyword}{true});}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026 \}}
+
+\end{DoxyCode}

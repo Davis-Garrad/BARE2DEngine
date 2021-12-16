@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="BARE2DEngine" Version="11000" InternalType="Library">
+  <VirtualDirectory Name="Other Libraries">
+    <VirtualDirectory Name="UTF8">
+      <File Name="Other_Libraries/utf8.h"/>
+      <File Name="Other_Libraries/utf8/unchecked.h"/>
+      <File Name="Other_Libraries/utf8/core.h"/>
+      <File Name="Other_Libraries/utf8/checked.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="PicoPNG">
+      <File Name="Other_Libraries/PicoPNG.hpp"/>
+      <File Name="Other_Libraries/PicoPNG.cpp"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
   <Reconciliation>
     <Regexes/>
     <Excludepaths/>
@@ -9,36 +21,39 @@
     </Extensions>
     <Topleveldir>/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine</Topleveldir>
   </Reconciliation>
-  <VirtualDirectory Name="UTF8">
-    <File Name="Other_Libraries/utf8/unchecked.h"/>
-    <File Name="Other_Libraries/utf8/core.h"/>
-    <File Name="Other_Libraries/utf8/checked.h"/>
-    <File Name="Other_Libraries/utf8.h"/>
-  </VirtualDirectory>
-  <VirtualDirectory Name="PicoPNG">
-    <File Name="Other_Libraries/PicoPNG.hpp"/>
-    <File Name="Other_Libraries/PicoPNG.cpp"/>
-  </VirtualDirectory>
   <VirtualDirectory Name="Source">
+    <VirtualDirectory Name="Resources">
+      <File Name="Source/XMLDataTypes.tcc"/>
+      <File Name="Source/XMLDataTypes.hpp"/>
+      <File Name="Source/XMLDataTypes.cpp"/>
+      <File Name="Source/XMLDataManager.tcc"/>
+      <File Name="Source/XMLDataManager.hpp"/>
+      <File Name="Source/XMLDataManager.cpp"/>
+      <File Name="Source/IOManager_impl.tcc"/>
+      <File Name="Source/IOManager.hpp"/>
+      <File Name="Source/IOManager.cpp"/>
+      <VirtualDirectory Name="Types">
+        <File Name="Source/MutableTexture.cpp"/>
+        <File Name="Source/MutableTexture.hpp"/>
+        <File Name="Source/Texture.hpp"/>
+        <File Name="Source/Sound.hpp"/>
+        <File Name="Source/Sound.cpp"/>
+        <File Name="Source/Script.hpp"/>
+        <File Name="Source/Script.cpp"/>
+        <File Name="Source/Font.hpp"/>
+        <File Name="Source/Font.cpp"/>
+      </VirtualDirectory>
+      <File Name="Source/Cache_impl.tcc"/>
+      <File Name="Source/Cache.hpp"/>
+      <File Name="Source/Cache.cpp"/>
+    </VirtualDirectory>
     <VirtualDirectory Name="GUI">
       <File Name="Source/BARECEGUI.hpp"/>
       <File Name="Source/BARECEGUI.cpp"/>
     </VirtualDirectory>
-    <VirtualDirectory Name="Files">
-      <File Name="Source/XMLDataManager.tcc"/>
-      <File Name="Source/XMLDataTypes.tcc"/>
-      <File Name="Source/XMLDataTypes.cpp"/>
-      <File Name="Source/XMLDataTypes.hpp"/>
-      <File Name="Source/XMLDataManager.cpp"/>
-      <File Name="Source/XMLDataManager.hpp"/>
-      <File Name="Source/IOManager_impl.tcc"/>
-      <File Name="Source/IOManager.hpp"/>
-      <File Name="Source/IOManager.cpp"/>
-    </VirtualDirectory>
-    <File Name="Source/Timer.cpp"/>
-    <File Name="Source/Timer.hpp"/>
-    <File Name="Source/Script.cpp"/>
     <VirtualDirectory Name="HardwareInterface">
+      <File Name="Source/Timer.hpp"/>
+      <File Name="Source/Timer.cpp"/>
       <File Name="Source/Filesystem.cpp"/>
       <File Name="Source/Filesystem.hpp"/>
       <File Name="Source/ResourceManager.cpp"/>
@@ -48,11 +63,6 @@
       <File Name="Source/InputManager.hpp"/>
       <File Name="Source/InputManager.cpp"/>
     </VirtualDirectory>
-    <File Name="Source/Sound.hpp"/>
-    <File Name="Source/Script.hpp"/>
-    <File Name="Source/Font.hpp"/>
-    <File Name="Source/Cache_impl.tcc"/>
-    <File Name="Source/Cache.hpp"/>
     <VirtualDirectory Name="Structure">
       <File Name="Source/Screen.cpp"/>
       <File Name="Source/Screen.hpp"/>
@@ -87,18 +97,12 @@
       <File Name="Source/Vertex.hpp"/>
       <File Name="Source/VAO.hpp"/>
       <File Name="Source/VAO.cpp"/>
-      <File Name="Source/Texture.hpp"/>
       <File Name="Source/ShaderProgram.hpp"/>
       <File Name="Source/ShaderProgram.cpp"/>
       <File Name="Source/RenderBatch.hpp"/>
-      <File Name="Source/MutableTexture.hpp"/>
-      <File Name="Source/MutableTexture.cpp"/>
       <File Name="Source/GLContextManager.hpp"/>
       <File Name="Source/GLContextManager.cpp"/>
     </VirtualDirectory>
-    <File Name="Source/Font.cpp"/>
-    <File Name="Source/Sound.cpp"/>
-    <File Name="Source/Cache.cpp"/>
   </VirtualDirectory>
   <Description/>
   <Dependencies/>
@@ -113,8 +117,54 @@
       </Linker>
       <ResourceCompiler Options=""/>
     </GlobalSettings>
-    <Configuration Name="Release" CompilerType="GCC" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+    <Configuration Name="Debug" CompilerType="GCC" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g;-std=c++17;-Wall" C_Options="" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="."/>
+        <IncludePath Value="include"/>
+        <IncludePath Value="/usr/include"/>
+        <IncludePath Value="/usr/include/x86_64-linux-gnu/cegui-0.8.7/"/>
+        <IncludePath Value="./Other_Libraries"/>
+      </Compiler>
+      <Linker Options="-lboost_filesystem -lboost_system -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW" Required="yes">
+        <LibraryPath Value="."/>
+        <LibraryPath Value="/usr/lib/x86_64-linux-gnu/"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/lib$(ProjectName).a" IntermediateDirectory="$(ConfigurationName)" Command="$(OutputFile)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <BuildSystem Name="Default"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName/>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="GCC" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-O3;-std=c++17;-Wall" C_Options="" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
         <IncludePath Value="include"/>
         <IncludePath Value="/usr/include"/>

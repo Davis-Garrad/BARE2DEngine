@@ -1,0 +1,5 @@
+<map id="BARE2D::setUniformMatrix&lt; glm::mat4 &gt;" name="BARE2D::setUniformMatrix&lt; glm::mat4 &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,189,47"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_shader_program.html#a080f32d28d14f94892d77edf1188e3c2" title="Gets the location of a uniform in a program." alt="" coords="237,5,412,47"/>
+<area shape="rect" id="node3" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="460,13,604,39"/>
+</map>

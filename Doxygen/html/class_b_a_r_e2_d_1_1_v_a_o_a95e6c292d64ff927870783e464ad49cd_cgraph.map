@@ -1,0 +1,5 @@
+<map id="BARE2D::VAO::init" name="BARE2D::VAO::init">
+<area shape="rect" id="node1" title="Initializes the necessary components, combining the VBO and VAO." alt="" coords="5,31,140,57"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a61c99f69bf5feb2ac95189381a48e638" title="Binds this vertex array object." alt="" coords="195,5,337,32"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a6c224737a43f43dbe7c9e25ecd47d1da" title="Unbinds the vao." alt="" coords="188,56,344,83"/>
+</map>

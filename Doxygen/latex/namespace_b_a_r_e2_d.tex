@@ -1,0 +1,791 @@
+\hypertarget{namespace_b_a_r_e2_d}{}\doxysection{B\+A\+R\+E2D Namespace Reference}
+\label{namespace_b_a_r_e2_d}\index{BARE2D@{BARE2D}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}
+\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}
+\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}} class only exists for some templating acrobatics reasons (as an abstract base class for \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{B\+A\+R\+E\+C\+E\+G\+UI}}
+\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{Basic\+Renderer}}
+\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}
+\begin{DoxyCompactList}\small\item\em This is a skeleton cache class. This can {\itshape {\bfseries{only}}} be used by the \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager}{Resource\+Manager}} or other classes who actually maintain proper pointer ownership. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}}
+\item 
+struct \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper}{C\+E\+G\+U\+I\+Context\+Wrapper}}
+\item 
+class \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph}{Character\+Glyph}}
+\begin{DoxyCompactList}\small\item\em Represents a render glyph, modified for fonts! \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle}{Circle}}
+\item 
+class \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}
+\begin{DoxyCompactList}\small\item\em An R\+G\+BA 8-\/bit colour value. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer}{Debug\+Renderer}}
+\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer}{F\+B\+O\+Renderer}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer}{F\+B\+O\+Renderer}} represents and manages an entire Frame\+Buffer\+Object. This allows one to draw entire scenes first to a texture, then perform some operations on that texture, then draw that texture to the screen. Shaders have uniforms projection\+Matrix (mat4), colour\+Texture (sampler2D), and depth\+Texture (sampler2D) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_filesystem}{Filesystem}}
+\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}}
+\begin{DoxyCompactList}\small\item\em Essentially just a wrapper for the S\+DL T\+T\+F\+\_\+\+Font type. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_renderer}{Font\+Renderer}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_renderer}{Font\+Renderer}}... renders fonts. It is just a very basic extension of the \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{Basic\+Renderer}}, so it works the same. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context}{G\+L\+Context}}
+\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager}{G\+L\+Context\+Manager}}
+\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph}{Glyph}}
+\begin{DoxyCompactList}\small\item\em The glyph represents a renderbatch\textquotesingle{}s primitive data, which is created from each draw call in the basic renderer. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{Input\+Manager}}
+\begin{DoxyCompactList}\small\item\em This is the input manager. It does what you expect! Nearly completely copied from G\+L\+Engine, the ol\textquotesingle{} gal. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager}{I\+O\+Manager}}
+\item 
+struct \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line}{Line}}
+\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger}{Logger}}
+\begin{DoxyCompactList}\small\item\em For general purpose logging, this is the logger! It is a singleton class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_mutable_texture}{Mutable\+Texture}}
+\begin{DoxyCompactList}\small\item\em A child of \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}} which allows (and gives helpful functions for) mutation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_position}{Position}}
+\begin{DoxyCompactList}\small\item\em Positional data. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle}{Rectangle}}
+\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer}{Renderer}}
+\begin{DoxyCompactList}\small\item\em The renderer class holds some shader program, manages some V\+BO, some render batch(es), and allows customizable, simple rendering. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager}{Resource\+Manager}}
+\begin{DoxyCompactList}\small\item\em The resource manager manages resources. Groundbreaking news, I know. In short, the resource manager loads and manages Textures, Sounds, Scripts, Fonts, etc. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen}{Screen}}
+\begin{DoxyCompactList}\small\item\em This is meant to be a parent for other, app-\/specific, screen classes, which is essentially where all game mechanics will \char`\"{}happen\char`\"{}, so to speak. This class decides what happens on updates, draws, when to go to different screens, etc. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{Screen\+List}}
+\begin{DoxyCompactList}\small\item\em Holds and connects all of the screens used in the program in a list. Keeps track of the previous screen. Contains functions to move to the next or previous screens. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{Shader\+Program}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{Shader\+Program}} is a G\+L\+SL program which combines two shaders -\/ the vertex shader and the fragment shader -\/ to allow rendering. Each renderer should have its own program. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}
+\begin{DoxyCompactList}\small\item\em The texture struct holds very basic stuff -\/ the filepath, width, height, and ID,. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer}{Timer}}
+\begin{DoxyCompactList}\small\item\em Not only does the timer keep track of the current time and delta-\/times, it can do all the \char`\"{}fancy\char`\"{} calculations for timestepping! Uses semi-\/fixed timestepping, as this engine isn\textquotesingle{}t going to be used for advanced physics! \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_u_v}{UV}}
+\begin{DoxyCompactList}\small\item\em Holds two floats which can act as \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_u_v}{UV}} sizes or positions. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{V\+AO}}
+\begin{DoxyCompactList}\small\item\em A wrapper class for Open\+GL\textquotesingle{}s \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{V\+AO}}, as well as its associated V\+BO and attributes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}
+\begin{DoxyCompactList}\small\item\em Just holds vertex data for convenience. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}}
+\begin{DoxyCompactList}\small\item\em It\textquotesingle{}s a graphical window, holds the contexts for GL and S\+DL. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{X\+M\+L\+Data}}
+\begin{DoxyCompactList}\small\item\em Holds all the very basic information for X\+ML data. Designed to be a base class from which a user can derive custom data formats. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{X\+M\+L\+Data\+Manager}}
+\begin{DoxyCompactList}\small\item\em A singleton class that statically manages all X\+ML data, including read and write operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{B\+A\+R\+E\+Error}} \{ \newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a2eea2c536f4e062c3b1832f9cea1356d}{B\+A\+R\+E\+Error\+::\+S\+D\+L\+\_\+\+F\+A\+I\+L\+U\+RE}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aac184187fe6248f102d81fc64e36c57d}{B\+A\+R\+E\+Error\+::\+G\+L\+\_\+\+F\+A\+I\+L\+U\+R\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aed6ff68f5f52346f2c0754edb81b83ed}{B\+A\+R\+E\+Error\+::\+D\+O\+U\+B\+L\+E\+\_\+\+I\+N\+IT}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aa4c46509c81b14752ae8ff94452ff486}{B\+A\+R\+E\+Error\+::\+G\+L\+E\+W\+\_\+\+F\+A\+I\+L\+U\+RE}}, 
+\newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a804b6ec52f621f93ab2f5026201f0d76}{B\+A\+R\+E\+Error\+::\+F\+I\+L\+E\+\_\+\+F\+A\+I\+L\+U\+RE}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a875ae376eb2fbd99c364b0c2ed42fedc}{B\+A\+R\+E\+Error\+::\+T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+A\+I\+L\+U\+RE}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a1f208845587ac9c0c53c388d4d385b1a}{B\+A\+R\+E\+Error\+::\+V\+E\+R\+T\+E\+X\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+F\+A\+I\+L\+U\+RE}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad860107dd407ff9736d6208998d710f6}{B\+A\+R\+E\+Error\+::\+F\+R\+A\+G\+M\+E\+N\+T\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+F\+A\+I\+L\+U\+RE}}, 
+\newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad6e29903fb0c6eb8c57d20d9ad478d9e}{B\+A\+R\+E\+Error\+::\+U\+N\+I\+F\+O\+R\+M\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abaa8fdfa9df78eba172c4aaa8b8046a2}{B\+A\+R\+E\+Error\+::\+S\+H\+A\+D\+E\+R\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+A\+I\+L\+U\+RE}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15af2f6cbcd601921a638724130311f22cd}{B\+A\+R\+E\+Error\+::\+S\+H\+A\+D\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+F\+A\+I\+L\+U\+RE}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8bc03ea7709e07920eab3b6c56df1fd8}{B\+A\+R\+E\+Error\+::\+G\+L\+S\+L\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+F\+A\+I\+L\+U\+RE}}, 
+\newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a59e2044a4165c83216dbbca34417462b}{B\+A\+R\+E\+Error\+::\+F\+O\+N\+T\+\_\+\+F\+A\+I\+L\+U\+RE}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a56134db1e8559ae4b32bf967c15fc4df}{B\+A\+R\+E\+Error\+::\+F\+B\+O\+\_\+\+F\+A\+I\+L\+U\+RE}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a396430326452fe792ad9891baac4e76b}{B\+A\+R\+E\+Error\+::\+L\+O\+G\+G\+E\+R\+\_\+\+F\+A\+I\+L\+U\+RE}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{B\+A\+R\+E\+Error\+::\+X\+M\+L\+\_\+\+F\+A\+I\+L\+U\+RE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents a specific type of error that has occured. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253}{Screen\+State}} \{ \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}{Screen\+State\+::\+R\+U\+N\+N\+I\+NG}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253af1b095bb6b4fb743116b8e2910c87e2a}{Screen\+State\+::\+C\+H\+A\+N\+G\+E\+\_\+\+N\+E\+XT}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ad99b55eff583c9982c86312bdcfdb47c}{Screen\+State\+::\+C\+H\+A\+N\+G\+E\+\_\+\+P\+R\+EV}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ab8b26f3abe929349d415409c67b3b81e}{Screen\+State\+::\+E\+X\+I\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_b_a_r_e2_d_a9897192c146240e3a38981a50a751369}{Justification}} \{ \mbox{\hyperlink{namespace_b_a_r_e2_d_a9897192c146240e3a38981a50a751369a21507b40c80068eda19865706fdc2403}{Justification\+::\+R\+I\+G\+HT}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a9897192c146240e3a38981a50a751369a43eedd8685eb86592022f8da962e3474}{Justification\+::\+M\+I\+D\+D\+LE}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a9897192c146240e3a38981a50a751369a684d325a7303f52e64011467ff5c5758}{Justification\+::\+L\+E\+FT}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{Attribute\+Type}} \{ \newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}{Attribute\+Type\+::\+S\+T\+R\+I\+NG}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}{Attribute\+Type\+::\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+I\+NT}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a358c00737f6938bb5efb0674c7521b54}{Attribute\+Type\+::\+V\+E\+C\+T\+O\+R\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+I\+NT}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a53f93baa3057821107c750323892fa92}{Attribute\+Type\+::\+I\+NT}}, 
+\newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ae738c26bf4ce1037fa81b039a915cbf6}{Attribute\+Type\+::\+F\+L\+O\+AT}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a38bbbd837be5914a8667d76948e1537b}{Attribute\+Type\+::\+V\+E\+C\+T\+O\+R\+\_\+\+F\+L\+O\+AT}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02aa97b2c144243b2b9d2c593ec268b62f5}{Attribute\+Type\+::\+B\+O\+OL}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ab916a458e01349ca08eb2a51f541e424}{Attribute\+Type\+::\+V\+E\+C\+T\+O\+R\+\_\+\+B\+O\+OL}}, 
+\newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9bd71a29dd44a2e0252b56ce5c6d251a}{Attribute\+Type\+::\+V\+E\+C2}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a885431a8d6e8227dbbbe0da37138b4e5}{Attribute\+Type\+::\+V\+E\+C\+T\+O\+R\+\_\+\+V\+E\+C2}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespace_b_a_r_e2_d_a7951c5decc1f7edc3c4f78ed2f579c85}{get\+Err\+String}} (\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{B\+A\+R\+E\+Error}} err)
+\begin{DoxyCompactList}\small\item\em Returns the string representing/explaining the error that occurred. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throw\+Fatal\+Error}} (\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{B\+A\+R\+E\+Error}} err, std\+::string message=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Throws an error (fatal). Also calls display\+Errors and exits the program. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throw\+Error}} (\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{B\+A\+R\+E\+Error}} err, std\+::string message=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Throws an error silently. Adds it to the pile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{display\+Errors}} ()
+\begin{DoxyCompactList}\small\item\em Displays the latest thrown errors (really just all the thrown errors) in the console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_b_a_r_e2_d_a4085763ff0085d40686c3cd0bc1a5182}{init\+G\+L\+Error\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the GL Debug Message Callback function, and enables debug output straight from Open\+GL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{init}} ()
+\begin{DoxyCompactList}\small\item\em Inits the required systems used by \mbox{\hyperlink{namespace_b_a_r_e2_d}{B\+A\+R\+E2D}}. \end{DoxyCompactList}\item 
+C\+E\+G\+U\+I\+::\+Key\+::\+Scan \mbox{\hyperlink{namespace_b_a_r_e2_d_a4308f8684a05ffbf8ef36cd49541765b}{S\+D\+L\+Key\+To\+C\+E\+G\+U\+I\+Key}} (S\+D\+L\+\_\+\+Keycode key)
+\item 
+C\+E\+G\+U\+I\+::\+Mouse\+Button \mbox{\hyperlink{namespace_b_a_r_e2_d_add368291490f34b060048b5cbb5245f9}{S\+D\+L\+Button\+To\+C\+E\+G\+U\+I\+Button}} (Uint8 sdl\+Button)
+\item 
+template$<$$>$ void \mbox{\hyperlink{namespace_b_a_r_e2_d_a6d067546a069754a8369391b179da987}{Shader\+Program\+::set\+Uniform$<$ glm\+::vec2 $>$}} (const std\+::string uniform, glm\+::vec2 \&data)
+\item 
+template$<$$>$ void \mbox{\hyperlink{namespace_b_a_r_e2_d_a6ad422394f72acbbd215708e34dd2a92}{Shader\+Program\+::set\+Uniform$<$ glm\+::vec3 $>$}} (const std\+::string uniform, glm\+::vec3 \&data)
+\item 
+template$<$$>$ void \mbox{\hyperlink{namespace_b_a_r_e2_d_a3446cd1d390e7e152747127f2b787778}{Shader\+Program\+::set\+Uniform$<$ glm\+::vec4 $>$}} (const std\+::string uniform, glm\+::vec4 \&data)
+\item 
+template$<$$>$ void \mbox{\hyperlink{namespace_b_a_r_e2_d_a801e1e5efc8c94d85331acee75eeaf01}{Shader\+Program\+::set\+Uniform$<$ glm\+::ivec2 $>$}} (const std\+::string uniform, glm\+::ivec2 \&data)
+\item 
+template$<$$>$ void \mbox{\hyperlink{namespace_b_a_r_e2_d_ae78aa75d73235959f312e5cb234672aa}{Shader\+Program\+::set\+Uniform$<$ glm\+::ivec3 $>$}} (const std\+::string uniform, glm\+::ivec3 \&data)
+\item 
+template$<$$>$ void \mbox{\hyperlink{namespace_b_a_r_e2_d_a084a6e5a281f2833ca8daac3bd5023df}{Shader\+Program\+::set\+Uniform$<$ glm\+::ivec4 $>$}} (const std\+::string uniform, glm\+::ivec4 \&data)
+\item 
+template$<$$>$ void \mbox{\hyperlink{namespace_b_a_r_e2_d_a705b866a6796e1986ed0ec474f7e3af1}{Shader\+Program\+::set\+Uniform\+Matrix$<$ glm\+::mat4 $>$}} (const std\+::string uniform, bool transpose, glm\+::mat4 \&data)
+\item 
+int \mbox{\hyperlink{namespace_b_a_r_e2_d_a01aa10401587e82a7e7f4b19924d2f44}{decode\+P\+NG}} (std\+::vector$<$ unsigned char $>$ \&out\+\_\+image, unsigned long \&image\+\_\+width, unsigned long \&image\+\_\+height, const unsigned char $\ast$in\+\_\+png, size\+\_\+t in\+\_\+size, bool convert\+\_\+to\+\_\+rgba32=true)
+\begin{DoxyCompactList}\small\item\em Loads a P\+NG from a file. That\textquotesingle{}s... All I\textquotesingle{}ve got. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_b_a_r_e2_d_a480b5f334854e31c2d7e026933129480}{decode\+P\+NG}} (std\+::vector$<$ unsigned char $>$ \&out\+\_\+image, unsigned long \&image\+\_\+width, unsigned long \&image\+\_\+height, const unsigned char $\ast$in\+\_\+png, std\+::size\+\_\+t in\+\_\+size, bool convert\+\_\+to\+\_\+rgba32)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{B\+A\+R\+E\+Error}} $>$ \mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{thrown\+Errors}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}\label{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}} 
+\index{BARE2D@{BARE2D}!AttributeType@{AttributeType}}
+\index{AttributeType@{AttributeType}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{AttributeType}{AttributeType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{B\+A\+R\+E2\+D\+::\+Attribute\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STRING@{STRING}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!STRING@{STRING}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}\label{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}} 
+S\+T\+R\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNSIGNED\_INT@{UNSIGNED\_INT}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!UNSIGNED\_INT@{UNSIGNED\_INT}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}\label{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}} 
+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+I\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VECTOR\_UNSIGNED\_INT@{VECTOR\_UNSIGNED\_INT}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!VECTOR\_UNSIGNED\_INT@{VECTOR\_UNSIGNED\_INT}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a358c00737f6938bb5efb0674c7521b54}\label{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a358c00737f6938bb5efb0674c7521b54}} 
+V\+E\+C\+T\+O\+R\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+I\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INT@{INT}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!INT@{INT}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a53f93baa3057821107c750323892fa92}\label{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a53f93baa3057821107c750323892fa92}} 
+I\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLOAT@{FLOAT}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!FLOAT@{FLOAT}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ae738c26bf4ce1037fa81b039a915cbf6}\label{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ae738c26bf4ce1037fa81b039a915cbf6}} 
+F\+L\+O\+AT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VECTOR\_FLOAT@{VECTOR\_FLOAT}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!VECTOR\_FLOAT@{VECTOR\_FLOAT}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a38bbbd837be5914a8667d76948e1537b}\label{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a38bbbd837be5914a8667d76948e1537b}} 
+V\+E\+C\+T\+O\+R\+\_\+\+F\+L\+O\+AT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BOOL@{BOOL}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!BOOL@{BOOL}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02aa97b2c144243b2b9d2c593ec268b62f5}\label{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02aa97b2c144243b2b9d2c593ec268b62f5}} 
+B\+O\+OL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VECTOR\_BOOL@{VECTOR\_BOOL}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!VECTOR\_BOOL@{VECTOR\_BOOL}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ab916a458e01349ca08eb2a51f541e424}\label{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ab916a458e01349ca08eb2a51f541e424}} 
+V\+E\+C\+T\+O\+R\+\_\+\+B\+O\+OL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VEC2@{VEC2}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!VEC2@{VEC2}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9bd71a29dd44a2e0252b56ce5c6d251a}\label{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9bd71a29dd44a2e0252b56ce5c6d251a}} 
+V\+E\+C2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VECTOR\_VEC2@{VECTOR\_VEC2}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!VECTOR\_VEC2@{VECTOR\_VEC2}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a885431a8d6e8227dbbbe0da37138b4e5}\label{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a885431a8d6e8227dbbbe0da37138b4e5}} 
+V\+E\+C\+T\+O\+R\+\_\+\+V\+E\+C2&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00010}{10}} of file \mbox{\hyperlink{_x_m_l_data_types_8hpp_source}{X\+M\+L\+Data\+Types.\+hpp}}.
+
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}} 
+\index{BARE2D@{BARE2D}!BAREError@{BAREError}}
+\index{BAREError@{BAREError}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{BAREError}{BAREError}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{B\+A\+R\+E2\+D\+::\+B\+A\+R\+E\+Error}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Represents a specific type of error that has occured. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_FAILURE@{SDL\_FAILURE}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!SDL\_FAILURE@{SDL\_FAILURE}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a2eea2c536f4e062c3b1832f9cea1356d}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a2eea2c536f4e062c3b1832f9cea1356d}} 
+S\+D\+L\+\_\+\+F\+A\+I\+L\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GL\_FAILURE\_VERSION@{GL\_FAILURE\_VERSION}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!GL\_FAILURE\_VERSION@{GL\_FAILURE\_VERSION}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aac184187fe6248f102d81fc64e36c57d}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aac184187fe6248f102d81fc64e36c57d}} 
+G\+L\+\_\+\+F\+A\+I\+L\+U\+R\+E\+\_\+\+V\+E\+R\+S\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOUBLE\_INIT@{DOUBLE\_INIT}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!DOUBLE\_INIT@{DOUBLE\_INIT}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aed6ff68f5f52346f2c0754edb81b83ed}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aed6ff68f5f52346f2c0754edb81b83ed}} 
+D\+O\+U\+B\+L\+E\+\_\+\+I\+N\+IT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GLEW\_FAILURE@{GLEW\_FAILURE}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!GLEW\_FAILURE@{GLEW\_FAILURE}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aa4c46509c81b14752ae8ff94452ff486}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aa4c46509c81b14752ae8ff94452ff486}} 
+G\+L\+E\+W\+\_\+\+F\+A\+I\+L\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILE\_FAILURE@{FILE\_FAILURE}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!FILE\_FAILURE@{FILE\_FAILURE}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a804b6ec52f621f93ab2f5026201f0d76}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a804b6ec52f621f93ab2f5026201f0d76}} 
+F\+I\+L\+E\+\_\+\+F\+A\+I\+L\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXTURE\_FAILURE@{TEXTURE\_FAILURE}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!TEXTURE\_FAILURE@{TEXTURE\_FAILURE}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a875ae376eb2fbd99c364b0c2ed42fedc}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a875ae376eb2fbd99c364b0c2ed42fedc}} 
+T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+A\+I\+L\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VERTEX\_SHADER\_FAILURE@{VERTEX\_SHADER\_FAILURE}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!VERTEX\_SHADER\_FAILURE@{VERTEX\_SHADER\_FAILURE}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a1f208845587ac9c0c53c388d4d385b1a}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a1f208845587ac9c0c53c388d4d385b1a}} 
+V\+E\+R\+T\+E\+X\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+F\+A\+I\+L\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FRAGMENT\_SHADER\_FAILURE@{FRAGMENT\_SHADER\_FAILURE}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!FRAGMENT\_SHADER\_FAILURE@{FRAGMENT\_SHADER\_FAILURE}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad860107dd407ff9736d6208998d710f6}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad860107dd407ff9736d6208998d710f6}} 
+F\+R\+A\+G\+M\+E\+N\+T\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+F\+A\+I\+L\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNIFORM\_NOT\_FOUND@{UNIFORM\_NOT\_FOUND}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!UNIFORM\_NOT\_FOUND@{UNIFORM\_NOT\_FOUND}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad6e29903fb0c6eb8c57d20d9ad478d9e}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad6e29903fb0c6eb8c57d20d9ad478d9e}} 
+U\+N\+I\+F\+O\+R\+M\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_COMPILE\_FAILURE@{SHADER\_COMPILE\_FAILURE}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!SHADER\_COMPILE\_FAILURE@{SHADER\_COMPILE\_FAILURE}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abaa8fdfa9df78eba172c4aaa8b8046a2}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abaa8fdfa9df78eba172c4aaa8b8046a2}} 
+S\+H\+A\+D\+E\+R\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+A\+I\+L\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_LINK\_FAILURE@{SHADER\_LINK\_FAILURE}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!SHADER\_LINK\_FAILURE@{SHADER\_LINK\_FAILURE}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15af2f6cbcd601921a638724130311f22cd}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15af2f6cbcd601921a638724130311f22cd}} 
+S\+H\+A\+D\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+F\+A\+I\+L\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GLSL\_PROGRAM\_FAILURE@{GLSL\_PROGRAM\_FAILURE}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!GLSL\_PROGRAM\_FAILURE@{GLSL\_PROGRAM\_FAILURE}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8bc03ea7709e07920eab3b6c56df1fd8}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8bc03ea7709e07920eab3b6c56df1fd8}} 
+G\+L\+S\+L\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+F\+A\+I\+L\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FONT\_FAILURE@{FONT\_FAILURE}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!FONT\_FAILURE@{FONT\_FAILURE}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a59e2044a4165c83216dbbca34417462b}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a59e2044a4165c83216dbbca34417462b}} 
+F\+O\+N\+T\+\_\+\+F\+A\+I\+L\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FBO\_FAILURE@{FBO\_FAILURE}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!FBO\_FAILURE@{FBO\_FAILURE}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a56134db1e8559ae4b32bf967c15fc4df}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a56134db1e8559ae4b32bf967c15fc4df}} 
+F\+B\+O\+\_\+\+F\+A\+I\+L\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOGGER\_FAILURE@{LOGGER\_FAILURE}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!LOGGER\_FAILURE@{LOGGER\_FAILURE}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a396430326452fe792ad9891baac4e76b}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a396430326452fe792ad9891baac4e76b}} 
+L\+O\+G\+G\+E\+R\+\_\+\+F\+A\+I\+L\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_FAILURE@{XML\_FAILURE}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!XML\_FAILURE@{XML\_FAILURE}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}\label{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}} 
+X\+M\+L\+\_\+\+F\+A\+I\+L\+U\+RE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8hpp_source_l00018}{18}} of file \mbox{\hyperlink{_b_a_r_e_errors_8hpp_source}{B\+A\+R\+E\+Errors.\+hpp}}.
+
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a9897192c146240e3a38981a50a751369}\label{namespace_b_a_r_e2_d_a9897192c146240e3a38981a50a751369}} 
+\index{BARE2D@{BARE2D}!Justification@{Justification}}
+\index{Justification@{Justification}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{Justification}{Justification}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_b_a_r_e2_d_a9897192c146240e3a38981a50a751369}{B\+A\+R\+E2\+D\+::\+Justification}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT@{RIGHT}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!RIGHT@{RIGHT}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a9897192c146240e3a38981a50a751369a21507b40c80068eda19865706fdc2403}\label{namespace_b_a_r_e2_d_a9897192c146240e3a38981a50a751369a21507b40c80068eda19865706fdc2403}} 
+R\+I\+G\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIDDLE@{MIDDLE}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!MIDDLE@{MIDDLE}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a9897192c146240e3a38981a50a751369a43eedd8685eb86592022f8da962e3474}\label{namespace_b_a_r_e2_d_a9897192c146240e3a38981a50a751369a43eedd8685eb86592022f8da962e3474}} 
+M\+I\+D\+D\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT@{LEFT}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!LEFT@{LEFT}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a9897192c146240e3a38981a50a751369a684d325a7303f52e64011467ff5c5758}\label{namespace_b_a_r_e2_d_a9897192c146240e3a38981a50a751369a684d325a7303f52e64011467ff5c5758}} 
+L\+E\+FT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_font_renderer_8hpp_source_l00012}{12}} of file \mbox{\hyperlink{_font_renderer_8hpp_source}{Font\+Renderer.\+hpp}}.
+
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253}\label{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253}} 
+\index{BARE2D@{BARE2D}!ScreenState@{ScreenState}}
+\index{ScreenState@{ScreenState}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{ScreenState}{ScreenState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253}{B\+A\+R\+E2\+D\+::\+Screen\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RUNNING@{RUNNING}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!RUNNING@{RUNNING}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}\label{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}} 
+R\+U\+N\+N\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHANGE\_NEXT@{CHANGE\_NEXT}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!CHANGE\_NEXT@{CHANGE\_NEXT}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253af1b095bb6b4fb743116b8e2910c87e2a}\label{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253af1b095bb6b4fb743116b8e2910c87e2a}} 
+C\+H\+A\+N\+G\+E\+\_\+\+N\+E\+XT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHANGE\_PREV@{CHANGE\_PREV}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!CHANGE\_PREV@{CHANGE\_PREV}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ad99b55eff583c9982c86312bdcfdb47c}\label{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ad99b55eff583c9982c86312bdcfdb47c}} 
+C\+H\+A\+N\+G\+E\+\_\+\+P\+R\+EV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXIT\_APPLICATION@{EXIT\_APPLICATION}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!EXIT\_APPLICATION@{EXIT\_APPLICATION}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ab8b26f3abe929349d415409c67b3b81e}\label{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ab8b26f3abe929349d415409c67b3b81e}} 
+E\+X\+I\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_screen_8hpp_source_l00005}{5}} of file \mbox{\hyperlink{_screen_8hpp_source}{Screen.\+hpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a01aa10401587e82a7e7f4b19924d2f44}\label{namespace_b_a_r_e2_d_a01aa10401587e82a7e7f4b19924d2f44}} 
+\index{BARE2D@{BARE2D}!decodePNG@{decodePNG}}
+\index{decodePNG@{decodePNG}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{decodePNG()}{decodePNG()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int B\+A\+R\+E2\+D\+::decode\+P\+NG (\begin{DoxyParamCaption}\item[{std\+::vector$<$ unsigned char $>$ \&}]{out\+\_\+image,  }\item[{unsigned long \&}]{image\+\_\+width,  }\item[{unsigned long \&}]{image\+\_\+height,  }\item[{const unsigned char $\ast$}]{in\+\_\+png,  }\item[{size\+\_\+t}]{in\+\_\+size,  }\item[{bool}]{convert\+\_\+to\+\_\+rgba32 = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Loads a P\+NG from a file. That\textquotesingle{}s... All I\textquotesingle{}ve got. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+\_\+image} & output parameter, this will contain the raw pixels after decoding. By default the output is 32-\/bit R\+G\+BA color. The std\+::vector is automatically resized to the correct size. \\
+\hline
+{\em image\+\_\+width} & output\+\_\+parameter, this will contain the width of the image in pixels. \\
+\hline
+{\em image\+\_\+height} & output\+\_\+parameter, this will contain the height of the image in pixels. \\
+\hline
+{\em in\+\_\+png} & pointer to the buffer of the P\+NG file in memory. To get it from a file on disk, load it and store it in a memory buffer yourself first. \\
+\hline
+{\em in\+\_\+size} & size of the input P\+NG file in bytes. \\
+\hline
+{\em convert\+\_\+to\+\_\+rgba32} & optional parameter, true by default. Set to true to get the output in R\+G\+BA 32-\/bit (8 bit per channel) color format no matter what color type the original P\+NG image had. This gives predictable, useable data from any random input P\+NG. Set to false to do no color conversion at all. The result then has the same data type as the P\+NG image, which can range from 1 bit to 64 bits per pixel. Information about the color type or palette colors are not provided. You need to know this information yourself to be able to use the data so this only works for trusted P\+NG files. Use Lode\+P\+NG instead of pico\+P\+NG if you need this information. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, not 0 if some error occured. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a480b5f334854e31c2d7e026933129480}\label{namespace_b_a_r_e2_d_a480b5f334854e31c2d7e026933129480}} 
+\index{BARE2D@{BARE2D}!decodePNG@{decodePNG}}
+\index{decodePNG@{decodePNG}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{decodePNG()}{decodePNG()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int B\+A\+R\+E2\+D\+::decode\+P\+NG (\begin{DoxyParamCaption}\item[{std\+::vector$<$ unsigned char $>$ \&}]{out\+\_\+image,  }\item[{unsigned long \&}]{image\+\_\+width,  }\item[{unsigned long \&}]{image\+\_\+height,  }\item[{const unsigned char $\ast$}]{in\+\_\+png,  }\item[{std\+::size\+\_\+t}]{in\+\_\+size,  }\item[{bool}]{convert\+\_\+to\+\_\+rgba32 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_pico_p_n_g_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{_pico_p_n_g_8cpp_source}{Pico\+P\+N\+G.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_resource_manager_8cpp_source_l00035}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Texture()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_a480b5f334854e31c2d7e026933129480_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}\label{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}} 
+\index{BARE2D@{BARE2D}!displayErrors@{displayErrors}}
+\index{displayErrors@{displayErrors}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{displayErrors()}{displayErrors()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::display\+Errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays the latest thrown errors (really just all the thrown errors) in the console. 
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00093}{93}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00071}{throw\+Fatal\+Error()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a7951c5decc1f7edc3c4f78ed2f579c85}\label{namespace_b_a_r_e2_d_a7951c5decc1f7edc3c4f78ed2f579c85}} 
+\index{BARE2D@{BARE2D}!getErrString@{getErrString}}
+\index{getErrString@{getErrString}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{getErrString()}{getErrString()}}
+{\footnotesize\ttfamily std\+::string B\+A\+R\+E2\+D\+::get\+Err\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{B\+A\+R\+E\+Error}}}]{err }\end{DoxyParamCaption})}
+
+
+
+Returns the string representing/explaining the error that occurred. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em err} & The error enum, which a function returns. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The representative string. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
+
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}\label{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}} 
+\index{BARE2D@{BARE2D}!init@{init}}
+\index{init@{init}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inits the required systems used by \mbox{\hyperlink{namespace_b_a_r_e2_d}{B\+A\+R\+E2D}}. 
+
+\begin{DoxyReturn}{Returns}
+Returns a zero if everything\textquotesingle{}s okay, otherwise returns a B\+A\+R\+E\+Error enum. Get actual error output from B\+A\+R\+E\+Errors. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e2_d_engine_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_b_a_r_e2_d_engine_8cpp_source}{B\+A\+R\+E2\+D\+Engine.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00076}{B\+A\+R\+E2\+D\+::\+App\+::init()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a4085763ff0085d40686c3cd0bc1a5182}\label{namespace_b_a_r_e2_d_a4085763ff0085d40686c3cd0bc1a5182}} 
+\index{BARE2D@{BARE2D}!initGLErrorCallback@{initGLErrorCallback}}
+\index{initGLErrorCallback@{initGLErrorCallback}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{initGLErrorCallback()}{initGLErrorCallback()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::init\+G\+L\+Error\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the GL Debug Message Callback function, and enables debug output straight from Open\+GL. 
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00104}{104}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00021}{Message\+Callback()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_a4085763ff0085d40686c3cd0bc1a5182_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_add368291490f34b060048b5cbb5245f9}\label{namespace_b_a_r_e2_d_add368291490f34b060048b5cbb5245f9}} 
+\index{BARE2D@{BARE2D}!SDLButtonToCEGUIButton@{SDLButtonToCEGUIButton}}
+\index{SDLButtonToCEGUIButton@{SDLButtonToCEGUIButton}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{SDLButtonToCEGUIButton()}{SDLButtonToCEGUIButton()}}
+{\footnotesize\ttfamily C\+E\+G\+U\+I\+::\+Mouse\+Button B\+A\+R\+E2\+D\+::\+S\+D\+L\+Button\+To\+C\+E\+G\+U\+I\+Button (\begin{DoxyParamCaption}\item[{Uint8}]{sdl\+Button }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00442}{442}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{B\+A\+R\+E\+C\+E\+G\+U\+I.\+cpp}}.
+
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a4308f8684a05ffbf8ef36cd49541765b}\label{namespace_b_a_r_e2_d_a4308f8684a05ffbf8ef36cd49541765b}} 
+\index{BARE2D@{BARE2D}!SDLKeyToCEGUIKey@{SDLKeyToCEGUIKey}}
+\index{SDLKeyToCEGUIKey@{SDLKeyToCEGUIKey}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{SDLKeyToCEGUIKey()}{SDLKeyToCEGUIKey()}}
+{\footnotesize\ttfamily C\+E\+G\+U\+I\+::\+Key\+::\+Scan B\+A\+R\+E2\+D\+::\+S\+D\+L\+Key\+To\+C\+E\+G\+U\+I\+Key (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Keycode}]{key }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00248}{248}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{B\+A\+R\+E\+C\+E\+G\+U\+I.\+cpp}}.
+
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a801e1e5efc8c94d85331acee75eeaf01}\label{namespace_b_a_r_e2_d_a801e1e5efc8c94d85331acee75eeaf01}} 
+\index{BARE2D@{BARE2D}!ShaderProgram::setUniform$<$ glm::ivec2 $>$@{ShaderProgram::setUniform$<$ glm::ivec2 $>$}}
+\index{ShaderProgram::setUniform$<$ glm::ivec2 $>$@{ShaderProgram::setUniform$<$ glm::ivec2 $>$}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{ShaderProgram::setUniform$<$ glm::ivec2 $>$()}{ShaderProgram::setUniform< glm::ivec2 >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform}}$<$ glm\+::ivec2 $>$ (\begin{DoxyParamCaption}\item[{const std\+::string}]{uniform,  }\item[{glm\+::ivec2 \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00279}{279}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8cpp_source_l00120}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::get\+Uniform\+Location()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_a801e1e5efc8c94d85331acee75eeaf01_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_ae78aa75d73235959f312e5cb234672aa}\label{namespace_b_a_r_e2_d_ae78aa75d73235959f312e5cb234672aa}} 
+\index{BARE2D@{BARE2D}!ShaderProgram::setUniform$<$ glm::ivec3 $>$@{ShaderProgram::setUniform$<$ glm::ivec3 $>$}}
+\index{ShaderProgram::setUniform$<$ glm::ivec3 $>$@{ShaderProgram::setUniform$<$ glm::ivec3 $>$}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{ShaderProgram::setUniform$<$ glm::ivec3 $>$()}{ShaderProgram::setUniform< glm::ivec3 >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform}}$<$ glm\+::ivec3 $>$ (\begin{DoxyParamCaption}\item[{const std\+::string}]{uniform,  }\item[{glm\+::ivec3 \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00290}{290}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8cpp_source_l00120}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::get\+Uniform\+Location()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_ae78aa75d73235959f312e5cb234672aa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a084a6e5a281f2833ca8daac3bd5023df}\label{namespace_b_a_r_e2_d_a084a6e5a281f2833ca8daac3bd5023df}} 
+\index{BARE2D@{BARE2D}!ShaderProgram::setUniform$<$ glm::ivec4 $>$@{ShaderProgram::setUniform$<$ glm::ivec4 $>$}}
+\index{ShaderProgram::setUniform$<$ glm::ivec4 $>$@{ShaderProgram::setUniform$<$ glm::ivec4 $>$}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{ShaderProgram::setUniform$<$ glm::ivec4 $>$()}{ShaderProgram::setUniform< glm::ivec4 >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform}}$<$ glm\+::ivec4 $>$ (\begin{DoxyParamCaption}\item[{const std\+::string}]{uniform,  }\item[{glm\+::ivec4 \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00301}{301}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8cpp_source_l00120}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::get\+Uniform\+Location()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_a084a6e5a281f2833ca8daac3bd5023df_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a6d067546a069754a8369391b179da987}\label{namespace_b_a_r_e2_d_a6d067546a069754a8369391b179da987}} 
+\index{BARE2D@{BARE2D}!ShaderProgram::setUniform$<$ glm::vec2 $>$@{ShaderProgram::setUniform$<$ glm::vec2 $>$}}
+\index{ShaderProgram::setUniform$<$ glm::vec2 $>$@{ShaderProgram::setUniform$<$ glm::vec2 $>$}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{ShaderProgram::setUniform$<$ glm::vec2 $>$()}{ShaderProgram::setUniform< glm::vec2 >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform}}$<$ glm\+::vec2 $>$ (\begin{DoxyParamCaption}\item[{const std\+::string}]{uniform,  }\item[{glm\+::vec2 \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00246}{246}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8cpp_source_l00120}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::get\+Uniform\+Location()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_a6d067546a069754a8369391b179da987_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a6ad422394f72acbbd215708e34dd2a92}\label{namespace_b_a_r_e2_d_a6ad422394f72acbbd215708e34dd2a92}} 
+\index{BARE2D@{BARE2D}!ShaderProgram::setUniform$<$ glm::vec3 $>$@{ShaderProgram::setUniform$<$ glm::vec3 $>$}}
+\index{ShaderProgram::setUniform$<$ glm::vec3 $>$@{ShaderProgram::setUniform$<$ glm::vec3 $>$}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{ShaderProgram::setUniform$<$ glm::vec3 $>$()}{ShaderProgram::setUniform< glm::vec3 >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform}}$<$ glm\+::vec3 $>$ (\begin{DoxyParamCaption}\item[{const std\+::string}]{uniform,  }\item[{glm\+::vec3 \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00257}{257}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8cpp_source_l00120}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::get\+Uniform\+Location()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_a6ad422394f72acbbd215708e34dd2a92_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a3446cd1d390e7e152747127f2b787778}\label{namespace_b_a_r_e2_d_a3446cd1d390e7e152747127f2b787778}} 
+\index{BARE2D@{BARE2D}!ShaderProgram::setUniform$<$ glm::vec4 $>$@{ShaderProgram::setUniform$<$ glm::vec4 $>$}}
+\index{ShaderProgram::setUniform$<$ glm::vec4 $>$@{ShaderProgram::setUniform$<$ glm::vec4 $>$}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{ShaderProgram::setUniform$<$ glm::vec4 $>$()}{ShaderProgram::setUniform< glm::vec4 >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform}}$<$ glm\+::vec4 $>$ (\begin{DoxyParamCaption}\item[{const std\+::string}]{uniform,  }\item[{glm\+::vec4 \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00268}{268}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8cpp_source_l00120}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::get\+Uniform\+Location()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_a3446cd1d390e7e152747127f2b787778_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a705b866a6796e1986ed0ec474f7e3af1}\label{namespace_b_a_r_e2_d_a705b866a6796e1986ed0ec474f7e3af1}} 
+\index{BARE2D@{BARE2D}!ShaderProgram::setUniformMatrix$<$ glm::mat4 $>$@{ShaderProgram::setUniformMatrix$<$ glm::mat4 $>$}}
+\index{ShaderProgram::setUniformMatrix$<$ glm::mat4 $>$@{ShaderProgram::setUniformMatrix$<$ glm::mat4 $>$}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{ShaderProgram::setUniformMatrix$<$ glm::mat4 $>$()}{ShaderProgram::setUniformMatrix< glm::mat4 >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a66aa33c1300b58bfb37ecd4b5500321c}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform\+Matrix}}$<$ glm\+::mat4 $>$ (\begin{DoxyParamCaption}\item[{const std\+::string}]{uniform,  }\item[{bool}]{transpose,  }\item[{glm\+::mat4 \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00313}{313}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8cpp_source_l00120}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::get\+Uniform\+Location()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_a705b866a6796e1986ed0ec474f7e3af1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}\label{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}} 
+\index{BARE2D@{BARE2D}!throwError@{throwError}}
+\index{throwError@{throwError}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{throwError()}{throwError()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::throw\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{B\+A\+R\+E\+Error}}}]{err,  }\item[{std\+::string}]{message = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Throws an error silently. Adds it to the pile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em err} & The error to throw. \\
+\hline
+{\em message} & (Optional) The message to display along with the error. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00081}{81}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_types_8tcc_source_l00096}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::get\+Attribute\+By\+Name()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00120}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::get\+Uniform\+Location()}}, \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00187}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::read()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00150}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::read\+Value()}}, and \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00071}{throw\+Fatal\+Error()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}\label{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}} 
+\index{BARE2D@{BARE2D}!throwFatalError@{throwFatalError}}
+\index{throwFatalError@{throwFatalError}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{throwFatalError()}{throwFatalError()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::throw\+Fatal\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{B\+A\+R\+E\+Error}}}]{err,  }\item[{std\+::string}]{message = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Throws an error (fatal). Also calls display\+Errors and exits the program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em err} & The type of error to throw. \\
+\hline
+{\em message} & (Optional) The message to display along with the error. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00093}{display\+Errors()}}, and \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00081}{throw\+Error()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_shader_program_8cpp_source_l00172}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::compile\+Shader\+From\+Source()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00033}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::compile\+Shaders\+From\+Source()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00220}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::create\+F\+B\+O()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00169}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::create\+Textures()}}, \mbox{\hyperlink{_app_8cpp_source_l00076}{B\+A\+R\+E2\+D\+::\+App\+::init()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00070}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::link\+Shaders()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00035}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Texture()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00017}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::load\+X\+M\+L()}}, \mbox{\hyperlink{_logger_8cpp_source_l00011}{B\+A\+R\+E2\+D\+::\+Logger\+::\+Logger()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00085}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::save\+X\+M\+L()}}, \mbox{\hyperlink{_x_m_l_data_types_8tcc_source_l00021}{B\+A\+R\+E2\+D\+::\+Attribute$<$ T $>$\+::set\+Data()}}, \mbox{\hyperlink{_shader_program_8tcc_source_l00010}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform()}}, and \mbox{\hyperlink{_shader_program_8tcc_source_l00015}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform\+Matrix()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}\label{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}} 
+\index{BARE2D@{BARE2D}!thrownErrors@{thrownErrors}}
+\index{thrownErrors@{thrownErrors}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{thrownErrors}{thrownErrors}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{B\+A\+R\+E\+Error}} $>$ B\+A\+R\+E2\+D\+::thrown\+Errors}
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
+

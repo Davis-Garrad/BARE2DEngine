@@ -1,0 +1,8 @@
+<map id="BARE2D::App::pollSDLInput" name="BARE2D::App::pollSDLInput">
+<area shape="rect" id="node1" title="Polls inputs from SDL and updates the inputmanager as appropriate." alt="" coords="5,129,196,156"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_app.html#a1e4549ad082fd4afee1503611fb65ad1" title="Calls the screen&#39;s exit function, and then cleans this class up for destruction." alt="" coords="265,5,424,32"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_input_manager.html#a3a1cea0b15ba38865bbf446e2ef3fc1d" title="Sets a key as &#39;pressed&#39;." alt="" coords="263,57,426,98"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_input_manager.html#a235d3c2a87ddf27e8544a0bafc3000a0" title="Sets a key as &#39;released&#39;." alt="" coords="263,122,426,163"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_input_manager.html#a3d72db48544d6a6d347af02889e7e1d6" title="Sets the mouse position to (x,y)" alt="" coords="263,187,426,229"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_input_manager.html#ab8ca096f8108649a0e5b9be5e370e36c" title="Sets the &quot;position&quot; of the scrollwheel &#45; essentially, how much it has moved since the last frame." alt="" coords="244,253,445,294"/>
+</map>

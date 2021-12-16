@@ -38,7 +38,7 @@
         <IncludePath Value="../../Source/"/>
       </Compiler>
       <Linker Options=" -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW" Required="yes">
-        <LibraryPath Value="../../Release/"/>
+        <LibraryPath Value="../../Debug/"/>
         <Library Value="libBARE2DEngine.a"/>
       </Linker>
       <ResourceCompiler Options="" Required="no"/>
@@ -76,13 +76,12 @@
       </Completion>
     </Configuration>
     <Configuration Name="Release" CompilerType="GCC" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-O2;-Wall" C_Options="-O2;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+      <Compiler Options="-g;-O3;-Wall" C_Options="-g;-O3;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
-        <IncludePath Value="../Source/"/>
-        <Preprocessor Value="NDEBUG"/>
+        <IncludePath Value="../../Source/"/>
       </Compiler>
-      <Linker Options="" Required="yes">
-        <LibraryPath Value="../Release/"/>
+      <Linker Options=" -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW" Required="yes">
+        <LibraryPath Value="../../Release/"/>
         <Library Value="libBARE2DEngine.a"/>
       </Linker>
       <ResourceCompiler Options="" Required="no"/>

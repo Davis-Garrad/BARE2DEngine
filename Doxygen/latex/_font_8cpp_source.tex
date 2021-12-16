@@ -1,0 +1,326 @@
+\hypertarget{_font_8cpp_source}{}\doxysection{Font.\+cpp}
+\label{_font_8cpp_source}\index{Source/Font.cpp@{Source/Font.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_font_8hpp}{"Font.hpp"}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{SDL2}\textcolor{preprocessor}{/}\textcolor{preprocessor}{SDL}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{SDL2}\textcolor{preprocessor}{/}\textcolor{preprocessor}{SDL\_ttf}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_b_a_r_e_errors_8hpp}{"BAREErrors.hpp"}}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_g_l_context_manager_8hpp}{"GLContextManager.hpp"}}}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{\Hypertarget{_font_8cpp_source_l00009}\mbox{\hyperlink{_font_8cpp_a37757f7b49ce504e7484ac03d5e28900}{00009}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_font_8cpp_a37757f7b49ce504e7484ac03d5e28900}{closestPow2}}(\textcolor{keywordtype}{int} i) \{}
+\DoxyCodeLine{00010     \textcolor{comment}{// Do some wacky shit to find the closest power of 2 to `i`}}
+\DoxyCodeLine{00011     i-\/-\/;}
+\DoxyCodeLine{00012     \textcolor{keywordtype}{int} pi = 1;}
+\DoxyCodeLine{00013     \textcolor{keywordflow}{while}(i > 0) \{}
+\DoxyCodeLine{00014         i >>= 1;}
+\DoxyCodeLine{00015         pi <<= 1;}
+\DoxyCodeLine{00016     \}}
+\DoxyCodeLine{00017     \textcolor{keywordflow}{return} pi;}
+\DoxyCodeLine{00018 \}}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{\Hypertarget{_font_8cpp_source_l00022}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a083b5e436d09ef44d39b3a2e61206487}{00022}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a083b5e436d09ef44d39b3a2e61206487}{Font}}()}
+\DoxyCodeLine{00023     \{}
+\DoxyCodeLine{00024     \}}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{\Hypertarget{_font_8cpp_source_l00026}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a77ae8fbb5d1840a7bc8bb967a687fe36}{00026}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}}::\string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a77ae8fbb5d1840a7bc8bb967a687fe36}{Font}}()}
+\DoxyCodeLine{00027     \{}
+\DoxyCodeLine{00028     \}}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{\Hypertarget{_font_8cpp_source_l00030}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a4448baad55264df37021c5e24a033b29}{00030}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a4448baad55264df37021c5e24a033b29}{init}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fontFile, \textcolor{keywordtype}{int} size)}
+\DoxyCodeLine{00031     \{}
+\DoxyCodeLine{00032         \textcolor{comment}{// Initialize some font.}}
+\DoxyCodeLine{00033         \textcolor{comment}{// Make sure that we initialize the TTF extension of SDL}}
+\DoxyCodeLine{00034         \textcolor{keywordflow}{if}(!TTF\_WasInit()) \{}
+\DoxyCodeLine{00035             TTF\_Init();}
+\DoxyCodeLine{00036         \}}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038         \textcolor{comment}{// Now that we know for sure we can make a font!}}
+\DoxyCodeLine{00039         TTF\_Font* font = TTF\_OpenFont(fontFile, size);}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041         \textcolor{comment}{// Check to make sure it was loaded properly}}
+\DoxyCodeLine{00042         \textcolor{keywordflow}{if}(font == \textcolor{keywordtype}{nullptr}) \{}
+\DoxyCodeLine{00043             throwFatalError(BAREError::FONT\_FAILURE, \textcolor{stringliteral}{"Failed to load font "} + std::string(fontFile));}
+\DoxyCodeLine{00044         \}}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046         \textcolor{comment}{// Initialize some member variables.}}
+\DoxyCodeLine{00047         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a7f3cdd798f24430fca6259d97414c3a9}{m\_height}} = TTF\_FontHeight(font);}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a237b44961f4f490d49c1e0ad0e58f7ab}{m\_regStart}} = \mbox{\hyperlink{_font_8hpp_a7471366f513e5a004a20044135e22912}{FIRST\_PRINTABLE\_CHAR}};}
+\DoxyCodeLine{00050         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a0773a0f7d2124cd0d979dc1ac1c4aebb}{m\_regLength}} = \mbox{\hyperlink{_font_8hpp_a8afd0c1d1b85426d666cc89d506c4b46}{LAST\_PRINTABLE\_CHAR}} -\/ \mbox{\hyperlink{_font_8hpp_a7471366f513e5a004a20044135e22912}{FIRST\_PRINTABLE\_CHAR}} + 1;}
+\DoxyCodeLine{00051 }
+\DoxyCodeLine{00052         \textcolor{comment}{// Set the padding variable between letters.}}
+\DoxyCodeLine{00053         \textcolor{keywordtype}{int} padding = size / 8;}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00055         \textcolor{comment}{// Measure all glyphs separately}}
+\DoxyCodeLine{00056         \textcolor{comment}{// To hold all glyph metrics given by TTF\_GlyphMetrics}}
+\DoxyCodeLine{00057         glm::ivec4* glyphRectangles = \textcolor{keyword}{new} glm::ivec4[m\_regLength];}
+\DoxyCodeLine{00058         \textcolor{comment}{// Some incremental variables.}}
+\DoxyCodeLine{00059         \textcolor{keywordtype}{int} i = 0, advance;}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061         \textcolor{comment}{// Loop through every character}}
+\DoxyCodeLine{00062         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{char} c = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a237b44961f4f490d49c1e0ad0e58f7ab}{m\_regStart}}; c < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a237b44961f4f490d49c1e0ad0e58f7ab}{m\_regStart}} + \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a0773a0f7d2124cd0d979dc1ac1c4aebb}{m\_regLength}}; c++) \{}
+\DoxyCodeLine{00063             \textcolor{comment}{// Get the metrics for the character}}
+\DoxyCodeLine{00064             \textcolor{keyword}{const} \textcolor{keywordtype}{char} str[2] = \{ c, \textcolor{stringliteral}{'\(\backslash\)0'} \};}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066             \textcolor{comment}{// Gets the size of a piece of text with the font, with a null-\/terminated c\_str.}}
+\DoxyCodeLine{00067             TTF\_SizeText(font, str, \&glyphRectangles[i].z, \&glyphRectangles[i].w);}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069             i++;}
+\DoxyCodeLine{00070         \}}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{00072         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} bestWidth = 0, bestHeight = 0, bestRows = 0;}
+\DoxyCodeLine{00073         std::vector<\textcolor{keywordtype}{int}>* bestPartition = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00074 }
+\DoxyCodeLine{00075         \{}
+\DoxyCodeLine{00076             \textcolor{comment}{// Now that we have the sizes of all the glyphs, figure out which is the best partitioning sequence}}
+\DoxyCodeLine{00077             \textcolor{comment}{// Various variables for optimization}}
+\DoxyCodeLine{00078             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} rows = 1;}
+\DoxyCodeLine{00079             \textcolor{keywordtype}{int} width, height, area = \mbox{\hyperlink{_font_8hpp_a0452c495abe98070258839b95ccbb83b}{MAX\_TEXTURE\_RES}}*\mbox{\hyperlink{_font_8hpp_a0452c495abe98070258839b95ccbb83b}{MAX\_TEXTURE\_RES}};}
+\DoxyCodeLine{00080             \textcolor{comment}{// Gradually try more and more rows until we reach optimal partitioning}}
+\DoxyCodeLine{00081             \textcolor{keywordflow}{while}(rows <= \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a0773a0f7d2124cd0d979dc1ac1c4aebb}{m\_regLength}}) \{}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083                 \textcolor{comment}{// Set the height of the texture}}
+\DoxyCodeLine{00084                 height = rows * (padding + \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a7f3cdd798f24430fca6259d97414c3a9}{m\_height}}) + padding;}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086                 \textcolor{comment}{// Create a partition using the createRows function to determine if it's good!}}
+\DoxyCodeLine{00087                 \textcolor{comment}{// Also, record the minimum texture width we need (the maximum character width)}}
+\DoxyCodeLine{00088                 std::vector<\textcolor{keywordtype}{int}>* trialPartition = createRows(glyphRectangles, m\_regLength, rows, padding, width);}
+\DoxyCodeLine{00089 }
+\DoxyCodeLine{00090                 \textcolor{comment}{// Set width and height of final texture to the next highest power of two. OpenGL is going to do this anyways in memory so its equivalent for optimization}}
+\DoxyCodeLine{00091                 width = \mbox{\hyperlink{_font_8cpp_a37757f7b49ce504e7484ac03d5e28900}{closestPow2}}\mbox{\hyperlink{_font_8cpp_a37757f7b49ce504e7484ac03d5e28900}{(}}width\mbox{\hyperlink{_font_8cpp_a37757f7b49ce504e7484ac03d5e28900}{)}};}
+\DoxyCodeLine{00092                 height = \mbox{\hyperlink{_font_8cpp_a37757f7b49ce504e7484ac03d5e28900}{closestPow2}}\mbox{\hyperlink{_font_8cpp_a37757f7b49ce504e7484ac03d5e28900}{(}}height\mbox{\hyperlink{_font_8cpp_a37757f7b49ce504e7484ac03d5e28900}{)}};}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094                 \textcolor{comment}{// First check if the texture breaks our restrictions}}
+\DoxyCodeLine{00095                 \textcolor{keywordflow}{if}(width > \mbox{\hyperlink{_font_8hpp_a0452c495abe98070258839b95ccbb83b}{MAX\_TEXTURE\_RES}} || height > \mbox{\hyperlink{_font_8hpp_a0452c495abe98070258839b95ccbb83b}{MAX\_TEXTURE\_RES}}) \{}
+\DoxyCodeLine{00096                     \textcolor{comment}{// Obviously this is not going to work. Try again with one more row.}}
+\DoxyCodeLine{00097                     rows++;}
+\DoxyCodeLine{00098                     \textcolor{keyword}{delete}[] trialPartition;}
+\DoxyCodeLine{00099                     \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00100                 \}}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{00102                 \textcolor{comment}{// We are within our restrictions, now check if it's optimal. We want the least area (data) that we can possibly accomodate all the letters with.}}
+\DoxyCodeLine{00103                 \textcolor{keywordflow}{if}(area >= width * height) \{}
+\DoxyCodeLine{00104                     \textcolor{comment}{// This trial's area is smaller than our current best -\/ that's good!}}
+\DoxyCodeLine{00105                     \textcolor{comment}{// Get rid of the old best}}
+\DoxyCodeLine{00106                     \textcolor{keywordflow}{if}(bestPartition) \textcolor{keyword}{delete}[] bestPartition;}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108                     \textcolor{comment}{// Set the best to this one}}
+\DoxyCodeLine{00109                     bestPartition = trialPartition;}
+\DoxyCodeLine{00110                     bestWidth = width;}
+\DoxyCodeLine{00111                     bestHeight = height;}
+\DoxyCodeLine{00112                     bestRows = rows;}
+\DoxyCodeLine{00113                     area = bestWidth*bestHeight;}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115                     \textcolor{comment}{// Now keep searching for a better one!}}
+\DoxyCodeLine{00116                     rows++;}
+\DoxyCodeLine{00117                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00118                     \textcolor{comment}{// This trial is discarded as we already know of a better one.}}
+\DoxyCodeLine{00119                     \textcolor{keyword}{delete}[] trialPartition;}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121                     \textcolor{comment}{// We can actually just break out of the loop if our optimization yields a worse result than the last feasible.}}
+\DoxyCodeLine{00122                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00123                 \}}
+\DoxyCodeLine{00124             \}}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{00126             \textcolor{comment}{// Now we know how our glyphs should be arranged in the texture, so let's do that.}}
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{00128             \textcolor{comment}{// First, check if a font can be made at all}}
+\DoxyCodeLine{00129             \textcolor{keywordflow}{if}(!bestPartition) \{}
+\DoxyCodeLine{00130                 \textcolor{comment}{// We never actually found a feasible font arrangement}}
+\DoxyCodeLine{00131                 throwFatalError(BAREError::FONT\_FAILURE, \textcolor{stringliteral}{"Failed to create font texture. Try a lower resolution."});}
+\DoxyCodeLine{00132             \}}
+\DoxyCodeLine{00133         \}}
+\DoxyCodeLine{00134 }
+\DoxyCodeLine{00135         \textcolor{comment}{// Create the actual texture.}}
+\DoxyCodeLine{00136         glGenTextures(1, \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a711c64bbd38dba2c18c0c4f31d3b5a84}{m\_textureID}});}
+\DoxyCodeLine{00137         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager}{GLContextManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{getContext}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{bindTexture}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{(}}GL\_TEXTURE\_2D\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{,}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a711c64bbd38dba2c18c0c4f31d3b5a84}{m\_textureID}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{)}};}
+\DoxyCodeLine{00138         glTexImage2D(GL\_TEXTURE\_2D, 0, GL\_RGBA, bestWidth, bestHeight, 0, GL\_RGBA, GL\_UNSIGNED\_BYTE, \textcolor{keywordtype}{nullptr});}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140         \textcolor{comment}{// Now just draw all the individual glyphs onto that texture!}}
+\DoxyCodeLine{00141         \textcolor{comment}{// For convenience}}
+\DoxyCodeLine{00142         SDL\_Color foreground = \{ 255, 255, 255, 255 \};}
+\DoxyCodeLine{00143 }
+\DoxyCodeLine{00144         \textcolor{comment}{// The y offset sustains throughout all loops}}
+\DoxyCodeLine{00145         \textcolor{keywordtype}{int} yOff = padding;}
+\DoxyCodeLine{00146         \textcolor{comment}{// Loop through every column in every row}}
+\DoxyCodeLine{00147         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} row = 0; row < bestRows; row++) \{}
+\DoxyCodeLine{00148             \textcolor{comment}{// The x offset should reset for each row}}
+\DoxyCodeLine{00149             \textcolor{keywordtype}{int} xOff = padding;}
+\DoxyCodeLine{00150             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} column = 0; column < bestPartition[row].size(); column++) \{}
+\DoxyCodeLine{00151                 \textcolor{comment}{// The integer in the partition corresponds with a certain glyph ID}}
+\DoxyCodeLine{00152                 \textcolor{keywordtype}{int} glyph = bestPartition[row][column];}
+\DoxyCodeLine{00153 }
+\DoxyCodeLine{00154                 \textcolor{comment}{// Get what SDL gives us for the actual rendering surface}}
+\DoxyCodeLine{00155                 SDL\_Surface* glyphSurface = TTF\_RenderGlyph\_Blended(font, (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})(\mbox{\hyperlink{_font_8hpp_a7471366f513e5a004a20044135e22912}{FIRST\_PRINTABLE\_CHAR}} + glyph), foreground);}
+\DoxyCodeLine{00156 }
+\DoxyCodeLine{00157                 \textcolor{comment}{// This is what's called pre-\/multiplication. It multiplies the alpha of each pixel into the r, g, and b. I think?}}
+\DoxyCodeLine{00158                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* sp = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}*)glyphSurface-\/>pixels;}
+\DoxyCodeLine{00159                 \textcolor{keywordtype}{int} cp = glyphSurface-\/>w * glyphSurface-\/>h * 4;}
+\DoxyCodeLine{00160                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < cp; i+= 4) \{}
+\DoxyCodeLine{00161                     \textcolor{keywordtype}{float} a = sp[i+3] / 255.0f;}
+\DoxyCodeLine{00162                     sp[i] = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})((\textcolor{keywordtype}{float})sp[i] * a);}
+\DoxyCodeLine{00163                     sp[i+1] = sp[i];}
+\DoxyCodeLine{00164                     sp[i+2] = sp[i];}
+\DoxyCodeLine{00165                 \}}
+\DoxyCodeLine{00166 }
+\DoxyCodeLine{00167                 \textcolor{comment}{// Upload to the texture}}
+\DoxyCodeLine{00168                 glTexSubImage2D(GL\_TEXTURE\_2D, 0, xOff, bestHeight -\/ yOff -\/ 1 -\/ glyphSurface-\/>h, glyphSurface-\/>w, glyphSurface-\/>h, GL\_BGRA, GL\_UNSIGNED\_BYTE, sp);}
+\DoxyCodeLine{00169 }
+\DoxyCodeLine{00170                 \textcolor{comment}{// Update coordinates to what they are in the texture}}
+\DoxyCodeLine{00171                 glyphRectangles[glyph].x = xOff;}
+\DoxyCodeLine{00172                 glyphRectangles[glyph].y = yOff;}
+\DoxyCodeLine{00173                 glyphRectangles[glyph].z = glyphSurface-\/>w;}
+\DoxyCodeLine{00174                 glyphRectangles[glyph].w = glyphSurface-\/>h;}
+\DoxyCodeLine{00175 }
+\DoxyCodeLine{00176                 \textcolor{comment}{// Free the memory!}}
+\DoxyCodeLine{00177                 SDL\_FreeSurface(glyphSurface);}
+\DoxyCodeLine{00178                 glyphSurface = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00179 }
+\DoxyCodeLine{00180                 xOff += glyphRectangles[glyph].z + padding;}
+\DoxyCodeLine{00181             \}}
+\DoxyCodeLine{00182             yOff += \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a7f3cdd798f24430fca6259d97414c3a9}{m\_height}} + padding;}
+\DoxyCodeLine{00183         \}}
+\DoxyCodeLine{00184 }
+\DoxyCodeLine{00185         \textcolor{comment}{// Add in an "unsupported" glyph to symbolize any OOB characters}}
+\DoxyCodeLine{00186         \textcolor{keywordtype}{int} zero\_index = padding -\/ 1;}
+\DoxyCodeLine{00187         \textcolor{keywordtype}{int}* pureWhiteSquare = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[zero\_index*zero\_index];}
+\DoxyCodeLine{00188 }
+\DoxyCodeLine{00189         \textcolor{comment}{// Actually set the memory of the first character's spot}}
+\DoxyCodeLine{00190         memset(pureWhiteSquare, 0xffffffff, zero\_index * zero\_index * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00191 }
+\DoxyCodeLine{00192         \textcolor{comment}{// Upload to the texture}}
+\DoxyCodeLine{00193         glTexSubImage2D(GL\_TEXTURE\_2D, 0, 0, 0, zero\_index, zero\_index, GL\_RGBA, GL\_UNSIGNED\_BYTE, pureWhiteSquare);}
+\DoxyCodeLine{00194 }
+\DoxyCodeLine{00195         \textcolor{comment}{// Free the memory we just sent to OpenGL}}
+\DoxyCodeLine{00196         \textcolor{keyword}{delete}[] pureWhiteSquare;}
+\DoxyCodeLine{00197         pureWhiteSquare = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{00199         \textcolor{comment}{// Set the texture's basic parameters}}
+\DoxyCodeLine{00200         glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_WRAP\_S, GL\_REPEAT);}
+\DoxyCodeLine{00201         glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_WRAP\_T, GL\_REPEAT);}
+\DoxyCodeLine{00202         glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_MAG\_FILTER, GL\_LINEAR);}
+\DoxyCodeLine{00203         glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_MIN\_FILTER, GL\_LINEAR);}
+\DoxyCodeLine{00204 }
+\DoxyCodeLine{00205         \textcolor{comment}{// Create character glyphs for the font renderer.}}
+\DoxyCodeLine{00206         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{m\_characterGlyphs}} = \textcolor{keyword}{new} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph}{CharacterGlyph}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a0773a0f7d2124cd0d979dc1ac1c4aebb}{m\_regLength}} + 1]; \textcolor{comment}{// all characters + unsupported character}}
+\DoxyCodeLine{00207 }
+\DoxyCodeLine{00208         \textcolor{keywordflow}{for}(i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a0773a0f7d2124cd0d979dc1ac1c4aebb}{m\_regLength}}; i++) \{}
+\DoxyCodeLine{00209             \textcolor{comment}{// Set every glyph's basic characteristics}}
+\DoxyCodeLine{00210             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{m\_characterGlyphs}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_ab82f2c1d291752b4dbee77543af996dc}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_ab82f2c1d291752b4dbee77543af996dc}{character}} = (\textcolor{keywordtype}{char})((\mbox{\hyperlink{_font_8hpp_a7471366f513e5a004a20044135e22912}{FIRST\_PRINTABLE\_CHAR}}) + i);}
+\DoxyCodeLine{00211             m\_characterGlyphs[i].size = glm::vec2(glyphRectangles[i].z, glyphRectangles[i].w);}
+\DoxyCodeLine{00212             m\_characterGlyphs[i].uvRect = glm::vec4((\textcolor{keywordtype}{float})glyphRectangles[i].x / (\textcolor{keywordtype}{float})bestWidth,}
+\DoxyCodeLine{00213                                                     (\textcolor{keywordtype}{float})glyphRectangles[i].y / (\textcolor{keywordtype}{float})bestHeight,}
+\DoxyCodeLine{00214                                                     (\textcolor{keywordtype}{float})glyphRectangles[i].z / (\textcolor{keywordtype}{float})bestWidth,}
+\DoxyCodeLine{00215                                                     (\textcolor{keywordtype}{float})glyphRectangles[i].w / (\textcolor{keywordtype}{float})bestHeight);}
+\DoxyCodeLine{00216         \}}
+\DoxyCodeLine{00217 }
+\DoxyCodeLine{00218         \textcolor{comment}{// Set the very end one, the unsupported one}}
+\DoxyCodeLine{00219         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{m\_characterGlyphs}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a0773a0f7d2124cd0d979dc1ac1c4aebb}{m\_regLength}}]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_ab82f2c1d291752b4dbee77543af996dc}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_ab82f2c1d291752b4dbee77543af996dc}{character}} = \textcolor{stringliteral}{' '};}
+\DoxyCodeLine{00220         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{m\_characterGlyphs}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a0773a0f7d2124cd0d979dc1ac1c4aebb}{m\_regLength}}]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_a3244f4ef797c68136c204efe7623183d}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_a3244f4ef797c68136c204efe7623183d}{size}} = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{m\_characterGlyphs}}[0]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_a3244f4ef797c68136c204efe7623183d}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_a3244f4ef797c68136c204efe7623183d}{size}};}
+\DoxyCodeLine{00221         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{m\_characterGlyphs}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a0773a0f7d2124cd0d979dc1ac1c4aebb}{m\_regLength}}]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_a94a590488ed2d9a4bc73f2e7e101b9be}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_a94a590488ed2d9a4bc73f2e7e101b9be}{uvRect}} = glm::vec4(0.0f, 0.0f, (\textcolor{keywordtype}{float})zero\_index / (\textcolor{keywordtype}{float})bestWidth, (\textcolor{keywordtype}{float})zero\_index / (\textcolor{keywordtype}{float})bestHeight);}
+\DoxyCodeLine{00222 }
+\DoxyCodeLine{00223         \textcolor{comment}{// Now clean up! Unbind the texture}}
+\DoxyCodeLine{00224         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager}{GLContextManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{getContext}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{bindTexture}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{(}}GL\_TEXTURE\_2D\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{,}} 0\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{)}};}
+\DoxyCodeLine{00225         \textcolor{comment}{// free memory}}
+\DoxyCodeLine{00226         \textcolor{keyword}{delete}[] glyphRectangles;}
+\DoxyCodeLine{00227         \textcolor{keyword}{delete}[] bestPartition;}
+\DoxyCodeLine{00228         \textcolor{comment}{// Tell SDL we're done here.}}
+\DoxyCodeLine{00229         TTF\_CloseFont(font);}
+\DoxyCodeLine{00230     \}}
+\DoxyCodeLine{00231 }
+\DoxyCodeLine{\Hypertarget{_font_8cpp_source_l00232}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a5ebec1e6c68aba76a79e7b30ea11631e}{00232}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a5ebec1e6c68aba76a79e7b30ea11631e}{dispose}}()}
+\DoxyCodeLine{00233     \{}
+\DoxyCodeLine{00234         \textcolor{comment}{// Destroy all necessary stuff lol}}
+\DoxyCodeLine{00235         \textcolor{comment}{// Free texture}}
+\DoxyCodeLine{00236         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a711c64bbd38dba2c18c0c4f31d3b5a84}{m\_textureID}} != 0) \{}
+\DoxyCodeLine{00237             glDeleteTextures(1, \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a711c64bbd38dba2c18c0c4f31d3b5a84}{m\_textureID}});}
+\DoxyCodeLine{00238             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a711c64bbd38dba2c18c0c4f31d3b5a84}{m\_textureID}} = 0;}
+\DoxyCodeLine{00239         \}}
+\DoxyCodeLine{00240         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{m\_characterGlyphs}} != \textcolor{keywordtype}{nullptr}) \{}
+\DoxyCodeLine{00241             \textcolor{keyword}{delete}[] \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{m\_characterGlyphs}};}
+\DoxyCodeLine{00242             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{m\_characterGlyphs}} = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00243         \}}
+\DoxyCodeLine{00244     \}}
+\DoxyCodeLine{00245 }
+\DoxyCodeLine{\Hypertarget{_font_8cpp_source_l00246}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a5c5c74ff08240dbe995e68497d832968}{00246}}     glm::vec2 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a5c5c74ff08240dbe995e68497d832968}{measure}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* s)}
+\DoxyCodeLine{00247     \{}
+\DoxyCodeLine{00248         \textcolor{comment}{// Measure the text if it were being drawn with this font}}
+\DoxyCodeLine{00249         \textcolor{comment}{// It is fixed height, so we just need to calculate the x value of the size, plus any newlines that contribute to height}}
+\DoxyCodeLine{00250         glm::vec2 size(0, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a7f3cdd798f24430fca6259d97414c3a9}{m\_height}});}
+\DoxyCodeLine{00251 }
+\DoxyCodeLine{00252         \textcolor{keywordtype}{float} columnWidth = 0.0f;}
+\DoxyCodeLine{00253 }
+\DoxyCodeLine{00254         \textcolor{comment}{// Loop through every character in the given text}}
+\DoxyCodeLine{00255         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} charIndex = 0; s[charIndex] != 0; charIndex++) \{}
+\DoxyCodeLine{00256             \textcolor{keywordtype}{char} c = s[charIndex];}
+\DoxyCodeLine{00257             \textcolor{keywordflow}{if}(c == \textcolor{stringliteral}{'\(\backslash\)n'}) \{}
+\DoxyCodeLine{00258                 \textcolor{comment}{// We were given a new line, add to the height and (possibly) set the width of the whole text}}
+\DoxyCodeLine{00259                 size.y += \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a7f3cdd798f24430fca6259d97414c3a9}{m\_height}};}
+\DoxyCodeLine{00260                 \textcolor{keywordflow}{if}(size.x < columnWidth) \{}
+\DoxyCodeLine{00261                     size.x = columnWidth;}
+\DoxyCodeLine{00262                 \}}
+\DoxyCodeLine{00263 }
+\DoxyCodeLine{00264                 \textcolor{comment}{// Reset the column width for a new column}}
+\DoxyCodeLine{00265                 columnWidth = 0;}
+\DoxyCodeLine{00266             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00267                 \textcolor{comment}{// Check to make sure we actually have this glyph}}
+\DoxyCodeLine{00268                 \textcolor{keywordtype}{int} glyphIndex = c -\/ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a237b44961f4f490d49c1e0ad0e58f7ab}{m\_regStart}};}
+\DoxyCodeLine{00269                 \textcolor{keywordflow}{if}(glyphIndex < 0 || glyphIndex >= \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a0773a0f7d2124cd0d979dc1ac1c4aebb}{m\_regLength}}) \{}
+\DoxyCodeLine{00270                     \textcolor{comment}{// We don't actually have that character in the font, just add the width of the unknown characer}}
+\DoxyCodeLine{00271                     glyphIndex = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a0773a0f7d2124cd0d979dc1ac1c4aebb}{m\_regLength}};}
+\DoxyCodeLine{00272                 \}}
+\DoxyCodeLine{00273                 columnWidth += \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{m\_characterGlyphs}}[glyphIndex]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_a3244f4ef797c68136c204efe7623183d}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_a3244f4ef797c68136c204efe7623183d}{size}}.x;}
+\DoxyCodeLine{00274             \}}
+\DoxyCodeLine{00275         \}}
+\DoxyCodeLine{00276 }
+\DoxyCodeLine{00277         \textcolor{comment}{// One last time, just make sure that our column width is right}}
+\DoxyCodeLine{00278         \textcolor{keywordflow}{if}(size.x < columnWidth)}
+\DoxyCodeLine{00279             size.x = columnWidth;}
+\DoxyCodeLine{00280 }
+\DoxyCodeLine{00281         \textcolor{keywordflow}{return} size;}
+\DoxyCodeLine{00282     \}}
+\DoxyCodeLine{00283 }
+\DoxyCodeLine{\Hypertarget{_font_8cpp_source_l00284}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_aada53b87a23f58cd9947a2697c819193}{00284}}     std::vector<\textcolor{keywordtype}{int}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}}::createRows(glm::ivec4* rectangles, \textcolor{keywordtype}{int} rectanglesLength, \textcolor{keywordtype}{int} rows, \textcolor{keywordtype}{int} padding, \textcolor{keywordtype}{int}\& width) \{}
+\DoxyCodeLine{00285         \textcolor{comment}{// Create the returning vector}}
+\DoxyCodeLine{00286         std::vector<\textcolor{keywordtype}{int}>* ret = \textcolor{keyword}{new} std::vector<\textcolor{keywordtype}{int}>[rows]();}
+\DoxyCodeLine{00287 }
+\DoxyCodeLine{00288         \textcolor{comment}{// initialize some column widths. Initially, just the padding. Adding glyphs adds width obviously}}
+\DoxyCodeLine{00289         \textcolor{keywordtype}{int}* columnWidths = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[rows]();}
+\DoxyCodeLine{00290         \textcolor{comment}{// Set initial values.}}
+\DoxyCodeLine{00291         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < rows; i++) \{}
+\DoxyCodeLine{00292             columnWidths[i] = padding;}
+\DoxyCodeLine{00293         \}}
+\DoxyCodeLine{00294 }
+\DoxyCodeLine{00295         \textcolor{comment}{// Loop through every glyph, adding them as necessary}}
+\DoxyCodeLine{00296         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < rectanglesLength; i++) \{}
+\DoxyCodeLine{00297             \textcolor{comment}{// Find what row this should be in (the thinnest)}}
+\DoxyCodeLine{00298             \textcolor{keywordtype}{int} rowIndex = 0;}
+\DoxyCodeLine{00299             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} rowIndexTest = 0; rowIndexTest < rows; rowIndexTest++) \{}
+\DoxyCodeLine{00300                 \textcolor{comment}{// Test each row index, search for least wide}}
+\DoxyCodeLine{00301                 \textcolor{keywordflow}{if}(columnWidths[rowIndexTest] < columnWidths[rowIndex]) rowIndex = rowIndexTest;}
+\DoxyCodeLine{00302             \}}
+\DoxyCodeLine{00303 }
+\DoxyCodeLine{00304             \textcolor{comment}{// Add this glyph to that row (just add its width, and the other side of the padding)}}
+\DoxyCodeLine{00305             columnWidths[rowIndex] += rectangles[i].z + padding;}
+\DoxyCodeLine{00306 }
+\DoxyCodeLine{00307             \textcolor{comment}{// Actually add the index of the glyph added, for future reference}}
+\DoxyCodeLine{00308             ret[rowIndex].push\_back(i);}
+\DoxyCodeLine{00309         \}}
+\DoxyCodeLine{00310 }
+\DoxyCodeLine{00311         \textcolor{comment}{// Record the max width, which is put into `width`}}
+\DoxyCodeLine{00312         width = 0;}
+\DoxyCodeLine{00313         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < rows; i++) \{}
+\DoxyCodeLine{00314             \textcolor{keywordflow}{if}(columnWidths[i] > width) width = columnWidths[i];}
+\DoxyCodeLine{00315         \}}
+\DoxyCodeLine{00316 }
+\DoxyCodeLine{00317         \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{00318     \}}
+\DoxyCodeLine{00319 }
+\DoxyCodeLine{00320 \}}
+
+\end{DoxyCode}

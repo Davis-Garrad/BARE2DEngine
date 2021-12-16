@@ -1,0 +1,510 @@
+\hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data}{}\doxysection{B\+A\+R\+E2D\+::X\+M\+L\+Data Class Reference}
+\label{class_b_a_r_e2_d_1_1_x_m_l_data}\index{BARE2D::XMLData@{BARE2D::XMLData}}
+
+
+Holds all the very basic information for X\+ML data. Designed to be a base class from which a user can derive custom data formats.  
+
+
+
+
+{\ttfamily \#include $<$X\+M\+L\+Data\+Types.\+hpp$>$}
+
+
+
+Collaboration diagram for B\+A\+R\+E2D\+::X\+M\+L\+Data\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{class_b_a_r_e2_d_1_1_x_m_l_data__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{X\+M\+L\+Data}} ()
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aca53e7158465dd39509c0046817fa426}{X\+M\+L\+Data}} (std\+::string data\+Type, unsigned int ID)
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0fdadc0bef7ce4b52bed23ed5d270333}{X\+M\+L\+Data}} (std\+::vector$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}} $\ast$ $>$ attributes)
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aae7ce8bc410d7f962b10f6298ee9a24b}{X\+M\+L\+Data}} (std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}} $\ast$ $>$ attributes)
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a41315c1ffe3fda73732919c8f37d5e66}{$\sim$\+X\+M\+L\+Data}} ()
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_acf63925319a7b15a53989db54702ea60}{read}} (rapidxml\+::xml\+\_\+node$<$$>$ $\ast$node)
+\begin{DoxyCompactList}\small\item\em Reads the entire piece of data from a given X\+ML node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a72bb614851475c6510195cd7ebacf67a}{write}} (rapidxml\+::xml\+\_\+document$<$$>$ $\ast$doc)
+\begin{DoxyCompactList}\small\item\em Writes the entire piece of data to a new node in the X\+ML document. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a005915fa3e921266e6abb2ec862072b8}{get\+Attribute\+By\+Name}} (std\+::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}})
+\begin{DoxyCompactList}\small\item\em Finds an attribute by its name (eg. \char`\"{}name\char`\"{}, \char`\"{}id\char`\"{}) \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}} $\ast$ $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}{get\+Attributes}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}}
+\item 
+unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aea06249fd8d84972b44d3407d57e64ed}{id}}
+\item 
+std\+::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a721101754e4e286aacea1e537141374b}{node\+Name}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{add\+Attribute}} (std\+::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{Attribute\+Type}} type, T $\ast$data)
+\begin{DoxyCompactList}\small\item\em Constructs and adds an attribute to the data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a15c8f82112e0e0a89eb255aacb7cb801}{add\+Attribute}} (\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}} $\ast$attr)
+\begin{DoxyCompactList}\small\item\em Adds an attribute to the data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6}{add\+Attributes}} (std\+::vector$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}} $\ast$ $>$ attrs)
+\begin{DoxyCompactList}\small\item\em Bulk adds attributes to the data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}} $\ast$ $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\+\_\+attributes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Holds all the very basic information for X\+ML data. Designed to be a base class from which a user can derive custom data formats. 
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00102}{102}} of file \mbox{\hyperlink{_x_m_l_data_types_8hpp_source}{X\+M\+L\+Data\+Types.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}\label{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!XMLData@{XMLData}}
+\index{XMLData@{XMLData}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{XMLData()}{XMLData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::\+X\+M\+L\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00159}{159}} of file \mbox{\hyperlink{_x_m_l_data_types_8cpp_source}{X\+M\+L\+Data\+Types.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_x_m_l_data_types_8tcc_source_l00110}{add\+Attribute()}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00135}{id}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00134}{name}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}{B\+A\+R\+E2\+D\+::\+S\+T\+R\+I\+NG}}, and \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}{B\+A\+R\+E2\+D\+::\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+I\+NT}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00173}{X\+M\+L\+Data()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_aca53e7158465dd39509c0046817fa426}\label{class_b_a_r_e2_d_1_1_x_m_l_data_aca53e7158465dd39509c0046817fa426}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!XMLData@{XMLData}}
+\index{XMLData@{XMLData}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{XMLData()}{XMLData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::\+X\+M\+L\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{data\+Type,  }\item[{unsigned int}]{ID }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00165}{165}} of file \mbox{\hyperlink{_x_m_l_data_types_8cpp_source}{X\+M\+L\+Data\+Types.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_x_m_l_data_manager_8tcc_source_l00006}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::get\+Data()}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00135}{id}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00159}{m\+\_\+attributes}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00134}{name}}, and \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00021}{B\+A\+R\+E2\+D\+::\+Attribute\+Base\+::swap\+Data\+Pointer()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_x_m_l_data_aca53e7158465dd39509c0046817fa426_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_a0fdadc0bef7ce4b52bed23ed5d270333}\label{class_b_a_r_e2_d_1_1_x_m_l_data_a0fdadc0bef7ce4b52bed23ed5d270333}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!XMLData@{XMLData}}
+\index{XMLData@{XMLData}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{XMLData()}{XMLData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::\+X\+M\+L\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}} $\ast$ $>$}]{attributes }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00173}{173}} of file \mbox{\hyperlink{_x_m_l_data_types_8cpp_source}{X\+M\+L\+Data\+Types.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_x_m_l_data_types_8tcc_source_l00110}{add\+Attribute()}}, \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00361}{add\+Attributes()}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00135}{id}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00134}{name}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}{B\+A\+R\+E2\+D\+::\+S\+T\+R\+I\+NG}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}{B\+A\+R\+E2\+D\+::\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+I\+NT}}, and \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00159}{X\+M\+L\+Data()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_x_m_l_data_a0fdadc0bef7ce4b52bed23ed5d270333_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_aae7ce8bc410d7f962b10f6298ee9a24b}\label{class_b_a_r_e2_d_1_1_x_m_l_data_aae7ce8bc410d7f962b10f6298ee9a24b}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!XMLData@{XMLData}}
+\index{XMLData@{XMLData}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{XMLData()}{XMLData()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::\+X\+M\+L\+Data (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}} $\ast$ $>$}]{attributes }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00182}{182}} of file \mbox{\hyperlink{_x_m_l_data_types_8cpp_source}{X\+M\+L\+Data\+Types.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00159}{m\+\_\+attributes}}, and \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00159}{X\+M\+L\+Data()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_x_m_l_data_aae7ce8bc410d7f962b10f6298ee9a24b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_a41315c1ffe3fda73732919c8f37d5e66}\label{class_b_a_r_e2_d_1_1_x_m_l_data_a41315c1ffe3fda73732919c8f37d5e66}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!````~XMLData@{$\sim$XMLData}}
+\index{````~XMLData@{$\sim$XMLData}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{$\sim$XMLData()}{~XMLData()}}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::$\sim$\+X\+M\+L\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00108}{108}} of file \mbox{\hyperlink{_x_m_l_data_types_8hpp_source}{X\+M\+L\+Data\+Types.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_a15c8f82112e0e0a89eb255aacb7cb801}\label{class_b_a_r_e2_d_1_1_x_m_l_data_a15c8f82112e0e0a89eb255aacb7cb801}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!addAttribute@{addAttribute}}
+\index{addAttribute@{addAttribute}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{addAttribute()}{addAttribute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::add\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}} $\ast$}]{attr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Adds an attribute to the data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr} & A pointer to the attribute to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00357}{357}} of file \mbox{\hyperlink{_x_m_l_data_types_8cpp_source}{X\+M\+L\+Data\+Types.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00159}{m\+\_\+attributes}}, and \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00043}{B\+A\+R\+E2\+D\+::\+Attribute\+Base\+::name}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00361}{add\+Attributes()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_x_m_l_data_a15c8f82112e0e0a89eb255aacb7cb801_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}\label{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!addAttribute@{addAttribute}}
+\index{addAttribute@{addAttribute}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{addAttribute()}{addAttribute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::add\+Attribute (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{Attribute\+Type}}}]{type,  }\item[{T $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Constructs and adds an attribute to the data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the attribute. \char`\"{}name\char`\"{} and \char`\"{}id\char`\"{} are already in use, please don\textquotesingle{}t break things like that. \\
+\hline
+{\em type} & The type of data. Eg. \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ae738c26bf4ce1037fa81b039a915cbf6}{Attribute\+Type\+::\+F\+L\+O\+AT}} is a float, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a38bbbd837be5914a8667d76948e1537b}{Attribute\+Type\+::\+V\+E\+C\+T\+O\+R\+\_\+\+F\+L\+O\+AT}} is a vector of floats, etc. \\
+\hline
+{\em data} & A pointer to the data that the attribute is linked to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8tcc_source_l00110}{110}} of file \mbox{\hyperlink{_x_m_l_data_types_8tcc_source}{X\+M\+L\+Data\+Types.\+tcc}}.
+
+
+
+References \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00159}{m\+\_\+attributes}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00159}{X\+M\+L\+Data()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6}\label{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!addAttributes@{addAttributes}}
+\index{addAttributes@{addAttributes}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{addAttributes()}{addAttributes()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::add\+Attributes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}} $\ast$ $>$}]{attrs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Bulk adds attributes to the data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attrs} & A vector of pointers to attributes to add. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00361}{361}} of file \mbox{\hyperlink{_x_m_l_data_types_8cpp_source}{X\+M\+L\+Data\+Types.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00357}{add\+Attribute()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00173}{X\+M\+L\+Data()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_a005915fa3e921266e6abb2ec862072b8}\label{class_b_a_r_e2_d_1_1_x_m_l_data_a005915fa3e921266e6abb2ec862072b8}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!getAttributeByName@{getAttributeByName}}
+\index{getAttributeByName@{getAttributeByName}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{getAttributeByName()}{getAttributeByName()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::get\+Attribute\+By\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Finds an attribute by its name (eg. \char`\"{}name\char`\"{}, \char`\"{}id\char`\"{}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the attribute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A copy of the data held by the attribute. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8tcc_source_l00096}{96}} of file \mbox{\hyperlink{_x_m_l_data_types_8tcc_source}{X\+M\+L\+Data\+Types.\+tcc}}.
+
+
+
+References \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00159}{m\+\_\+attributes}}, \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00081}{B\+A\+R\+E2\+D\+::throw\+Error()}}, and \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+\_\+\+F\+A\+I\+L\+U\+RE}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_x_m_l_data_a005915fa3e921266e6abb2ec862072b8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}\label{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!getAttributes@{getAttributes}}
+\index{getAttributes@{getAttributes}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{getAttributes()}{getAttributes()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}} $\ast$ $>$ B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::get\+Attributes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Returns a copy of the entire attributes map. Useful for pseudo-\/copy operations. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00353}{353}} of file \mbox{\hyperlink{_x_m_l_data_types_8cpp_source}{X\+M\+L\+Data\+Types.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00159}{m\+\_\+attributes}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_acf63925319a7b15a53989db54702ea60}\label{class_b_a_r_e2_d_1_1_x_m_l_data_acf63925319a7b15a53989db54702ea60}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!read@{read}}
+\index{read@{read}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::read (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Reads the entire piece of data from a given X\+ML node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node to interpret and read from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00187}{187}} of file \mbox{\hyperlink{_x_m_l_data_types_8cpp_source}{X\+M\+L\+Data\+Types.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02aa97b2c144243b2b9d2c593ec268b62f5}{B\+A\+R\+E2\+D\+::\+B\+O\+OL}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ae738c26bf4ce1037fa81b039a915cbf6}{B\+A\+R\+E2\+D\+::\+F\+L\+O\+AT}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00135}{id}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a53f93baa3057821107c750323892fa92}{B\+A\+R\+E2\+D\+::\+I\+NT}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00159}{m\+\_\+attributes}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00134}{name}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::read\+Value()}}, \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00009}{B\+A\+R\+E2\+D\+::\+Attribute\+Base\+::set\+Data()}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}{B\+A\+R\+E2\+D\+::\+S\+T\+R\+I\+NG}}, \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00081}{B\+A\+R\+E2\+D\+::throw\+Error()}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00044}{B\+A\+R\+E2\+D\+::\+Attribute\+Base\+::type}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}{B\+A\+R\+E2\+D\+::\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+I\+NT}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9bd71a29dd44a2e0252b56ce5c6d251a}{B\+A\+R\+E2\+D\+::\+V\+E\+C2}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ab916a458e01349ca08eb2a51f541e424}{B\+A\+R\+E2\+D\+::\+V\+E\+C\+T\+O\+R\+\_\+\+B\+O\+OL}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a38bbbd837be5914a8667d76948e1537b}{B\+A\+R\+E2\+D\+::\+V\+E\+C\+T\+O\+R\+\_\+\+F\+L\+O\+AT}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a358c00737f6938bb5efb0674c7521b54}{B\+A\+R\+E2\+D\+::\+V\+E\+C\+T\+O\+R\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+I\+NT}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a885431a8d6e8227dbbbe0da37138b4e5}{B\+A\+R\+E2\+D\+::\+V\+E\+C\+T\+O\+R\+\_\+\+V\+E\+C2}}, and \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+\_\+\+F\+A\+I\+L\+U\+RE}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00050}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::read\+X\+M\+L\+Data()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_x_m_l_data_acf63925319a7b15a53989db54702ea60_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_x_m_l_data_acf63925319a7b15a53989db54702ea60_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_a72bb614851475c6510195cd7ebacf67a}\label{class_b_a_r_e2_d_1_1_x_m_l_data_a72bb614851475c6510195cd7ebacf67a}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!write@{write}}
+\index{write@{write}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::write (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+document$<$$>$ $\ast$}]{doc }\end{DoxyParamCaption})}
+
+
+
+Writes the entire piece of data to a new node in the X\+ML document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em doc} & The document to write to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00300}{300}} of file \mbox{\hyperlink{_x_m_l_data_types_8cpp_source}{X\+M\+L\+Data\+Types.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a57439a81db9dcc04dd4ed0f3b39789a7}{B\+A\+R\+E2\+D\+::\+Attribute\+Base\+::get\+Data\+String()}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00135}{id}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00159}{m\+\_\+attributes}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00134}{name}}, and \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00136}{node\+Name}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00109}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::write\+X\+M\+L\+Data()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_x_m_l_data_a72bb614851475c6510195cd7ebacf67a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_x_m_l_data_a72bb614851475c6510195cd7ebacf67a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_aea06249fd8d84972b44d3407d57e64ed}\label{class_b_a_r_e2_d_1_1_x_m_l_data_aea06249fd8d84972b44d3407d57e64ed}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!id@{id}}
+\index{id@{id}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily unsigned int B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::id}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00135}{135}} of file \mbox{\hyperlink{_x_m_l_data_types_8hpp_source}{X\+M\+L\+Data\+Types.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00133}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::add\+Data()}}, \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00187}{read()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00050}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::read\+X\+M\+L\+Data()}}, \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00300}{write()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00109}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::write\+X\+M\+L\+Data()}}, and \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00159}{X\+M\+L\+Data()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}\label{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!m\_attributes@{m\_attributes}}
+\index{m\_attributes@{m\_attributes}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{m\_attributes}{m\_attributes}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}}$\ast$$>$ B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::m\+\_\+attributes\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00159}{159}} of file \mbox{\hyperlink{_x_m_l_data_types_8hpp_source}{X\+M\+L\+Data\+Types.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_types_8tcc_source_l00110}{add\+Attribute()}}, \mbox{\hyperlink{_x_m_l_data_types_8tcc_source_l00096}{get\+Attribute\+By\+Name()}}, \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00353}{get\+Attributes()}}, \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00187}{read()}}, \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00300}{write()}}, and \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00165}{X\+M\+L\+Data()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}\label{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!name@{name}}
+\index{name@{name}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::name}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00134}{134}} of file \mbox{\hyperlink{_x_m_l_data_types_8hpp_source}{X\+M\+L\+Data\+Types.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00187}{read()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00050}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::read\+X\+M\+L\+Data()}}, \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00300}{write()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00109}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::write\+X\+M\+L\+Data()}}, and \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00159}{X\+M\+L\+Data()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_a721101754e4e286aacea1e537141374b}\label{class_b_a_r_e2_d_1_1_x_m_l_data_a721101754e4e286aacea1e537141374b}} 
+\index{BARE2D::XMLData@{BARE2D::XMLData}!nodeName@{nodeName}}
+\index{nodeName@{nodeName}!BARE2D::XMLData@{BARE2D::XMLData}}
+\doxysubsubsection{\texorpdfstring{nodeName}{nodeName}}
+{\footnotesize\ttfamily std\+::string B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::node\+Name}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00136}{136}} of file \mbox{\hyperlink{_x_m_l_data_types_8hpp_source}{X\+M\+L\+Data\+Types.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00133}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::add\+Data()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00050}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::read\+X\+M\+L\+Data()}}, \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00300}{write()}}, and \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00109}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::write\+X\+M\+L\+Data()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\mbox{\hyperlink{_x_m_l_data_types_8hpp}{X\+M\+L\+Data\+Types.\+hpp}}\item 
+Source/\mbox{\hyperlink{_x_m_l_data_types_8tcc}{X\+M\+L\+Data\+Types.\+tcc}}\item 
+Source/\mbox{\hyperlink{_x_m_l_data_types_8cpp}{X\+M\+L\+Data\+Types.\+cpp}}\end{DoxyCompactItemize}

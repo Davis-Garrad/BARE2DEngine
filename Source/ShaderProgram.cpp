@@ -206,10 +206,8 @@ namespace BARE2D {
 		return true;
 	}
 	
-	
 	// Template specializations
 	
-
 	template<>
 	void ShaderProgram::setUniform<int>(const std::string uniform, int& data) {
 		// First, get the location
@@ -243,6 +241,7 @@ namespace BARE2D {
 		// Now, call glUniform{whatever}
 		glUniform1f(loc, data);
 	}
+	
 	template<>
 	void ShaderProgram::setUniform<glm::vec2>(const std::string uniform, glm::vec2& data) {
 		// First, get the location

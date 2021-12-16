@@ -1,0 +1,6 @@
+<map id="BARE2D::VAO::addVertexAttribute" name="BARE2D::VAO::addVertexAttribute">
+<area shape="rect" id="node1" title="Wrapper for glVertexAttribPointer &#45; Adds an attribute to the VBO &#45; each vertex data slot will gain so..." alt="" coords="5,56,232,83"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a61c99f69bf5feb2ac95189381a48e638" title="Binds this vertex array object." alt="" coords="294,5,437,32"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_v_a_o.html#aaaec16d98be94aa5cfed015df40dda70" title="Binds the VAO&#39;s VBO." alt="" coords="280,56,451,83"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a6c224737a43f43dbe7c9e25ecd47d1da" title="Unbinds the vao." alt="" coords="287,107,443,133"/>
+</map>

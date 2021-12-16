@@ -1,0 +1,5 @@
+<map id="BARE2D::FBORenderer::bind" name="BARE2D::FBORenderer::bind">
+<area shape="rect" id="node1" title="Binds the FBO and appropriate texture attachments." alt="" coords="217,39,381,80"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a5e94ee6c2c34dcdcbd65c9b05f3a465a" title="Clears the necessary vectors, etc. to prepare for draw() calls, etc." alt="" coords="5,5,169,47"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="5,71,169,112"/>
+</map>

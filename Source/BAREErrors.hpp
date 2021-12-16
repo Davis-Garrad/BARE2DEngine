@@ -3,6 +3,14 @@
 #include <string>
 #include <vector>
 
+/// PLEASE NOTE THAT IF MINGW BREAKS, THIS IS PROBABLY WHY
+/**
+ * @brief De-mangles a typeid.name() return value
+ * @param mangled The mangled typeid.name() return value
+ * @return A demangled version of mangled.
+ */
+extern std::string demangle(const char* mangled);
+
 namespace BARE2D {
 	/**
 	* @brief Represents a specific type of error that has occured.

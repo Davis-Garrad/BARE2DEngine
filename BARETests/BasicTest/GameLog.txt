@@ -1,9 +1,13 @@
 
 
 
-### LOG: Tue Dec 14 16:38:58 2021 ###
+### LOG: Wed Dec 15 20:21:51 2021 ###
 
 Thanks for using BARE2D! Original engine by Davis Garrad
 
 Entering screen! Will display pretty colours for a bit, then shrink, then leave!
+Shrinking! 5033 renders versus 239 updates.
+Now emulating very very heavy rendering. 14450 renders versus 240 updates.
+Shrinking! 4348 renders versus 240 updates.
+Finished heavy rendering. 14898 renders versus 240 updates.
 Leaving screen!

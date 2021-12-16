@@ -1,0 +1,6 @@
+<map id="BARE2D::XMLData::read" name="BARE2D::XMLData::read">
+<area shape="rect" id="node1" title="Reads the entire piece of data from a given XML node." alt="" coords="5,78,177,105"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a52c2b1c0d544d8a1314f09ec413df34b" title="Reads a value from a node. Templated for almost any primitive." alt="" coords="225,5,415,47"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_attribute_base.html#a47d4a1d33ea605d1bba54c6dd391a735" title=" " alt="" coords="239,71,401,112"/>
+<area shape="rect" id="node4" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="248,137,392,163"/>
+</map>

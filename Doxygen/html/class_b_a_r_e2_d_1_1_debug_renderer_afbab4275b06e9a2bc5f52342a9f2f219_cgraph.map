@@ -1,0 +1,4 @@
+<map id="BARE2D::DebugRenderer::begin" name="BARE2D::DebugRenderer::begin">
+<area shape="rect" id="node1" title="Clears the necessary vectors, etc. to prepare for draw() calls, etc." alt="" coords="5,5,180,47"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_renderer.html#a7b894142f30465231e74903f366cd70a" title="Clears the necessary vectors, etc. to prepare for draw() calls, etc." alt="" coords="228,13,404,39"/>
+</map>

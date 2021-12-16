@@ -1,0 +1,12 @@
+<map id="BARE2D::FontRenderer::draw" name="BARE2D::FontRenderer::draw">
+<area shape="rect" id="node1" title=" " alt="" coords="5,191,168,233"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_basic_renderer.html#a967cd972fc3eeeec58988893b1faa7e6" title=" " alt="" coords="231,57,401,98"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_font.html#a1a1a0a4a564c29ab4c30be03812ea356" title=" " alt="" coords="216,123,416,149"/>
+<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_font.html#a8eb602b098bc184ae28a16cb53e7b6cb" title="Gets a character glyph. Does no checking to make sure it exists!" alt="" coords="231,173,401,200"/>
+<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_font.html#ac8135640334f87ff80701fc1cddb1038" title=" " alt="" coords="229,224,403,251"/>
+<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_font.html#af0da9fe90a82372d03e6dac9adaac893" title=" " alt="" coords="219,275,413,301"/>
+<area shape="rect" id="node10" href="$class_b_a_r_e2_d_1_1_font.html#a5c5c74ff08240dbe995e68497d832968" title="Measures the dimensions of some given text." alt="" coords="232,325,400,352"/>
+<area shape="rect" id="node3" href="$struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6" title=" " alt="" coords="487,5,655,32"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_camera2_d.html#ac5cb2034f0ba69eeec5ff52a20b49a74" title=" " alt="" coords="464,57,679,98"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_camera2_d.html#a8b30d128929ca6161be0ee282d2a47b5" title="Checks if a rectangle is within the scene covered by the camera." alt="" coords="475,122,668,163"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="BARE2D::ScreenList::moveToPreviousScreen" name="BARE2D::ScreenList::moveToPreviousScreen">
+<area shape="rect" id="node1" title="Moves to the previous screen. Similar to moveToNextScreen, in that it makes sure everything&#39;s good!" alt="" coords="5,23,173,65"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_screen.html#a4c427b38cca9a1fc2cad147e9e2a1a5e" title="This is pretty close to the init function. It is called every time the screen is entered." alt="" coords="221,5,400,32"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_screen.html#a34a82dc673746b5feca4debd4d22478b" title="This is close to the destroy function, but is only called when the screen is exited,..." alt="" coords="225,56,396,83"/>
+</map>

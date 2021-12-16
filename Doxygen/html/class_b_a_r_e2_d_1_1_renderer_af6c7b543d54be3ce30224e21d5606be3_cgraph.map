@@ -1,0 +1,13 @@
+<map id="BARE2D::Renderer::render" name="BARE2D::Renderer::render">
+<area shape="rect" id="node1" title="Actually renders the contents to the screen!" alt="" coords="5,253,187,280"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a61c99f69bf5feb2ac95189381a48e638" title="Binds this vertex array object." alt="" coords="266,5,409,32"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a1815cdbe70cc6fdbc66ec69a7131b5be" title="Binds a texture to target in the currently active texture slot." alt="" coords="260,57,415,98"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_renderer.html#abf344beacb334d74a7c5c2d15815fe4f" title="Constructs all of the render batches from data given by, say, draw() calls." alt="" coords="247,122,428,163"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_g_l_context_manager.html#a733646522bf07c33576f9a1e0bb76c28" title=" " alt="" coords="239,187,436,229"/>
+<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_renderer.html#a9aab9d938c89c6d3d9c4ff6de02d3c4d" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="235,253,440,280"/>
+<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a529bb80b0bd7bbf86f10be7c30be514c" title="Sets the active texture &quot;slot&quot;. This can be GL_TEXTURE0 to GL_TEXTURE8 (I think. Check the literature..." alt="" coords="260,305,415,346"/>
+<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a6c224737a43f43dbe7c9e25ecd47d1da" title="Unbinds the vao." alt="" coords="259,371,415,397"/>
+<area shape="rect" id="node10" href="$class_b_a_r_e2_d_1_1_shader_program.html#a7847844b8a2e5ab0677340b47d180841" title="Deactivates this shader program." alt="" coords="250,422,425,463"/>
+<area shape="rect" id="node11" href="$class_b_a_r_e2_d_1_1_shader_program.html#a8687213986c6f5633887609e8169b24e" title="Activates this shader program for the renderer to use." alt="" coords="236,488,439,515"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a62f46a348cc1f4e91fe3ab48c9a5cc1b" title=" " alt="" coords="488,187,643,229"/>
+</map>

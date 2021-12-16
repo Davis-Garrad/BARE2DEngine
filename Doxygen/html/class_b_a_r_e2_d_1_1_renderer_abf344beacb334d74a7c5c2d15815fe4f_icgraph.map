@@ -1,0 +1,4 @@
+<map id="BARE2D::Renderer::createRenderBatches" name="BARE2D::Renderer::createRenderBatches">
+<area shape="rect" id="node1" title="Constructs all of the render batches from data given by, say, draw() calls." alt="" coords="235,5,416,47"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_renderer.html#af6c7b543d54be3ce30224e21d5606be3" title="Actually renders the contents to the screen!" alt="" coords="5,13,187,39"/>
+</map>
