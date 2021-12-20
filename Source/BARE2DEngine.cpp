@@ -8,6 +8,7 @@
 namespace BARE2D {
 
 	void init() {
+		
 		// Initialize all of SDL
 		int err = SDL_Init(SDL_INIT_EVERYTHING);
 		// Get error from SDL

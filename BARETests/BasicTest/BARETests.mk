@@ -2,9 +2,9 @@
 ## Auto Generated makefile by CodeLite IDE
 ## any manual changes will be erased      
 ##
-## Release
+## Debug
 ProjectName            :=BARETests
-ConfigurationName      :=Release
+ConfigurationName      :=Debug
 WorkspacePath          :=/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine
 ProjectPath            :=/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/BasicTest
 IntermediateDirectory  :=$(ConfigurationName)
@@ -12,8 +12,8 @@ OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=Davis-Dev
-Date                   :=15/12/21
+User                   :=Davis-dev
+Date                   :=19/12/21
 CodeLitePath           :=/home/davis-dev/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -41,7 +41,7 @@ IncludePCH             :=
 RcIncludePath          := 
 Libs                   := $(LibrarySwitch)BARE2DEngine 
 ArLibs                 :=  "libBARE2DEngine.a" 
-LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)../../Release/ 
+LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)../../Debug/ 
 
 ##
 ## Common variables
@@ -50,8 +50,8 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)../../Releas
 AR       := /usr/bin/ar rcu
 CXX      := /usr/bin/g++
 CC       := /usr/bin/gcc
-CXXFLAGS :=  -g -O3 -Wall $(Preprocessors)
-CFLAGS   :=  -g -O3 -Wall $(Preprocessors)
+CXXFLAGS :=  -g -O0 -Wall $(Preprocessors)
+CFLAGS   :=  -g -O0 -Wall $(Preprocessors)
 ASFLAGS  := 
 AS       := /usr/bin/as
 
@@ -72,15 +72,15 @@ Objects=$(Objects0)
 .PHONY: all clean PreBuild PrePreBuild PostBuild MakeIntermediateDirs
 all: $(OutputFile)
 
-$(OutputFile): $(IntermediateDirectory)/.d "../../.build-release/BARE2DEngine" $(Objects) 
+$(OutputFile): $(IntermediateDirectory)/.d "../../.build-debug/BARE2DEngine" $(Objects) 
 	@$(MakeDirCommand) $(@D)
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects0)  > $(ObjectsFileList)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
 
-"../../.build-release/BARE2DEngine":
-	@$(MakeDirCommand) "../../.build-release"
-	@echo stam > "../../.build-release/BARE2DEngine"
+"../../.build-debug/BARE2DEngine":
+	@$(MakeDirCommand) "../../.build-debug"
+	@echo stam > "../../.build-debug/BARE2DEngine"
 
 
 

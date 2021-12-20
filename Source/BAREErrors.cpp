@@ -10,6 +10,8 @@
 #include <memory>
 #include <cstdlib>
 
+#include "Logger.hpp"
+
 std::string demangle(const char* mangled)
 {
       int status;
@@ -26,7 +28,96 @@ void GLAPIENTRY MessageCallback( GLenum source,
                  const GLchar* message,
                  const void* userParam )
 {
-	fprintf(stderr, "GL CALLBACK: %s type = 0x%x, severity = 0x%x, message = %s\n", (type == GL_DEBUG_TYPE_ERROR ? "** GL ERROR **" : ""), type, severity, message);
+	std::string severityStr = "Unspecified";
+	switch(severity) {
+		case GL_DEBUG_SEVERITY_HIGH:
+			severityStr = "High (UB)";
+			break;
+		case GL_DEBUG_SEVERITY_MEDIUM:
+			severityStr = "Medium (Performance, deprecated)";
+			break;
+		case GL_DEBUG_SEVERITY_LOW:
+			severityStr = "Low (performance generally)";
+			break;
+		case GL_DEBUG_SEVERITY_NOTIFICATION:
+			severityStr = "Notification";
+			break;
+		default:
+			severityStr = "Unspecified";
+			break;
+	}
+	
+	std::string sourceStr = "Unspecified";
+	switch(source) {
+		case GL_DEBUG_SOURCE_API:
+			sourceStr = "OpenGL API";
+			break;
+		case GL_DEBUG_SOURCE_WINDOW_SYSTEM:
+			sourceStr = "Window System";
+			break;
+		case GL_DEBUG_SOURCE_SHADER_COMPILER:
+			sourceStr = "Shader Compiler";
+			break;
+		case GL_DEBUG_SOURCE_THIRD_PARTY:
+			sourceStr = "Assoc. Application";
+			break;
+		case GL_DEBUG_SOURCE_APPLICATION:
+			sourceStr = "Application User";
+			break;
+		case GL_DEBUG_SOURCE_OTHER:
+			sourceStr = "Other";
+			break;
+		default:
+			sourceStr = "Unspecified";
+			break;
+	}
+	
+	std::string typeStr = "Unspecified";
+	switch(type) {
+		case GL_DEBUG_TYPE_ERROR:
+			typeStr = "Error";
+			break;
+		case GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR:
+			typeStr = "Deprecated Behaviour";
+			break;
+		case GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR:
+			typeStr = "Undefined Behaviour";
+			break;
+		case GL_DEBUG_TYPE_PORTABILITY:
+			typeStr = "Portability Concern";
+			break;
+		case GL_DEBUG_TYPE_PERFORMANCE:
+			typeStr = "Performance Issue";
+			break;
+		case GL_DEBUG_TYPE_MARKER:
+			typeStr = "Command Stream Annotation";
+			break;
+		case GL_DEBUG_TYPE_PUSH_GROUP:
+			typeStr = "Group Pushing";
+			break;
+		case GL_DEBUG_TYPE_POP_GROUP:
+			typeStr = "Documented as 'foo'";
+			break;
+		case GL_DEBUG_TYPE_OTHER:
+			typeStr = "Other";
+			break;
+		default:
+			typeStr = "Unspecified";
+			break;
+	}
+	
+	std::string errorString = "GL Callback: " + std::string(type == GL_DEBUG_TYPE_ERROR ? "** GL ERROR **" : "") + "\n";
+	errorString += "Type: " + typeStr + "\n";
+	errorString += "Severity: " + severityStr + "\n";
+	errorString += "Message: " + std::string(message) + "\n";
+	
+	BARE2D::Logger::getInstance()->log(errorString);
+	
+	/*fprintf(stderr, "GL Callback: %s \nType: %s \nSeverity: %s \nMessage: %s\n\n", 
+		(type == GL_DEBUG_TYPE_ERROR ? "** GL ERROR **" : ""), 
+		typeStr.c_str(), 
+		severityStr.c_str(), 
+		message);*/
 	
 }
 
@@ -102,7 +193,12 @@ namespace BARE2D {
 	}
 	
 	void initGLErrorCallback() {
-		glEnable(GL_DEBUG_OUTPUT);
-		glDebugMessageCallback(MessageCallback, 0);
+		GLboolean inited = GL_FALSE;
+		glGetBooleanv(GL_DEBUG_OUTPUT, &inited);
+		
+		if(!inited) {
+			glEnable(GL_DEBUG_OUTPUT);
+			glDebugMessageCallback(MessageCallback, 0);
+		}
 	}
 }

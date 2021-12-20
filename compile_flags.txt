@@ -9,4 +9,5 @@
 -I/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/include
 -I/usr/include/x86_64-linux-gnu/cegui-0.8.7
 -I/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Other_Libraries
+-DDEBUG
 -std=c++17

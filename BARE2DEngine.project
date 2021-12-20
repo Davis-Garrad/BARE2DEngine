@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="BARE2DEngine" Version="11000" InternalType="Library">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
+  </Plugins>
   <VirtualDirectory Name="Other Libraries">
     <VirtualDirectory Name="UTF8">
       <File Name="Other_Libraries/utf8.h"/>
@@ -124,6 +129,7 @@
         <IncludePath Value="/usr/include"/>
         <IncludePath Value="/usr/include/x86_64-linux-gnu/cegui-0.8.7/"/>
         <IncludePath Value="./Other_Libraries"/>
+        <Preprocessor Value="DEBUG"/>
       </Compiler>
       <Linker Options="-lboost_filesystem -lboost_system -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW" Required="yes">
         <LibraryPath Value="."/>

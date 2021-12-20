@@ -36,6 +36,11 @@ namespace BARE2D {
 		// Make sure we actually have an entry point
 		if(!m_screenList->getCurrentScreen())
 			return;
+			
+		// If we're running the debug build, make sure that we always log errors.
+		#ifdef DEBUG
+		initGLErrorCallback();
+		#endif
 		
 		// Make sure to actually "enter" the entry screen
 		m_screenList->getCurrentScreen()->onEntry();
