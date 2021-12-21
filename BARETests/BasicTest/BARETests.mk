@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Davis-dev
-Date                   :=19/12/21
+Date                   :=21/12/21
 CodeLitePath           :=/home/davis-dev/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -39,8 +39,8 @@ LinkOptions            :=   -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW
 IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)../../Source/ 
 IncludePCH             := 
 RcIncludePath          := 
-Libs                   := $(LibrarySwitch)BARE2DEngine 
-ArLibs                 :=  "libBARE2DEngine.a" 
+Libs                   := $(LibrarySwitch)BARE2DEngine $(LibrarySwitch)lua5.3 
+ArLibs                 :=  "libBARE2DEngine.a" "lua5.3" 
 LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)../../Debug/ 
 
 ##

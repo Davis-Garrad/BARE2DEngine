@@ -5,7 +5,7 @@
 #include "Texture.hpp"
 #include "MutableTexture.hpp"
 #include "Sound.hpp"
-#include "Script.hpp"
+#include "LuaScript.hpp"
 #include "Font.hpp"
 #include "ShaderProgram.hpp"
 
@@ -68,14 +68,15 @@ namespace BARE2D {
 		 * @param scriptPath The path to load the script from.
 		 * @return An instance of the script.
 		 */
-		static Script loadScript(std::string& scriptPath);
+		static LuaScript loadScript(std::string& scriptPath);
 		
 		/**
 		 * @brief Creates and caches a script from the given source code.
 		 * @param scriptSource The actual source code (Lua) of the script
+		 * @param name The name of the script
 		 * @return The name of the script, so that it can be loaded from the regular cache.
 		 */
-		static std::string loadScriptFromSource(std::string& scriptSource);
+		static LuaScript loadScriptFromSource(std::string& scriptSource, std::string name);
 		
 		/**
 		 * @brief Loads a font to the cache.
@@ -94,7 +95,7 @@ namespace BARE2D {
 		static Cache<std::string, Texture>* m_textures;
 		static Cache<std::string, MutableTexture>* m_mutableTextures;
 		static Cache<std::string, Sound>* m_sounds;
-		static Cache<std::string, Script>* m_scripts;
+		static Cache<std::string, LuaScript>* m_scripts;
 		static Cache<std::string, Font>* m_fonts;
 
 	};

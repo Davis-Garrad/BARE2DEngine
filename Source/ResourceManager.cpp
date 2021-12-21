@@ -13,7 +13,7 @@ namespace BARE2D {
 	Cache<std::string, Texture>* ResourceManager::m_textures = new Cache<std::string, Texture>();
 	Cache<std::string, MutableTexture>* ResourceManager::m_mutableTextures = new Cache<std::string, MutableTexture>();
 	Cache<std::string, Sound>* ResourceManager::m_sounds = new Cache<std::string, Sound>();
-	Cache<std::string, Script>* ResourceManager::m_scripts = new Cache<std::string, Script>();
+	Cache<std::string, LuaScript>* ResourceManager::m_scripts = new Cache<std::string, LuaScript>();
 	Cache<std::string, Font>* ResourceManager::m_fonts = new Cache<std::string, Font>();
 	
 	ShaderProgram ResourceManager::loadShaders(std::string& vertShaderSource, std::string& fragShaderSource) {
@@ -109,12 +109,41 @@ namespace BARE2D {
 	{
 	}
 
-	Script ResourceManager::loadScript(std::string& scriptPath)
+	LuaScript ResourceManager::loadScript(std::string& scriptPath)
 	{
+		// Make sure we don't already have it loaded
+		LuaScript* searched = m_scripts->findItem(scriptPath); 
+		if(searched) {
+			return *searched;
+		}
+		
+		// Just needs to load text from a script file and put it into a LuaScript object, then put that into the cache.
+		// Load it!
+		std::string scriptSource = "";
+		IOManager::readFileToBuffer(scriptPath.c_str(), scriptSource);
+		
+		// Put it in the cache!
+		LuaScript* script = m_scripts->createItem(scriptPath);
+		// and actually give it data lol.
+		script->m_script = scriptSource;
+		
+		return *script;
 	}
 
-	std::string ResourceManager::loadScriptFromSource(std::string& scriptSource)
+	LuaScript ResourceManager::loadScriptFromSource(std::string& scriptSource, std::string name)
 	{
+		// Make sure we don't already have it loaded
+		LuaScript* searched = m_scripts->findItem(name); 
+		if(searched) {
+			return *searched;
+		}
+		
+		// Put it in the cache!
+		LuaScript* script = m_scripts->createItem(name);
+		// and actually give it data lol.
+		script->m_script = scriptSource;
+		
+		return *script;
 	}
 
 	Font ResourceManager::loadFont(std::string& fontPath, int size)

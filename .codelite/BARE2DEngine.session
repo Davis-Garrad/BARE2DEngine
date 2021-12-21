@@ -1,33 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARE2DEngine.workspace">
-  <int Value="3" Name="m_selectedTab"/>
+  <int Value="1" Name="m_selectedTab"/>
   <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARE2DEngine.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/BasicTest/TestScreen.cpp" Name="FileName"/>
-      <int Value="75" Name="FirstVisibleLine"/>
-      <int Value="94" Name="CurrentLine"/>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/LuaScript.hpp" Name="FileName"/>
+      <int Value="42" Name="FirstVisibleLine"/>
+      <int Value="68" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/BAREErrors.cpp" Name="FileName"/>
-      <int Value="102" Name="FirstVisibleLine"/>
-      <int Value="119" Name="CurrentLine"/>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/LuaScript.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="10" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/Logger.cpp" Name="FileName"/>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/LuaScriptQueue.hpp" Name="FileName"/>
       <int Value="21" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
+      <int Value="40" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/App.cpp" Name="FileName"/>
-      <int Value="21" Name="FirstVisibleLine"/>
-      <int Value="30" Name="CurrentLine"/>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/LuaScriptQueue.cpp" Name="FileName"/>
+      <int Value="36" Name="FirstVisibleLine"/>
+      <int Value="15" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/LuaScriptEngine.hpp" Name="FileName"/>
+      <int Value="27" Name="FirstVisibleLine"/>
+      <int Value="62" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/LuaScriptEngine.cpp" Name="FileName"/>
+      <int Value="12" Name="FirstVisibleLine"/>
+      <int Value="39" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/LuaScriptEngine_impl.tcc" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="7" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/LuaContextManager.hpp" Name="FileName"/>
+      <int Value="5" Name="FirstVisibleLine"/>
+      <int Value="17" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/LuaContextManager.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="4" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>

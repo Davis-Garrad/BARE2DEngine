@@ -6,6 +6,29 @@
 #include <Window.hpp>
 #include <ResourceManager.hpp>
 #include <Camera2D.hpp>
+#include <LuaScript.hpp>
+#include <LuaScriptQueue.hpp>
+
+#define LUA_WINDOW_REGISTRY_KEY "window"
+
+// Some Lua functions
+
+int lua_setWindowSize(lua_State* L) {
+	// get width and height
+	unsigned int width = lua_tointeger(L, -2);
+	unsigned int height = lua_tointeger(L, -1);
+	lua_pop(L, 2);
+	
+	// get the window
+	BARE2D::Window* win = BARE2D::LuaScriptEngine::getValueFromRegistry<BARE2D::Window>(L, LUA_WINDOW_REGISTRY_KEY);
+	
+	win->setSize(width, height);
+	
+	return 0;
+	
+}
+
+// Now to actual member functions
 
 TestScreen::TestScreen(BARE2D::Window* window, BARE2D::InputManager* input) : BARE2D::Screen(), m_window(window), m_inputManager(input)
 {
@@ -124,6 +147,14 @@ void TestScreen::onEntry()
 	
 	m_debugRenderer = new BARE2D::DebugRenderer();
 	m_debugRenderer->init();
+	
+	m_luaEngine.init("/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Lua/PrintTest.lua");
+	m_luaEngine.registerCFunction(lua_setWindowSize, "setWindowSize");
+	BARE2D::LuaScriptEngine::addValueToRegistry(m_luaEngine.getMasterState(), m_window, LUA_WINDOW_REGISTRY_KEY);
+	
+	std::string scriptPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Lua/PrintTest.lua";
+	BARE2D::LuaScript scr = BARE2D::ResourceManager::loadScript(scriptPath);
+	BARE2D::LuaScriptQueue::getInstance()->addLuaScript(scr);
 }
 
 void TestScreen::onExit()
@@ -136,14 +167,12 @@ void TestScreen::update(double dt)
 	m_time++;
 	
 	if(std::abs(m_time - 240.0f) <= 0.01f || std::abs(m_time - 720.0f) <= 0.01f) {
-		m_window->setSize(300, 300);
-		BARE2D::Logger::getInstance()->log("Shrinking! " + std::to_string(renderCount) + " renders versus " + std::to_string(updateCount) + " updates.");
+		BARE2D::Logger::getInstance()->log("Shrinking (Done by script)! " + std::to_string(renderCount) + " renders versus " + std::to_string(updateCount) + " updates.");
 		renderCount = 0;
 		updateCount = 0;
 	}
 	if(std::abs(m_time - 480.0f) <= 0.01f) {
 		slowFactor = 80000000;
-		m_window->setSize(800, 600);
 		BARE2D::Logger::getInstance()->log("Now emulating very very heavy rendering. " + std::to_string(renderCount) + " renders versus " + std::to_string(updateCount) + " updates.");
 		renderCount = 0;
 		updateCount = 0;
@@ -168,4 +197,6 @@ void TestScreen::update(double dt)
 		m_fbo->getCamera()->offsetPosition(movement);
 	}
 	m_lastMouse = m_fbo->getCamera()->getViewedPositionFromScreenPosition(m_inputManager->getMousePosition());
+	
+	m_luaEngine.update();
 }

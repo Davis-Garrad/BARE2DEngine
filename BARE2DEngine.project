@@ -27,6 +27,18 @@
     <Topleveldir>/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine</Topleveldir>
   </Reconciliation>
   <VirtualDirectory Name="Source">
+    <VirtualDirectory Name="Scripting">
+      <File Name="Source/LuaFunctions.cpp"/>
+      <File Name="Source/LuaFunctions.hpp"/>
+      <File Name="Source/LuaContextManager.cpp"/>
+      <File Name="Source/LuaContextManager.hpp"/>
+      <File Name="Source/LuaScriptEngine_impl.tcc"/>
+      <File Name="Source/LuaScriptEngine.cpp"/>
+      <File Name="Source/LuaScriptEngine.hpp"/>
+      <File Name="Source/LuaScriptQueue.cpp"/>
+      <File Name="Source/LuaScriptQueue.hpp"/>
+      <File Name="Source/LuaHeaders.hpp"/>
+    </VirtualDirectory>
     <VirtualDirectory Name="Resources">
       <File Name="Source/XMLDataTypes.tcc"/>
       <File Name="Source/XMLDataTypes.hpp"/>
@@ -38,13 +50,13 @@
       <File Name="Source/IOManager.hpp"/>
       <File Name="Source/IOManager.cpp"/>
       <VirtualDirectory Name="Types">
+        <File Name="Source/LuaScript.hpp"/>
+        <File Name="Source/LuaScript.cpp"/>
         <File Name="Source/MutableTexture.cpp"/>
         <File Name="Source/MutableTexture.hpp"/>
         <File Name="Source/Texture.hpp"/>
         <File Name="Source/Sound.hpp"/>
         <File Name="Source/Sound.cpp"/>
-        <File Name="Source/Script.hpp"/>
-        <File Name="Source/Script.cpp"/>
         <File Name="Source/Font.hpp"/>
         <File Name="Source/Font.cpp"/>
       </VirtualDirectory>
@@ -134,6 +146,7 @@
       <Linker Options="-lboost_filesystem -lboost_system -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW" Required="yes">
         <LibraryPath Value="."/>
         <LibraryPath Value="/usr/lib/x86_64-linux-gnu/"/>
+        <Library Value="lua5.3"/>
       </Linker>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/lib$(ProjectName).a" IntermediateDirectory="$(ConfigurationName)" Command="$(OutputFile)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>

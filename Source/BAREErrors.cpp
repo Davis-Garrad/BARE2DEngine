@@ -154,6 +154,12 @@ namespace BARE2D {
 				return "EC FBO_FAILURE";
 			case BAREError::LOGGER_FAILURE:
 				return "EC LOGGER_FAILURE";
+			case BAREError::XML_FAILURE:
+				return "EC XML_FAILURE";
+			case BAREError::UNINITIALIZED_FUNCTION:
+				return "EC UNINITIALIZED_FUNCTION";
+			case BAREError::LUA_FAILURE:
+				return "EC LUA_FAILURE";
 			default:
 				return "EC DNE - Unknown error.";
 		}
