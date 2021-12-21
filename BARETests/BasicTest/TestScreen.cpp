@@ -25,7 +25,6 @@ int lua_setWindowSize(lua_State* L) {
 	win->setSize(width, height);
 	
 	return 0;
-	
 }
 
 // Now to actual member functions
@@ -160,6 +159,11 @@ void TestScreen::onEntry()
 void TestScreen::onExit()
 {
 	BARE2D::Logger::getInstance()->log("Leaving screen!");
+
+	delete m_renderer;
+	delete m_fbo;
+	delete m_fontRenderer;
+	delete m_debugRenderer;
 }
 
 void TestScreen::update(double dt)
