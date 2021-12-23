@@ -314,6 +314,8 @@ namespace BARE2D {
 			if(columnWidths[i] > width) width = columnWidths[i];
 		}
 		
+		delete[] columnWidths;
+		
 		return ret;
 	}
 

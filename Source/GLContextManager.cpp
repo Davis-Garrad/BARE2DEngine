@@ -3,7 +3,7 @@
 namespace BARE2D {
 
 	GLContext::GLContext() {
-		m_boundTextureIDs = new GLuint[GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS];
+		m_boundTextureIDs = new GLuint[GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS]{GL_TEXTURE_2D};
 	}
 	
 	GLContext::~GLContext() {

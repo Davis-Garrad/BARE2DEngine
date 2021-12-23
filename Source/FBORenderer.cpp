@@ -19,7 +19,9 @@ namespace BARE2D {
 	}
 
 	FBORenderer::~FBORenderer()
-	{
+	{ 
+		delete m_camera;
+		delete[] m_textureIDs;
 	}
 	
 	Camera2D* FBORenderer::getCamera() {

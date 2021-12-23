@@ -16,7 +16,7 @@ namespace BARE2D {
 	{
 	public:
 		Renderer();
-		~Renderer();
+		virtual ~Renderer();
 		
 		/**
 		 * @brief Clears the necessary vectors, etc. to prepare for draw() calls, etc.

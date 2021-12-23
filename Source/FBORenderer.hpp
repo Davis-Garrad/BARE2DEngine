@@ -15,7 +15,7 @@ namespace BARE2D {
 	{
 	public:
 		FBORenderer(std::string& fragShader, std::string& vertShader, unsigned int windowWidth, unsigned int windowHeight, glm::vec2 size);
-		~FBORenderer();
+		virtual ~FBORenderer();
 		
 		virtual void init() override;
 		

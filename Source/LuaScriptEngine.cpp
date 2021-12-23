@@ -15,6 +15,7 @@ namespace BARE2D {
 
 	LuaScriptEngine::~LuaScriptEngine()
 	{
+		// Lua automatically garbage collects.
 	}
 
 	void LuaScriptEngine::init(std::string luaModulesPath)

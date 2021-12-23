@@ -21,6 +21,9 @@ namespace BARE2D {
 			exitApp();
 		}
 		delete m_window;
+		delete m_inputManager;
+		delete m_timer;
+		m_screenList.release();
 	}
 
 	void App::run()

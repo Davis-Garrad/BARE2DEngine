@@ -12,7 +12,7 @@ namespace BARE2D {
 	{
 	public:
 		BasicRenderer(std::string& fragShader, std::string& vertShader, unsigned int perspectiveWidth = 2, unsigned int perspectiveHeight = 2);
-		~BasicRenderer();
+		virtual ~BasicRenderer();
 		
 		virtual void init() override;
 		virtual void preRender() override;

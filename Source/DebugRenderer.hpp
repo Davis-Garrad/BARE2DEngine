@@ -36,7 +36,7 @@ namespace BARE2D {
 	{
 	public:
 		DebugRenderer();
-		~DebugRenderer();
+		virtual ~DebugRenderer();
 		
 		/**
 		 * @brief Initializes with very rudimentary shaders (hardcoded), adds vertex attributes

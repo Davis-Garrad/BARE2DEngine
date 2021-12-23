@@ -51,7 +51,8 @@ namespace BARE2D {
 		if(m_state) {
 			// Clean the stack
 			lua_settop(m_state, 0);
-			// Lua still owns the thread.
+			// close and clean the thread
+			lua_close(m_state);
 			m_state = nullptr;
 		}
 	}

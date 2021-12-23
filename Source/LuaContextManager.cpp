@@ -46,6 +46,7 @@ namespace BARE2D {
 		}
 		
 		for(unsigned int i : completedScripts) {
+			delete m_contexts[i];
 			m_contexts.erase(i);
 		}
 	}
