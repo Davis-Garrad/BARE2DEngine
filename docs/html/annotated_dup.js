@@ -4,6 +4,5 @@ var annotated_dup =
     [ "utf8", "namespaceutf8.html", "namespaceutf8" ],
     [ "Justification", "class_justification.html", null ],
     [ "RenderBatch", "class_render_batch.html", "class_render_batch" ],
-    [ "Script", "class_script.html", "class_script" ],
     [ "Sound", "class_sound.html", "class_sound" ]
 ];

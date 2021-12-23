@@ -1,0 +1,8 @@
+<map id="BARE2D::LuaScriptEngine::createLuaContext" name="BARE2D::LuaScriptEngine::createLuaContext">
+<area shape="rect" id="node1" title="Creates a LuaScriptContextWrapper using the data from script." alt="" coords="5,71,184,112"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ae928c82fc3a9d2b72e0b01caf02a5bbb" title="Creates and initializes all the necessary bits." alt="" coords="253,37,438,79"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ae0af32134c3684ef955f2143db707a22" title=" " alt="" coords="232,103,459,144"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ab373f9b638c401a70a31a599349d81b7" title="Creates the m_state variable as a thread, or subroutine of the parent." alt="" coords="507,5,692,47"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#abf423ac350b4eadd0dbb2679f2b09683" title="Loads and compiles the given Lua script. Also, sets m_scriptReference to the index of the compiled sc..." alt="" coords="507,71,692,112"/>
+<area shape="rect" id="node4" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="740,46,884,73"/>
+</map>

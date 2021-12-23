@@ -9,7 +9,7 @@
 \DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_texture_8hpp}{"Texture.hpp"}}}
 \DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_mutable_texture_8hpp}{"MutableTexture.hpp"}}}
 \DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_sound_8hpp}{"Sound.hpp"}}}
-\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_script_8hpp}{"Script.hpp"}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_lua_script_8hpp}{"LuaScript.hpp"}}}
 \DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_font_8hpp}{"Font.hpp"}}}
 \DoxyCodeLine{00010 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_shader_program_8hpp}{"ShaderProgram.hpp"}}}
 \DoxyCodeLine{00011 }
@@ -72,37 +72,38 @@
 \DoxyCodeLine{00068 \textcolor{comment}{         * @param scriptPath The path to load the script from.}}
 \DoxyCodeLine{00069 \textcolor{comment}{         * @return An instance of the script.}}
 \DoxyCodeLine{00070 \textcolor{comment}{         */}}
-\DoxyCodeLine{00071         \textcolor{keyword}{static} \mbox{\hyperlink{class_script}{Script}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a6004064a5ec03cebb5925acbf8be015a}{loadScript}}(std::string\& scriptPath);}
+\DoxyCodeLine{00071         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aa40f3016ed65df8b01ce2608349ee61b}{loadScript}}(std::string\& scriptPath);}
 \DoxyCodeLine{00072 }
 \DoxyCodeLine{00073         \textcolor{comment}{/**}}
 \DoxyCodeLine{00074 \textcolor{comment}{         * @brief Creates and caches a script from the given source code.}}
 \DoxyCodeLine{00075 \textcolor{comment}{         * @param scriptSource The actual source code (Lua) of the script}}
-\DoxyCodeLine{00076 \textcolor{comment}{         * @return The name of the script, so that it can be loaded from the regular cache.}}
-\DoxyCodeLine{00077 \textcolor{comment}{         */}}
-\DoxyCodeLine{00078         \textcolor{keyword}{static} std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a954a3d0f47a86079d530e5a0d395d157}{loadScriptFromSource}}(std::string\& scriptSource);}
-\DoxyCodeLine{00079 }
-\DoxyCodeLine{00080         \textcolor{comment}{/**}}
-\DoxyCodeLine{00081 \textcolor{comment}{         * @brief Loads a font to the cache.}}
-\DoxyCodeLine{00082 \textcolor{comment}{         * @param fontPath The path to load the font from}}
-\DoxyCodeLine{00083 \textcolor{comment}{         * @param size The size of the font to load it as.}}
-\DoxyCodeLine{00084 \textcolor{comment}{         * @return An instance of the font.}}
-\DoxyCodeLine{00085 \textcolor{comment}{         */}}
-\DoxyCodeLine{00086         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a779c084be78d6e03a8083cb109b85509}{loadFont}}(std::string\& fontPath, \textcolor{keywordtype}{int} size);}
-\DoxyCodeLine{00087 }
-\DoxyCodeLine{00088         \textcolor{comment}{/**}}
-\DoxyCodeLine{00089 \textcolor{comment}{         * @brief Clears the various caches. This is useful for debugging.}}
-\DoxyCodeLine{00090 \textcolor{comment}{         */}}
-\DoxyCodeLine{00091         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_acbc049762c33d9f98ddbc5add7e20174}{clearCaches}}();}
-\DoxyCodeLine{00092 }
-\DoxyCodeLine{00093     \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00094}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aef356f0e3af2856831be8261e709c123}{00094}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aef356f0e3af2856831be8261e709c123}{m\_textures}};}
-\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00095}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af37a2453e77e3be960fff4aa2b2da8ae}{00095}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_mutable_texture}{MutableTexture}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af37a2453e77e3be960fff4aa2b2da8ae}{m\_mutableTextures}};}
-\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00096}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aab37254031dcd1edbccf620db0a112ec}{00096}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{class_sound}{Sound}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aab37254031dcd1edbccf620db0a112ec}{m\_sounds}};}
-\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00097}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a210e7f875573d577e041d073ef586a85}{00097}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{class_script}{Script}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a210e7f875573d577e041d073ef586a85}{m\_scripts}};}
-\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00098}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af110c53a19953db73ece62790759e049}{00098}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af110c53a19953db73ece62790759e049}{m\_fonts}};}
-\DoxyCodeLine{00099 }
-\DoxyCodeLine{00100     \};}
-\DoxyCodeLine{00101 }
-\DoxyCodeLine{00102 \}}
+\DoxyCodeLine{00076 \textcolor{comment}{         * @param name The name of the script}}
+\DoxyCodeLine{00077 \textcolor{comment}{         * @return The name of the script, so that it can be loaded from the regular cache.}}
+\DoxyCodeLine{00078 \textcolor{comment}{         */}}
+\DoxyCodeLine{00079         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ae8cf04384771d20f7a636c4757f722c2}{loadScriptFromSource}}(std::string\& scriptSource, std::string name);}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081         \textcolor{comment}{/**}}
+\DoxyCodeLine{00082 \textcolor{comment}{         * @brief Loads a font to the cache.}}
+\DoxyCodeLine{00083 \textcolor{comment}{         * @param fontPath The path to load the font from}}
+\DoxyCodeLine{00084 \textcolor{comment}{         * @param size The size of the font to load it as.}}
+\DoxyCodeLine{00085 \textcolor{comment}{         * @return An instance of the font.}}
+\DoxyCodeLine{00086 \textcolor{comment}{         */}}
+\DoxyCodeLine{00087         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a779c084be78d6e03a8083cb109b85509}{loadFont}}(std::string\& fontPath, \textcolor{keywordtype}{int} size);}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089         \textcolor{comment}{/**}}
+\DoxyCodeLine{00090 \textcolor{comment}{         * @brief Clears the various caches. This is useful for debugging.}}
+\DoxyCodeLine{00091 \textcolor{comment}{         */}}
+\DoxyCodeLine{00092         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_acbc049762c33d9f98ddbc5add7e20174}{clearCaches}}();}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00095}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aef356f0e3af2856831be8261e709c123}{00095}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aef356f0e3af2856831be8261e709c123}{m\_textures}};}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00096}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af37a2453e77e3be960fff4aa2b2da8ae}{00096}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_mutable_texture}{MutableTexture}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af37a2453e77e3be960fff4aa2b2da8ae}{m\_mutableTextures}};}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00097}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aab37254031dcd1edbccf620db0a112ec}{00097}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{class_sound}{Sound}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aab37254031dcd1edbccf620db0a112ec}{m\_sounds}};}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00098}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ada3e87411dbccc8c5628c7f7d89e2f68}{00098}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ada3e87411dbccc8c5628c7f7d89e2f68}{m\_scripts}};}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00099}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af110c53a19953db73ece62790759e049}{00099}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af110c53a19953db73ece62790759e049}{m\_fonts}};}
+\DoxyCodeLine{00100 }
+\DoxyCodeLine{00101     \};}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103 \}}
 
 \end{DoxyCode}

@@ -1,0 +1,66 @@
+\hypertarget{_lua_script_queue_8hpp_source}{}\doxysection{Lua\+Script\+Queue.\+hpp}
+\label{_lua_script_queue_8hpp_source}\index{Source/LuaScriptQueue.hpp@{Source/LuaScriptQueue.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{map}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}};}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009     \textcolor{comment}{/**}}
+\DoxyCodeLine{00010 \textcolor{comment}{     * @class LuaScriptQueue}}
+\DoxyCodeLine{00011 \textcolor{comment}{     * @file LuaScriptQueue.hpp}}
+\DoxyCodeLine{00012 \textcolor{comment}{     * @brief This class essentially just collects all of the scripts that need to be run from all the various end-\/user sources in a single update loop, and then "reports them" to the LuaScriptEngine, who actually runs them. Note that this is a singleton class.}}
+\DoxyCodeLine{00013 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_lua_script_queue_8hpp_source_l00014}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{00014}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{LuaScriptQueue}}}
+\DoxyCodeLine{00015     \{}
+\DoxyCodeLine{00016     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017         \textcolor{comment}{/**}}
+\DoxyCodeLine{00018 \textcolor{comment}{         * @brief Returns a pointer to the singleton object -\/ creates the object if one doesn't already exist.}}
+\DoxyCodeLine{00019 \textcolor{comment}{         * @return A pointer to the LuaScriptQueue.}}
+\DoxyCodeLine{00020 \textcolor{comment}{         */}}
+\DoxyCodeLine{00021         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{LuaScriptQueue}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_ab2db531a9ecaa50fba9f27715124d948}{getInstance}}();}
+\DoxyCodeLine{00022         \textcolor{comment}{/**}}
+\DoxyCodeLine{00023 \textcolor{comment}{         * @brief Destroys the singleton}}
+\DoxyCodeLine{00024 \textcolor{comment}{         */}}
+\DoxyCodeLine{00025         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_ac9887f9df784c42239af672d3f0c520d}{destroyInstance}}();}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027         \textcolor{comment}{/**}}
+\DoxyCodeLine{00028 \textcolor{comment}{         * @brief Adds a script to the queue to be run.}}
+\DoxyCodeLine{00029 \textcolor{comment}{         * @param script A reference to the LuaScript to add to the queue.}}
+\DoxyCodeLine{00030 \textcolor{comment}{         * @return An unsigned int which represents the UUID of the script added. This UUID will persist throughout all of the pipeline.}}
+\DoxyCodeLine{00031 \textcolor{comment}{         */}}
+\DoxyCodeLine{00032         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_afcd0264f2cd12fd5d9b0f6d304949c48}{addLuaScript}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}\& script);}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034         \textcolor{comment}{/**}}
+\DoxyCodeLine{00035 \textcolor{comment}{         * @brief Returns the queue of scripts to activate}}
+\DoxyCodeLine{00036 \textcolor{comment}{         * @return A reference to m\_scripts.}}
+\DoxyCodeLine{00037 \textcolor{comment}{         */}}
+\DoxyCodeLine{00038         std::map<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}*>\& \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_acddabdadd43bd97c17fb9688954a002d}{getQueue}}();}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040         \textcolor{comment}{/**}}
+\DoxyCodeLine{00041 \textcolor{comment}{         * @brief Clears the stored script queue -\/ for regular use by tbe Script Engine. Deallocates memory that was in use in the m\_scripts map.}}
+\DoxyCodeLine{00042 \textcolor{comment}{         */}}
+\DoxyCodeLine{00043         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a45b878abc0f5e6e91af7b88c7bae81c2}{clearQueue}}();}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045     \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a09d55d72248748aff18167a4a5a309dd}{LuaScriptQueue}}();}
+\DoxyCodeLine{00047         \string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_aa62b9af9441e8b47fa2336c9aecb7abe}{LuaScriptQueue}}();}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049         \textcolor{comment}{// The singleton object.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_queue_8hpp_source_l00050}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_ab5b984d86c2e18f58c086d48e5da8839}{00050}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{LuaScriptQueue}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_ab5b984d86c2e18f58c086d48e5da8839}{m\_instance}};}
+\DoxyCodeLine{00051 }
+\DoxyCodeLine{00052         \textcolor{comment}{// All of the scripts to be run. We use an ordered map so that we can store both the UUID and script together.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_queue_8hpp_source_l00053}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a301bc6696aa37d7879f10f5195ca5c6d}{00053}}         std::map<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}*> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a301bc6696aa37d7879f10f5195ca5c6d}{m\_scripts}};}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00055         \textcolor{comment}{// The "counter" we're on for our UUIDs (I know, I know -\/ not a 'true' UUID. It works though, doesn't it?) -\/ set to -\/1 initially so our first script is 0}}
+\DoxyCodeLine{\Hypertarget{_lua_script_queue_8hpp_source_l00056}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_aece5f415a74cf4841ea73a46201ce13e}{00056}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_aece5f415a74cf4841ea73a46201ce13e}{m\_lastUUID}} = -\/1;}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058     \};}
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00060 \}}
+
+\end{DoxyCode}

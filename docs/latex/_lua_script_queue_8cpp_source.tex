@@ -1,0 +1,64 @@
+\hypertarget{_lua_script_queue_8cpp_source}{}\doxysection{Lua\+Script\+Queue.\+cpp}
+\label{_lua_script_queue_8cpp_source}\index{Source/LuaScriptQueue.cpp@{Source/LuaScriptQueue.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_lua_script_queue_8hpp}{"LuaScriptQueue.hpp"}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_lua_script_8hpp}{"LuaScript.hpp"}}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{LuaScriptQueue}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{LuaScriptQueue}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_ab5b984d86c2e18f58c086d48e5da8839}{m\_instance}} = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{\Hypertarget{_lua_script_queue_8cpp_source_l00009}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a09d55d72248748aff18167a4a5a309dd}{00009}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{LuaScriptQueue}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a09d55d72248748aff18167a4a5a309dd}{LuaScriptQueue}}()}
+\DoxyCodeLine{00010     \{}
+\DoxyCodeLine{00011         \textcolor{comment}{// Not really anything to do here.}}
+\DoxyCodeLine{00012     \}}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{\Hypertarget{_lua_script_queue_8cpp_source_l00014}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_aa62b9af9441e8b47fa2336c9aecb7abe}{00014}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{LuaScriptQueue}}::\string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_aa62b9af9441e8b47fa2336c9aecb7abe}{LuaScriptQueue}}()}
+\DoxyCodeLine{00015     \{}
+\DoxyCodeLine{00016         \textcolor{comment}{// Nor here, either.}}
+\DoxyCodeLine{00017     \}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{\Hypertarget{_lua_script_queue_8cpp_source_l00019}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_ab2db531a9ecaa50fba9f27715124d948}{00019}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{LuaScriptQueue}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{LuaScriptQueue}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_ab2db531a9ecaa50fba9f27715124d948}{getInstance}}()}
+\DoxyCodeLine{00020     \{}
+\DoxyCodeLine{00021         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_ab5b984d86c2e18f58c086d48e5da8839}{m\_instance}} == \textcolor{keywordtype}{nullptr}) \{}
+\DoxyCodeLine{00022             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_ab5b984d86c2e18f58c086d48e5da8839}{m\_instance}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{LuaScriptQueue}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a09d55d72248748aff18167a4a5a309dd}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a09d55d72248748aff18167a4a5a309dd}{)}};}
+\DoxyCodeLine{00023         \}}
+\DoxyCodeLine{00024         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_ab5b984d86c2e18f58c086d48e5da8839}{m\_instance}};}
+\DoxyCodeLine{00025     \}}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{\Hypertarget{_lua_script_queue_8cpp_source_l00027}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_ac9887f9df784c42239af672d3f0c520d}{00027}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{LuaScriptQueue}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_ac9887f9df784c42239af672d3f0c520d}{destroyInstance}}() \{}
+\DoxyCodeLine{00028         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_ab5b984d86c2e18f58c086d48e5da8839}{m\_instance}}) \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_ab5b984d86c2e18f58c086d48e5da8839}{m\_instance}};}
+\DoxyCodeLine{00029     \}}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{\Hypertarget{_lua_script_queue_8cpp_source_l00031}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_afcd0264f2cd12fd5d9b0f6d304949c48}{00031}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{LuaScriptQueue}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_afcd0264f2cd12fd5d9b0f6d304949c48}{addLuaScript}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}\& script)}
+\DoxyCodeLine{00032     \{}
+\DoxyCodeLine{00033         \textcolor{comment}{// Add the script to the map. (or, in the off chance we have somehow added 4,294,967,295 different scripts in the last update, overwrite this one.)}}
+\DoxyCodeLine{00034         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}* scr = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_a5686214d11e32bc31da1f7166b437b80}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_a5686214d11e32bc31da1f7166b437b80}{)}};}
+\DoxyCodeLine{00035         *scr = script;}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a301bc6696aa37d7879f10f5195ca5c6d}{m\_scripts}}[++\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_aece5f415a74cf4841ea73a46201ce13e}{m\_lastUUID}}] = scr;}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_aece5f415a74cf4841ea73a46201ce13e}{m\_lastUUID}};}
+\DoxyCodeLine{00040     \}}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{\Hypertarget{_lua_script_queue_8cpp_source_l00042}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_acddabdadd43bd97c17fb9688954a002d}{00042}}     std::map<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int},\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}*>\& \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{LuaScriptQueue}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_acddabdadd43bd97c17fb9688954a002d}{getQueue}}()}
+\DoxyCodeLine{00043     \{}
+\DoxyCodeLine{00044         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a301bc6696aa37d7879f10f5195ca5c6d}{m\_scripts}};}
+\DoxyCodeLine{00045     \}}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{\Hypertarget{_lua_script_queue_8cpp_source_l00047}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a45b878abc0f5e6e91af7b88c7bae81c2}{00047}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{LuaScriptQueue}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a45b878abc0f5e6e91af7b88c7bae81c2}{clearQueue}}()}
+\DoxyCodeLine{00048     \{}
+\DoxyCodeLine{00049         \textcolor{comment}{// First, make sure we actually dispose of the scripts correctly}}
+\DoxyCodeLine{00050         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} e : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a301bc6696aa37d7879f10f5195ca5c6d}{m\_scripts}}) \{}
+\DoxyCodeLine{00051             \textcolor{keyword}{delete} e.second;}
+\DoxyCodeLine{00052         \}}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054         \textcolor{comment}{// Just clear the map now. Ez.}}
+\DoxyCodeLine{00055         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a301bc6696aa37d7879f10f5195ca5c6d}{m\_scripts}}.clear();}
+\DoxyCodeLine{00056     \}}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058 \}}
+
+\end{DoxyCode}

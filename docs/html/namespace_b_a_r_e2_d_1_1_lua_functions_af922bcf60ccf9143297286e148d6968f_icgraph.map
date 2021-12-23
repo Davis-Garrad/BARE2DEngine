@@ -1,0 +1,4 @@
+<map id="BARE2D::LuaFunctions::delay" name="BARE2D::LuaFunctions::delay">
+<area shape="rect" id="node1" title="A custom function which calls a lua_yield. Takes one argument, an integer representing how many updat..." alt="" coords="232,5,395,47"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_lua_script_engine.html#afc202ede3bcd76cf0d38a5cfa6da2e86" title="Initializes the LuaScriptEngine &#45; loads basic modules etc." alt="" coords="5,5,184,47"/>
+</map>

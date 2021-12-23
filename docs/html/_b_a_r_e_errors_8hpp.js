@@ -16,7 +16,9 @@ var _b_a_r_e_errors_8hpp =
       [ "FONT_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a59e2044a4165c83216dbbca34417462b", null ],
       [ "FBO_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a56134db1e8559ae4b32bf967c15fc4df", null ],
       [ "LOGGER_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a396430326452fe792ad9891baac4e76b", null ],
-      [ "XML_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8", null ]
+      [ "XML_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8", null ],
+      [ "UNINITIALIZED_FUNCTION", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15abcb313a5c9f8965d7b75833af33d16be", null ],
+      [ "LUA_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba", null ]
     ] ],
     [ "demangle", "_b_a_r_e_errors_8hpp.html#ad6c3fb278e5310c3250bab181be717d6", null ],
     [ "displayErrors", "_b_a_r_e_errors_8hpp.html#a8d6a0fa02837ab9ebba5b67cc21f9e35", null ],

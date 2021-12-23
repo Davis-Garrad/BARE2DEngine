@@ -318,9 +318,11 @@
 \DoxyCodeLine{00314             \textcolor{keywordflow}{if}(columnWidths[i] > width) width = columnWidths[i];}
 \DoxyCodeLine{00315         \}}
 \DoxyCodeLine{00316 }
-\DoxyCodeLine{00317         \textcolor{keywordflow}{return} ret;}
-\DoxyCodeLine{00318     \}}
-\DoxyCodeLine{00319 }
-\DoxyCodeLine{00320 \}}
+\DoxyCodeLine{00317         \textcolor{keyword}{delete}[] columnWidths;}
+\DoxyCodeLine{00318 }
+\DoxyCodeLine{00319         \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{00320     \}}
+\DoxyCodeLine{00321 }
+\DoxyCodeLine{00322 \}}
 
 \end{DoxyCode}

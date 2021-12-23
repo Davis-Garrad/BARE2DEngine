@@ -1,0 +1,5 @@
+<map id="BARE2D::LuaScriptContextWrapper::update" name="BARE2D::LuaScriptContextWrapper::update">
+<area shape="rect" id="node1" title="Updates the script &#45; decreases delay counter, checks if it is finished, etc." alt="" coords="5,35,191,76"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#a9707c51bc4e1d9b3f5b827c79f3678a4" title="Cleans up." alt="" coords="239,5,424,47"/>
+<area shape="rect" id="node3" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="259,71,403,98"/>
+</map>

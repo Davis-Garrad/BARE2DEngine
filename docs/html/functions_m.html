@@ -31,6 +31,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="BARE.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">BARE2D
    </div>
@@ -119,11 +120,15 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>m_circles
 : <a class="el" href="class_b_a_r_e2_d_1_1_debug_renderer.html#aeeaadb087efdaf838e445502adf18911">BARE2D::DebugRenderer</a>
 </li>
+<li>m_completed
+: <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#adbedabb1bef4b251dfea089d2da0edf4">BARE2D::LuaScriptContextWrapper</a>
+</li>
 <li>m_context
 : <a class="el" href="class_b_a_r_e2_d_1_1_g_l_context_manager.html#a0f1ac013e59c4e43b33d212305b43b2e">BARE2D::GLContextManager</a>
 </li>
 <li>m_contexts
 : <a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aa250b89b06d146fb95c65bf94e618da9">BARE2D::BARECEGUI</a>
+, <a class="el" href="class_b_a_r_e2_d_1_1_lua_context_manager.html#a78d44984a684e20f1ef986914023b8ba">BARE2D::LuaContextManager</a>
 </li>
 <li>m_currentScreen
 : <a class="el" href="class_b_a_r_e2_d_1_1_screen_list.html#a7022a37759f76a6b60209ff14ef59f3f">BARE2D::ScreenList</a>
@@ -171,6 +176,8 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 </li>
 <li>m_instance
 : <a class="el" href="class_b_a_r_e2_d_1_1_logger.html#a74de48b60a7ee6f5e099395d00245a6a">BARE2D::Logger</a>
+, <a class="el" href="class_b_a_r_e2_d_1_1_lua_context_manager.html#a16d3c3ad3e54bb72284e982bfdcbab3a">BARE2D::LuaContextManager</a>
+, <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_queue.html#ab5b984d86c2e18f58c086d48e5da8839">BARE2D::LuaScriptQueue</a>
 </li>
 <li>m_isGameRunning
 : <a class="el" href="class_b_a_r_e2_d_1_1_app.html#a1647c93ca61530c93f0e88cb26c80f81">BARE2D::App</a>
@@ -184,11 +191,17 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>m_lastTime
 : <a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aa32fb1c941f5296b050622675a1361d4">BARE2D::BARECEGUI</a>
 </li>
+<li>m_lastUUID
+: <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_queue.html#aece5f415a74cf4841ea73a46201ce13e">BARE2D::LuaScriptQueue</a>
+</li>
 <li>m_lines
 : <a class="el" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a98ff0fa88d890daa8daa781b84b6edcc">BARE2D::DebugRenderer</a>
 </li>
 <li>m_logFile
 : <a class="el" href="class_b_a_r_e2_d_1_1_logger.html#a4862f206932fad8878458c08048913d2">BARE2D::Logger</a>
+</li>
+<li>m_masterState
+: <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_engine.html#adb96773e404afca7b5a77a98bda110d8">BARE2D::LuaScriptEngine</a>
 </li>
 <li>m_matrixNeedsUpdate
 : <a class="el" href="class_b_a_r_e2_d_1_1_camera2_d.html#a5fd96de660f005ed4c509e49be04288c">BARE2D::Camera2D</a>
@@ -217,6 +230,9 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>m_orthographicMatrix
 : <a class="el" href="class_b_a_r_e2_d_1_1_camera2_d.html#a0c62bc85857ebd1ae9c5cd6e03263191">BARE2D::Camera2D</a>
 </li>
+<li>m_parent
+: <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#abca1c61643424fc2be8f97bfde0e8756">BARE2D::LuaScriptContextWrapper</a>
+</li>
 <li>m_position
 : <a class="el" href="class_b_a_r_e2_d_1_1_camera2_d.html#ab894ee7987ad16b7542da6ae10a4e064">BARE2D::Camera2D</a>
 </li>
@@ -237,6 +253,9 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 </li>
 <li>m_regStart
 : <a class="el" href="class_b_a_r_e2_d_1_1_font.html#a237b44961f4f490d49c1e0ad0e58f7ab">BARE2D::Font</a>
+</li>
+<li>m_remainingDelay
+: <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#a52e40f918a04dcb189d8f2b81a2ef534">BARE2D::LuaScriptContextWrapper</a>
 </li>
 <li>m_scaleX
 : <a class="el" href="class_b_a_r_e2_d_1_1_camera2_d.html#ab76cf34f0ea9d18fb5179789d29ba2d7">BARE2D::Camera2D</a>
@@ -259,8 +278,15 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>m_screenWidth
 : <a class="el" href="class_b_a_r_e2_d_1_1_camera2_d.html#a325291933b06e133659803de0a39709f">BARE2D::Camera2D</a>
 </li>
+<li>m_script
+: <a class="el" href="class_b_a_r_e2_d_1_1_lua_script.html#a1995fc1d69d00731e44a4525542e4f2f">BARE2D::LuaScript</a>
+</li>
+<li>m_scriptReference
+: <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#a685f7bdce2eaa0e532b3b669350654d9">BARE2D::LuaScriptContextWrapper</a>
+</li>
 <li>m_scripts
-: <a class="el" href="class_b_a_r_e2_d_1_1_resource_manager.html#a210e7f875573d577e041d073ef586a85">BARE2D::ResourceManager</a>
+: <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_queue.html#a301bc6696aa37d7879f10f5195ca5c6d">BARE2D::LuaScriptQueue</a>
+, <a class="el" href="class_b_a_r_e2_d_1_1_resource_manager.html#ada3e87411dbccc8c5628c7f7d89e2f68">BARE2D::ResourceManager</a>
 </li>
 <li>m_SDLWindow
 : <a class="el" href="class_b_a_r_e2_d_1_1_window.html#a5e37b74f97cf8c79e5db812771a628d7">BARE2D::Window</a>
@@ -280,6 +306,9 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>m_startTime
 : <a class="el" href="class_b_a_r_e2_d_1_1_timer.html#a66348a0a0c38584cf2fb0ec6e1af2760">BARE2D::Timer</a>
 </li>
+<li>m_state
+: <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#a78351a99305b579c07feae8a088fbc91">BARE2D::LuaScriptContextWrapper</a>
+</li>
 <li>m_storedData
 : <a class="el" href="class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a2de577045a9016c8f7fd538919d6e664">BARE2D::XMLDataManager</a>
 </li>
@@ -291,6 +320,9 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 </li>
 <li>m_textures
 : <a class="el" href="class_b_a_r_e2_d_1_1_resource_manager.html#aef356f0e3af2856831be8261e709c123">BARE2D::ResourceManager</a>
+</li>
+<li>m_threadReference
+: <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#a2ec6e655e96ebec57235620024b9f6a5">BARE2D::LuaScriptContextWrapper</a>
 </li>
 <li>m_timer
 : <a class="el" href="class_b_a_r_e2_d_1_1_app.html#a1ce5b3fd003d75761672af1e9518726d">BARE2D::App</a>
@@ -321,6 +353,9 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 </li>
 <li>m_window
 : <a class="el" href="class_b_a_r_e2_d_1_1_app.html#a000fd8a1f00eb49542ada6a3effa3ce2">BARE2D::App</a>
+</li>
+<li>m_yielded
+: <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ae3fe1bea17dbc1d92540d0c73daac702">BARE2D::LuaScriptContextWrapper</a>
 </li>
 <li>measure()
 : <a class="el" href="class_b_a_r_e2_d_1_1_font.html#a5c5c74ff08240dbe995e68497d832968">BARE2D::Font</a>

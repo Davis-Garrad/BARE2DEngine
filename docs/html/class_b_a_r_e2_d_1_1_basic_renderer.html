@@ -31,6 +31,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="BARE.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">BARE2D
    </div>
@@ -135,7 +136,7 @@ $(document).ready(function(){initNavTree('class_b_a_r_e2_d_1_1_basic_renderer.ht
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aad096d241734d1b4e1ea1a2a777ba1a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_basic_renderer.html#aad096d241734d1b4e1ea1a2a777ba1a8">BasicRenderer</a> (std::string &amp;fragShader, std::string &amp;vertShader, unsigned int perspectiveWidth=2, unsigned int perspectiveHeight=2)</td></tr>
 <tr class="separator:aad096d241734d1b4e1ea1a2a777ba1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21b4eba61a2a80b5014aa26eae031ac5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_basic_renderer.html#a21b4eba61a2a80b5014aa26eae031ac5">~BasicRenderer</a> ()</td></tr>
+<tr class="memitem:a21b4eba61a2a80b5014aa26eae031ac5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_basic_renderer.html#a21b4eba61a2a80b5014aa26eae031ac5">~BasicRenderer</a> ()</td></tr>
 <tr class="separator:a21b4eba61a2a80b5014aa26eae031ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa228c647d7fe74772a4736d51fdb7796"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_basic_renderer.html#aa228c647d7fe74772a4736d51fdb7796">init</a> () override</td></tr>
 <tr class="memdesc:aa228c647d7fe74772a4736d51fdb7796"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes all necessary bits of the renderer.  <a href="class_b_a_r_e2_d_1_1_basic_renderer.html#aa228c647d7fe74772a4736d51fdb7796">More...</a><br /></td></tr>
@@ -155,7 +156,7 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_class_b_a_r_e2_d_1_1_renderer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_b_a_r_e2_d_1_1_renderer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_b_a_r_e2_d_1_1_renderer.html">BARE2D::Renderer</a></td></tr>
 <tr class="memitem:abc605847b99b92971a385206dc75e044 inherit pub_methods_class_b_a_r_e2_d_1_1_renderer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_renderer.html#abc605847b99b92971a385206dc75e044">Renderer</a> ()</td></tr>
 <tr class="separator:abc605847b99b92971a385206dc75e044 inherit pub_methods_class_b_a_r_e2_d_1_1_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a827d8f3a5ec209a3d06bb3667554a091 inherit pub_methods_class_b_a_r_e2_d_1_1_renderer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_renderer.html#a827d8f3a5ec209a3d06bb3667554a091">~Renderer</a> ()</td></tr>
+<tr class="memitem:a827d8f3a5ec209a3d06bb3667554a091 inherit pub_methods_class_b_a_r_e2_d_1_1_renderer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_renderer.html#a827d8f3a5ec209a3d06bb3667554a091">~Renderer</a> ()</td></tr>
 <tr class="separator:a827d8f3a5ec209a3d06bb3667554a091 inherit pub_methods_class_b_a_r_e2_d_1_1_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b894142f30465231e74903f366cd70a inherit pub_methods_class_b_a_r_e2_d_1_1_renderer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_renderer.html#a7b894142f30465231e74903f366cd70a">begin</a> ()</td></tr>
 <tr class="memdesc:a7b894142f30465231e74903f366cd70a inherit pub_methods_class_b_a_r_e2_d_1_1_renderer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the necessary vectors, etc. to prepare for draw() calls, etc.  <a href="class_b_a_r_e2_d_1_1_renderer.html#a7b894142f30465231e74903f366cd70a">More...</a><br /></td></tr>
@@ -272,6 +273,9 @@ Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">BARE2D::BasicRenderer::~BasicRenderer </td>
@@ -280,6 +284,11 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_basic_renderer_8cpp_source.html#l00011">11</a> of file <a class="el" href="_basic_renderer_8cpp_source.html">BasicRenderer.cpp</a>.</p>

@@ -1,0 +1,97 @@
+\hypertarget{_lua_script_8hpp_source}{}\doxysection{Lua\+Script.\+hpp}
+\label{_lua_script_8hpp_source}\index{Source/LuaScript.hpp@{Source/LuaScript.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{string}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_lua_headers_8hpp}{"LuaHeaders.hpp"}}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009     \textcolor{comment}{/**}}
+\DoxyCodeLine{00010 \textcolor{comment}{     * @class LuaScript}}
+\DoxyCodeLine{00011 \textcolor{comment}{     * @file LuaScript.hpp}}
+\DoxyCodeLine{00012 \textcolor{comment}{     * @brief This is the basic Lua script wrapper -\/ it is what the end-\/user will create and add to the queue. It basically just holds the text that the script will run.}}
+\DoxyCodeLine{00013 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8hpp_source_l00014}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{00014}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}}
+\DoxyCodeLine{00015     \{}
+\DoxyCodeLine{00016     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_a5686214d11e32bc31da1f7166b437b80}{LuaScript}}();}
+\DoxyCodeLine{00018         \string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_acf6a9e39afc2d8ba68649610b9155841}{LuaScript}}();}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020         \textcolor{comment}{// The script's text -\/ this is the code.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8hpp_source_l00021}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_a1995fc1d69d00731e44a4525542e4f2f}{00021}}         std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_a1995fc1d69d00731e44a4525542e4f2f}{m\_script}};}
+\DoxyCodeLine{00022     \};}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024     \textcolor{comment}{/**}}
+\DoxyCodeLine{00025 \textcolor{comment}{     * @class LuaScriptContextWrapper}}
+\DoxyCodeLine{00026 \textcolor{comment}{     * @file LuaScript.hpp}}
+\DoxyCodeLine{00027 \textcolor{comment}{     * @brief This is not to be used by the end user under any circumstances. This is the class which represents a Lua context that has been initialized with a script's Lua to run. It holds various data, such as a handle to the parent context.}}
+\DoxyCodeLine{00028 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8hpp_source_l00029}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper}{00029}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper}{LuaScriptContextWrapper}} \{}
+\DoxyCodeLine{00030     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ae0af32134c3684ef955f2143db707a22}{LuaScriptContextWrapper}}();}
+\DoxyCodeLine{00032         \string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a6e8344724ee86168c554f20d373fe2cb}{LuaScriptContextWrapper}}();}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034         \textcolor{comment}{/**}}
+\DoxyCodeLine{00035 \textcolor{comment}{         * @brief Creates and initializes all the necessary bits.}}
+\DoxyCodeLine{00036 \textcolor{comment}{         * @param id The ID of the script, which was assigned from the LuaScriptQueue}}
+\DoxyCodeLine{00037 \textcolor{comment}{         * @param parentState The masterstate, generally, although I suppose it could be others.}}
+\DoxyCodeLine{00038 \textcolor{comment}{         */}}
+\DoxyCodeLine{00039         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ae928c82fc3a9d2b72e0b01caf02a5bbb}{init}}(lua\_State* parentState, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}* script);}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041         \textcolor{comment}{/**}}
+\DoxyCodeLine{00042 \textcolor{comment}{         * @brief Cleans up}}
+\DoxyCodeLine{00043 \textcolor{comment}{         */}}
+\DoxyCodeLine{00044         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a9707c51bc4e1d9b3f5b827c79f3678a4}{destroy}}();}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046         \textcolor{comment}{/**}}
+\DoxyCodeLine{00047 \textcolor{comment}{         * @brief Starts the script}}
+\DoxyCodeLine{00048 \textcolor{comment}{         */}}
+\DoxyCodeLine{00049         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a9e06de29f55ec9014c21ae0c22b86297}{start}}();}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051         \textcolor{comment}{/**}}
+\DoxyCodeLine{00052 \textcolor{comment}{         * @brief Updates the script -\/ decreases delay counter, checks if it is finished, etc.}}
+\DoxyCodeLine{00053 \textcolor{comment}{         */}}
+\DoxyCodeLine{00054         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ab7621231b56bdf66af3ebd1472fca721}{update}}();}
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{00056         \textcolor{comment}{/**}}
+\DoxyCodeLine{00057 \textcolor{comment}{         * @brief Returns m\_completed.}}
+\DoxyCodeLine{00058 \textcolor{comment}{         */}}
+\DoxyCodeLine{00059         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a2e8c9291b16d4be7866251ea60282720}{isCompleted}}();}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00062         \textcolor{comment}{/**}}
+\DoxyCodeLine{00063 \textcolor{comment}{         * @brief Loads and compiles the given Lua script. Also, sets m\_scriptReference to the index of the compiled script in the registry.}}
+\DoxyCodeLine{00064 \textcolor{comment}{         * @param luaStr The script to compile.}}
+\DoxyCodeLine{00065 \textcolor{comment}{         */}}
+\DoxyCodeLine{00066         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_abf423ac350b4eadd0dbb2679f2b09683}{loadLua}}(std::string\& luaStr);}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068         \textcolor{comment}{/**}}
+\DoxyCodeLine{00069 \textcolor{comment}{         * @brief Creates the m\_state variable as a thread, or subroutine of the parent}}
+\DoxyCodeLine{00070 \textcolor{comment}{         */}}
+\DoxyCodeLine{00071         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ab373f9b638c401a70a31a599349d81b7}{createThread}}();}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073         \textcolor{comment}{// The state (or context, if you will) that this class represents.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8hpp_source_l00074}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{00074}}         lua\_State* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}} = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00075         \textcolor{comment}{// The parent state (or context) that caused this class to be created.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8hpp_source_l00076}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_abca1c61643424fc2be8f97bfde0e8756}{00076}}         lua\_State* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_abca1c61643424fc2be8f97bfde0e8756}{m\_parent}} = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078         \textcolor{comment}{// Is the script paused? if so, how long is on the timer?}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8hpp_source_l00079}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ae3fe1bea17dbc1d92540d0c73daac702}{00079}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ae3fe1bea17dbc1d92540d0c73daac702}{m\_yielded}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_lua_script_8hpp_source_l00080}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a52e40f918a04dcb189d8f2b81a2ef534}{00080}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a52e40f918a04dcb189d8f2b81a2ef534}{m\_remainingDelay}} = 0;}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082         \textcolor{comment}{// If the script is finished.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8hpp_source_l00083}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_adbedabb1bef4b251dfea089d2da0edf4}{00083}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_adbedabb1bef4b251dfea089d2da0edf4}{m\_completed}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00085         \textcolor{comment}{// This is a reference to the loaded script's place in the registry.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8hpp_source_l00086}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a685f7bdce2eaa0e532b3b669350654d9}{00086}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a685f7bdce2eaa0e532b3b669350654d9}{m\_scriptReference}} = LUA\_REFNIL;}
+\DoxyCodeLine{00087         \textcolor{comment}{// This is a reference to the thread in the master state's registry}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8hpp_source_l00088}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a2ec6e655e96ebec57235620024b9f6a5}{00088}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a2ec6e655e96ebec57235620024b9f6a5}{m\_threadReference}} = LUA\_REFNIL;}
+\DoxyCodeLine{00089     \};}
+\DoxyCodeLine{00090 }
+\DoxyCodeLine{00091 \}}
+
+\end{DoxyCode}

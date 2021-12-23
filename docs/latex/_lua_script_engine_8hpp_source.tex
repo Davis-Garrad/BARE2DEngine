@@ -1,0 +1,89 @@
+\hypertarget{_lua_script_engine_8hpp_source}{}\doxysection{Lua\+Script\+Engine.\+hpp}
+\label{_lua_script_engine_8hpp_source}\index{Source/LuaScriptEngine.hpp@{Source/LuaScriptEngine.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{functional}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_lua_headers_8hpp}{"LuaHeaders.hpp"}}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_lua_script_8hpp}{"LuaScript.hpp"}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_lua_script_queue_8hpp}{"LuaScriptQueue.hpp"}}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}};}
+\DoxyCodeLine{00013     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper}{LuaScriptContextWrapper}};}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015     \textcolor{comment}{/**}}
+\DoxyCodeLine{00016 \textcolor{comment}{     * @class LuaScriptEngine}}
+\DoxyCodeLine{00017 \textcolor{comment}{     * @file LuaScriptEngine.hpp}}
+\DoxyCodeLine{00018 \textcolor{comment}{     * @brief This is the class which actually processes all of the scripts in the script queue, and creates/initializes contexts for them. Takes from LuaScriptQueue and gives to LuaContextManager.}}
+\DoxyCodeLine{00019 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_lua_script_engine_8hpp_source_l00020}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine}{00020}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine}{LuaScriptEngine}}}
+\DoxyCodeLine{00021     \{}
+\DoxyCodeLine{00022     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_aa8ed4ea17af538a41e8d4fec0727f852}{LuaScriptEngine}}();}
+\DoxyCodeLine{00024         \string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_a6f0bef2c7ef75d6d28e76403ff8d06c4}{LuaScriptEngine}}();}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026         \textcolor{comment}{/**}}
+\DoxyCodeLine{00027 \textcolor{comment}{         * @brief Initializes the LuaScriptEngine -\/ loads basic modules etc.}}
+\DoxyCodeLine{00028 \textcolor{comment}{         * @param The path to the user-\/created Lua modules.}}
+\DoxyCodeLine{00029 \textcolor{comment}{         */}}
+\DoxyCodeLine{00030         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_afc202ede3bcd76cf0d38a5cfa6da2e86}{init}}(std::string luaModulesPath);}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032         \textcolor{comment}{/**}}
+\DoxyCodeLine{00033 \textcolor{comment}{         * @brief Loads and registers (read: runs) the module located at the given file}}
+\DoxyCodeLine{00034 \textcolor{comment}{         * @param filename The file to load/run.}}
+\DoxyCodeLine{00035 \textcolor{comment}{         */}}
+\DoxyCodeLine{00036         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_ae9539fd6e864b66bcb00299f24f0c8bc}{registerModule}}(std::string filename);}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038         \textcolor{comment}{/**}}
+\DoxyCodeLine{00039 \textcolor{comment}{         * @brief Adds a Lua C Function. This is a function which can be called from inside a Lua script, and executes C/C++ code.}}
+\DoxyCodeLine{00040 \textcolor{comment}{         * @param function The function which will be called when the Lua script calls the closure. Follows the form of a std::function<int(lua\_State*)>. The lua\_State pointer provides a handle to the Lua stack (really, the whole state, but the stack is the most important) which allows the C/C++ program to recieve parameters and add return values. Must return the number of values the function gives back to Lua. See https://www.lua.org/manual/5.1/manual.html\#lua\_CFunction}}
+\DoxyCodeLine{00041 \textcolor{comment}{         * @param name The name by which the Lua code can call the function.}}
+\DoxyCodeLine{00042 \textcolor{comment}{         */}}
+\DoxyCodeLine{00043         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_ae207fae3de0b49158c4eeede0e41b070}{registerCFunction}}(lua\_CFunction function, std::string name);}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045         \textcolor{comment}{/**}}
+\DoxyCodeLine{00046 \textcolor{comment}{         * @brief Processes all scripts from the LuaScriptQueue and updates all running scripts. That's pretty much it!}}
+\DoxyCodeLine{00047 \textcolor{comment}{         */}}
+\DoxyCodeLine{00048         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_a428a4f2b3f87f8b90db2880a67ffee31}{update}}();}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050         \textcolor{comment}{/**}}
+\DoxyCodeLine{00051 \textcolor{comment}{         * @brief Adds a value to the Lua registry -\/ this lets any C/C++ code use the value stored in the state (it is stored in the state)}}
+\DoxyCodeLine{00052 \textcolor{comment}{         * @param value A pointer to the value to be added.}}
+\DoxyCodeLine{00053 \textcolor{comment}{         * @param key The key to be used to access the value in the registry.}}
+\DoxyCodeLine{00054 \textcolor{comment}{         */}}
+\DoxyCodeLine{00055         \textcolor{keyword}{template}<\textcolor{keyword}{class} T>}
+\DoxyCodeLine{00056         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_aef31946bb9843c75229281cdcc8a2031}{addValueToRegistry}}(lua\_State* L, T* value, std::string key);}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058         \textcolor{keyword}{template}<\textcolor{keyword}{class} T>}
+\DoxyCodeLine{00059         \textcolor{keyword}{static} T* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_a7c0707d445e3a0e6068593ddff6e1f4c}{getValueFromRegistry}}(lua\_State* L, std::string key);}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061         \textcolor{comment}{/**}}
+\DoxyCodeLine{00062 \textcolor{comment}{         * @brief Returns a pointer to the master state. }}
+\DoxyCodeLine{00063 \textcolor{comment}{         */}}
+\DoxyCodeLine{00064         lua\_State* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_a3f35a7b4086aa2c2587c133edd0d05c2}{getMasterState}}();}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066     \textcolor{keyword}{private}:}
+\DoxyCodeLine{00067         \textcolor{comment}{// Both the script queue and context manager are singletons, so we needn't worry about storing those.}}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069         \textcolor{comment}{/**}}
+\DoxyCodeLine{00070 \textcolor{comment}{         * @brief Creates a LuaScriptContextWrapper using the data from script}}
+\DoxyCodeLine{00071 \textcolor{comment}{         * @param script A pointer to the LuaScript which we want to create a new Lua state for.}}
+\DoxyCodeLine{00072 \textcolor{comment}{         * @return A pointer to the LuaScriptContextWrapper which the function created.}}
+\DoxyCodeLine{00073 \textcolor{comment}{         */}}
+\DoxyCodeLine{00074         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper}{LuaScriptContextWrapper}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_a81e4604bf36c490f713d00cd68d4a874}{createLuaContext}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}* script);}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076         \textcolor{comment}{// The state which C-\/functions are loaded into, modules are loaded into, etc. All scripts start as copies of the master state, so they have all of the registry, functions, etc.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_engine_8hpp_source_l00077}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_adb96773e404afca7b5a77a98bda110d8}{00077}}         lua\_State* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_adb96773e404afca7b5a77a98bda110d8}{m\_masterState}} = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079     \};}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081 \}}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_lua_script_engine__impl_8tcc}{"LuaScriptEngine\_impl.tcc"}}}
+
+\end{DoxyCode}

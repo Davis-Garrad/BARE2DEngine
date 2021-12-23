@@ -1,7 +1,6 @@
 \hypertarget{dir_74389ed8173ad57b461b9d623a1f3867}{}\doxysection{Source Directory Reference}
 \label{dir_74389ed8173ad57b461b9d623a1f3867}\index{Source Directory Reference@{Source Directory Reference}}
-Directory dependency graph for Source\+:
-\nopagebreak
+Directory dependency graph for Source\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -79,6 +78,30 @@ file \mbox{\hyperlink{_logger_8cpp}{Logger.\+cpp}}
 \item 
 file \mbox{\hyperlink{_logger_8hpp}{Logger.\+hpp}}
 \item 
+file \mbox{\hyperlink{_lua_context_manager_8cpp}{Lua\+Context\+Manager.\+cpp}}
+\item 
+file \mbox{\hyperlink{_lua_context_manager_8hpp}{Lua\+Context\+Manager.\+hpp}}
+\begin{DoxyCompactList}\small\item\em N\+O\+TE\+: This is a singleton class. The Lua\+Context\+Manager, well, manages the Lua Contexts which the Script\+Engine has created. These, generally, are scripts which are running. This class simply updates them and handles delay functions and the like. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{_lua_functions_8cpp}{Lua\+Functions.\+cpp}}
+\item 
+file \mbox{\hyperlink{_lua_functions_8hpp}{Lua\+Functions.\+hpp}}
+\item 
+file \mbox{\hyperlink{_lua_headers_8hpp}{Lua\+Headers.\+hpp}}
+\item 
+file \mbox{\hyperlink{_lua_script_8cpp}{Lua\+Script.\+cpp}}
+\item 
+file \mbox{\hyperlink{_lua_script_8hpp}{Lua\+Script.\+hpp}}
+\begin{DoxyCompactList}\small\item\em This is the basic Lua script wrapper -\/ it is what the end-\/user will create and add to the queue. It basically just holds the text that the script will run. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{_lua_script_engine_8cpp}{Lua\+Script\+Engine.\+cpp}}
+\item 
+file \mbox{\hyperlink{_lua_script_engine_8hpp}{Lua\+Script\+Engine.\+hpp}}
+\begin{DoxyCompactList}\small\item\em This is the class which actually processes all of the scripts in the script queue, and creates/initializes contexts for them. Takes from Lua\+Script\+Queue and gives to Lua\+Context\+Manager. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{_lua_script_engine__impl_8tcc}{Lua\+Script\+Engine\+\_\+impl.\+tcc}}
+\item 
+file \mbox{\hyperlink{_lua_script_queue_8cpp}{Lua\+Script\+Queue.\+cpp}}
+\item 
+file \mbox{\hyperlink{_lua_script_queue_8hpp}{Lua\+Script\+Queue.\+hpp}}
+\begin{DoxyCompactList}\small\item\em This class essentially just collects all of the scripts that need to be run from all the various end-\/user sources in a single update loop, and then \char`\"{}reports them\char`\"{} to the Lua\+Script\+Engine, who actually runs them. Note that this is a singleton class. \end{DoxyCompactList}\item 
 file \mbox{\hyperlink{_mutable_texture_8cpp}{Mutable\+Texture.\+cpp}}
 \item 
 file \mbox{\hyperlink{_mutable_texture_8hpp}{Mutable\+Texture.\+hpp}}
@@ -100,10 +123,6 @@ file \mbox{\hyperlink{_screen_8hpp}{Screen.\+hpp}}
 file \mbox{\hyperlink{_screen_list_8cpp}{Screen\+List.\+cpp}}
 \item 
 file \mbox{\hyperlink{_screen_list_8hpp}{Screen\+List.\+hpp}}
-\item 
-file \mbox{\hyperlink{_script_8cpp}{Script.\+cpp}}
-\item 
-file \mbox{\hyperlink{_script_8hpp}{Script.\+hpp}}
 \item 
 file \mbox{\hyperlink{_shader_program_8cpp}{Shader\+Program.\+cpp}}
 \item 
