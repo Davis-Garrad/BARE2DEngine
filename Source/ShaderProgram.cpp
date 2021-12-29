@@ -123,7 +123,7 @@ namespace BARE2D {
 		GLint location = glGetUniformLocation(m_programID, uniform.c_str());
 		
 		// Error check
-		if(location == GL_INVALID_INDEX) {
+		if(location == (GLint)GL_INVALID_INDEX) {
 			// Error!
 			throwError(BAREError::UNIFORM_NOT_FOUND, "Uniform name: " + uniform);
 			

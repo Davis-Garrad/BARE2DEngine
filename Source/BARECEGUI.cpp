@@ -9,8 +9,36 @@
 namespace BARE2D {
 
 	bool BARECEGUI::m_initialized = false;
+	BARECEGUI* BARECEGUI::m_instance = nullptr;
+	
+	BARECEGUI* BARECEGUI::getInstance() {
+		if(!m_instance) {
+			m_instance = new BARECEGUI();
+		}
+		return m_instance;
+	}
+	
+	void BARECEGUI::release() {
+		if(m_instance)
+			delete m_instance;
+	}
+	
+	BARECEGUI::BARECEGUI() {
+		
+	}
+	
+	BARECEGUI::~BARECEGUI() {
+		for(CEGUIContextWrapper* e : m_contexts) {
+			e->rootWindow->destroy();
+			
+			delete e;
+		}
+		m_contexts.clear();
+	}
 	
 	void BARECEGUI::init(std::string& resourceDirectory, unsigned int numContexts) {
+		m_contexts.clear(); // Just in case :)
+		
 		// Create the first context wrapper - we never have less than 1 context.
 		CEGUIContextWrapper* primary = new CEGUIContextWrapper;
 		
@@ -98,6 +126,10 @@ namespace BARE2D {
 		// To enable semi-transparency within widgets, we must turn off depth-testing.
 		glDisable(GL_DEPTH_TEST);
 		
+		glBindTexture(GL_TEXTURE_2D, 0);
+		glUseProgram(0);
+		glActiveTexture(GL_TEXTURE0);
+		
 		// First, 'begin' rendering for this current context.
 		m_contexts[m_activeContext]->renderer->beginRendering();
 		// Actually add the glyphs to whatever data structure
@@ -115,10 +147,6 @@ namespace BARE2D {
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		// Unbind whatever texture they've bound
 		glBindTexture(GL_TEXTURE_2D, 0);
-		// Disable various vertex array attributes
-		glDisableClientState(GL_VERTEX_ARRAY);
-		glDisableClientState(GL_COLOR_ARRAY);
-		glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 	}
 
 	void BARECEGUI::update() {
@@ -150,7 +178,7 @@ namespace BARE2D {
 		}
 	}
 
-	void BARECEGUI::setMouseCursor(std::string& imageFile) {
+	void BARECEGUI::setMouseCursor(std::string imageFile) {
 		m_contexts[m_activeContext]->context->getMouseCursor().setDefaultImage(imageFile);
 	}
 
@@ -210,12 +238,12 @@ namespace BARE2D {
 		}
 	}
 
-	void BARECEGUI::loadScheme(std::string& schemeFile) {
+	void BARECEGUI::loadScheme(std::string schemeFile) {
 		// Load a scheme
 		CEGUI::SchemeManager::getSingleton().createFromFile(schemeFile);
 	}
 
-	void BARECEGUI::setFont(std::string& fontFile) {
+	void BARECEGUI::setFont(std::string fontFile) {
 		// Create the font
 		CEGUI::FontManager::getSingleton().createFromFile(fontFile + ".font");
 		// Set the font in each context.
@@ -224,7 +252,7 @@ namespace BARE2D {
 		}
 	}
 
-	CEGUI::Window* BARECEGUI::createWidget(std::string& type, glm::vec4& destRectPercent, glm::vec4 destRectPixels, CEGUI::Window* parent, std::string name) {
+	CEGUI::Window* BARECEGUI::createWidget(std::string type, glm::vec4 destRectPercent, glm::vec4 destRectPixels, CEGUI::Window* parent, std::string name) {
 		// Create the window for the widget
 		CEGUI::Window* newWindow = CEGUI::WindowManager::getSingleton().createWindow(type, name);
 		// Set its size, position too
@@ -232,7 +260,12 @@ namespace BARE2D {
 		newWindow->setSize(CEGUI::USize(CEGUI::UDim(destRectPercent.z, destRectPixels.z), CEGUI::UDim(destRectPercent.w, destRectPixels.w)));
 		
 		// If a parent is given, add it as a child
-		if(parent) parent->addChild(newWindow);
+		if(parent) {
+			parent->addChild(newWindow);
+		} else {
+			// If it's not, add it to the root.
+			m_contexts[m_activeContext]->rootWindow->addChild(newWindow);
+		}
 		
 		return newWindow;
 	}

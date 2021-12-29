@@ -62,6 +62,7 @@ void TestScreen::draw()
 		}
 	}
 	
+	
 	m_renderer->end();
 	m_renderer->render();
 	
@@ -77,6 +78,9 @@ void TestScreen::draw()
 	
 	m_fontRenderer->end();
 	m_fontRenderer->render();
+
+
+	m_gui->draw();
 	
 	// Debug rendering demo.
 	/*float radians = m_time * M_PI * 2.0f / 60.0f;
@@ -114,7 +118,7 @@ void TestScreen::initScreen()
 
 void TestScreen::onEntry()
 {
-	BARE2D::initGLErrorCallback();
+	BARE2D::initGLErrorCallback(BARE2D::GLErrorSeverity::LOW);
 	
 	m_position = glm::vec2(0.0f);
 	
@@ -154,6 +158,12 @@ void TestScreen::onEntry()
 	std::string scriptPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Lua/PrintTest.lua";
 	BARE2D::LuaScript scr = BARE2D::ResourceManager::loadScript(scriptPath);
 	BARE2D::LuaScriptQueue::getInstance()->addLuaScript(scr);
+	
+	std::string guiPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/GUI";
+	m_gui = BARE2D::BARECEGUI::getInstance();
+	m_gui->init(guiPath, 1);
+	m_gui->loadScheme("AlfiskoSkin.scheme");
+	m_gui->createWidget("AlfiskoSkin/FrameWindow", glm::vec4(0.0f, 0.0f, 0.5f, 0.5f), glm::vec4(0.0f));
 }
 
 void TestScreen::onExit()
@@ -203,4 +213,5 @@ void TestScreen::update(double dt)
 	m_lastMouse = m_fbo->getCamera()->getViewedPositionFromScreenPosition(m_inputManager->getMousePosition());
 	
 	m_luaEngine.update();
+	m_gui->update();
 }

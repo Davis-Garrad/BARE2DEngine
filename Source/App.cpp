@@ -1,5 +1,7 @@
 #include "App.hpp"
 
+#include "BARECEGUI.hpp"
+
 #include <SDL2/SDL.h>
 #include <GL/gl.h>
 
@@ -149,8 +151,11 @@ namespace BARE2D {
 	}
 	
 	void App::pollSDLInput() {
+		BARECEGUI* gui = BARECEGUI::getInstance();
+		
 		SDL_Event event;
 		while(SDL_PollEvent(&event)) {
+			gui->handleSDLEvent(event);
 			switch(event.type) {
 				case SDL_QUIT:
 					exitApp();

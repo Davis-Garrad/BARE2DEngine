@@ -17,16 +17,15 @@ namespace BARE2D {
 	class BARECEGUI
 	{
 	public:
+		static BARECEGUI* getInstance();
+		static void release();
+		
 		/**
 		 * @brief Initializes all of the necessary stuff to use CEGUI!
 		 * @param resourceDirectory The directory that all of the resources lie in. Should follow CEGUI's specs.
 		 * @param numContexts The number of different contexts to create. Each context has the ability to handle input differently.
 		 */
 		void init(std::string& resourceDirectory, unsigned int numContexts);
-		/**
-		 * @brief Frees all necessary memory and unloads resources. Destroys root + children windows.
-		 */
-		void destroy();
 		
 		/**
 		 * @brief Draws the GUI to the screen over top of what's already there.
@@ -48,7 +47,7 @@ namespace BARE2D {
 		 * @brief Sets the image of the mouse cursor.
 		 * @param imageFile The file to set the mouse cursor's image from.
 		 */
-		void setMouseCursor(std::string& imageFile);
+		void setMouseCursor(std::string imageFile);
 		
 		/**
 		 * @brief Shows/hides the mouse cursor. Useful for cutscenes!
@@ -66,13 +65,13 @@ namespace BARE2D {
 		 * @brief Loads a scheme file from resourceDirectory/schemes
 		 * @param schemeFile The file to load from
 		 */
-		void loadScheme(std::string& schemeFile);
+		void loadScheme(std::string schemeFile);
 		
 		/**
 		 * @brief Sets the current font to some font.
 		 * @param fontFile The file of the font to be loaded.
 		 */
-		void setFont(std::string& fontFile);
+		void setFont(std::string fontFile);
 		
 		/**
 		 * @brief Creates a widget of some type.
@@ -83,7 +82,7 @@ namespace BARE2D {
 		 * @param name The name of the window - defaults to a unique identifier. Only set this if a pointer of the window cannot be retained/propagated as a handle.
 		 * @return A pointer to the new CEGUI::Window - can be casted to some child type generally.
 		 */
-		CEGUI::Window* createWidget(std::string& type, glm::vec4& destRectPercent, glm::vec4 destRectPixels, CEGUI::Window* parent = nullptr, std::string name = "");
+		CEGUI::Window* createWidget(std::string type, glm::vec4 destRectPercent, glm::vec4 destRectPixels, CEGUI::Window* parent = nullptr, std::string name = "");
 		
 		/**
 		 * @return The OpenGL3Renderer that the context "owns" 
@@ -95,7 +94,17 @@ namespace BARE2D {
 		CEGUI::GUIContext* getContext();
 		
 	private:
+		BARECEGUI();
+		~BARECEGUI();
+		
+		static BARECEGUI* m_instance;
+	
 		static bool m_initialized;
+		
+		/**
+		 * @brief Frees all necessary memory and unloads resources. Destroys root + children windows.
+		 */
+		void destroy();
 		
 		std::vector<CEGUIContextWrapper*> m_contexts;
 		unsigned int m_lastTime = 0;

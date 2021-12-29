@@ -59,11 +59,12 @@ namespace BARE2D {
 		
 		// The perspective camera (it also holds the window size, FBO position, etc.)
 		Camera2D* m_camera = nullptr;
-		// The actual FBO's size.
-		glm::vec2 m_size;
 		
 		// The fragment and vertex shader paths for the GLSL shader program
 		std::string m_fragmentShaderPath, m_vertexShaderPath;
+		
+		// The actual FBO's size.
+		glm::vec2 m_size;
 		
 		// Some shaders won't touch the depth buffer.
 		bool m_shaderHasDepth = false;

@@ -51,7 +51,7 @@ namespace BARE2D {
 		Logger::getInstance()->log("Starting XML data read from file");
 		
 		// Find the proper data cache
-		Cache<unsigned int, XMLData>* data = getDataCache(dataType);
+		//Cache<unsigned int, XMLData>* data = getDataCache(dataType);
 		
 		// Create an XML document for the file
 		rapidxml::xml_document<> doc;

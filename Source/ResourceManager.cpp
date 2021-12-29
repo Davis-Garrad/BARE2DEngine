@@ -98,15 +98,24 @@ namespace BARE2D {
 
 	MutableTexture* ResourceManager::setMutableTexture(std::string& textureName, Texture& texture)
 	{
+		throwFatalError(BAREError::UNINITIALIZED_FUNCTION, "ResourceManager::setMutableTexture");
+		
 		return nullptr;
 	}
 
 	MutableTexture* ResourceManager::loadMutableTexture(std::string& textureName)
 	{
+		throwFatalError(BAREError::UNINITIALIZED_FUNCTION, "ResourceManager::loadMutableTexture");
+		
+		return nullptr;
 	}
 
 	Sound ResourceManager::loadSound(std::string& soundPath)
 	{
+		throwFatalError(BAREError::UNINITIALIZED_FUNCTION, "ResourceManager::loadSound");
+		
+		Sound s;
+		return s;
 	}
 
 	LuaScript ResourceManager::loadScript(std::string& scriptPath)

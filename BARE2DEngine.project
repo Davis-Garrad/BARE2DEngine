@@ -27,7 +27,17 @@
     <Topleveldir>/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine</Topleveldir>
   </Reconciliation>
   <VirtualDirectory Name="Source">
+    <VirtualDirectory Name="Audio">
+      <File Name="Source/Music.cpp"/>
+      <File Name="Source/Music.hpp"/>
+      <File Name="Source/AudioManager.cpp"/>
+      <File Name="Source/AudioManager.hpp"/>
+      <File Name="Source/Sound.hpp"/>
+      <File Name="Source/Sound.cpp"/>
+    </VirtualDirectory>
     <VirtualDirectory Name="Scripting">
+      <File Name="Source/LuaScript.hpp"/>
+      <File Name="Source/LuaScript.cpp"/>
       <File Name="Source/LuaFunctions.cpp"/>
       <File Name="Source/LuaFunctions.hpp"/>
       <File Name="Source/LuaContextManager.cpp"/>
@@ -50,13 +60,9 @@
       <File Name="Source/IOManager.hpp"/>
       <File Name="Source/IOManager.cpp"/>
       <VirtualDirectory Name="Types">
-        <File Name="Source/LuaScript.hpp"/>
-        <File Name="Source/LuaScript.cpp"/>
         <File Name="Source/MutableTexture.cpp"/>
         <File Name="Source/MutableTexture.hpp"/>
         <File Name="Source/Texture.hpp"/>
-        <File Name="Source/Sound.hpp"/>
-        <File Name="Source/Sound.cpp"/>
         <File Name="Source/Font.hpp"/>
         <File Name="Source/Font.cpp"/>
       </VirtualDirectory>
@@ -146,6 +152,7 @@
       <Linker Options="-lboost_filesystem -lboost_system -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW" Required="yes">
         <LibraryPath Value="."/>
         <LibraryPath Value="/usr/lib/x86_64-linux-gnu/"/>
+        <LibraryPath Value="/usr/include/x86_64-linux-gnu/cegui-0.8.7/"/>
         <Library Value="lua5.3"/>
       </Linker>
       <ResourceCompiler Options="" Required="no"/>

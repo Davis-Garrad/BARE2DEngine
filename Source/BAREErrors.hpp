@@ -36,6 +36,16 @@ namespace BARE2D {
 		LUA_FAILURE
 	};
 	
+	enum class GLErrorSeverity {
+		NOTIF,
+		LOW,
+		MED,
+		HIGH,
+		UNKNOWN
+	};
+	
+	extern GLErrorSeverity GLErrorMinSeverity;
+	
 	/**
 	 * @brief Returns the string representing/explaining the error that occurred.
 	 * @param err The error enum, which a function returns.
@@ -65,7 +75,7 @@ namespace BARE2D {
 	/**
 	 * @brief Initializes the GL Debug Message Callback function, and enables debug output straight from OpenGL
 	 */
-	extern void initGLErrorCallback();
+	extern void initGLErrorCallback(GLErrorSeverity minSeverity = GLErrorSeverity::NOTIF);
 	
 	extern std::vector<BAREError> thrownErrors;
 }

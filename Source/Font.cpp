@@ -56,7 +56,7 @@ namespace BARE2D {
 		// To hold all glyph metrics given by TTF_GlyphMetrics
 		glm::ivec4* glyphRectangles = new glm::ivec4[m_regLength];
 		// Some incremental variables.
-		int i = 0, advance;
+		unsigned int i = 0;
 		
 		// Loop through every character
 		for(char c = m_regStart; c < m_regStart + m_regLength; c++) {
@@ -144,7 +144,7 @@ namespace BARE2D {
 		// The y offset sustains throughout all loops
 		int yOff = padding;
 		// Loop through every column in every row
-		for(int row = 0; row < bestRows; row++) {
+		for(unsigned int row = 0; row < bestRows; row++) {
 			// The x offset should reset for each row
 			int xOff = padding;
 			for(unsigned int column = 0; column < bestPartition[row].size(); column++) {
@@ -156,8 +156,8 @@ namespace BARE2D {
 				
 				// This is what's called pre-multiplication. It multiplies the alpha of each pixel into the r, g, and b. I think?
 				unsigned char* sp = (unsigned char*)glyphSurface->pixels;
-				int cp = glyphSurface->w * glyphSurface->h * 4;
-				for(int i = 0; i < cp; i+= 4) {
+				unsigned int cp = glyphSurface->w * glyphSurface->h * 4;
+				for(unsigned int i = 0; i < cp; i += 4) {
 					float a = sp[i+3] / 255.0f;
 					sp[i] = (unsigned char)((float)sp[i] * a);
 					sp[i+1] = sp[i];
@@ -265,7 +265,7 @@ namespace BARE2D {
 				columnWidth = 0;
 			} else {
 				// Check to make sure we actually have this glyph
-				int glyphIndex = c - m_regStart;
+				unsigned int glyphIndex = c - m_regStart;
 				if(glyphIndex < 0 || glyphIndex >= m_regLength) {
 					// We don't actually have that character in the font, just add the width of the unknown characer
 					glyphIndex = m_regLength;

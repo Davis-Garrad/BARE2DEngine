@@ -1,10 +1,14 @@
 #pragma once
 
-class Sound
-{
-public:
-	Sound();
-	~Sound();
+namespace BARE2D {
 
-};
+	class Sound
+	{
+	public:
+		Sound();
+		~Sound();
+
+	};
+
+}
 

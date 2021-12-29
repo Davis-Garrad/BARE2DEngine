@@ -1,10 +1,14 @@
 #include "Sound.hpp"
 
-Sound::Sound()
-{
-}
+namespace BARE2D {
 
-Sound::~Sound()
-{
+	Sound::Sound()
+	{
+	}
+
+	Sound::~Sound()
+	{
+	}
+
 }
 

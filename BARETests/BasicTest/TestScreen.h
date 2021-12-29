@@ -10,6 +10,7 @@
 #include <DebugRenderer.hpp>
 #include <InputManager.hpp>
 #include <LuaScriptEngine.hpp>
+#include <BARECEGUI.hpp>
 
 class TestScreen : public BARE2D::Screen
 {
@@ -42,6 +43,7 @@ private:
 	BARE2D::Texture m_texture;
 	BARE2D::Font m_font_openSans;
 	BARE2D::LuaScriptEngine m_luaEngine;
+	BARE2D::BARECEGUI* m_gui = nullptr;
 	
 	glm::vec2 m_position;
 	

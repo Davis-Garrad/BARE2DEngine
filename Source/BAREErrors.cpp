@@ -29,23 +29,30 @@ void GLAPIENTRY MessageCallback( GLenum source,
                  const void* userParam )
 {
 	std::string severityStr = "Unspecified";
+	BARE2D::GLErrorSeverity severityEnum = BARE2D::GLErrorSeverity::UNKNOWN;
 	switch(severity) {
 		case GL_DEBUG_SEVERITY_HIGH:
 			severityStr = "High (UB)";
+			severityEnum = BARE2D::GLErrorSeverity::HIGH;
 			break;
 		case GL_DEBUG_SEVERITY_MEDIUM:
 			severityStr = "Medium (Performance, deprecated)";
+			severityEnum = BARE2D::GLErrorSeverity::MED;
 			break;
 		case GL_DEBUG_SEVERITY_LOW:
 			severityStr = "Low (performance generally)";
+			severityEnum = BARE2D::GLErrorSeverity::LOW;
 			break;
 		case GL_DEBUG_SEVERITY_NOTIFICATION:
 			severityStr = "Notification";
+			severityEnum = BARE2D::GLErrorSeverity::NOTIF;
 			break;
 		default:
 			severityStr = "Unspecified";
 			break;
 	}
+	
+	if((unsigned int)severityEnum < (unsigned int)BARE2D::GLErrorMinSeverity) return;
 	
 	std::string sourceStr = "Unspecified";
 	switch(source) {
@@ -122,6 +129,8 @@ void GLAPIENTRY MessageCallback( GLenum source,
 }
 
 namespace BARE2D {
+	GLErrorSeverity GLErrorMinSeverity = GLErrorSeverity::NOTIF; 
+	
 	std::vector<BAREError> thrownErrors;
 	
 	std::string getErrString(BAREError err) {
@@ -198,7 +207,9 @@ namespace BARE2D {
 		thrownErrors.clear();
 	}
 	
-	void initGLErrorCallback() {
+	void initGLErrorCallback(GLErrorSeverity minSeverity) {
+		GLErrorMinSeverity = minSeverity;
+		
 		GLboolean inited = GL_FALSE;
 		glGetBooleanv(GL_DEBUG_OUTPUT, &inited);
 		

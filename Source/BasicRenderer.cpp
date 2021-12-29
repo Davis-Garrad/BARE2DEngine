@@ -49,7 +49,7 @@ namespace BARE2D {
 			return;
 		
 		// At this point we can just scale the size (the position should be translated in the shader) and draw it
-		glm::vec2 size = m_camera->getScreenSizeFromViewedSize(glm::vec2(destRect.z, destRect.w));
+		//glm::vec2 size = m_camera->getScreenSizeFromViewedSize(glm::vec2(destRect.z, destRect.w));
 		
 		// Just add the glyph
 		m_glyphs.emplace_back(destRect, uvRect, texture, depth, Colour(255, 255, 255, 255));
@@ -61,7 +61,7 @@ namespace BARE2D {
 			return;
 		
 		// At this point we can just scale the size (the position should be translated in the shader) and draw it
-		glm::vec2 size = m_camera->getScreenSizeFromViewedSize(glm::vec2(destRect.z, destRect.w));
+		//glm::vec2 size = m_camera->getScreenSizeFromViewedSize(glm::vec2(destRect.z, destRect.w));
 		
 		// Just add the glyph
 		m_glyphs.emplace_back(destRect, uvRect, texture, depth, colour);
