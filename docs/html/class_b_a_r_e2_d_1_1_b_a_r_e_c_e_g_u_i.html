@@ -91,6 +91,8 @@ $(document).ready(function(){initNavTree('class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i-members.html">List of all members</a>  </div>
@@ -119,9 +121,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5efde9a21fff6c7e43ebc7c2c69ffe78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a5efde9a21fff6c7e43ebc7c2c69ffe78">init</a> (std::string &amp;resourceDirectory, unsigned int numContexts)</td></tr>
 <tr class="memdesc:a5efde9a21fff6c7e43ebc7c2c69ffe78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes all of the necessary stuff to use CEGUI!  <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a5efde9a21fff6c7e43ebc7c2c69ffe78">More...</a><br /></td></tr>
 <tr class="separator:a5efde9a21fff6c7e43ebc7c2c69ffe78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b69baba42d43ae2761bda9ace328bc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a6b69baba42d43ae2761bda9ace328bc4">destroy</a> ()</td></tr>
-<tr class="memdesc:a6b69baba42d43ae2761bda9ace328bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees all necessary memory and unloads resources. Destroys root + children windows.  <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a6b69baba42d43ae2761bda9ace328bc4">More...</a><br /></td></tr>
-<tr class="separator:a6b69baba42d43ae2761bda9ace328bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1129545c46dc260d9ef466ca402a99a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a1129545c46dc260d9ef466ca402a99a3">draw</a> ()</td></tr>
 <tr class="memdesc:a1129545c46dc260d9ef466ca402a99a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the GUI to the screen over top of what's already there.  <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a1129545c46dc260d9ef466ca402a99a3">More...</a><br /></td></tr>
 <tr class="separator:a1129545c46dc260d9ef466ca402a99a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,28 +130,45 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abda90814bb22fe7f7b64dc8922f29b58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#abda90814bb22fe7f7b64dc8922f29b58">setActiveContext</a> (unsigned int contextIndex)</td></tr>
 <tr class="memdesc:abda90814bb22fe7f7b64dc8922f29b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the active context.  <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#abda90814bb22fe7f7b64dc8922f29b58">More...</a><br /></td></tr>
 <tr class="separator:abda90814bb22fe7f7b64dc8922f29b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a260956bd84fd14fa573bd35bc51f34bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a260956bd84fd14fa573bd35bc51f34bd">setMouseCursor</a> (std::string &amp;imageFile)</td></tr>
-<tr class="memdesc:a260956bd84fd14fa573bd35bc51f34bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the image of the mouse cursor.  <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a260956bd84fd14fa573bd35bc51f34bd">More...</a><br /></td></tr>
-<tr class="separator:a260956bd84fd14fa573bd35bc51f34bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69778a5ba2537399cc419de8cd55f4bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a69778a5ba2537399cc419de8cd55f4bf">setMouseCursor</a> (std::string imageFile)</td></tr>
+<tr class="memdesc:a69778a5ba2537399cc419de8cd55f4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the image of the mouse cursor.  <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a69778a5ba2537399cc419de8cd55f4bf">More...</a><br /></td></tr>
+<tr class="separator:a69778a5ba2537399cc419de8cd55f4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40870938bcb2207329998b68bb11c70e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a40870938bcb2207329998b68bb11c70e">setMouseCursorShown</a> (bool shown)</td></tr>
 <tr class="memdesc:a40870938bcb2207329998b68bb11c70e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows/hides the mouse cursor. Useful for cutscenes!  <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a40870938bcb2207329998b68bb11c70e">More...</a><br /></td></tr>
 <tr class="separator:a40870938bcb2207329998b68bb11c70e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a770264d8c510bbfe0585abe493011ed7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a770264d8c510bbfe0585abe493011ed7">handleSDLEvent</a> (SDL_Event &amp;evnt)</td></tr>
 <tr class="memdesc:a770264d8c510bbfe0585abe493011ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles and propagates input.  <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a770264d8c510bbfe0585abe493011ed7">More...</a><br /></td></tr>
 <tr class="separator:a770264d8c510bbfe0585abe493011ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11f6592025d95624b934132d200bbd09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a11f6592025d95624b934132d200bbd09">loadScheme</a> (std::string &amp;schemeFile)</td></tr>
-<tr class="memdesc:a11f6592025d95624b934132d200bbd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a scheme file from resourceDirectory/schemes.  <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a11f6592025d95624b934132d200bbd09">More...</a><br /></td></tr>
-<tr class="separator:a11f6592025d95624b934132d200bbd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2debc8b3ad66dc355d0f37b7e2bec549"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a2debc8b3ad66dc355d0f37b7e2bec549">setFont</a> (std::string &amp;fontFile)</td></tr>
-<tr class="memdesc:a2debc8b3ad66dc355d0f37b7e2bec549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current font to some font.  <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a2debc8b3ad66dc355d0f37b7e2bec549">More...</a><br /></td></tr>
-<tr class="separator:a2debc8b3ad66dc355d0f37b7e2bec549"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7208e4ee15a136aad2545debd3a59249"><td class="memItemLeft" align="right" valign="top">CEGUI::Window *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a7208e4ee15a136aad2545debd3a59249">createWidget</a> (std::string &amp;type, glm::vec4 &amp;destRectPercent, glm::vec4 destRectPixels, CEGUI::Window *parent=nullptr, std::string name=&quot;&quot;)</td></tr>
-<tr class="memdesc:a7208e4ee15a136aad2545debd3a59249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a widget of some type.  <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a7208e4ee15a136aad2545debd3a59249">More...</a><br /></td></tr>
-<tr class="separator:a7208e4ee15a136aad2545debd3a59249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3737b344e427bd5b2f92fa08f1e44885"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a3737b344e427bd5b2f92fa08f1e44885">loadScheme</a> (std::string schemeFile)</td></tr>
+<tr class="memdesc:a3737b344e427bd5b2f92fa08f1e44885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a scheme file from resourceDirectory/schemes.  <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a3737b344e427bd5b2f92fa08f1e44885">More...</a><br /></td></tr>
+<tr class="separator:a3737b344e427bd5b2f92fa08f1e44885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac931fcf21bb8ae2289c31ab0370772bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ac931fcf21bb8ae2289c31ab0370772bd">setFont</a> (std::string fontFile)</td></tr>
+<tr class="memdesc:ac931fcf21bb8ae2289c31ab0370772bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current font to some font.  <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ac931fcf21bb8ae2289c31ab0370772bd">More...</a><br /></td></tr>
+<tr class="separator:ac931fcf21bb8ae2289c31ab0370772bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4887d95ac1f2dc8becc75cf11d6cf9dd"><td class="memItemLeft" align="right" valign="top">CEGUI::Window *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a4887d95ac1f2dc8becc75cf11d6cf9dd">createWidget</a> (std::string type, glm::vec4 destRectPercent, glm::vec4 destRectPixels, CEGUI::Window *parent=nullptr, std::string name=&quot;&quot;)</td></tr>
+<tr class="memdesc:a4887d95ac1f2dc8becc75cf11d6cf9dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a widget of some type.  <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a4887d95ac1f2dc8becc75cf11d6cf9dd">More...</a><br /></td></tr>
+<tr class="separator:a4887d95ac1f2dc8becc75cf11d6cf9dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3c3feb09e2c328426f057336e6ad2ae"><td class="memItemLeft" align="right" valign="top">CEGUI::OpenGL3Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aa3c3feb09e2c328426f057336e6ad2ae">getRenderer</a> ()</td></tr>
 <tr class="separator:aa3c3feb09e2c328426f057336e6ad2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecad6d159917b2821f9fcb4429adccea"><td class="memItemLeft" align="right" valign="top">CEGUI::GUIContext *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aecad6d159917b2821f9fcb4429adccea">getContext</a> ()</td></tr>
 <tr class="separator:aecad6d159917b2821f9fcb4429adccea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ab3f339793671b90bb449bf17a9d953ca"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html">BARECEGUI</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ab3f339793671b90bb449bf17a9d953ca">getInstance</a> ()</td></tr>
+<tr class="separator:ab3f339793671b90bb449bf17a9d953ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1850903003bf2b3b10608e6d3aa1f20"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ad1850903003bf2b3b10608e6d3aa1f20">release</a> ()</td></tr>
+<tr class="separator:ad1850903003bf2b3b10608e6d3aa1f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ade528b2e05e0562fd5ecda850a49ec14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ade528b2e05e0562fd5ecda850a49ec14">BARECEGUI</a> ()</td></tr>
+<tr class="separator:ade528b2e05e0562fd5ecda850a49ec14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44960ac3a16b7b657636483f24d625ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a44960ac3a16b7b657636483f24d625ec">~BARECEGUI</a> ()</td></tr>
+<tr class="separator:a44960ac3a16b7b657636483f24d625ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b69baba42d43ae2761bda9ace328bc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a6b69baba42d43ae2761bda9ace328bc4">destroy</a> ()</td></tr>
+<tr class="memdesc:a6b69baba42d43ae2761bda9ace328bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees all necessary memory and unloads resources. Destroys root + children windows.  <a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a6b69baba42d43ae2761bda9ace328bc4">More...</a><br /></td></tr>
+<tr class="separator:a6b69baba42d43ae2761bda9ace328bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -165,15 +181,89 @@ Private Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
+<tr class="memitem:a15472ee784e1eaf1d97876cc3565f477"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html">BARECEGUI</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a15472ee784e1eaf1d97876cc3565f477">m_instance</a> = nullptr</td></tr>
+<tr class="separator:a15472ee784e1eaf1d97876cc3565f477"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a497b5ecd274895ea0a74d6603cd0ffb9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a497b5ecd274895ea0a74d6603cd0ffb9">m_initialized</a> = false</td></tr>
 <tr class="separator:a497b5ecd274895ea0a74d6603cd0ffb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00017">17</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html">BARECEGUI.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7208e4ee15a136aad2545debd3a59249"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7208e4ee15a136aad2545debd3a59249">&#9670;&nbsp;</a></span>createWidget()</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ade528b2e05e0562fd5ecda850a49ec14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade528b2e05e0562fd5ecda850a49ec14">&#9670;&nbsp;</a></span>BARECEGUI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BARE2D::BARECEGUI::BARECEGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00026">26</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00014">getInstance()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ade528b2e05e0562fd5ecda850a49ec14_icgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ade528b2e05e0562fd5ecda850a49ec14_icgraph" alt=""/></div>
+<map name="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ade528b2e05e0562fd5ecda850a49ec14_icgraph" id="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ade528b2e05e0562fd5ecda850a49ec14_icgraph">
+<area shape="rect" title=" " alt="" coords="1079,5,1251,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ab3f339793671b90bb449bf17a9d953ca" title=" " alt="" coords="859,5,1031,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#af9894f9e43d2620a21db76752fdb7fc4" title="Polls inputs from SDL and updates the inputmanager as appropriate." alt="" coords="620,13,811,39"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#a88670d45389ef8ac5211227debf322e2" title="Updates any input, and throws it down the pipeline!" alt="" coords="389,13,572,39"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#ae0fb15b02f63b3b737041135b968ac55" title="Updates input, output, etc. Only for internal use." alt="" coords="187,13,341,39"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#a767c055c78bbf86b34bbd47e4b05ee01" title="Runs the program! Starts the update&#45;draw loop." alt="" coords="5,13,139,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a44960ac3a16b7b657636483f24d625ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44960ac3a16b7b657636483f24d625ec">&#9670;&nbsp;</a></span>~BARECEGUI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BARE2D::BARECEGUI::~BARECEGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00030">30</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4887d95ac1f2dc8becc75cf11d6cf9dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4887d95ac1f2dc8becc75cf11d6cf9dd">&#9670;&nbsp;</a></span>createWidget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,13 +271,13 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">CEGUI::Window * BARE2D::BARECEGUI::createWidget </td>
           <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">glm::vec4 &amp;&#160;</td>
+          <td class="paramtype">glm::vec4&#160;</td>
           <td class="paramname"><em>destRectPercent</em>, </td>
         </tr>
         <tr>
@@ -229,7 +319,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the new CEGUI::Window - can be casted to some child type generally. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00227">227</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00255">255</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
 
 </div>
 </div>
@@ -238,6 +328,9 @@ Static Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void BARE2D::BARECEGUI::destroy </td>
@@ -246,11 +339,16 @@ Static Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Frees all necessary memory and unloads resources. Destroys root + children windows. </p>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00086">86</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00114">114</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
 
 </div>
 </div>
@@ -271,7 +369,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Draws the GUI to the screen over top of what's already there. </p>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00097">97</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00125">125</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
 
 </div>
 </div>
@@ -291,7 +389,79 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The GUIContext that the context "owns" </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00244">244</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00277">277</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_app_8cpp_source.html#l00153">BARE2D::App::pollSDLInput()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea_icgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea_icgraph" alt=""/></div>
+<map name="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea_icgraph" id="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea_icgraph">
+<area shape="rect" title=" " alt="" coords="859,5,1031,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#af9894f9e43d2620a21db76752fdb7fc4" title="Polls inputs from SDL and updates the inputmanager as appropriate." alt="" coords="620,13,811,39"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#a88670d45389ef8ac5211227debf322e2" title="Updates any input, and throws it down the pipeline!" alt="" coords="389,13,572,39"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#ae0fb15b02f63b3b737041135b968ac55" title="Updates input, output, etc. Only for internal use." alt="" coords="187,13,341,39"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#a767c055c78bbf86b34bbd47e4b05ee01" title="Runs the program! Starts the update&#45;draw loop." alt="" coords="5,13,139,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab3f339793671b90bb449bf17a9d953ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3f339793671b90bb449bf17a9d953ca">&#9670;&nbsp;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html">BARECEGUI</a> * BARE2D::BARECEGUI::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00014">14</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00026">BARECEGUI()</a>, and <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00100">m_instance</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_app_8cpp_source.html#l00153">BARE2D::App::pollSDLInput()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca_cgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca_cgraph" alt=""/></div>
+<map name="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca_cgraph" id="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,177,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ade528b2e05e0562fd5ecda850a49ec14" title=" " alt="" coords="225,5,397,47"/>
+</map>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca_icgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca_icgraph" alt=""/></div>
+<map name="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca_icgraph" id="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca_icgraph">
+<area shape="rect" title=" " alt="" coords="859,5,1031,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#af9894f9e43d2620a21db76752fdb7fc4" title="Polls inputs from SDL and updates the inputmanager as appropriate." alt="" coords="620,13,811,39"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#a88670d45389ef8ac5211227debf322e2" title="Updates any input, and throws it down the pipeline!" alt="" coords="389,13,572,39"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#ae0fb15b02f63b3b737041135b968ac55" title="Updates input, output, etc. Only for internal use." alt="" coords="187,13,341,39"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#a767c055c78bbf86b34bbd47e4b05ee01" title="Runs the program! Starts the update&#45;draw loop." alt="" coords="5,13,139,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -311,7 +481,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The OpenGL3Renderer that the context "owns" </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00240">240</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00273">273</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
 
 </div>
 </div>
@@ -339,7 +509,23 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00165">165</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00193">193</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_app_8cpp_source.html#l00153">BARE2D::App::pollSDLInput()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7_icgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7_icgraph" alt=""/></div>
+<map name="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7_icgraph" id="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7_icgraph">
+<area shape="rect" title="Handles and propagates input." alt="" coords="859,5,1031,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#af9894f9e43d2620a21db76752fdb7fc4" title="Polls inputs from SDL and updates the inputmanager as appropriate." alt="" coords="620,13,811,39"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#a88670d45389ef8ac5211227debf322e2" title="Updates any input, and throws it down the pipeline!" alt="" coords="389,13,572,39"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#ae0fb15b02f63b3b737041135b968ac55" title="Updates input, output, etc. Only for internal use." alt="" coords="187,13,341,39"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_app.html#a767c055c78bbf86b34bbd47e4b05ee01" title="Runs the program! Starts the update&#45;draw loop." alt="" coords="5,13,139,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -378,14 +564,14 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00013">13</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00039">39</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00013">BARE2D::CEGUIContextWrapper::context</a>, <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00098">m_initialized</a>, <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00012">BARE2D::CEGUIContextWrapper::renderer</a>, and <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00014">BARE2D::CEGUIContextWrapper::rootWindow</a>.</p>
+<p class="reference">References <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00013">BARE2D::CEGUIContextWrapper::context</a>, <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00102">m_initialized</a>, <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00012">BARE2D::CEGUIContextWrapper::renderer</a>, and <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00014">BARE2D::CEGUIContextWrapper::rootWindow</a>.</p>
 
 </div>
 </div>
-<a id="a11f6592025d95624b934132d200bbd09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11f6592025d95624b934132d200bbd09">&#9670;&nbsp;</a></span>loadScheme()</h2>
+<a id="a3737b344e427bd5b2f92fa08f1e44885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3737b344e427bd5b2f92fa08f1e44885">&#9670;&nbsp;</a></span>loadScheme()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -393,7 +579,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void BARE2D::BARECEGUI::loadScheme </td>
           <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>schemeFile</em></td><td>)</td>
           <td></td>
         </tr>
@@ -408,7 +594,36 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00213">213</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00241">241</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad1850903003bf2b3b10608e6d3aa1f20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1850903003bf2b3b10608e6d3aa1f20">&#9670;&nbsp;</a></span>release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BARE2D::BARECEGUI::release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00021">21</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00100">m_instance</a>.</p>
 
 </div>
 </div>
@@ -436,14 +651,14 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00145">145</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00173">173</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00102">m_activeContext</a>.</p>
+<p class="reference">References <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00111">m_activeContext</a>.</p>
 
 </div>
 </div>
-<a id="a2debc8b3ad66dc355d0f37b7e2bec549"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2debc8b3ad66dc355d0f37b7e2bec549">&#9670;&nbsp;</a></span>setFont()</h2>
+<a id="ac931fcf21bb8ae2289c31ab0370772bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac931fcf21bb8ae2289c31ab0370772bd">&#9670;&nbsp;</a></span>setFont()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -451,7 +666,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void BARE2D::BARECEGUI::setFont </td>
           <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>fontFile</em></td><td>)</td>
           <td></td>
         </tr>
@@ -466,12 +681,12 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00218">218</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00246">246</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a260956bd84fd14fa573bd35bc51f34bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a260956bd84fd14fa573bd35bc51f34bd">&#9670;&nbsp;</a></span>setMouseCursor()</h2>
+<a id="a69778a5ba2537399cc419de8cd55f4bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69778a5ba2537399cc419de8cd55f4bf">&#9670;&nbsp;</a></span>setMouseCursor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -479,7 +694,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void BARE2D::BARECEGUI::setMouseCursor </td>
           <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>imageFile</em></td><td>)</td>
           <td></td>
         </tr>
@@ -494,7 +709,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00153">153</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00181">181</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
 
 </div>
 </div>
@@ -522,7 +737,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00157">157</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00185">185</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
 
 </div>
 </div>
@@ -543,9 +758,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Updates the amount of time passed in CEGUI. </p>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00124">124</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00152">152</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html">BARECEGUI.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00101">m_lastTime</a>.</p>
+<p class="reference">References <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00110">m_lastTime</a>.</p>
 
 </div>
 </div>
@@ -570,9 +785,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00102">102</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html">BARECEGUI.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00111">111</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html">BARECEGUI.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00145">setActiveContext()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00173">setActiveContext()</a>.</p>
 
 </div>
 </div>
@@ -596,7 +811,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00100">100</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html">BARECEGUI.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00109">109</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html">BARECEGUI.hpp</a>.</p>
 
 </div>
 </div>
@@ -620,9 +835,35 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00098">98</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html">BARECEGUI.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00102">102</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html">BARECEGUI.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00013">init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00039">init()</a>.</p>
+
+</div>
+</div>
+<a id="a15472ee784e1eaf1d97876cc3565f477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15472ee784e1eaf1d97876cc3565f477">&#9670;&nbsp;</a></span>m_instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html">BARECEGUI</a> * BARE2D::BARECEGUI::m_instance = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00100">100</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html">BARECEGUI.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00014">getInstance()</a>, and <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00021">release()</a>.</p>
 
 </div>
 </div>
@@ -646,9 +887,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00101">101</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html">BARECEGUI.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html#l00110">110</a> of file <a class="el" href="_b_a_r_e_c_e_g_u_i_8hpp_source.html">BARECEGUI.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00124">update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00152">update()</a>.</p>
 
 </div>
 </div>

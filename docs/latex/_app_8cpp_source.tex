@@ -4,188 +4,195 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_app_8hpp}{"App.hpp"}}}
 \DoxyCodeLine{00002 }
-\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{SDL2}\textcolor{preprocessor}{/}\textcolor{preprocessor}{SDL}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{GL}\textcolor{preprocessor}{/}\textcolor{preprocessor}{gl}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00005 }
-\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_b_a_r_e2_d_engine_8hpp}{"BARE2DEngine.hpp"}}}
-\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_input_manager_8hpp}{"InputManager.hpp"}}}
-\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_screen_8hpp}{"Screen.hpp"}}}
-\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_window_8hpp}{"Window.hpp"}}}
-\DoxyCodeLine{00010 }
-\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00011}\mbox{\hyperlink{namespace_b_a_r_e2_d}{00011}} \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp}{"BARECEGUI.hpp"}}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{SDL2}\textcolor{preprocessor}{/}\textcolor{preprocessor}{SDL}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{GL}\textcolor{preprocessor}{/}\textcolor{preprocessor}{gl}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_b_a_r_e2_d_engine_8hpp}{"BARE2DEngine.hpp"}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_input_manager_8hpp}{"InputManager.hpp"}}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_screen_8hpp}{"Screen.hpp"}}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_window_8hpp}{"Window.hpp"}}}
 \DoxyCodeLine{00012 }
-\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00013}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a5940a478d28f6e4d9da675023aa26144}{00013}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a5940a478d28f6e4d9da675023aa26144}{App}}()}
-\DoxyCodeLine{00014     \{}
-\DoxyCodeLine{00015         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{init}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{)}};}
-\DoxyCodeLine{00016     \}}
-\DoxyCodeLine{00017 }
-\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00018}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1d75c4c19a39cb736ccdcd65582c3c0e}{00018}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1d75c4c19a39cb736ccdcd65582c3c0e}{App}}()}
-\DoxyCodeLine{00019     \{}
-\DoxyCodeLine{00020         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}{m\_isGameRunning}}) \{}
-\DoxyCodeLine{00021             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{exitApp}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{)}};}
-\DoxyCodeLine{00022         \}}
-\DoxyCodeLine{00023         \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}};}
-\DoxyCodeLine{00024         \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}};}
-\DoxyCodeLine{00025         \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}};}
-\DoxyCodeLine{00026         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}.release();}
-\DoxyCodeLine{00027     \}}
-\DoxyCodeLine{00028 }
-\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00029}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a767c055c78bbf86b34bbd47e4b05ee01}{00029}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a767c055c78bbf86b34bbd47e4b05ee01}{run}}()}
-\DoxyCodeLine{00030     \{}
-\DoxyCodeLine{00031         \textcolor{comment}{// Init if we haven't already}}
-\DoxyCodeLine{00032         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a390fbdf47a840a4c515fa25f98cc9758}{m\_isInited}}) \{}
-\DoxyCodeLine{00033             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{init}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{)}};}
-\DoxyCodeLine{00034         \}}
-\DoxyCodeLine{00035 }
-\DoxyCodeLine{00036         \textcolor{comment}{// Start the gameloop!}}
-\DoxyCodeLine{00037         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}{m\_isGameRunning}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{00038 }
-\DoxyCodeLine{00039         \textcolor{comment}{// Make sure we actually have an entry point}}
-\DoxyCodeLine{00040         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{getCurrentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{)}})}
-\DoxyCodeLine{00041             \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00042 }
-\DoxyCodeLine{00043         \textcolor{comment}{// If we're running the debug build, make sure that we always log errors.}}
-\DoxyCodeLine{00044         \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifdef} DEBUG}
-\DoxyCodeLine{00045         \mbox{\hyperlink{namespace_b_a_r_e2_d_a4085763ff0085d40686c3cd0bc1a5182}{initGLErrorCallback}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a4085763ff0085d40686c3cd0bc1a5182}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a4085763ff0085d40686c3cd0bc1a5182}{)}};}
-\DoxyCodeLine{00046         \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
-\DoxyCodeLine{00047 }
-\DoxyCodeLine{00048         \textcolor{comment}{// Make sure to actually "enter" the entry screen}}
-\DoxyCodeLine{00049         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{getCurrentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{onEntry}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{)}};}
-\DoxyCodeLine{00050 }
-\DoxyCodeLine{00051         \textcolor{comment}{// Gameloop}}
-\DoxyCodeLine{00052         \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}{m\_isGameRunning}}) \{}
-\DoxyCodeLine{00053             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a7cc8c03901700b14cfec0c336645ae13}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a7cc8c03901700b14cfec0c336645ae13}{startTimer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a7cc8c03901700b14cfec0c336645ae13}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a7cc8c03901700b14cfec0c336645ae13}{)}};}
-\DoxyCodeLine{00054             \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a20ecce866aa0f272c630def64298cee9}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a20ecce866aa0f272c630def64298cee9}{integrateFrame}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a20ecce866aa0f272c630def64298cee9}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a20ecce866aa0f272c630def64298cee9}{)}}) \{}
-\DoxyCodeLine{00055                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}{update}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a4a2cfd6c8f2b4147f574f7c22247e9e8}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a4a2cfd6c8f2b4147f574f7c22247e9e8}{getDeltaTime}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a4a2cfd6c8f2b4147f574f7c22247e9e8}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a4a2cfd6c8f2b4147f574f7c22247e9e8}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}{)}};}
-\DoxyCodeLine{00056             \}}
-\DoxyCodeLine{00057             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}{draw}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}{)}};}
-\DoxyCodeLine{00058             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ad291c1daf4c2c0a550daecb7821f5084}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ad291c1daf4c2c0a550daecb7821f5084}{swapBuffer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ad291c1daf4c2c0a550daecb7821f5084}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ad291c1daf4c2c0a550daecb7821f5084}{)}};}
-\DoxyCodeLine{00059             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a034a2b3086567486abbbcaaf667266f9}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a034a2b3086567486abbbcaaf667266f9}{endTimer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a034a2b3086567486abbbcaaf667266f9}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a034a2b3086567486abbbcaaf667266f9}{)}};}
-\DoxyCodeLine{00060         \}}
-\DoxyCodeLine{00061 }
-\DoxyCodeLine{00062         \textcolor{comment}{// Exit the app!}}
-\DoxyCodeLine{00063         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}) \{}
-\DoxyCodeLine{00064             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{getCurrentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{onExit}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{)}};}
-\DoxyCodeLine{00065             m\_screenList.reset(); \textcolor{comment}{// Destroy the screenList}}
-\DoxyCodeLine{00066         \}}
-\DoxyCodeLine{00067     \}}
-\DoxyCodeLine{00068 }
-\DoxyCodeLine{00069 }
-\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00070}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a14fe844e84cbfafc0c7e6f8f6f7d36e0}{00070}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{ScreenList}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a14fe844e84cbfafc0c7e6f8f6f7d36e0}{getScreenList}}() \{}
-\DoxyCodeLine{00071         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}.get();}
-\DoxyCodeLine{00072     \}}
-\DoxyCodeLine{00073 }
-\DoxyCodeLine{00074 }
-\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00075}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae500d02161dd750e8f4c659369e1fe5d}{00075}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae500d02161dd750e8f4c659369e1fe5d}{getWindow}}() \{}
-\DoxyCodeLine{00076         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}};}
-\DoxyCodeLine{00077     \}}
-\DoxyCodeLine{00078 }
-\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00079}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a2a603b736fe6fdb0767a636ee717455d}{00079}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a2a603b736fe6fdb0767a636ee717455d}{getInputManager}}() \{}
-\DoxyCodeLine{00080         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}};}
-\DoxyCodeLine{00081     \}}
-\DoxyCodeLine{00082 }
-\DoxyCodeLine{00083 }
-\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00084}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{00084}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{init}}()}
-\DoxyCodeLine{00085     \{}
-\DoxyCodeLine{00086         \textcolor{comment}{// Make sure not to init twice}}
-\DoxyCodeLine{00087         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a390fbdf47a840a4c515fa25f98cc9758}{m\_isInited}}) \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aed6ff68f5f52346f2c0754edb81b83ed}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aed6ff68f5f52346f2c0754edb81b83ed}{DOUBLE\_INIT}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{)}};}
-\DoxyCodeLine{00088 }
-\DoxyCodeLine{00089         \textcolor{comment}{// Init the screen list}}
-\DoxyCodeLine{00090         m\_screenList = std::make\_unique<ScreenList>();}
-\DoxyCodeLine{00091 }
-\DoxyCodeLine{00092         \textcolor{comment}{// Init the engine}}
-\DoxyCodeLine{00093         \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{init}}\mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{)}};}
-\DoxyCodeLine{00094 }
-\DoxyCodeLine{00095         \textcolor{comment}{// Uncomment this to require hardware acceleration: (defaults to allow accelerated OR accept non-\/accelerated)}}
-\DoxyCodeLine{00096         \textcolor{comment}{// SDL\_GL\_SetAttribute(SDL\_GL\_ACCELERATED\_VISUAL, 1);}}
-\DoxyCodeLine{00097 }
-\DoxyCodeLine{00098         \textcolor{comment}{// Init the input manager}}
-\DoxyCodeLine{00099         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5156e6237e45ec8372579fa015751f89}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5156e6237e45ec8372579fa015751f89}{)}};}
-\DoxyCodeLine{00100 }
-\DoxyCodeLine{00101         \textcolor{comment}{// Init the window}}
-\DoxyCodeLine{00102         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a63f88fdf838aa8bd6cf258b8d2d44018}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a63f88fdf838aa8bd6cf258b8d2d44018}{)}};}
-\DoxyCodeLine{00103         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a02b16c4a920ed63e5bbd4e219f5d1155}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a02b16c4a920ed63e5bbd4e219f5d1155}{create}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a02b16c4a920ed63e5bbd4e219f5d1155}{(}}0\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a02b16c4a920ed63e5bbd4e219f5d1155}{)}};}
-\DoxyCodeLine{00104 }
-\DoxyCodeLine{00105         \textcolor{comment}{// Init the timer}}
-\DoxyCodeLine{00106         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer}{Timer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_af894f9cc637fc1df639d6493347200cc}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_af894f9cc637fc1df639d6493347200cc}{)}};}
-\DoxyCodeLine{00107         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_ae9153aaa0e1a26a32be36dbee2c1d395}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_ae9153aaa0e1a26a32be36dbee2c1d395}{setDeltaTimeLimit}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_ae9153aaa0e1a26a32be36dbee2c1d395}{(}}1.0/60.0\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_ae9153aaa0e1a26a32be36dbee2c1d395}{)}};}
-\DoxyCodeLine{00108 }
-\DoxyCodeLine{00109         \textcolor{comment}{// Make sure we don't double init by setting this var to true}}
-\DoxyCodeLine{00110         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a390fbdf47a840a4c515fa25f98cc9758}{m\_isInited}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{00111     \}}
-\DoxyCodeLine{00112 }
-\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00113}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}{00113}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}{update}}(\textcolor{keywordtype}{double} dt)}
-\DoxyCodeLine{00114     \{}
-\DoxyCodeLine{00115         \textcolor{comment}{// Update everything}}
-\DoxyCodeLine{00116         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}{updateInput}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}{)}};}
-\DoxyCodeLine{00117 }
-\DoxyCodeLine{00118         \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{getCurrentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{getState}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{)}}) \{}
-\DoxyCodeLine{00119             \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253}{ScreenState}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}{RUNNING}}:}
-\DoxyCodeLine{00120                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{getCurrentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aa5bbb3a5fe737eb50d2dc2d27776f53e}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aa5bbb3a5fe737eb50d2dc2d27776f53e}{update}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aa5bbb3a5fe737eb50d2dc2d27776f53e}{(}}dt\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aa5bbb3a5fe737eb50d2dc2d27776f53e}{)}};}
-\DoxyCodeLine{00121                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00122             \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253}{ScreenState}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253af1b095bb6b4fb743116b8e2910c87e2a}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253af1b095bb6b4fb743116b8e2910c87e2a}{CHANGE\_NEXT}}:}
-\DoxyCodeLine{00123                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_ae8047deac7849ebd02b92d8c347715fb}{moveToNextScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_ae8047deac7849ebd02b92d8c347715fb}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_ae8047deac7849ebd02b92d8c347715fb}{)}};}
-\DoxyCodeLine{00124                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00125             \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253}{ScreenState}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ad99b55eff583c9982c86312bdcfdb47c}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ad99b55eff583c9982c86312bdcfdb47c}{CHANGE\_PREV}}:}
-\DoxyCodeLine{00126                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a3456f5ed539fa4b6d50a38600635e878}{moveToPreviousScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a3456f5ed539fa4b6d50a38600635e878}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a3456f5ed539fa4b6d50a38600635e878}{)}};}
-\DoxyCodeLine{00127             \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253}{ScreenState}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ab8b26f3abe929349d415409c67b3b81e}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ab8b26f3abe929349d415409c67b3b81e}{EXIT\_APPLICATION}}:}
-\DoxyCodeLine{00128                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{exitApp}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{)}};}
-\DoxyCodeLine{00129                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00130             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00013}\mbox{\hyperlink{namespace_b_a_r_e2_d}{00013}} \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00015}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a5940a478d28f6e4d9da675023aa26144}{00015}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a5940a478d28f6e4d9da675023aa26144}{App}}()}
+\DoxyCodeLine{00016     \{}
+\DoxyCodeLine{00017         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{init}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{)}};}
+\DoxyCodeLine{00018     \}}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00020}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1d75c4c19a39cb736ccdcd65582c3c0e}{00020}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1d75c4c19a39cb736ccdcd65582c3c0e}{App}}()}
+\DoxyCodeLine{00021     \{}
+\DoxyCodeLine{00022         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}{m\_isGameRunning}}) \{}
+\DoxyCodeLine{00023             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{exitApp}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{)}};}
+\DoxyCodeLine{00024         \}}
+\DoxyCodeLine{00025         \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}};}
+\DoxyCodeLine{00026         \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}};}
+\DoxyCodeLine{00027         \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}};}
+\DoxyCodeLine{00028         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}.release();}
+\DoxyCodeLine{00029     \}}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00031}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a767c055c78bbf86b34bbd47e4b05ee01}{00031}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a767c055c78bbf86b34bbd47e4b05ee01}{run}}()}
+\DoxyCodeLine{00032     \{}
+\DoxyCodeLine{00033         \textcolor{comment}{// Init if we haven't already}}
+\DoxyCodeLine{00034         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a390fbdf47a840a4c515fa25f98cc9758}{m\_isInited}}) \{}
+\DoxyCodeLine{00035             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{init}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{)}};}
+\DoxyCodeLine{00036         \}}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038         \textcolor{comment}{// Start the gameloop!}}
+\DoxyCodeLine{00039         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}{m\_isGameRunning}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041         \textcolor{comment}{// Make sure we actually have an entry point}}
+\DoxyCodeLine{00042         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{getCurrentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{)}})}
+\DoxyCodeLine{00043             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045         \textcolor{comment}{// If we're running the debug build, make sure that we always log errors.}}
+\DoxyCodeLine{00046         \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifdef} DEBUG}
+\DoxyCodeLine{00047         \mbox{\hyperlink{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984}{initGLErrorCallback}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984}{)}};}
+\DoxyCodeLine{00048         \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050         \textcolor{comment}{// Make sure to actually "enter" the entry screen}}
+\DoxyCodeLine{00051         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{getCurrentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{onEntry}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{)}};}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053         \textcolor{comment}{// Gameloop}}
+\DoxyCodeLine{00054         \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}{m\_isGameRunning}}) \{}
+\DoxyCodeLine{00055             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a7cc8c03901700b14cfec0c336645ae13}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a7cc8c03901700b14cfec0c336645ae13}{startTimer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a7cc8c03901700b14cfec0c336645ae13}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a7cc8c03901700b14cfec0c336645ae13}{)}};}
+\DoxyCodeLine{00056             \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a20ecce866aa0f272c630def64298cee9}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a20ecce866aa0f272c630def64298cee9}{integrateFrame}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a20ecce866aa0f272c630def64298cee9}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a20ecce866aa0f272c630def64298cee9}{)}}) \{}
+\DoxyCodeLine{00057                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}{update}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a4a2cfd6c8f2b4147f574f7c22247e9e8}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a4a2cfd6c8f2b4147f574f7c22247e9e8}{getDeltaTime}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a4a2cfd6c8f2b4147f574f7c22247e9e8}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a4a2cfd6c8f2b4147f574f7c22247e9e8}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}{)}};}
+\DoxyCodeLine{00058             \}}
+\DoxyCodeLine{00059             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}{draw}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}{)}};}
+\DoxyCodeLine{00060             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ad291c1daf4c2c0a550daecb7821f5084}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ad291c1daf4c2c0a550daecb7821f5084}{swapBuffer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ad291c1daf4c2c0a550daecb7821f5084}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ad291c1daf4c2c0a550daecb7821f5084}{)}};}
+\DoxyCodeLine{00061             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a034a2b3086567486abbbcaaf667266f9}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a034a2b3086567486abbbcaaf667266f9}{endTimer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a034a2b3086567486abbbcaaf667266f9}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a034a2b3086567486abbbcaaf667266f9}{)}};}
+\DoxyCodeLine{00062         \}}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064         \textcolor{comment}{// Exit the app!}}
+\DoxyCodeLine{00065         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}) \{}
+\DoxyCodeLine{00066             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{getCurrentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{onExit}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{)}};}
+\DoxyCodeLine{00067             m\_screenList.reset(); \textcolor{comment}{// Destroy the screenList}}
+\DoxyCodeLine{00068         \}}
+\DoxyCodeLine{00069     \}}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00072}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a14fe844e84cbfafc0c7e6f8f6f7d36e0}{00072}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{ScreenList}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a14fe844e84cbfafc0c7e6f8f6f7d36e0}{getScreenList}}() \{}
+\DoxyCodeLine{00073         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}.get();}
+\DoxyCodeLine{00074     \}}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00077}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae500d02161dd750e8f4c659369e1fe5d}{00077}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae500d02161dd750e8f4c659369e1fe5d}{getWindow}}() \{}
+\DoxyCodeLine{00078         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}};}
+\DoxyCodeLine{00079     \}}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00081}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a2a603b736fe6fdb0767a636ee717455d}{00081}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a2a603b736fe6fdb0767a636ee717455d}{getInputManager}}() \{}
+\DoxyCodeLine{00082         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}};}
+\DoxyCodeLine{00083     \}}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00086}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{00086}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{init}}()}
+\DoxyCodeLine{00087     \{}
+\DoxyCodeLine{00088         \textcolor{comment}{// Make sure not to init twice}}
+\DoxyCodeLine{00089         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a390fbdf47a840a4c515fa25f98cc9758}{m\_isInited}}) \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aed6ff68f5f52346f2c0754edb81b83ed}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aed6ff68f5f52346f2c0754edb81b83ed}{DOUBLE\_INIT}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{)}};}
+\DoxyCodeLine{00090 }
+\DoxyCodeLine{00091         \textcolor{comment}{// Init the screen list}}
+\DoxyCodeLine{00092         m\_screenList = std::make\_unique<ScreenList>();}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094         \textcolor{comment}{// Init the engine}}
+\DoxyCodeLine{00095         \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{init}}\mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{)}};}
+\DoxyCodeLine{00096 }
+\DoxyCodeLine{00097         \textcolor{comment}{// Uncomment this to require hardware acceleration: (defaults to allow accelerated OR accept non-\/accelerated)}}
+\DoxyCodeLine{00098         \textcolor{comment}{// SDL\_GL\_SetAttribute(SDL\_GL\_ACCELERATED\_VISUAL, 1);}}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100         \textcolor{comment}{// Init the input manager}}
+\DoxyCodeLine{00101         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5156e6237e45ec8372579fa015751f89}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5156e6237e45ec8372579fa015751f89}{)}};}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103         \textcolor{comment}{// Init the window}}
+\DoxyCodeLine{00104         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a63f88fdf838aa8bd6cf258b8d2d44018}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a63f88fdf838aa8bd6cf258b8d2d44018}{)}};}
+\DoxyCodeLine{00105         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a02b16c4a920ed63e5bbd4e219f5d1155}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a02b16c4a920ed63e5bbd4e219f5d1155}{create}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a02b16c4a920ed63e5bbd4e219f5d1155}{(}}0\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a02b16c4a920ed63e5bbd4e219f5d1155}{)}};}
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{00107         \textcolor{comment}{// Init the timer}}
+\DoxyCodeLine{00108         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer}{Timer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_af894f9cc637fc1df639d6493347200cc}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_af894f9cc637fc1df639d6493347200cc}{)}};}
+\DoxyCodeLine{00109         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_ae9153aaa0e1a26a32be36dbee2c1d395}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_ae9153aaa0e1a26a32be36dbee2c1d395}{setDeltaTimeLimit}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_ae9153aaa0e1a26a32be36dbee2c1d395}{(}}1.0/60.0\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_ae9153aaa0e1a26a32be36dbee2c1d395}{)}};}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111         \textcolor{comment}{// Make sure we don't double init by setting this var to true}}
+\DoxyCodeLine{00112         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a390fbdf47a840a4c515fa25f98cc9758}{m\_isInited}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00113     \}}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00115}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}{00115}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}{update}}(\textcolor{keywordtype}{double} dt)}
+\DoxyCodeLine{00116     \{}
+\DoxyCodeLine{00117         \textcolor{comment}{// Update everything}}
+\DoxyCodeLine{00118         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}{updateInput}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}{)}};}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{00120         \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{getCurrentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{getState}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{)}}) \{}
+\DoxyCodeLine{00121             \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253}{ScreenState}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}{RUNNING}}:}
+\DoxyCodeLine{00122                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{getCurrentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aa5bbb3a5fe737eb50d2dc2d27776f53e}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aa5bbb3a5fe737eb50d2dc2d27776f53e}{update}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aa5bbb3a5fe737eb50d2dc2d27776f53e}{(}}dt\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aa5bbb3a5fe737eb50d2dc2d27776f53e}{)}};}
+\DoxyCodeLine{00123                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00124             \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253}{ScreenState}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253af1b095bb6b4fb743116b8e2910c87e2a}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253af1b095bb6b4fb743116b8e2910c87e2a}{CHANGE\_NEXT}}:}
+\DoxyCodeLine{00125                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_ae8047deac7849ebd02b92d8c347715fb}{moveToNextScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_ae8047deac7849ebd02b92d8c347715fb}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_ae8047deac7849ebd02b92d8c347715fb}{)}};}
+\DoxyCodeLine{00126                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00127             \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253}{ScreenState}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ad99b55eff583c9982c86312bdcfdb47c}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ad99b55eff583c9982c86312bdcfdb47c}{CHANGE\_PREV}}:}
+\DoxyCodeLine{00128                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a3456f5ed539fa4b6d50a38600635e878}{moveToPreviousScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a3456f5ed539fa4b6d50a38600635e878}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a3456f5ed539fa4b6d50a38600635e878}{)}};}
+\DoxyCodeLine{00129             \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253}{ScreenState}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ab8b26f3abe929349d415409c67b3b81e}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ab8b26f3abe929349d415409c67b3b81e}{EXIT\_APPLICATION}}:}
+\DoxyCodeLine{00130                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{exitApp}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{)}};}
 \DoxyCodeLine{00131                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00132         \}}
-\DoxyCodeLine{00133     \}}
-\DoxyCodeLine{00134 }
-\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00135}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}{00135}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}{draw}}()}
-\DoxyCodeLine{00136     \{}
-\DoxyCodeLine{00137         \textcolor{comment}{// Reset the viewport to the full window, just in case the window changed sizes or the viewport had been changed by, for example, an FBO}}
-\DoxyCodeLine{00138         glViewport(0, 0, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ae0055549c7e1f9b1e16e71b1cb17ac54}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ae0055549c7e1f9b1e16e71b1cb17ac54}{getWidth}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ae0055549c7e1f9b1e16e71b1cb17ac54}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ae0055549c7e1f9b1e16e71b1cb17ac54}{)}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_adce1ecfb27ebd91fd455d1e04f855496}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_adce1ecfb27ebd91fd455d1e04f855496}{getHeight}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_adce1ecfb27ebd91fd455d1e04f855496}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_adce1ecfb27ebd91fd455d1e04f855496}{)}});}
-\DoxyCodeLine{00139 }
-\DoxyCodeLine{00140         \textcolor{comment}{// If the current screen is running, draw according to its protocols}}
-\DoxyCodeLine{00141         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{getCurrentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{getState}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{)}} == \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253}{ScreenState}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}{RUNNING}}) \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{getCurrentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_abd0a8557f5ad544a0cf657b242197ad2}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_abd0a8557f5ad544a0cf657b242197ad2}{draw}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_abd0a8557f5ad544a0cf657b242197ad2}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_abd0a8557f5ad544a0cf657b242197ad2}{)}};}
-\DoxyCodeLine{00142     \}}
-\DoxyCodeLine{00143 }
-\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00144}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}{00144}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}{updateInput}}()}
-\DoxyCodeLine{00145     \{}
-\DoxyCodeLine{00146         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{update}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{)}};}
-\DoxyCodeLine{00147 }
-\DoxyCodeLine{00148         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}{pollSDLInput}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}{)}};}
-\DoxyCodeLine{00149     \}}
-\DoxyCodeLine{00150 }
-\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00151}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}{00151}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}{pollSDLInput}}() \{}
-\DoxyCodeLine{00152         SDL\_Event event;}
-\DoxyCodeLine{00153         \textcolor{keywordflow}{while}(SDL\_PollEvent(\&event)) \{}
-\DoxyCodeLine{00154             \textcolor{keywordflow}{switch}(event.type) \{}
-\DoxyCodeLine{00155                 \textcolor{keywordflow}{case} SDL\_QUIT:}
-\DoxyCodeLine{00156                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{exitApp}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{)}};}
-\DoxyCodeLine{00157                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00158                 \textcolor{keywordflow}{case} SDL\_MOUSEMOTION:}
-\DoxyCodeLine{00159                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{setMousePosition}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{(}}(\textcolor{keywordtype}{float})event.motion.x\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{,}} (\textcolor{keywordtype}{float})event.motion.y\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{)}};}
-\DoxyCodeLine{00160                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00161                 \textcolor{keywordflow}{case} SDL\_KEYDOWN:}
-\DoxyCodeLine{00162                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{pressKey}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{(}}event.key.keysym.sym\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{)}};}
-\DoxyCodeLine{00163                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00164                 \textcolor{keywordflow}{case} SDL\_KEYUP:}
-\DoxyCodeLine{00165                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{releaseKey}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{(}}event.key.keysym.sym\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{)}};}
-\DoxyCodeLine{00166                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00167                 \textcolor{keywordflow}{case} SDL\_MOUSEBUTTONDOWN:}
-\DoxyCodeLine{00168                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{pressKey}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{(}}event.button.button\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{)}};}
-\DoxyCodeLine{00169                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00170                 \textcolor{keywordflow}{case} SDL\_MOUSEBUTTONUP:}
-\DoxyCodeLine{00171                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{releaseKey}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{(}}event.button.button\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{)}};}
-\DoxyCodeLine{00172                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00173                 \textcolor{keywordflow}{case} SDL\_MOUSEWHEEL:}
-\DoxyCodeLine{00174                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{setMouseScrollwheelPosition}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{(}}event.wheel.y\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{)}};}
-\DoxyCodeLine{00175                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00176             \}}
-\DoxyCodeLine{00177         \}}
-\DoxyCodeLine{00178     \}}
-\DoxyCodeLine{00179 }
-\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00180}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{00180}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{exitApp}}()}
-\DoxyCodeLine{00181     \{}
-\DoxyCodeLine{00182         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}{m\_isGameRunning}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{00183     \}}
-\DoxyCodeLine{00184 }
-\DoxyCodeLine{00185 \}}
+\DoxyCodeLine{00132             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00133                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00134         \}}
+\DoxyCodeLine{00135     \}}
+\DoxyCodeLine{00136 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00137}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}{00137}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}{draw}}()}
+\DoxyCodeLine{00138     \{}
+\DoxyCodeLine{00139         \textcolor{comment}{// Reset the viewport to the full window, just in case the window changed sizes or the viewport had been changed by, for example, an FBO}}
+\DoxyCodeLine{00140         glViewport(0, 0, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ae0055549c7e1f9b1e16e71b1cb17ac54}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ae0055549c7e1f9b1e16e71b1cb17ac54}{getWidth}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ae0055549c7e1f9b1e16e71b1cb17ac54}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ae0055549c7e1f9b1e16e71b1cb17ac54}{)}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_adce1ecfb27ebd91fd455d1e04f855496}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_adce1ecfb27ebd91fd455d1e04f855496}{getHeight}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_adce1ecfb27ebd91fd455d1e04f855496}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_adce1ecfb27ebd91fd455d1e04f855496}{)}});}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142         \textcolor{comment}{// If the current screen is running, draw according to its protocols}}
+\DoxyCodeLine{00143         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{getCurrentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{getState}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_aece272b6c2301f4cbe8a20cff0474c4d}{)}} == \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253}{ScreenState}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}{RUNNING}}) \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{getCurrentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_abd0a8557f5ad544a0cf657b242197ad2}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_abd0a8557f5ad544a0cf657b242197ad2}{draw}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_abd0a8557f5ad544a0cf657b242197ad2}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_abd0a8557f5ad544a0cf657b242197ad2}{)}};}
+\DoxyCodeLine{00144     \}}
+\DoxyCodeLine{00145 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00146}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}{00146}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}{updateInput}}()}
+\DoxyCodeLine{00147     \{}
+\DoxyCodeLine{00148         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{update}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{)}};}
+\DoxyCodeLine{00149 }
+\DoxyCodeLine{00150         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}{pollSDLInput}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}{)}};}
+\DoxyCodeLine{00151     \}}
+\DoxyCodeLine{00152 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00153}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}{00153}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}{pollSDLInput}}() \{}
+\DoxyCodeLine{00154         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}* gui = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca}{getInstance}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca}{)}};}
+\DoxyCodeLine{00155 }
+\DoxyCodeLine{00156         SDL\_Event event;}
+\DoxyCodeLine{00157         \textcolor{keywordflow}{while}(SDL\_PollEvent(\&event)) \{}
+\DoxyCodeLine{00158             \textcolor{comment}{// Just check if the gui is initialized and there is a context that will be handling these events}}
+\DoxyCodeLine{00159             \textcolor{keywordflow}{if}(gui\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea}{getContext}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea}{)}})}
+\DoxyCodeLine{00160                 gui\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7}{handleSDLEvent}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7}{(}}event\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7}{)}}; \textcolor{comment}{// if there is, use it!}}
+\DoxyCodeLine{00161             \textcolor{keywordflow}{switch}(event.type) \{}
+\DoxyCodeLine{00162                 \textcolor{keywordflow}{case} SDL\_QUIT:}
+\DoxyCodeLine{00163                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{exitApp}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{)}};}
+\DoxyCodeLine{00164                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00165                 \textcolor{keywordflow}{case} SDL\_MOUSEMOTION:}
+\DoxyCodeLine{00166                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{setMousePosition}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{(}}(\textcolor{keywordtype}{float})event.motion.x\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{,}} (\textcolor{keywordtype}{float})event.motion.y\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{)}};}
+\DoxyCodeLine{00167                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00168                 \textcolor{keywordflow}{case} SDL\_KEYDOWN:}
+\DoxyCodeLine{00169                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{pressKey}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{(}}event.key.keysym.sym\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{)}};}
+\DoxyCodeLine{00170                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00171                 \textcolor{keywordflow}{case} SDL\_KEYUP:}
+\DoxyCodeLine{00172                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{releaseKey}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{(}}event.key.keysym.sym\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{)}};}
+\DoxyCodeLine{00173                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00174                 \textcolor{keywordflow}{case} SDL\_MOUSEBUTTONDOWN:}
+\DoxyCodeLine{00175                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{pressKey}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{(}}event.button.button\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{)}};}
+\DoxyCodeLine{00176                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00177                 \textcolor{keywordflow}{case} SDL\_MOUSEBUTTONUP:}
+\DoxyCodeLine{00178                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{releaseKey}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{(}}event.button.button\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{)}};}
+\DoxyCodeLine{00179                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00180                 \textcolor{keywordflow}{case} SDL\_MOUSEWHEEL:}
+\DoxyCodeLine{00181                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{setMouseScrollwheelPosition}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{(}}event.wheel.y\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{)}};}
+\DoxyCodeLine{00182                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00183             \}}
+\DoxyCodeLine{00184         \}}
+\DoxyCodeLine{00185     \}}
+\DoxyCodeLine{00186 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00187}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{00187}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{App}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{exitApp}}()}
+\DoxyCodeLine{00188     \{}
+\DoxyCodeLine{00189         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}{m\_isGameRunning}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00190     \}}
+\DoxyCodeLine{00191 }
+\DoxyCodeLine{00192 \}}
 
 \end{DoxyCode}

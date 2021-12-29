@@ -1,5 +1,4 @@
 <map id="BARE2D::BasicRenderer::draw" name="BARE2D::BasicRenderer::draw">
-<area shape="rect" id="node1" title=" " alt="" coords="5,39,176,80"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_camera2_d.html#ac5cb2034f0ba69eeec5ff52a20b49a74" title=" " alt="" coords="224,5,439,47"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_camera2_d.html#a8b30d128929ca6161be0ee282d2a47b5" title="Checks if a rectangle is within the scene covered by the camera." alt="" coords="235,71,428,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,176,47"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_camera2_d.html#a8b30d128929ca6161be0ee282d2a47b5" title="Checks if a rectangle is within the scene covered by the camera." alt="" coords="224,5,417,47"/>
 </map>

@@ -127,7 +127,7 @@
 \DoxyCodeLine{00123         GLint location = glGetUniformLocation(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}}, uniform.c\_str());}
 \DoxyCodeLine{00124 }
 \DoxyCodeLine{00125         \textcolor{comment}{// Error check}}
-\DoxyCodeLine{00126         \textcolor{keywordflow}{if}(location == GL\_INVALID\_INDEX) \{}
+\DoxyCodeLine{00126         \textcolor{keywordflow}{if}(location == (GLint)GL\_INVALID\_INDEX) \{}
 \DoxyCodeLine{00127             \textcolor{comment}{// Error!}}
 \DoxyCodeLine{00128             \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad6e29903fb0c6eb8c57d20d9ad478d9e}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad6e29903fb0c6eb8c57d20d9ad478d9e}{UNIFORM\_NOT\_FOUND}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{,}} \textcolor{stringliteral}{"Uniform name: "} + uniform\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{)}};}
 \DoxyCodeLine{00129 }

@@ -48,7 +48,16 @@ enum \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{B\
 \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abcb313a5c9f8965d7b75833af33d16be}{B\+A\+R\+E2\+D\+::\+B\+A\+R\+E\+Error\+::\+U\+N\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}, 
 \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba}{B\+A\+R\+E2\+D\+::\+B\+A\+R\+E\+Error\+::\+L\+U\+A\+\_\+\+F\+A\+I\+L\+U\+RE}}
  \}
-\begin{DoxyCompactList}\small\item\em Represents a specific type of error that has occured. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Represents a specific type of error that has occured. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{B\+A\+R\+E2\+D\+::\+G\+L\+Error\+Severity}} \{ \newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{B\+A\+R\+E2\+D\+::\+G\+L\+Error\+Severity\+::\+N\+O\+T\+IF}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88}{B\+A\+R\+E2\+D\+::\+G\+L\+Error\+Severity\+::\+L\+OW}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c}{B\+A\+R\+E2\+D\+::\+G\+L\+Error\+Severity\+::\+M\+ED}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c}{B\+A\+R\+E2\+D\+::\+G\+L\+Error\+Severity\+::\+H\+I\+GH}}, 
+\newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3}{B\+A\+R\+E2\+D\+::\+G\+L\+Error\+Severity\+::\+U\+N\+K\+N\+O\+WN}}
+ \}
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -62,10 +71,12 @@ void \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{B\
 \begin{DoxyCompactList}\small\item\em Throws an error silently. Adds it to the pile. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{B\+A\+R\+E2\+D\+::display\+Errors}} ()
 \begin{DoxyCompactList}\small\item\em Displays the latest thrown errors (really just all the thrown errors) in the console. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespace_b_a_r_e2_d_a4085763ff0085d40686c3cd0bc1a5182}{B\+A\+R\+E2\+D\+::init\+G\+L\+Error\+Callback}} ()
+void \mbox{\hyperlink{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984}{B\+A\+R\+E2\+D\+::init\+G\+L\+Error\+Callback}} (G\+L\+Error\+Severity min\+Severity=G\+L\+Error\+Severity\+::\+N\+O\+T\+IF)
 \begin{DoxyCompactList}\small\item\em Initializes the GL Debug Message Callback function, and enables debug output straight from Open\+GL. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
+\item 
+G\+L\+Error\+Severity \mbox{\hyperlink{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}{B\+A\+R\+E2\+D\+::\+G\+L\+Error\+Min\+Severity}} = G\+L\+Error\+Severity\+::\+N\+O\+T\+IF
 \item 
 std\+::vector$<$ B\+A\+R\+E\+Error $>$ \mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{B\+A\+R\+E2\+D\+::thrown\+Errors}}
 \end{DoxyCompactItemize}

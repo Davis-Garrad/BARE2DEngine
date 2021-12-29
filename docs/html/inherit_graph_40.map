@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_b_a_r_e2_d_1_1_v_a_o.html" title="A wrapper class for OpenGL&#39;s VAO, as well as its associated VBO and attributes." alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node1" href="$struct_b_a_r_e2_d_1_1_texture.html" title="The texture struct holds very basic stuff &#45; the filepath, width, height, and ID,." alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node2" href="$struct_b_a_r_e2_d_1_1_mutable_texture.html" title="A child of Texture which allows (and gives helpful functions for) mutation." alt="" coords="180,5,353,32"/>
 </map>

@@ -262,7 +262,7 @@
 \DoxyCodeLine{00258                 readPngHeader(\&in[0], size); \textcolor{keywordflow}{if} (error) \textcolor{keywordflow}{return};}
 \DoxyCodeLine{00259                 size\_t pos = 33; \textcolor{comment}{//first byte of the first chunk after the header}}
 \DoxyCodeLine{00260                 std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}> idat; \textcolor{comment}{//the data from idat chunks}}
-\DoxyCodeLine{00261                 \textcolor{keywordtype}{bool} IEND = \textcolor{keyword}{false}, known\_type = \textcolor{keyword}{true};}
+\DoxyCodeLine{00261                 \textcolor{keywordtype}{bool} IEND = \textcolor{keyword}{false};}
 \DoxyCodeLine{00262                 info.key\_defined = \textcolor{keyword}{false};}
 \DoxyCodeLine{00263                 \textcolor{keywordflow}{while} (!IEND) \textcolor{comment}{//loop through the chunks, ignoring unknown chunks and stopping at IEND chunk. IDAT data is put at the start of the in buffer}}
 \DoxyCodeLine{00264                 \{}
@@ -307,211 +307,210 @@
 \DoxyCodeLine{00303                     \{}
 \DoxyCodeLine{00304                         \textcolor{keywordflow}{if} (!(in[pos + 0] \& 32)) \{ error = 69; \textcolor{keywordflow}{return}; \} \textcolor{comment}{//error: unknown critical chunk (5th bit of first byte of chunk type is 0)}}
 \DoxyCodeLine{00305                         pos += (chunkLength + 4); \textcolor{comment}{//skip 4 letters and uninterpreted data of unimplemented chunk}}
-\DoxyCodeLine{00306                         known\_type = \textcolor{keyword}{false};}
-\DoxyCodeLine{00307                     \}}
-\DoxyCodeLine{00308                     pos += 4; \textcolor{comment}{//step over CRC (which is ignored)}}
-\DoxyCodeLine{00309                 \}}
-\DoxyCodeLine{00310                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} bpp = getBpp(info);}
-\DoxyCodeLine{00311                 std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}> scanlines(((info.width * (info.height * bpp + 7)) / 8) + info.height); \textcolor{comment}{//now the out buffer will be filled}}
-\DoxyCodeLine{00312                 Zlib zlib; \textcolor{comment}{//decompress with the Zlib decompressor}}
-\DoxyCodeLine{00313                 error = zlib.decompress(scanlines, idat); \textcolor{keywordflow}{if} (error) \textcolor{keywordflow}{return}; \textcolor{comment}{//stop if the zlib decompressor returned an error}}
-\DoxyCodeLine{00314                 size\_t bytewidth = (bpp + 7) / 8, outlength = (info.height * info.width * bpp + 7) / 8;}
-\DoxyCodeLine{00315                 out.resize(outlength); \textcolor{comment}{//time to fill the out buffer}}
-\DoxyCodeLine{00316                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* out\_ = outlength ? \&out[0] : 0; \textcolor{comment}{//use a regular pointer to the std::vector for faster code if compiled without optimization}}
-\DoxyCodeLine{00317                 \textcolor{keywordflow}{if} (info.interlaceMethod == 0) \textcolor{comment}{//no interlace, just filter}}
-\DoxyCodeLine{00318                 \{}
-\DoxyCodeLine{00319                     size\_t linestart = 0, linelength = (info.width * bpp + 7) / 8; \textcolor{comment}{//length in bytes of a scanline, excluding the filtertype byte}}
-\DoxyCodeLine{00320                     \textcolor{keywordflow}{if} (bpp >= 8) \textcolor{comment}{//byte per byte}}
-\DoxyCodeLine{00321                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} y = 0; y < info.height; y++)}
-\DoxyCodeLine{00322                     \{}
-\DoxyCodeLine{00323                         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} filterType = scanlines[linestart];}
-\DoxyCodeLine{00324                         \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* prevline = (y == 0) ? 0 : \&out\_[(y -\/ 1) * info.width * bytewidth];}
-\DoxyCodeLine{00325                         unFilterScanline(\&out\_[linestart -\/ y], \&scanlines[linestart + 1], prevline, bytewidth, filterType, linelength); \textcolor{keywordflow}{if} (error) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00326                         linestart += (1 + linelength); \textcolor{comment}{//go to start of next scanline}}
-\DoxyCodeLine{00327                     \} \textcolor{keywordflow}{else} \textcolor{comment}{//less than 8 bits per pixel, so fill it up bit per bit}}
-\DoxyCodeLine{00328                     \{}
-\DoxyCodeLine{00329                         std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}> templine((info.width * bpp + 7) >> 3); \textcolor{comment}{//only used if bpp < 8}}
-\DoxyCodeLine{00330                         \textcolor{keywordflow}{for} (size\_t y = 0, obp = 0; y < info.height; y++)}
-\DoxyCodeLine{00331                         \{}
-\DoxyCodeLine{00332                             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} filterType = scanlines[linestart];}
-\DoxyCodeLine{00333                             \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* prevline = (y == 0) ? 0 : \&out\_[(y -\/ 1) * info.width * bytewidth];}
-\DoxyCodeLine{00334                             unFilterScanline(\&templine[0], \&scanlines[linestart + 1], prevline, bytewidth, filterType, linelength); \textcolor{keywordflow}{if} (error) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00335                             \textcolor{keywordflow}{for} (size\_t bp = 0; bp < info.width * bpp;) setBitOfReversedStream(obp, out\_, readBitFromReversedStream(bp, \&templine[0]));}
-\DoxyCodeLine{00336                             linestart += (1 + linelength); \textcolor{comment}{//go to start of next scanline}}
-\DoxyCodeLine{00337                         \}}
-\DoxyCodeLine{00338                     \}}
-\DoxyCodeLine{00339                 \} \textcolor{keywordflow}{else} \textcolor{comment}{//interlaceMethod is 1 (Adam7)}}
-\DoxyCodeLine{00340                 \{}
-\DoxyCodeLine{00341                     size\_t passw[7] = \{ (info.width + 7) / 8, (info.width + 3) / 8, (info.width + 3) / 4, (info.width + 1) / 4, (info.width + 1) / 2, (info.width + 0) / 2, (info.width + 0) / 1 \};}
-\DoxyCodeLine{00342                     size\_t passh[7] = \{ (info.height + 7) / 8, (info.height + 7) / 8, (info.height + 3) / 8, (info.height + 3) / 4, (info.height + 1) / 4, (info.height + 1) / 2, (info.height + 0) / 2 \};}
-\DoxyCodeLine{00343                     size\_t passstart[7] = \{ 0 \};}
-\DoxyCodeLine{00344                     size\_t pattern[28] = \{ 0, 4, 0, 2, 0, 1, 0, 0, 0, 4, 0, 2, 0, 1, 8, 8, 4, 4, 2, 2, 1, 8, 8, 8, 4, 4, 2, 2 \}; \textcolor{comment}{//values for the adam7 passes}}
-\DoxyCodeLine{00345                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 6; i++) passstart[i + 1] = passstart[i] + passh[i] * ((passw[i] ? 1 : 0) + (passw[i] * bpp + 7) / 8);}
-\DoxyCodeLine{00346                     std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}> scanlineo((info.width * bpp + 7) / 8), scanlinen((info.width * bpp + 7) / 8); \textcolor{comment}{//"old" and "new" scanline}}
-\DoxyCodeLine{00347                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 7; i++)}
-\DoxyCodeLine{00348                         adam7Pass(\&out\_[0], \&scanlinen[0], \&scanlineo[0], \&scanlines[passstart[i]], info.width, pattern[i], pattern[i + 7], pattern[i + 14], pattern[i + 21], passw[i], passh[i], bpp);}
-\DoxyCodeLine{00349                 \}}
-\DoxyCodeLine{00350                 \textcolor{keywordflow}{if} (convert\_to\_rgba32 \&\& (info.colorType != 6 || info.bitDepth != 8)) \textcolor{comment}{//conversion needed}}
-\DoxyCodeLine{00351                 \{}
-\DoxyCodeLine{00352                     std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}> data = out;}
-\DoxyCodeLine{00353                     error = convert(out, \&data[0], info, info.width, info.height);}
-\DoxyCodeLine{00354                 \}}
-\DoxyCodeLine{00355             \}}
-\DoxyCodeLine{00356             \textcolor{keywordtype}{void} readPngHeader(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* in, size\_t inlength) \textcolor{comment}{//read the information from the header and store it in the Info}}
-\DoxyCodeLine{00357             \{}
-\DoxyCodeLine{00358                 \textcolor{keywordflow}{if} (inlength < 29) \{ error = 27; \textcolor{keywordflow}{return}; \} \textcolor{comment}{//error: the data length is smaller than the length of the header}}
-\DoxyCodeLine{00359                 \textcolor{keywordflow}{if} (in[0] != 137 || in[1] != 80 || in[2] != 78 || in[3] != 71 || in[4] != 13 || in[5] != 10 || in[6] != 26 || in[7] != 10) \{ error = 28; \textcolor{keywordflow}{return}; \} \textcolor{comment}{//no PNG signature}}
-\DoxyCodeLine{00360                 \textcolor{keywordflow}{if} (in[12] != \textcolor{stringliteral}{'I'} || in[13] != \textcolor{stringliteral}{'H'} || in[14] != \textcolor{stringliteral}{'D'} || in[15] != \textcolor{stringliteral}{'R'}) \{ error = 29; \textcolor{keywordflow}{return}; \} \textcolor{comment}{//error: it doesn't start with a IHDR chunk!}}
-\DoxyCodeLine{00361                 info.width = read32bitInt(\&in[16]); info.height = read32bitInt(\&in[20]);}
-\DoxyCodeLine{00362                 info.bitDepth = in[24]; info.colorType = in[25];}
-\DoxyCodeLine{00363                 info.compressionMethod = in[26]; \textcolor{keywordflow}{if} (in[26] != 0) \{ error = 32; \textcolor{keywordflow}{return}; \} \textcolor{comment}{//error: only compression method 0 is allowed in the specification}}
-\DoxyCodeLine{00364                 info.filterMethod = in[27]; \textcolor{keywordflow}{if} (in[27] != 0) \{ error = 33; \textcolor{keywordflow}{return}; \} \textcolor{comment}{//error: only filter method 0 is allowed in the specification}}
-\DoxyCodeLine{00365                 info.interlaceMethod = in[28]; \textcolor{keywordflow}{if} (in[28] > 1) \{ error = 34; \textcolor{keywordflow}{return}; \} \textcolor{comment}{//error: only interlace methods 0 and 1 exist in the specification}}
-\DoxyCodeLine{00366                 error = checkColorValidity(info.colorType, info.bitDepth);}
-\DoxyCodeLine{00367             \}}
-\DoxyCodeLine{00368             \textcolor{keywordtype}{void} unFilterScanline(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* recon, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* scanline, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* precon, size\_t bytewidth, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} filterType, size\_t length)}
-\DoxyCodeLine{00369             \{}
-\DoxyCodeLine{00370                 \textcolor{keywordflow}{switch} (filterType)}
-\DoxyCodeLine{00371                 \{}
-\DoxyCodeLine{00372                     \textcolor{keywordflow}{case} 0: \textcolor{keywordflow}{for} (size\_t i = 0; i < length; i++) recon[i] = scanline[i]; \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00373                     \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{00374                         \textcolor{keywordflow}{for} (size\_t i = 0; i < bytewidth; i++) recon[i] = scanline[i];}
-\DoxyCodeLine{00375                         \textcolor{keywordflow}{for} (size\_t i = bytewidth; i < length; i++) recon[i] = scanline[i] + recon[i -\/ bytewidth];}
-\DoxyCodeLine{00376                         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00377                     \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{00378                         \textcolor{keywordflow}{if} (precon) \textcolor{keywordflow}{for} (size\_t i = 0; i < length; i++) recon[i] = scanline[i] + precon[i];}
-\DoxyCodeLine{00379                         \textcolor{keywordflow}{else}       \textcolor{keywordflow}{for} (size\_t i = 0; i < length; i++) recon[i] = scanline[i];}
-\DoxyCodeLine{00380                         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00381                     \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{00382                         \textcolor{keywordflow}{if} (precon)}
-\DoxyCodeLine{00383                         \{}
-\DoxyCodeLine{00384                             \textcolor{keywordflow}{for} (size\_t i = 0; i < bytewidth; i++) recon[i] = scanline[i] + precon[i] / 2;}
-\DoxyCodeLine{00385                             \textcolor{keywordflow}{for} (size\_t i = bytewidth; i < length; i++) recon[i] = scanline[i] + ((recon[i -\/ bytewidth] + precon[i]) / 2);}
-\DoxyCodeLine{00386                         \} \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00387                         \{}
-\DoxyCodeLine{00388                             \textcolor{keywordflow}{for} (size\_t i = 0; i < bytewidth; i++) recon[i] = scanline[i];}
-\DoxyCodeLine{00389                             \textcolor{keywordflow}{for} (size\_t i = bytewidth; i < length; i++) recon[i] = scanline[i] + recon[i -\/ bytewidth] / 2;}
-\DoxyCodeLine{00390                         \}}
-\DoxyCodeLine{00391                         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00392                     \textcolor{keywordflow}{case} 4:}
-\DoxyCodeLine{00393                         \textcolor{keywordflow}{if} (precon)}
-\DoxyCodeLine{00394                         \{}
-\DoxyCodeLine{00395                             \textcolor{keywordflow}{for} (size\_t i = 0; i < bytewidth; i++) recon[i] = scanline[i] + paethPredictor(0, precon[i], 0);}
-\DoxyCodeLine{00396                             \textcolor{keywordflow}{for} (size\_t i = bytewidth; i < length; i++) recon[i] = scanline[i] + paethPredictor(recon[i -\/ bytewidth], precon[i], precon[i -\/ bytewidth]);}
-\DoxyCodeLine{00397                         \} \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00398                         \{}
-\DoxyCodeLine{00399                             \textcolor{keywordflow}{for} (size\_t i = 0; i < bytewidth; i++) recon[i] = scanline[i];}
-\DoxyCodeLine{00400                             \textcolor{keywordflow}{for} (size\_t i = bytewidth; i < length; i++) recon[i] = scanline[i] + paethPredictor(recon[i -\/ bytewidth], 0, 0);}
-\DoxyCodeLine{00401                         \}}
-\DoxyCodeLine{00402                         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00403                     \textcolor{keywordflow}{default}: error = 36; \textcolor{keywordflow}{return}; \textcolor{comment}{//error: unexisting filter type given}}
-\DoxyCodeLine{00404                 \}}
-\DoxyCodeLine{00405             \}}
-\DoxyCodeLine{00406             \textcolor{keywordtype}{void} adam7Pass(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* out, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* linen, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* lineo, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* in, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} w, size\_t passleft, size\_t passtop, size\_t spacex, size\_t spacey, size\_t passw, size\_t passh, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} bpp)}
-\DoxyCodeLine{00407             \{ \textcolor{comment}{//filter and reposition the pixels into the output when the image is Adam7 interlaced. This function can only do it after the full image is already decoded. The out buffer must have the correct allocated memory size already.}}
-\DoxyCodeLine{00408                 \textcolor{keywordflow}{if} (passw == 0) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00409                 size\_t bytewidth = (bpp + 7) / 8, linelength = 1 + ((bpp * passw + 7) / 8);}
-\DoxyCodeLine{00410                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} y = 0; y < passh; y++)}
-\DoxyCodeLine{00411                 \{}
-\DoxyCodeLine{00412                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} filterType = in[y * linelength], *prevline = (y == 0) ? 0 : lineo;}
-\DoxyCodeLine{00413                     unFilterScanline(linen, \&in[y * linelength + 1], prevline, bytewidth, filterType, (w * bpp + 7) / 8); \textcolor{keywordflow}{if} (error) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00414                     \textcolor{keywordflow}{if} (bpp >= 8) \textcolor{keywordflow}{for} (size\_t i = 0; i < passw; i++) \textcolor{keywordflow}{for} (size\_t b = 0; b < bytewidth; b++) \textcolor{comment}{//b = current byte of this pixel}}
-\DoxyCodeLine{00415                         out[bytewidth * w * (passtop + spacey * y) + bytewidth * (passleft + spacex * i) + b] = linen[bytewidth * i + b];}
-\DoxyCodeLine{00416                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{for} (size\_t i = 0; i < passw; i++)}
-\DoxyCodeLine{00417                     \{}
-\DoxyCodeLine{00418                         size\_t obp = bpp * w * (passtop + spacey * y) + bpp * (passleft + spacex * i), bp = i * bpp;}
-\DoxyCodeLine{00419                         \textcolor{keywordflow}{for} (size\_t b = 0; b < bpp; b++) setBitOfReversedStream(obp, out, readBitFromReversedStream(bp, \&linen[0]));}
-\DoxyCodeLine{00420                     \}}
-\DoxyCodeLine{00421                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* temp = linen; linen = lineo; lineo = temp; \textcolor{comment}{//swap the two buffer pointers "line old" and "line new"}}
-\DoxyCodeLine{00422                 \}}
-\DoxyCodeLine{00423             \}}
-\DoxyCodeLine{00424             \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} readBitFromReversedStream(size\_t\& bitp, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* bits) \{ \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} result = (bits[bitp >> 3] >> (7 -\/ (bitp \& 0x7))) \& 1; bitp++; \textcolor{keywordflow}{return} result; \}}
-\DoxyCodeLine{00425             \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} readBitsFromReversedStream(size\_t\& bitp, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* bits, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} nbits)}
-\DoxyCodeLine{00426             \{}
-\DoxyCodeLine{00427                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} result = 0;}
-\DoxyCodeLine{00428                 \textcolor{keywordflow}{for} (size\_t i = nbits -\/ 1; i < nbits; i-\/-\/) result += ((readBitFromReversedStream(bitp, bits)) << i);}
-\DoxyCodeLine{00429                 \textcolor{keywordflow}{return} result;}
-\DoxyCodeLine{00430             \}}
-\DoxyCodeLine{00431             \textcolor{keywordtype}{void} setBitOfReversedStream(size\_t\& bitp, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* bits, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} bit) \{ bits[bitp >> 3] |= (bit << (7 -\/ (bitp \& 0x7))); bitp++; \}}
-\DoxyCodeLine{00432             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} read32bitInt(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* buffer) \{ \textcolor{keywordflow}{return} (buffer[0] << 24) | (buffer[1] << 16) | (buffer[2] << 8) | buffer[3]; \}}
-\DoxyCodeLine{00433             \textcolor{keywordtype}{int} checkColorValidity(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} colorType, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} bd) \textcolor{comment}{//return type is a LodePNG error code}}
-\DoxyCodeLine{00434             \{}
-\DoxyCodeLine{00435                 \textcolor{keywordflow}{if} ((colorType == 2 || colorType == 4 || colorType == 6)) \{ \textcolor{keywordflow}{if} (!(bd == 8 || bd == 16)) \textcolor{keywordflow}{return} 37; \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0; \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (colorType == 0) \{ \textcolor{keywordflow}{if} (!(bd == 1 || bd == 2 || bd == 4 || bd == 8 || bd == 16)) \textcolor{keywordflow}{return} 37; \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0; \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (colorType == 3) \{ \textcolor{keywordflow}{if} (!(bd == 1 || bd == 2 || bd == 4 || bd == 8)) \textcolor{keywordflow}{return} 37; \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0; \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 31; \textcolor{comment}{//unexisting color type}}
-\DoxyCodeLine{00436             \}}
-\DoxyCodeLine{00437             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} getBpp(\textcolor{keyword}{const} Info\& info)}
-\DoxyCodeLine{00438             \{}
-\DoxyCodeLine{00439                 \textcolor{keywordflow}{if} (info.colorType == 2) \textcolor{keywordflow}{return} (3 * info.bitDepth);}
-\DoxyCodeLine{00440                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (info.colorType >= 4) \textcolor{keywordflow}{return} (info.colorType -\/ 2) * info.bitDepth;}
-\DoxyCodeLine{00441                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} info.bitDepth;}
-\DoxyCodeLine{00442             \}}
-\DoxyCodeLine{00443             \textcolor{keywordtype}{int} convert(std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}>\& out, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* in, Info\& infoIn, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} w, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} h)}
-\DoxyCodeLine{00444             \{ \textcolor{comment}{//converts from any color type to 32-\/bit. return value = LodePNG error code}}
-\DoxyCodeLine{00445                 size\_t numpixels = w * h, bp = 0;}
-\DoxyCodeLine{00446                 out.resize(numpixels * 4);}
-\DoxyCodeLine{00447                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* out\_ = out.empty() ? 0 : \&out[0]; \textcolor{comment}{//faster if compiled without optimization}}
-\DoxyCodeLine{00448                 \textcolor{keywordflow}{if} (infoIn.bitDepth == 8 \&\& infoIn.colorType == 0) \textcolor{comment}{//greyscale}}
-\DoxyCodeLine{00449                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
-\DoxyCodeLine{00450                 \{}
-\DoxyCodeLine{00451                     out\_[4 * i + 0] = out\_[4 * i + 1] = out\_[4 * i + 2] = in[i];}
-\DoxyCodeLine{00452                     out\_[4 * i + 3] = (infoIn.key\_defined \&\& in[i] == infoIn.key\_r) ? 0 : 255;}
-\DoxyCodeLine{00453                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 8 \&\& infoIn.colorType == 2) \textcolor{comment}{//RGB color}}
-\DoxyCodeLine{00454                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
-\DoxyCodeLine{00455                 \{}
-\DoxyCodeLine{00456                     \textcolor{keywordflow}{for} (size\_t c = 0; c < 3; c++) out\_[4 * i + c] = in[3 * i + c];}
-\DoxyCodeLine{00457                     out\_[4 * i + 3] = (infoIn.key\_defined == 1 \&\& in[3 * i + 0] == infoIn.key\_r \&\& in[3 * i + 1] == infoIn.key\_g \&\& in[3 * i + 2] == infoIn.key\_b) ? 0 : 255;}
-\DoxyCodeLine{00458                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 8 \&\& infoIn.colorType == 3) \textcolor{comment}{//indexed color (palette)}}
-\DoxyCodeLine{00459                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
-\DoxyCodeLine{00460                 \{}
-\DoxyCodeLine{00461                     \textcolor{keywordflow}{if} (4U * in[i] >= infoIn.palette.size()) \textcolor{keywordflow}{return} 46;}
-\DoxyCodeLine{00462                     \textcolor{keywordflow}{for} (size\_t c = 0; c < 4; c++) out\_[4 * i + c] = infoIn.palette[4 * in[i] + c]; \textcolor{comment}{//get rgb colors from the palette}}
-\DoxyCodeLine{00463                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 8 \&\& infoIn.colorType == 4) \textcolor{comment}{//greyscale with alpha}}
-\DoxyCodeLine{00464                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
-\DoxyCodeLine{00465                 \{}
-\DoxyCodeLine{00466                     out\_[4 * i + 0] = out\_[4 * i + 1] = out\_[4 * i + 2] = in[2 * i + 0];}
-\DoxyCodeLine{00467                     out\_[4 * i + 3] = in[2 * i + 1];}
-\DoxyCodeLine{00468                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 8 \&\& infoIn.colorType == 6) \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++) \textcolor{keywordflow}{for} (size\_t c = 0; c < 4; c++) out\_[4 * i + c] = in[4 * i + c]; \textcolor{comment}{//RGB with alpha}}
-\DoxyCodeLine{00469                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 16 \&\& infoIn.colorType == 0) \textcolor{comment}{//greyscale}}
-\DoxyCodeLine{00470                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
-\DoxyCodeLine{00471                 \{}
-\DoxyCodeLine{00472                     out\_[4 * i + 0] = out\_[4 * i + 1] = out\_[4 * i + 2] = in[2 * i];}
-\DoxyCodeLine{00473                     out\_[4 * i + 3] = (infoIn.key\_defined \&\& 256U * in[i] + in[i + 1] == infoIn.key\_r) ? 0 : 255;}
-\DoxyCodeLine{00474                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 16 \&\& infoIn.colorType == 2) \textcolor{comment}{//RGB color}}
-\DoxyCodeLine{00475                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
-\DoxyCodeLine{00476                 \{}
-\DoxyCodeLine{00477                     \textcolor{keywordflow}{for} (size\_t c = 0; c < 3; c++) out\_[4 * i + c] = in[6 * i + 2 * c];}
-\DoxyCodeLine{00478                     out\_[4 * i + 3] = (infoIn.key\_defined \&\& 256U * in[6 * i + 0] + in[6 * i + 1] == infoIn.key\_r \&\& 256U * in[6 * i + 2] + in[6 * i + 3] == infoIn.key\_g \&\& 256U * in[6 * i + 4] + in[6 * i + 5] == infoIn.key\_b) ? 0 : 255;}
-\DoxyCodeLine{00479                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 16 \&\& infoIn.colorType == 4) \textcolor{comment}{//greyscale with alpha}}
-\DoxyCodeLine{00480                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
-\DoxyCodeLine{00481                 \{}
-\DoxyCodeLine{00482                     out\_[4 * i + 0] = out\_[4 * i + 1] = out\_[4 * i + 2] = in[4 * i]; \textcolor{comment}{//most significant byte}}
-\DoxyCodeLine{00483                     out\_[4 * i + 3] = in[4 * i + 2];}
-\DoxyCodeLine{00484                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 16 \&\& infoIn.colorType == 6) \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++) \textcolor{keywordflow}{for} (size\_t c = 0; c < 4; c++) out\_[4 * i + c] = in[8 * i + 2 * c]; \textcolor{comment}{//RGB with alpha}}
-\DoxyCodeLine{00485                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth < 8 \&\& infoIn.colorType == 0) \textcolor{comment}{//greyscale}}
-\DoxyCodeLine{00486                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
-\DoxyCodeLine{00487                 \{}
-\DoxyCodeLine{00488                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} value = (readBitsFromReversedStream(bp, in, infoIn.bitDepth) * 255) / ((1 << infoIn.bitDepth) -\/ 1); \textcolor{comment}{//scale value from 0 to 255}}
-\DoxyCodeLine{00489                     out\_[4 * i + 0] = out\_[4 * i + 1] = out\_[4 * i + 2] = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})(value);}
-\DoxyCodeLine{00490                     out\_[4 * i + 3] = (infoIn.key\_defined \&\& value \&\& ((1U << infoIn.bitDepth) -\/ 1U) == infoIn.key\_r \&\& ((1U << infoIn.bitDepth) -\/ 1U)) ? 0 : 255;}
-\DoxyCodeLine{00491                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth < 8 \&\& infoIn.colorType == 3) \textcolor{comment}{//palette}}
-\DoxyCodeLine{00492                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
-\DoxyCodeLine{00493                 \{}
-\DoxyCodeLine{00494                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} value = readBitsFromReversedStream(bp, in, infoIn.bitDepth);}
-\DoxyCodeLine{00495                     \textcolor{keywordflow}{if} (4 * value >= infoIn.palette.size()) \textcolor{keywordflow}{return} 47;}
-\DoxyCodeLine{00496                     \textcolor{keywordflow}{for} (size\_t c = 0; c < 4; c++) out\_[4 * i + c] = infoIn.palette[4 * value + c]; \textcolor{comment}{//get rgb colors from the palette}}
-\DoxyCodeLine{00497                 \}}
-\DoxyCodeLine{00498                 \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{00499             \}}
-\DoxyCodeLine{00500             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} paethPredictor(\textcolor{keywordtype}{short} a, \textcolor{keywordtype}{short} b, \textcolor{keywordtype}{short} c) \textcolor{comment}{//Paeth predicter, used by PNG filter type 4}}
-\DoxyCodeLine{00501             \{}
-\DoxyCodeLine{00502                 \textcolor{keywordtype}{short} p = a + b -\/ c, pa = p > a ? (p -\/ a) : (a -\/ p), pb = p > b ? (p -\/ b) : (b -\/ p), pc = p > c ? (p -\/ c) : (c -\/ p);}
-\DoxyCodeLine{00503                 \textcolor{keywordflow}{return} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})((pa <= pb \&\& pa <= pc) ? a : pb <= pc ? b : c);}
-\DoxyCodeLine{00504             \}}
-\DoxyCodeLine{00505         \};}
-\DoxyCodeLine{00506         PNG decoder; decoder.decode(out\_image, in\_png, in\_size, convert\_to\_rgba32);}
-\DoxyCodeLine{00507         image\_width = decoder.info.width; image\_height = decoder.info.height;}
-\DoxyCodeLine{00508         \textcolor{keywordflow}{return} decoder.error;}
-\DoxyCodeLine{00509     \}}
-\DoxyCodeLine{00510 }
-\DoxyCodeLine{00511 \}}
+\DoxyCodeLine{00306                     \}}
+\DoxyCodeLine{00307                     pos += 4; \textcolor{comment}{//step over CRC (which is ignored)}}
+\DoxyCodeLine{00308                 \}}
+\DoxyCodeLine{00309                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} bpp = getBpp(info);}
+\DoxyCodeLine{00310                 std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}> scanlines(((info.width * (info.height * bpp + 7)) / 8) + info.height); \textcolor{comment}{//now the out buffer will be filled}}
+\DoxyCodeLine{00311                 Zlib zlib; \textcolor{comment}{//decompress with the Zlib decompressor}}
+\DoxyCodeLine{00312                 error = zlib.decompress(scanlines, idat); \textcolor{keywordflow}{if} (error) \textcolor{keywordflow}{return}; \textcolor{comment}{//stop if the zlib decompressor returned an error}}
+\DoxyCodeLine{00313                 size\_t bytewidth = (bpp + 7) / 8, outlength = (info.height * info.width * bpp + 7) / 8;}
+\DoxyCodeLine{00314                 out.resize(outlength); \textcolor{comment}{//time to fill the out buffer}}
+\DoxyCodeLine{00315                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* out\_ = outlength ? \&out[0] : 0; \textcolor{comment}{//use a regular pointer to the std::vector for faster code if compiled without optimization}}
+\DoxyCodeLine{00316                 \textcolor{keywordflow}{if} (info.interlaceMethod == 0) \textcolor{comment}{//no interlace, just filter}}
+\DoxyCodeLine{00317                 \{}
+\DoxyCodeLine{00318                     size\_t linestart = 0, linelength = (info.width * bpp + 7) / 8; \textcolor{comment}{//length in bytes of a scanline, excluding the filtertype byte}}
+\DoxyCodeLine{00319                     \textcolor{keywordflow}{if} (bpp >= 8) \textcolor{comment}{//byte per byte}}
+\DoxyCodeLine{00320                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} y = 0; y < info.height; y++)}
+\DoxyCodeLine{00321                     \{}
+\DoxyCodeLine{00322                         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} filterType = scanlines[linestart];}
+\DoxyCodeLine{00323                         \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* prevline = (y == 0) ? 0 : \&out\_[(y -\/ 1) * info.width * bytewidth];}
+\DoxyCodeLine{00324                         unFilterScanline(\&out\_[linestart -\/ y], \&scanlines[linestart + 1], prevline, bytewidth, filterType, linelength); \textcolor{keywordflow}{if} (error) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00325                         linestart += (1 + linelength); \textcolor{comment}{//go to start of next scanline}}
+\DoxyCodeLine{00326                     \} \textcolor{keywordflow}{else} \textcolor{comment}{//less than 8 bits per pixel, so fill it up bit per bit}}
+\DoxyCodeLine{00327                     \{}
+\DoxyCodeLine{00328                         std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}> templine((info.width * bpp + 7) >> 3); \textcolor{comment}{//only used if bpp < 8}}
+\DoxyCodeLine{00329                         \textcolor{keywordflow}{for} (size\_t y = 0, obp = 0; y < info.height; y++)}
+\DoxyCodeLine{00330                         \{}
+\DoxyCodeLine{00331                             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} filterType = scanlines[linestart];}
+\DoxyCodeLine{00332                             \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* prevline = (y == 0) ? 0 : \&out\_[(y -\/ 1) * info.width * bytewidth];}
+\DoxyCodeLine{00333                             unFilterScanline(\&templine[0], \&scanlines[linestart + 1], prevline, bytewidth, filterType, linelength); \textcolor{keywordflow}{if} (error) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00334                             \textcolor{keywordflow}{for} (size\_t bp = 0; bp < info.width * bpp;) setBitOfReversedStream(obp, out\_, readBitFromReversedStream(bp, \&templine[0]));}
+\DoxyCodeLine{00335                             linestart += (1 + linelength); \textcolor{comment}{//go to start of next scanline}}
+\DoxyCodeLine{00336                         \}}
+\DoxyCodeLine{00337                     \}}
+\DoxyCodeLine{00338                 \} \textcolor{keywordflow}{else} \textcolor{comment}{//interlaceMethod is 1 (Adam7)}}
+\DoxyCodeLine{00339                 \{}
+\DoxyCodeLine{00340                     size\_t passw[7] = \{ (info.width + 7) / 8, (info.width + 3) / 8, (info.width + 3) / 4, (info.width + 1) / 4, (info.width + 1) / 2, (info.width + 0) / 2, (info.width + 0) / 1 \};}
+\DoxyCodeLine{00341                     size\_t passh[7] = \{ (info.height + 7) / 8, (info.height + 7) / 8, (info.height + 3) / 8, (info.height + 3) / 4, (info.height + 1) / 4, (info.height + 1) / 2, (info.height + 0) / 2 \};}
+\DoxyCodeLine{00342                     size\_t passstart[7] = \{ 0 \};}
+\DoxyCodeLine{00343                     size\_t pattern[28] = \{ 0, 4, 0, 2, 0, 1, 0, 0, 0, 4, 0, 2, 0, 1, 8, 8, 4, 4, 2, 2, 1, 8, 8, 8, 4, 4, 2, 2 \}; \textcolor{comment}{//values for the adam7 passes}}
+\DoxyCodeLine{00344                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 6; i++) passstart[i + 1] = passstart[i] + passh[i] * ((passw[i] ? 1 : 0) + (passw[i] * bpp + 7) / 8);}
+\DoxyCodeLine{00345                     std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}> scanlineo((info.width * bpp + 7) / 8), scanlinen((info.width * bpp + 7) / 8); \textcolor{comment}{//"old" and "new" scanline}}
+\DoxyCodeLine{00346                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 7; i++)}
+\DoxyCodeLine{00347                         adam7Pass(\&out\_[0], \&scanlinen[0], \&scanlineo[0], \&scanlines[passstart[i]], info.width, pattern[i], pattern[i + 7], pattern[i + 14], pattern[i + 21], passw[i], passh[i], bpp);}
+\DoxyCodeLine{00348                 \}}
+\DoxyCodeLine{00349                 \textcolor{keywordflow}{if} (convert\_to\_rgba32 \&\& (info.colorType != 6 || info.bitDepth != 8)) \textcolor{comment}{//conversion needed}}
+\DoxyCodeLine{00350                 \{}
+\DoxyCodeLine{00351                     std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}> data = out;}
+\DoxyCodeLine{00352                     error = convert(out, \&data[0], info, info.width, info.height);}
+\DoxyCodeLine{00353                 \}}
+\DoxyCodeLine{00354             \}}
+\DoxyCodeLine{00355             \textcolor{keywordtype}{void} readPngHeader(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* in, size\_t inlength) \textcolor{comment}{//read the information from the header and store it in the Info}}
+\DoxyCodeLine{00356             \{}
+\DoxyCodeLine{00357                 \textcolor{keywordflow}{if} (inlength < 29) \{ error = 27; \textcolor{keywordflow}{return}; \} \textcolor{comment}{//error: the data length is smaller than the length of the header}}
+\DoxyCodeLine{00358                 \textcolor{keywordflow}{if} (in[0] != 137 || in[1] != 80 || in[2] != 78 || in[3] != 71 || in[4] != 13 || in[5] != 10 || in[6] != 26 || in[7] != 10) \{ error = 28; \textcolor{keywordflow}{return}; \} \textcolor{comment}{//no PNG signature}}
+\DoxyCodeLine{00359                 \textcolor{keywordflow}{if} (in[12] != \textcolor{stringliteral}{'I'} || in[13] != \textcolor{stringliteral}{'H'} || in[14] != \textcolor{stringliteral}{'D'} || in[15] != \textcolor{stringliteral}{'R'}) \{ error = 29; \textcolor{keywordflow}{return}; \} \textcolor{comment}{//error: it doesn't start with a IHDR chunk!}}
+\DoxyCodeLine{00360                 info.width = read32bitInt(\&in[16]); info.height = read32bitInt(\&in[20]);}
+\DoxyCodeLine{00361                 info.bitDepth = in[24]; info.colorType = in[25];}
+\DoxyCodeLine{00362                 info.compressionMethod = in[26]; \textcolor{keywordflow}{if} (in[26] != 0) \{ error = 32; \textcolor{keywordflow}{return}; \} \textcolor{comment}{//error: only compression method 0 is allowed in the specification}}
+\DoxyCodeLine{00363                 info.filterMethod = in[27]; \textcolor{keywordflow}{if} (in[27] != 0) \{ error = 33; \textcolor{keywordflow}{return}; \} \textcolor{comment}{//error: only filter method 0 is allowed in the specification}}
+\DoxyCodeLine{00364                 info.interlaceMethod = in[28]; \textcolor{keywordflow}{if} (in[28] > 1) \{ error = 34; \textcolor{keywordflow}{return}; \} \textcolor{comment}{//error: only interlace methods 0 and 1 exist in the specification}}
+\DoxyCodeLine{00365                 error = checkColorValidity(info.colorType, info.bitDepth);}
+\DoxyCodeLine{00366             \}}
+\DoxyCodeLine{00367             \textcolor{keywordtype}{void} unFilterScanline(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* recon, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* scanline, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* precon, size\_t bytewidth, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} filterType, size\_t length)}
+\DoxyCodeLine{00368             \{}
+\DoxyCodeLine{00369                 \textcolor{keywordflow}{switch} (filterType)}
+\DoxyCodeLine{00370                 \{}
+\DoxyCodeLine{00371                     \textcolor{keywordflow}{case} 0: \textcolor{keywordflow}{for} (size\_t i = 0; i < length; i++) recon[i] = scanline[i]; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00372                     \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00373                         \textcolor{keywordflow}{for} (size\_t i = 0; i < bytewidth; i++) recon[i] = scanline[i];}
+\DoxyCodeLine{00374                         \textcolor{keywordflow}{for} (size\_t i = bytewidth; i < length; i++) recon[i] = scanline[i] + recon[i -\/ bytewidth];}
+\DoxyCodeLine{00375                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00376                     \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{00377                         \textcolor{keywordflow}{if} (precon) \textcolor{keywordflow}{for} (size\_t i = 0; i < length; i++) recon[i] = scanline[i] + precon[i];}
+\DoxyCodeLine{00378                         \textcolor{keywordflow}{else}       \textcolor{keywordflow}{for} (size\_t i = 0; i < length; i++) recon[i] = scanline[i];}
+\DoxyCodeLine{00379                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00380                     \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{00381                         \textcolor{keywordflow}{if} (precon)}
+\DoxyCodeLine{00382                         \{}
+\DoxyCodeLine{00383                             \textcolor{keywordflow}{for} (size\_t i = 0; i < bytewidth; i++) recon[i] = scanline[i] + precon[i] / 2;}
+\DoxyCodeLine{00384                             \textcolor{keywordflow}{for} (size\_t i = bytewidth; i < length; i++) recon[i] = scanline[i] + ((recon[i -\/ bytewidth] + precon[i]) / 2);}
+\DoxyCodeLine{00385                         \} \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00386                         \{}
+\DoxyCodeLine{00387                             \textcolor{keywordflow}{for} (size\_t i = 0; i < bytewidth; i++) recon[i] = scanline[i];}
+\DoxyCodeLine{00388                             \textcolor{keywordflow}{for} (size\_t i = bytewidth; i < length; i++) recon[i] = scanline[i] + recon[i -\/ bytewidth] / 2;}
+\DoxyCodeLine{00389                         \}}
+\DoxyCodeLine{00390                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00391                     \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{00392                         \textcolor{keywordflow}{if} (precon)}
+\DoxyCodeLine{00393                         \{}
+\DoxyCodeLine{00394                             \textcolor{keywordflow}{for} (size\_t i = 0; i < bytewidth; i++) recon[i] = scanline[i] + paethPredictor(0, precon[i], 0);}
+\DoxyCodeLine{00395                             \textcolor{keywordflow}{for} (size\_t i = bytewidth; i < length; i++) recon[i] = scanline[i] + paethPredictor(recon[i -\/ bytewidth], precon[i], precon[i -\/ bytewidth]);}
+\DoxyCodeLine{00396                         \} \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00397                         \{}
+\DoxyCodeLine{00398                             \textcolor{keywordflow}{for} (size\_t i = 0; i < bytewidth; i++) recon[i] = scanline[i];}
+\DoxyCodeLine{00399                             \textcolor{keywordflow}{for} (size\_t i = bytewidth; i < length; i++) recon[i] = scanline[i] + paethPredictor(recon[i -\/ bytewidth], 0, 0);}
+\DoxyCodeLine{00400                         \}}
+\DoxyCodeLine{00401                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00402                     \textcolor{keywordflow}{default}: error = 36; \textcolor{keywordflow}{return}; \textcolor{comment}{//error: unexisting filter type given}}
+\DoxyCodeLine{00403                 \}}
+\DoxyCodeLine{00404             \}}
+\DoxyCodeLine{00405             \textcolor{keywordtype}{void} adam7Pass(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* out, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* linen, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* lineo, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* in, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} w, size\_t passleft, size\_t passtop, size\_t spacex, size\_t spacey, size\_t passw, size\_t passh, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} bpp)}
+\DoxyCodeLine{00406             \{ \textcolor{comment}{//filter and reposition the pixels into the output when the image is Adam7 interlaced. This function can only do it after the full image is already decoded. The out buffer must have the correct allocated memory size already.}}
+\DoxyCodeLine{00407                 \textcolor{keywordflow}{if} (passw == 0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00408                 size\_t bytewidth = (bpp + 7) / 8, linelength = 1 + ((bpp * passw + 7) / 8);}
+\DoxyCodeLine{00409                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} y = 0; y < passh; y++)}
+\DoxyCodeLine{00410                 \{}
+\DoxyCodeLine{00411                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} filterType = in[y * linelength], *prevline = (y == 0) ? 0 : lineo;}
+\DoxyCodeLine{00412                     unFilterScanline(linen, \&in[y * linelength + 1], prevline, bytewidth, filterType, (w * bpp + 7) / 8); \textcolor{keywordflow}{if} (error) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00413                     \textcolor{keywordflow}{if} (bpp >= 8) \textcolor{keywordflow}{for} (size\_t i = 0; i < passw; i++) \textcolor{keywordflow}{for} (size\_t b = 0; b < bytewidth; b++) \textcolor{comment}{//b = current byte of this pixel}}
+\DoxyCodeLine{00414                         out[bytewidth * w * (passtop + spacey * y) + bytewidth * (passleft + spacex * i) + b] = linen[bytewidth * i + b];}
+\DoxyCodeLine{00415                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{for} (size\_t i = 0; i < passw; i++)}
+\DoxyCodeLine{00416                     \{}
+\DoxyCodeLine{00417                         size\_t obp = bpp * w * (passtop + spacey * y) + bpp * (passleft + spacex * i), bp = i * bpp;}
+\DoxyCodeLine{00418                         \textcolor{keywordflow}{for} (size\_t b = 0; b < bpp; b++) setBitOfReversedStream(obp, out, readBitFromReversedStream(bp, \&linen[0]));}
+\DoxyCodeLine{00419                     \}}
+\DoxyCodeLine{00420                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* temp = linen; linen = lineo; lineo = temp; \textcolor{comment}{//swap the two buffer pointers "line old" and "line new"}}
+\DoxyCodeLine{00421                 \}}
+\DoxyCodeLine{00422             \}}
+\DoxyCodeLine{00423             \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} readBitFromReversedStream(size\_t\& bitp, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* bits) \{ \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} result = (bits[bitp >> 3] >> (7 -\/ (bitp \& 0x7))) \& 1; bitp++; \textcolor{keywordflow}{return} result; \}}
+\DoxyCodeLine{00424             \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} readBitsFromReversedStream(size\_t\& bitp, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* bits, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} nbits)}
+\DoxyCodeLine{00425             \{}
+\DoxyCodeLine{00426                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} result = 0;}
+\DoxyCodeLine{00427                 \textcolor{keywordflow}{for} (size\_t i = nbits -\/ 1; i < nbits; i-\/-\/) result += ((readBitFromReversedStream(bitp, bits)) << i);}
+\DoxyCodeLine{00428                 \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{00429             \}}
+\DoxyCodeLine{00430             \textcolor{keywordtype}{void} setBitOfReversedStream(size\_t\& bitp, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* bits, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} bit) \{ bits[bitp >> 3] |= (bit << (7 -\/ (bitp \& 0x7))); bitp++; \}}
+\DoxyCodeLine{00431             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} read32bitInt(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* buffer) \{ \textcolor{keywordflow}{return} (buffer[0] << 24) | (buffer[1] << 16) | (buffer[2] << 8) | buffer[3]; \}}
+\DoxyCodeLine{00432             \textcolor{keywordtype}{int} checkColorValidity(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} colorType, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} bd) \textcolor{comment}{//return type is a LodePNG error code}}
+\DoxyCodeLine{00433             \{}
+\DoxyCodeLine{00434                 \textcolor{keywordflow}{if} ((colorType == 2 || colorType == 4 || colorType == 6)) \{ \textcolor{keywordflow}{if} (!(bd == 8 || bd == 16)) \textcolor{keywordflow}{return} 37; \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0; \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (colorType == 0) \{ \textcolor{keywordflow}{if} (!(bd == 1 || bd == 2 || bd == 4 || bd == 8 || bd == 16)) \textcolor{keywordflow}{return} 37; \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0; \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (colorType == 3) \{ \textcolor{keywordflow}{if} (!(bd == 1 || bd == 2 || bd == 4 || bd == 8)) \textcolor{keywordflow}{return} 37; \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0; \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 31; \textcolor{comment}{//unexisting color type}}
+\DoxyCodeLine{00435             \}}
+\DoxyCodeLine{00436             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} getBpp(\textcolor{keyword}{const} Info\& info)}
+\DoxyCodeLine{00437             \{}
+\DoxyCodeLine{00438                 \textcolor{keywordflow}{if} (info.colorType == 2) \textcolor{keywordflow}{return} (3 * info.bitDepth);}
+\DoxyCodeLine{00439                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (info.colorType >= 4) \textcolor{keywordflow}{return} (info.colorType -\/ 2) * info.bitDepth;}
+\DoxyCodeLine{00440                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} info.bitDepth;}
+\DoxyCodeLine{00441             \}}
+\DoxyCodeLine{00442             \textcolor{keywordtype}{int} convert(std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}>\& out, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* in, Info\& infoIn, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} w, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} h)}
+\DoxyCodeLine{00443             \{ \textcolor{comment}{//converts from any color type to 32-\/bit. return value = LodePNG error code}}
+\DoxyCodeLine{00444                 size\_t numpixels = w * h, bp = 0;}
+\DoxyCodeLine{00445                 out.resize(numpixels * 4);}
+\DoxyCodeLine{00446                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* out\_ = out.empty() ? 0 : \&out[0]; \textcolor{comment}{//faster if compiled without optimization}}
+\DoxyCodeLine{00447                 \textcolor{keywordflow}{if} (infoIn.bitDepth == 8 \&\& infoIn.colorType == 0) \textcolor{comment}{//greyscale}}
+\DoxyCodeLine{00448                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
+\DoxyCodeLine{00449                 \{}
+\DoxyCodeLine{00450                     out\_[4 * i + 0] = out\_[4 * i + 1] = out\_[4 * i + 2] = in[i];}
+\DoxyCodeLine{00451                     out\_[4 * i + 3] = (infoIn.key\_defined \&\& in[i] == infoIn.key\_r) ? 0 : 255;}
+\DoxyCodeLine{00452                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 8 \&\& infoIn.colorType == 2) \textcolor{comment}{//RGB color}}
+\DoxyCodeLine{00453                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
+\DoxyCodeLine{00454                 \{}
+\DoxyCodeLine{00455                     \textcolor{keywordflow}{for} (size\_t c = 0; c < 3; c++) out\_[4 * i + c] = in[3 * i + c];}
+\DoxyCodeLine{00456                     out\_[4 * i + 3] = (infoIn.key\_defined == 1 \&\& in[3 * i + 0] == infoIn.key\_r \&\& in[3 * i + 1] == infoIn.key\_g \&\& in[3 * i + 2] == infoIn.key\_b) ? 0 : 255;}
+\DoxyCodeLine{00457                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 8 \&\& infoIn.colorType == 3) \textcolor{comment}{//indexed color (palette)}}
+\DoxyCodeLine{00458                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
+\DoxyCodeLine{00459                 \{}
+\DoxyCodeLine{00460                     \textcolor{keywordflow}{if} (4U * in[i] >= infoIn.palette.size()) \textcolor{keywordflow}{return} 46;}
+\DoxyCodeLine{00461                     \textcolor{keywordflow}{for} (size\_t c = 0; c < 4; c++) out\_[4 * i + c] = infoIn.palette[4 * in[i] + c]; \textcolor{comment}{//get rgb colors from the palette}}
+\DoxyCodeLine{00462                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 8 \&\& infoIn.colorType == 4) \textcolor{comment}{//greyscale with alpha}}
+\DoxyCodeLine{00463                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
+\DoxyCodeLine{00464                 \{}
+\DoxyCodeLine{00465                     out\_[4 * i + 0] = out\_[4 * i + 1] = out\_[4 * i + 2] = in[2 * i + 0];}
+\DoxyCodeLine{00466                     out\_[4 * i + 3] = in[2 * i + 1];}
+\DoxyCodeLine{00467                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 8 \&\& infoIn.colorType == 6) \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++) \textcolor{keywordflow}{for} (size\_t c = 0; c < 4; c++) out\_[4 * i + c] = in[4 * i + c]; \textcolor{comment}{//RGB with alpha}}
+\DoxyCodeLine{00468                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 16 \&\& infoIn.colorType == 0) \textcolor{comment}{//greyscale}}
+\DoxyCodeLine{00469                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
+\DoxyCodeLine{00470                 \{}
+\DoxyCodeLine{00471                     out\_[4 * i + 0] = out\_[4 * i + 1] = out\_[4 * i + 2] = in[2 * i];}
+\DoxyCodeLine{00472                     out\_[4 * i + 3] = (infoIn.key\_defined \&\& 256U * in[i] + in[i + 1] == infoIn.key\_r) ? 0 : 255;}
+\DoxyCodeLine{00473                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 16 \&\& infoIn.colorType == 2) \textcolor{comment}{//RGB color}}
+\DoxyCodeLine{00474                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
+\DoxyCodeLine{00475                 \{}
+\DoxyCodeLine{00476                     \textcolor{keywordflow}{for} (size\_t c = 0; c < 3; c++) out\_[4 * i + c] = in[6 * i + 2 * c];}
+\DoxyCodeLine{00477                     out\_[4 * i + 3] = (infoIn.key\_defined \&\& 256U * in[6 * i + 0] + in[6 * i + 1] == infoIn.key\_r \&\& 256U * in[6 * i + 2] + in[6 * i + 3] == infoIn.key\_g \&\& 256U * in[6 * i + 4] + in[6 * i + 5] == infoIn.key\_b) ? 0 : 255;}
+\DoxyCodeLine{00478                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 16 \&\& infoIn.colorType == 4) \textcolor{comment}{//greyscale with alpha}}
+\DoxyCodeLine{00479                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
+\DoxyCodeLine{00480                 \{}
+\DoxyCodeLine{00481                     out\_[4 * i + 0] = out\_[4 * i + 1] = out\_[4 * i + 2] = in[4 * i]; \textcolor{comment}{//most significant byte}}
+\DoxyCodeLine{00482                     out\_[4 * i + 3] = in[4 * i + 2];}
+\DoxyCodeLine{00483                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth == 16 \&\& infoIn.colorType == 6) \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++) \textcolor{keywordflow}{for} (size\_t c = 0; c < 4; c++) out\_[4 * i + c] = in[8 * i + 2 * c]; \textcolor{comment}{//RGB with alpha}}
+\DoxyCodeLine{00484                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth < 8 \&\& infoIn.colorType == 0) \textcolor{comment}{//greyscale}}
+\DoxyCodeLine{00485                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
+\DoxyCodeLine{00486                 \{}
+\DoxyCodeLine{00487                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} value = (readBitsFromReversedStream(bp, in, infoIn.bitDepth) * 255) / ((1 << infoIn.bitDepth) -\/ 1); \textcolor{comment}{//scale value from 0 to 255}}
+\DoxyCodeLine{00488                     out\_[4 * i + 0] = out\_[4 * i + 1] = out\_[4 * i + 2] = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})(value);}
+\DoxyCodeLine{00489                     out\_[4 * i + 3] = (infoIn.key\_defined \&\& value \&\& ((1U << infoIn.bitDepth) -\/ 1U) == infoIn.key\_r \&\& ((1U << infoIn.bitDepth) -\/ 1U)) ? 0 : 255;}
+\DoxyCodeLine{00490                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (infoIn.bitDepth < 8 \&\& infoIn.colorType == 3) \textcolor{comment}{//palette}}
+\DoxyCodeLine{00491                 \textcolor{keywordflow}{for} (size\_t i = 0; i < numpixels; i++)}
+\DoxyCodeLine{00492                 \{}
+\DoxyCodeLine{00493                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} value = readBitsFromReversedStream(bp, in, infoIn.bitDepth);}
+\DoxyCodeLine{00494                     \textcolor{keywordflow}{if} (4 * value >= infoIn.palette.size()) \textcolor{keywordflow}{return} 47;}
+\DoxyCodeLine{00495                     \textcolor{keywordflow}{for} (size\_t c = 0; c < 4; c++) out\_[4 * i + c] = infoIn.palette[4 * value + c]; \textcolor{comment}{//get rgb colors from the palette}}
+\DoxyCodeLine{00496                 \}}
+\DoxyCodeLine{00497                 \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00498             \}}
+\DoxyCodeLine{00499             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} paethPredictor(\textcolor{keywordtype}{short} a, \textcolor{keywordtype}{short} b, \textcolor{keywordtype}{short} c) \textcolor{comment}{//Paeth predicter, used by PNG filter type 4}}
+\DoxyCodeLine{00500             \{}
+\DoxyCodeLine{00501                 \textcolor{keywordtype}{short} p = a + b -\/ c, pa = p > a ? (p -\/ a) : (a -\/ p), pb = p > b ? (p -\/ b) : (b -\/ p), pc = p > c ? (p -\/ c) : (c -\/ p);}
+\DoxyCodeLine{00502                 \textcolor{keywordflow}{return} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})((pa <= pb \&\& pa <= pc) ? a : pb <= pc ? b : c);}
+\DoxyCodeLine{00503             \}}
+\DoxyCodeLine{00504         \};}
+\DoxyCodeLine{00505         PNG decoder; decoder.decode(out\_image, in\_png, in\_size, convert\_to\_rgba32);}
+\DoxyCodeLine{00506         image\_width = decoder.info.width; image\_height = decoder.info.height;}
+\DoxyCodeLine{00507         \textcolor{keywordflow}{return} decoder.error;}
+\DoxyCodeLine{00508     \}}
+\DoxyCodeLine{00509 }
+\DoxyCodeLine{00510 \}}
 
 \end{DoxyCode}

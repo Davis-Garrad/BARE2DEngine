@@ -18,5 +18,8 @@ var searchData=
   ['append_15',['append',['../namespaceutf8.html#a3827e78596fc38cfdebd721e9c45c901',1,'utf8::append()'],['../namespaceutf8_1_1unchecked.html#acab3a56b1772ed871f36757883d63788',1,'utf8::unchecked::append()']]],
   ['attribute_16',['Attribute',['../class_b_a_r_e2_d_1_1_attribute.html',1,'BARE2D::Attribute&lt; T &gt;'],['../class_b_a_r_e2_d_1_1_attribute.html#abac3836f74d59b8efed671317a5660c3',1,'BARE2D::Attribute::Attribute()'],['../class_b_a_r_e2_d_1_1_attribute.html#a94be133efd820d80ee7db4b9fdfdff0c',1,'BARE2D::Attribute::Attribute(std::string Name, AttributeType Type, T *data)']]],
   ['attributebase_17',['AttributeBase',['../class_b_a_r_e2_d_1_1_attribute_base.html',1,'BARE2D']]],
-  ['attributetype_18',['AttributeType',['../namespace_b_a_r_e2_d.html#a0c44bfbd2820598bfcbf4986a6252b02',1,'BARE2D']]]
+  ['attributetype_18',['AttributeType',['../namespace_b_a_r_e2_d.html#a0c44bfbd2820598bfcbf4986a6252b02',1,'BARE2D']]],
+  ['audiomanager_19',['AudioManager',['../class_b_a_r_e2_d_1_1_audio_manager.html',1,'BARE2D::AudioManager'],['../class_b_a_r_e2_d_1_1_audio_manager.html#a2ad1c7e845597f70b9d0a5d14969f3b5',1,'BARE2D::AudioManager::AudioManager()']]],
+  ['audiomanager_2ecpp_20',['AudioManager.cpp',['../_audio_manager_8cpp.html',1,'']]],
+  ['audiomanager_2ehpp_21',['AudioManager.hpp',['../_audio_manager_8hpp.html',1,'']]]
 ];

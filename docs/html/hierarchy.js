@@ -4,15 +4,16 @@ var hierarchy =
     [ "BARE2D::AttributeBase", "class_b_a_r_e2_d_1_1_attribute_base.html", [
       [ "BARE2D::Attribute< T >", "class_b_a_r_e2_d_1_1_attribute.html", null ]
     ] ],
+    [ "BARE2D::AudioManager", "class_b_a_r_e2_d_1_1_audio_manager.html", null ],
     [ "BARE2D::BARECEGUI", "class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html", null ],
     [ "BARE2D::Cache< S, T >", "class_b_a_r_e2_d_1_1_cache.html", null ],
     [ "BARE2D::Cache< std::string, BARE2D::Cache< unsigned int, BARE2D::XMLData > >", "class_b_a_r_e2_d_1_1_cache.html", null ],
     [ "BARE2D::Cache< std::string, BARE2D::Font >", "class_b_a_r_e2_d_1_1_cache.html", null ],
     [ "BARE2D::Cache< std::string, BARE2D::LuaScript >", "class_b_a_r_e2_d_1_1_cache.html", null ],
     [ "BARE2D::Cache< std::string, BARE2D::MutableTexture >", "class_b_a_r_e2_d_1_1_cache.html", null ],
+    [ "BARE2D::Cache< std::string, BARE2D::Sound >", "class_b_a_r_e2_d_1_1_cache.html", null ],
     [ "BARE2D::Cache< std::string, BARE2D::Texture >", "class_b_a_r_e2_d_1_1_cache.html", null ],
     [ "BARE2D::Cache< std::string, BARE2D::XMLData >", "class_b_a_r_e2_d_1_1_cache.html", null ],
-    [ "BARE2D::Cache< std::string, Sound >", "class_b_a_r_e2_d_1_1_cache.html", null ],
     [ "BARE2D::Camera2D", "class_b_a_r_e2_d_1_1_camera2_d.html", null ],
     [ "BARE2D::CEGUIContextWrapper", "struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html", null ],
     [ "BARE2D::CharacterGlyph", "struct_b_a_r_e2_d_1_1_character_glyph.html", null ],
@@ -45,6 +46,7 @@ var hierarchy =
     [ "BARE2D::LuaScriptContextWrapper", "class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html", null ],
     [ "BARE2D::LuaScriptEngine", "class_b_a_r_e2_d_1_1_lua_script_engine.html", null ],
     [ "BARE2D::LuaScriptQueue", "class_b_a_r_e2_d_1_1_lua_script_queue.html", null ],
+    [ "BARE2D::Music", "class_b_a_r_e2_d_1_1_music.html", null ],
     [ "BARE2D::Position", "struct_b_a_r_e2_d_1_1_position.html", null ],
     [ "BARE2D::Rectangle", "struct_b_a_r_e2_d_1_1_rectangle.html", null ],
     [ "RenderBatch", "class_render_batch.html", null ],
@@ -59,7 +61,7 @@ var hierarchy =
     [ "BARE2D::Screen", "class_b_a_r_e2_d_1_1_screen.html", null ],
     [ "BARE2D::ScreenList", "class_b_a_r_e2_d_1_1_screen_list.html", null ],
     [ "BARE2D::ShaderProgram", "class_b_a_r_e2_d_1_1_shader_program.html", null ],
-    [ "Sound", "class_sound.html", null ],
+    [ "BARE2D::Sound", "class_b_a_r_e2_d_1_1_sound.html", null ],
     [ "BARE2D::Texture", "struct_b_a_r_e2_d_1_1_texture.html", [
       [ "BARE2D::MutableTexture", "struct_b_a_r_e2_d_1_1_mutable_texture.html", null ]
     ] ],

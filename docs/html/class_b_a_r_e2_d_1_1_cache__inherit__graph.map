@@ -1,10 +1,10 @@
 <map id="BARE2D::Cache&lt; S, T &gt;" name="BARE2D::Cache&lt; S, T &gt;">
-<area shape="rect" id="node1" title="This is a skeleton cache class. This can only be used by the ResourceManager or other classes who act..." alt="" coords="5,229,176,256"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="401,11,571,53"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="410,77,562,118"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="393,142,579,183"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="401,207,571,278"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="369,302,603,343"/>
-<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="387,367,585,409"/>
-<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="387,433,585,474"/>
+<area shape="rect" id="node1" title="This is a skeleton cache class. This can only be used by the ResourceManager or other classes who act..." alt="" coords="5,251,176,277"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="401,18,571,59"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="393,83,579,125"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="401,149,571,219"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="369,243,603,285"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="387,309,585,350"/>
+<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="395,374,577,415"/>
+<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="387,439,585,481"/>
 </map>

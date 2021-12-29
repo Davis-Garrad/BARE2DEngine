@@ -14,6 +14,8 @@ class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}
 \item 
 class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}}
 \begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{Attribute\+Base}} class only exists for some templating acrobatics reasons (as an abstract base class for \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{Audio\+Manager}}
+\item 
 class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{B\+A\+R\+E\+C\+E\+G\+UI}}
 \item 
 class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{Basic\+Renderer}}
@@ -64,6 +66,8 @@ class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine}{Lua\+Script\+Engi
 \item 
 class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{Lua\+Script\+Queue}}
 \item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_music}{Music}}
+\item 
 class \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_mutable_texture}{Mutable\+Texture}}
 \begin{DoxyCompactList}\small\item\em A child of \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}} which allows (and gives helpful functions for) mutation. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_position}{Position}}
@@ -80,6 +84,8 @@ class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{Screen\+List}}
 \begin{DoxyCompactList}\small\item\em Holds and connects all of the screens used in the program in a list. Keeps track of the previous screen. Contains functions to move to the next or previous screens. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{Shader\+Program}}
 \begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{Shader\+Program}} is a G\+L\+SL program which combines two shaders -\/ the vertex shader and the fragment shader -\/ to allow rendering. Each renderer should have its own program. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_sound}{Sound}}
+\item 
 struct \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}
 \begin{DoxyCompactList}\small\item\em The texture struct holds very basic stuff -\/ the filepath, width, height, and ID,. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer}{Timer}}
@@ -124,6 +130,15 @@ enum \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{B\
 \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba}{B\+A\+R\+E\+Error\+::\+L\+U\+A\+\_\+\+F\+A\+I\+L\+U\+RE}}
  \}
 \begin{DoxyCompactList}\small\item\em Represents a specific type of error that has occured. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{G\+L\+Error\+Severity}} \{ \newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{G\+L\+Error\+Severity\+::\+N\+O\+T\+IF}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88}{G\+L\+Error\+Severity\+::\+L\+OW}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c}{G\+L\+Error\+Severity\+::\+M\+ED}}, 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c}{G\+L\+Error\+Severity\+::\+H\+I\+GH}}, 
+\newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3}{G\+L\+Error\+Severity\+::\+U\+N\+K\+N\+O\+WN}}
+ \}
+\item 
 enum \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253}{Screen\+State}} \{ \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}{Screen\+State\+::\+R\+U\+N\+N\+I\+NG}}, 
 \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253af1b095bb6b4fb743116b8e2910c87e2a}{Screen\+State\+::\+C\+H\+A\+N\+G\+E\+\_\+\+N\+E\+XT}}, 
 \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ad99b55eff583c9982c86312bdcfdb47c}{Screen\+State\+::\+C\+H\+A\+N\+G\+E\+\_\+\+P\+R\+EV}}, 
@@ -161,14 +176,14 @@ void \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{th
 \begin{DoxyCompactList}\small\item\em Throws an error silently. Adds it to the pile. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{display\+Errors}} ()
 \begin{DoxyCompactList}\small\item\em Displays the latest thrown errors (really just all the thrown errors) in the console. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespace_b_a_r_e2_d_a4085763ff0085d40686c3cd0bc1a5182}{init\+G\+L\+Error\+Callback}} ()
+void \mbox{\hyperlink{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984}{init\+G\+L\+Error\+Callback}} (\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{G\+L\+Error\+Severity}} min\+Severity=\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{G\+L\+Error\+Severity\+::\+N\+O\+T\+IF}})
 \begin{DoxyCompactList}\small\item\em Initializes the GL Debug Message Callback function, and enables debug output straight from Open\+GL. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{init}} ()
-\begin{DoxyCompactList}\small\item\em Inits the required systems used by \mbox{\hyperlink{namespace_b_a_r_e2_d}{B\+A\+R\+E2D}}. \end{DoxyCompactList}\item 
 C\+E\+G\+U\+I\+::\+Key\+::\+Scan \mbox{\hyperlink{namespace_b_a_r_e2_d_a4308f8684a05ffbf8ef36cd49541765b}{S\+D\+L\+Key\+To\+C\+E\+G\+U\+I\+Key}} (S\+D\+L\+\_\+\+Keycode key)
 \item 
 C\+E\+G\+U\+I\+::\+Mouse\+Button \mbox{\hyperlink{namespace_b_a_r_e2_d_add368291490f34b060048b5cbb5245f9}{S\+D\+L\+Button\+To\+C\+E\+G\+U\+I\+Button}} (Uint8 sdl\+Button)
 \item 
+void \mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{init}} ()
+\begin{DoxyCompactList}\small\item\em Inits the required systems used by \mbox{\hyperlink{namespace_b_a_r_e2_d}{B\+A\+R\+E2D}}. \end{DoxyCompactList}\item 
 template$<$$>$ void \mbox{\hyperlink{namespace_b_a_r_e2_d_a6d067546a069754a8369391b179da987}{Shader\+Program\+::set\+Uniform$<$ glm\+::vec2 $>$}} (const std\+::string uniform, glm\+::vec2 \&data)
 \item 
 template$<$$>$ void \mbox{\hyperlink{namespace_b_a_r_e2_d_a6ad422394f72acbbd215708e34dd2a92}{Shader\+Program\+::set\+Uniform$<$ glm\+::vec3 $>$}} (const std\+::string uniform, glm\+::vec3 \&data)
@@ -189,6 +204,8 @@ int \mbox{\hyperlink{namespace_b_a_r_e2_d_a480b5f334854e31c2d7e026933129480}{dec
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{G\+L\+Error\+Severity}} \mbox{\hyperlink{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}{G\+L\+Error\+Min\+Severity}} = \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{G\+L\+Error\+Severity\+::\+N\+O\+T\+IF}}
 \item 
 std\+::vector$<$ \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{B\+A\+R\+E\+Error}} $>$ \mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{thrown\+Errors}}
 \end{DoxyCompactItemize}
@@ -335,6 +352,38 @@ L\+U\+A\+\_\+\+F\+A\+I\+L\+U\+RE&\\
 
 Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8hpp_source_l00018}{18}} of file \mbox{\hyperlink{_b_a_r_e_errors_8hpp_source}{B\+A\+R\+E\+Errors.\+hpp}}.
 
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}\label{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}} 
+\index{BARE2D@{BARE2D}!GLErrorSeverity@{GLErrorSeverity}}
+\index{GLErrorSeverity@{GLErrorSeverity}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{GLErrorSeverity}{GLErrorSeverity}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{B\+A\+R\+E2\+D\+::\+G\+L\+Error\+Severity}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NOTIF@{NOTIF}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!NOTIF@{NOTIF}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}\label{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}} 
+N\+O\+T\+IF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOW@{LOW}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!LOW@{LOW}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88}\label{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88}} 
+L\+OW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MED@{MED}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!MED@{MED}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c}\label{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c}} 
+M\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH@{HIGH}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!HIGH@{HIGH}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c}\label{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c}} 
+H\+I\+GH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNKNOWN@{UNKNOWN}!BARE2D@{BARE2D}}\index{BARE2D@{BARE2D}!UNKNOWN@{UNKNOWN}}}\mbox{\Hypertarget{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3}\label{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3}} 
+U\+N\+K\+N\+O\+WN&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{_b_a_r_e_errors_8hpp_source}{B\+A\+R\+E\+Errors.\+hpp}}.
+
 \mbox{\Hypertarget{namespace_b_a_r_e2_d_a9897192c146240e3a38981a50a751369}\label{namespace_b_a_r_e2_d_a9897192c146240e3a38981a50a751369}} 
 \index{BARE2D@{BARE2D}!Justification@{Justification}}
 \index{Justification@{Justification}!BARE2D@{BARE2D}}
@@ -451,13 +500,14 @@ Displays the latest thrown errors (really just all the thrown errors) in the con
 
 
 
-Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00190}{190}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00199}{199}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
 
 
 
-Referenced by \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00168}{throw\+Fatal\+Error()}}.
+Referenced by \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00177}{throw\+Fatal\+Error()}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -484,7 +534,7 @@ The representative string.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00127}{127}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00136}{136}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
 
 \mbox{\Hypertarget{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}\label{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}} 
 \index{BARE2D@{BARE2D}!init@{init}}
@@ -505,7 +555,7 @@ Definition at line \mbox{\hyperlink{_b_a_r_e2_d_engine_8cpp_source_l00010}{10}} 
 
 
 
-Referenced by \mbox{\hyperlink{_app_8cpp_source_l00084}{B\+A\+R\+E2\+D\+::\+App\+::init()}}.
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00086}{B\+A\+R\+E2\+D\+::\+App\+::init()}}.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -514,11 +564,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespace_b_a_r_e2_d_a4085763ff0085d40686c3cd0bc1a5182}\label{namespace_b_a_r_e2_d_a4085763ff0085d40686c3cd0bc1a5182}} 
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984}\label{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984}} 
 \index{BARE2D@{BARE2D}!initGLErrorCallback@{initGLErrorCallback}}
 \index{initGLErrorCallback@{initGLErrorCallback}!BARE2D@{BARE2D}}
 \doxysubsubsection{\texorpdfstring{initGLErrorCallback()}{initGLErrorCallback()}}
-{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::init\+G\+L\+Error\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::init\+G\+L\+Error\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{G\+L\+Error\+Severity}}}]{min\+Severity = {\ttfamily \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{G\+L\+Error\+Severity\+::\+N\+O\+T\+IF}}} }\end{DoxyParamCaption})}
 
 
 
@@ -526,28 +576,30 @@ Initializes the GL Debug Message Callback function, and enables debug output str
 
 
 
-Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00201}{201}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00210}{210}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00023}{Message\+Callback()}}.
+References \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00132}{G\+L\+Error\+Min\+Severity}}, and \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00023}{Message\+Callback()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_app_8cpp_source_l00029}{B\+A\+R\+E2\+D\+::\+App\+::run()}}.
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00031}{B\+A\+R\+E2\+D\+::\+App\+::run()}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespace_b_a_r_e2_d_a4085763ff0085d40686c3cd0bc1a5182_cgraph}
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespace_b_a_r_e2_d_a4085763ff0085d40686c3cd0bc1a5182_icgraph}
+\includegraphics[width=350pt]{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespace_b_a_r_e2_d_add368291490f34b060048b5cbb5245f9}\label{namespace_b_a_r_e2_d_add368291490f34b060048b5cbb5245f9}} 
@@ -558,7 +610,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00442}{442}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{B\+A\+R\+E\+C\+E\+G\+U\+I.\+cpp}}.
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00475}{475}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{B\+A\+R\+E\+C\+E\+G\+U\+I.\+cpp}}.
 
 \mbox{\Hypertarget{namespace_b_a_r_e2_d_a4308f8684a05ffbf8ef36cd49541765b}\label{namespace_b_a_r_e2_d_a4308f8684a05ffbf8ef36cd49541765b}} 
 \index{BARE2D@{BARE2D}!SDLKeyToCEGUIKey@{SDLKeyToCEGUIKey}}
@@ -568,7 +620,7 @@ Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00442}{442}}
 
 
 
-Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00248}{248}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{B\+A\+R\+E\+C\+E\+G\+U\+I.\+cpp}}.
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00281}{281}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{B\+A\+R\+E\+C\+E\+G\+U\+I.\+cpp}}.
 
 \mbox{\Hypertarget{namespace_b_a_r_e2_d_a801e1e5efc8c94d85331acee75eeaf01}\label{namespace_b_a_r_e2_d_a801e1e5efc8c94d85331acee75eeaf01}} 
 \index{BARE2D@{BARE2D}!ShaderProgram::setUniform$<$ glm::ivec2 $>$@{ShaderProgram::setUniform$<$ glm::ivec2 $>$}}
@@ -743,13 +795,14 @@ Throws an error silently. Adds it to the pile.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00178}{178}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00187}{187}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
 
 
 
-Referenced by \mbox{\hyperlink{_lua_script_8cpp_source_l00036}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::create\+Thread()}}, \mbox{\hyperlink{_x_m_l_data_types_8tcc_source_l00096}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::get\+Attribute\+By\+Name()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00120}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::get\+Uniform\+Location()}}, \mbox{\hyperlink{_lua_script_8cpp_source_l00124}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::load\+Lua()}}, \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00187}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::read()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00150}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::read\+Value()}}, \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00045}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Engine\+::register\+Module()}}, \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00060}{B\+A\+R\+E2\+D\+::\+Lua\+Context\+Manager\+::remove\+Context()}}, \mbox{\hyperlink{_lua_script_8cpp_source_l00060}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::start()}}, \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00168}{throw\+Fatal\+Error()}}, and \mbox{\hyperlink{_lua_script_8cpp_source_l00083}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::update()}}.
+Referenced by \mbox{\hyperlink{_lua_script_8cpp_source_l00036}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::create\+Thread()}}, \mbox{\hyperlink{_x_m_l_data_types_8tcc_source_l00096}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::get\+Attribute\+By\+Name()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00120}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::get\+Uniform\+Location()}}, \mbox{\hyperlink{_lua_script_8cpp_source_l00124}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::load\+Lua()}}, \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00187}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+::read()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00150}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::read\+Value()}}, \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00045}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Engine\+::register\+Module()}}, \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00060}{B\+A\+R\+E2\+D\+::\+Lua\+Context\+Manager\+::remove\+Context()}}, \mbox{\hyperlink{_lua_script_8cpp_source_l00060}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::start()}}, \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00177}{throw\+Fatal\+Error()}}, and \mbox{\hyperlink{_lua_script_8cpp_source_l00083}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::update()}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -775,15 +828,15 @@ Throws an error (fatal). Also calls display\+Errors and exits the program.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00168}{168}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00177}{177}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00190}{display\+Errors()}}, and \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00178}{throw\+Error()}}.
+References \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00199}{display\+Errors()}}, and \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00187}{throw\+Error()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_shader_program_8cpp_source_l00172}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::compile\+Shader\+From\+Source()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00033}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::compile\+Shaders\+From\+Source()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00222}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::create\+F\+B\+O()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00171}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::create\+Textures()}}, \mbox{\hyperlink{_app_8cpp_source_l00084}{B\+A\+R\+E2\+D\+::\+App\+::init()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00070}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::link\+Shaders()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00035}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Texture()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00017}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::load\+X\+M\+L()}}, \mbox{\hyperlink{_logger_8cpp_source_l00011}{B\+A\+R\+E2\+D\+::\+Logger\+::\+Logger()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00085}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::save\+X\+M\+L()}}, \mbox{\hyperlink{_x_m_l_data_types_8tcc_source_l00021}{B\+A\+R\+E2\+D\+::\+Attribute$<$ T $>$\+::set\+Data()}}, \mbox{\hyperlink{_shader_program_8tcc_source_l00010}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform()}}, and \mbox{\hyperlink{_shader_program_8tcc_source_l00015}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform\+Matrix()}}.
+Referenced by \mbox{\hyperlink{_shader_program_8cpp_source_l00172}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::compile\+Shader\+From\+Source()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00033}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::compile\+Shaders\+From\+Source()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00222}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::create\+F\+B\+O()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00171}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::create\+Textures()}}, \mbox{\hyperlink{_app_8cpp_source_l00086}{B\+A\+R\+E2\+D\+::\+App\+::init()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00070}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::link\+Shaders()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00106}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Mutable\+Texture()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00113}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Sound()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00035}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Texture()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00017}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::load\+X\+M\+L()}}, \mbox{\hyperlink{_logger_8cpp_source_l00011}{B\+A\+R\+E2\+D\+::\+Logger\+::\+Logger()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00085}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::save\+X\+M\+L()}}, \mbox{\hyperlink{_x_m_l_data_types_8tcc_source_l00021}{B\+A\+R\+E2\+D\+::\+Attribute$<$ T $>$\+::set\+Data()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00099}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::set\+Mutable\+Texture()}}, \mbox{\hyperlink{_shader_program_8tcc_source_l00010}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform()}}, and \mbox{\hyperlink{_shader_program_8tcc_source_l00015}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform\+Matrix()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -792,7 +845,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -802,6 +856,20 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 \doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}\label{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}} 
+\index{BARE2D@{BARE2D}!GLErrorMinSeverity@{GLErrorMinSeverity}}
+\index{GLErrorMinSeverity@{GLErrorMinSeverity}!BARE2D@{BARE2D}}
+\doxysubsubsection{\texorpdfstring{GLErrorMinSeverity}{GLErrorMinSeverity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{G\+L\+Error\+Severity}} B\+A\+R\+E2\+D\+::\+G\+L\+Error\+Min\+Severity = \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{G\+L\+Error\+Severity\+::\+N\+O\+T\+IF}}}
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00132}{132}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00210}{init\+G\+L\+Error\+Callback()}}, and \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00023}{Message\+Callback()}}.
+
 \mbox{\Hypertarget{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}\label{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}} 
 \index{BARE2D@{BARE2D}!thrownErrors@{thrownErrors}}
 \index{thrownErrors@{thrownErrors}!BARE2D@{BARE2D}}
@@ -810,5 +878,5 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00125}{125}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00134}{134}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{B\+A\+R\+E\+Errors.\+cpp}}.
 

@@ -162,8 +162,10 @@ void TestScreen::onEntry()
 	std::string guiPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/GUI";
 	m_gui = BARE2D::BARECEGUI::getInstance();
 	m_gui->init(guiPath, 1);
-	m_gui->loadScheme("AlfiskoSkin.scheme");
-	m_gui->createWidget("AlfiskoSkin/FrameWindow", glm::vec4(0.0f, 0.0f, 0.5f, 0.5f), glm::vec4(0.0f));
+	m_gui->loadScheme("WindowsLook.scheme");
+	m_gui->setFont("Junicode-13");
+	CEGUI::FrameWindow* win = static_cast<CEGUI::FrameWindow*>(m_gui->createWidget("WindowsLook/FrameWindow", glm::vec4(0.25f, 0.25f, 0.5f, 0.5f), glm::vec4(0.0f)));
+	win->setText("Look ma! It's a FrameWindow!");
 }
 
 void TestScreen::onExit()

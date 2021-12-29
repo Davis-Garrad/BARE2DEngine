@@ -20,11 +20,19 @@ var _b_a_r_e_errors_8hpp =
       [ "UNINITIALIZED_FUNCTION", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15abcb313a5c9f8965d7b75833af33d16be", null ],
       [ "LUA_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba", null ]
     ] ],
+    [ "GLErrorSeverity", "_b_a_r_e_errors_8hpp.html#a2fa71018d57aea370eff28f6e1a50bc3", [
+      [ "NOTIF", "_b_a_r_e_errors_8hpp.html#a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da", null ],
+      [ "LOW", "_b_a_r_e_errors_8hpp.html#a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88", null ],
+      [ "MED", "_b_a_r_e_errors_8hpp.html#a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c", null ],
+      [ "HIGH", "_b_a_r_e_errors_8hpp.html#a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c", null ],
+      [ "UNKNOWN", "_b_a_r_e_errors_8hpp.html#a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3", null ]
+    ] ],
     [ "demangle", "_b_a_r_e_errors_8hpp.html#ad6c3fb278e5310c3250bab181be717d6", null ],
     [ "displayErrors", "_b_a_r_e_errors_8hpp.html#a8d6a0fa02837ab9ebba5b67cc21f9e35", null ],
     [ "getErrString", "_b_a_r_e_errors_8hpp.html#a7951c5decc1f7edc3c4f78ed2f579c85", null ],
-    [ "initGLErrorCallback", "_b_a_r_e_errors_8hpp.html#a4085763ff0085d40686c3cd0bc1a5182", null ],
+    [ "initGLErrorCallback", "_b_a_r_e_errors_8hpp.html#a2e37a4d16611398b81332bb834395984", null ],
     [ "throwError", "_b_a_r_e_errors_8hpp.html#a0d8f8a98bf559e6d2eda28ae744f486c", null ],
     [ "throwFatalError", "_b_a_r_e_errors_8hpp.html#aed4332e42208fed2905a8b0845dad4d1", null ],
+    [ "GLErrorMinSeverity", "_b_a_r_e_errors_8hpp.html#a7ebdadee6e21138680eb929277d0da7b", null ],
     [ "thrownErrors", "_b_a_r_e_errors_8hpp.html#a78e4606c66dcc65416419cade7db0255", null ]
 ];

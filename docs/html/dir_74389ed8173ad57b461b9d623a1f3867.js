@@ -4,6 +4,10 @@ var dir_74389ed8173ad57b461b9d623a1f3867 =
     [ "App.hpp", "_app_8hpp.html", [
       [ "App", "class_b_a_r_e2_d_1_1_app.html", "class_b_a_r_e2_d_1_1_app" ]
     ] ],
+    [ "AudioManager.cpp", "_audio_manager_8cpp.html", null ],
+    [ "AudioManager.hpp", "_audio_manager_8hpp.html", [
+      [ "AudioManager", "class_b_a_r_e2_d_1_1_audio_manager.html", "class_b_a_r_e2_d_1_1_audio_manager" ]
+    ] ],
     [ "BARE2DEngine.cpp", "_b_a_r_e2_d_engine_8cpp.html", "_b_a_r_e2_d_engine_8cpp" ],
     [ "BARE2DEngine.hpp", "_b_a_r_e2_d_engine_8hpp.html", "_b_a_r_e2_d_engine_8hpp" ],
     [ "BARECEGUI.cpp", "_b_a_r_e_c_e_g_u_i_8cpp.html", "_b_a_r_e_c_e_g_u_i_8cpp" ],
@@ -79,6 +83,10 @@ var dir_74389ed8173ad57b461b9d623a1f3867 =
     [ "LuaScriptQueue.hpp", "_lua_script_queue_8hpp.html", [
       [ "LuaScriptQueue", "class_b_a_r_e2_d_1_1_lua_script_queue.html", "class_b_a_r_e2_d_1_1_lua_script_queue" ]
     ] ],
+    [ "Music.cpp", "_music_8cpp.html", null ],
+    [ "Music.hpp", "_music_8hpp.html", [
+      [ "Music", "class_b_a_r_e2_d_1_1_music.html", "class_b_a_r_e2_d_1_1_music" ]
+    ] ],
     [ "MutableTexture.cpp", "_mutable_texture_8cpp.html", null ],
     [ "MutableTexture.hpp", "_mutable_texture_8hpp.html", [
       [ "MutableTexture", "struct_b_a_r_e2_d_1_1_mutable_texture.html", "struct_b_a_r_e2_d_1_1_mutable_texture" ]
@@ -107,7 +115,7 @@ var dir_74389ed8173ad57b461b9d623a1f3867 =
     [ "ShaderProgram.tcc", "_shader_program_8tcc.html", "_shader_program_8tcc" ],
     [ "Sound.cpp", "_sound_8cpp.html", null ],
     [ "Sound.hpp", "_sound_8hpp.html", [
-      [ "Sound", "class_sound.html", "class_sound" ]
+      [ "Sound", "class_b_a_r_e2_d_1_1_sound.html", "class_b_a_r_e2_d_1_1_sound" ]
     ] ],
     [ "Texture.hpp", "_texture_8hpp.html", [
       [ "Texture", "struct_b_a_r_e2_d_1_1_texture.html", "struct_b_a_r_e2_d_1_1_texture" ]

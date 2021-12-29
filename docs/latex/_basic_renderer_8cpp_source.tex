@@ -53,7 +53,7 @@
 \DoxyCodeLine{00049             \textcolor{keywordflow}{return};}
 \DoxyCodeLine{00050 }
 \DoxyCodeLine{00051         \textcolor{comment}{// At this point we can just scale the size (the position should be translated in the shader) and draw it}}
-\DoxyCodeLine{00052         glm::vec2 size = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_ac5cb2034f0ba69eeec5ff52a20b49a74}{getScreenSizeFromViewedSize}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_ac5cb2034f0ba69eeec5ff52a20b49a74}{(}}glm::vec2(destRect.z, destRect.w)\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_ac5cb2034f0ba69eeec5ff52a20b49a74}{)}};}
+\DoxyCodeLine{00052         \textcolor{comment}{//glm::vec2 size = m\_camera-\/>getScreenSizeFromViewedSize(glm::vec2(destRect.z, destRect.w));}}
 \DoxyCodeLine{00053 }
 \DoxyCodeLine{00054         \textcolor{comment}{// Just add the glyph}}
 \DoxyCodeLine{00055         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a567a6968871425c9a08cf6187aa3a6e7}{m\_glyphs}}.emplace\_back(destRect, uvRect, texture, depth, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour_a6d871c5c62b8e189b8ea4f918ae07ef6}{(}}255\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour_a6d871c5c62b8e189b8ea4f918ae07ef6}{,}} 255\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour_a6d871c5c62b8e189b8ea4f918ae07ef6}{,}} 255\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour_a6d871c5c62b8e189b8ea4f918ae07ef6}{,}} 255\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour_a6d871c5c62b8e189b8ea4f918ae07ef6}{)}});}
@@ -65,7 +65,7 @@
 \DoxyCodeLine{00061             \textcolor{keywordflow}{return};}
 \DoxyCodeLine{00062 }
 \DoxyCodeLine{00063         \textcolor{comment}{// At this point we can just scale the size (the position should be translated in the shader) and draw it}}
-\DoxyCodeLine{00064         glm::vec2 size = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_ac5cb2034f0ba69eeec5ff52a20b49a74}{getScreenSizeFromViewedSize}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_ac5cb2034f0ba69eeec5ff52a20b49a74}{(}}glm::vec2(destRect.z, destRect.w)\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_ac5cb2034f0ba69eeec5ff52a20b49a74}{)}};}
+\DoxyCodeLine{00064         \textcolor{comment}{//glm::vec2 size = m\_camera-\/>getScreenSizeFromViewedSize(glm::vec2(destRect.z, destRect.w));}}
 \DoxyCodeLine{00065 }
 \DoxyCodeLine{00066         \textcolor{comment}{// Just add the glyph}}
 \DoxyCodeLine{00067         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a567a6968871425c9a08cf6187aa3a6e7}{m\_glyphs}}.emplace\_back(destRect, uvRect, texture, depth, colour);}

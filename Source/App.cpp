@@ -155,7 +155,9 @@ namespace BARE2D {
 		
 		SDL_Event event;
 		while(SDL_PollEvent(&event)) {
-			gui->handleSDLEvent(event);
+			// Just check if the gui is initialized and there is a context that will be handling these events
+			if(gui->getContext())
+				gui->handleSDLEvent(event); // if there is, use it!
 			switch(event.type) {
 				case SDL_QUIT:
 					exitApp();
