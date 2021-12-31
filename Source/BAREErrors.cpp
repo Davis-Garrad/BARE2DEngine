@@ -170,7 +170,7 @@ namespace BARE2D {
 			case BAREError::LUA_FAILURE:
 				return "EC LUA_FAILURE";
 			default:
-				return "EC DNE - Unknown error.";
+				return "EC DNE - Unknown error. (enum " + std::to_string((unsigned int)err) + ")";
 		}
 	}
 	

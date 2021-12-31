@@ -13,6 +13,7 @@ namespace BARE2D {
 	Cache<std::string, Texture>* ResourceManager::m_textures = new Cache<std::string, Texture>();
 	Cache<std::string, MutableTexture>* ResourceManager::m_mutableTextures = new Cache<std::string, MutableTexture>();
 	Cache<std::string, Sound>* ResourceManager::m_sounds = new Cache<std::string, Sound>();
+	Cache<std::string, Music>* ResourceManager::m_music = new Cache<std::string, Music>();
 	Cache<std::string, LuaScript>* ResourceManager::m_scripts = new Cache<std::string, LuaScript>();
 	Cache<std::string, Font>* ResourceManager::m_fonts = new Cache<std::string, Font>();
 	
@@ -112,10 +113,43 @@ namespace BARE2D {
 
 	Sound ResourceManager::loadSound(std::string& soundPath)
 	{
-		throwFatalError(BAREError::UNINITIALIZED_FUNCTION, "ResourceManager::loadSound");
+		Sound* searched = m_sounds->findItem(soundPath);
+		if(searched) {
+			return *searched; // We've already got it in the cache
+		}
 		
-		Sound s;
-		return s;
+		// Cache doesn't have it. Load it.
+		Mix_Chunk* chunk = Mix_LoadWAV(soundPath.c_str());
+		if(!chunk) {
+			// There's been an error!
+			throwFatalError(BAREError::SDL_MIXER_LOAD_FAILURE, "Failed to load sound: " + std::string(Mix_GetError()));
+		}
+		
+		// Create a new one in the cache.
+		Sound* created = m_sounds->createItem(soundPath);
+		created->chunk = chunk;
+		
+		return *created;
+	}
+	
+	Music ResourceManager::loadMusic(std::string& musicPath) {
+		Music* searched = m_music->findItem(musicPath);
+		if(searched) {
+			return *searched; // We've already got it in the cache
+		}
+		
+		// Cache doesn't have it. Load it.
+		Mix_Music* musicChunk = Mix_LoadMUS(musicPath.c_str());
+		if(!musicChunk) {
+			// There's been an error!
+			throwFatalError(BAREError::SDL_MIXER_LOAD_FAILURE, "Failed to load music: " + std::string(Mix_GetError()));
+		}
+		
+		// Create a new one in the cache.
+		Music* created = m_music->createItem(musicPath);
+		created->music = musicChunk;
+		
+		return *created;
 	}
 
 	LuaScript ResourceManager::loadScript(std::string& scriptPath)

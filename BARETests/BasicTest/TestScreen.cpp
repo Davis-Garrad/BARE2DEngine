@@ -166,11 +166,21 @@ void TestScreen::onEntry()
 	m_gui->setFont("Junicode-13");
 	CEGUI::FrameWindow* win = static_cast<CEGUI::FrameWindow*>(m_gui->createWidget("WindowsLook/FrameWindow", glm::vec4(0.25f, 0.25f, 0.5f, 0.5f), glm::vec4(0.0f)));
 	win->setText("Look ma! It's a FrameWindow!");
+	
+	m_audioManager = BARE2D::AudioManager::getInstance();
+	m_audioManager->init();
+	
+	std::string musicPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/SampleMusic.mus";
+	BARE2D::Music mus = BARE2D::ResourceManager::loadMusic(musicPath);
+	m_audioManager->playMusic(mus, 8000);
 }
 
 void TestScreen::onExit()
 {
 	BARE2D::Logger::getInstance()->log("Leaving screen!");
+
+	BARE2D::AudioManager::release();
+	BARE2D::BARECEGUI::release();
 
 	delete m_renderer;
 	delete m_fbo;

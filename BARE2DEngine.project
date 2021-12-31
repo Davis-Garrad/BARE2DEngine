@@ -28,12 +28,10 @@
   </Reconciliation>
   <VirtualDirectory Name="Source">
     <VirtualDirectory Name="Audio">
-      <File Name="Source/Music.cpp"/>
       <File Name="Source/Music.hpp"/>
       <File Name="Source/AudioManager.cpp"/>
       <File Name="Source/AudioManager.hpp"/>
       <File Name="Source/Sound.hpp"/>
-      <File Name="Source/Sound.cpp"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Scripting">
       <File Name="Source/LuaScript.hpp"/>
@@ -50,6 +48,8 @@
       <File Name="Source/LuaHeaders.hpp"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Resources">
+      <File Name="Source/ResourceManager.hpp"/>
+      <File Name="Source/ResourceManager.cpp"/>
       <File Name="Source/XMLDataTypes.tcc"/>
       <File Name="Source/XMLDataTypes.hpp"/>
       <File Name="Source/XMLDataTypes.cpp"/>
@@ -79,8 +79,6 @@
       <File Name="Source/Timer.cpp"/>
       <File Name="Source/Filesystem.cpp"/>
       <File Name="Source/Filesystem.hpp"/>
-      <File Name="Source/ResourceManager.cpp"/>
-      <File Name="Source/ResourceManager.hpp"/>
       <File Name="Source/Logger.hpp"/>
       <File Name="Source/Logger.cpp"/>
       <File Name="Source/InputManager.hpp"/>

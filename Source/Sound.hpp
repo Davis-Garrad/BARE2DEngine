@@ -1,13 +1,11 @@
 #pragma once
 
+#include <SDL2/SDL_mixer.h>
+
 namespace BARE2D {
 
-	class Sound
-	{
-	public:
-		Sound();
-		~Sound();
-
+	struct Sound {
+		Mix_Chunk* chunk = nullptr;
 	};
 
 }

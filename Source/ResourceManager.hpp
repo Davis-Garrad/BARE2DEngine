@@ -5,6 +5,7 @@
 #include "Texture.hpp"
 #include "MutableTexture.hpp"
 #include "Sound.hpp"
+#include "Music.hpp"
 #include "LuaScript.hpp"
 #include "Font.hpp"
 #include "ShaderProgram.hpp"
@@ -64,6 +65,13 @@ namespace BARE2D {
 		static Sound loadSound(std::string& soundPath);
 		
 		/**
+		 * @brief Loads some music from the filepath given from the cache or from the file if the cache doesn't contain it.
+		 * @param musicPath The path to load the music from
+		 * @return An instance of the music.
+		 */
+		static Music loadMusic(std::string& musicPath);
+		
+		/**
 		 * @brief Loads a script from the filepath given from the cache or from the file if it's not already in the cache.
 		 * @param scriptPath The path to load the script from.
 		 * @return An instance of the script.
@@ -95,6 +103,7 @@ namespace BARE2D {
 		static Cache<std::string, Texture>* m_textures;
 		static Cache<std::string, MutableTexture>* m_mutableTextures;
 		static Cache<std::string, Sound>* m_sounds;
+		static Cache<std::string, Music>* m_music;
 		static Cache<std::string, LuaScript>* m_scripts;
 		static Cache<std::string, Font>* m_fonts;
 

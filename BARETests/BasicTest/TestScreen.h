@@ -11,6 +11,7 @@
 #include <InputManager.hpp>
 #include <LuaScriptEngine.hpp>
 #include <BARECEGUI.hpp>
+#include <AudioManager.hpp>
 
 class TestScreen : public BARE2D::Screen
 {
@@ -44,6 +45,7 @@ private:
 	BARE2D::Font m_font_openSans;
 	BARE2D::LuaScriptEngine m_luaEngine;
 	BARE2D::BARECEGUI* m_gui = nullptr;
+	BARE2D::AudioManager* m_audioManager = nullptr;
 	
 	glm::vec2 m_position;
 	
