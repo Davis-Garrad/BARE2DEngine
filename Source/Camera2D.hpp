@@ -3,7 +3,20 @@
 #include <glm/glm.hpp>
 
 namespace BARE2D {
+	
+	/**
+	 * @class CameraState
+	 * @brief Holds some basic information that the camera holds in a state.
+	 */
+	struct CameraState {
+		glm::vec2 position = glm::vec2(0.0f);
+		glm::vec2 scale = glm::vec2(1.0f);
+	};
 
+	/**
+	 * @class Camera2D
+	 * @brief The basic camera for a 2D world.
+	 */
 	class Camera2D
 	{
 	public:
@@ -97,13 +110,22 @@ namespace BARE2D {
 		 */
 		bool isRectInScene(glm::vec4& rectangle);
 		
+		/**
+		 * @return The camera's current state. 
+		 */
+		CameraState getState();
+		/**
+		 * @return The camera's last state before modification of the current state. 
+		 */
+		CameraState getLastState();
+		
 	private:
-		// The position of the camera
-		glm::vec2 m_position = glm::vec2(0.0f);
 		// The size of the screen (the camera's viewing field)
 		float m_screenWidth, m_screenHeight;
-		// How much the camera is zoomed in
-		float m_scaleX = 1.0f, m_scaleY = 1.0f;
+		// This holds the state of the camera - the position as well as scale.
+		CameraState m_state;
+		// Holds the last state - only changes after being modified
+		CameraState m_lastState;
 		
 		// Some matrices for math purposes.
 		glm::mat4 m_cameraMatrix, m_orthographicMatrix;

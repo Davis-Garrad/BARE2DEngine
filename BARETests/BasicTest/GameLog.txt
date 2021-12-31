@@ -1,11 +1,15 @@
 
 
 
-### LOG: Wed Dec 29 16:37:16 2021 ###
+### LOG: Fri Dec 31 14:51:17 2021 ###
 
 Thanks for using BARE2D! Original engine by Davis Garrad
 
 Entering screen! Will display pretty colours for a bit, then shrink, then leave!
 Lua Output: Hello there!
 Lua Output: Delaying for 4 seconds...
+Shrinking (Done by script)! 1537 renders versus 239 updates.
+Lua Output: Delayed for 4 seconds (240 ticks).
+Lua Output: Now changing the window size to 300x300 with a cUsToM fUnCtIoN!
+Now emulating very very heavy rendering. 2795 renders versus 240 updates.
 Leaving screen!

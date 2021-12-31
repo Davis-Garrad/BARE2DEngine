@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Davis-dev
-Date                   :=29/12/21
+Date                   :=31/12/21
 CodeLitePath           :=/home/davis-dev/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -60,9 +60,9 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/Source_Music.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Renderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_DebugRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_BasicRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_FBORenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Font.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_MutableTexture.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_VAO.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Camera2D.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Vertex.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/Source_XMLDataManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_App.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Screen.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaContextManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_ShaderProgram.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_XMLDataTypes.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Cache.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_AudioManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_FontRenderer.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/Source_BARECEGUI.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Filesystem.cpp$(ObjectSuffix) $(IntermediateDirectory)/Other_Libraries_PicoPNG.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Window.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Timer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_GLContextManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Sound.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaScriptEngine.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_IOManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Logger.cpp$(ObjectSuffix) \
+Objects0=$(IntermediateDirectory)/Source_Renderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_DebugRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_BasicRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_FBORenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Font.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_MutableTexture.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_VAO.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Camera2D.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Vertex.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_App.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/Source_Screen.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaContextManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_FontRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_BARECEGUI.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Filesystem.cpp$(ObjectSuffix) $(IntermediateDirectory)/Other_Libraries_PicoPNG.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Window.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Timer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_GLContextManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Music.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/Source_LuaScriptEngine.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_ShaderProgram.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_XMLDataTypes.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Cache.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_AudioManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_XMLDataManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Sound.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_IOManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Logger.cpp$(ObjectSuffix) \
 	$(IntermediateDirectory)/Source_LuaScript.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_ResourceManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaFunctions.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_InputManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_ScreenList.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_BAREErrors.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_BARE2DEngine.cpp$(ObjectSuffix) 
 
 
@@ -96,12 +96,6 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/Source_Music.cpp$(ObjectSuffix): Source/Music.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_Music.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_Music.cpp$(DependSuffix) -MM Source/Music.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/Music.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_Music.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Source_Music.cpp$(PreprocessSuffix): Source/Music.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_Music.cpp$(PreprocessSuffix) Source/Music.cpp
-
 $(IntermediateDirectory)/Source_Renderer.cpp$(ObjectSuffix): Source/Renderer.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_Renderer.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_Renderer.cpp$(DependSuffix) -MM Source/Renderer.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/Renderer.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_Renderer.cpp$(ObjectSuffix) $(IncludePath)
@@ -156,12 +150,6 @@ $(IntermediateDirectory)/Source_Vertex.cpp$(ObjectSuffix): Source/Vertex.cpp
 $(IntermediateDirectory)/Source_Vertex.cpp$(PreprocessSuffix): Source/Vertex.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_Vertex.cpp$(PreprocessSuffix) Source/Vertex.cpp
 
-$(IntermediateDirectory)/Source_XMLDataManager.cpp$(ObjectSuffix): Source/XMLDataManager.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_XMLDataManager.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_XMLDataManager.cpp$(DependSuffix) -MM Source/XMLDataManager.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/XMLDataManager.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_XMLDataManager.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Source_XMLDataManager.cpp$(PreprocessSuffix): Source/XMLDataManager.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_XMLDataManager.cpp$(PreprocessSuffix) Source/XMLDataManager.cpp
-
 $(IntermediateDirectory)/Source_App.cpp$(ObjectSuffix): Source/App.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_App.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_App.cpp$(DependSuffix) -MM Source/App.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/App.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_App.cpp$(ObjectSuffix) $(IncludePath)
@@ -179,36 +167,6 @@ $(IntermediateDirectory)/Source_LuaContextManager.cpp$(ObjectSuffix): Source/Lua
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/LuaContextManager.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_LuaContextManager.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Source_LuaContextManager.cpp$(PreprocessSuffix): Source/LuaContextManager.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_LuaContextManager.cpp$(PreprocessSuffix) Source/LuaContextManager.cpp
-
-$(IntermediateDirectory)/Source_ShaderProgram.cpp$(ObjectSuffix): Source/ShaderProgram.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_ShaderProgram.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_ShaderProgram.cpp$(DependSuffix) -MM Source/ShaderProgram.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/ShaderProgram.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_ShaderProgram.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Source_ShaderProgram.cpp$(PreprocessSuffix): Source/ShaderProgram.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_ShaderProgram.cpp$(PreprocessSuffix) Source/ShaderProgram.cpp
-
-$(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(ObjectSuffix): Source/LuaScriptQueue.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(DependSuffix) -MM Source/LuaScriptQueue.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/LuaScriptQueue.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(PreprocessSuffix): Source/LuaScriptQueue.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(PreprocessSuffix) Source/LuaScriptQueue.cpp
-
-$(IntermediateDirectory)/Source_XMLDataTypes.cpp$(ObjectSuffix): Source/XMLDataTypes.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_XMLDataTypes.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_XMLDataTypes.cpp$(DependSuffix) -MM Source/XMLDataTypes.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/XMLDataTypes.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_XMLDataTypes.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Source_XMLDataTypes.cpp$(PreprocessSuffix): Source/XMLDataTypes.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_XMLDataTypes.cpp$(PreprocessSuffix) Source/XMLDataTypes.cpp
-
-$(IntermediateDirectory)/Source_Cache.cpp$(ObjectSuffix): Source/Cache.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_Cache.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_Cache.cpp$(DependSuffix) -MM Source/Cache.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/Cache.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_Cache.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Source_Cache.cpp$(PreprocessSuffix): Source/Cache.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_Cache.cpp$(PreprocessSuffix) Source/Cache.cpp
-
-$(IntermediateDirectory)/Source_AudioManager.cpp$(ObjectSuffix): Source/AudioManager.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_AudioManager.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_AudioManager.cpp$(DependSuffix) -MM Source/AudioManager.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/AudioManager.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_AudioManager.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Source_AudioManager.cpp$(PreprocessSuffix): Source/AudioManager.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_AudioManager.cpp$(PreprocessSuffix) Source/AudioManager.cpp
 
 $(IntermediateDirectory)/Source_FontRenderer.cpp$(ObjectSuffix): Source/FontRenderer.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_FontRenderer.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_FontRenderer.cpp$(DependSuffix) -MM Source/FontRenderer.cpp
@@ -252,17 +210,59 @@ $(IntermediateDirectory)/Source_GLContextManager.cpp$(ObjectSuffix): Source/GLCo
 $(IntermediateDirectory)/Source_GLContextManager.cpp$(PreprocessSuffix): Source/GLContextManager.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_GLContextManager.cpp$(PreprocessSuffix) Source/GLContextManager.cpp
 
-$(IntermediateDirectory)/Source_Sound.cpp$(ObjectSuffix): Source/Sound.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_Sound.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_Sound.cpp$(DependSuffix) -MM Source/Sound.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/Sound.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_Sound.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Source_Sound.cpp$(PreprocessSuffix): Source/Sound.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_Sound.cpp$(PreprocessSuffix) Source/Sound.cpp
+$(IntermediateDirectory)/Source_Music.cpp$(ObjectSuffix): Source/Music.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_Music.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_Music.cpp$(DependSuffix) -MM Source/Music.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/Music.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_Music.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Source_Music.cpp$(PreprocessSuffix): Source/Music.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_Music.cpp$(PreprocessSuffix) Source/Music.cpp
 
 $(IntermediateDirectory)/Source_LuaScriptEngine.cpp$(ObjectSuffix): Source/LuaScriptEngine.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_LuaScriptEngine.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_LuaScriptEngine.cpp$(DependSuffix) -MM Source/LuaScriptEngine.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/LuaScriptEngine.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_LuaScriptEngine.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Source_LuaScriptEngine.cpp$(PreprocessSuffix): Source/LuaScriptEngine.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_LuaScriptEngine.cpp$(PreprocessSuffix) Source/LuaScriptEngine.cpp
+
+$(IntermediateDirectory)/Source_ShaderProgram.cpp$(ObjectSuffix): Source/ShaderProgram.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_ShaderProgram.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_ShaderProgram.cpp$(DependSuffix) -MM Source/ShaderProgram.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/ShaderProgram.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_ShaderProgram.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Source_ShaderProgram.cpp$(PreprocessSuffix): Source/ShaderProgram.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_ShaderProgram.cpp$(PreprocessSuffix) Source/ShaderProgram.cpp
+
+$(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(ObjectSuffix): Source/LuaScriptQueue.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(DependSuffix) -MM Source/LuaScriptQueue.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/LuaScriptQueue.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(PreprocessSuffix): Source/LuaScriptQueue.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(PreprocessSuffix) Source/LuaScriptQueue.cpp
+
+$(IntermediateDirectory)/Source_XMLDataTypes.cpp$(ObjectSuffix): Source/XMLDataTypes.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_XMLDataTypes.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_XMLDataTypes.cpp$(DependSuffix) -MM Source/XMLDataTypes.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/XMLDataTypes.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_XMLDataTypes.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Source_XMLDataTypes.cpp$(PreprocessSuffix): Source/XMLDataTypes.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_XMLDataTypes.cpp$(PreprocessSuffix) Source/XMLDataTypes.cpp
+
+$(IntermediateDirectory)/Source_Cache.cpp$(ObjectSuffix): Source/Cache.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_Cache.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_Cache.cpp$(DependSuffix) -MM Source/Cache.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/Cache.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_Cache.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Source_Cache.cpp$(PreprocessSuffix): Source/Cache.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_Cache.cpp$(PreprocessSuffix) Source/Cache.cpp
+
+$(IntermediateDirectory)/Source_AudioManager.cpp$(ObjectSuffix): Source/AudioManager.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_AudioManager.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_AudioManager.cpp$(DependSuffix) -MM Source/AudioManager.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/AudioManager.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_AudioManager.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Source_AudioManager.cpp$(PreprocessSuffix): Source/AudioManager.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_AudioManager.cpp$(PreprocessSuffix) Source/AudioManager.cpp
+
+$(IntermediateDirectory)/Source_XMLDataManager.cpp$(ObjectSuffix): Source/XMLDataManager.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_XMLDataManager.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_XMLDataManager.cpp$(DependSuffix) -MM Source/XMLDataManager.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/XMLDataManager.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_XMLDataManager.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Source_XMLDataManager.cpp$(PreprocessSuffix): Source/XMLDataManager.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_XMLDataManager.cpp$(PreprocessSuffix) Source/XMLDataManager.cpp
+
+$(IntermediateDirectory)/Source_Sound.cpp$(ObjectSuffix): Source/Sound.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_Sound.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_Sound.cpp$(DependSuffix) -MM Source/Sound.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/Sound.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_Sound.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Source_Sound.cpp$(PreprocessSuffix): Source/Sound.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_Sound.cpp$(PreprocessSuffix) Source/Sound.cpp
 
 $(IntermediateDirectory)/Source_IOManager.cpp$(ObjectSuffix): Source/IOManager.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_IOManager.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_IOManager.cpp$(DependSuffix) -MM Source/IOManager.cpp

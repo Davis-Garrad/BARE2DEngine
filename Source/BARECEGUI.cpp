@@ -275,7 +275,9 @@ namespace BARE2D {
 	}
 	
 	CEGUI::GUIContext* BARECEGUI::getContext() {
-		return m_contexts[m_activeContext]->context;
+		if(m_activeContext < m_contexts.size())
+			return m_contexts[m_activeContext]->context;
+		return nullptr;
 	}
 	
 	CEGUI::Key::Scan SDLKeyToCEGUIKey(SDL_Keycode key) {

@@ -206,13 +206,6 @@ void TestScreen::update(double dt)
 		float scaleNudge = scroll * m_fbo->getCamera()->getScaleX() / 2.0f;
 		m_fbo->getCamera()->offsetScale(scaleNudge, scaleNudge);
 	}
-		
-	if(m_inputManager->isKeyDown(SDL_BUTTON_LEFT)) {
-		glm::vec2 thisPosition = m_fbo->getCamera()->getViewedPositionFromScreenPosition(m_inputManager->getMousePosition());
-		glm::vec2 movement = m_fbo->getCamera()->getScreenSizeFromViewedSize(thisPosition - m_lastMouse);
-		m_fbo->getCamera()->offsetPosition(movement);
-	}
-	m_lastMouse = m_fbo->getCamera()->getViewedPositionFromScreenPosition(m_inputManager->getMousePosition());
 	
 	m_luaEngine.update();
 	m_gui->update();

@@ -12,8 +12,8 @@ OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=Davis-Dev
-Date                   :=15/12/21
+User                   :=Davis-dev
+Date                   :=31/12/21
 CodeLitePath           :=/home/davis-dev/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -39,9 +39,9 @@ LinkOptions            :=   -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW
 IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)../../Source/ 
 IncludePCH             := 
 RcIncludePath          := 
-Libs                   := $(LibrarySwitch)BARE2DEngine 
-ArLibs                 :=  "libBARE2DEngine.a" 
-LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)../../Release/ 
+Libs                   := $(LibrarySwitch)BARE2DEngine $(LibrarySwitch)CEGUIBase-0 $(LibrarySwitch)CEGUIOpenGLRenderer-0 $(LibrarySwitch)lua5.3 
+ArLibs                 :=  "libBARE2DEngine.a" "CEGUIBase-0" "CEGUIOpenGLRenderer-0" "lua5.3" 
+LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)../../Debug/ $(LibraryPathSwitch)/usr/include/x86_64-linux-gnu/cegui-0.8.7/ 
 
 ##
 ## Common variables

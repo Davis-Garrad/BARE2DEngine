@@ -1,0 +1,72 @@
+
+
+
+### LOG: Fri Dec 31 14:54:23 2021 ###
+
+Thanks for using BARE2D! Original engine by Davis Garrad
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: Shader Stats: SGPRS: 24 VGPRS: 12 Code Size: 160 LDS: 0 Scratch: 0 Max Waves: 10 Spilled SGPRs: 0 Spilled VGPRs: 0 PrivMem VGPRs: 0 DivergentLoop: 0, InlineUniforms: 0, (VS, W64)
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: Shader Stats: SGPRS: 24 VGPRS: 12 Code Size: 48 LDS: 0 Scratch: 0 Max Waves: 10 Spilled SGPRs: 0 Spilled VGPRs: 0 PrivMem VGPRs: 0 DivergentLoop: 0, InlineUniforms: 0, (VS, W64)
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: Shader Stats: SGPRS: 8 VGPRS: 24 Code Size: 48 LDS: 0 Scratch: 0 Max Waves: 10 Spilled SGPRs: 0 Spilled VGPRs: 0 PrivMem VGPRs: 0 DivergentLoop: 0, InlineUniforms: 0, (PS, W64)
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: Shader Stats: SGPRS: 16 VGPRS: 24 Code Size: 60 LDS: 0 Scratch: 0 Max Waves: 10 Spilled SGPRs: 0 Spilled VGPRs: 0 PrivMem VGPRs: 0 DivergentLoop: 0, InlineUniforms: 0, (PS, W64)
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: Shader Stats: SGPRS: 16 VGPRS: 8 Code Size: 112 LDS: 0 Scratch: 0 Max Waves: 10 Spilled SGPRs: 0 Spilled VGPRs: 0 PrivMem VGPRs: 0 DivergentLoop: 0, InlineUniforms: 0, (VS, W64)
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: Shader Stats: SGPRS: 8 VGPRS: 24 Code Size: 52 LDS: 0 Scratch: 0 Max Waves: 10 Spilled SGPRs: 0 Spilled VGPRs: 0 PrivMem VGPRs: 0 DivergentLoop: 0, InlineUniforms: 0, (PS, W64)
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: Shader Stats: SGPRS: 16 VGPRS: 8 Code Size: 212 LDS: 0 Scratch: 0 Max Waves: 10 Spilled SGPRs: 0 Spilled VGPRs: 0 PrivMem VGPRs: 0 DivergentLoop: 0, InlineUniforms: 0, (VS, W64)
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: Shader Stats: SGPRS: 24 VGPRS: 8 Code Size: 152 LDS: 0 Scratch: 0 Max Waves: 10 Spilled SGPRs: 0 Spilled VGPRs: 0 PrivMem VGPRs: 0 DivergentLoop: 0, InlineUniforms: 0, (CS, W64)
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: Shader Stats: SGPRS: 16 VGPRS: 24 Code Size: 64 LDS: 0 Scratch: 0 Max Waves: 10 Spilled SGPRs: 0 Spilled VGPRs: 0 PrivMem VGPRs: 0 DivergentLoop: 0, InlineUniforms: 0, (PS, W64)
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: Shader Stats: SGPRS: 16 VGPRS: 20 Code Size: 392 LDS: 0 Scratch: 0 Max Waves: 10 Spilled SGPRs: 0 Spilled VGPRs: 0 PrivMem VGPRs: 0 DivergentLoop: 0, InlineUniforms: 0, (CS, W64)
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: Shader Stats: SGPRS: 16 VGPRS: 8 Code Size: 40 LDS: 0 Scratch: 0 Max Waves: 10 Spilled SGPRs: 0 Spilled VGPRs: 0 PrivMem VGPRs: 0 DivergentLoop: 0, InlineUniforms: 0, (CS, W64)
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: Shader Stats: SGPRS: 8 VGPRS: 24 Code Size: 24 LDS: 0 Scratch: 0 Max Waves: 10 Spilled SGPRs: 0 Spilled VGPRs: 0 PrivMem VGPRs: 0 DivergentLoop: 0, InlineUniforms: 0, (PS, W64)
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: Shader Stats: SGPRS: 8 VGPRS: 8 Code Size: 60 LDS: 0 Scratch: 0 Max Waves: 10 Spilled SGPRs: 0 Spilled VGPRs: 0 PrivMem VGPRs: 0 DivergentLoop: 0, InlineUniforms: 0, (VS, W64)
+
