@@ -86,10 +86,11 @@ namespace BARE2D {
 	 */
 	class Glyph {
 	public:
-		Glyph(glm::vec4& destRect, glm::vec4& uvRect, GLuint Texture, float Depth, Colour colour);
+		Glyph(glm::vec4& destRect, glm::vec4& uvRect, GLuint Texture, GLuint Bumpmap, float Depth, Colour colour);
 		
 		// Texture handle from opengl
 		GLuint texture;
+		
 		// Depth for depth-culling.
 		float depth;
 		

@@ -43,7 +43,7 @@ namespace BARE2D {
 		m_shader.setUniformMatrix<glm::mat4>("projectionMatrix", GL_FALSE, projectionMatrix);
 	}
 	
-	void BasicRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth) {
+	void BasicRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour/*255, 255, 255, 255*/) {
 		// Make sure it's actually in the scene.
 		if(!m_camera->isRectInScene(destRect))
 			return;
@@ -52,19 +52,7 @@ namespace BARE2D {
 		//glm::vec2 size = m_camera->getScreenSizeFromViewedSize(glm::vec2(destRect.z, destRect.w));
 		
 		// Just add the glyph
-		m_glyphs.emplace_back(destRect, uvRect, texture, depth, Colour(255, 255, 255, 255));
-	}
-	
-	void BasicRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour) {
-		// Make sure it's actually in the scene.
-		if(!m_camera->isRectInScene(destRect))
-			return;
-		
-		// At this point we can just scale the size (the position should be translated in the shader) and draw it
-		//glm::vec2 size = m_camera->getScreenSizeFromViewedSize(glm::vec2(destRect.z, destRect.w));
-		
-		// Just add the glyph
-		m_glyphs.emplace_back(destRect, uvRect, texture, depth, colour);
+		m_glyphs.push_back(new Glyph(destRect, uvRect, texture, depth, colour));
 	}
 	
 	void BasicRenderer::createRenderBatches() {
@@ -84,13 +72,13 @@ namespace BARE2D {
 		int vertex = 0;
 		
 		// 'Draw' two triangles from the 6 vertices. 
-		m_batches.emplace_back(offset, 6, m_glyphs[0].texture);
-		vertices[vertex++] = m_glyphs[0].topLeft;
-		vertices[vertex++] = m_glyphs[0].bottomLeft;
-		vertices[vertex++] = m_glyphs[0].bottomRight;
-		vertices[vertex++] = m_glyphs[0].bottomRight;
-		vertices[vertex++] = m_glyphs[0].topRight;
-		vertices[vertex++] = m_glyphs[0].topLeft;
+		m_batches.emplace_back(offset, 6, m_glyphs[0]->texture);
+		vertices[vertex++] = m_glyphs[0]->topLeft;
+		vertices[vertex++] = m_glyphs[0]->bottomLeft;
+		vertices[vertex++] = m_glyphs[0]->bottomRight;
+		vertices[vertex++] = m_glyphs[0]->bottomRight;
+		vertices[vertex++] = m_glyphs[0]->topRight;
+		vertices[vertex++] = m_glyphs[0]->topLeft;
 		
 		// Set the offset appropriately for 6 vertices of data.
 		offset += 6;
@@ -98,20 +86,20 @@ namespace BARE2D {
 		// Add the rest of the glyphs
 		for(unsigned int glyph = 1; glyph < m_glyphs.size(); glyph++) {
 			// Check if this can just be part of the current batch (instancing essentially)
-			if(m_glyphs[glyph].texture != m_glyphs[glyph - 1].texture) {
+			if(m_glyphs[glyph]->texture != m_glyphs[glyph - 1]->texture) {
 				// It can't be part of the same batch, so create a new one
-				m_batches.emplace_back(offset, 6, m_glyphs[glyph].texture);
+				m_batches.emplace_back(offset, 6, m_glyphs[glyph]->texture);
 			} else {
 				// If its part of the current batch, just increase numVertices. It'll reuse the texture, but nothing more.
 				m_batches.back().numVertices += 6;
 			}
 			// 'Draw' two triangles.
-			vertices[vertex++] = m_glyphs[glyph].topLeft;
-			vertices[vertex++] = m_glyphs[glyph].bottomLeft;
-			vertices[vertex++] = m_glyphs[glyph].bottomRight;
-			vertices[vertex++] = m_glyphs[glyph].bottomRight;
-			vertices[vertex++] = m_glyphs[glyph].topRight;
-			vertices[vertex++] = m_glyphs[glyph].topLeft;
+			vertices[vertex++] = m_glyphs[glyph]->topLeft;
+			vertices[vertex++] = m_glyphs[glyph]->bottomLeft;
+			vertices[vertex++] = m_glyphs[glyph]->bottomRight;
+			vertices[vertex++] = m_glyphs[glyph]->bottomRight;
+			vertices[vertex++] = m_glyphs[glyph]->topRight;
+			vertices[vertex++] = m_glyphs[glyph]->topLeft;
 			
 			// Push data offset forward 6 vertices.
 			offset += 6;
