@@ -1,9 +1,11 @@
 #include "BumpyRenderer.hpp"
 
+#include "GLContextManager.hpp"
+
 namespace BARE2D {
 	
 	BumpyGlyph::BumpyGlyph(glm::vec4& destRect, glm::vec4& uvRect, GLuint Texture, GLuint Bumpmap, float Depth, Colour colour)
-		: Glyph(destRect, uvRect, Texture, Depth, Colour), bumpmap(Bumpmap) {
+		: Glyph(destRect, uvRect, Texture, Depth, colour), bumpmap(Bumpmap) {
 		
 	}
 
@@ -13,7 +15,6 @@ namespace BARE2D {
 
 	BumpyRenderer::~BumpyRenderer()
 	{
-		BasicRenderer::~BasicRenderer();
 	}
 
 	void BumpyRenderer::preRender()
@@ -115,11 +116,11 @@ namespace BARE2D {
 		for(unsigned int glyph = 1; glyph < m_glyphs.size(); glyph++) {
 			// Check if this can just be part of the current batch (instancing essentially)
 			// They must have both the same texture AND the same bumpmap for this to work properly.
-			if((m_glyphs[glyph]->texture != m_glyphs[glyph - 1]->texture) || (static_cast<BumpyGlyph*>(m_glyphs[glyph])->bumpmap != static_cast<BumpyGlyph*>(m_glyphs[glyph - 1]->bumpmap))) {
+			if((m_glyphs[glyph]->texture != m_glyphs[glyph - 1]->texture) || (static_cast<BumpyGlyph*>(m_glyphs[glyph])->bumpmap != static_cast<BumpyGlyph*>(m_glyphs[glyph - 1])->bumpmap)) {
 				// It can't be part of the same batch, so create a new one
 				m_batches.emplace_back(offset, 6, m_glyphs[glyph]->texture);
 				// Add the corresponding bumpmap to the batch bumpmaps vector.
-				m_batchBumpmaps.push_back(m_glyphs[glyph]->bumpmap);
+				m_batchBumpmaps.push_back(static_cast<BumpyGlyph*>(m_glyphs[glyph])->bumpmap);
 			} else {
 				// If its part of the current batch, just increase numVertices. It'll reuse the texture, but nothing more.
 				m_batches.back().numVertices += 6;

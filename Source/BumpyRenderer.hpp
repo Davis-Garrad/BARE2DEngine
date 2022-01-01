@@ -14,7 +14,7 @@ namespace BARE2D {
 		
 		// Bumpmap texture handle
 		GLuint bumpmap;
-	}
+	};
 	
 	/**
 	 * @class BumpyRenderer
