@@ -43,7 +43,7 @@ namespace BARE2D {
 		m_shader.setUniformMatrix<glm::mat4>("projectionMatrix", GL_FALSE, projectionMatrix);
 	}
 	
-	void BasicRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour/*255, 255, 255, 255*/) {
+	void BasicRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour/*255, 255, 255, 255*/, float angle/* = 0.0f*/, glm::vec2 COR/*=glm::vec2(0.5f)*/) {
 		// Make sure it's actually in the scene.
 		if(!m_camera->isRectInScene(destRect))
 			return;
@@ -52,7 +52,7 @@ namespace BARE2D {
 		//glm::vec2 size = m_camera->getScreenSizeFromViewedSize(glm::vec2(destRect.z, destRect.w));
 		
 		// Just add the glyph
-		m_glyphs.push_back(new Glyph(destRect, uvRect, texture, depth, colour));
+		m_glyphs.push_back(new Glyph(destRect, uvRect, texture, depth, colour, angle, COR));
 	}
 	
 	void BasicRenderer::createRenderBatches() {

@@ -14,20 +14,23 @@ namespace BARE2D {
 	class FBORenderer : public Renderer
 	{
 	public:
-		FBORenderer(std::string& fragShader, std::string& vertShader, unsigned int windowWidth, unsigned int windowHeight, glm::vec2 size);
+		FBORenderer(std::string& fragShader, std::string& vertShader, unsigned int windowWidth, unsigned int windowHeight, glm::vec2 size, unsigned int numColourAttachments = 1);
 		virtual ~FBORenderer();
 		
 		virtual void init() override;
+		virtual void initUniforms() override;
 		
 		Camera2D* getCamera();
 		
-		virtual void preRender() override;
+		virtual void render() override;
 		
 		virtual void begin() override;
 		virtual void end() override;
 		virtual void destroy() override;
 		
 	protected:
+		virtual void preRender() override;
+	
 		virtual void createRenderBatches() override;
 		
 		/**
@@ -54,8 +57,9 @@ namespace BARE2D {
 		GLuint m_fboID;
 		// The handles for the texture to draw colours, depths, etc. to. Accessed purely through the shader/s.
 		GLuint* m_textureIDs = nullptr;
-		// One for colour, one for depth+stencil (8 bits of the 32 are dedicated to the stencil). Total number of attachments to the FBO
-		const unsigned int m_numTextures = 2;
+		// One for colour (normally), one for depth+stencil (8 bits of the 32 are dedicated to the stencil). Total number of attachments to the FBO
+		unsigned int m_numTextures;
+		// Please note that the number of colour attachments is going to be the number of textures - 1.
 		
 		// The perspective camera (it also holds the window size, FBO position, etc.)
 		Camera2D* m_camera = nullptr;

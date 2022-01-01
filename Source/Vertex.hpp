@@ -86,7 +86,9 @@ namespace BARE2D {
 	 */
 	class Glyph {
 	public:
-		Glyph(glm::vec4& destRect, glm::vec4& uvRect, GLuint Texture, float Depth, Colour colour);
+		Glyph(glm::vec4& destRect, glm::vec4& uvRect, GLuint& Texture, float& Depth, Colour& colour);
+		Glyph(glm::vec4& destRect, glm::vec4& uvRect, GLuint& Texture, float& Depth, Colour& colour, float& angle);
+		Glyph(glm::vec4& destRect, glm::vec4& uvRect, GLuint& Texture, float& Depth, Colour& colour, float& angle, glm::vec2& COR);
 		
 		// Texture handle from opengl
 		GLuint texture;
@@ -96,5 +98,8 @@ namespace BARE2D {
 		
 		// Vertices prettty much just hold vertex data together. Useful in creating render batches
 		Vertex topLeft, bottomLeft, topRight, bottomRight;
+		
+	protected:
+		glm::vec2 rotatePoint(const glm::vec2& pos, float& angle);
 	};
 }

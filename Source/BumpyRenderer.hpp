@@ -10,7 +10,7 @@ namespace BARE2D {
 	 */
 	class BumpyGlyph : public Glyph {
 	public:
-		BumpyGlyph(glm::vec4& destRect, glm::vec4& uvRect, GLuint Texture, GLuint Bumpmap, float Depth, Colour colour);
+		BumpyGlyph(glm::vec4& destRect, glm::vec4& uvRect, GLuint& Texture, GLuint& Bumpmap, float& Depth, Colour& colour, float& angle, glm::vec2& COR);
 		
 		// Bumpmap texture handle
 		GLuint bumpmap;
@@ -26,13 +26,15 @@ namespace BARE2D {
 		BumpyRenderer(std::string& fragShader, std::string& vertShader, unsigned int perspectiveWidth = 2, unsigned int perspectiveHeight = 2);
 		~BumpyRenderer();
 		
+		virtual void initUniforms() override;
+		
 		virtual void preRender() override;
 		
 		virtual void render() override;
 		
 		// We need to delete this function, as it is no longer valid - we require a bumpmap.
-		virtual void draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour = Colour(255, 255, 255, 255)) = 0;
-		virtual void draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, GLuint bumpmap, float depth, Colour colour = Colour(255, 255, 255, 255));
+		virtual void draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour = Colour(255, 255, 255, 255), float angle = 0.0f, glm::vec2 COR = glm::vec2(0.5f));
+		virtual void draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, GLuint bumpmap, float depth, Colour colour = Colour(255, 255, 255, 255), float angle = 0.0f, glm::vec2 COR = glm::vec2(0.5f));
 		
 	protected:
 		virtual void createRenderBatches() override;

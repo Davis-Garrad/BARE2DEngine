@@ -132,6 +132,11 @@ namespace BARE2D {
 		
 		return location;
 	}
+	
+	void ShaderProgram::bindFragOutputLocation(std::string outputVariableName, unsigned int location) {
+		// Literally just call glBindFragDataLocation.
+		glBindFragDataLocation(m_programID, location, outputVariableName.c_str());
+	}
 
 	void ShaderProgram::use()
 	{

@@ -10,12 +10,14 @@
 
 namespace BARE2D {
 
-	FBORenderer::FBORenderer(std::string& fragShader, std::string& vertShader, unsigned int windowWidth, unsigned int windowHeight, glm::vec2 size) : m_fragmentShaderPath(fragShader),
+	FBORenderer::FBORenderer(std::string& fragShader, std::string& vertShader, unsigned int windowWidth, unsigned int windowHeight, glm::vec2 size, unsigned int numColourAttachments) : m_fragmentShaderPath(fragShader),
 																								m_vertexShaderPath(vertShader), m_size(size)
 	{
 		m_camera = new Camera2D();
 		m_camera->init(windowWidth, windowHeight);
 		m_camera->offsetPosition(glm::vec2(-1.0f, -1.0f));
+		
+		m_numTextures = numColourAttachments + 1; // n colour attachments, one depth/stencil attachment
 	}
 
 	FBORenderer::~FBORenderer()
@@ -46,14 +48,7 @@ namespace BARE2D {
 		
 		m_shader.use();
 		
-		// Now, for convenience, set the uniforms of the FBO shader program
-		GLint colourTexture = 0, depthTexture = 1;
-		m_shader.setUniform("colourTexture", colourTexture);
-		
-		m_shaderHasDepth = m_shader.doesUniformExist("depthTexture");
-		if(m_shaderHasDepth) {
-			m_shader.setUniform("depthTexture", depthTexture);
-		}
+		initUniforms();
 		
 		m_shader.unuse();
 		
@@ -62,10 +57,28 @@ namespace BARE2D {
 		// This call specifies which buffers should be drawn to - in our case, it's just the colour attachment for the FBO
 		// This essentially means that the output from the fragment shader goes directly into the FBO's attached colour texture!
 		// Please note that the Framebuffer object actually stores a lot of state information, such as draw buffers. That's why this is in the init.
-		GLenum buffers[1] = { GL_COLOR_ATTACHMENT0 };
-		glDrawBuffers(1, buffers);
+		// Here we just generate all the colour attachments from 0 to (m_numColourAttachments-1).
+		std::vector<GLenum> m_colourAttachments;
+		for(unsigned int i = 0; i < m_numTextures-1; i++) { // Remember that the number of colour attachments will always be number of textures - 1
+			m_colourAttachments.push_back(GL_COLOR_ATTACHMENT0+i);
+		}
+		glDrawBuffers(m_numTextures - 1, m_colourAttachments.data());
 		
 		unbind();
+	}
+	
+	void FBORenderer::initUniforms() {
+		// Now, for convenience, set the uniforms of the FBO shader program
+		for(unsigned int i = 0; i < m_numTextures-1; i++) {
+			GLint colourTexture = i;
+			m_shader.setUniform("colourTexture" + std::to_string(i), colourTexture);
+		}
+		
+		m_shaderHasDepth = m_shader.doesUniformExist("depthTexture");
+		if(m_shaderHasDepth) {
+			GLint depthTexture = m_numTextures-1;
+			m_shader.setUniform("depthTexture", depthTexture);
+		}
 	}
 	
 	void FBORenderer::destroy() {
@@ -88,7 +101,6 @@ namespace BARE2D {
 		bind();
 		
 		// Make sure that we clear the actual buffer objects
-		glClearColor(1.0, 0.0f, .863f, 0.0f);
 		glClearDepth(1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 		
@@ -104,11 +116,15 @@ namespace BARE2D {
 		// Blend pretty normally for transparency stuff (according to the docs for glBlendFunc, this is the best transparency blending config)
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		
+		m_shader.use();
+		
 		// Now we will not unbind until the end() call, after all the draw calls that actually populate the FBO's textures' data.
 	}
 
 	void FBORenderer::end()
 	{
+		m_shader.unuse();
+		
 		// All we need to do is unbind the FBO and associated textures.
 		unbind();
 	}
@@ -122,11 +138,12 @@ namespace BARE2D {
 		//m_shader.setUniformMatrix("projectionMatrix", GL_FALSE, matrix);
 		/// The camera should only be used to actually draw the FBO.
 		
-		// Set GL_TEXTURE1 & GL_TEXTURE0
-		GLContextManager::getContext()->setActiveTexture(GL_TEXTURE1);
-		GLContextManager::getContext()->bindTexture(GL_TEXTURE_2D, m_textureIDs[1]);
-		GLContextManager::getContext()->setActiveTexture(GL_TEXTURE0);
-		GLContextManager::getContext()->bindTexture(GL_TEXTURE_2D, m_textureIDs[0]);
+		// Set GL_TEXTURE's
+		GLContext* context = GLContextManager::getContext();
+		for(int i = m_numTextures-1; i >= 0; i--) {
+			context->setActiveTexture(GL_TEXTURE0 + i);
+			context->bindTexture(GL_TEXTURE_2D, m_textureIDs[i]);
+		}
 		
 		m_camera->update();
 	}
@@ -140,7 +157,9 @@ namespace BARE2D {
 		
 		glm::vec4 destRect(position.x, position.y, size.x, size.y);
 		glm::vec4 uvRect(0.0f, 0.0f, 1.0f, 1.0f);
-		Glyph fullscreen(destRect, uvRect, m_textureIDs[0], 0.0f, Colour(255, 255, 255, 255));
+		float depth = 0.0f;
+		Colour col = Colour(255, 255, 255, 255);
+		Glyph fullscreen(destRect, uvRect, m_textureIDs[0], depth, col);
 		
 		// Our collection of 6 vertices (for a square)
 		std::vector<Vertex> vertices;
@@ -167,6 +186,38 @@ namespace BARE2D {
 		m_vertexArrayObject.unbindVBO();
 		
 	}
+	
+	void FBORenderer::render() {
+		// Ensure that we're actually using the shader for the glDrawArrays call!
+		m_shader.use();
+		
+		// Make sure we're in the regular rendering texture (arbitrarily set to texture0, just for consistency)
+		GLContext* glContext = GLContextManager::getContext();
+		glContext->setActiveTexture(GL_TEXTURE0);
+		
+		// First we must bind the vertex array object and vertex buffer object
+		m_vertexArrayObject.bind();
+		
+		preRender();
+		
+		// Create RenderBatches (uploading the vertex data to the bound texture, so that we can actually draw the textures next.)
+		createRenderBatches();
+		
+		// Now we can render each renderbatch, uploading their texture data respectively.
+		for(unsigned int i = 0; i < m_batches.size(); i++) { // regularly, there will only be one - to the full screen... but you never know!
+			// Bind the texture information to the texture "slot" 
+			// This method of binding the textures decreases speed slightly for completely random textures, but if we are rendering a lot of the same texture, this is similar (if not identical) to instance rendering
+			
+			// Upload the data
+			glDrawArrays(GL_TRIANGLES, (GLint)m_batches[i].offset, (GLsizei)m_batches[i].numVertices);
+		}
+		
+		// Unbind for safety!
+		m_vertexArrayObject.unbind();
+		
+		// Release the shader
+		m_shader.unuse();
+	}
 
 	void FBORenderer::createTextures()
 	{
@@ -186,20 +237,16 @@ namespace BARE2D {
 			GLContextManager::getContext()->bindTexture(GL_TEXTURE_2D, m_textureIDs[i]);
 			
 			// Just define the texture's basic properties - how it stores data, its size, etc. No data is added here.
-			GLenum attachmentType;
-			switch(i) {
-				case 0:
-					// Just a regular texture.
-					attachmentType = GL_COLOR_ATTACHMENT0;
-					glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_size.x, m_size.y, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr);
-					break;
-				case 1:
+			GLenum attachmentType = (i == m_numTextures-1) ? GL_DEPTH_ATTACHMENT : (GL_COLOR_ATTACHMENT0 + i);
+			switch(attachmentType) {
+				case GL_DEPTH_ATTACHMENT:
 					// Set the texture's type to 32 total bits, with 8 reserved for the stencil.
-					attachmentType = GL_DEPTH_ATTACHMENT;
 					glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH24_STENCIL8, m_size.x, m_size.y, 0, GL_DEPTH_STENCIL, GL_UNSIGNED_INT_24_8, nullptr);
 					break;
 				default:
-					throwFatalError(BAREError::FBO_FAILURE, "Too many attachments: " + std::to_string(i));
+					// Just a regular texture.
+					glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_size.x, m_size.y, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr);
+					break;
 			}
 			
 			// Give the texture some more basic settings.
@@ -246,18 +293,17 @@ namespace BARE2D {
 		glBindFramebuffer(GL_FRAMEBUFFER, m_fboID);
 		
 		// Now the textures.
-		// First, the colour texture in texture0
-		GLContextManager::getContext()->setActiveTexture(GL_TEXTURE0);
-		GLContextManager::getContext()->bindTexture(GL_TEXTURE_2D, m_textureIDs[0]);
-		// Next, the depth+stencil texture in texture1
-		GLContextManager::getContext()->setActiveTexture(GL_TEXTURE1);
-		GLContextManager::getContext()->bindTexture(GL_TEXTURE_2D, m_textureIDs[1]);
+		GLContext* context = GLContextManager::getContext();
+		for(unsigned int i = 0; i < m_numTextures-1; i++) {
+			context->setActiveTexture(GL_TEXTURE0 + i);
+			context->bindTexture(GL_TEXTURE_2D, m_textureIDs[i]);
+		}
 	}
 	
 	void FBORenderer::unbind() {
 		// First, unbind the textures
-		GLContextManager::getContext()->unbindTexture(GL_TEXTURE_2D, GL_TEXTURE1);
-		GLContextManager::getContext()->unbindTexture(GL_TEXTURE_2D, GL_TEXTURE0);
+		for(unsigned int i = 0; i < m_numTextures; i++)
+			GLContextManager::getContext()->unbindTexture(GL_TEXTURE_2D, GL_TEXTURE0 + i);
 		
 		// Now, unbind the FBO
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);

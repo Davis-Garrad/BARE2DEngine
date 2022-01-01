@@ -4,8 +4,8 @@
 
 namespace BARE2D {
 	
-	BumpyGlyph::BumpyGlyph(glm::vec4& destRect, glm::vec4& uvRect, GLuint Texture, GLuint Bumpmap, float Depth, Colour colour)
-		: Glyph(destRect, uvRect, Texture, Depth, colour), bumpmap(Bumpmap) {
+	BumpyGlyph::BumpyGlyph(glm::vec4& destRect, glm::vec4& uvRect, GLuint& Texture, GLuint& Bumpmap, float& Depth, Colour& colour, float& angle, glm::vec2& COR)
+		: Glyph(destRect, uvRect, Texture, Depth, colour, angle, COR), bumpmap(Bumpmap) {
 		
 	}
 
@@ -16,17 +16,19 @@ namespace BARE2D {
 	BumpyRenderer::~BumpyRenderer()
 	{
 	}
-
-	void BumpyRenderer::preRender()
-	{
-		// We need to define a texture sampler for textures AND bumpmaps!
-		m_camera->update();
-		
+	
+	void BumpyRenderer::initUniforms() {
 		GLint textureUniform = 0;
 		m_shader.setUniform("textureSampler", textureUniform);
 		
 		GLint bumpUniform = 1;
 		m_shader.setUniform("bumpmapSampler", bumpUniform);
+	}
+
+	void BumpyRenderer::preRender()
+	{
+		// We need to define a texture sampler for textures AND bumpmaps!
+		m_camera->update();
 		
 		glm::mat4 projectionMatrix = m_camera->getCameraMatrix();
 		m_shader.setUniformMatrix<glm::mat4>("projectionMatrix", GL_FALSE, projectionMatrix);
@@ -51,17 +53,16 @@ namespace BARE2D {
 		// Now we can render each renderbatch, uploading their texture data respectively.
 		for(unsigned int i = 0; i < m_batches.size(); i++) {
 			// Bind the texture information to the texture "slot" 
-			// This method of binding the textures decreases speed slightly for completely random textures, but if we are rendering a lot of the same texture, this is similar (if not identical) to instance rendering
+			// This method of binding the textures decreases speed slightly for completely random textures, but if we are rendering a lot of the same texture, this is similar (if not identical) to instance rendering.
+			
+			glContext->setActiveTexture(GL_TEXTURE1);
+			glContext->bindTexture(GL_TEXTURE_2D, m_batchBumpmaps[i]);
+			
+			glContext->setActiveTexture(GL_TEXTURE0);
 			glContext->bindTexture(GL_TEXTURE_2D, m_batches[i].textureID);
 			
 			// Upload the data
 			glDrawArrays(GL_TRIANGLES, (GLint)m_batches[i].offset, (GLsizei)m_batches[i].numVertices);
-			
-			// ################################# BEGINNING OF DIFFERENCE FROM RENDERER IMPL. #################################
-			// Now we need to upload the data for the bumpmap as well.
-			glContext->bindTexture(GL_TEXTURE_2D, m_batchBumpmaps[i]);
-			glDrawArrays(GL_TRIANGLES, (GLint)m_batches[i].offset, (GLsizei)m_batches[i].numVertices);
-			// #################################     END OF DIFFERENCE FROM RENDERER IMPL.   #################################
 		}
 		
 		// Unbind for safety!
@@ -71,14 +72,18 @@ namespace BARE2D {
 		m_shader.unuse();
 	}
 
-	void BumpyRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, GLuint bumpmap, float depth, Colour colour/*= Colour(255, 255, 255, 255)*/)
+	void BumpyRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour/* = Colour(255, 255, 255, 255)*/, float angle/* = 0.0f*/, glm::vec2 COR/* = glm::vec2(0.5f)*/) {
+		throwFatalError(BAREError::UNINITIALIZED_FUNCTION, "BumpyRenderer drawing without bumpmap texture! Fix your program!");
+	}
+
+	void BumpyRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, GLuint bumpmap, float depth, Colour colour/* = Colour(255, 255, 255, 255)*/, float angle/* = 0.0f*/, glm::vec2 COR/* = glm::vec2(0.5f)*/)
 	{
 		// Make sure it's actually in the scene.
 		if(!m_camera->isRectInScene(destRect))
 			return;
 		
 		// Just add the glyph (as a bumpy glyph!)
-		m_glyphs.push_back(new BumpyGlyph(destRect, uvRect, texture, bumpmap, depth, colour));
+		m_glyphs.push_back(new BumpyGlyph(destRect, uvRect, texture, bumpmap, depth, colour, angle, COR));
 	}
 	
 	void BumpyRenderer::createRenderBatches() {
@@ -97,6 +102,9 @@ namespace BARE2D {
 		int offset = 0;
 		int vertex = 0;
 		
+		// Make way for new bumpmaps.
+		m_batchBumpmaps.clear();
+		
 		// 'Draw' two triangles from the 6 vertices. 
 		m_batches.emplace_back(offset, 6, m_glyphs[0]->texture);
 		vertices[vertex++] = m_glyphs[0]->topLeft;
@@ -105,12 +113,10 @@ namespace BARE2D {
 		vertices[vertex++] = m_glyphs[0]->bottomRight;
 		vertices[vertex++] = m_glyphs[0]->topRight;
 		vertices[vertex++] = m_glyphs[0]->topLeft;
+		m_batchBumpmaps.push_back(static_cast<BumpyGlyph*>(m_glyphs[0])->bumpmap);
 		
 		// Set the offset appropriately for 6 vertices of data.
 		offset += 6;
-		
-		// Make way for new bumpmaps.
-		m_batchBumpmaps.clear();
 		
 		// Add the rest of the glyphs
 		for(unsigned int glyph = 1; glyph < m_glyphs.size(); glyph++) {

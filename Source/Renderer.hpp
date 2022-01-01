@@ -34,6 +34,11 @@ namespace BARE2D {
 		virtual void init();
 		
 		/**
+		 * @brief Initializes all uniforms, such as colour attachments, depth attachments, etc.
+		 */
+		virtual void initUniforms();
+		
+		/**
 		 * @brief Frees all necessary memory.
 		 */
 		virtual void destroy();
@@ -42,6 +47,8 @@ namespace BARE2D {
 		 * @brief Actually renders the contents to the screen!
 		 */
 		virtual void render();
+		
+		ShaderProgram* getShader();
 		
 	protected:
 		/**

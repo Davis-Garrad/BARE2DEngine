@@ -28,7 +28,7 @@ namespace BARE2D {
 		 */
 		std::shared_ptr<Camera2D> getCamera();
 		
-		virtual void draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour = Colour(255, 255, 255, 255));
+		virtual void draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour = Colour(255, 255, 255, 255), float angle = 0.0f, glm::vec2 COR = glm::vec2(0.5f));
 	
 	protected:
 		virtual void createRenderBatches() override;

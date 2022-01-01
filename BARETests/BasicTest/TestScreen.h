@@ -4,7 +4,7 @@
 #include <Window.hpp>
 #include <ShaderProgram.hpp>
 #include <Texture.hpp>
-#include <BasicRenderer.hpp>
+#include <BumpyRenderer.hpp>
 #include <FBORenderer.hpp>
 #include <FontRenderer.hpp>
 #include <DebugRenderer.hpp>
@@ -38,10 +38,11 @@ private:
 	BARE2D::InputManager* m_inputManager = nullptr;
 	
 	BARE2D::FBORenderer* m_fbo = nullptr;
-	BARE2D::BasicRenderer* m_renderer = nullptr;
+	BARE2D::BumpyRenderer* m_renderer = nullptr;
 	BARE2D::FontRenderer* m_fontRenderer = nullptr;
 	BARE2D::DebugRenderer* m_debugRenderer = nullptr;
 	BARE2D::Texture m_texture;
+	BARE2D::Texture m_textureNormal;
 	BARE2D::Font m_font_openSans;
 	BARE2D::LuaScriptEngine m_luaEngine;
 	BARE2D::BARECEGUI* m_gui = nullptr;

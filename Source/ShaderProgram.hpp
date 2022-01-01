@@ -61,6 +61,13 @@ namespace BARE2D {
 		bool doesUniformExist(const std::string uniform);
 		
 		/**
+		 * @brief A call to glBindFragDataLocation() - Causes an output variable of the fragment shader to output to a specific location. This is roughly equivalent to modern GLSL's layout(location=n) specifier, which is unusable until GLSL 330.
+		 * @param outputVariableName The name of the output variable (oftentimes just colour or something)
+		 * @param location The output location, corresponding to a colour attachment. Must be less than GL_MAX_DRAW_BUFFERS.
+		 */
+		void bindFragOutputLocation(std::string outputVariableName, unsigned int location);
+		
+		/**
 		 * @brief Activates this shader program for the renderer to use.
 		 */
 		void use();

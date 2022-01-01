@@ -15,10 +15,13 @@ namespace BARE2D {
 	void Renderer::begin() {
 		// Clears renderbatches to make space for new ones!
 		m_batches.clear();
+		
+		m_shader.use();
 	}
 	
 	void Renderer::end() {
 		// Nothing special really needs to be done here.
+		m_shader.unuse();
 	}
 
 	void Renderer::init()
@@ -27,6 +30,25 @@ namespace BARE2D {
 		glDepthRange(0.0f, 1.0f);
 		
 		m_vertexArrayObject.init();
+		
+		// We must have an activated shader to find/set uniforms in it.
+		m_shader.use();
+		
+		// Set the uniforms (in)
+		initUniforms();
+		
+		// Set the locations of all possible output variables (all the colour attachments)
+		GLint maxDrawBuffers = 0;
+		glGetIntegerv(GL_MAX_DRAW_BUFFERS, &maxDrawBuffers);
+		for(unsigned int i = 0; i < maxDrawBuffers; i++) {
+			m_shader.bindFragOutputLocation("colour" + std::to_string(i), i);
+		}
+		
+		m_shader.unuse();
+	}
+	
+	void Renderer::initUniforms() {
+		
 	}
 
 	void Renderer::destroy()
@@ -67,6 +89,10 @@ namespace BARE2D {
 		
 		// Release the shader
 		m_shader.unuse();
+	}
+	
+	ShaderProgram* Renderer::getShader() {
+		return &m_shader;
 	}
 
 }

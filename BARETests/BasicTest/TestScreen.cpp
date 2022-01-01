@@ -47,18 +47,22 @@ void TestScreen::draw()
 	
 	m_fbo->begin();
 	
+	m_fbo->getShader()->setUniform("mousePos", m_position);
+	
 	m_renderer->begin();
 	
-	float depth = -1.0f;
+	float depth = 0.0f;
+	
+	unsigned int xNum = 7, yNum = 4;// = 35, yNum = 20;
 
-	for(unsigned int i = 0; i < 55; i++) {
-		for(unsigned int j = 0; j < 25; j++) {
+	for(unsigned int i = 0; i < xNum; i++) {
+		for(unsigned int j = 0; j < yNum; j++) {
 			glm::vec2 pos = glm::vec2(-350.0f, -250.0f);
-			glm::vec2 size = glm::vec2(126.0f, 201.0f) * 0.1f;
+			glm::vec2 size = glm::vec2(700.0f / (float)xNum, 400.0f / (float)yNum);
 			
-			depth += 1.6f / (55.0f*25.0f);
+			depth = 1.0f/std::pow(xNum+yNum, 2) * std::pow(i+j, 2);
 			
-			m_renderer->draw(glm::vec4(pos.x + i * size.x, pos.y + j * size.y, size.x, size.y), glm::vec4(0.0f, 1.0f, 1.0f, -1.0f), m_texture.id, depth);
+			m_renderer->draw(glm::vec4(pos.x + i * size.x, pos.y + j * size.y, size.x, size.y), glm::vec4(0.0f, 1.0f, 1.0f, -1.0f), m_texture.id, m_textureNormal.id, depth);
 		}
 	}
 	
@@ -125,9 +129,10 @@ void TestScreen::onEntry()
 	BARE2D::Logger::getInstance()->log("Entering screen! Will display pretty colours for a bit, then shrink, then leave!");
 	
 	// Load a texture
-	std::string texPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/0000.png";
+	std::string texPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/152.png";
+	std::string texBMPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/152_norm.png";
 	m_texture = BARE2D::ResourceManager::loadTexture(texPath);
-	
+	m_textureNormal = BARE2D::ResourceManager::loadTexture(texBMPath);
 	// Load a shader
 	std::string vShaderPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Shader.vert";
 	std::string fShaderPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Shader.frag";
@@ -135,10 +140,10 @@ void TestScreen::onEntry()
 	// Load another FBO shader
 	std::string fShaderPath_fbo = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/ShaderFBO.frag";
 	
-	m_renderer = new BARE2D::BasicRenderer(fShaderPath, vShaderPath, m_window->getWidth(), m_window->getHeight());
+	m_renderer = new BARE2D::BumpyRenderer(fShaderPath, vShaderPath, m_window->getWidth(), m_window->getHeight());
 	m_renderer->init();
 	
-	m_fbo = new BARE2D::FBORenderer(fShaderPath_fbo, vShaderPath, m_window->getWidth(), m_window->getHeight(), glm::vec2(m_window->getWidth(), m_window->getHeight()));
+	m_fbo = new BARE2D::FBORenderer(fShaderPath_fbo, vShaderPath, m_window->getWidth(), m_window->getHeight(), glm::vec2(m_window->getWidth(), m_window->getHeight()), 2);
 	m_fbo->init();
 	
 	std::string fontPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/OpenSans-Regular.ttf";
@@ -173,6 +178,10 @@ void TestScreen::onEntry()
 	std::string musicPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/SampleMusic.mus";
 	BARE2D::Music mus = BARE2D::ResourceManager::loadMusic(musicPath);
 	m_audioManager->playMusic(mus, 8000);
+	
+	
+	
+	m_fbo->getCamera()->setPosition(glm::vec2(-1.0f));
 }
 
 void TestScreen::onExit()
@@ -192,30 +201,11 @@ void TestScreen::update(double dt)
 {
 	m_time++;
 	
-	if(std::abs(m_time - 240.0f) <= 0.01f || std::abs(m_time - 720.0f) <= 0.01f) {
-		BARE2D::Logger::getInstance()->log("Shrinking (Done by script)! " + std::to_string(renderCount) + " renders versus " + std::to_string(updateCount) + " updates.");
-		renderCount = 0;
-		updateCount = 0;
-	}
-	if(std::abs(m_time - 480.0f) <= 0.01f) {
-		slowFactor = 80000000;
-		BARE2D::Logger::getInstance()->log("Now emulating very very heavy rendering. " + std::to_string(renderCount) + " renders versus " + std::to_string(updateCount) + " updates.");
-		renderCount = 0;
-		updateCount = 0;
-	}
-	if(m_time >= 960.0f) {
-		m_screenState = BARE2D::ScreenState::EXIT_APPLICATION;
-		BARE2D::Logger::getInstance()->log("Finished heavy rendering. " + std::to_string(renderCount) + " renders versus " + std::to_string(updateCount) + " updates.");
-	}
-	
 	updateCount++;
 	
-	float scroll = m_inputManager->getMouseScrollwheelPosition();
+	glm::vec2 screenSize = glm::vec2(m_window->getWidth(), m_window->getHeight());
 	
-	if(std::abs(scroll) > 0.000001f) {
-		float scaleNudge = scroll * m_fbo->getCamera()->getScaleX() / 2.0f;
-		m_fbo->getCamera()->offsetScale(scaleNudge, scaleNudge);
-	}
+	m_position = ((m_inputManager->getMousePosition() / screenSize * 2.0f) - glm::vec2(1.0f)) * glm::vec2(1.0f, -1.0f);
 	
 	m_luaEngine.update();
 	m_gui->update();
