@@ -27,6 +27,10 @@
     <Topleveldir>/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine</Topleveldir>
   </Reconciliation>
   <VirtualDirectory Name="Source">
+    <VirtualDirectory Name="ParticleSystem">
+      <File Name="Source/ParticleEngine2D.cpp"/>
+      <File Name="Source/ParticleEngine2D.hpp"/>
+    </VirtualDirectory>
     <VirtualDirectory Name="Audio">
       <File Name="Source/Music.hpp"/>
       <File Name="Source/AudioManager.cpp"/>

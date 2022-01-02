@@ -29,7 +29,7 @@ namespace BARE2D {
 		 * @param script A reference to the LuaScript to add to the queue.
 		 * @return An unsigned int which represents the UUID of the script added. This UUID will persist throughout all of the pipeline.
 		 */
-		unsigned int addLuaScript(const LuaScript& script);
+		unsigned int addLuaScript(LuaScript& script);
 		
 		/**
 		 * @brief Returns the queue of scripts to activate

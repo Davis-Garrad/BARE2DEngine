@@ -17,7 +17,9 @@ namespace BARE2D {
 		BOOL,
 		VECTOR_BOOL,
 		VEC2,
-		VECTOR_VEC2
+		VECTOR_VEC2,
+		SCRIPT,
+		TEXTURE
 	};
 	
 	/**

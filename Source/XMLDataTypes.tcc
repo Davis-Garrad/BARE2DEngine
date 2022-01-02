@@ -3,6 +3,8 @@
 #include <glm/glm.hpp>
 
 #include "Cache.hpp"
+#include "Texture.hpp"
+#include "LuaScript.hpp"
 #include "BAREErrors.hpp"
 
 namespace BARE2D {
@@ -65,6 +67,10 @@ namespace BARE2D {
 	std::string Attribute<std::vector<bool>>::getDataString();
 	template<>
 	std::string Attribute<std::vector<glm::vec2>>::getDataString();
+	template<>
+	std::string Attribute<LuaScript>::getDataString();
+	template<>
+	std::string Attribute<Texture>::getDataString();
 	
 	// SetDefaultData
 	template<>
@@ -91,6 +97,10 @@ namespace BARE2D {
 	void Attribute<std::vector<bool>>::setDefaultData();
 	template<>
 	void Attribute<std::vector<glm::vec2>>::setDefaultData();
+	template<>
+	void Attribute<LuaScript>::setDefaultData();
+	template<>
+	void Attribute<Texture>::setDefaultData();
 	
 	template<typename T>
 	T XMLData::getAttributeByName(std::string name) {

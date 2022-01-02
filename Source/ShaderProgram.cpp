@@ -214,7 +214,7 @@ namespace BARE2D {
 	// Template specializations
 	
 	template<>
-	void ShaderProgram::setUniform<int>(const std::string uniform, int& data) {
+	void ShaderProgram::setUniform<int>(const std::string uniform, int* data, unsigned int num) {
 		// First, get the location
 		GLint loc = getUniformLocation(uniform);
 		
@@ -222,10 +222,10 @@ namespace BARE2D {
 		if(loc == -1) return;
 		
 		// Now, call glUniform{whatever}
-		glUniform1i(loc, data);
+		glUniform1iv(loc, num, data);
 	}
 	template<>
-	void ShaderProgram::setUniform<unsigned int>(const std::string uniform, unsigned int& data) {
+	void ShaderProgram::setUniform<unsigned int>(const std::string uniform, unsigned int* data, unsigned int num) {
 		// First, get the location
 		GLint loc = getUniformLocation(uniform);
 		
@@ -233,10 +233,10 @@ namespace BARE2D {
 		if(loc == -1) return;
 		
 		// Now, call glUniform{whatever}
-		glUniform1ui(loc, data);
+		glUniform1uiv(loc, num, data);
 	}
 	template<>
-	void ShaderProgram::setUniform<float>(const std::string uniform, float& data) {
+	void ShaderProgram::setUniform<float>(const std::string uniform, float* data, unsigned int num) {
 		// First, get the location
 		GLint loc = getUniformLocation(uniform);
 		
@@ -244,78 +244,78 @@ namespace BARE2D {
 		if(loc == -1) return;
 		
 		// Now, call glUniform{whatever}
-		glUniform1f(loc, data);
-	}
-	
-	template<>
-	void ShaderProgram::setUniform<glm::vec2>(const std::string uniform, glm::vec2& data) {
-		// First, get the location
-		GLint loc = getUniformLocation(uniform);
-		
-		// Now check for errors.
-		if(loc == -1) return;
-		
-		// Now, call glUniform{whatever}
-		glUniform2fv(loc, 1, glm::value_ptr(data));
-	}
-	template<>
-	void ShaderProgram::setUniform<glm::vec3>(const std::string uniform, glm::vec3& data) {
-		// First, get the location
-		GLint loc = getUniformLocation(uniform);
-		
-		// Now check for errors.
-		if(loc == -1) return;
-		
-		// Now, call glUniform{whatever}
-		glUniform3fv(loc, 1, glm::value_ptr(data));
-	}
-	template<>
-	void ShaderProgram::setUniform<glm::vec4>(const std::string uniform, glm::vec4& data) {
-		// First, get the location
-		GLint loc = getUniformLocation(uniform);
-		
-		// Now check for errors.
-		if(loc == -1) return;
-		
-		// Now, call glUniform{whatever}
-		glUniform4fv(loc, 1, glm::value_ptr(data));
-	}
-	template<>
-	void ShaderProgram::setUniform<glm::ivec2>(const std::string uniform, glm::ivec2& data) {
-		// First, get the location
-		GLint loc = getUniformLocation(uniform);
-		
-		// Now check for errors.
-		if(loc == -1) return;
-		
-		// Now, call glUniform{whatever}
-		glUniform2iv(loc, 1, glm::value_ptr(data));
-	}
-	template<>
-	void ShaderProgram::setUniform<glm::ivec3>(const std::string uniform, glm::ivec3& data) {
-		// First, get the location
-		GLint loc = getUniformLocation(uniform);
-		
-		// Now check for errors.
-		if(loc == -1) return;
-		
-		// Now, call glUniform{whatever}
-		glUniform3iv(loc, 1, glm::value_ptr(data));
-	}
-	template<>
-	void ShaderProgram::setUniform<glm::ivec4>(const std::string uniform, glm::ivec4& data) {
-		// First, get the location
-		GLint loc = getUniformLocation(uniform);
-		
-		// Now check for errors.
-		if(loc == -1) return;
-		
-		// Now, call glUniform{whatever}
-		glUniform4iv(loc, 1, glm::value_ptr(data));
+		glUniform1fv(loc, num, data);
 	}
 	
 	template<>
-	void ShaderProgram::setUniformMatrix<glm::mat4>(const std::string uniform, bool transpose, glm::mat4& data) {
+	void ShaderProgram::setUniform<glm::vec2>(const std::string uniform, glm::vec2* data, unsigned int num) {
+		// First, get the location
+		GLint loc = getUniformLocation(uniform);
+		
+		// Now check for errors.
+		if(loc == -1) return;
+		
+		// Now, call glUniform{whatever}
+		glUniform2fv(loc, num, glm::value_ptr(*data));
+	}
+	template<>
+	void ShaderProgram::setUniform<glm::vec3>(const std::string uniform, glm::vec3* data, unsigned int num) {
+		// First, get the location
+		GLint loc = getUniformLocation(uniform);
+		
+		// Now check for errors.
+		if(loc == -1) return;
+		
+		// Now, call glUniform{whatever}
+		glUniform3fv(loc, num, glm::value_ptr(*data));
+	}
+	template<>
+	void ShaderProgram::setUniform<glm::vec4>(const std::string uniform, glm::vec4* data, unsigned int num) {
+		// First, get the location
+		GLint loc = getUniformLocation(uniform);
+		
+		// Now check for errors.
+		if(loc == -1) return;
+		
+		// Now, call glUniform{whatever}
+		glUniform4fv(loc, num, glm::value_ptr(*data));
+	}
+	template<>
+	void ShaderProgram::setUniform<glm::ivec2>(const std::string uniform, glm::ivec2* data, unsigned int num) {
+		// First, get the location
+		GLint loc = getUniformLocation(uniform);
+		
+		// Now check for errors.
+		if(loc == -1) return;
+		
+		// Now, call glUniform{whatever}
+		glUniform2iv(loc, num, glm::value_ptr(*data));
+	}
+	template<>
+	void ShaderProgram::setUniform<glm::ivec3>(const std::string uniform, glm::ivec3* data, unsigned int num) {
+		// First, get the location
+		GLint loc = getUniformLocation(uniform);
+		
+		// Now check for errors.
+		if(loc == -1) return;
+		
+		// Now, call glUniform{whatever}
+		glUniform3iv(loc, num, glm::value_ptr(*data));
+	}
+	template<>
+	void ShaderProgram::setUniform<glm::ivec4>(const std::string uniform, glm::ivec4* data, unsigned int num) {
+		// First, get the location
+		GLint loc = getUniformLocation(uniform);
+		
+		// Now check for errors.
+		if(loc == -1) return;
+		
+		// Now, call glUniform{whatever}
+		glUniform4iv(loc, num, glm::value_ptr(*data));
+	}
+	
+	template<>
+	void ShaderProgram::setUniformMatrix<glm::mat4>(const std::string uniform, bool transpose, glm::mat4* data, unsigned int num) {
 		// First, get the location
 		GLint loc = getUniformLocation(uniform);
 		
@@ -323,7 +323,7 @@ namespace BARE2D {
 		if(loc == -1) return;
 		
 		// Now call glUniformMatrix{whatever}
-		glUniformMatrix4fv(loc, 1, transpose, glm::value_ptr(data));
+		glUniformMatrix4fv(loc, num, transpose, glm::value_ptr(*data));
 		
 	}
 

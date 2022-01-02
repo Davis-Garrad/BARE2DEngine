@@ -19,10 +19,10 @@ namespace BARE2D {
 	
 	void BumpyRenderer::initUniforms() {
 		GLint textureUniform = 0;
-		m_shader.setUniform("textureSampler", textureUniform);
+		m_shader.setUniform("textureSampler", &textureUniform);
 		
 		GLint bumpUniform = 1;
-		m_shader.setUniform("bumpmapSampler", bumpUniform);
+		m_shader.setUniform("bumpmapSampler", &bumpUniform);
 	}
 
 	void BumpyRenderer::preRender()
@@ -31,7 +31,7 @@ namespace BARE2D {
 		m_camera->update();
 		
 		glm::mat4 projectionMatrix = m_camera->getCameraMatrix();
-		m_shader.setUniformMatrix<glm::mat4>("projectionMatrix", GL_FALSE, projectionMatrix);
+		m_shader.setUniformMatrix<glm::mat4>("projectionMatrix", GL_FALSE, &projectionMatrix);
 	}
 	
 	void BumpyRenderer::render() {

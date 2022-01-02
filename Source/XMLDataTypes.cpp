@@ -1,6 +1,7 @@
 #include "XMLDataTypes.hpp"
 
 #include "XMLDataManager.hpp"
+#include "ResourceManager.hpp"
 
 namespace BARE2D {
 
@@ -102,6 +103,14 @@ namespace BARE2D {
 		}
 		return ret;
 	}
+	template<>
+	std::string Attribute<LuaScript>::getDataString() {
+		return m_data->m_path;
+	}
+	template<>
+	std::string Attribute<Texture>::getDataString() {
+		return m_data->filepath;
+	}
 	
 	// SetDefaultData
 	template<>
@@ -151,6 +160,16 @@ namespace BARE2D {
 	template<>
 	void Attribute<std::vector<glm::vec2>>::setDefaultData() {
 		setData(std::vector<glm::vec2>{});	
+	}
+	template<>
+	void Attribute<LuaScript>::setDefaultData() {
+		setData(LuaScript());
+	}
+	template<>
+	void Attribute<Texture>::setDefaultData() {
+		Texture tex;
+		tex.filepath = "UNDEFINED_PATH";
+		setData(tex);
 	}
 	
 	// Now that all the templates have been specialized, let's do some real work
@@ -285,6 +304,26 @@ namespace BARE2D {
 					XMLDataManager::readValue(node, attrName, data);
 					// Set the data now
 					attrValue->setData(data);
+					break;
+				}
+				case AttributeType::SCRIPT: {
+					std::string path;
+					// Get the string interpretation
+					XMLDataManager::readValue(node, attrName, path);
+					// Load the script.
+					LuaScript scr = ResourceManager::loadScript(path);
+					// Set the data.
+					attrValue->setData(scr);
+					break;
+				}
+				case AttributeType::TEXTURE: {
+					std::string path;
+					// Get the path
+					XMLDataManager::readValue(node, attrName, path);
+					// Load the texture
+					Texture tex = ResourceManager::loadTexture(path);
+					// Set the data
+					attrValue->setData(tex);
 					break;
 				}
 				

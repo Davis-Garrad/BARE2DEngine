@@ -71,13 +71,13 @@ namespace BARE2D {
 		// Now, for convenience, set the uniforms of the FBO shader program
 		for(unsigned int i = 0; i < m_numTextures-1; i++) {
 			GLint colourTexture = i;
-			m_shader.setUniform("colourTexture" + std::to_string(i), colourTexture);
+			m_shader.setUniform("colourTexture" + std::to_string(i), &colourTexture);
 		}
 		
 		m_shaderHasDepth = m_shader.doesUniformExist("depthTexture");
 		if(m_shaderHasDepth) {
 			GLint depthTexture = m_numTextures-1;
-			m_shader.setUniform("depthTexture", depthTexture);
+			m_shader.setUniform("depthTexture", &depthTexture);
 		}
 	}
 	

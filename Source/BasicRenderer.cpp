@@ -38,9 +38,9 @@ namespace BARE2D {
 		m_camera->update();
 		
 		GLint textureUniform = 0;
-		m_shader.setUniform("textureSampler", textureUniform);
+		m_shader.setUniform("textureSampler", &textureUniform);
 		glm::mat4 projectionMatrix = m_camera->getCameraMatrix();
-		m_shader.setUniformMatrix<glm::mat4>("projectionMatrix", GL_FALSE, projectionMatrix);
+		m_shader.setUniformMatrix<glm::mat4>("projectionMatrix", GL_FALSE, &projectionMatrix);
 	}
 	
 	void BasicRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour/*255, 255, 255, 255*/, float angle/* = 0.0f*/, glm::vec2 COR/*=glm::vec2(0.5f)*/) {

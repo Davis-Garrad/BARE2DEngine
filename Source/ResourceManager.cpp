@@ -169,6 +169,7 @@ namespace BARE2D {
 		LuaScript* script = m_scripts->createItem(scriptPath);
 		// and actually give it data lol.
 		script->m_script = scriptSource;
+		script->m_path = scriptPath;
 		
 		return *script;
 	}
@@ -185,6 +186,7 @@ namespace BARE2D {
 		LuaScript* script = m_scripts->createItem(name);
 		// and actually give it data lol.
 		script->m_script = scriptSource;
+		script->m_path = "NO_PATH";
 		
 		return *script;
 	}

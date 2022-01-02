@@ -28,7 +28,7 @@ namespace BARE2D {
 		if(m_instance) delete m_instance;
 	}
 
-	unsigned int LuaScriptQueue::addLuaScript(const LuaScript& script)
+	unsigned int LuaScriptQueue::addLuaScript(LuaScript& script)
 	{
 		// Add the script to the map. (or, in the off chance we have somehow added 4,294,967,295 different scripts in the last update, overwrite this one.)
 		LuaScript* scr = new LuaScript();

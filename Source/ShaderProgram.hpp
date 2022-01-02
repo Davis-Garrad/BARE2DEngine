@@ -43,7 +43,7 @@ namespace BARE2D {
 		 * @param data The variable to actually set the uniform's value to. This can be a glm::{i,ui,f}vec{1,2,3,4}, an unsigned int, an int, or a float
 		 */
 		template<class T>
-		void setUniform(const std::string uniform, T& data);
+		void setUniform(const std::string uniform, T* data, unsigned int num = 1);
 		
 		/**
 		 * @brief Similar to setUniform.
@@ -52,7 +52,7 @@ namespace BARE2D {
 		 * @param data A pointer to the matrix, which is a 1D array of floats, ints, or unsigned ints.
 		 */
 		template<class T>
-		void setUniformMatrix(const std::string uniform, bool transpose, T& data);
+		void setUniformMatrix(const std::string uniform, bool transpose, T* data, unsigned int num = 1);
 		
 		/**
 		 * @param uniform The uniform to check for

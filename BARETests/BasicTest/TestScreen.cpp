@@ -47,7 +47,7 @@ void TestScreen::draw()
 	
 	m_fbo->begin();
 	
-	m_fbo->getShader()->setUniform("mousePos", m_position);
+	m_fbo->getShader()->setUniform("mousePos", &m_position);
 	
 	m_renderer->begin();
 	

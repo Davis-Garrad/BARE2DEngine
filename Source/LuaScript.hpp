@@ -19,6 +19,9 @@ namespace BARE2D {
 		
 		// The script's text - this is the code.
 		std::string m_script;
+		std::string m_path;
+		
+		bool inited = false;
 	};
 
 	/**
