@@ -4,7 +4,9 @@ namespace BARE2D {
 	// Need to define getData()
 	template<typename T>
 	T XMLDataManager::getData(std::string dataType, unsigned int key) {
-		return *static_cast<T*>((getDataCache(dataType))->findItem(key));
+		XMLData* dataPtr = getDataCache(dataType)->findItem(key);
+		T* data = static_cast<T*>(dataPtr);
+		return *data;
 	}
 	
 	// Need to specialize XMLDataManager::readValue()
@@ -34,12 +36,8 @@ namespace BARE2D {
 		//  Make sure that T is actually a child class of XMLData
 		static_assert(std::is_base_of<XMLData, T>::value, "XML Data Type is not derived class of BARE2D::XMLData");
 		
-		T sample; // Create a new XMLData of subtype T
+		T sample;
 		
-		XMLData splicedData(sample.getAttributes()); // Create a new basic XMLData to just stored attributes, name, etc.
-		
-		// Add the data type to the Manager's list
-		XMLData* dataType = m_dataTypes.createItem(sample.nodeName);
-		*dataType = splicedData;
+		m_dataTypingFunctions[sample.nodeName] = T::cloneType;
 	}
 }

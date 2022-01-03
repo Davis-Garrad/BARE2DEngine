@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <csignal>
 #include <SDL2/SDL.h>
 #include <GL/glew.h>
 
@@ -14,19 +15,19 @@
 
 std::string demangle(const char* mangled)
 {
-      int status;
-      std::unique_ptr<char[], void (*)(void*)> result(
-        abi::__cxa_demangle(mangled, 0, 0, &status), std::free);
-      return result.get() ? std::string(result.get()) : "error occurred";
+	int status;
+	std::unique_ptr<char[], void (*)(void*)> result(
+	    abi::__cxa_demangle(mangled, 0, 0, &status), std::free);
+	return result.get() ? std::string(result.get()) : "error occurred";
 }
 
-void GLAPIENTRY MessageCallback( GLenum source,
-                 GLenum type,
-                 GLuint id,
-                 GLenum severity,
-                 GLsizei length,
-                 const GLchar* message,
-                 const void* userParam )
+void GLAPIENTRY MessageCallback(GLenum source,
+                                GLenum type,
+                                GLuint id,
+                                GLenum severity,
+                                GLsizei length,
+                                const GLchar* message,
+                                const void* userParam)
 {
 	std::string severityStr = "Unspecified";
 	BARE2D::GLErrorSeverity severityEnum = BARE2D::GLErrorSeverity::UNKNOWN;
@@ -51,9 +52,9 @@ void GLAPIENTRY MessageCallback( GLenum source,
 			severityStr = "Unspecified";
 			break;
 	}
-	
+
 	if((unsigned int)severityEnum < (unsigned int)BARE2D::GLErrorMinSeverity) return;
-	
+
 	std::string sourceStr = "Unspecified";
 	switch(source) {
 		case GL_DEBUG_SOURCE_API:
@@ -78,7 +79,7 @@ void GLAPIENTRY MessageCallback( GLenum source,
 			sourceStr = "Unspecified";
 			break;
 	}
-	
+
 	std::string typeStr = "Unspecified";
 	switch(type) {
 		case GL_DEBUG_TYPE_ERROR:
@@ -112,28 +113,30 @@ void GLAPIENTRY MessageCallback( GLenum source,
 			typeStr = "Unspecified";
 			break;
 	}
-	
+
 	std::string errorString = "GL Callback: " + std::string(type == GL_DEBUG_TYPE_ERROR ? "** GL ERROR **" : "") + "\n";
 	errorString += "Type: " + typeStr + "\n";
 	errorString += "Severity: " + severityStr + "\n";
 	errorString += "Message: " + std::string(message) + "\n";
-	
+
 	BARE2D::Logger::getInstance()->log(errorString);
-	
-	/*fprintf(stderr, "GL Callback: %s \nType: %s \nSeverity: %s \nMessage: %s\n\n", 
-		(type == GL_DEBUG_TYPE_ERROR ? "** GL ERROR **" : ""), 
-		typeStr.c_str(), 
-		severityStr.c_str(), 
+
+	/*fprintf(stderr, "GL Callback: %s \nType: %s \nSeverity: %s \nMessage: %s\n\n",
+		(type == GL_DEBUG_TYPE_ERROR ? "** GL ERROR **" : ""),
+		typeStr.c_str(),
+		severityStr.c_str(),
 		message);*/
-	
+
 }
 
-namespace BARE2D {
-	GLErrorSeverity GLErrorMinSeverity = GLErrorSeverity::NOTIF; 
-	
+namespace BARE2D
+{
+	GLErrorSeverity GLErrorMinSeverity = GLErrorSeverity::NOTIF;
+
 	std::vector<BAREError> thrownErrors;
-	
-	std::string getErrString(BAREError err) {
+
+	std::string getErrString(BAREError err)
+	{
 		switch(err) {
 			case BAREError::SDL_FAILURE:
 				return "EC SDL_FAILURE - SDL Failure to initialize. SDL_GetError() yields the following: \n\n" + std::string(SDL_GetError());
@@ -173,14 +176,16 @@ namespace BARE2D {
 				return "EC DNE - Unknown error. (enum " + std::to_string((unsigned int)err) + ")";
 		}
 	}
-	
-	void throwFatalError(BAREError err, std::string message) {
+
+	void throwFatalError(BAREError err, std::string message)
+	{
 		std::cout << "\n";
 		std::cout << std::setfill('#') << std::setw(50) << "\n";
 		std::cout << "FATAL ERROR: " << "\n";
 		std::cout << std::setfill('#') << std::setw(50) << "\n\n";
 		throwError(err, message);
 		displayErrors();
+		std::raise(SIGABRT);
 		exit(EXIT_FAILURE);
 	}
 
@@ -191,7 +196,7 @@ namespace BARE2D {
 		if(message != "") {
 			std::cout << std::setfill('-') << std::setw(50) << "\n";
 			std::cout << "Error: " << message << std::endl;
-			std::cout << thrownErrors.size()-1 << ": " << getErrString(err) << std::endl;
+			std::cout << thrownErrors.size() - 1 << ": " << getErrString(err) << std::endl;
 			std::cout << std::setfill('-') << std::setw(50) << "\n";
 		}
 	}
@@ -206,13 +211,14 @@ namespace BARE2D {
 		}
 		thrownErrors.clear();
 	}
-	
-	void initGLErrorCallback(GLErrorSeverity minSeverity) {
+
+	void initGLErrorCallback(GLErrorSeverity minSeverity)
+	{
 		GLErrorMinSeverity = minSeverity;
-		
+
 		GLboolean inited = GL_FALSE;
 		glGetBooleanv(GL_DEBUG_OUTPUT, &inited);
-		
+
 		if(!inited) {
 			glEnable(GL_DEBUG_OUTPUT);
 			glDebugMessageCallback(MessageCallback, 0);

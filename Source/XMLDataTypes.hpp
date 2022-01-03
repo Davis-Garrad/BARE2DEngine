@@ -6,7 +6,8 @@
 
 #include <rapidxml/rapidxml.hpp>
 
-namespace BARE2D {
+namespace BARE2D
+{
 	enum class AttributeType {
 		STRING,
 		UNSIGNED_INT,
@@ -21,94 +22,103 @@ namespace BARE2D {
 		SCRIPT,
 		TEXTURE
 	};
-	
+
 	/**
 	 * @class AttributeBase
 	 * @brief The AttributeBase class only exists for some templating acrobatics reasons (as an abstract base class for Attribute)
 	 */
-	class AttributeBase {
+	class AttributeBase
+	{
 	public:
 		template<typename T>
 		void setData(T data);
-		
+
 		template<typename T>
 		T getData();
-		
+
 		template<typename T>
 		T* getDataPointer();
-		
+
 		template<typename T>
 		void swapDataPointer(T* newPtr);
-		
+
 		virtual ~AttributeBase() {}
-		
+
 		std::string name;
 		AttributeType type;
-		
+
 		virtual std::string getDataString() = 0;
-		
+
 	protected:
 		virtual void setDefaultData() = 0;
 	};
-	
-	
+
+
 	template<typename T>
-	class Attribute : public AttributeBase {
+	class Attribute : public AttributeBase
+	{
 		friend class XMLData;
-		
+
 	public:
 		Attribute() {}
 		Attribute(std::string Name, AttributeType Type, T* data);
 		~Attribute() {}
-		
+
 		/**
 		 * @brief Sets the actual value of the data pointer, not the address.
 		 * @param data The data to set it to.
 		 */
 		void setData(T data);
-		
+
 		/**
 		 * @brief Changes the old value of newPtr to that of this class' data, then changes this class' data pointer to newPtr.
 		 * @param newPtr
 		 */
 		void swapDataPointer(T* newPtr);
-		
+
 		/**
-		 * @return The data 
+		 * @return The data
 		 */
 		T getData();
 		/**
-		 * @return A pointer to the data. 
+		 * @return A pointer to the data.
 		 */
 		T* getDataPointer();
-		
+
 		/**
 		 * @brief Creates a string for XML writing of the data.
 		 * @return A writable string.
 		 */
 		virtual std::string getDataString() override;
-		
+
 	private:
 		T* m_data = nullptr;
-		
+
 		/**
 		 * @brief Sets the data to its format's equivalent to 0.
 		 */
 		virtual void setDefaultData() override;
 	};
-	
+
 	/**
 	 * @class XMLData
 	 * @brief Holds all the very basic information for XML data. Designed to be a base class from which a user can derive custom data formats.
 	 */
-	class XMLData {
+	class XMLData
+	{
 	public:
 		XMLData();
 		XMLData(std::string dataType, unsigned int ID);
 		XMLData(std::vector<AttributeBase*> attributes);
 		XMLData(std::unordered_map<std::string, AttributeBase*> attributes);
 		~XMLData() {}
-		
+
+		/**
+		 * @brief Allocates and populates a copy of this *type* of data, then returns it. No guarantees that the names are the same or anything. Important - Make sure to override this in all derived custom types.
+		 * @return A copy of this type or subtype of data, complete with their own allocated members and so linked attributes.
+		 */
+		static XMLData* cloneType();
+
 		/**
 		 * @brief Reads the entire piece of data from a given XML node
 		 * @param node The node to interpret and read from
@@ -119,7 +129,7 @@ namespace BARE2D {
 		 * @param doc The document to write to.
 		 */
 		void write(rapidxml::xml_document<>* doc);
-		
+
 		/**
 		 * @brief Finds an attribute by its name (eg. "name", "id")
 		 * @param name The name of the attribute
@@ -127,16 +137,16 @@ namespace BARE2D {
 		 */
 		template<typename T>
 		T getAttributeByName(std::string name);
-		
+
 		/**
-		 * @return Returns a copy of the entire attributes map. Useful for pseudo-copy operations. 
+		 * @return Returns a copy of the entire attributes map. Useful for pseudo-copy operations.
 		 */
 		std::unordered_map<std::string, AttributeBase*> getAttributes();
-		
+
 		std::string name;
 		unsigned int id;
 		std::string nodeName;
-		
+
 	protected:
 		/**
 		 * @brief Constructs and adds an attribute to the data.
@@ -151,15 +161,15 @@ namespace BARE2D {
 		 * @param attr A pointer to the attribute to be added.
 		 */
 		void addAttribute(AttributeBase* attr);
-		
+
 		/**
 		 * @brief Bulk adds attributes to the data.
 		 * @param attrs A vector of pointers to attributes to add.
 		 */
 		void addAttributes(std::vector<AttributeBase*> attrs);
-		
+
 		std::unordered_map<std::string, AttributeBase*> m_attributes;
-		
+
 	};
 }
 
