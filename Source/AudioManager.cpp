@@ -4,18 +4,21 @@
 
 #include "BAREErrors.hpp"
 
-namespace BARE2D {
-	
+namespace BARE2D
+{
+
 	AudioManager* AudioManager::m_instance = nullptr;
-	
-	AudioManager* AudioManager::getInstance() {
+
+	AudioManager* AudioManager::getInstance()
+	{
 		if(!m_instance) {
 			m_instance = new AudioManager();
 		}
 		return m_instance;
 	}
-	
-	void AudioManager::release() {
+
+	void AudioManager::release()
+	{
 		if(m_instance) {
 			m_instance->destroy();
 			delete m_instance;
@@ -35,7 +38,7 @@ namespace BARE2D {
 	{
 		// Load all of the DLLs which may or may not exist on our system.
 		int initedFlags = Mix_Init(MIX_INIT_FLAC | MIX_INIT_MOD | MIX_INIT_MP3 | MIX_INIT_OGG);
-		
+
 		// Check each flag, and report if it couldn't be inited.
 		if(!(initedFlags & MIX_INIT_FLAC)) {
 			// Couldn't init .flac extension. report
@@ -53,19 +56,20 @@ namespace BARE2D {
 			// Couldn't init .ogg extension. report
 			throwError(BAREError::SDL_MIXER_OGG_FAILURE, Mix_GetError());
 		}
-		
+
 		// Now actually open the API and allow calls to the library
 		// The default frequency is a decent middleground for weaker and stronger CPUs but still sounds good
 		// The default format is "Signed 16-bit samples, in system byte order"
 		// There will be 2 output channels open (for stereo) - this is different than the mixer channels, which are what sounds are actually played in
 		// Each chunk will be of size 1024 - this is a decent size as our hooks will not be called too often, but audio won't skip either.
 		Mix_OpenAudio(MIX_DEFAULT_FREQUENCY, MIX_DEFAULT_FORMAT, 2, 1024);
-		
+
 		// Arbitrarily allocate a bunch of channels.
 		Mix_AllocateChannels(32); // 32 is almost definitely going to be enough for anything reasonable. This can be jacked up, however.
 	}
-	
-	void AudioManager::destroy() {
+
+	void AudioManager::destroy()
+	{
 		// Clean up SDL
 		// Get how many times we called Mix_OpenAudio (the dummies store the frequency, format, and the number of channels)
 		int numTimesOpened, dummyA, dummyC;
@@ -75,11 +79,11 @@ namespace BARE2D {
 		if(numTimesOpened == 0) {
 			throwError(BAREError::SDL_MIXER_CLOSE_FAILURE, Mix_GetError());
 		}
-		
+
 		// Actually close each mixer.
 		for(unsigned int i = 0; i < numTimesOpened; i++)
 			Mix_CloseAudio();
-		
+
 		while(Mix_Init(0)) // This makes sure that no matter how many DLLs are loaded, we quit them all.
 			Mix_Quit();
 	}
@@ -174,7 +178,7 @@ namespace BARE2D {
 	void AudioManager::mute()
 	{
 		if(m_muted) return;
-		
+
 		// Get the original volumes and set the current volumes to 0 (muted)
 		m_soundVolume = Mix_Volume(-1, 0);
 		m_musicVolume = Mix_VolumeMusic(0);
@@ -185,7 +189,7 @@ namespace BARE2D {
 	{
 		if(!m_muted) return;
 		m_muted = false;
-		
+
 		Mix_Volume(-1, m_soundVolume);
 		Mix_VolumeMusic(m_musicVolume);
 	}
@@ -193,13 +197,13 @@ namespace BARE2D {
 	void AudioManager::setSoundVolume(unsigned char volumeLevel)
 	{
 		m_soundVolume = volumeLevel * m_masterVolume;
-		Mix_Volume(-1, m_soundVolume / (255*255) * 128); // Normalize the volume from 0-128 (that's the mixer max)
+		Mix_Volume(-1, m_soundVolume / (255 * 255) * 128); // Normalize the volume from 0-128 (that's the mixer max)
 	}
 
 	void AudioManager::setMusicVolume(unsigned char volumeLevel)
 	{
 		m_musicVolume = volumeLevel * m_masterVolume;
-		Mix_VolumeMusic(m_musicVolume / (255*255) * 128); // Normalize the volume from 0-128 (that's the mixer max)
+		Mix_VolumeMusic(m_musicVolume / (255 * 255) * 128); // Normalize the volume from 0-128 (that's the mixer max)
 	}
 
 	void AudioManager::setMasterVolumeModifier(unsigned char masterLevel)
@@ -207,12 +211,17 @@ namespace BARE2D {
 		// First, get the oldl music and sound volumes before the master adjustment.
 		m_musicVolume /= m_masterVolume;
 		m_soundVolume /= m_masterVolume;
-		
+
 		m_masterVolume = masterLevel;
-		
+
 		// Now reset the new music and sound volumes
 		setMusicVolume(m_musicVolume);
 		setSoundVolume(m_soundVolume);
+	}
+
+	bool AudioManager::isMusicPlaying()
+	{
+		return Mix_PlayingMusic();
 	}
 
 }

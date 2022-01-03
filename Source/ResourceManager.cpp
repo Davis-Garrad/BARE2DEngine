@@ -170,6 +170,7 @@ namespace BARE2D {
 		// and actually give it data lol.
 		script->m_script = scriptSource;
 		script->m_path = scriptPath;
+		script->inited = true;
 		
 		return *script;
 	}
@@ -187,6 +188,7 @@ namespace BARE2D {
 		// and actually give it data lol.
 		script->m_script = scriptSource;
 		script->m_path = "NO_PATH";
+		script->inited = true;
 		
 		return *script;
 	}

@@ -1,6 +1,7 @@
 #pragma once
 
-namespace BARE2D {
+namespace BARE2D
+{
 
 	class ParticleEngine2D
 	{
@@ -8,7 +9,8 @@ namespace BARE2D {
 		ParticleEngine2D();
 		~ParticleEngine2D();
 
+		void update(double dt);
+
 	};
 
 }
-

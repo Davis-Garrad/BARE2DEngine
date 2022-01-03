@@ -53,7 +53,7 @@ namespace BARE2D {
 		 * @brief Returns the index of the next screen. It is recommended to keep a file, say, ScreenIndices.h, where all indices are defined.
 		 * @return Index of the next screen
 		 */
-		virtual unsigned int getNextScreenIndex() = 0;
+		virtual int getNextScreenIndex() const = 0;
 		
 		/**
 		 * @return Returns the current ScreenState 

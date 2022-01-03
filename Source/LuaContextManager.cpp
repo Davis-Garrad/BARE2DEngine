@@ -76,5 +76,15 @@ namespace BARE2D {
 		
 		// And we're good! Just return.
 	}
+	
+	LuaScriptContextWrapper* LuaContextManager::getContext(unsigned int id) {
+		// Find the context
+		auto it = m_contexts.find(id);
+		// Check to make sure it exists. If it doesn't, return nullptr
+		if(it == m_contexts.end()) {
+			return nullptr;
+		}
+		return it->second;
+	}
 
 }

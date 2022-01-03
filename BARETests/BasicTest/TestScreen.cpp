@@ -76,7 +76,7 @@ void TestScreen::draw()
 	
 	m_fontRenderer->begin();
 	
-	float fps = (60.0/updateCount)*renderCount;
+	float fps = renderCount/(updateCount/60.0f);
 	
 	m_fontRenderer->draw(m_font_openSans, glm::vec2(1.0f), glm::vec4(-400.0f, -300.0f, 1.0f, 1.0f), std::string("Updates: " + std::to_string((int)(updateCount)) + "\nDraw Calls: " + std::to_string((int)renderCount) + "\nFPS: " + std::to_string(fps)).c_str(), 0.0f, BARE2D::Colour(255, 255, 255, 255));
 	
@@ -198,7 +198,7 @@ void TestScreen::onExit()
 }
 
 void TestScreen::update(double dt)
-{
+{	
 	m_time++;
 	
 	updateCount++;

@@ -28,6 +28,13 @@ namespace BARE2D {
 		 * @param context The context to insert in the map.
 		 */
 		void addContext(unsigned int id, LuaScriptContextWrapper* context);
+		
+		/**
+		 * @brief Gets a context wrapper from the map
+		 * @param id The ID of the context, given by the LuaScriptQueue::addScript() call.
+		 * @return A pointer to the wrapper, and a nullptr if it doesn't exist.
+		 */
+		LuaScriptContextWrapper* getContext(unsigned int id);
 
 	private:
 		LuaContextManager();

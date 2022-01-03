@@ -1,10 +1,12 @@
+-I/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/BAREXML
+-I/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source
+-I/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/BAREXML/include
+-I/usr/include
 -I/usr/include/c++/9
 -I/usr/include/x86_64-linux-gnu/c++/9
 -I/usr/include/c++/9/backward
 -I/usr/lib/gcc/x86_64-linux-gnu/9/include
 -I/usr/local/include
 -I/usr/include/x86_64-linux-gnu
--I/usr/include
--I/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/BAREXML
--I/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source
--I/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/BAREXML/include
+-target
+x86_64-linux-gnu

@@ -3,7 +3,8 @@
 #include "Sound.hpp"
 #include "Music.hpp"
 
-namespace BARE2D {
+namespace BARE2D
+{
 
 	/**
 	 * @class AudioManager
@@ -15,12 +16,12 @@ namespace BARE2D {
 	public:
 		static AudioManager* getInstance();
 		static void release();
-		
+
 		/**
 		 * @brief Initializes all necessary bits and pieces.
 		 */
 		void init();
-		
+
 		/**
 		 * @brief Destroys/quits all necessary bits and pieces.
 		 */
@@ -59,7 +60,7 @@ namespace BARE2D {
 		 * @param soundID The ID of the sound to resume, given by playSound(...) calls.
 		 */
 		void resumeSound(unsigned int& soundID);
-		
+
 		/**
 		 * @brief Plays some music! Only one "music" can be played at a time.
 		 * @param music The music to play
@@ -79,7 +80,7 @@ namespace BARE2D {
 		 * @brief Resumes the paused music
 		 */
 		void resumeMusic();
-		
+
 		/**
 		 * @brief Mutes all sounds and music
 		 */
@@ -88,7 +89,7 @@ namespace BARE2D {
 		 * @brief Unmutes all sounds and music
 		 */
 		void unmute();
-		
+
 		/**
 		 * @brief Sets the volume level of all sounds
 		 * @param volumeLevel The level of the volume (clamped from 0 (muted) to 255(loud))
@@ -104,17 +105,21 @@ namespace BARE2D {
 		 * @param masterLevel The level of the volume - 0 is muted, 255 is very loud.
 		 */
 		void setMasterVolumeModifier(unsigned char masterLevel);
-		
+
+		/**
+		 * @return True if there is music currently playing, false otherwise.
+		 */
+		bool isMusicPlaying();
+
 	private:
 		AudioManager();
 		~AudioManager();
-		
+
 		static AudioManager* m_instance;
-		
+
 		unsigned char m_soundVolume = 255, m_musicVolume = 255, m_masterVolume = 255;
 		bool m_muted = false;
 
 	};
 
 }
-

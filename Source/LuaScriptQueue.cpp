@@ -38,6 +38,15 @@ namespace BARE2D {
 		
 		return m_lastUUID;
 	}
+	
+	unsigned int LuaScriptQueue::addLuaScript(std::string script) {
+		// Create a script object and add it normally
+		LuaScript scr;
+		scr.m_script = script;
+		scr.inited = true;
+		
+		addLuaScript(scr);
+	}
 
 	std::map<unsigned int,LuaScript*>& LuaScriptQueue::getQueue()
 	{
