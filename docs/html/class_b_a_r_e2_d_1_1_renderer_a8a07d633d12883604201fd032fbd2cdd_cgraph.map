@@ -1,0 +1,4 @@
+<map id="BARE2D::Renderer::end" name="BARE2D::Renderer::end">
+<area shape="rect" id="node1" title="Creates the renderbatches, does necessary stuff before render() call." alt="" coords="5,13,172,39"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_shader_program.html#a7847844b8a2e5ab0677340b47d180841" title="Deactivates this shader program." alt="" coords="220,5,395,47"/>
+</map>

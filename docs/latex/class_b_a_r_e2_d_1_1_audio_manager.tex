@@ -4,45 +4,89 @@
 
 {\ttfamily \#include $<$Audio\+Manager.\+hpp$>$}
 
+
+
+Collaboration diagram for B\+A\+R\+E2D\+::Audio\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{class_b_a_r_e2_d_1_1_audio_manager__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a8d19a9540129548e8a6c26472d0b0c4d}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes all necessary bits and pieces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b}{destroy}} ()
+\begin{DoxyCompactList}\small\item\em Destroys/quits all necessary bits and pieces. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aaea5896a893ca7571f9f996410662f3b}{play\+Sound}} (\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound}{Sound}} \&sound, unsigned int fade\+Time=0, unsigned int time\+Out=0, int angle=0, unsigned char distance=128)
+\begin{DoxyCompactList}\small\item\em Plays a sound at a position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a18066e694ed639067819cf07528240fe}{move\+Sound}} (unsigned int \&sound\+ID, int angle, unsigned char distance=128)
+\begin{DoxyCompactList}\small\item\em Resets the sound\textquotesingle{}s position for positional audio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a3c0ff9d1def21c04aaa2efbb88339975}{stop\+Sound}} (unsigned int \&sound\+ID, unsigned int fade\+Time=0)
+\begin{DoxyCompactList}\small\item\em Stops a sound. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2fc05e737bab89ce70d78add65c52a50}{pause\+Sound}} (unsigned int \&sound\+ID)
+\begin{DoxyCompactList}\small\item\em Pauses a sound. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab6126bf1f8733914e9e1a17b08087fba}{resume\+Sound}} (unsigned int \&sound\+ID)
+\begin{DoxyCompactList}\small\item\em Resumes a paused sound. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a9c40cea80160da2a6dcdc518e80c7743}{play\+Music}} (\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music}{Music}} \&music, unsigned int fade\+Time=0)
+\begin{DoxyCompactList}\small\item\em Plays some music! Only one \char`\"{}music\char`\"{} can be played at a time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a13127e869425dc7d396a2a86d44763db}{stop\+Music}} (unsigned int fade\+Time=0)
+\begin{DoxyCompactList}\small\item\em Stops the music. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a91f15e85f8ac67f0317ef1c7c7973dcd}{pause\+Music}} ()
+\begin{DoxyCompactList}\small\item\em Pauses the music. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a7b184aaae5a2676eee30ff8961abfd60}{resume\+Music}} ()
+\begin{DoxyCompactList}\small\item\em Resumes the paused music. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a4448b750a6b0df1ea06d188fefe06b2e}{mute}} ()
+\begin{DoxyCompactList}\small\item\em Mutes all sounds and music. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ac4d77be444ed398c46a0705ba043b023}{unmute}} ()
+\begin{DoxyCompactList}\small\item\em Unmutes all sounds and music. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884}{set\+Sound\+Volume}} (unsigned char volume\+Level)
+\begin{DoxyCompactList}\small\item\em Sets the volume level of all sounds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41}{set\+Music\+Volume}} (unsigned char volume\+Level)
+\begin{DoxyCompactList}\small\item\em Sets the volume level of all music. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a0e351ef6720a8a9eaadd2c29508fb8b0}{set\+Master\+Volume\+Modifier}} (unsigned char master\+Level)
+\begin{DoxyCompactList}\small\item\em Sets the modifier of all sound levels -\/ eg., if sounds were set at 40\% and music at 60\%, setting the master modifier to 50\% would set sounds to 20\% and music to 30\%. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a890b53a567ce658da9686403ec8ee29a}{is\+Music\+Playing}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{Audio\+Manager}} $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ad1dfe27d3ca15d1087e274313d926ad8}{get\+Instance}} ()
+\item 
+static void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a4b07b591f0add8a92a333a1589b09b2c}{release}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2ad1c7e845597f70b9d0a5d14969f3b5}{Audio\+Manager}} ()
 \item 
 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a5328303ce6ed6d376f081b235e369e17}{$\sim$\+Audio\+Manager}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
 \item 
-unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a77a1de536956470bda18e9e51f59b222}{play\+Sound}} (\mbox{\hyperlink{class_b_a_r_e2_d_1_1_sound}{Sound}} \&sound)
+unsigned char \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ace48414811952d078da7d54ac5b437ff}{m\+\_\+sound\+Volume}} = 255
 \item 
-void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab1289d03213645b6114d6dc574827f83}{stop\+Sound}} (unsigned int \&sound\+ID)
+unsigned char \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aedbbc0903ee931180d6d819248af756c}{m\+\_\+music\+Volume}} = 255
 \item 
-void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2fc05e737bab89ce70d78add65c52a50}{pause\+Sound}} (unsigned int \&sound\+ID)
+unsigned char \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2f02401ded65dbe776c095339575aabf}{m\+\_\+master\+Volume}} = 255
 \item 
-void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab6126bf1f8733914e9e1a17b08087fba}{resume\+Sound}} (unsigned int \&sound\+ID)
+bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a370017c99d2ba0ad7821e939ede67eaf}{m\+\_\+muted}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
 \item 
-unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a842102b760fd78415fe91cc246aaa948}{play\+Music}} (\mbox{\hyperlink{class_b_a_r_e2_d_1_1_music}{Music}} \&music)
-\item 
-void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a0c90c305fded15d17ae864bccde6cb95}{stop\+Music}} (unsigned int \&music\+ID)
-\item 
-void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ad388cfe2fcf9561a546d9d485af259aa}{pause\+Music}} (unsigned int \&music\+ID)
-\item 
-void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a9973a700f6e3a597a3fbcddbab6af1e5}{resume\+Music}} (unsigned int \&music\+ID)
-\item 
-void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a4448b750a6b0df1ea06d188fefe06b2e}{mute}} ()
-\item 
-void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ac4d77be444ed398c46a0705ba043b023}{unmute}} ()
-\item 
-void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a80c757719949d24f121dbca73df34094}{set\+Sound\+Volume}} (float \&volume\+Level)
-\item 
-void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2cdbff3a4422c1c4c31c6242b8113307}{set\+Music\+Volume}} (float \&volume\+Level)
-\item 
-void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a83a88fde307bb7e002d1c0a05dbd0589}{set\+Master\+Volume\+Modifier}} (float \&master\+Level)
+static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{Audio\+Manager}} $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}{m\+\_\+instance}} = nullptr
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{_audio_manager_8hpp_source_l00013}{13}} of file \mbox{\hyperlink{_audio_manager_8hpp_source}{Audio\+Manager.\+hpp}}.
+Definition at line \mbox{\hyperlink{_audio_manager_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{_audio_manager_8hpp_source}{Audio\+Manager.\+hpp}}.
 
 
 
@@ -51,36 +95,166 @@ Definition at line \mbox{\hyperlink{_audio_manager_8hpp_source_l00013}{13}} of f
 \index{BARE2D::AudioManager@{BARE2D::AudioManager}!AudioManager@{AudioManager}}
 \index{AudioManager@{AudioManager}!BARE2D::AudioManager@{BARE2D::AudioManager}}
 \doxysubsubsection{\texorpdfstring{AudioManager()}{AudioManager()}}
-{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::\+Audio\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::\+Audio\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
 
+
+
+Referenced by \mbox{\hyperlink{_audio_manager_8cpp_source_l00012}{get\+Instance()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_audio_manager_a2ad1c7e845597f70b9d0a5d14969f3b5_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a5328303ce6ed6d376f081b235e369e17}\label{class_b_a_r_e2_d_1_1_audio_manager_a5328303ce6ed6d376f081b235e369e17}} 
 \index{BARE2D::AudioManager@{BARE2D::AudioManager}!````~AudioManager@{$\sim$AudioManager}}
 \index{````~AudioManager@{$\sim$AudioManager}!BARE2D::AudioManager@{BARE2D::AudioManager}}
 \doxysubsubsection{\texorpdfstring{$\sim$AudioManager()}{~AudioManager()}}
-{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::$\sim$\+Audio\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::$\sim$\+Audio\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
 
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b}\label{class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b}} 
+\index{BARE2D::AudioManager@{BARE2D::AudioManager}!destroy@{destroy}}
+\index{destroy@{destroy}!BARE2D::AudioManager@{BARE2D::AudioManager}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys/quits all necessary bits and pieces. 
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_audio_manager_8cpp_source_l00020}{release()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_ad1dfe27d3ca15d1087e274313d926ad8}\label{class_b_a_r_e2_d_1_1_audio_manager_ad1dfe27d3ca15d1087e274313d926ad8}} 
+\index{BARE2D::AudioManager@{BARE2D::AudioManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!BARE2D::AudioManager@{BARE2D::AudioManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{Audio\+Manager}} $\ast$ B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_audio_manager_8cpp_source_l00028}{Audio\+Manager()}}, and \mbox{\hyperlink{_audio_manager_8hpp_source_l00118}{m\+\_\+instance}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_audio_manager_ad1dfe27d3ca15d1087e274313d926ad8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a8d19a9540129548e8a6c26472d0b0c4d}\label{class_b_a_r_e2_d_1_1_audio_manager_a8d19a9540129548e8a6c26472d0b0c4d}} 
+\index{BARE2D::AudioManager@{BARE2D::AudioManager}!init@{init}}
+\index{init@{init}!BARE2D::AudioManager@{BARE2D::AudioManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes all necessary bits and pieces. 
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a890b53a567ce658da9686403ec8ee29a}\label{class_b_a_r_e2_d_1_1_audio_manager_a890b53a567ce658da9686403ec8ee29a}} 
+\index{BARE2D::AudioManager@{BARE2D::AudioManager}!isMusicPlaying@{isMusicPlaying}}
+\index{isMusicPlaying@{isMusicPlaying}!BARE2D::AudioManager@{BARE2D::AudioManager}}
+\doxysubsubsection{\texorpdfstring{isMusicPlaying()}{isMusicPlaying()}}
+{\footnotesize\ttfamily bool B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::is\+Music\+Playing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if there is music currently playing, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00222}{222}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a18066e694ed639067819cf07528240fe}\label{class_b_a_r_e2_d_1_1_audio_manager_a18066e694ed639067819cf07528240fe}} 
+\index{BARE2D::AudioManager@{BARE2D::AudioManager}!moveSound@{moveSound}}
+\index{moveSound@{moveSound}!BARE2D::AudioManager@{BARE2D::AudioManager}}
+\doxysubsubsection{\texorpdfstring{moveSound()}{moveSound()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::move\+Sound (\begin{DoxyParamCaption}\item[{unsigned int \&}]{sound\+ID,  }\item[{int}]{angle,  }\item[{unsigned char}]{distance = {\ttfamily 128} }\end{DoxyParamCaption})}
+
+
+
+Resets the sound\textquotesingle{}s position for positional audio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sound\+ID} & A reference to the ID that represents the sound to move. \\
+\hline
+{\em angle} & The angle (clockwise in degrees, where 0 is directly forward) that the sound is to be played at. \\
+\hline
+{\em distance} & The distance from the camera that the sound should be played (from 0 (very near, loud) to 255 (very distant, quiet)) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00118}{118}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a4448b750a6b0df1ea06d188fefe06b2e}\label{class_b_a_r_e2_d_1_1_audio_manager_a4448b750a6b0df1ea06d188fefe06b2e}} 
 \index{BARE2D::AudioManager@{BARE2D::AudioManager}!mute@{mute}}
 \index{mute@{mute}!BARE2D::AudioManager@{BARE2D::AudioManager}}
 \doxysubsubsection{\texorpdfstring{mute()}{mute()}}
 {\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::mute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_ad388cfe2fcf9561a546d9d485af259aa}\label{class_b_a_r_e2_d_1_1_audio_manager_ad388cfe2fcf9561a546d9d485af259aa}} 
+
+
+Mutes all sounds and music. 
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00178}{178}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_audio_manager_8hpp_source_l00120}{m\+\_\+music\+Volume}}, \mbox{\hyperlink{_audio_manager_8hpp_source_l00121}{m\+\_\+muted}}, and \mbox{\hyperlink{_audio_manager_8hpp_source_l00120}{m\+\_\+sound\+Volume}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a91f15e85f8ac67f0317ef1c7c7973dcd}\label{class_b_a_r_e2_d_1_1_audio_manager_a91f15e85f8ac67f0317ef1c7c7973dcd}} 
 \index{BARE2D::AudioManager@{BARE2D::AudioManager}!pauseMusic@{pauseMusic}}
 \index{pauseMusic@{pauseMusic}!BARE2D::AudioManager@{BARE2D::AudioManager}}
 \doxysubsubsection{\texorpdfstring{pauseMusic()}{pauseMusic()}}
-{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::pause\+Music (\begin{DoxyParamCaption}\item[{unsigned int \&}]{music\+ID }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::pause\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pauses the music. 
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00168}{168}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a2fc05e737bab89ce70d78add65c52a50}\label{class_b_a_r_e2_d_1_1_audio_manager_a2fc05e737bab89ce70d78add65c52a50}} 
 \index{BARE2D::AudioManager@{BARE2D::AudioManager}!pauseSound@{pauseSound}}
@@ -88,23 +262,113 @@ Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00009}{9}} of fi
 \doxysubsubsection{\texorpdfstring{pauseSound()}{pauseSound()}}
 {\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::pause\+Sound (\begin{DoxyParamCaption}\item[{unsigned int \&}]{sound\+ID }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a842102b760fd78415fe91cc246aaa948}\label{class_b_a_r_e2_d_1_1_audio_manager_a842102b760fd78415fe91cc246aaa948}} 
+
+
+Pauses a sound. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sound\+ID} & The ID of the sound to pause, given by play\+Sound(...) calls. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00134}{134}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a9c40cea80160da2a6dcdc518e80c7743}\label{class_b_a_r_e2_d_1_1_audio_manager_a9c40cea80160da2a6dcdc518e80c7743}} 
 \index{BARE2D::AudioManager@{BARE2D::AudioManager}!playMusic@{playMusic}}
 \index{playMusic@{playMusic}!BARE2D::AudioManager@{BARE2D::AudioManager}}
 \doxysubsubsection{\texorpdfstring{playMusic()}{playMusic()}}
-{\footnotesize\ttfamily unsigned int B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::play\+Music (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_a_r_e2_d_1_1_music}{Music}} \&}]{music }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::play\+Music (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music}{Music}} \&}]{music,  }\item[{unsigned int}]{fade\+Time = {\ttfamily 0} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a77a1de536956470bda18e9e51f59b222}\label{class_b_a_r_e2_d_1_1_audio_manager_a77a1de536956470bda18e9e51f59b222}} 
+
+
+Plays some music! Only one \char`\"{}music\char`\"{} can be played at a time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em music} & The music to play \\
+\hline
+{\em fade\+Time} & The number of milliseconds that the sound will take to fade in. Defaults to 0 (no fade). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00144}{144}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_music_8hpp_source_l00008}{B\+A\+R\+E2\+D\+::\+Music\+::music}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_aaea5896a893ca7571f9f996410662f3b}\label{class_b_a_r_e2_d_1_1_audio_manager_aaea5896a893ca7571f9f996410662f3b}} 
 \index{BARE2D::AudioManager@{BARE2D::AudioManager}!playSound@{playSound}}
 \index{playSound@{playSound}!BARE2D::AudioManager@{BARE2D::AudioManager}}
 \doxysubsubsection{\texorpdfstring{playSound()}{playSound()}}
-{\footnotesize\ttfamily unsigned int B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::play\+Sound (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_a_r_e2_d_1_1_sound}{Sound}} \&}]{sound }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily unsigned int B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::play\+Sound (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound}{Sound}} \&}]{sound,  }\item[{unsigned int}]{fade\+Time = {\ttfamily 0},  }\item[{unsigned int}]{time\+Out = {\ttfamily 0},  }\item[{int}]{angle = {\ttfamily 0},  }\item[{unsigned char}]{distance = {\ttfamily 128} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a9973a700f6e3a597a3fbcddbab6af1e5}\label{class_b_a_r_e2_d_1_1_audio_manager_a9973a700f6e3a597a3fbcddbab6af1e5}} 
+
+
+Plays a sound at a position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sound} & A reference to the sound that is to be played. \\
+\hline
+{\em fade\+Time} & The number of milliseconds that the sound will take to fade in. Defaults to 0 (no fade). \\
+\hline
+{\em time\+Out} & the number of milliseconds before the sound times out. Defaults to 0 (never). \\
+\hline
+{\em angle} & The angle (clockwise in degrees, where 0 is directly forward) that the sound is to be played at. Defaults to 0 (directly in front) \\
+\hline
+{\em distance} & The distance from the camera that the sound should be played (from 0 (very near, loud) to 255 (very distant, quiet)) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The unsigned integer that represents the sound\textquotesingle{}s ID. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00091}{91}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_sound_8hpp_source_l00008}{B\+A\+R\+E2\+D\+::\+Sound\+::chunk}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a4b07b591f0add8a92a333a1589b09b2c}\label{class_b_a_r_e2_d_1_1_audio_manager_a4b07b591f0add8a92a333a1589b09b2c}} 
+\index{BARE2D::AudioManager@{BARE2D::AudioManager}!release@{release}}
+\index{release@{release}!BARE2D::AudioManager@{BARE2D::AudioManager}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_audio_manager_8cpp_source_l00071}{destroy()}}, and \mbox{\hyperlink{_audio_manager_8hpp_source_l00118}{m\+\_\+instance}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_audio_manager_a4b07b591f0add8a92a333a1589b09b2c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a7b184aaae5a2676eee30ff8961abfd60}\label{class_b_a_r_e2_d_1_1_audio_manager_a7b184aaae5a2676eee30ff8961abfd60}} 
 \index{BARE2D::AudioManager@{BARE2D::AudioManager}!resumeMusic@{resumeMusic}}
 \index{resumeMusic@{resumeMusic}!BARE2D::AudioManager@{BARE2D::AudioManager}}
 \doxysubsubsection{\texorpdfstring{resumeMusic()}{resumeMusic()}}
-{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::resume\+Music (\begin{DoxyParamCaption}\item[{unsigned int \&}]{music\+ID }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::resume\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resumes the paused music. 
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00173}{173}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_ab6126bf1f8733914e9e1a17b08087fba}\label{class_b_a_r_e2_d_1_1_audio_manager_ab6126bf1f8733914e9e1a17b08087fba}} 
 \index{BARE2D::AudioManager@{BARE2D::AudioManager}!resumeSound@{resumeSound}}
@@ -112,41 +376,250 @@ Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00009}{9}} of fi
 \doxysubsubsection{\texorpdfstring{resumeSound()}{resumeSound()}}
 {\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::resume\+Sound (\begin{DoxyParamCaption}\item[{unsigned int \&}]{sound\+ID }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a83a88fde307bb7e002d1c0a05dbd0589}\label{class_b_a_r_e2_d_1_1_audio_manager_a83a88fde307bb7e002d1c0a05dbd0589}} 
+
+
+Resumes a paused sound. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sound\+ID} & The ID of the sound to resume, given by play\+Sound(...) calls. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00139}{139}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a0e351ef6720a8a9eaadd2c29508fb8b0}\label{class_b_a_r_e2_d_1_1_audio_manager_a0e351ef6720a8a9eaadd2c29508fb8b0}} 
 \index{BARE2D::AudioManager@{BARE2D::AudioManager}!setMasterVolumeModifier@{setMasterVolumeModifier}}
 \index{setMasterVolumeModifier@{setMasterVolumeModifier}!BARE2D::AudioManager@{BARE2D::AudioManager}}
 \doxysubsubsection{\texorpdfstring{setMasterVolumeModifier()}{setMasterVolumeModifier()}}
-{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::set\+Master\+Volume\+Modifier (\begin{DoxyParamCaption}\item[{float \&}]{master\+Level }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::set\+Master\+Volume\+Modifier (\begin{DoxyParamCaption}\item[{unsigned char}]{master\+Level }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a2cdbff3a4422c1c4c31c6242b8113307}\label{class_b_a_r_e2_d_1_1_audio_manager_a2cdbff3a4422c1c4c31c6242b8113307}} 
+
+
+Sets the modifier of all sound levels -\/ eg., if sounds were set at 40\% and music at 60\%, setting the master modifier to 50\% would set sounds to 20\% and music to 30\%. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em master\+Level} & The level of the volume -\/ 0 is muted, 255 is very loud. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00209}{209}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_audio_manager_8hpp_source_l00120}{m\+\_\+master\+Volume}}, \mbox{\hyperlink{_audio_manager_8hpp_source_l00120}{m\+\_\+music\+Volume}}, \mbox{\hyperlink{_audio_manager_8hpp_source_l00120}{m\+\_\+sound\+Volume}}, \mbox{\hyperlink{_audio_manager_8cpp_source_l00203}{set\+Music\+Volume()}}, and \mbox{\hyperlink{_audio_manager_8cpp_source_l00197}{set\+Sound\+Volume()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_audio_manager_a0e351ef6720a8a9eaadd2c29508fb8b0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41}\label{class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41}} 
 \index{BARE2D::AudioManager@{BARE2D::AudioManager}!setMusicVolume@{setMusicVolume}}
 \index{setMusicVolume@{setMusicVolume}!BARE2D::AudioManager@{BARE2D::AudioManager}}
 \doxysubsubsection{\texorpdfstring{setMusicVolume()}{setMusicVolume()}}
-{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::set\+Music\+Volume (\begin{DoxyParamCaption}\item[{float \&}]{volume\+Level }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::set\+Music\+Volume (\begin{DoxyParamCaption}\item[{unsigned char}]{volume\+Level }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a80c757719949d24f121dbca73df34094}\label{class_b_a_r_e2_d_1_1_audio_manager_a80c757719949d24f121dbca73df34094}} 
+
+
+Sets the volume level of all music. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume\+Level} & The level of the volume -\/ 0 is muted, 255 is very loud. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00203}{203}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_audio_manager_8hpp_source_l00120}{m\+\_\+master\+Volume}}, and \mbox{\hyperlink{_audio_manager_8hpp_source_l00120}{m\+\_\+music\+Volume}}.
+
+
+
+Referenced by \mbox{\hyperlink{_audio_manager_8cpp_source_l00209}{set\+Master\+Volume\+Modifier()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884}\label{class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884}} 
 \index{BARE2D::AudioManager@{BARE2D::AudioManager}!setSoundVolume@{setSoundVolume}}
 \index{setSoundVolume@{setSoundVolume}!BARE2D::AudioManager@{BARE2D::AudioManager}}
 \doxysubsubsection{\texorpdfstring{setSoundVolume()}{setSoundVolume()}}
-{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::set\+Sound\+Volume (\begin{DoxyParamCaption}\item[{float \&}]{volume\+Level }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::set\+Sound\+Volume (\begin{DoxyParamCaption}\item[{unsigned char}]{volume\+Level }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a0c90c305fded15d17ae864bccde6cb95}\label{class_b_a_r_e2_d_1_1_audio_manager_a0c90c305fded15d17ae864bccde6cb95}} 
+
+
+Sets the volume level of all sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume\+Level} & The level of the volume (clamped from 0 (muted) to 255(loud)) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00197}{197}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_audio_manager_8hpp_source_l00120}{m\+\_\+master\+Volume}}, and \mbox{\hyperlink{_audio_manager_8hpp_source_l00120}{m\+\_\+sound\+Volume}}.
+
+
+
+Referenced by \mbox{\hyperlink{_audio_manager_8cpp_source_l00209}{set\+Master\+Volume\+Modifier()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a13127e869425dc7d396a2a86d44763db}\label{class_b_a_r_e2_d_1_1_audio_manager_a13127e869425dc7d396a2a86d44763db}} 
 \index{BARE2D::AudioManager@{BARE2D::AudioManager}!stopMusic@{stopMusic}}
 \index{stopMusic@{stopMusic}!BARE2D::AudioManager@{BARE2D::AudioManager}}
 \doxysubsubsection{\texorpdfstring{stopMusic()}{stopMusic()}}
-{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::stop\+Music (\begin{DoxyParamCaption}\item[{unsigned int \&}]{music\+ID }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::stop\+Music (\begin{DoxyParamCaption}\item[{unsigned int}]{fade\+Time = {\ttfamily 0} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_ab1289d03213645b6114d6dc574827f83}\label{class_b_a_r_e2_d_1_1_audio_manager_ab1289d03213645b6114d6dc574827f83}} 
+
+
+Stops the music. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fade\+Time} & The number of milliseconds the sound will take to fade out. Defaults to 0 (no fade). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00159}{159}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a3c0ff9d1def21c04aaa2efbb88339975}\label{class_b_a_r_e2_d_1_1_audio_manager_a3c0ff9d1def21c04aaa2efbb88339975}} 
 \index{BARE2D::AudioManager@{BARE2D::AudioManager}!stopSound@{stopSound}}
 \index{stopSound@{stopSound}!BARE2D::AudioManager@{BARE2D::AudioManager}}
 \doxysubsubsection{\texorpdfstring{stopSound()}{stopSound()}}
-{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::stop\+Sound (\begin{DoxyParamCaption}\item[{unsigned int \&}]{sound\+ID }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::stop\+Sound (\begin{DoxyParamCaption}\item[{unsigned int \&}]{sound\+ID,  }\item[{unsigned int}]{fade\+Time = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Stops a sound. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fade\+Time} & The number of milliseconds the sound will take to fade out. Defaults to 0 (no fade). \\
+\hline
+{\em sound\+ID} & The ID of the sound to stop, given by play\+Sound(...) calls. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00125}{125}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_ac4d77be444ed398c46a0705ba043b023}\label{class_b_a_r_e2_d_1_1_audio_manager_ac4d77be444ed398c46a0705ba043b023}} 
 \index{BARE2D::AudioManager@{BARE2D::AudioManager}!unmute@{unmute}}
 \index{unmute@{unmute}!BARE2D::AudioManager@{BARE2D::AudioManager}}
 \doxysubsubsection{\texorpdfstring{unmute()}{unmute()}}
 {\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::unmute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unmutes all sounds and music. 
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cpp_source_l00188}{188}} of file \mbox{\hyperlink{_audio_manager_8cpp_source}{Audio\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_audio_manager_8hpp_source_l00120}{m\+\_\+music\+Volume}}, \mbox{\hyperlink{_audio_manager_8hpp_source_l00121}{m\+\_\+muted}}, and \mbox{\hyperlink{_audio_manager_8hpp_source_l00120}{m\+\_\+sound\+Volume}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}\label{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}} 
+\index{BARE2D::AudioManager@{BARE2D::AudioManager}!m\_instance@{m\_instance}}
+\index{m\_instance@{m\_instance}!BARE2D::AudioManager@{BARE2D::AudioManager}}
+\doxysubsubsection{\texorpdfstring{m\_instance}{m\_instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{Audio\+Manager}} $\ast$ B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::m\+\_\+instance = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8hpp_source_l00118}{118}} of file \mbox{\hyperlink{_audio_manager_8hpp_source}{Audio\+Manager.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_audio_manager_8cpp_source_l00012}{get\+Instance()}}, and \mbox{\hyperlink{_audio_manager_8cpp_source_l00020}{release()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a2f02401ded65dbe776c095339575aabf}\label{class_b_a_r_e2_d_1_1_audio_manager_a2f02401ded65dbe776c095339575aabf}} 
+\index{BARE2D::AudioManager@{BARE2D::AudioManager}!m\_masterVolume@{m\_masterVolume}}
+\index{m\_masterVolume@{m\_masterVolume}!BARE2D::AudioManager@{BARE2D::AudioManager}}
+\doxysubsubsection{\texorpdfstring{m\_masterVolume}{m\_masterVolume}}
+{\footnotesize\ttfamily unsigned char B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::m\+\_\+master\+Volume = 255\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8hpp_source_l00120}{120}} of file \mbox{\hyperlink{_audio_manager_8hpp_source}{Audio\+Manager.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_audio_manager_8cpp_source_l00209}{set\+Master\+Volume\+Modifier()}}, \mbox{\hyperlink{_audio_manager_8cpp_source_l00203}{set\+Music\+Volume()}}, and \mbox{\hyperlink{_audio_manager_8cpp_source_l00197}{set\+Sound\+Volume()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_aedbbc0903ee931180d6d819248af756c}\label{class_b_a_r_e2_d_1_1_audio_manager_aedbbc0903ee931180d6d819248af756c}} 
+\index{BARE2D::AudioManager@{BARE2D::AudioManager}!m\_musicVolume@{m\_musicVolume}}
+\index{m\_musicVolume@{m\_musicVolume}!BARE2D::AudioManager@{BARE2D::AudioManager}}
+\doxysubsubsection{\texorpdfstring{m\_musicVolume}{m\_musicVolume}}
+{\footnotesize\ttfamily unsigned char B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::m\+\_\+music\+Volume = 255\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8hpp_source_l00120}{120}} of file \mbox{\hyperlink{_audio_manager_8hpp_source}{Audio\+Manager.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_audio_manager_8cpp_source_l00178}{mute()}}, \mbox{\hyperlink{_audio_manager_8cpp_source_l00209}{set\+Master\+Volume\+Modifier()}}, \mbox{\hyperlink{_audio_manager_8cpp_source_l00203}{set\+Music\+Volume()}}, and \mbox{\hyperlink{_audio_manager_8cpp_source_l00188}{unmute()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_a370017c99d2ba0ad7821e939ede67eaf}\label{class_b_a_r_e2_d_1_1_audio_manager_a370017c99d2ba0ad7821e939ede67eaf}} 
+\index{BARE2D::AudioManager@{BARE2D::AudioManager}!m\_muted@{m\_muted}}
+\index{m\_muted@{m\_muted}!BARE2D::AudioManager@{BARE2D::AudioManager}}
+\doxysubsubsection{\texorpdfstring{m\_muted}{m\_muted}}
+{\footnotesize\ttfamily bool B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::m\+\_\+muted = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8hpp_source_l00121}{121}} of file \mbox{\hyperlink{_audio_manager_8hpp_source}{Audio\+Manager.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_audio_manager_8cpp_source_l00178}{mute()}}, and \mbox{\hyperlink{_audio_manager_8cpp_source_l00188}{unmute()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_audio_manager_ace48414811952d078da7d54ac5b437ff}\label{class_b_a_r_e2_d_1_1_audio_manager_ace48414811952d078da7d54ac5b437ff}} 
+\index{BARE2D::AudioManager@{BARE2D::AudioManager}!m\_soundVolume@{m\_soundVolume}}
+\index{m\_soundVolume@{m\_soundVolume}!BARE2D::AudioManager@{BARE2D::AudioManager}}
+\doxysubsubsection{\texorpdfstring{m\_soundVolume}{m\_soundVolume}}
+{\footnotesize\ttfamily unsigned char B\+A\+R\+E2\+D\+::\+Audio\+Manager\+::m\+\_\+sound\+Volume = 255\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8hpp_source_l00120}{120}} of file \mbox{\hyperlink{_audio_manager_8hpp_source}{Audio\+Manager.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_audio_manager_8cpp_source_l00178}{mute()}}, \mbox{\hyperlink{_audio_manager_8cpp_source_l00209}{set\+Master\+Volume\+Modifier()}}, \mbox{\hyperlink{_audio_manager_8cpp_source_l00197}{set\+Sound\+Volume()}}, and \mbox{\hyperlink{_audio_manager_8cpp_source_l00188}{unmute()}}.
 
 
 

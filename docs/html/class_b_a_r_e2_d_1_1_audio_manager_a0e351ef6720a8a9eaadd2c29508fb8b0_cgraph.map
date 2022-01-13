@@ -1,0 +1,5 @@
+<map id="BARE2D::AudioManager::setMasterVolumeModifier" name="BARE2D::AudioManager::setMasterVolumeModifier">
+<area shape="rect" id="node1" title="Sets the modifier of all sound levels &#45; eg., if sounds were set at 40% and music at 60%,..." alt="" coords="5,39,184,80"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_audio_manager.html#a2620da48de00a311b34986ec341cbf41" title="Sets the volume level of all music." alt="" coords="232,5,399,47"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_audio_manager.html#a7deaaf50a6974c505a6f5f525fa39884" title="Sets the volume level of all sounds." alt="" coords="232,71,399,112"/>
+</map>

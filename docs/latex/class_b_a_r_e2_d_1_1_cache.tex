@@ -37,7 +37,9 @@ T $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a9b565e37194850c038b5bb3c3a
 \begin{DoxyCompactList}\small\item\em Finds an item based on a key. \end{DoxyCompactList}\item 
 T $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a2104c4e21130200025f41c7339168726}{operator\mbox{[}$\,$\mbox{]}}} (S \&key)
 \begin{DoxyCompactList}\small\item\em An operator overload that returns the object stored at key. Analagous to \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a9b565e37194850c038b5bb3c3a784567}{find\+Item()}};. \end{DoxyCompactList}\item 
-T $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a4a998f5952f2412d5f35f5291f8ff0c8}{create\+Item}} (S \&key)
+bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a941ca4d438d928c350542ca14eff7060}{add\+Item}} (S \&key, T $\ast$item)
+\begin{DoxyCompactList}\small\item\em Simply adds an item. \end{DoxyCompactList}\item 
+T $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a9d9a551a6c283996062dad665172da0d}{create\+Item}} (S \&key, std\+::function$<$ T $\ast$()$>$ creation\+Func=\mbox{[}$\,$\mbox{]}() -\/$>$T $\ast$\{ return new T();\})
 \begin{DoxyCompactList}\small\item\em Creates an item with a given key and uses the constructor to fill out the rest. If it already exists, overwrite it and return that pointer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a236da756530af9b46a3000637c5c5f53}{clear}} ()
 \begin{DoxyCompactList}\small\item\em Clears the cache. Destroys all data, calling their respective destructors, then delete. \end{DoxyCompactList}\item 
@@ -62,7 +64,7 @@ class B\+A\+R\+E2\+D\+::\+Cache$<$ S, T $>$}
 
 This is a skeleton cache class. This can {\itshape {\bfseries{only}}} be used by the \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager}{Resource\+Manager}} or other classes who actually maintain proper pointer ownership. 
 
-Definition at line \mbox{\hyperlink{_cache_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{_cache_8hpp_source}{Cache.\+hpp}}.
+Definition at line \mbox{\hyperlink{_cache_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{_cache_8hpp_source}{Cache.\+hpp}}.
 
 
 
@@ -76,11 +78,48 @@ Definition at line \mbox{\hyperlink{_cache_8hpp_source_l00014}{14}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_cache_8hpp_source_l00017}{17}} of file \mbox{\hyperlink{_cache_8hpp_source}{Cache.\+hpp}}.
+Definition at line \mbox{\hyperlink{_cache_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{_cache_8hpp_source}{Cache.\+hpp}}.
 
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_cache_a941ca4d438d928c350542ca14eff7060}\label{class_b_a_r_e2_d_1_1_cache_a941ca4d438d928c350542ca14eff7060}} 
+\index{BARE2D::Cache$<$ S, T $>$@{BARE2D::Cache$<$ S, T $>$}!addItem@{addItem}}
+\index{addItem@{addItem}!BARE2D::Cache$<$ S, T $>$@{BARE2D::Cache$<$ S, T $>$}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily template$<$typename S , typename T $>$ \\
+bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{B\+A\+R\+E2\+D\+::\+Cache}}$<$ S, T $>$\+::add\+Item (\begin{DoxyParamCaption}\item[{S \&}]{key,  }\item[{T $\ast$}]{item }\end{DoxyParamCaption})}
+
+
+
+Simply adds an item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key for the item -\/ how it is stored \\
+\hline
+{\em item} & The item itself \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00030}{30}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00144}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::add\+Data()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_cache_a941ca4d438d928c350542ca14eff7060_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_cache_a3964d9554d08b43fe0cc6a72571d36d5}\label{class_b_a_r_e2_d_1_1_cache_a3964d9554d08b43fe0cc6a72571d36d5}} 
 \index{BARE2D::Cache$<$ S, T $>$@{BARE2D::Cache$<$ S, T $>$}!begin@{begin}}
 \index{begin@{begin}!BARE2D::Cache$<$ S, T $>$@{BARE2D::Cache$<$ S, T $>$}}
@@ -90,7 +129,7 @@ std\+::unordered\+\_\+map$<$ S, T $\ast$ $>$\+::iterator \mbox{\hyperlink{class_
 
 
 
-Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00063}{63}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
+Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00079}{79}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_cache_a236da756530af9b46a3000637c5c5f53}\label{class_b_a_r_e2_d_1_1_cache_a236da756530af9b46a3000637c5c5f53}} 
 \index{BARE2D::Cache$<$ S, T $>$@{BARE2D::Cache$<$ S, T $>$}!clear@{clear}}
@@ -105,25 +144,26 @@ Clears the cache. Destroys all data, calling their respective destructors, then 
 
 
 
-Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00046}{46}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
+Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00060}{60}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00432}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::clear\+Cache()}}, and \mbox{\hyperlink{_resource_manager_8cpp_source_l00178}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::clear\+Caches()}}.
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00452}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::clear\+Cache()}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_cache_a236da756530af9b46a3000637c5c5f53_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_cache_a4a998f5952f2412d5f35f5291f8ff0c8}\label{class_b_a_r_e2_d_1_1_cache_a4a998f5952f2412d5f35f5291f8ff0c8}} 
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_cache_a9d9a551a6c283996062dad665172da0d}\label{class_b_a_r_e2_d_1_1_cache_a9d9a551a6c283996062dad665172da0d}} 
 \index{BARE2D::Cache$<$ S, T $>$@{BARE2D::Cache$<$ S, T $>$}!createItem@{createItem}}
 \index{createItem@{createItem}!BARE2D::Cache$<$ S, T $>$@{BARE2D::Cache$<$ S, T $>$}}
 \doxysubsubsection{\texorpdfstring{createItem()}{createItem()}}
 {\footnotesize\ttfamily template$<$typename S , typename T $>$ \\
-T $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{B\+A\+R\+E2\+D\+::\+Cache}}$<$ S, T $>$\+::create\+Item (\begin{DoxyParamCaption}\item[{S \&}]{key }\end{DoxyParamCaption})}
+T $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{B\+A\+R\+E2\+D\+::\+Cache}}$<$ S, T $>$\+::create\+Item (\begin{DoxyParamCaption}\item[{S \&}]{key,  }\item[{std\+::function$<$ T $\ast$()$>$}]{creation\+Func = {\ttfamily \mbox{[}\mbox{]}()-\/$>$T$\ast$~\{~return~new~T();~\}} }\end{DoxyParamCaption})}
 
 
 
@@ -133,24 +173,26 @@ Creates an item with a given key and uses the constructor to fill out the rest. 
 \begin{DoxyParams}{Parameters}
 {\em key} & The key to give the item. \\
 \hline
+{\em creation\+Func} & A function that allocates and returns a new object. Defaults, but it can slice data if you\textquotesingle{}re using inheritance. \\
+\hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 A pointer to that item. 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00025}{25}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
+Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00038}{38}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00133}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::add\+Data()}}, \mbox{\hyperlink{_x_m_l_data_manager_8tcc_source_l00033}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::add\+Data\+Type()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00422}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::get\+Data\+Cache()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00158}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Font()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00121}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Script()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00142}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Script\+From\+Source()}}, and \mbox{\hyperlink{_resource_manager_8cpp_source_l00035}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Texture()}}.
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00441}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::get\+Data\+Cache()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_cache_a4a998f5952f2412d5f35f5291f8ff0c8_icgraph}
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_cache_a9d9a551a6c283996062dad665172da0d_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_cache_a7d49e3b2cd0df86958d4355f3aa907e0}\label{class_b_a_r_e2_d_1_1_cache_a7d49e3b2cd0df86958d4355f3aa907e0}} 
@@ -162,7 +204,7 @@ std\+::unordered\+\_\+map$<$ S, T $\ast$ $>$\+::iterator \mbox{\hyperlink{class_
 
 
 
-Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00068}{68}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
+Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00085}{85}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_cache_a9b565e37194850c038b5bb3c3a784567}\label{class_b_a_r_e2_d_1_1_cache_a9b565e37194850c038b5bb3c3a784567}} 
 \index{BARE2D::Cache$<$ S, T $>$@{BARE2D::Cache$<$ S, T $>$}!findItem@{findItem}}
@@ -185,13 +227,14 @@ A pointer to the data, or nullptr if no such data exists
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00007}{7}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
+Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00010}{10}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00133}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::add\+Data()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00025}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data $>$\+::create\+Item()}}, \mbox{\hyperlink{_x_m_l_data_manager_8tcc_source_l00006}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::get\+Data()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00145}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::get\+Data\+Type()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00158}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Font()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00121}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Script()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00142}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Script\+From\+Source()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00035}{B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Texture()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00020}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data $>$\+::operator\mbox{[}$\,$\mbox{]}()}}, and \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00050}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::read\+X\+M\+L\+Data()}}.
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00144}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::add\+Data()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00030}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+Sound $>$\+::add\+Item()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00038}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+Sound $>$\+::create\+Item()}}, \mbox{\hyperlink{_x_m_l_data_manager_8tcc_source_l00006}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::get\+Data()}}, and \mbox{\hyperlink{_cache__impl_8tcc_source_l00024}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+Sound $>$\+::operator\mbox{[}$\,$\mbox{]}()}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -211,11 +254,11 @@ Returns the number of items in the cache.
 
 
 
-Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00058}{58}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
+Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00073}{73}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00129}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::get\+Data\+Count()}}.
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00139}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::get\+Data\+Count()}}.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -233,7 +276,7 @@ bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{B\+A\+R\+E2\+D\+::\+Cache}}$<$
 
 
 
-Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00073}{73}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
+Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00091}{91}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_cache_a2104c4e21130200025f41c7339168726}\label{class_b_a_r_e2_d_1_1_cache_a2104c4e21130200025f41c7339168726}} 
 \index{BARE2D::Cache$<$ S, T $>$@{BARE2D::Cache$<$ S, T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
@@ -253,11 +296,11 @@ An operator overload that returns the object stored at key. Analagous to \mbox{\
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00020}{20}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
+Definition at line \mbox{\hyperlink{_cache__impl_8tcc_source_l00024}{24}} of file \mbox{\hyperlink{_cache__impl_8tcc_source}{Cache\+\_\+impl.\+tcc}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00422}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::get\+Data\+Cache()}}.
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00441}{B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data\+Manager\+::get\+Data\+Cache()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -279,11 +322,11 @@ std\+::unordered\+\_\+map$<$S, T$\ast$$>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_
 
 
 
-Definition at line \mbox{\hyperlink{_cache_8hpp_source_l00055}{55}} of file \mbox{\hyperlink{_cache_8hpp_source}{Cache.\+hpp}}.
+Definition at line \mbox{\hyperlink{_cache_8hpp_source_l00066}{66}} of file \mbox{\hyperlink{_cache_8hpp_source}{Cache.\+hpp}}.
 
 
 
-Referenced by \mbox{\hyperlink{_cache__impl_8tcc_source_l00063}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data $>$\+::begin()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00046}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data $>$\+::clear()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00025}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data $>$\+::create\+Item()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00068}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data $>$\+::end()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00007}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data $>$\+::find\+Item()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00058}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data $>$\+::get\+Count()}}, and \mbox{\hyperlink{_cache__impl_8tcc_source_l00073}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+X\+M\+L\+Data $>$\+::operator!=()}}.
+Referenced by \mbox{\hyperlink{_cache__impl_8tcc_source_l00030}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+Sound $>$\+::add\+Item()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00079}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+Sound $>$\+::begin()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00060}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+Sound $>$\+::clear()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00038}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+Sound $>$\+::create\+Item()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00085}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+Sound $>$\+::end()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00010}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+Sound $>$\+::find\+Item()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00073}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+Sound $>$\+::get\+Count()}}, and \mbox{\hyperlink{_cache__impl_8tcc_source_l00091}{B\+A\+R\+E2\+D\+::\+Cache$<$ std\+::string, B\+A\+R\+E2\+D\+::\+Sound $>$\+::operator!=()}}.
 
 
 

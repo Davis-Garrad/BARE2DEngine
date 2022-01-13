@@ -2,7 +2,8 @@ var class_b_a_r_e2_d_1_1_lua_script_queue =
 [
     [ "LuaScriptQueue", "class_b_a_r_e2_d_1_1_lua_script_queue.html#a09d55d72248748aff18167a4a5a309dd", null ],
     [ "~LuaScriptQueue", "class_b_a_r_e2_d_1_1_lua_script_queue.html#aa62b9af9441e8b47fa2336c9aecb7abe", null ],
-    [ "addLuaScript", "class_b_a_r_e2_d_1_1_lua_script_queue.html#afcd0264f2cd12fd5d9b0f6d304949c48", null ],
+    [ "addLuaScript", "class_b_a_r_e2_d_1_1_lua_script_queue.html#a862fbd9245d6e0d623cc327c2fbfd43a", null ],
+    [ "addLuaScript", "class_b_a_r_e2_d_1_1_lua_script_queue.html#ad5a82f0714d8b4178ea6498aa9f8368f", null ],
     [ "clearQueue", "class_b_a_r_e2_d_1_1_lua_script_queue.html#a45b878abc0f5e6e91af7b88c7bae81c2", null ],
     [ "destroyInstance", "class_b_a_r_e2_d_1_1_lua_script_queue.html#ac9887f9df784c42239af672d3f0c520d", null ],
     [ "getInstance", "class_b_a_r_e2_d_1_1_lua_script_queue.html#ab2db531a9ecaa50fba9f27715124d948", null ],

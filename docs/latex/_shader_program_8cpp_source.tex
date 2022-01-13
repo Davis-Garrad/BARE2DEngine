@@ -8,324 +8,346 @@
 \DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{/}\textcolor{preprocessor}{gtc}\textcolor{preprocessor}{/}\textcolor{preprocessor}{type\_ptr}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{GL}\textcolor{preprocessor}{/}\textcolor{preprocessor}{glew}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00006 }
-\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_i_o_manager_8hpp}{"IOManager.hpp"}}}
-\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_b_a_r_e_errors_8hpp}{"BAREErrors.hpp"}}}
-\DoxyCodeLine{00009 }
-\DoxyCodeLine{00010 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{00011 }
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00012}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7b825f40e40a8416e8d9afcb4a81cc28}{00012}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7b825f40e40a8416e8d9afcb4a81cc28}{ShaderProgram}}() : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aba349b96c7229c50431f65d18ee27783}{m\_numberAttributes}}(0), \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}}(0), \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_afedc8e084895a3ae68b87298eebcffff}{m\_vertexShaderID}}(0), \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a943083f0ad7e04081f15470193ec9a7f}{m\_fragmentShaderID}}(0)}
-\DoxyCodeLine{00013     \{}
-\DoxyCodeLine{00014 }
-\DoxyCodeLine{00015     \}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_resource_manager_8hpp}{"ResourceManager.hpp"}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_i_o_manager_8hpp}{"IOManager.hpp"}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_b_a_r_e_errors_8hpp}{"BAREErrors.hpp"}}}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011 \textcolor{keyword}{namespace} BARE2D}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00014}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7b825f40e40a8416e8d9afcb4a81cc28}{00014}}     ShaderProgram::ShaderProgram() : m\_numberAttributes(0), m\_programID(0), m\_vertexShaderID(0), m\_fragmentShaderID(0)}
+\DoxyCodeLine{00015     \{}
 \DoxyCodeLine{00016 }
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00017}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a67023f61cb80147c8227cef6b8df4072}{00017}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a67023f61cb80147c8227cef6b8df4072}{ShaderProgram}}()}
-\DoxyCodeLine{00018     \{}
-\DoxyCodeLine{00019     \}}
-\DoxyCodeLine{00020 }
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00021}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{00021}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{compileShaders}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* vertexShaderPath, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* fragmentShaderPath)}
-\DoxyCodeLine{00022     \{}
-\DoxyCodeLine{00023         \textcolor{comment}{// Just read the two shaders and compile them}}
-\DoxyCodeLine{00024         std::string vertexSource, fragmentSource;}
-\DoxyCodeLine{00025 }
-\DoxyCodeLine{00026         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager}{IOManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager_a22c857b612a97f087c27d5c0120acc43}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager_a22c857b612a97f087c27d5c0120acc43}{readFileToBuffer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager_a22c857b612a97f087c27d5c0120acc43}{(}}vertexShaderPath\mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager_a22c857b612a97f087c27d5c0120acc43}{,}} vertexSource\mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager_a22c857b612a97f087c27d5c0120acc43}{)}};}
-\DoxyCodeLine{00027         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager}{IOManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager_a22c857b612a97f087c27d5c0120acc43}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager_a22c857b612a97f087c27d5c0120acc43}{readFileToBuffer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager_a22c857b612a97f087c27d5c0120acc43}{(}}fragmentShaderPath\mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager_a22c857b612a97f087c27d5c0120acc43}{,}} fragmentSource\mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager_a22c857b612a97f087c27d5c0120acc43}{)}};}
-\DoxyCodeLine{00028 }
-\DoxyCodeLine{00029         \textcolor{comment}{// Just compile them from their sources now}}
-\DoxyCodeLine{00030         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}{compileShadersFromSource}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}{(}}vertexSource.c\_str()\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}{,}} fragmentSource.c\_str()\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}{)}};}
-\DoxyCodeLine{00031     \}}
-\DoxyCodeLine{00032 }
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00033}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}{00033}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}{compileShadersFromSource}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* vertexSource, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* fragmentSource)}
-\DoxyCodeLine{00034     \{}
-\DoxyCodeLine{00035         \textcolor{comment}{// Make sure that if we already have a program, we don't anymore.}}
-\DoxyCodeLine{00036         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a5b58eb971ff8352683380938e263e9ad}{destroy}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a5b58eb971ff8352683380938e263e9ad}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a5b58eb971ff8352683380938e263e9ad}{)}};}
+\DoxyCodeLine{00017     \}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00019}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a67023f61cb80147c8227cef6b8df4072}{00019}}     ShaderProgram::\string~ShaderProgram()}
+\DoxyCodeLine{00020     \{}
+\DoxyCodeLine{00021     \}}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00023}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{00023}}     \textcolor{keywordtype}{void} ShaderProgram::compileShaders(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* vertexShaderPath, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* fragmentShaderPath)}
+\DoxyCodeLine{00024     \{}
+\DoxyCodeLine{00025         \textcolor{comment}{// Just read the two shaders and compile them}}
+\DoxyCodeLine{00026         std::string vertexSource, fragmentSource;}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028         std::string fullPathVS = ResourceManager::getAssetsPathPrefix() + vertexShaderPath;}
+\DoxyCodeLine{00029         std::string fullPathFS = ResourceManager::getAssetsPathPrefix() + fragmentShaderPath;}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031         IOManager::readFileToBuffer(fullPathVS.c\_str(), vertexSource);}
+\DoxyCodeLine{00032         IOManager::readFileToBuffer(fullPathFS.c\_str(), fragmentSource);}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034         \textcolor{comment}{// Just compile them from their sources now}}
+\DoxyCodeLine{00035         compileShadersFromSource(vertexSource.c\_str(), fragmentSource.c\_str());}
+\DoxyCodeLine{00036     \}}
 \DoxyCodeLine{00037 }
-\DoxyCodeLine{00038         \textcolor{comment}{// Now to actually compile them}}
-\DoxyCodeLine{00039         \textcolor{comment}{// Tell OpenGL to give us an ID}}
-\DoxyCodeLine{00040         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}} = glCreateProgram();}
-\DoxyCodeLine{00041 }
-\DoxyCodeLine{00042         \textcolor{comment}{// Check for errors}}
-\DoxyCodeLine{00043         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}} == 0) \{}
-\DoxyCodeLine{00044             \textcolor{comment}{// Error occurred!}}
-\DoxyCodeLine{00045             \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8bc03ea7709e07920eab3b6c56df1fd8}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8bc03ea7709e07920eab3b6c56df1fd8}{GLSL\_PROGRAM\_FAILURE}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{)}};}
-\DoxyCodeLine{00046         \}}
-\DoxyCodeLine{00047 }
-\DoxyCodeLine{00048         \textcolor{comment}{// Do the same for the vertex and fragment shaders}}
-\DoxyCodeLine{00049         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_afedc8e084895a3ae68b87298eebcffff}{m\_vertexShaderID}} = glCreateShader(GL\_VERTEX\_SHADER);}
-\DoxyCodeLine{00050 }
-\DoxyCodeLine{00051         \textcolor{comment}{// Check for errors}}
-\DoxyCodeLine{00052         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_afedc8e084895a3ae68b87298eebcffff}{m\_vertexShaderID}} == 0) \{}
-\DoxyCodeLine{00053             \textcolor{comment}{// Error occurred!}}
-\DoxyCodeLine{00054             \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a1f208845587ac9c0c53c388d4d385b1a}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a1f208845587ac9c0c53c388d4d385b1a}{VERTEX\_SHADER\_FAILURE}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{)}};}
-\DoxyCodeLine{00055         \}}
-\DoxyCodeLine{00056 }
-\DoxyCodeLine{00057         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a943083f0ad7e04081f15470193ec9a7f}{m\_fragmentShaderID}} = glCreateShader(GL\_FRAGMENT\_SHADER);}
-\DoxyCodeLine{00058 }
-\DoxyCodeLine{00059         \textcolor{comment}{// Check for errors}}
-\DoxyCodeLine{00060         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a943083f0ad7e04081f15470193ec9a7f}{m\_fragmentShaderID}} == 0) \{}
-\DoxyCodeLine{00061             \textcolor{comment}{// Error!}}
-\DoxyCodeLine{00062             \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad860107dd407ff9736d6208998d710f6}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad860107dd407ff9736d6208998d710f6}{FRAGMENT\_SHADER\_FAILURE}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{)}};}
-\DoxyCodeLine{00063         \}}
-\DoxyCodeLine{00064 }
-\DoxyCodeLine{00065         \textcolor{comment}{// Compile each shader separately}}
-\DoxyCodeLine{00066         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}{compileShaderFromSource}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}{(}}vertexSource\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}{,}} \textcolor{stringliteral}{"Vertex Shader"}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}{,}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_afedc8e084895a3ae68b87298eebcffff}{m\_vertexShaderID}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}{)}};}
-\DoxyCodeLine{00067         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}{compileShaderFromSource}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}{(}}fragmentSource\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}{,}} \textcolor{stringliteral}{"Fragment Shader"}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}{,}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a943083f0ad7e04081f15470193ec9a7f}{m\_fragmentShaderID}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}{)}};}
-\DoxyCodeLine{00068     \}}
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00038}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}{00038}}     \textcolor{keywordtype}{void} ShaderProgram::compileShadersFromSource(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* vertexSource, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* fragmentSource)}
+\DoxyCodeLine{00039     \{}
+\DoxyCodeLine{00040         \textcolor{comment}{// Make sure that if we already have a program, we don't anymore.}}
+\DoxyCodeLine{00041         destroy();}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043         \textcolor{comment}{// Now to actually compile them}}
+\DoxyCodeLine{00044         \textcolor{comment}{// Tell OpenGL to give us an ID}}
+\DoxyCodeLine{00045         m\_programID = glCreateProgram();}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047         \textcolor{comment}{// Check for errors}}
+\DoxyCodeLine{00048         \textcolor{keywordflow}{if}(m\_programID == 0) \{}
+\DoxyCodeLine{00049             \textcolor{comment}{// Error occurred!}}
+\DoxyCodeLine{00050             throwFatalError(BAREError::GLSL\_PROGRAM\_FAILURE);}
+\DoxyCodeLine{00051         \}}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053         \textcolor{comment}{// Do the same for the vertex and fragment shaders}}
+\DoxyCodeLine{00054         m\_vertexShaderID = glCreateShader(GL\_VERTEX\_SHADER);}
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{00056         \textcolor{comment}{// Check for errors}}
+\DoxyCodeLine{00057         \textcolor{keywordflow}{if}(m\_vertexShaderID == 0) \{}
+\DoxyCodeLine{00058             \textcolor{comment}{// Error occurred!}}
+\DoxyCodeLine{00059             throwFatalError(BAREError::VERTEX\_SHADER\_FAILURE);}
+\DoxyCodeLine{00060         \}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062         m\_fragmentShaderID = glCreateShader(GL\_FRAGMENT\_SHADER);}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064         \textcolor{comment}{// Check for errors}}
+\DoxyCodeLine{00065         \textcolor{keywordflow}{if}(m\_fragmentShaderID == 0) \{}
+\DoxyCodeLine{00066             \textcolor{comment}{// Error!}}
+\DoxyCodeLine{00067             throwFatalError(BAREError::FRAGMENT\_SHADER\_FAILURE);}
+\DoxyCodeLine{00068         \}}
 \DoxyCodeLine{00069 }
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00070}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a096bc5e267753d6054aa8039e4cc44a9}{00070}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a096bc5e267753d6054aa8039e4cc44a9}{linkShaders}}(std::initializer\_list<std::string> attributes)}
-\DoxyCodeLine{00071     \{}
-\DoxyCodeLine{00072         \textcolor{comment}{// Link up the shaders, and make sure that they have their needed attributes before they link.}}
-\DoxyCodeLine{00073 }
-\DoxyCodeLine{00074         \textcolor{comment}{// Add the attributes}}
-\DoxyCodeLine{00075         \textcolor{keywordflow}{for}(std::string item : attributes) \{}
-\DoxyCodeLine{00076             glBindAttribLocation(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aba349b96c7229c50431f65d18ee27783}{m\_numberAttributes}}++, item.c\_str());}
-\DoxyCodeLine{00077         \}}
+\DoxyCodeLine{00070         \textcolor{comment}{// Compile each shader separately}}
+\DoxyCodeLine{00071         compileShaderFromSource(vertexSource, \textcolor{stringliteral}{"Vertex Shader"}, m\_vertexShaderID);}
+\DoxyCodeLine{00072         compileShaderFromSource(fragmentSource, \textcolor{stringliteral}{"Fragment Shader"}, m\_fragmentShaderID);}
+\DoxyCodeLine{00073     \}}
+\DoxyCodeLine{00074 }
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00075}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a096bc5e267753d6054aa8039e4cc44a9}{00075}}     \textcolor{keywordtype}{void} ShaderProgram::linkShaders(std::initializer\_list<std::string> attributes)}
+\DoxyCodeLine{00076     \{}
+\DoxyCodeLine{00077         \textcolor{comment}{// Link up the shaders, and make sure that they have their needed attributes before they link.}}
 \DoxyCodeLine{00078 }
-\DoxyCodeLine{00079         \textcolor{comment}{// Now actually link}}
-\DoxyCodeLine{00080         \textcolor{comment}{// First, attach the shaders to the program}}
-\DoxyCodeLine{00081         glAttachShader(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_afedc8e084895a3ae68b87298eebcffff}{m\_vertexShaderID}});}
-\DoxyCodeLine{00082         glAttachShader(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a943083f0ad7e04081f15470193ec9a7f}{m\_fragmentShaderID}});}
+\DoxyCodeLine{00079         \textcolor{comment}{// Add the attributes}}
+\DoxyCodeLine{00080         \textcolor{keywordflow}{for}(std::string item : attributes) \{}
+\DoxyCodeLine{00081             glBindAttribLocation(m\_programID, m\_numberAttributes++, item.c\_str());}
+\DoxyCodeLine{00082         \}}
 \DoxyCodeLine{00083 }
-\DoxyCodeLine{00084         \textcolor{comment}{// Link them together}}
-\DoxyCodeLine{00085         glLinkProgram(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}});}
-\DoxyCodeLine{00086 }
-\DoxyCodeLine{00087         \textcolor{comment}{// Check if they're linked now (error check)}}
-\DoxyCodeLine{00088         GLint linked = GL\_FALSE;}
-\DoxyCodeLine{00089         glGetProgramiv(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}}, GL\_LINK\_STATUS, \&linked);}
-\DoxyCodeLine{00090 }
-\DoxyCodeLine{00091         \textcolor{comment}{// Error check}}
-\DoxyCodeLine{00092         \textcolor{keywordflow}{if}(linked == GL\_FALSE) \{}
-\DoxyCodeLine{00093             \textcolor{comment}{// Not linked! They should be, but they ain't.}}
-\DoxyCodeLine{00094             \textcolor{comment}{// Get the length of the log}}
-\DoxyCodeLine{00095             GLint maxLength = 0;}
-\DoxyCodeLine{00096             glGetProgramiv(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}}, GL\_INFO\_LOG\_LENGTH, \&maxLength);}
-\DoxyCodeLine{00097 }
-\DoxyCodeLine{00098             \textcolor{comment}{// Get the actual log (null-\/terminated, but maxLength accounts for that)}}
-\DoxyCodeLine{00099             std::vector<\textcolor{keywordtype}{char}> errorLog(maxLength);}
-\DoxyCodeLine{00100             glGetProgramInfoLog(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}}, maxLength, \&maxLength, \&errorLog[0]);}
-\DoxyCodeLine{00101 }
-\DoxyCodeLine{00102             \textcolor{comment}{// Now that the program has failed and given us the info we want, we can dispose of it.}}
-\DoxyCodeLine{00103             glDeleteProgram(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}});}
-\DoxyCodeLine{00104             glDeleteShader(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_afedc8e084895a3ae68b87298eebcffff}{m\_vertexShaderID}});}
-\DoxyCodeLine{00105             glDeleteShader(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a943083f0ad7e04081f15470193ec9a7f}{m\_fragmentShaderID}});}
+\DoxyCodeLine{00084         \textcolor{comment}{// Now actually link}}
+\DoxyCodeLine{00085         \textcolor{comment}{// First, attach the shaders to the program}}
+\DoxyCodeLine{00086         glAttachShader(m\_programID, m\_vertexShaderID);}
+\DoxyCodeLine{00087         glAttachShader(m\_programID, m\_fragmentShaderID);}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089         \textcolor{comment}{// Link them together}}
+\DoxyCodeLine{00090         glLinkProgram(m\_programID);}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092         \textcolor{comment}{// Check if they're linked now (error check)}}
+\DoxyCodeLine{00093         GLint linked = GL\_FALSE;}
+\DoxyCodeLine{00094         glGetProgramiv(m\_programID, GL\_LINK\_STATUS, \&linked);}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096         \textcolor{comment}{// Error check}}
+\DoxyCodeLine{00097         \textcolor{keywordflow}{if}(linked == GL\_FALSE) \{}
+\DoxyCodeLine{00098             \textcolor{comment}{// Not linked! They should be, but they ain't.}}
+\DoxyCodeLine{00099             \textcolor{comment}{// Get the length of the log}}
+\DoxyCodeLine{00100             GLint maxLength = 0;}
+\DoxyCodeLine{00101             glGetProgramiv(m\_programID, GL\_INFO\_LOG\_LENGTH, \&maxLength);}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103             \textcolor{comment}{// Get the actual log (null-\/terminated, but maxLength accounts for that)}}
+\DoxyCodeLine{00104             std::vector<\textcolor{keywordtype}{char}> errorLog(maxLength);}
+\DoxyCodeLine{00105             glGetProgramInfoLog(m\_programID, maxLength, \&maxLength, \&errorLog[0]);}
 \DoxyCodeLine{00106 }
-\DoxyCodeLine{00107             \textcolor{comment}{// Throw fatal error, we cannot continue.}}
-\DoxyCodeLine{00108             \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15af2f6cbcd601921a638724130311f22cd}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15af2f6cbcd601921a638724130311f22cd}{SHADER\_LINK\_FAILURE}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{,}} \textcolor{stringliteral}{"Shaders failed to link: "} + std::string(errorLog.begin(), errorLog.end())\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{)}};}
-\DoxyCodeLine{00109         \}}
-\DoxyCodeLine{00110 }
-\DoxyCodeLine{00111         \textcolor{comment}{// Now that we have everything all linked up and it's all good, we can just detach the shaders and delete them. They're now in the program.}}
-\DoxyCodeLine{00112         glDetachShader(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_afedc8e084895a3ae68b87298eebcffff}{m\_vertexShaderID}});}
-\DoxyCodeLine{00113         glDetachShader(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a943083f0ad7e04081f15470193ec9a7f}{m\_fragmentShaderID}});}
-\DoxyCodeLine{00114 }
-\DoxyCodeLine{00115         \textcolor{comment}{// And delete em}}
-\DoxyCodeLine{00116         glDeleteShader(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_afedc8e084895a3ae68b87298eebcffff}{m\_vertexShaderID}});}
-\DoxyCodeLine{00117         glDeleteShader(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a943083f0ad7e04081f15470193ec9a7f}{m\_fragmentShaderID}});}
-\DoxyCodeLine{00118     \}}
+\DoxyCodeLine{00107             \textcolor{comment}{// Now that the program has failed and given us the info we want, we can dispose of it.}}
+\DoxyCodeLine{00108             glDeleteProgram(m\_programID);}
+\DoxyCodeLine{00109             glDeleteShader(m\_vertexShaderID);}
+\DoxyCodeLine{00110             glDeleteShader(m\_fragmentShaderID);}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112             \textcolor{comment}{// Throw fatal error, we cannot continue.}}
+\DoxyCodeLine{00113             throwFatalError(BAREError::SHADER\_LINK\_FAILURE, \textcolor{stringliteral}{"Shaders failed to link: "} + std::string(errorLog.begin(), errorLog.end()));}
+\DoxyCodeLine{00114         \}}
+\DoxyCodeLine{00115 }
+\DoxyCodeLine{00116         \textcolor{comment}{// Now that we have everything all linked up and it's all good, we can just detach the shaders and delete them. They're now in the program.}}
+\DoxyCodeLine{00117         glDetachShader(m\_programID, m\_vertexShaderID);}
+\DoxyCodeLine{00118         glDetachShader(m\_programID, m\_fragmentShaderID);}
 \DoxyCodeLine{00119 }
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00120}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{00120}}     GLint \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{getUniformLocation}}(\textcolor{keyword}{const} std::string\& uniform)}
-\DoxyCodeLine{00121     \{}
-\DoxyCodeLine{00122         \textcolor{comment}{// Just use OpenGL's calls, then check for errors}}
-\DoxyCodeLine{00123         GLint location = glGetUniformLocation(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}}, uniform.c\_str());}
+\DoxyCodeLine{00120         \textcolor{comment}{// And delete em}}
+\DoxyCodeLine{00121         glDeleteShader(m\_vertexShaderID);}
+\DoxyCodeLine{00122         glDeleteShader(m\_fragmentShaderID);}
+\DoxyCodeLine{00123     \}}
 \DoxyCodeLine{00124 }
-\DoxyCodeLine{00125         \textcolor{comment}{// Error check}}
-\DoxyCodeLine{00126         \textcolor{keywordflow}{if}(location == (GLint)GL\_INVALID\_INDEX) \{}
-\DoxyCodeLine{00127             \textcolor{comment}{// Error!}}
-\DoxyCodeLine{00128             \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad6e29903fb0c6eb8c57d20d9ad478d9e}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad6e29903fb0c6eb8c57d20d9ad478d9e}{UNIFORM\_NOT\_FOUND}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{,}} \textcolor{stringliteral}{"Uniform name: "} + uniform\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{)}};}
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00125}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{00125}}     GLint ShaderProgram::getUniformLocation(\textcolor{keyword}{const} std::string\& uniform)}
+\DoxyCodeLine{00126     \{}
+\DoxyCodeLine{00127         \textcolor{comment}{// Just use OpenGL's calls, then check for errors}}
+\DoxyCodeLine{00128         GLint location = glGetUniformLocation(m\_programID, uniform.c\_str());}
 \DoxyCodeLine{00129 }
-\DoxyCodeLine{00130             \textcolor{comment}{// Location, upon querying a non-\/existent uniform, will already be -\/1.}}
-\DoxyCodeLine{00131         \}}
-\DoxyCodeLine{00132 }
-\DoxyCodeLine{00133         \textcolor{keywordflow}{return} location;}
-\DoxyCodeLine{00134     \}}
-\DoxyCodeLine{00135 }
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00136}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a8687213986c6f5633887609e8169b24e}{00136}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a8687213986c6f5633887609e8169b24e}{use}}()}
-\DoxyCodeLine{00137     \{}
-\DoxyCodeLine{00138         \textcolor{comment}{// Enable the program!}}
-\DoxyCodeLine{00139         glUseProgram(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}});}
+\DoxyCodeLine{00130         \textcolor{comment}{// Error check}}
+\DoxyCodeLine{00131         \textcolor{keywordflow}{if}(location == (GLint)GL\_INVALID\_INDEX) \{}
+\DoxyCodeLine{00132             \textcolor{comment}{// Error!}}
+\DoxyCodeLine{00133             throwError(BAREError::UNIFORM\_NOT\_FOUND, \textcolor{stringliteral}{"Uniform name: "} + uniform);}
+\DoxyCodeLine{00134 }
+\DoxyCodeLine{00135             \textcolor{comment}{// Location, upon querying a non-\/existent uniform, will already be -\/1.}}
+\DoxyCodeLine{00136         \}}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00138         \textcolor{keywordflow}{return} location;}
+\DoxyCodeLine{00139     \}}
 \DoxyCodeLine{00140 }
-\DoxyCodeLine{00141         \textcolor{comment}{// Enable all attributes!}}
-\DoxyCodeLine{00142         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aba349b96c7229c50431f65d18ee27783}{m\_numberAttributes}}; i++) \{}
-\DoxyCodeLine{00143             glEnableVertexAttribArray(i);}
-\DoxyCodeLine{00144         \}}
-\DoxyCodeLine{00145 }
-\DoxyCodeLine{00146         \textcolor{comment}{// We're done! gg ez}}
-\DoxyCodeLine{00147     \}}
-\DoxyCodeLine{00148 }
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00149}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7847844b8a2e5ab0677340b47d180841}{00149}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7847844b8a2e5ab0677340b47d180841}{unuse}}()}
-\DoxyCodeLine{00150     \{}
-\DoxyCodeLine{00151         \textcolor{comment}{// Do the opposite of use!}}
-\DoxyCodeLine{00152         \textcolor{comment}{// Disable the program}}
-\DoxyCodeLine{00153         glUseProgram(0);}
-\DoxyCodeLine{00154 }
-\DoxyCodeLine{00155         \textcolor{comment}{// Disable the attributes}}
-\DoxyCodeLine{00156         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aba349b96c7229c50431f65d18ee27783}{m\_numberAttributes}}; i++) \{}
-\DoxyCodeLine{00157             glDisableVertexAttribArray(i);}
-\DoxyCodeLine{00158         \}}
-\DoxyCodeLine{00159     \}}
-\DoxyCodeLine{00160 }
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00161}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a5b58eb971ff8352683380938e263e9ad}{00161}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a5b58eb971ff8352683380938e263e9ad}{destroy}}()}
-\DoxyCodeLine{00162     \{}
-\DoxyCodeLine{00163         \textcolor{comment}{// Dispose of stuff}}
-\DoxyCodeLine{00164         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}})}
-\DoxyCodeLine{00165             glDeleteProgram(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}});}
-\DoxyCodeLine{00166         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\_programID}} = 0;}
-\DoxyCodeLine{00167         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aba349b96c7229c50431f65d18ee27783}{m\_numberAttributes}} = 0;}
-\DoxyCodeLine{00168         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_afedc8e084895a3ae68b87298eebcffff}{m\_vertexShaderID}} = 0;}
-\DoxyCodeLine{00169         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a943083f0ad7e04081f15470193ec9a7f}{m\_fragmentShaderID}} = 0;}
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00141}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a05a721b577417d9d28bf0cec20896e16}{00141}}     \textcolor{keywordtype}{void} ShaderProgram::bindFragOutputLocation(std::string outputVariableName, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} location)}
+\DoxyCodeLine{00142     \{}
+\DoxyCodeLine{00143         \textcolor{comment}{// Literally just call glBindFragDataLocation.}}
+\DoxyCodeLine{00144         glBindFragDataLocation(m\_programID, location, outputVariableName.c\_str());}
+\DoxyCodeLine{00145     \}}
+\DoxyCodeLine{00146 }
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00147}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a8687213986c6f5633887609e8169b24e}{00147}}     \textcolor{keywordtype}{void} ShaderProgram::use()}
+\DoxyCodeLine{00148     \{}
+\DoxyCodeLine{00149         \textcolor{comment}{// Enable the program!}}
+\DoxyCodeLine{00150         glUseProgram(m\_programID);}
+\DoxyCodeLine{00151 }
+\DoxyCodeLine{00152         \textcolor{comment}{// Enable all attributes!}}
+\DoxyCodeLine{00153         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < m\_numberAttributes; i++) \{}
+\DoxyCodeLine{00154             glEnableVertexAttribArray(i);}
+\DoxyCodeLine{00155         \}}
+\DoxyCodeLine{00156 }
+\DoxyCodeLine{00157         \textcolor{comment}{// We're done! gg ez}}
+\DoxyCodeLine{00158     \}}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00160}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7847844b8a2e5ab0677340b47d180841}{00160}}     \textcolor{keywordtype}{void} ShaderProgram::unuse()}
+\DoxyCodeLine{00161     \{}
+\DoxyCodeLine{00162         \textcolor{comment}{// Do the opposite of use!}}
+\DoxyCodeLine{00163         \textcolor{comment}{// Disable the program}}
+\DoxyCodeLine{00164         glUseProgram(0);}
+\DoxyCodeLine{00165 }
+\DoxyCodeLine{00166         \textcolor{comment}{// Disable the attributes}}
+\DoxyCodeLine{00167         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < m\_numberAttributes; i++) \{}
+\DoxyCodeLine{00168             glDisableVertexAttribArray(i);}
+\DoxyCodeLine{00169         \}}
 \DoxyCodeLine{00170     \}}
 \DoxyCodeLine{00171 }
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00172}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}{00172}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}{compileShaderFromSource}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* source, \textcolor{keyword}{const} std::string\& name, GLuint id)}
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00172}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a5b58eb971ff8352683380938e263e9ad}{00172}}     \textcolor{keywordtype}{void} ShaderProgram::destroy()}
 \DoxyCodeLine{00173     \{}
-\DoxyCodeLine{00174         \textcolor{comment}{// Tell OpenGL what our source is (1 is the number of source "files"), nullptr indicates that the source is null-\/terminated.}}
-\DoxyCodeLine{00175         glShaderSource(id, 1, \&source, \textcolor{keywordtype}{nullptr});}
-\DoxyCodeLine{00176 }
-\DoxyCodeLine{00177         \textcolor{comment}{// Just compile}}
-\DoxyCodeLine{00178         glCompileShader(id);}
-\DoxyCodeLine{00179 }
-\DoxyCodeLine{00180         \textcolor{comment}{// Check for errors of course}}
-\DoxyCodeLine{00181         GLint compiled = GL\_FALSE;}
-\DoxyCodeLine{00182         glGetShaderiv(id, GL\_COMPILE\_STATUS, \&compiled);}
-\DoxyCodeLine{00183 }
-\DoxyCodeLine{00184         \textcolor{keywordflow}{if}(compiled == GL\_FALSE) \{}
-\DoxyCodeLine{00185             \textcolor{comment}{// Not compiled! It should be, but it ain't.}}
-\DoxyCodeLine{00186             \textcolor{comment}{// Get the length of the log}}
-\DoxyCodeLine{00187             GLint maxLength = 0;}
-\DoxyCodeLine{00188             glGetShaderiv(id, GL\_INFO\_LOG\_LENGTH, \&maxLength);}
-\DoxyCodeLine{00189 }
-\DoxyCodeLine{00190             \textcolor{comment}{// Get the actual log (null-\/terminated, but maxLength accounts for that)}}
-\DoxyCodeLine{00191             std::vector<\textcolor{keywordtype}{char}> errorLog(maxLength);}
-\DoxyCodeLine{00192             glGetShaderInfoLog(id, maxLength, \&maxLength, \&errorLog[0]);}
-\DoxyCodeLine{00193 }
-\DoxyCodeLine{00194             \textcolor{comment}{// Now that the compilation has failed and given us the info we want, we can dispose of the shader.}}
-\DoxyCodeLine{00195             glDeleteShader(id);}
-\DoxyCodeLine{00196 }
-\DoxyCodeLine{00197             \textcolor{comment}{// Throw fatal error, we cannot continue.}}
-\DoxyCodeLine{00198             \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abaa8fdfa9df78eba172c4aaa8b8046a2}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abaa8fdfa9df78eba172c4aaa8b8046a2}{SHADER\_COMPILE\_FAILURE}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{,}} \textcolor{stringliteral}{"Shader failed to compile: "} + name + \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"} + std::string(errorLog.begin(), errorLog.end())\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{)}};}
-\DoxyCodeLine{00199         \}}
-\DoxyCodeLine{00200     \}}
-\DoxyCodeLine{00201 }
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00202}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_af711102689d9552b2b54c1c9da8f8589}{00202}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_af711102689d9552b2b54c1c9da8f8589}{doesUniformExist}}(\textcolor{keyword}{const} std::string uniform) \{}
-\DoxyCodeLine{00203         GLint loc = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{getUniformLocation}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{(}}uniform\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{)}};}
+\DoxyCodeLine{00174         \textcolor{comment}{// Dispose of stuff}}
+\DoxyCodeLine{00175         \textcolor{keywordflow}{if}(m\_programID)}
+\DoxyCodeLine{00176             glDeleteProgram(m\_programID);}
+\DoxyCodeLine{00177         m\_programID = 0;}
+\DoxyCodeLine{00178         m\_numberAttributes = 0;}
+\DoxyCodeLine{00179         m\_vertexShaderID = 0;}
+\DoxyCodeLine{00180         m\_fragmentShaderID = 0;}
+\DoxyCodeLine{00181     \}}
+\DoxyCodeLine{00182 }
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00183}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}{00183}}     \textcolor{keywordtype}{void} ShaderProgram::compileShaderFromSource(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* source, \textcolor{keyword}{const} std::string\& name, GLuint id)}
+\DoxyCodeLine{00184     \{}
+\DoxyCodeLine{00185         \textcolor{comment}{// Tell OpenGL what our source is (1 is the number of source "files"), nullptr indicates that the source is null-\/terminated.}}
+\DoxyCodeLine{00186         glShaderSource(id, 1, \&source, \textcolor{keywordtype}{nullptr});}
+\DoxyCodeLine{00187 }
+\DoxyCodeLine{00188         \textcolor{comment}{// Just compile}}
+\DoxyCodeLine{00189         glCompileShader(id);}
+\DoxyCodeLine{00190 }
+\DoxyCodeLine{00191         \textcolor{comment}{// Check for errors of course}}
+\DoxyCodeLine{00192         GLint compiled = GL\_FALSE;}
+\DoxyCodeLine{00193         glGetShaderiv(id, GL\_COMPILE\_STATUS, \&compiled);}
+\DoxyCodeLine{00194 }
+\DoxyCodeLine{00195         \textcolor{keywordflow}{if}(compiled == GL\_FALSE) \{}
+\DoxyCodeLine{00196             \textcolor{comment}{// Not compiled! It should be, but it ain't.}}
+\DoxyCodeLine{00197             \textcolor{comment}{// Get the length of the log}}
+\DoxyCodeLine{00198             GLint maxLength = 0;}
+\DoxyCodeLine{00199             glGetShaderiv(id, GL\_INFO\_LOG\_LENGTH, \&maxLength);}
+\DoxyCodeLine{00200 }
+\DoxyCodeLine{00201             \textcolor{comment}{// Get the actual log (null-\/terminated, but maxLength accounts for that)}}
+\DoxyCodeLine{00202             std::vector<\textcolor{keywordtype}{char}> errorLog(maxLength);}
+\DoxyCodeLine{00203             glGetShaderInfoLog(id, maxLength, \&maxLength, \&errorLog[0]);}
 \DoxyCodeLine{00204 }
-\DoxyCodeLine{00205         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{00206         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{00207     \}}
-\DoxyCodeLine{00208 }
-\DoxyCodeLine{00209     \textcolor{comment}{// Template specializations}}
-\DoxyCodeLine{00210 }
-\DoxyCodeLine{00211     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00212}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_ac8974fd3fe4ced68f3e2c3e77bc629ec}{00212}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{setUniform}}<\textcolor{keywordtype}{int}>(\textcolor{keyword}{const} std::string uniform, \textcolor{keywordtype}{int}\& data) \{}
-\DoxyCodeLine{00213         \textcolor{comment}{// First, get the location}}
-\DoxyCodeLine{00214         GLint loc = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{getUniformLocation}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{(}}uniform\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{)}};}
-\DoxyCodeLine{00215 }
-\DoxyCodeLine{00216         \textcolor{comment}{// Now check for errors.}}
-\DoxyCodeLine{00217         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00218 }
-\DoxyCodeLine{00219         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
-\DoxyCodeLine{00220         glUniform1i(loc, data);}
-\DoxyCodeLine{00221     \}}
-\DoxyCodeLine{00222     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00223}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a2e0423bb119da6f41132380b41418fa6}{00223}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{setUniform}}<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>(\textcolor{keyword}{const} std::string uniform, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& data) \{}
-\DoxyCodeLine{00224         \textcolor{comment}{// First, get the location}}
-\DoxyCodeLine{00225         GLint loc = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{getUniformLocation}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{(}}uniform\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{)}};}
-\DoxyCodeLine{00226 }
-\DoxyCodeLine{00227         \textcolor{comment}{// Now check for errors.}}
-\DoxyCodeLine{00228         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00229 }
-\DoxyCodeLine{00230         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
-\DoxyCodeLine{00231         glUniform1ui(loc, data);}
-\DoxyCodeLine{00232     \}}
-\DoxyCodeLine{00233     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00234}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a4da1c6c3fe37b88b0987bf6e6dbd503a}{00234}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{setUniform}}<\textcolor{keywordtype}{float}>(\textcolor{keyword}{const} std::string uniform, \textcolor{keywordtype}{float}\& data) \{}
-\DoxyCodeLine{00235         \textcolor{comment}{// First, get the location}}
-\DoxyCodeLine{00236         GLint loc = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{getUniformLocation}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{(}}uniform\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{)}};}
-\DoxyCodeLine{00237 }
-\DoxyCodeLine{00238         \textcolor{comment}{// Now check for errors.}}
-\DoxyCodeLine{00239         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00205             \textcolor{comment}{// Now that the compilation has failed and given us the info we want, we can dispose of the shader.}}
+\DoxyCodeLine{00206             glDeleteShader(id);}
+\DoxyCodeLine{00207 }
+\DoxyCodeLine{00208             \textcolor{comment}{// Throw fatal error, we cannot continue.}}
+\DoxyCodeLine{00209             throwFatalError(BAREError::SHADER\_COMPILE\_FAILURE, \textcolor{stringliteral}{"Shader failed to compile: "} + name + \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"} + std::string(errorLog.begin(), errorLog.end()));}
+\DoxyCodeLine{00210         \}}
+\DoxyCodeLine{00211     \}}
+\DoxyCodeLine{00212 }
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00213}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_af711102689d9552b2b54c1c9da8f8589}{00213}}     \textcolor{keywordtype}{bool} ShaderProgram::doesUniformExist(\textcolor{keyword}{const} std::string uniform)}
+\DoxyCodeLine{00214     \{}
+\DoxyCodeLine{00215         GLint loc = getUniformLocation(uniform);}
+\DoxyCodeLine{00216 }
+\DoxyCodeLine{00217         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00218         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00219     \}}
+\DoxyCodeLine{00220 }
+\DoxyCodeLine{00221     \textcolor{comment}{// Template specializations}}
+\DoxyCodeLine{00222 }
+\DoxyCodeLine{00223     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00224}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aa94955e2ca33efdda5dca68cc5f64c26}{00224}}     \textcolor{keywordtype}{void} ShaderProgram::setUniform<\textcolor{keywordtype}{int}>(\textcolor{keyword}{const} std::string uniform, \textcolor{keywordtype}{int}* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num)}
+\DoxyCodeLine{00225     \{}
+\DoxyCodeLine{00226         \textcolor{comment}{// First, get the location}}
+\DoxyCodeLine{00227         GLint loc = getUniformLocation(uniform);}
+\DoxyCodeLine{00228 }
+\DoxyCodeLine{00229         \textcolor{comment}{// Now check for errors.}}
+\DoxyCodeLine{00230         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00231 }
+\DoxyCodeLine{00232         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
+\DoxyCodeLine{00233         glUniform1iv(loc, num, data);}
+\DoxyCodeLine{00234     \}}
+\DoxyCodeLine{00235     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00236}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_ae83a3af9dd2e73f8ddbe5bbf23a520c5}{00236}}     \textcolor{keywordtype}{void} ShaderProgram::setUniform<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>(\textcolor{keyword}{const} std::string uniform, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num)}
+\DoxyCodeLine{00237     \{}
+\DoxyCodeLine{00238         \textcolor{comment}{// First, get the location}}
+\DoxyCodeLine{00239         GLint loc = getUniformLocation(uniform);}
 \DoxyCodeLine{00240 }
-\DoxyCodeLine{00241         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
-\DoxyCodeLine{00242         glUniform1f(loc, data);}
-\DoxyCodeLine{00243     \}}
-\DoxyCodeLine{00244 }
-\DoxyCodeLine{00245     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00246}\mbox{\hyperlink{namespace_b_a_r_e2_d_a6d067546a069754a8369391b179da987}{00246}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{setUniform}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{vec2}}>(\textcolor{keyword}{const} std::string uniform, glm::vec2\& data) \{}
-\DoxyCodeLine{00247         \textcolor{comment}{// First, get the location}}
-\DoxyCodeLine{00248         GLint loc = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{getUniformLocation}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{(}}uniform\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{)}};}
-\DoxyCodeLine{00249 }
-\DoxyCodeLine{00250         \textcolor{comment}{// Now check for errors.}}
-\DoxyCodeLine{00251         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00241         \textcolor{comment}{// Now check for errors.}}
+\DoxyCodeLine{00242         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00243 }
+\DoxyCodeLine{00244         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
+\DoxyCodeLine{00245         glUniform1uiv(loc, num, data);}
+\DoxyCodeLine{00246     \}}
+\DoxyCodeLine{00247     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00248}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a88c736c99824b5b1db75946c36991d3b}{00248}}     \textcolor{keywordtype}{void} ShaderProgram::setUniform<\textcolor{keywordtype}{float}>(\textcolor{keyword}{const} std::string uniform, \textcolor{keywordtype}{float}* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num)}
+\DoxyCodeLine{00249     \{}
+\DoxyCodeLine{00250         \textcolor{comment}{// First, get the location}}
+\DoxyCodeLine{00251         GLint loc = getUniformLocation(uniform);}
 \DoxyCodeLine{00252 }
-\DoxyCodeLine{00253         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
-\DoxyCodeLine{00254         glUniform2fv(loc, 1, glm::value\_ptr(data));}
-\DoxyCodeLine{00255     \}}
-\DoxyCodeLine{00256     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00257}\mbox{\hyperlink{namespace_b_a_r_e2_d_a6ad422394f72acbbd215708e34dd2a92}{00257}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{setUniform}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{vec3}}>(\textcolor{keyword}{const} std::string uniform, glm::vec3\& data) \{}
-\DoxyCodeLine{00258         \textcolor{comment}{// First, get the location}}
-\DoxyCodeLine{00259         GLint loc = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{getUniformLocation}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{(}}uniform\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{)}};}
-\DoxyCodeLine{00260 }
-\DoxyCodeLine{00261         \textcolor{comment}{// Now check for errors.}}
-\DoxyCodeLine{00262         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00263 }
-\DoxyCodeLine{00264         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
-\DoxyCodeLine{00265         glUniform3fv(loc, 1, glm::value\_ptr(data));}
-\DoxyCodeLine{00266     \}}
-\DoxyCodeLine{00267     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00268}\mbox{\hyperlink{namespace_b_a_r_e2_d_a3446cd1d390e7e152747127f2b787778}{00268}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{setUniform}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{vec4}}>(\textcolor{keyword}{const} std::string uniform, glm::vec4\& data) \{}
-\DoxyCodeLine{00269         \textcolor{comment}{// First, get the location}}
-\DoxyCodeLine{00270         GLint loc = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{getUniformLocation}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{(}}uniform\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{)}};}
-\DoxyCodeLine{00271 }
-\DoxyCodeLine{00272         \textcolor{comment}{// Now check for errors.}}
-\DoxyCodeLine{00273         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00274 }
-\DoxyCodeLine{00275         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
-\DoxyCodeLine{00276         glUniform4fv(loc, 1, glm::value\_ptr(data));}
-\DoxyCodeLine{00277     \}}
-\DoxyCodeLine{00278     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00279}\mbox{\hyperlink{namespace_b_a_r_e2_d_a801e1e5efc8c94d85331acee75eeaf01}{00279}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{setUniform}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{ivec2}}>(\textcolor{keyword}{const} std::string uniform, glm::ivec2\& data) \{}
-\DoxyCodeLine{00280         \textcolor{comment}{// First, get the location}}
-\DoxyCodeLine{00281         GLint loc = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{getUniformLocation}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{(}}uniform\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{)}};}
-\DoxyCodeLine{00282 }
-\DoxyCodeLine{00283         \textcolor{comment}{// Now check for errors.}}
-\DoxyCodeLine{00284         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00285 }
-\DoxyCodeLine{00286         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
-\DoxyCodeLine{00287         glUniform2iv(loc, 1, glm::value\_ptr(data));}
-\DoxyCodeLine{00288     \}}
-\DoxyCodeLine{00289     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00290}\mbox{\hyperlink{namespace_b_a_r_e2_d_ae78aa75d73235959f312e5cb234672aa}{00290}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{setUniform}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{ivec3}}>(\textcolor{keyword}{const} std::string uniform, glm::ivec3\& data) \{}
-\DoxyCodeLine{00291         \textcolor{comment}{// First, get the location}}
-\DoxyCodeLine{00292         GLint loc = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{getUniformLocation}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{(}}uniform\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{)}};}
-\DoxyCodeLine{00293 }
-\DoxyCodeLine{00294         \textcolor{comment}{// Now check for errors.}}
-\DoxyCodeLine{00295         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00296 }
-\DoxyCodeLine{00297         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
-\DoxyCodeLine{00298         glUniform3iv(loc, 1, glm::value\_ptr(data));}
-\DoxyCodeLine{00299     \}}
-\DoxyCodeLine{00300     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00301}\mbox{\hyperlink{namespace_b_a_r_e2_d_a084a6e5a281f2833ca8daac3bd5023df}{00301}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{setUniform}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aea20b0b7244458c2384e7d652b506767}{ivec4}}>(\textcolor{keyword}{const} std::string uniform, glm::ivec4\& data) \{}
-\DoxyCodeLine{00302         \textcolor{comment}{// First, get the location}}
-\DoxyCodeLine{00303         GLint loc = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{getUniformLocation}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{(}}uniform\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{)}};}
+\DoxyCodeLine{00253         \textcolor{comment}{// Now check for errors.}}
+\DoxyCodeLine{00254         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00255 }
+\DoxyCodeLine{00256         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
+\DoxyCodeLine{00257         glUniform1fv(loc, num, data);}
+\DoxyCodeLine{00258     \}}
+\DoxyCodeLine{00259 }
+\DoxyCodeLine{00260     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00261}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0f41cfc335436ad30c889e9fc36d489d}{00261}}     \textcolor{keywordtype}{void} ShaderProgram::setUniform<glm::vec2>(\textcolor{keyword}{const} std::string uniform, glm::vec2* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num)}
+\DoxyCodeLine{00262     \{}
+\DoxyCodeLine{00263         \textcolor{comment}{// First, get the location}}
+\DoxyCodeLine{00264         GLint loc = getUniformLocation(uniform);}
+\DoxyCodeLine{00265 }
+\DoxyCodeLine{00266         \textcolor{comment}{// Now check for errors.}}
+\DoxyCodeLine{00267         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00268 }
+\DoxyCodeLine{00269         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
+\DoxyCodeLine{00270         glUniform2fv(loc, num, glm::value\_ptr(*data));}
+\DoxyCodeLine{00271     \}}
+\DoxyCodeLine{00272     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00273}\mbox{\hyperlink{namespace_b_a_r_e2_d_a18f32d8a0a2a1287f6881211e926eb59}{00273}}     \textcolor{keywordtype}{void} ShaderProgram::setUniform<glm::vec3>(\textcolor{keyword}{const} std::string uniform, glm::vec3* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num)}
+\DoxyCodeLine{00274     \{}
+\DoxyCodeLine{00275         \textcolor{comment}{// First, get the location}}
+\DoxyCodeLine{00276         GLint loc = getUniformLocation(uniform);}
+\DoxyCodeLine{00277 }
+\DoxyCodeLine{00278         \textcolor{comment}{// Now check for errors.}}
+\DoxyCodeLine{00279         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00280 }
+\DoxyCodeLine{00281         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
+\DoxyCodeLine{00282         glUniform3fv(loc, num, glm::value\_ptr(*data));}
+\DoxyCodeLine{00283     \}}
+\DoxyCodeLine{00284     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00285}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2186092617a84ef0b9e1ad955f422a33}{00285}}     \textcolor{keywordtype}{void} ShaderProgram::setUniform<glm::vec4>(\textcolor{keyword}{const} std::string uniform, glm::vec4* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num)}
+\DoxyCodeLine{00286     \{}
+\DoxyCodeLine{00287         \textcolor{comment}{// First, get the location}}
+\DoxyCodeLine{00288         GLint loc = getUniformLocation(uniform);}
+\DoxyCodeLine{00289 }
+\DoxyCodeLine{00290         \textcolor{comment}{// Now check for errors.}}
+\DoxyCodeLine{00291         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00292 }
+\DoxyCodeLine{00293         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
+\DoxyCodeLine{00294         glUniform4fv(loc, num, glm::value\_ptr(*data));}
+\DoxyCodeLine{00295     \}}
+\DoxyCodeLine{00296     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00297}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2e090e14ff39e6b6b7739e7902c48023}{00297}}     \textcolor{keywordtype}{void} ShaderProgram::setUniform<glm::ivec2>(\textcolor{keyword}{const} std::string uniform, glm::ivec2* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num)}
+\DoxyCodeLine{00298     \{}
+\DoxyCodeLine{00299         \textcolor{comment}{// First, get the location}}
+\DoxyCodeLine{00300         GLint loc = getUniformLocation(uniform);}
+\DoxyCodeLine{00301 }
+\DoxyCodeLine{00302         \textcolor{comment}{// Now check for errors.}}
+\DoxyCodeLine{00303         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
 \DoxyCodeLine{00304 }
-\DoxyCodeLine{00305         \textcolor{comment}{// Now check for errors.}}
-\DoxyCodeLine{00306         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00307 }
-\DoxyCodeLine{00308         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
-\DoxyCodeLine{00309         glUniform4iv(loc, 1, glm::value\_ptr(data));}
-\DoxyCodeLine{00310     \}}
-\DoxyCodeLine{00311 }
-\DoxyCodeLine{00312     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00313}\mbox{\hyperlink{namespace_b_a_r_e2_d_a705b866a6796e1986ed0ec474f7e3af1}{00313}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a66aa33c1300b58bfb37ecd4b5500321c}{setUniformMatrix}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a66aa33c1300b58bfb37ecd4b5500321c}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a66aa33c1300b58bfb37ecd4b5500321c}{mat4}}>(\textcolor{keyword}{const} std::string uniform, \textcolor{keywordtype}{bool} transpose, glm::mat4\& data) \{}
-\DoxyCodeLine{00314         \textcolor{comment}{// First, get the location}}
-\DoxyCodeLine{00315         GLint loc = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{getUniformLocation}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{(}}uniform\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{)}};}
+\DoxyCodeLine{00305         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
+\DoxyCodeLine{00306         glUniform2iv(loc, num, glm::value\_ptr(*data));}
+\DoxyCodeLine{00307     \}}
+\DoxyCodeLine{00308     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00309}\mbox{\hyperlink{namespace_b_a_r_e2_d_af8b455c1e00b121342d74e0e778bef75}{00309}}     \textcolor{keywordtype}{void} ShaderProgram::setUniform<glm::ivec3>(\textcolor{keyword}{const} std::string uniform, glm::ivec3* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num)}
+\DoxyCodeLine{00310     \{}
+\DoxyCodeLine{00311         \textcolor{comment}{// First, get the location}}
+\DoxyCodeLine{00312         GLint loc = getUniformLocation(uniform);}
+\DoxyCodeLine{00313 }
+\DoxyCodeLine{00314         \textcolor{comment}{// Now check for errors.}}
+\DoxyCodeLine{00315         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
 \DoxyCodeLine{00316 }
-\DoxyCodeLine{00317         \textcolor{comment}{// Now check for errors.}}
-\DoxyCodeLine{00318         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00319 }
-\DoxyCodeLine{00320         \textcolor{comment}{// Now call glUniformMatrix\{whatever\}}}
-\DoxyCodeLine{00321         glUniformMatrix4fv(loc, 1, transpose, glm::value\_ptr(data));}
-\DoxyCodeLine{00322 }
-\DoxyCodeLine{00323     \}}
-\DoxyCodeLine{00324 }
-\DoxyCodeLine{00325 \}}
+\DoxyCodeLine{00317         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
+\DoxyCodeLine{00318         glUniform3iv(loc, num, glm::value\_ptr(*data));}
+\DoxyCodeLine{00319     \}}
+\DoxyCodeLine{00320     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00321}\mbox{\hyperlink{namespace_b_a_r_e2_d_ab7db8ca430581d70a1b1a8d9450f3581}{00321}}     \textcolor{keywordtype}{void} ShaderProgram::setUniform<glm::ivec4>(\textcolor{keyword}{const} std::string uniform, glm::ivec4* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num)}
+\DoxyCodeLine{00322     \{}
+\DoxyCodeLine{00323         \textcolor{comment}{// First, get the location}}
+\DoxyCodeLine{00324         GLint loc = getUniformLocation(uniform);}
+\DoxyCodeLine{00325 }
+\DoxyCodeLine{00326         \textcolor{comment}{// Now check for errors.}}
+\DoxyCodeLine{00327         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00328 }
+\DoxyCodeLine{00329         \textcolor{comment}{// Now, call glUniform\{whatever\}}}
+\DoxyCodeLine{00330         glUniform4iv(loc, num, glm::value\_ptr(*data));}
+\DoxyCodeLine{00331     \}}
+\DoxyCodeLine{00332 }
+\DoxyCodeLine{00333     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8cpp_source_l00334}\mbox{\hyperlink{namespace_b_a_r_e2_d_ac75bb26ffe66fb7ed5cfdb07be799714}{00334}}     \textcolor{keywordtype}{void} ShaderProgram::setUniformMatrix<glm::mat4>(\textcolor{keyword}{const} std::string uniform, \textcolor{keywordtype}{bool} transpose, glm::mat4* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num)}
+\DoxyCodeLine{00335     \{}
+\DoxyCodeLine{00336         \textcolor{comment}{// First, get the location}}
+\DoxyCodeLine{00337         GLint loc = getUniformLocation(uniform);}
+\DoxyCodeLine{00338 }
+\DoxyCodeLine{00339         \textcolor{comment}{// Now check for errors.}}
+\DoxyCodeLine{00340         \textcolor{keywordflow}{if}(loc == -\/1) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00341 }
+\DoxyCodeLine{00342         \textcolor{comment}{// Now call glUniformMatrix\{whatever\}}}
+\DoxyCodeLine{00343         glUniformMatrix4fv(loc, num, transpose, glm::value\_ptr(*data));}
+\DoxyCodeLine{00344 }
+\DoxyCodeLine{00345     \}}
+\DoxyCodeLine{00346 }
+\DoxyCodeLine{00347 \}}
 
 \end{DoxyCode}

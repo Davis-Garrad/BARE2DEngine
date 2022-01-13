@@ -32,8 +32,10 @@ static \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_mutable_texture}{Mutable\+Texture}
 \begin{DoxyCompactList}\small\item\em Sets the data of some created texture. This can be used to create \char`\"{}dummy\char`\"{} textures for use in F\+B\+Os, shaders, etc. Creates a GL texture in the context if one doesn\textquotesingle{}t already exist. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_mutable_texture}{Mutable\+Texture}} $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a9cc8ee112230160452a17bebd7d7b096}{load\+Mutable\+Texture}} (std\+::string \&texture\+Name)
 \begin{DoxyCompactList}\small\item\em Gets a texture from the cache, or creates a new, empty texture. \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_sound}{Sound}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ad6a90b54eb05009c05cdfd3794e69855}{load\+Sound}} (std\+::string \&sound\+Path)
+static \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound}{Sound}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ad6a90b54eb05009c05cdfd3794e69855}{load\+Sound}} (std\+::string \&sound\+Path)
 \begin{DoxyCompactList}\small\item\em Loads a sound from the filepath given from the cache or from the file if the cache doesn\textquotesingle{}t contain it. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music}{Music}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a5d3afd3f5800a9a502a2a1e5311a513a}{load\+Music}} (std\+::string \&music\+Path)
+\begin{DoxyCompactList}\small\item\em Loads some music from the filepath given from the cache or from the file if the cache doesn\textquotesingle{}t contain it. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{Lua\+Script}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aa40f3016ed65df8b01ce2608349ee61b}{load\+Script}} (std\+::string \&script\+Path)
 \begin{DoxyCompactList}\small\item\em Loads a script from the filepath given from the cache or from the file if it\textquotesingle{}s not already in the cache. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{Lua\+Script}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ae8cf04384771d20f7a636c4757f722c2}{load\+Script\+From\+Source}} (std\+::string \&script\+Source, std\+::string name)
@@ -41,15 +43,27 @@ static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{Lua\+Script}} \mbox{\hy
 static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a779c084be78d6e03a8083cb109b85509}{load\+Font}} (std\+::string \&font\+Path, int size)
 \begin{DoxyCompactList}\small\item\em Loads a font to the cache. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_acbc049762c33d9f98ddbc5add7e20174}{clear\+Caches}} ()
-\begin{DoxyCompactList}\small\item\em Clears the various caches. This is useful for debugging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Clears the various caches. This is useful for debugging. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ab6476c13f6b092cbda16abcd0d995a39}{set\+Assets\+Path\+Prefix}} (std\+::string prefix)
+\begin{DoxyCompactList}\small\item\em Changes the prefix that will be prepended to all paths when resources are loaded. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a1a07f9d4bebd35321669d3fb0049962e}{get\+Assets\+Path\+Prefix}} ()
+\begin{DoxyCompactList}\small\item\em Returns the assets path prefix. Pretty simple. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ad240c178b1286f53560ead6b41e7e58b}{set\+Texture\+Path\+Prefix}} (std\+::string prefix)
+\begin{DoxyCompactList}\small\item\em Changes the prefix that will be prepended to all texture paths when they\textquotesingle{}re loaded. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a3648e65a361380d80f01a911df867e7b}{m\+\_\+assets\+Path\+Prefix}} = \char`\"{}\char`\"{}
+\item 
+static std\+::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ae2ce555c4bd7d242b06c28a7e0e62911}{m\+\_\+texture\+Path\+Prefix}} = \char`\"{}\char`\"{}
 \item 
 static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ std\+::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}} $>$ $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aef356f0e3af2856831be8261e709c123}{m\+\_\+textures}} = new \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$std\+::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}$>$()
 \item 
 static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ std\+::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_mutable_texture}{Mutable\+Texture}} $>$ $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af37a2453e77e3be960fff4aa2b2da8ae}{m\+\_\+mutable\+Textures}} = new \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$std\+::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_mutable_texture}{Mutable\+Texture}}$>$()
 \item 
-static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ std\+::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_sound}{Sound}} $>$ $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aab37254031dcd1edbccf620db0a112ec}{m\+\_\+sounds}} = new \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$std\+::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_sound}{Sound}}$>$()
+static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ std\+::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound}{Sound}} $>$ $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aab37254031dcd1edbccf620db0a112ec}{m\+\_\+sounds}} = new \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$std\+::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound}{Sound}}$>$()
+\item 
+static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ std\+::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music}{Music}} $>$ $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a80ad48866e1f1e167e12979dc61df541}{m\+\_\+music}} = new \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$std\+::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music}{Music}}$>$()
 \item 
 static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ std\+::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{Lua\+Script}} $>$ $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ada3e87411dbccc8c5628c7f7d89e2f68}{m\+\_\+scripts}} = new \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$std\+::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{Lua\+Script}}$>$()
 \item 
@@ -60,7 +74,7 @@ static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ std\+::string, \m
 \doxysubsection{Detailed Description}
 The resource manager manages resources. Groundbreaking news, I know. In short, the resource manager loads and manages Textures, Sounds, Scripts, Fonts, etc. 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8hpp_source_l00018}{18}} of file \mbox{\hyperlink{_resource_manager_8hpp_source}{Resource\+Manager.\+hpp}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8hpp_source_l00021}{21}} of file \mbox{\hyperlink{_resource_manager_8hpp_source}{Resource\+Manager.\+hpp}}.
 
 
 
@@ -77,19 +91,22 @@ Clears the various caches. This is useful for debugging.
 
 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00178}{178}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00236}{236}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_a1a07f9d4bebd35321669d3fb0049962e}\label{class_b_a_r_e2_d_1_1_resource_manager_a1a07f9d4bebd35321669d3fb0049962e}} 
+\index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!getAssetsPathPrefix@{getAssetsPathPrefix}}
+\index{getAssetsPathPrefix@{getAssetsPathPrefix}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{getAssetsPathPrefix()}{getAssetsPathPrefix()}}
+{\footnotesize\ttfamily std\+::string B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::get\+Assets\+Path\+Prefix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-References \mbox{\hyperlink{_cache__impl_8tcc_source_l00046}{B\+A\+R\+E2\+D\+::\+Cache$<$ S, T $>$\+::clear()}}, \mbox{\hyperlink{_logger_8cpp_source_l00034}{B\+A\+R\+E2\+D\+::\+Logger\+::get\+Instance()}}, \mbox{\hyperlink{_logger_8cpp_source_l00042}{B\+A\+R\+E2\+D\+::\+Logger\+::log()}}, \mbox{\hyperlink{_resource_manager_8hpp_source_l00099}{m\+\_\+fonts}}, \mbox{\hyperlink{_resource_manager_8hpp_source_l00096}{m\+\_\+mutable\+Textures}}, \mbox{\hyperlink{_resource_manager_8hpp_source_l00098}{m\+\_\+scripts}}, \mbox{\hyperlink{_resource_manager_8hpp_source_l00097}{m\+\_\+sounds}}, and \mbox{\hyperlink{_resource_manager_8hpp_source_l00095}{m\+\_\+textures}}.
+Returns the assets path prefix. Pretty simple. 
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_resource_manager_acbc049762c33d9f98ddbc5add7e20174_cgraph}
-\end{center}
-\end{figure}
+
+
+Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00252}{252}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_a779c084be78d6e03a8083cb109b85509}\label{class_b_a_r_e2_d_1_1_resource_manager_a779c084be78d6e03a8083cb109b85509}} 
 \index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!loadFont@{loadFont}}
 \index{loadFont@{loadFont}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
@@ -112,19 +129,30 @@ An instance of the font.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00158}{158}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00216}{216}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_a5d3afd3f5800a9a502a2a1e5311a513a}\label{class_b_a_r_e2_d_1_1_resource_manager_a5d3afd3f5800a9a502a2a1e5311a513a}} 
+\index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!loadMusic@{loadMusic}}
+\index{loadMusic@{loadMusic}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{loadMusic()}{loadMusic()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music}{Music}} B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Music (\begin{DoxyParamCaption}\item[{std\+::string \&}]{music\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-References \mbox{\hyperlink{_cache__impl_8tcc_source_l00025}{B\+A\+R\+E2\+D\+::\+Cache$<$ S, T $>$\+::create\+Item()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00007}{B\+A\+R\+E2\+D\+::\+Cache$<$ S, T $>$\+::find\+Item()}}, \mbox{\hyperlink{_font_8cpp_source_l00030}{B\+A\+R\+E2\+D\+::\+Font\+::init()}}, and \mbox{\hyperlink{_resource_manager_8hpp_source_l00099}{m\+\_\+fonts}}.
+Loads some music from the filepath given from the cache or from the file if the cache doesn\textquotesingle{}t contain it. 
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_resource_manager_a779c084be78d6e03a8083cb109b85509_cgraph}
-\end{center}
-\end{figure}
+
+\begin{DoxyParams}{Parameters}
+{\em music\+Path} & The path to load the music from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An instance of the music. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00145}{145}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_a9cc8ee112230160452a17bebd7d7b096}\label{class_b_a_r_e2_d_1_1_resource_manager_a9cc8ee112230160452a17bebd7d7b096}} 
 \index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!loadMutableTexture@{loadMutableTexture}}
 \index{loadMutableTexture@{loadMutableTexture}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
@@ -145,20 +173,8 @@ A pointer to the mutable texture.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00106}{106}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00115}{115}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
 
-
-
-References \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00177}{B\+A\+R\+E2\+D\+::throw\+Fatal\+Error()}}, and \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abcb313a5c9f8965d7b75833af33d16be}{B\+A\+R\+E2\+D\+::\+U\+N\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_resource_manager_a9cc8ee112230160452a17bebd7d7b096_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_aa40f3016ed65df8b01ce2608349ee61b}\label{class_b_a_r_e2_d_1_1_resource_manager_aa40f3016ed65df8b01ce2608349ee61b}} 
 \index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!loadScript@{loadScript}}
 \index{loadScript@{loadScript}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
@@ -179,19 +195,8 @@ An instance of the script.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00121}{121}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00168}{168}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
 
-
-
-References \mbox{\hyperlink{_cache__impl_8tcc_source_l00025}{B\+A\+R\+E2\+D\+::\+Cache$<$ S, T $>$\+::create\+Item()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00007}{B\+A\+R\+E2\+D\+::\+Cache$<$ S, T $>$\+::find\+Item()}}, \mbox{\hyperlink{_lua_script_8hpp_source_l00021}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+::m\+\_\+script}}, \mbox{\hyperlink{_resource_manager_8hpp_source_l00098}{m\+\_\+scripts}}, and \mbox{\hyperlink{_i_o_manager_8cpp_source_l00009}{B\+A\+R\+E2\+D\+::\+I\+O\+Manager\+::read\+File\+To\+Buffer()}}.
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_resource_manager_aa40f3016ed65df8b01ce2608349ee61b_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_ae8cf04384771d20f7a636c4757f722c2}\label{class_b_a_r_e2_d_1_1_resource_manager_ae8cf04384771d20f7a636c4757f722c2}} 
 \index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!loadScriptFromSource@{loadScriptFromSource}}
 \index{loadScriptFromSource@{loadScriptFromSource}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
@@ -214,19 +219,8 @@ The name of the script, so that it can be loaded from the regular cache.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00142}{142}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00198}{198}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
 
-
-
-References \mbox{\hyperlink{_cache__impl_8tcc_source_l00025}{B\+A\+R\+E2\+D\+::\+Cache$<$ S, T $>$\+::create\+Item()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00007}{B\+A\+R\+E2\+D\+::\+Cache$<$ S, T $>$\+::find\+Item()}}, \mbox{\hyperlink{_lua_script_8hpp_source_l00021}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+::m\+\_\+script}}, and \mbox{\hyperlink{_resource_manager_8hpp_source_l00098}{m\+\_\+scripts}}.
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_resource_manager_ae8cf04384771d20f7a636c4757f722c2_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_a00ef658172786a81106218cc6035bc13}\label{class_b_a_r_e2_d_1_1_resource_manager_a00ef658172786a81106218cc6035bc13}} 
 \index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!loadShaders@{loadShaders}}
 \index{loadShaders@{loadShaders}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
@@ -249,19 +243,8 @@ A G\+L\+SL program of type \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
 
-
-
-References \mbox{\hyperlink{_shader_program_8cpp_source_l00021}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::compile\+Shaders()}}.
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_resource_manager_a00ef658172786a81106218cc6035bc13_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_a5dbae5c36f78ce4feb0ec3c0b8d1728a}\label{class_b_a_r_e2_d_1_1_resource_manager_a5dbae5c36f78ce4feb0ec3c0b8d1728a}} 
 \index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!loadShadersFromSource@{loadShadersFromSource}}
 \index{loadShadersFromSource@{loadShadersFromSource}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
@@ -284,24 +267,13 @@ Loads some shaders from their source. Does not cache.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
 
-
-
-References \mbox{\hyperlink{_shader_program_8cpp_source_l00033}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::compile\+Shaders\+From\+Source()}}.
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_resource_manager_a5dbae5c36f78ce4feb0ec3c0b8d1728a_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_ad6a90b54eb05009c05cdfd3794e69855}\label{class_b_a_r_e2_d_1_1_resource_manager_ad6a90b54eb05009c05cdfd3794e69855}} 
 \index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!loadSound@{loadSound}}
 \index{loadSound@{loadSound}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
 \doxysubsubsection{\texorpdfstring{loadSound()}{loadSound()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_sound}{Sound}} B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Sound (\begin{DoxyParamCaption}\item[{std\+::string \&}]{sound\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound}{Sound}} B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::load\+Sound (\begin{DoxyParamCaption}\item[{std\+::string \&}]{sound\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -317,20 +289,8 @@ An instance of the sound.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00113}{113}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00122}{122}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
 
-
-
-References \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00177}{B\+A\+R\+E2\+D\+::throw\+Fatal\+Error()}}, and \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abcb313a5c9f8965d7b75833af33d16be}{B\+A\+R\+E2\+D\+::\+U\+N\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_resource_manager_ad6a90b54eb05009c05cdfd3794e69855_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_af4bb03a60f5fdb3ec94064e17c84e823}\label{class_b_a_r_e2_d_1_1_resource_manager_af4bb03a60f5fdb3ec94064e17c84e823}} 
 \index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!loadTexture@{loadTexture}}
 \index{loadTexture@{loadTexture}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
@@ -351,19 +311,27 @@ A copy of the texture, whether it was just loaded or it was taken from the cache
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_ab6476c13f6b092cbda16abcd0d995a39}\label{class_b_a_r_e2_d_1_1_resource_manager_ab6476c13f6b092cbda16abcd0d995a39}} 
+\index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!setAssetsPathPrefix@{setAssetsPathPrefix}}
+\index{setAssetsPathPrefix@{setAssetsPathPrefix}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{setAssetsPathPrefix()}{setAssetsPathPrefix()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::set\+Assets\+Path\+Prefix (\begin{DoxyParamCaption}\item[{std\+::string}]{prefix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-References \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::bind\+Texture()}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00025}{B\+A\+R\+E2\+D\+::\+Cache$<$ S, T $>$\+::create\+Item()}}, \mbox{\hyperlink{_pico_p_n_g_8cpp_source_l00028}{B\+A\+R\+E2\+D\+::decode\+P\+N\+G()}}, \mbox{\hyperlink{_texture_8hpp_source_l00014}{B\+A\+R\+E2\+D\+::\+Texture\+::filepath}}, \mbox{\hyperlink{_cache__impl_8tcc_source_l00007}{B\+A\+R\+E2\+D\+::\+Cache$<$ S, T $>$\+::find\+Item()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_texture_8hpp_source_l00017}{B\+A\+R\+E2\+D\+::\+Texture\+::height}}, \mbox{\hyperlink{_texture_8hpp_source_l00015}{B\+A\+R\+E2\+D\+::\+Texture\+::id}}, \mbox{\hyperlink{_resource_manager_8hpp_source_l00095}{m\+\_\+textures}}, \mbox{\hyperlink{_i_o_manager__impl_8tcc_source_l00008}{B\+A\+R\+E2\+D\+::\+I\+O\+Manager\+::read\+File\+To\+Buffer()}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a875ae376eb2fbd99c364b0c2ed42fedc}{B\+A\+R\+E2\+D\+::\+T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+A\+I\+L\+U\+RE}}, \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00177}{B\+A\+R\+E2\+D\+::throw\+Fatal\+Error()}}, and \mbox{\hyperlink{_texture_8hpp_source_l00016}{B\+A\+R\+E2\+D\+::\+Texture\+::width}}.
+Changes the prefix that will be prepended to all paths when resources are loaded. 
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_resource_manager_af4bb03a60f5fdb3ec94064e17c84e823_cgraph}
-\end{center}
-\end{figure}
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & The path to prepend on any load. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00247}{247}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_a7cd7560c57b0e8a354aa8ce362eb55f3}\label{class_b_a_r_e2_d_1_1_resource_manager_a7cd7560c57b0e8a354aa8ce362eb55f3}} 
 \index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!setMutableTexture@{setMutableTexture}}
 \index{setMutableTexture@{setMutableTexture}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
@@ -386,23 +354,40 @@ A pointer to the mutable texture.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00099}{99}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00108}{108}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_ad240c178b1286f53560ead6b41e7e58b}\label{class_b_a_r_e2_d_1_1_resource_manager_ad240c178b1286f53560ead6b41e7e58b}} 
+\index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!setTexturePathPrefix@{setTexturePathPrefix}}
+\index{setTexturePathPrefix@{setTexturePathPrefix}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{setTexturePathPrefix()}{setTexturePathPrefix()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::set\+Texture\+Path\+Prefix (\begin{DoxyParamCaption}\item[{std\+::string}]{prefix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-References \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00177}{B\+A\+R\+E2\+D\+::throw\+Fatal\+Error()}}, and \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abcb313a5c9f8965d7b75833af33d16be}{B\+A\+R\+E2\+D\+::\+U\+N\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}.
+Changes the prefix that will be prepended to all texture paths when they\textquotesingle{}re loaded. 
 
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_resource_manager_a7cd7560c57b0e8a354aa8ce362eb55f3_cgraph}
-\end{center}
-\end{figure}
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & The path to prepend on texture loads. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_resource_manager_8cpp_source_l00257}{257}} of file \mbox{\hyperlink{_resource_manager_8cpp_source}{Resource\+Manager.\+cpp}}.
+
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_a3648e65a361380d80f01a911df867e7b}\label{class_b_a_r_e2_d_1_1_resource_manager_a3648e65a361380d80f01a911df867e7b}} 
+\index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!m\_assetsPathPrefix@{m\_assetsPathPrefix}}
+\index{m\_assetsPathPrefix@{m\_assetsPathPrefix}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{m\_assetsPathPrefix}{m\_assetsPathPrefix}}
+{\footnotesize\ttfamily std\+::string B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::m\+\_\+assets\+Path\+Prefix = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_resource_manager_8hpp_source_l00125}{125}} of file \mbox{\hyperlink{_resource_manager_8hpp_source}{Resource\+Manager.\+hpp}}.
+
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_af110c53a19953db73ece62790759e049}\label{class_b_a_r_e2_d_1_1_resource_manager_af110c53a19953db73ece62790759e049}} 
 \index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!m\_fonts@{m\_fonts}}
 \index{m\_fonts@{m\_fonts}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
@@ -411,11 +396,17 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8hpp_source_l00099}{99}} of file \mbox{\hyperlink{_resource_manager_8hpp_source}{Resource\+Manager.\+hpp}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8hpp_source_l00133}{133}} of file \mbox{\hyperlink{_resource_manager_8hpp_source}{Resource\+Manager.\+hpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_a80ad48866e1f1e167e12979dc61df541}\label{class_b_a_r_e2_d_1_1_resource_manager_a80ad48866e1f1e167e12979dc61df541}} 
+\index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!m\_music@{m\_music}}
+\index{m\_music@{m\_music}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{m\_music}{m\_music}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ std\+::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music}{Music}} $>$ $\ast$ B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::m\+\_\+music = new \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$std\+::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music}{Music}}$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
-Referenced by \mbox{\hyperlink{_resource_manager_8cpp_source_l00178}{clear\+Caches()}}, and \mbox{\hyperlink{_resource_manager_8cpp_source_l00158}{load\+Font()}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8hpp_source_l00131}{131}} of file \mbox{\hyperlink{_resource_manager_8hpp_source}{Resource\+Manager.\+hpp}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_af37a2453e77e3be960fff4aa2b2da8ae}\label{class_b_a_r_e2_d_1_1_resource_manager_af37a2453e77e3be960fff4aa2b2da8ae}} 
 \index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!m\_mutableTextures@{m\_mutableTextures}}
@@ -425,11 +416,7 @@ Referenced by \mbox{\hyperlink{_resource_manager_8cpp_source_l00178}{clear\+Cach
 
 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8hpp_source_l00096}{96}} of file \mbox{\hyperlink{_resource_manager_8hpp_source}{Resource\+Manager.\+hpp}}.
-
-
-
-Referenced by \mbox{\hyperlink{_resource_manager_8cpp_source_l00178}{clear\+Caches()}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8hpp_source_l00129}{129}} of file \mbox{\hyperlink{_resource_manager_8hpp_source}{Resource\+Manager.\+hpp}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_ada3e87411dbccc8c5628c7f7d89e2f68}\label{class_b_a_r_e2_d_1_1_resource_manager_ada3e87411dbccc8c5628c7f7d89e2f68}} 
 \index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!m\_scripts@{m\_scripts}}
@@ -439,25 +426,27 @@ Referenced by \mbox{\hyperlink{_resource_manager_8cpp_source_l00178}{clear\+Cach
 
 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8hpp_source_l00098}{98}} of file \mbox{\hyperlink{_resource_manager_8hpp_source}{Resource\+Manager.\+hpp}}.
-
-
-
-Referenced by \mbox{\hyperlink{_resource_manager_8cpp_source_l00178}{clear\+Caches()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00121}{load\+Script()}}, and \mbox{\hyperlink{_resource_manager_8cpp_source_l00142}{load\+Script\+From\+Source()}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8hpp_source_l00132}{132}} of file \mbox{\hyperlink{_resource_manager_8hpp_source}{Resource\+Manager.\+hpp}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_aab37254031dcd1edbccf620db0a112ec}\label{class_b_a_r_e2_d_1_1_resource_manager_aab37254031dcd1edbccf620db0a112ec}} 
 \index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!m\_sounds@{m\_sounds}}
 \index{m\_sounds@{m\_sounds}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
 \doxysubsubsection{\texorpdfstring{m\_sounds}{m\_sounds}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ std\+::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_sound}{Sound}} $>$ $\ast$ B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::m\+\_\+sounds = new \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$std\+::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_sound}{Sound}}$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ std\+::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound}{Sound}} $>$ $\ast$ B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::m\+\_\+sounds = new \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$std\+::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound}{Sound}}$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8hpp_source_l00097}{97}} of file \mbox{\hyperlink{_resource_manager_8hpp_source}{Resource\+Manager.\+hpp}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8hpp_source_l00130}{130}} of file \mbox{\hyperlink{_resource_manager_8hpp_source}{Resource\+Manager.\+hpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_ae2ce555c4bd7d242b06c28a7e0e62911}\label{class_b_a_r_e2_d_1_1_resource_manager_ae2ce555c4bd7d242b06c28a7e0e62911}} 
+\index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!m\_texturePathPrefix@{m\_texturePathPrefix}}
+\index{m\_texturePathPrefix@{m\_texturePathPrefix}!BARE2D::ResourceManager@{BARE2D::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{m\_texturePathPrefix}{m\_texturePathPrefix}}
+{\footnotesize\ttfamily std\+::string B\+A\+R\+E2\+D\+::\+Resource\+Manager\+::m\+\_\+texture\+Path\+Prefix = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
-Referenced by \mbox{\hyperlink{_resource_manager_8cpp_source_l00178}{clear\+Caches()}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8hpp_source_l00126}{126}} of file \mbox{\hyperlink{_resource_manager_8hpp_source}{Resource\+Manager.\+hpp}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_resource_manager_aef356f0e3af2856831be8261e709c123}\label{class_b_a_r_e2_d_1_1_resource_manager_aef356f0e3af2856831be8261e709c123}} 
 \index{BARE2D::ResourceManager@{BARE2D::ResourceManager}!m\_textures@{m\_textures}}
@@ -467,11 +456,7 @@ Referenced by \mbox{\hyperlink{_resource_manager_8cpp_source_l00178}{clear\+Cach
 
 
 
-Definition at line \mbox{\hyperlink{_resource_manager_8hpp_source_l00095}{95}} of file \mbox{\hyperlink{_resource_manager_8hpp_source}{Resource\+Manager.\+hpp}}.
-
-
-
-Referenced by \mbox{\hyperlink{_resource_manager_8cpp_source_l00178}{clear\+Caches()}}, and \mbox{\hyperlink{_resource_manager_8cpp_source_l00035}{load\+Texture()}}.
+Definition at line \mbox{\hyperlink{_resource_manager_8hpp_source_l00128}{128}} of file \mbox{\hyperlink{_resource_manager_8hpp_source}{Resource\+Manager.\+hpp}}.
 
 
 

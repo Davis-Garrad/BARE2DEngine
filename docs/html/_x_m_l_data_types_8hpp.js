@@ -13,6 +13,8 @@ var _x_m_l_data_types_8hpp =
       [ "BOOL", "_x_m_l_data_types_8hpp.html#a0c44bfbd2820598bfcbf4986a6252b02aa97b2c144243b2b9d2c593ec268b62f5", null ],
       [ "VECTOR_BOOL", "_x_m_l_data_types_8hpp.html#a0c44bfbd2820598bfcbf4986a6252b02ab916a458e01349ca08eb2a51f541e424", null ],
       [ "VEC2", "_x_m_l_data_types_8hpp.html#a0c44bfbd2820598bfcbf4986a6252b02a9bd71a29dd44a2e0252b56ce5c6d251a", null ],
-      [ "VECTOR_VEC2", "_x_m_l_data_types_8hpp.html#a0c44bfbd2820598bfcbf4986a6252b02a885431a8d6e8227dbbbe0da37138b4e5", null ]
+      [ "VECTOR_VEC2", "_x_m_l_data_types_8hpp.html#a0c44bfbd2820598bfcbf4986a6252b02a885431a8d6e8227dbbbe0da37138b4e5", null ],
+      [ "SCRIPT", "_x_m_l_data_types_8hpp.html#a0c44bfbd2820598bfcbf4986a6252b02abc283a640f11da0ce7f95dd103c0b38f", null ],
+      [ "TEXTURE", "_x_m_l_data_types_8hpp.html#a0c44bfbd2820598bfcbf4986a6252b02a3f92f542bd9ec48f912b9350e22736ac", null ]
     ] ]
 ];

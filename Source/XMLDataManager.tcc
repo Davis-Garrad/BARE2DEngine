@@ -5,6 +5,7 @@ namespace BARE2D {
 	template<typename T>
 	T XMLDataManager::getData(std::string dataType, unsigned int key) {
 		XMLData* dataPtr = getDataCache(dataType)->findItem(key);
+		if(!dataPtr) return T();
 		T* data = static_cast<T*>(dataPtr);
 		return *data;
 	}

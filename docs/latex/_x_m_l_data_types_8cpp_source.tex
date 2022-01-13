@@ -4,86 +4,86 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_x_m_l_data_types_8hpp}{"XMLDataTypes.hpp"}}}
 \DoxyCodeLine{00002 }
-\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_x_m_l_data_manager_8hpp}{"XMLDataManager.hpp"}}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_logger_8hpp}{"Logger.hpp"}}}
 \DoxyCodeLine{00004 }
-\DoxyCodeLine{00005 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{00006 }
-\DoxyCodeLine{00007     \textcolor{comment}{// AttributeBase definitions}}
-\DoxyCodeLine{00008     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00009}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{00009}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(T data) \{}
-\DoxyCodeLine{00010         \textcolor{comment}{// template acrobatics, baby!}}
-\DoxyCodeLine{00011         \textcolor{keyword}{dynamic\_cast}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>*>(\textcolor{keyword}{this})-\/>setData(data);}
-\DoxyCodeLine{00012     \}}
-\DoxyCodeLine{00013 }
-\DoxyCodeLine{00014     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00015}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a670445dd8920546d37a49d8b4ff71a26}{00015}}     T \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a670445dd8920546d37a49d8b4ff71a26}{getData}}() \{}
-\DoxyCodeLine{00016         \textcolor{comment}{// more acrobatics}}
-\DoxyCodeLine{00017         \textcolor{keywordflow}{return} \textcolor{keyword}{dynamic\_cast}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>\&>(*\textcolor{keyword}{this}).getData();}
-\DoxyCodeLine{00018     \}}
-\DoxyCodeLine{00019 }
-\DoxyCodeLine{00020     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00021}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{00021}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{swapDataPointer}}(T* newPtr) \{}
-\DoxyCodeLine{00022         \textcolor{keyword}{dynamic\_cast}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>*>(\textcolor{keyword}{this})-\/>swapDataPointer(newPtr);}
-\DoxyCodeLine{00023     \}}
-\DoxyCodeLine{00024 }
-\DoxyCodeLine{00025     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00026}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a1f46e2e756959cc6c9220cccfd598e44}{00026}}     T* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a1f46e2e756959cc6c9220cccfd598e44}{getDataPointer}}() \{}
-\DoxyCodeLine{00027         \textcolor{comment}{// now, template aerobics.}}
-\DoxyCodeLine{00028         \textcolor{keywordflow}{return} \textcolor{keyword}{dynamic\_cast}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>\&>(*\textcolor{keyword}{this}).getDataPointer();}
-\DoxyCodeLine{00029     \}}
-\DoxyCodeLine{00030 }
-\DoxyCodeLine{00031     \textcolor{comment}{// getDataString specializations}}
-\DoxyCodeLine{00032     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00033}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a42cd3ab2b585e48b5bd43869c9bbce68}{00033}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::string>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}() \{}
-\DoxyCodeLine{00034         \textcolor{keywordflow}{return} *m\_data;}
-\DoxyCodeLine{00035     \}}
-\DoxyCodeLine{00036     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00037}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_aa80a5d104bbf70d83b779fc83a85b966}{00037}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}() \{}
-\DoxyCodeLine{00038         \textcolor{keywordflow}{return} std::to\_string(*m\_data);}
-\DoxyCodeLine{00039     \}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_x_m_l_data_manager_8hpp}{"XMLDataManager.hpp"}}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_resource_manager_8hpp}{"ResourceManager.hpp"}}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}}
+\DoxyCodeLine{00009 \{}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011     \textcolor{comment}{// AttributeBase definitions}}
+\DoxyCodeLine{00012     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00013}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{00013}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(T data)}
+\DoxyCodeLine{00014     \{}
+\DoxyCodeLine{00015         \textcolor{comment}{// template acrobatics, baby!}}
+\DoxyCodeLine{00016         \textcolor{keyword}{dynamic\_cast}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>*>(\textcolor{keyword}{this})-\/>setData(data);}
+\DoxyCodeLine{00017     \}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00020}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a670445dd8920546d37a49d8b4ff71a26}{00020}}     T \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a670445dd8920546d37a49d8b4ff71a26}{getData}}()}
+\DoxyCodeLine{00021     \{}
+\DoxyCodeLine{00022         \textcolor{comment}{// more acrobatics}}
+\DoxyCodeLine{00023         \textcolor{keywordflow}{return} \textcolor{keyword}{dynamic\_cast}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>\&>(*\textcolor{keyword}{this}).getData();}
+\DoxyCodeLine{00024     \}}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00027}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{00027}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{swapDataPointer}}(T* newPtr)}
+\DoxyCodeLine{00028     \{}
+\DoxyCodeLine{00029         \textcolor{keyword}{dynamic\_cast}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>*>(\textcolor{keyword}{this})-\/>swapDataPointer(newPtr);}
+\DoxyCodeLine{00030     \}}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00033}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a1f46e2e756959cc6c9220cccfd598e44}{00033}}     T* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a1f46e2e756959cc6c9220cccfd598e44}{getDataPointer}}()}
+\DoxyCodeLine{00034     \{}
+\DoxyCodeLine{00035         \textcolor{comment}{// now, template aerobics.}}
+\DoxyCodeLine{00036         \textcolor{keywordflow}{return} \textcolor{keyword}{dynamic\_cast}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>\&>(*\textcolor{keyword}{this}).getDataPointer();}
+\DoxyCodeLine{00037     \}}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039     \textcolor{comment}{// getDataString specializations}}
 \DoxyCodeLine{00040     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00041}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a68a4a83585e2aa880e08975adfac4f6b}{00041}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{int}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}() \{}
-\DoxyCodeLine{00042         \textcolor{keywordflow}{return} std::to\_string(*m\_data);}
-\DoxyCodeLine{00043     \}}
-\DoxyCodeLine{00044     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00045}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_acce41a4f9f590fafffe9b840edca1d4f}{00045}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{float}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}() \{}
-\DoxyCodeLine{00046         \textcolor{keywordflow}{return} std::to\_string(*m\_data);}
-\DoxyCodeLine{00047     \}}
-\DoxyCodeLine{00048     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00049}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0d040289175c22d29446366ce7da8d2f}{00049}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{bool}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}() \{}
-\DoxyCodeLine{00050         \textcolor{keywordflow}{return} std::to\_string(*m\_data);}
-\DoxyCodeLine{00051     \}}
-\DoxyCodeLine{00052     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00053}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a3ce085cad45df633c927dd93395ee0ab}{00053}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<glm::vec2>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}() \{}
-\DoxyCodeLine{00054         \textcolor{comment}{// "\{x\}\{y\}"}}
-\DoxyCodeLine{00055         \textcolor{keywordflow}{return} std::string(\textcolor{stringliteral}{"\{"} + std::to\_string(m\_data-\/>x) + \textcolor{stringliteral}{","} + std::to\_string(m\_data-\/>y) + \textcolor{stringliteral}{"\}"});}
-\DoxyCodeLine{00056     \}}
-\DoxyCodeLine{00057     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00058}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a6ca4a0e861033cd2a733d004bb0f5e2b}{00058}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<std::string>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}() \{}
-\DoxyCodeLine{00059         std::string ret = \textcolor{stringliteral}{""};}
-\DoxyCodeLine{00060         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} str : *m\_data) \{}
-\DoxyCodeLine{00061             ret += \textcolor{stringliteral}{"\{"} + str + \textcolor{stringliteral}{"\}"};}
-\DoxyCodeLine{00062         \}}
-\DoxyCodeLine{00063         \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00041}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a42cd3ab2b585e48b5bd43869c9bbce68}{00041}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::string>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}()}
+\DoxyCodeLine{00042     \{}
+\DoxyCodeLine{00043         \textcolor{keywordflow}{return} *m\_data;}
+\DoxyCodeLine{00044     \}}
+\DoxyCodeLine{00045     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00046}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_aa80a5d104bbf70d83b779fc83a85b966}{00046}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}()}
+\DoxyCodeLine{00047     \{}
+\DoxyCodeLine{00048         \textcolor{keywordflow}{return} std::to\_string(*m\_data);}
+\DoxyCodeLine{00049     \}}
+\DoxyCodeLine{00050     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00051}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a68a4a83585e2aa880e08975adfac4f6b}{00051}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{int}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}()}
+\DoxyCodeLine{00052     \{}
+\DoxyCodeLine{00053         \textcolor{keywordflow}{return} std::to\_string(*m\_data);}
+\DoxyCodeLine{00054     \}}
+\DoxyCodeLine{00055     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00056}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_acce41a4f9f590fafffe9b840edca1d4f}{00056}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{float}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}()}
+\DoxyCodeLine{00057     \{}
+\DoxyCodeLine{00058         \textcolor{keywordflow}{return} std::to\_string(*m\_data);}
+\DoxyCodeLine{00059     \}}
+\DoxyCodeLine{00060     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00061}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0d040289175c22d29446366ce7da8d2f}{00061}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{bool}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}()}
+\DoxyCodeLine{00062     \{}
+\DoxyCodeLine{00063         \textcolor{keywordflow}{return} std::to\_string(*m\_data);}
 \DoxyCodeLine{00064     \}}
 \DoxyCodeLine{00065     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00066}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a59b43b7393dda675fbcf195a48825d85}{00066}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}() \{}
-\DoxyCodeLine{00067         std::string ret = \textcolor{stringliteral}{""};}
-\DoxyCodeLine{00068         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} e : *m\_data) \{}
-\DoxyCodeLine{00069             ret += \textcolor{stringliteral}{"\{"} + std::to\_string(e) + \textcolor{stringliteral}{"\}"};}
-\DoxyCodeLine{00070         \}}
-\DoxyCodeLine{00071         \textcolor{keywordflow}{return} ret;}
-\DoxyCodeLine{00072     \}}
-\DoxyCodeLine{00073     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00074}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_affe851fd7e6e73a83d7b48aa3670c5f9}{00074}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{int}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}() \{}
-\DoxyCodeLine{00075         std::string ret = \textcolor{stringliteral}{""};}
-\DoxyCodeLine{00076         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} e : *m\_data) \{}
-\DoxyCodeLine{00077             ret += \textcolor{stringliteral}{"\{"} + std::to\_string(e) + \textcolor{stringliteral}{"\}"};}
-\DoxyCodeLine{00078         \}}
-\DoxyCodeLine{00079         \textcolor{keywordflow}{return} ret;}
-\DoxyCodeLine{00080     \}}
-\DoxyCodeLine{00081     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00082}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a22bdfbb61968291858e4a98f808cc158}{00082}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{float}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}() \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00066}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a3ce085cad45df633c927dd93395ee0ab}{00066}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<glm::vec2>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}()}
+\DoxyCodeLine{00067     \{}
+\DoxyCodeLine{00068         \textcolor{comment}{// "\{x\}\{y\}"}}
+\DoxyCodeLine{00069         \textcolor{keywordflow}{return} std::string(\textcolor{stringliteral}{"\{"} + std::to\_string(m\_data-\/>x) + \textcolor{stringliteral}{","} + std::to\_string(m\_data-\/>y) + \textcolor{stringliteral}{"\}"});}
+\DoxyCodeLine{00070     \}}
+\DoxyCodeLine{00071     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00072}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a6ca4a0e861033cd2a733d004bb0f5e2b}{00072}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{string}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{vector}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{string}}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{getDataString}}()}
+\DoxyCodeLine{00073     \{}
+\DoxyCodeLine{00074         std::string ret = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{00075         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} str : *m\_data) \{}
+\DoxyCodeLine{00076             ret += \textcolor{stringliteral}{"\{"} + str + \textcolor{stringliteral}{"\}"};}
+\DoxyCodeLine{00077         \}}
+\DoxyCodeLine{00078         \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{00079     \}}
+\DoxyCodeLine{00080     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00081}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a59b43b7393dda675fbcf195a48825d85}{00081}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{string}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{vector}}<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{getDataString}}()}
+\DoxyCodeLine{00082     \{}
 \DoxyCodeLine{00083         std::string ret = \textcolor{stringliteral}{""};}
 \DoxyCodeLine{00084         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} e : *m\_data) \{}
 \DoxyCodeLine{00085             ret += \textcolor{stringliteral}{"\{"} + std::to\_string(e) + \textcolor{stringliteral}{"\}"};}
@@ -91,283 +91,380 @@
 \DoxyCodeLine{00087         \textcolor{keywordflow}{return} ret;}
 \DoxyCodeLine{00088     \}}
 \DoxyCodeLine{00089     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00090}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a6df3ccb35875cfa43ef9e6564f5c6b23}{00090}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{bool}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}() \{}
-\DoxyCodeLine{00091         std::string ret = \textcolor{stringliteral}{""};}
-\DoxyCodeLine{00092         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} e : *m\_data) \{}
-\DoxyCodeLine{00093             ret += \textcolor{stringliteral}{"\{"} + std::to\_string(e) + \textcolor{stringliteral}{"\}"};}
-\DoxyCodeLine{00094         \}}
-\DoxyCodeLine{00095         \textcolor{keywordflow}{return} ret;}
-\DoxyCodeLine{00096     \}}
-\DoxyCodeLine{00097     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00098}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{00098}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<glm::vec2>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}() \{}
-\DoxyCodeLine{00099         std::string ret = \textcolor{stringliteral}{""};}
-\DoxyCodeLine{00100         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} e : *m\_data) \{}
-\DoxyCodeLine{00101             ret += \textcolor{stringliteral}{"\{"} + std::to\_string(e.x) + \textcolor{stringliteral}{","} + std::to\_string(e.y) + \textcolor{stringliteral}{"\},"};}
-\DoxyCodeLine{00102         \}}
-\DoxyCodeLine{00103         \textcolor{keywordflow}{return} ret;}
-\DoxyCodeLine{00104     \}}
-\DoxyCodeLine{00105 }
-\DoxyCodeLine{00106     \textcolor{comment}{// SetDefaultData}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00090}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_affe851fd7e6e73a83d7b48aa3670c5f9}{00090}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{string}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{vector}}<\textcolor{keywordtype}{int}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{getDataString}}()}
+\DoxyCodeLine{00091     \{}
+\DoxyCodeLine{00092         std::string ret = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{00093         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} e : *m\_data) \{}
+\DoxyCodeLine{00094             ret += \textcolor{stringliteral}{"\{"} + std::to\_string(e) + \textcolor{stringliteral}{"\}"};}
+\DoxyCodeLine{00095         \}}
+\DoxyCodeLine{00096         \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{00097     \}}
+\DoxyCodeLine{00098     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00099}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a22bdfbb61968291858e4a98f808cc158}{00099}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{string}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{vector}}<\textcolor{keywordtype}{float}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{getDataString}}()}
+\DoxyCodeLine{00100     \{}
+\DoxyCodeLine{00101         std::string ret = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{00102         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} e : *m\_data) \{}
+\DoxyCodeLine{00103             ret += \textcolor{stringliteral}{"\{"} + std::to\_string(e) + \textcolor{stringliteral}{"\}"};}
+\DoxyCodeLine{00104         \}}
+\DoxyCodeLine{00105         \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{00106     \}}
 \DoxyCodeLine{00107     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00108}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a6346e0148e13ffe6769adc20f8283cb5}{00108}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::string>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}() \{}
-\DoxyCodeLine{00109         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}\textcolor{stringliteral}{"UNDEFINED"}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
-\DoxyCodeLine{00110     \}}
-\DoxyCodeLine{00111     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00112}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a8e66b26a519c18be022aa84fce04072b}{00112}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}() \{}
-\DoxyCodeLine{00113         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})-\/1\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
-\DoxyCodeLine{00114     \}}
-\DoxyCodeLine{00115     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00116}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a289b5047865d77dbe4c65411d7890da8}{00116}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{int}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}() \{}
-\DoxyCodeLine{00117         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}-\/1\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
-\DoxyCodeLine{00118     \}}
-\DoxyCodeLine{00119     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00120}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a14fda8147ef2f8b37abf0b9d1eb236d9}{00120}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{float}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}() \{}
-\DoxyCodeLine{00121         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}0.0f\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
-\DoxyCodeLine{00122     \}}
-\DoxyCodeLine{00123     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00124}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a1ec68e76fd2ba0bb97a40331eb900607}{00124}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{bool}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}() \{}
-\DoxyCodeLine{00125         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}0\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
-\DoxyCodeLine{00126     \}}
-\DoxyCodeLine{00127     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00128}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ab2c81d4eb0d536091273354cb87ac383}{00128}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<glm::vec2>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}() \{}
-\DoxyCodeLine{00129         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}glm::vec2(0.0f, 0.0f)\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
-\DoxyCodeLine{00130     \}}
-\DoxyCodeLine{00131     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00132}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_affdfa1d477a81f4341c9ac813cea9b3d}{00132}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<std::string>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}() \{}
-\DoxyCodeLine{00133         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}std::vector<std::string>\{\}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00108}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a6df3ccb35875cfa43ef9e6564f5c6b23}{00108}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{string}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{vector}}<\textcolor{keywordtype}{bool}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{getDataString}}()}
+\DoxyCodeLine{00109     \{}
+\DoxyCodeLine{00110         std::string ret = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{00111         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} e : *m\_data) \{}
+\DoxyCodeLine{00112             ret += \textcolor{stringliteral}{"\{"} + std::to\_string(e) + \textcolor{stringliteral}{"\}"};}
+\DoxyCodeLine{00113         \}}
+\DoxyCodeLine{00114         \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{00115     \}}
+\DoxyCodeLine{00116     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00117}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{00117}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{string}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{vector}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{vec2}}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{getDataString}}()}
+\DoxyCodeLine{00118     \{}
+\DoxyCodeLine{00119         std::string ret = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{00120         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} e : *m\_data) \{}
+\DoxyCodeLine{00121             ret += \textcolor{stringliteral}{"\{"} + std::to\_string(e.x) + \textcolor{stringliteral}{","} + std::to\_string(e.y) + \textcolor{stringliteral}{"\},"};}
+\DoxyCodeLine{00122         \}}
+\DoxyCodeLine{00123         \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{00124     \}}
+\DoxyCodeLine{00125     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00126}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a37a4822f7c80dca43416c9f3993ca536}{00126}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}()}
+\DoxyCodeLine{00127     \{}
+\DoxyCodeLine{00128         \textcolor{keywordflow}{return} m\_data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_ad2b38a4cdcf661bbf4d44c99bd39dac0}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_ad2b38a4cdcf661bbf4d44c99bd39dac0}{m\_path}};}
+\DoxyCodeLine{00129     \}}
+\DoxyCodeLine{00130     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00131}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a4f8f34788b914d504b07023dfc537545}{00131}}     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}()}
+\DoxyCodeLine{00132     \{}
+\DoxyCodeLine{00133         \textcolor{keywordflow}{return} m\_data\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a5180877b8d9b7ccc44a50418fc925511}{-\/>}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a5180877b8d9b7ccc44a50418fc925511}{filepath}};}
 \DoxyCodeLine{00134     \}}
-\DoxyCodeLine{00135     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00136}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a80f2b78c1f31f11a8f7f69d7a16dd3fc}{00136}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}() \{}
-\DoxyCodeLine{00137         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>\{\}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
-\DoxyCodeLine{00138     \}}
-\DoxyCodeLine{00139     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00140}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a4e876291c1966da03433d4253a9dbff5}{00140}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{int}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}() \{}
-\DoxyCodeLine{00141         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}std::vector<\textcolor{keywordtype}{int}>\{\}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
-\DoxyCodeLine{00142     \}}
-\DoxyCodeLine{00143     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00144}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a5d8923ae4d8b3295be3349cef56d4461}{00144}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{float}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}() \{}
-\DoxyCodeLine{00145         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}std::vector<\textcolor{keywordtype}{float}>\{\}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136     \textcolor{comment}{// SetDefaultData}}
+\DoxyCodeLine{00137     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00138}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a6346e0148e13ffe6769adc20f8283cb5}{00138}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::string>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}()}
+\DoxyCodeLine{00139     \{}
+\DoxyCodeLine{00140         setData(\textcolor{stringliteral}{""});}
+\DoxyCodeLine{00141     \}}
+\DoxyCodeLine{00142     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00143}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a8e66b26a519c18be022aa84fce04072b}{00143}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}()}
+\DoxyCodeLine{00144     \{}
+\DoxyCodeLine{00145         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}) -\/ 1\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
 \DoxyCodeLine{00146     \}}
 \DoxyCodeLine{00147     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00148}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_adfbde79f49af2395aa454e395fc38583}{00148}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{bool}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}() \{}
-\DoxyCodeLine{00149         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}std::vector<\textcolor{keywordtype}{bool}>\{\}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
-\DoxyCodeLine{00150     \}}
-\DoxyCodeLine{00151     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00152}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{00152}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<glm::vec2>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}() \{}
-\DoxyCodeLine{00153         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}std::vector<glm::vec2>\{\}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
-\DoxyCodeLine{00154     \}}
-\DoxyCodeLine{00155 }
-\DoxyCodeLine{00156     \textcolor{comment}{// Now that all the templates have been specialized, let's do some real work}}
-\DoxyCodeLine{00157 }
-\DoxyCodeLine{00158     \textcolor{comment}{// XMLData}}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00159}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{00159}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{XMLData}}() : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}}(\textcolor{stringliteral}{""}), \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aea06249fd8d84972b44d3407d57e64ed}{id}}(0) \{}
-\DoxyCodeLine{00160         \textcolor{comment}{// All data have a typename and id}}
-\DoxyCodeLine{00161         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{addAttribute}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{(}}\textcolor{stringliteral}{"name"}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{,}} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}{STRING}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{,}} \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{)}};}
-\DoxyCodeLine{00162         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{addAttribute}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{(}}\textcolor{stringliteral}{"id"}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{,}} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}{UNSIGNED\_INT}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{,}} \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aea06249fd8d84972b44d3407d57e64ed}{id}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{)}};}
-\DoxyCodeLine{00163     \}}
-\DoxyCodeLine{00164 }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00165}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aca53e7158465dd39509c0046817fa426}{00165}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aca53e7158465dd39509c0046817fa426}{XMLData}}(std::string dataType, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ID) \{}
-\DoxyCodeLine{00166         \textcolor{comment}{// Also set the ID and get attributes}}
-\DoxyCodeLine{00167         *\textcolor{keyword}{this} = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a8ca2d79250a0f9e24c013d593007a2c1}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a8ca2d79250a0f9e24c013d593007a2c1}{getData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a8ca2d79250a0f9e24c013d593007a2c1}{<}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a8ca2d79250a0f9e24c013d593007a2c1}{>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a8ca2d79250a0f9e24c013d593007a2c1}{(}}dataType\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a8ca2d79250a0f9e24c013d593007a2c1}{,}} ID\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a8ca2d79250a0f9e24c013d593007a2c1}{)}};}
-\DoxyCodeLine{00168 }
-\DoxyCodeLine{00169         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}[\textcolor{stringliteral}{"name"}]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{swapDataPointer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{(}}\&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{)}};}
-\DoxyCodeLine{00170         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}[\textcolor{stringliteral}{"id"}]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{swapDataPointer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{(}}\&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aea06249fd8d84972b44d3407d57e64ed}{id}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{)}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00148}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a289b5047865d77dbe4c65411d7890da8}{00148}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{int}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}()}
+\DoxyCodeLine{00149     \{}
+\DoxyCodeLine{00150         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}-\/1\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
+\DoxyCodeLine{00151     \}}
+\DoxyCodeLine{00152     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00153}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a14fda8147ef2f8b37abf0b9d1eb236d9}{00153}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{float}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}()}
+\DoxyCodeLine{00154     \{}
+\DoxyCodeLine{00155         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}0.0f\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
+\DoxyCodeLine{00156     \}}
+\DoxyCodeLine{00157     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00158}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a1ec68e76fd2ba0bb97a40331eb900607}{00158}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{bool}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}()}
+\DoxyCodeLine{00159     \{}
+\DoxyCodeLine{00160         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}0\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
+\DoxyCodeLine{00161     \}}
+\DoxyCodeLine{00162     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00163}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ab2c81d4eb0d536091273354cb87ac383}{00163}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<glm::vec2>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}()}
+\DoxyCodeLine{00164     \{}
+\DoxyCodeLine{00165         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}glm::vec2(0.0f, 0.0f)\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
+\DoxyCodeLine{00166     \}}
+\DoxyCodeLine{00167     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00168}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_affdfa1d477a81f4341c9ac813cea9b3d}{00168}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{vector}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{string}}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{setDefaultData}}()}
+\DoxyCodeLine{00169     \{}
+\DoxyCodeLine{00170         setData(std::vector<std::string> \{\});}
 \DoxyCodeLine{00171     \}}
-\DoxyCodeLine{00172 }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00173}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0fdadc0bef7ce4b52bed23ed5d270333}{00173}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0fdadc0bef7ce4b52bed23ed5d270333}{XMLData}}(std::vector<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}*> attributes) : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{)}} \{}
-\DoxyCodeLine{00174         \textcolor{comment}{// All data have a typename and id}}
-\DoxyCodeLine{00175         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{addAttribute}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{(}}\textcolor{stringliteral}{"name"}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{,}} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}{STRING}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{,}} \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{)}};}
-\DoxyCodeLine{00176         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{addAttribute}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{(}}\textcolor{stringliteral}{"id"}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{,}} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}{UNSIGNED\_INT}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{,}} \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aea06249fd8d84972b44d3407d57e64ed}{id}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{)}};}
-\DoxyCodeLine{00177 }
-\DoxyCodeLine{00178         \textcolor{comment}{// Add all of the extra attributes}}
-\DoxyCodeLine{00179         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6}{addAttributes}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6}{(}}attributes\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6}{)}};}
-\DoxyCodeLine{00180     \}}
-\DoxyCodeLine{00181 }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00182}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aae7ce8bc410d7f962b10f6298ee9a24b}{00182}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aae7ce8bc410d7f962b10f6298ee9a24b}{XMLData}}(std::unordered\_map<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}*> attributes) : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{)}} \{}
-\DoxyCodeLine{00183         \textcolor{comment}{// Purely for copy operations}}
-\DoxyCodeLine{00184         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}} = attributes;}
-\DoxyCodeLine{00185     \}}
-\DoxyCodeLine{00186 }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00187}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_acf63925319a7b15a53989db54702ea60}{00187}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_acf63925319a7b15a53989db54702ea60}{read}}(rapidxml::xml\_node<>* node) \{}
-\DoxyCodeLine{00188         \textcolor{comment}{// The node is the node of the data, so we can read everything from it right away, no navigation}}
-\DoxyCodeLine{00189         \textcolor{comment}{// First, find the id}}
-\DoxyCodeLine{00190         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} readID = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})std::stoi(node-\/>first\_attribute(\textcolor{stringliteral}{"id"})-\/>value());}
-\DoxyCodeLine{00191         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}[\textcolor{stringliteral}{"id"}]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{(}}readID\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{)}};}
-\DoxyCodeLine{00192         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aea06249fd8d84972b44d3407d57e64ed}{id}} = readID;}
-\DoxyCodeLine{00193         \textcolor{comment}{// Now, the name -\/ returns a c\_str, so we need to cast to std::string first}}
-\DoxyCodeLine{00194         std::string readName = std::string(node-\/>first\_attribute(\textcolor{stringliteral}{"name"})-\/>value());}
-\DoxyCodeLine{00195         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}[\textcolor{stringliteral}{"name"}]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{(}}readName\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{)}};}
-\DoxyCodeLine{00196         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}} = readName;}
-\DoxyCodeLine{00197 }
-\DoxyCodeLine{00198         \textcolor{comment}{// Now read every attribute -\/ we read by reference so we can change the values that are stored in the class!}}
-\DoxyCodeLine{00199         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& attr : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}) \{}
-\DoxyCodeLine{00200             \textcolor{comment}{// Get some simple values}}
-\DoxyCodeLine{00201             std::string attrName = attr.first;}
-\DoxyCodeLine{00202             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}* attrValue = attr.second;}
-\DoxyCodeLine{00203 }
-\DoxyCodeLine{00204             \textcolor{comment}{// Make sure they're not ones we already loaded (name \& id)}}
-\DoxyCodeLine{00205             \textcolor{keywordflow}{if}(attrName == \textcolor{stringliteral}{"name"} || attrName == \textcolor{stringliteral}{"id"})}
-\DoxyCodeLine{00206                 \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{00207 }
-\DoxyCodeLine{00208             \textcolor{comment}{// Now, get the value based on the type of attribute}}
-\DoxyCodeLine{00209             \textcolor{keywordflow}{switch}(attrValue\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_ad0f728ccf154d324fa0353b0a6550896}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_ad0f728ccf154d324fa0353b0a6550896}{type}}) \{}
-\DoxyCodeLine{00210                 \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}{STRING}}: \{}
-\DoxyCodeLine{00211                     std::string data;}
-\DoxyCodeLine{00212                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
-\DoxyCodeLine{00213                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{(}}node\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} attrName\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{)}};}
-\DoxyCodeLine{00214                     \textcolor{comment}{// Set the data now}}
-\DoxyCodeLine{00215                     attrValue\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{(}}data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{)}};}
-\DoxyCodeLine{00216                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00217                 \}}
-\DoxyCodeLine{00218                 \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}{UNSIGNED\_INT}}: \{}
-\DoxyCodeLine{00219                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} data;}
-\DoxyCodeLine{00220                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
-\DoxyCodeLine{00221                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{(}}node\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} attrName\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{)}};}
-\DoxyCodeLine{00222                     \textcolor{comment}{// Set the data now}}
-\DoxyCodeLine{00223                     attrValue\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{(}}data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{)}};}
-\DoxyCodeLine{00224                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00225                 \}}
-\DoxyCodeLine{00226                 \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a358c00737f6938bb5efb0674c7521b54}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a358c00737f6938bb5efb0674c7521b54}{VECTOR\_UNSIGNED\_INT}}: \{}
-\DoxyCodeLine{00227                     std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}> data;}
-\DoxyCodeLine{00228                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
-\DoxyCodeLine{00229                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{(}}node\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} attrName\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{)}};}
-\DoxyCodeLine{00230                     \textcolor{comment}{// Set the data now}}
-\DoxyCodeLine{00231                     attrValue\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{(}}data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{)}};}
-\DoxyCodeLine{00232                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00233                 \}}
-\DoxyCodeLine{00234                 \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a53f93baa3057821107c750323892fa92}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a53f93baa3057821107c750323892fa92}{INT}}: \{}
-\DoxyCodeLine{00235                     \textcolor{keywordtype}{int} data;}
-\DoxyCodeLine{00236                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
-\DoxyCodeLine{00237                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{(}}node\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} attrName\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{)}};}
-\DoxyCodeLine{00238                     \textcolor{comment}{// Set the data now}}
-\DoxyCodeLine{00239                     attrValue\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{(}}data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{)}};}
-\DoxyCodeLine{00240                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00241                 \}}
-\DoxyCodeLine{00242                 \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ae738c26bf4ce1037fa81b039a915cbf6}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ae738c26bf4ce1037fa81b039a915cbf6}{FLOAT}}: \{}
-\DoxyCodeLine{00243                     \textcolor{keywordtype}{float} data;}
-\DoxyCodeLine{00244                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
-\DoxyCodeLine{00245                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{(}}node\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} attrName\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{)}};}
-\DoxyCodeLine{00246                     \textcolor{comment}{// Set the data now}}
-\DoxyCodeLine{00247                     attrValue\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{(}}data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{)}};}
-\DoxyCodeLine{00248                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00249                 \}}
-\DoxyCodeLine{00250                 \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a38bbbd837be5914a8667d76948e1537b}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a38bbbd837be5914a8667d76948e1537b}{VECTOR\_FLOAT}}: \{}
-\DoxyCodeLine{00251                     std::vector<\textcolor{keywordtype}{float}> data;}
-\DoxyCodeLine{00252                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
-\DoxyCodeLine{00253                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{(}}node\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} attrName\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{)}};}
-\DoxyCodeLine{00254                     \textcolor{comment}{// Set the data now}}
-\DoxyCodeLine{00255                     attrValue\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{(}}data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{)}};}
-\DoxyCodeLine{00256                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00257                 \}}
-\DoxyCodeLine{00258                 \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02aa97b2c144243b2b9d2c593ec268b62f5}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02aa97b2c144243b2b9d2c593ec268b62f5}{BOOL}}: \{}
-\DoxyCodeLine{00259                     \textcolor{keywordtype}{bool} data;}
-\DoxyCodeLine{00260                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
-\DoxyCodeLine{00261                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{(}}node\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} attrName\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{)}};}
-\DoxyCodeLine{00262                     \textcolor{comment}{// Set the data now}}
-\DoxyCodeLine{00263                     attrValue\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{(}}data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{)}};}
-\DoxyCodeLine{00264                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00265                 \}}
-\DoxyCodeLine{00266                 \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ab916a458e01349ca08eb2a51f541e424}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ab916a458e01349ca08eb2a51f541e424}{VECTOR\_BOOL}}: \{}
-\DoxyCodeLine{00267                     std::vector<\textcolor{keywordtype}{bool}> data;}
-\DoxyCodeLine{00268                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
-\DoxyCodeLine{00269                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{(}}node\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} attrName\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{)}};}
-\DoxyCodeLine{00270                     \textcolor{comment}{// Set the data now}}
-\DoxyCodeLine{00271                     attrValue\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{(}}data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{)}};}
-\DoxyCodeLine{00272                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00273                 \}}
-\DoxyCodeLine{00274                 \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9bd71a29dd44a2e0252b56ce5c6d251a}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9bd71a29dd44a2e0252b56ce5c6d251a}{VEC2}}: \{}
-\DoxyCodeLine{00275                     glm::vec2 data;}
-\DoxyCodeLine{00276                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
-\DoxyCodeLine{00277                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{(}}node\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} attrName\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{)}};}
-\DoxyCodeLine{00278                     \textcolor{comment}{// Set the data now}}
-\DoxyCodeLine{00279                     attrValue\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{(}}data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{)}};}
-\DoxyCodeLine{00280                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00281                 \}}
-\DoxyCodeLine{00282                 \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a885431a8d6e8227dbbbe0da37138b4e5}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a885431a8d6e8227dbbbe0da37138b4e5}{VECTOR\_VEC2}}: \{}
-\DoxyCodeLine{00283                     std::vector<glm::vec2> data;}
-\DoxyCodeLine{00284                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
-\DoxyCodeLine{00285                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{XMLDataManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{readValue}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{(}}node\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} attrName\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{,}} data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{)}};}
-\DoxyCodeLine{00286                     \textcolor{comment}{// Set the data now}}
-\DoxyCodeLine{00287                     attrValue\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{(}}data\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{)}};}
-\DoxyCodeLine{00288                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00289                 \}}
-\DoxyCodeLine{00290 }
-\DoxyCodeLine{00291                 \textcolor{keywordflow}{default}: \{}
-\DoxyCodeLine{00292                     \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{XML\_FAILURE}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{,}} \textcolor{stringliteral}{"Failed to read attribute with type: "} + std::to\_string((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})attrValue\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_ad0f728ccf154d324fa0353b0a6550896}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_ad0f728ccf154d324fa0353b0a6550896}{type}}) + \textcolor{stringliteral}{" of name "} + attrName\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{)}};}
-\DoxyCodeLine{00293                     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00294                 \}}
-\DoxyCodeLine{00295             \};}
-\DoxyCodeLine{00296         \}}
-\DoxyCodeLine{00297 }
-\DoxyCodeLine{00298     \}}
-\DoxyCodeLine{00299 }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00300}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a72bb614851475c6510195cd7ebacf67a}{00300}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a72bb614851475c6510195cd7ebacf67a}{write}}(rapidxml::xml\_document<>* doc) \{}
-\DoxyCodeLine{00301         \textcolor{comment}{// RapidXML requires that we allocate the name of the node by their function so it doesn't get cleaned up}}
-\DoxyCodeLine{00302         \textcolor{keywordtype}{char}* allocatedNodeName = doc-\/>allocate\_string(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a721101754e4e286aacea1e537141374b}{nodeName}}.c\_str());}
-\DoxyCodeLine{00303 }
-\DoxyCodeLine{00304         \textcolor{comment}{// Now we can actually allocate the node, creating a new one for this data}}
-\DoxyCodeLine{00305         rapidxml::xml\_node<>* node = doc-\/>allocate\_node(rapidxml::node\_element, allocatedNodeName);}
-\DoxyCodeLine{00306         doc-\/>append\_node(node);}
-\DoxyCodeLine{00307 }
-\DoxyCodeLine{00308         \textcolor{comment}{// Write the name and id}}
-\DoxyCodeLine{00309         \{ \textcolor{comment}{// ID}}
-\DoxyCodeLine{00310             \textcolor{comment}{// First, allocate the value as a c\_string within rapidxml's systems}}
-\DoxyCodeLine{00311             \textcolor{keywordtype}{char}* allocatedValue = doc-\/>allocate\_string(std::to\_string(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aea06249fd8d84972b44d3407d57e64ed}{id}}).c\_str());}
-\DoxyCodeLine{00312             \textcolor{comment}{// Now allocate the attribute itself as a node-\/ish thing}}
-\DoxyCodeLine{00313             rapidxml::xml\_attribute<>* idAttribute = doc-\/>allocate\_attribute(\textcolor{stringliteral}{"id"}, allocatedValue);}
-\DoxyCodeLine{00314             \textcolor{comment}{// Now actually add the attribute to the node}}
-\DoxyCodeLine{00315             node-\/>append\_attribute(idAttribute);}
-\DoxyCodeLine{00316         \}}
-\DoxyCodeLine{00317 }
-\DoxyCodeLine{00318         \{ \textcolor{comment}{// Name}}
-\DoxyCodeLine{00319             \textcolor{comment}{// First, allocate the value as a c\_string within rapidxml's systems}}
-\DoxyCodeLine{00320             \textcolor{keywordtype}{char}* allocatedValue = doc-\/>allocate\_string(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}}.c\_str());}
-\DoxyCodeLine{00321             \textcolor{comment}{// Now allocate the attribute itself as a node-\/ish thing}}
-\DoxyCodeLine{00322             rapidxml::xml\_attribute<>* nameAttribute = doc-\/>allocate\_attribute(\textcolor{stringliteral}{"name"}, allocatedValue);}
-\DoxyCodeLine{00323             \textcolor{comment}{// Now actually add the attribute to the node}}
-\DoxyCodeLine{00324             node-\/>append\_attribute(nameAttribute);}
-\DoxyCodeLine{00325         \}}
-\DoxyCodeLine{00326 }
-\DoxyCodeLine{00327         \textcolor{comment}{// Now we're done with the simple name and id attributes, we need to add child nodes in the same way we loaded them}}
-\DoxyCodeLine{00328         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& attr : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}) \{}
-\DoxyCodeLine{00329             \textcolor{comment}{// Get some initial stuff}}
-\DoxyCodeLine{00330             std::string attrName = attr.first;}
-\DoxyCodeLine{00331             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}* attrValue = attr.second;}
-\DoxyCodeLine{00332 }
-\DoxyCodeLine{00333             \textcolor{comment}{// Make sure we aren't re-\/saving stuff we've already done}}
-\DoxyCodeLine{00334             \textcolor{keywordflow}{if}(attrName == \textcolor{stringliteral}{"name"} || attrName == \textcolor{stringliteral}{"id"})}
-\DoxyCodeLine{00335                 \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{00336 }
-\DoxyCodeLine{00337             \textcolor{comment}{// We don't even really need to interpret (exterpret?) the value, as converting from data to a string is defined by the actual attribute, not by the type.}}
-\DoxyCodeLine{00338 }
-\DoxyCodeLine{00339             \textcolor{comment}{// Actually allocate that value, as well as the attribute's name}}
-\DoxyCodeLine{00340             \textcolor{keyword}{const} \textcolor{keywordtype}{char}* allocatedValue = doc-\/>allocate\_string(attrValue\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a57439a81db9dcc04dd4ed0f3b39789a7}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a57439a81db9dcc04dd4ed0f3b39789a7}{getDataString}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a57439a81db9dcc04dd4ed0f3b39789a7}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a57439a81db9dcc04dd4ed0f3b39789a7}{)}}.c\_str());}
-\DoxyCodeLine{00341             \textcolor{keyword}{const} \textcolor{keywordtype}{char}* allocatedName = doc-\/>allocate\_string(attrName.c\_str());}
-\DoxyCodeLine{00342 }
-\DoxyCodeLine{00343             \textcolor{comment}{// Allocate the node}}
-\DoxyCodeLine{00344             rapidxml::xml\_node<>* allocatedNode = doc-\/>allocate\_node(rapidxml::node\_element, allocatedName, allocatedValue);}
-\DoxyCodeLine{00345 }
-\DoxyCodeLine{00346             \textcolor{comment}{// Actually add the node}}
-\DoxyCodeLine{00347             node-\/>append\_node(allocatedNode);}
-\DoxyCodeLine{00348         \}}
-\DoxyCodeLine{00349 }
-\DoxyCodeLine{00350         \textcolor{comment}{// Now we've written all of the XML data to the document!}}
-\DoxyCodeLine{00351     \}}
-\DoxyCodeLine{00352 }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00353}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}{00353}}     std::unordered\_map<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}*> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}{getAttributes}}() \{}
-\DoxyCodeLine{00354         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}};}
-\DoxyCodeLine{00355     \}}
-\DoxyCodeLine{00356 }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00357}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a15c8f82112e0e0a89eb255aacb7cb801}{00357}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a15c8f82112e0e0a89eb255aacb7cb801}{addAttribute}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}* attr) \{}
-\DoxyCodeLine{00358         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}[attr\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_af991938222f7eb1facde0b371ece23ad}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_af991938222f7eb1facde0b371ece23ad}{name}}] = attr;}
-\DoxyCodeLine{00359     \}}
-\DoxyCodeLine{00360 }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00361}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6}{00361}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6}{addAttributes}}(std::vector<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}*> attrs) \{}
-\DoxyCodeLine{00362         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} a : attrs) \{}
-\DoxyCodeLine{00363             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a15c8f82112e0e0a89eb255aacb7cb801}{addAttribute}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a15c8f82112e0e0a89eb255aacb7cb801}{(}}a\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a15c8f82112e0e0a89eb255aacb7cb801}{)}};}
-\DoxyCodeLine{00364         \}}
-\DoxyCodeLine{00365     \}}
-\DoxyCodeLine{00366 }
-\DoxyCodeLine{00367 \}}
+\DoxyCodeLine{00172     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00173}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a80f2b78c1f31f11a8f7f69d7a16dd3fc}{00173}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{vector}}<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{setDefaultData}}()}
+\DoxyCodeLine{00174     \{}
+\DoxyCodeLine{00175         setData(std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}> \{\});}
+\DoxyCodeLine{00176     \}}
+\DoxyCodeLine{00177     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00178}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a4e876291c1966da03433d4253a9dbff5}{00178}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{vector}}<\textcolor{keywordtype}{int}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{setDefaultData}}()}
+\DoxyCodeLine{00179     \{}
+\DoxyCodeLine{00180         setData(std::vector<\textcolor{keywordtype}{int}> \{\});}
+\DoxyCodeLine{00181     \}}
+\DoxyCodeLine{00182     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00183}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a5d8923ae4d8b3295be3349cef56d4461}{00183}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{vector}}<\textcolor{keywordtype}{float}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{setDefaultData}}()}
+\DoxyCodeLine{00184     \{}
+\DoxyCodeLine{00185         setData(std::vector<\textcolor{keywordtype}{float}> \{\});}
+\DoxyCodeLine{00186     \}}
+\DoxyCodeLine{00187     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00188}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_adfbde79f49af2395aa454e395fc38583}{00188}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{vector}}<\textcolor{keywordtype}{bool}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{setDefaultData}}()}
+\DoxyCodeLine{00189     \{}
+\DoxyCodeLine{00190         setData(std::vector<\textcolor{keywordtype}{bool}> \{\});}
+\DoxyCodeLine{00191     \}}
+\DoxyCodeLine{00192     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00193}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{00193}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{vector}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{vec2}}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{setDefaultData}}()}
+\DoxyCodeLine{00194     \{}
+\DoxyCodeLine{00195         setData(std::vector<glm::vec2> \{\});}
+\DoxyCodeLine{00196     \}}
+\DoxyCodeLine{00197     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00198}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a70bacd0eef08d9faf2c1fdb77eac5e7b}{00198}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}()}
+\DoxyCodeLine{00199     \{}
+\DoxyCodeLine{00200         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_a5686214d11e32bc31da1f7166b437b80}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_a5686214d11e32bc31da1f7166b437b80}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
+\DoxyCodeLine{00201     \}}
+\DoxyCodeLine{00202     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00203}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a8b427421d8ddb4dcdcd80756ad6a713e}{00203}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}()}
+\DoxyCodeLine{00204     \{}
+\DoxyCodeLine{00205         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}} tex;}
+\DoxyCodeLine{00206         tex\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a5180877b8d9b7ccc44a50418fc925511}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a5180877b8d9b7ccc44a50418fc925511}{filepath}} = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{00207         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{(}}tex\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{)}};}
+\DoxyCodeLine{00208     \}}
+\DoxyCodeLine{00209 }
+\DoxyCodeLine{00210     \textcolor{comment}{// Now that all the templates have been specialized, let's do some real work}}
+\DoxyCodeLine{00211 }
+\DoxyCodeLine{00212     \textcolor{comment}{// XMLData}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00213}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{00213}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{XMLData}}() : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{name}}(\textcolor{stringliteral}{"UNDEFINED"}), \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aea06249fd8d84972b44d3407d57e64ed}{id}}(0)}
+\DoxyCodeLine{00214     \{}
+\DoxyCodeLine{00215         \textcolor{comment}{// All data have a typename and id}}
+\DoxyCodeLine{00216         addAttribute(\textcolor{stringliteral}{"name"}, AttributeType::STRING, \&name);}
+\DoxyCodeLine{00217         addAttribute(\textcolor{stringliteral}{"id"}, AttributeType::UNSIGNED\_INT, \&id);}
+\DoxyCodeLine{00218     \}}
+\DoxyCodeLine{00219 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00220}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aca53e7158465dd39509c0046817fa426}{00220}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aca53e7158465dd39509c0046817fa426}{XMLData}}(std::string dataType, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ID)}
+\DoxyCodeLine{00221     \{}
+\DoxyCodeLine{00222         \textcolor{comment}{// Also set the ID and get attributes}}
+\DoxyCodeLine{00223         *\textcolor{keyword}{this} = XMLDataManager::getData<XMLData>(dataType, ID);}
+\DoxyCodeLine{00224 }
+\DoxyCodeLine{00225         m\_attributes[\textcolor{stringliteral}{"name"}]-\/>swapDataPointer(\&name);}
+\DoxyCodeLine{00226         m\_attributes[\textcolor{stringliteral}{"id"}]-\/>swapDataPointer(\&id);}
+\DoxyCodeLine{00227     \}}
+\DoxyCodeLine{00228 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00229}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0fdadc0bef7ce4b52bed23ed5d270333}{00229}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::XMLData(std::vector<AttributeBase*> attributes) : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{)}}}
+\DoxyCodeLine{00230     \{}
+\DoxyCodeLine{00231         \textcolor{comment}{// All data have a typename and id}}
+\DoxyCodeLine{00232         addAttribute(\textcolor{stringliteral}{"name"}, AttributeType::STRING, \&name);}
+\DoxyCodeLine{00233         addAttribute(\textcolor{stringliteral}{"id"}, AttributeType::UNSIGNED\_INT, \&id);}
+\DoxyCodeLine{00234 }
+\DoxyCodeLine{00235         \textcolor{comment}{// Add all of the extra attributes}}
+\DoxyCodeLine{00236         addAttributes(attributes);}
+\DoxyCodeLine{00237     \}}
+\DoxyCodeLine{00238 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00239}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aae7ce8bc410d7f962b10f6298ee9a24b}{00239}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::XMLData(std::unordered\_map<std::string, AttributeBase*> attributes) : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{)}}}
+\DoxyCodeLine{00240     \{}
+\DoxyCodeLine{00241         \textcolor{comment}{// Purely for copy operations}}
+\DoxyCodeLine{00242         m\_attributes = attributes;}
+\DoxyCodeLine{00243     \}}
+\DoxyCodeLine{00244 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00245}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_acf63925319a7b15a53989db54702ea60}{00245}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::read(rapidxml::xml\_node<>* node)}
+\DoxyCodeLine{00246     \{}
+\DoxyCodeLine{00247         \textcolor{comment}{// The node is the node of the data, so we can read everything from it right away, no navigation}}
+\DoxyCodeLine{00248         \textcolor{comment}{// First, find the id}}
+\DoxyCodeLine{00249         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} readID = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})std::stoi(node-\/>first\_attribute(\textcolor{stringliteral}{"id"})-\/>value());}
+\DoxyCodeLine{00250         m\_attributes[\textcolor{stringliteral}{"id"}]-\/>setData(readID);}
+\DoxyCodeLine{00251         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aea06249fd8d84972b44d3407d57e64ed}{id}} = readID;}
+\DoxyCodeLine{00252         \textcolor{comment}{// Now, the name -\/ returns a c\_str, so we need to cast to std::string first}}
+\DoxyCodeLine{00253         std::string readName = std::string(node-\/>first\_attribute(\textcolor{stringliteral}{"name"})-\/>value());}
+\DoxyCodeLine{00254         m\_attributes[\textcolor{stringliteral}{"name"}]-\/>setData(readName);}
+\DoxyCodeLine{00255         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}} = readName;}
+\DoxyCodeLine{00256 }
+\DoxyCodeLine{00257         \textcolor{comment}{// Now read every attribute -\/ we read by reference so we can change the values that are stored in the class!}}
+\DoxyCodeLine{00258         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& attr : m\_attributes) \{}
+\DoxyCodeLine{00259             \textcolor{comment}{// Get some simple values}}
+\DoxyCodeLine{00260             std::string attrName = attr.first;}
+\DoxyCodeLine{00261             AttributeBase* attrValue = attr.second;}
+\DoxyCodeLine{00262 }
+\DoxyCodeLine{00263             \textcolor{comment}{// Make sure they're not ones we already loaded (name \& id)}}
+\DoxyCodeLine{00264             \textcolor{keywordflow}{if}(attrName == \textcolor{stringliteral}{"name"} || attrName == \textcolor{stringliteral}{"id"})}
+\DoxyCodeLine{00265                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00266 }
+\DoxyCodeLine{00267             \textcolor{comment}{// Now, get the value based on the type of attribute}}
+\DoxyCodeLine{00268             \textcolor{keywordflow}{switch}(attrValue-\/>type) \{}
+\DoxyCodeLine{00269                 \textcolor{keywordflow}{case} AttributeType::STRING: \{}
+\DoxyCodeLine{00270                     std::string data;}
+\DoxyCodeLine{00271                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{00272                     XMLDataManager::readValue(node, attrName, data);}
+\DoxyCodeLine{00273                     \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{00274                     attrValue-\/>setData(data);}
+\DoxyCodeLine{00275                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00276                 \}}
+\DoxyCodeLine{00277                 \textcolor{keywordflow}{case} AttributeType::UNSIGNED\_INT: \{}
+\DoxyCodeLine{00278                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} data;}
+\DoxyCodeLine{00279                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{00280                     XMLDataManager::readValue(node, attrName, data);}
+\DoxyCodeLine{00281                     \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{00282                     attrValue-\/>setData(data);}
+\DoxyCodeLine{00283                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00284                 \}}
+\DoxyCodeLine{00285                 \textcolor{keywordflow}{case} AttributeType::VECTOR\_UNSIGNED\_INT: \{}
+\DoxyCodeLine{00286                     std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}> data;}
+\DoxyCodeLine{00287                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{00288                     XMLDataManager::readValue(node, attrName, data);}
+\DoxyCodeLine{00289                     \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{00290                     attrValue-\/>setData(data);}
+\DoxyCodeLine{00291                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00292                 \}}
+\DoxyCodeLine{00293                 \textcolor{keywordflow}{case} AttributeType::INT: \{}
+\DoxyCodeLine{00294                     \textcolor{keywordtype}{int} data;}
+\DoxyCodeLine{00295                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{00296                     XMLDataManager::readValue(node, attrName, data);}
+\DoxyCodeLine{00297                     \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{00298                     attrValue-\/>setData(data);}
+\DoxyCodeLine{00299                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00300                 \}}
+\DoxyCodeLine{00301                 \textcolor{keywordflow}{case} AttributeType::FLOAT: \{}
+\DoxyCodeLine{00302                     \textcolor{keywordtype}{float} data;}
+\DoxyCodeLine{00303                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{00304                     XMLDataManager::readValue(node, attrName, data);}
+\DoxyCodeLine{00305                     \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{00306                     attrValue-\/>setData(data);}
+\DoxyCodeLine{00307                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00308                 \}}
+\DoxyCodeLine{00309                 \textcolor{keywordflow}{case} AttributeType::VECTOR\_FLOAT: \{}
+\DoxyCodeLine{00310                     std::vector<\textcolor{keywordtype}{float}> data;}
+\DoxyCodeLine{00311                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{00312                     XMLDataManager::readValue(node, attrName, data);}
+\DoxyCodeLine{00313                     \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{00314                     attrValue-\/>setData(data);}
+\DoxyCodeLine{00315                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00316                 \}}
+\DoxyCodeLine{00317                 \textcolor{keywordflow}{case} AttributeType::BOOL: \{}
+\DoxyCodeLine{00318                     \textcolor{keywordtype}{bool} data;}
+\DoxyCodeLine{00319                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{00320                     XMLDataManager::readValue(node, attrName, data);}
+\DoxyCodeLine{00321                     \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{00322                     attrValue-\/>setData(data);}
+\DoxyCodeLine{00323                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00324                 \}}
+\DoxyCodeLine{00325                 \textcolor{keywordflow}{case} AttributeType::VECTOR\_BOOL: \{}
+\DoxyCodeLine{00326                     std::vector<\textcolor{keywordtype}{bool}> data;}
+\DoxyCodeLine{00327                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{00328                     XMLDataManager::readValue(node, attrName, data);}
+\DoxyCodeLine{00329                     \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{00330                     attrValue-\/>setData(data);}
+\DoxyCodeLine{00331                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00332                 \}}
+\DoxyCodeLine{00333                 \textcolor{keywordflow}{case} AttributeType::VEC2: \{}
+\DoxyCodeLine{00334                     glm::vec2 data;}
+\DoxyCodeLine{00335                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{00336                     XMLDataManager::readValue(node, attrName, data);}
+\DoxyCodeLine{00337                     \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{00338                     attrValue-\/>setData(data);}
+\DoxyCodeLine{00339                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00340                 \}}
+\DoxyCodeLine{00341                 \textcolor{keywordflow}{case} AttributeType::VECTOR\_VEC2: \{}
+\DoxyCodeLine{00342                     std::vector<glm::vec2> data;}
+\DoxyCodeLine{00343                     \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{00344                     XMLDataManager::readValue(node, attrName, data);}
+\DoxyCodeLine{00345                     \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{00346                     attrValue-\/>setData(data);}
+\DoxyCodeLine{00347                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00348                 \}}
+\DoxyCodeLine{00349                 \textcolor{keywordflow}{case} AttributeType::SCRIPT: \{}
+\DoxyCodeLine{00350                     std::string path;}
+\DoxyCodeLine{00351                     \textcolor{comment}{// Get the string interpretation}}
+\DoxyCodeLine{00352                     XMLDataManager::readValue(node, attrName, path);}
+\DoxyCodeLine{00353                     \textcolor{comment}{// Load the script.}}
+\DoxyCodeLine{00354                     LuaScript scr = ResourceManager::loadScript(path);}
+\DoxyCodeLine{00355                     \textcolor{comment}{// Set the data.}}
+\DoxyCodeLine{00356                     attrValue-\/>setData(scr);}
+\DoxyCodeLine{00357                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00358                 \}}
+\DoxyCodeLine{00359                 \textcolor{keywordflow}{case} AttributeType::TEXTURE: \{}
+\DoxyCodeLine{00360                     std::string path;}
+\DoxyCodeLine{00361                     \textcolor{comment}{// Get the path}}
+\DoxyCodeLine{00362                     XMLDataManager::readValue(node, attrName, path);}
+\DoxyCodeLine{00363 }
+\DoxyCodeLine{00364                     Texture tex;}
+\DoxyCodeLine{00365 }
+\DoxyCodeLine{00366                     \textcolor{keywordflow}{if}(path == \textcolor{stringliteral}{""}) \{}
+\DoxyCodeLine{00367                         \textcolor{comment}{// The data isn't available -\/ default to an empty texture}}
+\DoxyCodeLine{00368                     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00369                         \textcolor{comment}{// Just load it!}}
+\DoxyCodeLine{00370                         tex = ResourceManager::loadTexture(path);}
+\DoxyCodeLine{00371                     \}}
+\DoxyCodeLine{00372                     \textcolor{comment}{// Set the data}}
+\DoxyCodeLine{00373                     attrValue-\/>setData(tex);}
+\DoxyCodeLine{00374                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00375                 \}}
+\DoxyCodeLine{00376 }
+\DoxyCodeLine{00377                 \textcolor{keywordflow}{default}: \{}
+\DoxyCodeLine{00378                     throwError(BAREError::XML\_FAILURE, \textcolor{stringliteral}{"Failed to read attribute with type: "} + std::to\_string((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})attrValue-\/>type) + \textcolor{stringliteral}{" of name "} + attrName);}
+\DoxyCodeLine{00379                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00380                 \}}
+\DoxyCodeLine{00381             \};}
+\DoxyCodeLine{00382         \}}
+\DoxyCodeLine{00383 }
+\DoxyCodeLine{00384     \}}
+\DoxyCodeLine{00385 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00386}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a72bb614851475c6510195cd7ebacf67a}{00386}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::write(rapidxml::xml\_document<>* doc)}
+\DoxyCodeLine{00387     \{}
+\DoxyCodeLine{00388         \textcolor{comment}{// RapidXML requires that we allocate the name of the node by their function so it doesn't get cleaned up}}
+\DoxyCodeLine{00389         \textcolor{keywordtype}{char}* allocatedNodeName = doc-\/>allocate\_string(nodeName.c\_str());}
+\DoxyCodeLine{00390 }
+\DoxyCodeLine{00391         \textcolor{comment}{// Now we can actually allocate the node, creating a new one for this data}}
+\DoxyCodeLine{00392         rapidxml::xml\_node<>* node = doc-\/>allocate\_node(rapidxml::node\_element, allocatedNodeName);}
+\DoxyCodeLine{00393         doc-\/>append\_node(node);}
+\DoxyCodeLine{00394 }
+\DoxyCodeLine{00395         \textcolor{comment}{// Write the name and id}}
+\DoxyCodeLine{00396         \{}
+\DoxyCodeLine{00397             \textcolor{comment}{// ID}}
+\DoxyCodeLine{00398             \textcolor{comment}{// First, allocate the value as a c\_string within rapidxml's systems}}
+\DoxyCodeLine{00399             \textcolor{keywordtype}{char}* allocatedValue = doc-\/>allocate\_string(std::to\_string(id).c\_str());}
+\DoxyCodeLine{00400             \textcolor{comment}{// Now allocate the attribute itself as a node-\/ish thing}}
+\DoxyCodeLine{00401             rapidxml::xml\_attribute<>* idAttribute = doc-\/>allocate\_attribute(\textcolor{stringliteral}{"id"}, allocatedValue);}
+\DoxyCodeLine{00402             \textcolor{comment}{// Now actually add the attribute to the node}}
+\DoxyCodeLine{00403             node-\/>append\_attribute(idAttribute);}
+\DoxyCodeLine{00404         \}}
+\DoxyCodeLine{00405 }
+\DoxyCodeLine{00406         \{}
+\DoxyCodeLine{00407             \textcolor{comment}{// Name}}
+\DoxyCodeLine{00408             \textcolor{comment}{// First, allocate the value as a c\_string within rapidxml's systems}}
+\DoxyCodeLine{00409             \textcolor{keywordtype}{char}* allocatedValue = doc-\/>allocate\_string(name.c\_str());}
+\DoxyCodeLine{00410             \textcolor{comment}{// Now allocate the attribute itself as a node-\/ish thing}}
+\DoxyCodeLine{00411             rapidxml::xml\_attribute<>* nameAttribute = doc-\/>allocate\_attribute(\textcolor{stringliteral}{"name"}, allocatedValue);}
+\DoxyCodeLine{00412             \textcolor{comment}{// Now actually add the attribute to the node}}
+\DoxyCodeLine{00413             node-\/>append\_attribute(nameAttribute);}
+\DoxyCodeLine{00414         \}}
+\DoxyCodeLine{00415 }
+\DoxyCodeLine{00416         \textcolor{comment}{// Now we're done with the simple name and id attributes, we need to add child nodes in the same way we loaded them}}
+\DoxyCodeLine{00417         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& attr : m\_attributes) \{}
+\DoxyCodeLine{00418             \textcolor{comment}{// Get some initial stuff}}
+\DoxyCodeLine{00419             std::string attrName = attr.first;}
+\DoxyCodeLine{00420             AttributeBase* attrValue = attr.second;}
+\DoxyCodeLine{00421 }
+\DoxyCodeLine{00422             \textcolor{comment}{// Make sure we aren't re-\/saving stuff we've already done}}
+\DoxyCodeLine{00423             \textcolor{keywordflow}{if}(attrName == \textcolor{stringliteral}{"name"} || attrName == \textcolor{stringliteral}{"id"})}
+\DoxyCodeLine{00424                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00425 }
+\DoxyCodeLine{00426             \textcolor{comment}{// We don't even really need to interpret (exterpret?) the value, as converting from data to a string is defined by the actual attribute, not by the type.}}
+\DoxyCodeLine{00427 }
+\DoxyCodeLine{00428             \textcolor{comment}{// Actually allocate that value, as well as the attribute's name}}
+\DoxyCodeLine{00429             \textcolor{keyword}{const} \textcolor{keywordtype}{char}* allocatedValue = doc-\/>allocate\_string(attrValue-\/>getDataString().c\_str());}
+\DoxyCodeLine{00430             \textcolor{keyword}{const} \textcolor{keywordtype}{char}* allocatedName = doc-\/>allocate\_string(attrName.c\_str());}
+\DoxyCodeLine{00431 }
+\DoxyCodeLine{00432             \textcolor{comment}{// Allocate the node}}
+\DoxyCodeLine{00433             rapidxml::xml\_node<>* allocatedNode = doc-\/>allocate\_node(rapidxml::node\_element, allocatedName, allocatedValue);}
+\DoxyCodeLine{00434 }
+\DoxyCodeLine{00435             \textcolor{comment}{// Actually add the node}}
+\DoxyCodeLine{00436             node-\/>append\_node(allocatedNode);}
+\DoxyCodeLine{00437         \}}
+\DoxyCodeLine{00438 }
+\DoxyCodeLine{00439         \textcolor{comment}{// Now we've written all of the XML data to the document!}}
+\DoxyCodeLine{00440     \}}
+\DoxyCodeLine{00441 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00442}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}{00442}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}{unordered\_map}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}{string}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}{AttributeBase}}*> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}{getAttributes}}()}
+\DoxyCodeLine{00443     \{}
+\DoxyCodeLine{00444         \textcolor{keywordflow}{return} m\_attributes;}
+\DoxyCodeLine{00445     \}}
+\DoxyCodeLine{00446 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00447}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a15c8f82112e0e0a89eb255aacb7cb801}{00447}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a15c8f82112e0e0a89eb255aacb7cb801}{addAttribute}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}* attr)}
+\DoxyCodeLine{00448     \{}
+\DoxyCodeLine{00449         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}[attr\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_af991938222f7eb1facde0b371ece23ad}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_af991938222f7eb1facde0b371ece23ad}{name}}] = attr;}
+\DoxyCodeLine{00450     \}}
+\DoxyCodeLine{00451 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00452}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6}{00452}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::addAttributes(std::vector<AttributeBase*> attrs)}
+\DoxyCodeLine{00453     \{}
+\DoxyCodeLine{00454         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} a : attrs) \{}
+\DoxyCodeLine{00455             addAttribute(a);}
+\DoxyCodeLine{00456         \}}
+\DoxyCodeLine{00457     \}}
+\DoxyCodeLine{00458 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00459}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a37ea76284f5f4fd4367499f329c7d2fb}{00459}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a37ea76284f5f4fd4367499f329c7d2fb}{cloneType}}()}
+\DoxyCodeLine{00460     \{}
+\DoxyCodeLine{00461         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{)}};}
+\DoxyCodeLine{00462     \}}
+\DoxyCodeLine{00463 }
+\DoxyCodeLine{00464 \}}
 
 \end{DoxyCode}

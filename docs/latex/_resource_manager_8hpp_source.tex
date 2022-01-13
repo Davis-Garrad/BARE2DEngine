@@ -6,104 +6,137 @@
 \DoxyCodeLine{00002 }
 \DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_cache_8hpp}{"Cache.hpp"}}}
 \DoxyCodeLine{00004 }
-\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_texture_8hpp}{"Texture.hpp"}}}
-\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_mutable_texture_8hpp}{"MutableTexture.hpp"}}}
-\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_sound_8hpp}{"Sound.hpp"}}}
-\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_lua_script_8hpp}{"LuaScript.hpp"}}}
-\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_font_8hpp}{"Font.hpp"}}}
-\DoxyCodeLine{00010 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_shader_program_8hpp}{"ShaderProgram.hpp"}}}
-\DoxyCodeLine{00011 }
-\DoxyCodeLine{00012 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{00013 }
-\DoxyCodeLine{00014     \textcolor{comment}{/**}}
-\DoxyCodeLine{00015 \textcolor{comment}{     * @class ResourceManager}}
-\DoxyCodeLine{00016 \textcolor{comment}{     * @brief The resource manager manages resources. Groundbreaking news, I know. In short, the resource manager loads and manages Textures, Sounds, Scripts, Fonts, etc.}}
-\DoxyCodeLine{00017 \textcolor{comment}{     */}}
-\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00018}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager}{00018}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager}{ResourceManager}}}
-\DoxyCodeLine{00019     \{}
-\DoxyCodeLine{00020     \textcolor{keyword}{public}:}
-\DoxyCodeLine{00021         \textcolor{comment}{/**}}
-\DoxyCodeLine{00022 \textcolor{comment}{         * @brief Loads some shaders. Combines both to give a full shader program. Does not cache.}}
-\DoxyCodeLine{00023 \textcolor{comment}{         * @param vertShaderPath The path to the vertex shader}}
-\DoxyCodeLine{00024 \textcolor{comment}{         * @param fragShaderPath The path to the fragment shader}}
-\DoxyCodeLine{00025 \textcolor{comment}{         * @return A GLSL program of type ShaderProgram instance which is the compiled version of vertShader + fragShader.}}
-\DoxyCodeLine{00026 \textcolor{comment}{         */}}
-\DoxyCodeLine{00027         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a00ef658172786a81106218cc6035bc13}{loadShaders}}(std::string\& vertShaderPath, std::string\& fragShaderPath);}
-\DoxyCodeLine{00028 }
-\DoxyCodeLine{00029         \textcolor{comment}{/**}}
-\DoxyCodeLine{00030 \textcolor{comment}{         * @brief Loads some shaders from their source. Does not cache}}
-\DoxyCodeLine{00031 \textcolor{comment}{         * @param vertShaderSource The source to compile from.}}
-\DoxyCodeLine{00032 \textcolor{comment}{         * @param fragShaderSource The source to compile from.}}
-\DoxyCodeLine{00033 \textcolor{comment}{         * @return }}
-\DoxyCodeLine{00034 \textcolor{comment}{         */}}
-\DoxyCodeLine{00035         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a5dbae5c36f78ce4feb0ec3c0b8d1728a}{loadShadersFromSource}}(std::string\& vertShaderSource, std::string\& fragShaderSource);}
-\DoxyCodeLine{00036 }
-\DoxyCodeLine{00037         \textcolor{comment}{/**}}
-\DoxyCodeLine{00038 \textcolor{comment}{         * @brief Loads a texture if it isn't already in the cache. }}
-\DoxyCodeLine{00039 \textcolor{comment}{         * @param texturePath A path to the texture to be loaded, including the actual name of the texture ("assets/texture.png" for example)}}
-\DoxyCodeLine{00040 \textcolor{comment}{         * @return A copy of the texture, whether it was just loaded or it was taken from the cache.}}
-\DoxyCodeLine{00041 \textcolor{comment}{         */}}
-\DoxyCodeLine{00042         \textcolor{keyword}{static} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af4bb03a60f5fdb3ec94064e17c84e823}{loadTexture}}(std::string\& texturePath);}
-\DoxyCodeLine{00043 }
-\DoxyCodeLine{00044         \textcolor{comment}{/**}}
-\DoxyCodeLine{00045 \textcolor{comment}{         * @brief Sets the data of some created texture. This can be used to create "dummy" textures for use in FBOs, shaders, etc. Creates a GL texture in the context if one doesn't already exist.}}
-\DoxyCodeLine{00046 \textcolor{comment}{         * @param textureName The "filepath" of the texture. This is used to identify the texture in the cache when loadTexture is called.}}
-\DoxyCodeLine{00047 \textcolor{comment}{         * @param texture The data for the mutable texture.}}
-\DoxyCodeLine{00048 \textcolor{comment}{         * @return A pointer to the mutable texture.}}
-\DoxyCodeLine{00049 \textcolor{comment}{         */}}
-\DoxyCodeLine{00050         \textcolor{keyword}{static} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_mutable_texture}{MutableTexture}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a7cd7560c57b0e8a354aa8ce362eb55f3}{setMutableTexture}}(std::string\& textureName, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}\& texture);}
-\DoxyCodeLine{00051 }
-\DoxyCodeLine{00052         \textcolor{comment}{/**}}
-\DoxyCodeLine{00053 \textcolor{comment}{         * @brief Gets a texture from the cache, or creates a new, empty texture}}
-\DoxyCodeLine{00054 \textcolor{comment}{         * @param textureName The "filepath" of the texture, this is used to identify the texture in the cache.}}
-\DoxyCodeLine{00055 \textcolor{comment}{         * @return A pointer to the mutable texture.}}
-\DoxyCodeLine{00056 \textcolor{comment}{         */}}
-\DoxyCodeLine{00057         \textcolor{keyword}{static} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_mutable_texture}{MutableTexture}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a9cc8ee112230160452a17bebd7d7b096}{loadMutableTexture}}(std::string\& textureName);}
-\DoxyCodeLine{00058 }
-\DoxyCodeLine{00059         \textcolor{comment}{/**}}
-\DoxyCodeLine{00060 \textcolor{comment}{         * @brief Loads a sound from the filepath given from the cache or from the file if the cache doesn't contain it.}}
-\DoxyCodeLine{00061 \textcolor{comment}{         * @param soundPath The path to load the sound from.}}
-\DoxyCodeLine{00062 \textcolor{comment}{         * @return An instance of the sound.}}
-\DoxyCodeLine{00063 \textcolor{comment}{         */}}
-\DoxyCodeLine{00064         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_sound}{Sound}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ad6a90b54eb05009c05cdfd3794e69855}{loadSound}}(std::string\& soundPath);}
-\DoxyCodeLine{00065 }
-\DoxyCodeLine{00066         \textcolor{comment}{/**}}
-\DoxyCodeLine{00067 \textcolor{comment}{         * @brief Loads a script from the filepath given from the cache or from the file if it's not already in the cache.}}
-\DoxyCodeLine{00068 \textcolor{comment}{         * @param scriptPath The path to load the script from.}}
-\DoxyCodeLine{00069 \textcolor{comment}{         * @return An instance of the script.}}
-\DoxyCodeLine{00070 \textcolor{comment}{         */}}
-\DoxyCodeLine{00071         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aa40f3016ed65df8b01ce2608349ee61b}{loadScript}}(std::string\& scriptPath);}
-\DoxyCodeLine{00072 }
-\DoxyCodeLine{00073         \textcolor{comment}{/**}}
-\DoxyCodeLine{00074 \textcolor{comment}{         * @brief Creates and caches a script from the given source code.}}
-\DoxyCodeLine{00075 \textcolor{comment}{         * @param scriptSource The actual source code (Lua) of the script}}
-\DoxyCodeLine{00076 \textcolor{comment}{         * @param name The name of the script}}
-\DoxyCodeLine{00077 \textcolor{comment}{         * @return The name of the script, so that it can be loaded from the regular cache.}}
-\DoxyCodeLine{00078 \textcolor{comment}{         */}}
-\DoxyCodeLine{00079         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ae8cf04384771d20f7a636c4757f722c2}{loadScriptFromSource}}(std::string\& scriptSource, std::string name);}
-\DoxyCodeLine{00080 }
-\DoxyCodeLine{00081         \textcolor{comment}{/**}}
-\DoxyCodeLine{00082 \textcolor{comment}{         * @brief Loads a font to the cache.}}
-\DoxyCodeLine{00083 \textcolor{comment}{         * @param fontPath The path to load the font from}}
-\DoxyCodeLine{00084 \textcolor{comment}{         * @param size The size of the font to load it as.}}
-\DoxyCodeLine{00085 \textcolor{comment}{         * @return An instance of the font.}}
-\DoxyCodeLine{00086 \textcolor{comment}{         */}}
-\DoxyCodeLine{00087         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a779c084be78d6e03a8083cb109b85509}{loadFont}}(std::string\& fontPath, \textcolor{keywordtype}{int} size);}
-\DoxyCodeLine{00088 }
-\DoxyCodeLine{00089         \textcolor{comment}{/**}}
-\DoxyCodeLine{00090 \textcolor{comment}{         * @brief Clears the various caches. This is useful for debugging.}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_font_8hpp}{"Font.hpp"}}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_lua_script_8hpp}{"LuaScript.hpp"}}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_music_8hpp}{"Music.hpp"}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_mutable_texture_8hpp}{"MutableTexture.hpp"}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_shader_program_8hpp}{"ShaderProgram.hpp"}}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_sound_8hpp}{"Sound.hpp"}}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_texture_8hpp}{"Texture.hpp"}}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}}
+\DoxyCodeLine{00014 \{}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016     \textcolor{comment}{/**}}
+\DoxyCodeLine{00017 \textcolor{comment}{     * @class ResourceManager}}
+\DoxyCodeLine{00018 \textcolor{comment}{     * @brief The resource manager manages resources. Groundbreaking news, I know. In short, the resource manager loads and}}
+\DoxyCodeLine{00019 \textcolor{comment}{     * manages Textures, Sounds, Scripts, Fonts, etc.}}
+\DoxyCodeLine{00020 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00021}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager}{00021}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager}{ResourceManager}}}
+\DoxyCodeLine{00022     \{}
+\DoxyCodeLine{00023     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024         \textcolor{comment}{/**}}
+\DoxyCodeLine{00025 \textcolor{comment}{         * @brief Loads some shaders. Combines both to give a full shader program. Does not cache.}}
+\DoxyCodeLine{00026 \textcolor{comment}{         * @param vertShaderPath The path to the vertex shader}}
+\DoxyCodeLine{00027 \textcolor{comment}{         * @param fragShaderPath The path to the fragment shader}}
+\DoxyCodeLine{00028 \textcolor{comment}{         * @return A GLSL program of type ShaderProgram instance which is the compiled version of vertShader + fragShader.}}
+\DoxyCodeLine{00029 \textcolor{comment}{         */}}
+\DoxyCodeLine{00030         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a00ef658172786a81106218cc6035bc13}{loadShaders}}(std::string\& vertShaderPath, std::string\& fragShaderPath);}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032         \textcolor{comment}{/**}}
+\DoxyCodeLine{00033 \textcolor{comment}{         * @brief Loads some shaders from their source. Does not cache}}
+\DoxyCodeLine{00034 \textcolor{comment}{         * @param vertShaderSource The source to compile from.}}
+\DoxyCodeLine{00035 \textcolor{comment}{         * @param fragShaderSource The source to compile from.}}
+\DoxyCodeLine{00036 \textcolor{comment}{         * @return}}
+\DoxyCodeLine{00037 \textcolor{comment}{         */}}
+\DoxyCodeLine{00038         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a5dbae5c36f78ce4feb0ec3c0b8d1728a}{loadShadersFromSource}}(std::string\& vertShaderSource, std::string\& fragShaderSource);}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040         \textcolor{comment}{/**}}
+\DoxyCodeLine{00041 \textcolor{comment}{         * @brief Loads a texture if it isn't already in the cache.}}
+\DoxyCodeLine{00042 \textcolor{comment}{         * @param texturePath A path to the texture to be loaded, including the actual name of the texture}}
+\DoxyCodeLine{00043 \textcolor{comment}{         * ("assets/texture.png" for example)}}
+\DoxyCodeLine{00044 \textcolor{comment}{         * @return A copy of the texture, whether it was just loaded or it was taken from the cache.}}
+\DoxyCodeLine{00045 \textcolor{comment}{         */}}
+\DoxyCodeLine{00046         \textcolor{keyword}{static} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af4bb03a60f5fdb3ec94064e17c84e823}{loadTexture}}(std::string\& texturePath);}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048         \textcolor{comment}{/**}}
+\DoxyCodeLine{00049 \textcolor{comment}{         * @brief Sets the data of some created texture. This can be used to create "dummy" textures for use in FBOs,}}
+\DoxyCodeLine{00050 \textcolor{comment}{         * shaders, etc. Creates a GL texture in the context if one doesn't already exist.}}
+\DoxyCodeLine{00051 \textcolor{comment}{         * @param textureName The "filepath" of the texture. This is used to identify the texture in the cache when}}
+\DoxyCodeLine{00052 \textcolor{comment}{         * loadTexture is called.}}
+\DoxyCodeLine{00053 \textcolor{comment}{         * @param texture The data for the mutable texture.}}
+\DoxyCodeLine{00054 \textcolor{comment}{         * @return A pointer to the mutable texture.}}
+\DoxyCodeLine{00055 \textcolor{comment}{         */}}
+\DoxyCodeLine{00056         \textcolor{keyword}{static} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_mutable_texture}{MutableTexture}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a7cd7560c57b0e8a354aa8ce362eb55f3}{setMutableTexture}}(std::string\& textureName, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}\& texture);}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058         \textcolor{comment}{/**}}
+\DoxyCodeLine{00059 \textcolor{comment}{         * @brief Gets a texture from the cache, or creates a new, empty texture}}
+\DoxyCodeLine{00060 \textcolor{comment}{         * @param textureName The "filepath" of the texture, this is used to identify the texture in the cache.}}
+\DoxyCodeLine{00061 \textcolor{comment}{         * @return A pointer to the mutable texture.}}
+\DoxyCodeLine{00062 \textcolor{comment}{         */}}
+\DoxyCodeLine{00063         \textcolor{keyword}{static} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_mutable_texture}{MutableTexture}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a9cc8ee112230160452a17bebd7d7b096}{loadMutableTexture}}(std::string\& textureName);}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065         \textcolor{comment}{/**}}
+\DoxyCodeLine{00066 \textcolor{comment}{         * @brief Loads a sound from the filepath given from the cache or from the file if the cache doesn't contain it.}}
+\DoxyCodeLine{00067 \textcolor{comment}{         * @param soundPath The path to load the sound from.}}
+\DoxyCodeLine{00068 \textcolor{comment}{         * @return An instance of the sound.}}
+\DoxyCodeLine{00069 \textcolor{comment}{         */}}
+\DoxyCodeLine{00070         \textcolor{keyword}{static} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound}{Sound}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ad6a90b54eb05009c05cdfd3794e69855}{loadSound}}(std::string\& soundPath);}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{00072         \textcolor{comment}{/**}}
+\DoxyCodeLine{00073 \textcolor{comment}{         * @brief Loads some music from the filepath given from the cache or from the file if the cache doesn't contain it.}}
+\DoxyCodeLine{00074 \textcolor{comment}{         * @param musicPath The path to load the music from}}
+\DoxyCodeLine{00075 \textcolor{comment}{         * @return An instance of the music.}}
+\DoxyCodeLine{00076 \textcolor{comment}{         */}}
+\DoxyCodeLine{00077         \textcolor{keyword}{static} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music}{Music}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a5d3afd3f5800a9a502a2a1e5311a513a}{loadMusic}}(std::string\& musicPath);}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079         \textcolor{comment}{/**}}
+\DoxyCodeLine{00080 \textcolor{comment}{         * @brief Loads a script from the filepath given from the cache or from the file if it's not already in the cache.}}
+\DoxyCodeLine{00081 \textcolor{comment}{         * @param scriptPath The path to load the script from.}}
+\DoxyCodeLine{00082 \textcolor{comment}{         * @return An instance of the script.}}
+\DoxyCodeLine{00083 \textcolor{comment}{         */}}
+\DoxyCodeLine{00084         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aa40f3016ed65df8b01ce2608349ee61b}{loadScript}}(std::string\& scriptPath);}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086         \textcolor{comment}{/**}}
+\DoxyCodeLine{00087 \textcolor{comment}{         * @brief Creates and caches a script from the given source code.}}
+\DoxyCodeLine{00088 \textcolor{comment}{         * @param scriptSource The actual source code (Lua) of the script}}
+\DoxyCodeLine{00089 \textcolor{comment}{         * @param name The name of the script}}
+\DoxyCodeLine{00090 \textcolor{comment}{         * @return The name of the script, so that it can be loaded from the regular cache.}}
 \DoxyCodeLine{00091 \textcolor{comment}{         */}}
-\DoxyCodeLine{00092         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_acbc049762c33d9f98ddbc5add7e20174}{clearCaches}}();}
+\DoxyCodeLine{00092         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ae8cf04384771d20f7a636c4757f722c2}{loadScriptFromSource}}(std::string\& scriptSource, std::string name);}
 \DoxyCodeLine{00093 }
-\DoxyCodeLine{00094     \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00095}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aef356f0e3af2856831be8261e709c123}{00095}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aef356f0e3af2856831be8261e709c123}{m\_textures}};}
-\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00096}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af37a2453e77e3be960fff4aa2b2da8ae}{00096}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_mutable_texture}{MutableTexture}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af37a2453e77e3be960fff4aa2b2da8ae}{m\_mutableTextures}};}
-\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00097}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aab37254031dcd1edbccf620db0a112ec}{00097}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_sound}{Sound}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aab37254031dcd1edbccf620db0a112ec}{m\_sounds}};}
-\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00098}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ada3e87411dbccc8c5628c7f7d89e2f68}{00098}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ada3e87411dbccc8c5628c7f7d89e2f68}{m\_scripts}};}
-\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00099}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af110c53a19953db73ece62790759e049}{00099}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af110c53a19953db73ece62790759e049}{m\_fonts}};}
-\DoxyCodeLine{00100 }
-\DoxyCodeLine{00101     \};}
-\DoxyCodeLine{00102 }
-\DoxyCodeLine{00103 \}}
+\DoxyCodeLine{00094         \textcolor{comment}{/**}}
+\DoxyCodeLine{00095 \textcolor{comment}{         * @brief Loads a font to the cache.}}
+\DoxyCodeLine{00096 \textcolor{comment}{         * @param fontPath The path to load the font from}}
+\DoxyCodeLine{00097 \textcolor{comment}{         * @param size The size of the font to load it as.}}
+\DoxyCodeLine{00098 \textcolor{comment}{         * @return An instance of the font.}}
+\DoxyCodeLine{00099 \textcolor{comment}{         */}}
+\DoxyCodeLine{00100         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a779c084be78d6e03a8083cb109b85509}{loadFont}}(std::string\& fontPath, \textcolor{keywordtype}{int} size);}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{00102         \textcolor{comment}{/**}}
+\DoxyCodeLine{00103 \textcolor{comment}{         * @brief Clears the various caches. This is useful for debugging.}}
+\DoxyCodeLine{00104 \textcolor{comment}{         */}}
+\DoxyCodeLine{00105         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_acbc049762c33d9f98ddbc5add7e20174}{clearCaches}}();}
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{00107         \textcolor{comment}{/**}}
+\DoxyCodeLine{00108 \textcolor{comment}{         * @brief Changes the prefix that will be prepended to all paths when resources are loaded.}}
+\DoxyCodeLine{00109 \textcolor{comment}{         * @param prefix The path to prepend on any load.}}
+\DoxyCodeLine{00110 \textcolor{comment}{         */}}
+\DoxyCodeLine{00111         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ab6476c13f6b092cbda16abcd0d995a39}{setAssetsPathPrefix}}(std::string prefix);}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113         \textcolor{comment}{/**}}
+\DoxyCodeLine{00114 \textcolor{comment}{         * @brief Returns the assets path prefix. Pretty simple.}}
+\DoxyCodeLine{00115 \textcolor{comment}{         */}}
+\DoxyCodeLine{00116         \textcolor{keyword}{static} std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a1a07f9d4bebd35321669d3fb0049962e}{getAssetsPathPrefix}}();}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118         \textcolor{comment}{/**}}
+\DoxyCodeLine{00119 \textcolor{comment}{         * @brief Changes the prefix that will be prepended to all texture paths when they're loaded.}}
+\DoxyCodeLine{00120 \textcolor{comment}{         * @param prefix The path to prepend on texture loads.}}
+\DoxyCodeLine{00121 \textcolor{comment}{         */}}
+\DoxyCodeLine{00122         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ad240c178b1286f53560ead6b41e7e58b}{setTexturePathPrefix}}(std::string prefix);}
+\DoxyCodeLine{00123 }
+\DoxyCodeLine{00124     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00125}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a3648e65a361380d80f01a911df867e7b}{00125}}         \textcolor{keyword}{static} std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a3648e65a361380d80f01a911df867e7b}{m\_assetsPathPrefix}};}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00126}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ae2ce555c4bd7d242b06c28a7e0e62911}{00126}}         \textcolor{keyword}{static} std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ae2ce555c4bd7d242b06c28a7e0e62911}{m\_texturePathPrefix}};}
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00128}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aef356f0e3af2856831be8261e709c123}{00128}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aef356f0e3af2856831be8261e709c123}{m\_textures}};}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00129}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af37a2453e77e3be960fff4aa2b2da8ae}{00129}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_mutable_texture}{MutableTexture}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af37a2453e77e3be960fff4aa2b2da8ae}{m\_mutableTextures}};}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00130}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aab37254031dcd1edbccf620db0a112ec}{00130}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound}{Sound}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aab37254031dcd1edbccf620db0a112ec}{m\_sounds}};}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00131}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a80ad48866e1f1e167e12979dc61df541}{00131}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music}{Music}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_a80ad48866e1f1e167e12979dc61df541}{m\_music}};}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00132}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ada3e87411dbccc8c5628c7f7d89e2f68}{00132}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_ada3e87411dbccc8c5628c7f7d89e2f68}{m\_scripts}};}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8hpp_source_l00133}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af110c53a19953db73ece62790759e049}{00133}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af110c53a19953db73ece62790759e049}{m\_fonts}};}
+\DoxyCodeLine{00134     \};}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136 \}}
 
 \end{DoxyCode}

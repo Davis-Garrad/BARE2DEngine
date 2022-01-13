@@ -1,7 +1,9 @@
 var class_b_a_r_e2_d_1_1_resource_manager =
 [
     [ "clearCaches", "class_b_a_r_e2_d_1_1_resource_manager.html#acbc049762c33d9f98ddbc5add7e20174", null ],
+    [ "getAssetsPathPrefix", "class_b_a_r_e2_d_1_1_resource_manager.html#a1a07f9d4bebd35321669d3fb0049962e", null ],
     [ "loadFont", "class_b_a_r_e2_d_1_1_resource_manager.html#a779c084be78d6e03a8083cb109b85509", null ],
+    [ "loadMusic", "class_b_a_r_e2_d_1_1_resource_manager.html#a5d3afd3f5800a9a502a2a1e5311a513a", null ],
     [ "loadMutableTexture", "class_b_a_r_e2_d_1_1_resource_manager.html#a9cc8ee112230160452a17bebd7d7b096", null ],
     [ "loadScript", "class_b_a_r_e2_d_1_1_resource_manager.html#aa40f3016ed65df8b01ce2608349ee61b", null ],
     [ "loadScriptFromSource", "class_b_a_r_e2_d_1_1_resource_manager.html#ae8cf04384771d20f7a636c4757f722c2", null ],
@@ -9,10 +11,15 @@ var class_b_a_r_e2_d_1_1_resource_manager =
     [ "loadShadersFromSource", "class_b_a_r_e2_d_1_1_resource_manager.html#a5dbae5c36f78ce4feb0ec3c0b8d1728a", null ],
     [ "loadSound", "class_b_a_r_e2_d_1_1_resource_manager.html#ad6a90b54eb05009c05cdfd3794e69855", null ],
     [ "loadTexture", "class_b_a_r_e2_d_1_1_resource_manager.html#af4bb03a60f5fdb3ec94064e17c84e823", null ],
+    [ "setAssetsPathPrefix", "class_b_a_r_e2_d_1_1_resource_manager.html#ab6476c13f6b092cbda16abcd0d995a39", null ],
     [ "setMutableTexture", "class_b_a_r_e2_d_1_1_resource_manager.html#a7cd7560c57b0e8a354aa8ce362eb55f3", null ],
+    [ "setTexturePathPrefix", "class_b_a_r_e2_d_1_1_resource_manager.html#ad240c178b1286f53560ead6b41e7e58b", null ],
+    [ "m_assetsPathPrefix", "class_b_a_r_e2_d_1_1_resource_manager.html#a3648e65a361380d80f01a911df867e7b", null ],
     [ "m_fonts", "class_b_a_r_e2_d_1_1_resource_manager.html#af110c53a19953db73ece62790759e049", null ],
+    [ "m_music", "class_b_a_r_e2_d_1_1_resource_manager.html#a80ad48866e1f1e167e12979dc61df541", null ],
     [ "m_mutableTextures", "class_b_a_r_e2_d_1_1_resource_manager.html#af37a2453e77e3be960fff4aa2b2da8ae", null ],
     [ "m_scripts", "class_b_a_r_e2_d_1_1_resource_manager.html#ada3e87411dbccc8c5628c7f7d89e2f68", null ],
     [ "m_sounds", "class_b_a_r_e2_d_1_1_resource_manager.html#aab37254031dcd1edbccf620db0a112ec", null ],
+    [ "m_texturePathPrefix", "class_b_a_r_e2_d_1_1_resource_manager.html#ae2ce555c4bd7d242b06c28a7e0e62911", null ],
     [ "m_textures", "class_b_a_r_e2_d_1_1_resource_manager.html#aef356f0e3af2856831be8261e709c123", null ]
 ];

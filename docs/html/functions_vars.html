@@ -108,12 +108,18 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>bottomRight
 : <a class="el" href="class_b_a_r_e2_d_1_1_glyph.html#a7eb374c9033171c455be7e13e135943e">BARE2D::Glyph</a>
 </li>
+<li>bumpmap
+: <a class="el" href="class_b_a_r_e2_d_1_1_bumpy_glyph.html#a3f4fd927de2b4a77d5ed920c69f687fd">BARE2D::BumpyGlyph</a>
+</li>
 </ul>
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
 <li>character
 : <a class="el" href="struct_b_a_r_e2_d_1_1_character_glyph.html#ab82f2c1d291752b4dbee77543af996dc">BARE2D::CharacterGlyph</a>
+</li>
+<li>chunk
+: <a class="el" href="struct_b_a_r_e2_d_1_1_sound.html#a7a7988496f24001a00c9bc9ab435c7f0">BARE2D::Sound</a>
 </li>
 <li>colour
 : <a class="el" href="struct_b_a_r_e2_d_1_1_line.html#ace2c7d8eaddf3ab67ad64bb99dc99bcc">BARE2D::Line</a>
@@ -164,6 +170,9 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 : <a class="el" href="struct_b_a_r_e2_d_1_1_texture.html#a99d41bfc04d894d81e10c5b4d7aed1ab">BARE2D::Texture</a>
 , <a class="el" href="class_b_a_r_e2_d_1_1_x_m_l_data.html#aea06249fd8d84972b44d3407d57e64ed">BARE2D::XMLData</a>
 </li>
+<li>inited
+: <a class="el" href="class_b_a_r_e2_d_1_1_lua_script.html#a85800f148edadb7a6755f1edcc2f3b50">BARE2D::LuaScript</a>
+</li>
 <li>it
 : <a class="el" href="classutf8_1_1iterator.html#ad4a33bf242b0fcaddccec5c86c8bb9e9">utf8::iterator&lt; octet_iterator &gt;</a>
 , <a class="el" href="classutf8_1_1unchecked_1_1iterator.html#af8c8d153c9ffd93e64741a0a34bfc5d5">utf8::unchecked::iterator&lt; octet_iterator &gt;</a>
@@ -186,8 +195,14 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>m_activeTexture
 : <a class="el" href="class_b_a_r_e2_d_1_1_g_l_context.html#a67008edb65b567eddf3b3235495237e0">BARE2D::GLContext</a>
 </li>
+<li>m_assetsPathPrefix
+: <a class="el" href="class_b_a_r_e2_d_1_1_resource_manager.html#a3648e65a361380d80f01a911df867e7b">BARE2D::ResourceManager</a>
+</li>
 <li>m_attributes
 : <a class="el" href="class_b_a_r_e2_d_1_1_x_m_l_data.html#a7ddafc20abc75e8bd0cdd48a5c485052">BARE2D::XMLData</a>
+</li>
+<li>m_batchBumpmaps
+: <a class="el" href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#a34c6156003e155272b59ea39413ecda2">BARE2D::BumpyRenderer</a>
 </li>
 <li>m_batches
 : <a class="el" href="class_b_a_r_e2_d_1_1_renderer.html#a4a5d71addd82c34de80ab86704a4f847">BARE2D::Renderer</a>
@@ -197,7 +212,7 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 </li>
 <li>m_camera
 : <a class="el" href="class_b_a_r_e2_d_1_1_basic_renderer.html#a741e3e451e464391ae3c549ec34866db">BARE2D::BasicRenderer</a>
-, <a class="el" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#acd2e97237d9f55faa5ab75a84e0d5a6c">BARE2D::FBORenderer</a>
+, <a class="el" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a5b85155ebfa175cdabaaf477a854ee54">BARE2D::FBORenderer</a>
 </li>
 <li>m_cameraMatrix
 : <a class="el" href="class_b_a_r_e2_d_1_1_camera2_d.html#ab2f45f0eef736f1f2bae5480f6b07fb5">BARE2D::Camera2D</a>
@@ -225,8 +240,8 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 : <a class="el" href="class_b_a_r_e2_d_1_1_attribute.html#a9bb8d5ea30d35ee697929cea85dd3c83">BARE2D::Attribute&lt; T &gt;</a>
 , <a class="el" href="class_b_a_r_e2_d_1_1_cache.html#add3822402604d86512c684deef926102">BARE2D::Cache&lt; S, T &gt;</a>
 </li>
-<li>m_dataTypes
-: <a class="el" href="class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a1e53bb8af9bf46df94f700f34afab3e2">BARE2D::XMLDataManager</a>
+<li>m_dataTypingFunctions
+: <a class="el" href="class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a3e05e9442cc78303a489fb87ce201abc">BARE2D::XMLDataManager</a>
 </li>
 <li>m_fboID
 : <a class="el" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a5b1ec62a3954d7be5b309ac4a52337d2">BARE2D::FBORenderer</a>
@@ -250,7 +265,7 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 : <a class="el" href="class_b_a_r_e2_d_1_1_window.html#a3a83201dca2b95ea8dc8aa99376e4cd7">BARE2D::Window</a>
 </li>
 <li>m_glyphs
-: <a class="el" href="class_b_a_r_e2_d_1_1_basic_renderer.html#a567a6968871425c9a08cf6187aa3a6e7">BARE2D::BasicRenderer</a>
+: <a class="el" href="class_b_a_r_e2_d_1_1_basic_renderer.html#a6e87400292d586ff1a8d4634856161db">BARE2D::BasicRenderer</a>
 </li>
 <li>m_height
 : <a class="el" href="class_b_a_r_e2_d_1_1_font.html#a7f3cdd798f24430fca6259d97414c3a9">BARE2D::Font</a>
@@ -263,7 +278,8 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 : <a class="el" href="class_b_a_r_e2_d_1_1_app.html#aba62303cc2e4a3d6c7ac27dd0e51a8af">BARE2D::App</a>
 </li>
 <li>m_instance
-: <a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a15472ee784e1eaf1d97876cc3565f477">BARE2D::BARECEGUI</a>
+: <a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a47eceac49f0cecec3daba4e73f3e38d6">BARE2D::AudioManager</a>
+, <a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a15472ee784e1eaf1d97876cc3565f477">BARE2D::BARECEGUI</a>
 , <a class="el" href="class_b_a_r_e2_d_1_1_logger.html#a74de48b60a7ee6f5e099395d00245a6a">BARE2D::Logger</a>
 , <a class="el" href="class_b_a_r_e2_d_1_1_lua_context_manager.html#a16d3c3ad3e54bb72284e982bfdcbab3a">BARE2D::LuaContextManager</a>
 , <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_queue.html#ab5b984d86c2e18f58c086d48e5da8839">BARE2D::LuaScriptQueue</a>
@@ -276,6 +292,9 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 </li>
 <li>m_keyMap
 : <a class="el" href="class_b_a_r_e2_d_1_1_input_manager.html#af0e100d3cdbc27cb0a621404c2e276df">BARE2D::InputManager</a>
+</li>
+<li>m_lastState
+: <a class="el" href="class_b_a_r_e2_d_1_1_camera2_d.html#ae00469b82dba0583ce9d30a787b53c6a">BARE2D::Camera2D</a>
 </li>
 <li>m_lastTime
 : <a class="el" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aa32fb1c941f5296b050622675a1361d4">BARE2D::BARECEGUI</a>
@@ -292,6 +311,9 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>m_masterState
 : <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_engine.html#adb96773e404afca7b5a77a98bda110d8">BARE2D::LuaScriptEngine</a>
 </li>
+<li>m_masterVolume
+: <a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a2f02401ded65dbe776c095339575aabf">BARE2D::AudioManager</a>
+</li>
 <li>m_matrixNeedsUpdate
 : <a class="el" href="class_b_a_r_e2_d_1_1_camera2_d.html#a5fd96de660f005ed4c509e49be04288c">BARE2D::Camera2D</a>
 </li>
@@ -304,8 +326,17 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>m_mouseScrollwheelPosition
 : <a class="el" href="class_b_a_r_e2_d_1_1_input_manager.html#a030b08344dbac5337e6d094f39b815ce">BARE2D::InputManager</a>
 </li>
+<li>m_music
+: <a class="el" href="class_b_a_r_e2_d_1_1_resource_manager.html#a80ad48866e1f1e167e12979dc61df541">BARE2D::ResourceManager</a>
+</li>
+<li>m_musicVolume
+: <a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#aedbbc0903ee931180d6d819248af756c">BARE2D::AudioManager</a>
+</li>
 <li>m_mutableTextures
 : <a class="el" href="class_b_a_r_e2_d_1_1_resource_manager.html#af37a2453e77e3be960fff4aa2b2da8ae">BARE2D::ResourceManager</a>
+</li>
+<li>m_muted
+: <a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a370017c99d2ba0ad7821e939ede67eaf">BARE2D::AudioManager</a>
 </li>
 <li>m_numAttributes
 : <a class="el" href="class_b_a_r_e2_d_1_1_v_a_o.html#a77436d8b9b995f2d47e72320b65641d0">BARE2D::VAO</a>
@@ -314,7 +345,7 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 : <a class="el" href="class_b_a_r_e2_d_1_1_shader_program.html#aba349b96c7229c50431f65d18ee27783">BARE2D::ShaderProgram</a>
 </li>
 <li>m_numTextures
-: <a class="el" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a660594972124533d103708456396000b">BARE2D::FBORenderer</a>
+: <a class="el" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aef32219b7769258d2e2af288d0e71e5d">BARE2D::FBORenderer</a>
 </li>
 <li>m_orthographicMatrix
 : <a class="el" href="class_b_a_r_e2_d_1_1_camera2_d.html#a0c62bc85857ebd1ae9c5cd6e03263191">BARE2D::Camera2D</a>
@@ -322,8 +353,8 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>m_parent
 : <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#abca1c61643424fc2be8f97bfde0e8756">BARE2D::LuaScriptContextWrapper</a>
 </li>
-<li>m_position
-: <a class="el" href="class_b_a_r_e2_d_1_1_camera2_d.html#ab894ee7987ad16b7542da6ae10a4e064">BARE2D::Camera2D</a>
+<li>m_path
+: <a class="el" href="class_b_a_r_e2_d_1_1_lua_script.html#ad2b38a4cdcf661bbf4d44c99bd39dac0">BARE2D::LuaScript</a>
 </li>
 <li>m_previousKeyMap
 : <a class="el" href="class_b_a_r_e2_d_1_1_input_manager.html#a5a44955d49cb077bc8fa663b6f37d81f">BARE2D::InputManager</a>
@@ -345,12 +376,6 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 </li>
 <li>m_remainingDelay
 : <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#a52e40f918a04dcb189d8f2b81a2ef534">BARE2D::LuaScriptContextWrapper</a>
-</li>
-<li>m_scaleX
-: <a class="el" href="class_b_a_r_e2_d_1_1_camera2_d.html#ab76cf34f0ea9d18fb5179789d29ba2d7">BARE2D::Camera2D</a>
-</li>
-<li>m_scaleY
-: <a class="el" href="class_b_a_r_e2_d_1_1_camera2_d.html#aa692d3ea451a4a21140b46bc723a14b9">BARE2D::Camera2D</a>
 </li>
 <li>m_screenHeight
 : <a class="el" href="class_b_a_r_e2_d_1_1_camera2_d.html#aa70fe02352a04303b76801a8546b97c8">BARE2D::Camera2D</a>
@@ -392,11 +417,15 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>m_sounds
 : <a class="el" href="class_b_a_r_e2_d_1_1_resource_manager.html#aab37254031dcd1edbccf620db0a112ec">BARE2D::ResourceManager</a>
 </li>
+<li>m_soundVolume
+: <a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#ace48414811952d078da7d54ac5b437ff">BARE2D::AudioManager</a>
+</li>
 <li>m_startTime
 : <a class="el" href="class_b_a_r_e2_d_1_1_timer.html#a66348a0a0c38584cf2fb0ec6e1af2760">BARE2D::Timer</a>
 </li>
 <li>m_state
-: <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#a78351a99305b579c07feae8a088fbc91">BARE2D::LuaScriptContextWrapper</a>
+: <a class="el" href="class_b_a_r_e2_d_1_1_camera2_d.html#a85c9c0f8da363196b1500219de33c0f4">BARE2D::Camera2D</a>
+, <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#a78351a99305b579c07feae8a088fbc91">BARE2D::LuaScriptContextWrapper</a>
 </li>
 <li>m_storedData
 : <a class="el" href="class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a2de577045a9016c8f7fd538919d6e664">BARE2D::XMLDataManager</a>
@@ -406,6 +435,9 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 </li>
 <li>m_textureIDs
 : <a class="el" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a636af190f493550d7ce629e7ffaf157b">BARE2D::FBORenderer</a>
+</li>
+<li>m_texturePathPrefix
+: <a class="el" href="class_b_a_r_e2_d_1_1_resource_manager.html#ae2ce555c4bd7d242b06c28a7e0e62911">BARE2D::ResourceManager</a>
 </li>
 <li>m_textures
 : <a class="el" href="class_b_a_r_e2_d_1_1_resource_manager.html#aef356f0e3af2856831be8261e709c123">BARE2D::ResourceManager</a>
@@ -446,6 +478,9 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>m_yielded
 : <a class="el" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ae3fe1bea17dbc1d92540d0c73daac702">BARE2D::LuaScriptContextWrapper</a>
 </li>
+<li>music
+: <a class="el" href="struct_b_a_r_e2_d_1_1_music.html#a5f2efbe8587e9f5e8a03492e868cf848">BARE2D::Music</a>
+</li>
 </ul>
 
 
@@ -481,7 +516,8 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 : <a class="el" href="struct_b_a_r_e2_d_1_1_line.html#a166fcac248b6cd23eebbc93d936c1318">BARE2D::Line</a>
 </li>
 <li>position
-: <a class="el" href="struct_b_a_r_e2_d_1_1_vertex.html#a46e6fc6c1a765771603aa8be0d595987">BARE2D::Vertex</a>
+: <a class="el" href="struct_b_a_r_e2_d_1_1_camera_state.html#af826517612ff78fb1e3270f40a6129ed">BARE2D::CameraState</a>
+, <a class="el" href="struct_b_a_r_e2_d_1_1_vertex.html#a46e6fc6c1a765771603aa8be0d595987">BARE2D::Vertex</a>
 </li>
 </ul>
 
@@ -506,6 +542,9 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>scale
+: <a class="el" href="struct_b_a_r_e2_d_1_1_camera_state.html#afd9cc7582150918a69aba72a37c05ae3">BARE2D::CameraState</a>
+</li>
 <li>size
 : <a class="el" href="struct_b_a_r_e2_d_1_1_character_glyph.html#a3244f4ef797c68136c204efe7623183d">BARE2D::CharacterGlyph</a>
 </li>

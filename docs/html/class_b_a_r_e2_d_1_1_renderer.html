@@ -110,11 +110,12 @@ $(document).ready(function(){initNavTree('class_b_a_r_e2_d_1_1_renderer.html',''
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_renderer__inherit__graph.png" border="0" usemap="#_b_a_r_e2_d_1_1_renderer_inherit__map" alt="Inheritance graph"/></div>
 <map name="_b_a_r_e2_d_1_1_renderer_inherit__map" id="_b_a_r_e2_d_1_1_renderer_inherit__map">
-<area shape="rect" title="The renderer class holds some shader program, manages some VBO, some render batch(es),..." alt="" coords="219,5,357,32"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_basic_renderer.html" title=" " alt="" coords="5,80,176,107"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_debug_renderer.html" title=" " alt="" coords="201,80,375,107"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html" title="The FBORenderer represents and manages an entire FrameBufferObject. This allows one to draw entire sc..." alt="" coords="399,80,563,107"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_font_renderer.html" title="The FontRenderer... renders fonts. It is just a very basic extension of the BasicRenderer,..." alt="" coords="9,155,172,181"/>
+<area shape="rect" title="The renderer class holds some shader program, manages some VBO, some render batch(es),..." alt="" coords="321,5,458,32"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_basic_renderer.html" title=" " alt="" coords="107,80,277,107"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_debug_renderer.html" title=" " alt="" coords="302,80,477,107"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html" title="The FBORenderer represents and manages an entire FrameBufferObject. This allows one to draw entire sc..." alt="" coords="501,80,665,107"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_bumpy_renderer.html" title="This is a BasicRenderer, but it includes the usage of bumpmaps. This can be useful for lighting." alt="" coords="5,155,184,181"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_font_renderer.html" title="The FontRenderer... renders fonts. It is just a very basic extension of the BasicRenderer,..." alt="" coords="208,155,371,181"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -148,12 +149,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:addafa95f7a6f451e359d1300031bdde1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_renderer.html#addafa95f7a6f451e359d1300031bdde1">init</a> ()</td></tr>
 <tr class="memdesc:addafa95f7a6f451e359d1300031bdde1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes all necessary bits of the renderer.  <a href="class_b_a_r_e2_d_1_1_renderer.html#addafa95f7a6f451e359d1300031bdde1">More...</a><br /></td></tr>
 <tr class="separator:addafa95f7a6f451e359d1300031bdde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a371f0d8b66a1fecb592b6d8b2b3cb1a0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_renderer.html#a371f0d8b66a1fecb592b6d8b2b3cb1a0">initUniforms</a> ()</td></tr>
+<tr class="memdesc:a371f0d8b66a1fecb592b6d8b2b3cb1a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes all uniforms, such as colour attachments, depth attachments, etc.  <a href="class_b_a_r_e2_d_1_1_renderer.html#a371f0d8b66a1fecb592b6d8b2b3cb1a0">More...</a><br /></td></tr>
+<tr class="separator:a371f0d8b66a1fecb592b6d8b2b3cb1a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62d8bb52afdd8a38f96fe89677e03f53"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_renderer.html#a62d8bb52afdd8a38f96fe89677e03f53">destroy</a> ()</td></tr>
 <tr class="memdesc:a62d8bb52afdd8a38f96fe89677e03f53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees all necessary memory.  <a href="class_b_a_r_e2_d_1_1_renderer.html#a62d8bb52afdd8a38f96fe89677e03f53">More...</a><br /></td></tr>
 <tr class="separator:a62d8bb52afdd8a38f96fe89677e03f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6c7b543d54be3ce30224e21d5606be3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_renderer.html#af6c7b543d54be3ce30224e21d5606be3">render</a> ()</td></tr>
 <tr class="memdesc:af6c7b543d54be3ce30224e21d5606be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actually renders the contents to the screen!  <a href="class_b_a_r_e2_d_1_1_renderer.html#af6c7b543d54be3ce30224e21d5606be3">More...</a><br /></td></tr>
 <tr class="separator:af6c7b543d54be3ce30224e21d5606be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429bc2941f762e04ada60f7a17b46d99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_b_a_r_e2_d_1_1_shader_program.html">ShaderProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_renderer.html#a429bc2941f762e04ada60f7a17b46d99">getShader</a> ()</td></tr>
+<tr class="separator:a429bc2941f762e04ada60f7a17b46d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -203,9 +209,10 @@ Protected Attributes</h2></td></tr>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_renderer_abc605847b99b92971a385206dc75e044_icgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_renderer_abc605847b99b92971a385206dc75e044_icgraph" alt=""/></div>
 <map name="class_b_a_r_e2_d_1_1_renderer_abc605847b99b92971a385206dc75e044_icgraph" id="class_b_a_r_e2_d_1_1_renderer_abc605847b99b92971a385206dc75e044_icgraph">
-<area shape="rect" title=" " alt="" coords="435,13,633,39"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_basic_renderer.html#aad096d241734d1b4e1ea1a2a777ba1a8" title=" " alt="" coords="216,5,387,47"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_font_renderer.html#af949d6b7c070b1b57374109b30c5bf47" title=" " alt="" coords="5,5,168,47"/>
+<area shape="rect" title=" " alt="" coords="451,46,649,73"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_basic_renderer.html#aad096d241734d1b4e1ea1a2a777ba1a8" title=" " alt="" coords="232,39,403,80"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#a87e27c42fb9f184113799f7711a79961" title=" " alt="" coords="5,5,184,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_font_renderer.html#af949d6b7c070b1b57374109b30c5bf47" title=" " alt="" coords="13,71,176,112"/>
 </map>
 </div>
 
@@ -268,14 +275,25 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_renderer_8cpp_source.html#l00015">15</a> of file <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_renderer_8hpp_source.html#l00059">m_batches</a>.</p>
+<p class="reference">References <a class="el" href="_renderer_8hpp_source.html#l00066">m_batches</a>, <a class="el" href="_renderer_8hpp_source.html#l00064">m_shader</a>, and <a class="el" href="_shader_program_8cpp_source.html#l00147">BARE2D::ShaderProgram::use()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00081">BARE2D::FBORenderer::begin()</a>, and <a class="el" href="_debug_renderer_8cpp_source.html#l00091">BARE2D::DebugRenderer::begin()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00115">BARE2D::FBORenderer::begin()</a>, and <a class="el" href="_debug_renderer_8cpp_source.html#l00091">BARE2D::DebugRenderer::begin()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a_cgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a_cgraph" alt=""/></div>
+<map name="class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a_cgraph" id="class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a_cgraph">
+<area shape="rect" title="Clears the necessary vectors, etc. to prepare for draw() calls, etc." alt="" coords="5,5,181,32"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_shader_program.html#a8687213986c6f5633887609e8169b24e" title="Activates this shader program for the renderer to use." alt="" coords="229,5,432,32"/>
+</map>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a_icgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a_icgraph" alt=""/></div>
 <map name="class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a_icgraph" id="class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a_icgraph">
 <area shape="rect" title="Clears the necessary vectors, etc. to prepare for draw() calls, etc." alt="" coords="228,46,404,73"/>
@@ -311,14 +329,14 @@ Protected Attributes</h2></td></tr>
 
 <p>Constructs all of the render batches from data given by, say, draw() calls. </p>
 
-<p>Implemented in <a class="el" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a9594be61040e25fc07f914c005d719ed">BARE2D::DebugRenderer</a>, <a class="el" href="class_b_a_r_e2_d_1_1_basic_renderer.html#a5e1c6ae78270e23c7c8eec7e85fd3d41">BARE2D::BasicRenderer</a>, and <a class="el" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aa6da4902046ce59bb009570f12f0aaaa">BARE2D::FBORenderer</a>.</p>
+<p>Implemented in <a class="el" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a9594be61040e25fc07f914c005d719ed">BARE2D::DebugRenderer</a>, <a class="el" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aa6da4902046ce59bb009570f12f0aaaa">BARE2D::FBORenderer</a>, <a class="el" href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#a0a92a001f43456e84a72c579901311f7">BARE2D::BumpyRenderer</a>, and <a class="el" href="class_b_a_r_e2_d_1_1_basic_renderer.html#a5e1c6ae78270e23c7c8eec7e85fd3d41">BARE2D::BasicRenderer</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_renderer_8cpp_source.html#l00038">render()</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="_renderer_8cpp_source.html#l00060">render()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_renderer_abf344beacb334d74a7c5c2d15815fe4f_icgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_renderer_abf344beacb334d74a7c5c2d15815fe4f_icgraph" alt=""/></div>
 <map name="class_b_a_r_e2_d_1_1_renderer_abf344beacb334d74a7c5c2d15815fe4f_icgraph" id="class_b_a_r_e2_d_1_1_renderer_abf344beacb334d74a7c5c2d15815fe4f_icgraph">
 <area shape="rect" title="Constructs all of the render batches from data given by, say, draw() calls." alt="" coords="235,5,416,47"/>
@@ -355,16 +373,16 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a0e3cc5707a16360dbaf0832058f28b1a">BARE2D::FBORenderer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_renderer_8cpp_source.html#l00032">32</a> of file <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_renderer_8cpp_source.html#l00054">54</a> of file <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_v_a_o_8cpp_source.html#l00033">BARE2D::VAO::destroy()</a>, <a class="el" href="_shader_program_8cpp_source.html#l00161">BARE2D::ShaderProgram::destroy()</a>, <a class="el" href="_renderer_8hpp_source.html#l00057">m_shader</a>, and <a class="el" href="_renderer_8hpp_source.html#l00058">m_vertexArrayObject</a>.</p>
+<p class="reference">References <a class="el" href="_v_a_o_8cpp_source.html#l00033">BARE2D::VAO::destroy()</a>, <a class="el" href="_shader_program_8cpp_source.html#l00172">BARE2D::ShaderProgram::destroy()</a>, <a class="el" href="_renderer_8hpp_source.html#l00064">m_shader</a>, and <a class="el" href="_renderer_8hpp_source.html#l00065">m_vertexArrayObject</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00071">BARE2D::FBORenderer::destroy()</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00104">BARE2D::FBORenderer::destroy()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_renderer_a62d8bb52afdd8a38f96fe89677e03f53_cgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_renderer_a62d8bb52afdd8a38f96fe89677e03f53_cgraph" alt=""/></div>
 <map name="class_b_a_r_e2_d_1_1_renderer_a62d8bb52afdd8a38f96fe89677e03f53_cgraph" id="class_b_a_r_e2_d_1_1_renderer_a62d8bb52afdd8a38f96fe89677e03f53_cgraph">
 <area shape="rect" title="Frees all necessary memory." alt="" coords="5,35,193,61"/>
@@ -373,11 +391,11 @@ Protected Attributes</h2></td></tr>
 <area shape="rect" href="class_b_a_r_e2_d_1_1_v_a_o.html#a6c224737a43f43dbe7c9e25ecd47d1da" title="Unbinds the vao." alt="" coords="464,5,620,32"/>
 </map>
 </div>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_renderer_a62d8bb52afdd8a38f96fe89677e03f53_icgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_renderer_a62d8bb52afdd8a38f96fe89677e03f53_icgraph" alt=""/></div>
 <map name="class_b_a_r_e2_d_1_1_renderer_a62d8bb52afdd8a38f96fe89677e03f53_icgraph" id="class_b_a_r_e2_d_1_1_renderer_a62d8bb52afdd8a38f96fe89677e03f53_icgraph">
 <area shape="rect" title="Frees all necessary memory." alt="" coords="217,13,405,39"/>
@@ -414,7 +432,41 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a4dde75642694aa34aa463bb298cb34cd">BARE2D::FBORenderer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_renderer_8cpp_source.html#l00020">20</a> of file <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_renderer_8cpp_source.html#l00022">22</a> of file <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_renderer_8hpp_source.html#l00064">m_shader</a>, and <a class="el" href="_shader_program_8cpp_source.html#l00160">BARE2D::ShaderProgram::unuse()</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_renderer_a8a07d633d12883604201fd032fbd2cdd_cgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_renderer_a8a07d633d12883604201fd032fbd2cdd_cgraph" alt=""/></div>
+<map name="class_b_a_r_e2_d_1_1_renderer_a8a07d633d12883604201fd032fbd2cdd_cgraph" id="class_b_a_r_e2_d_1_1_renderer_a8a07d633d12883604201fd032fbd2cdd_cgraph">
+<area shape="rect" title="Creates the renderbatches, does necessary stuff before render() call." alt="" coords="5,13,172,39"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_shader_program.html#a7847844b8a2e5ab0677340b47d180841" title="Deactivates this shader program." alt="" coords="220,5,395,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a429bc2941f762e04ada60f7a17b46d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a429bc2941f762e04ada60f7a17b46d99">&#9670;&nbsp;</a></span>getShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_a_r_e2_d_1_1_shader_program.html">ShaderProgram</a> * BARE2D::Renderer::getShader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_renderer_8cpp_source.html#l00094">94</a> of file <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_renderer_8hpp_source.html#l00064">m_shader</a>.</p>
 
 </div>
 </div>
@@ -445,32 +497,83 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_b_a_r_e2_d_1_1_debug_renderer.html#adfa84d84a1525f62c888ecdcdc3e874a">BARE2D::DebugRenderer</a>, <a class="el" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867">BARE2D::FBORenderer</a>, and <a class="el" href="class_b_a_r_e2_d_1_1_basic_renderer.html#aa228c647d7fe74772a4736d51fdb7796">BARE2D::BasicRenderer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_renderer_8cpp_source.html#l00024">24</a> of file <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_renderer_8cpp_source.html#l00027">27</a> of file <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_v_a_o_8cpp_source.html#l00014">BARE2D::VAO::init()</a>, and <a class="el" href="_renderer_8hpp_source.html#l00058">m_vertexArrayObject</a>.</p>
+<p class="reference">References <a class="el" href="_shader_program_8cpp_source.html#l00141">BARE2D::ShaderProgram::bindFragOutputLocation()</a>, <a class="el" href="_v_a_o_8cpp_source.html#l00014">BARE2D::VAO::init()</a>, <a class="el" href="_renderer_8cpp_source.html#l00050">initUniforms()</a>, <a class="el" href="_renderer_8hpp_source.html#l00064">m_shader</a>, <a class="el" href="_renderer_8hpp_source.html#l00065">m_vertexArrayObject</a>, <a class="el" href="_shader_program_8cpp_source.html#l00160">BARE2D::ShaderProgram::unuse()</a>, and <a class="el" href="_shader_program_8cpp_source.html#l00147">BARE2D::ShaderProgram::use()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_basic_renderer_8cpp_source.html#l00015">BARE2D::BasicRenderer::init()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00031">BARE2D::FBORenderer::init()</a>, and <a class="el" href="_debug_renderer_8cpp_source.html#l00078">BARE2D::DebugRenderer::init()</a>.</p>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="_basic_renderer_8cpp_source.html#l00015">BARE2D::BasicRenderer::init()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00046">BARE2D::FBORenderer::init()</a>, and <a class="el" href="_debug_renderer_8cpp_source.html#l00078">BARE2D::DebugRenderer::init()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1_cgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1_cgraph" alt=""/></div>
 <map name="class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1_cgraph" id="class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1_cgraph">
-<area shape="rect" title="Initializes all necessary bits of the renderer." alt="" coords="5,31,168,57"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_v_a_o.html#a95e6c292d64ff927870783e464ad49cd" title="Initializes the necessary components, combining the VBO and VAO." alt="" coords="216,31,351,57"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_v_a_o.html#a61c99f69bf5feb2ac95189381a48e638" title="Binds this vertex array object." alt="" coords="405,5,548,32"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_v_a_o.html#a6c224737a43f43dbe7c9e25ecd47d1da" title="Unbinds the vao." alt="" coords="399,56,555,83"/>
+<area shape="rect" title="Initializes all necessary bits of the renderer." alt="" coords="5,122,168,149"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_shader_program.html#a05a721b577417d9d28bf0cec20896e16" title="A call to glBindFragDataLocation() &#45; Causes an output variable of the fragment shader to output to a ..." alt="" coords="236,5,411,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_v_a_o.html#a95e6c292d64ff927870783e464ad49cd" title="Initializes the necessary components, combining the VBO and VAO." alt="" coords="256,71,391,98"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_renderer.html#a371f0d8b66a1fecb592b6d8b2b3cb1a0" title="Initializes all uniforms, such as colour attachments, depth attachments, etc." alt="" coords="216,122,431,149"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_shader_program.html#a7847844b8a2e5ab0677340b47d180841" title="Deactivates this shader program." alt="" coords="236,173,411,215"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_shader_program.html#a8687213986c6f5633887609e8169b24e" title="Activates this shader program for the renderer to use." alt="" coords="222,239,425,266"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_v_a_o.html#a61c99f69bf5feb2ac95189381a48e638" title="Binds this vertex array object." alt="" coords="485,46,628,73"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_v_a_o.html#a6c224737a43f43dbe7c9e25ecd47d1da" title="Unbinds the vao." alt="" coords="479,97,635,123"/>
 </map>
 </div>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1_icgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1_icgraph" alt=""/></div>
 <map name="class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1_icgraph" id="class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1_icgraph">
 <area shape="rect" title="Initializes all necessary bits of the renderer." alt="" coords="228,78,391,105"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_basic_renderer.html#aa228c647d7fe74772a4736d51fdb7796" title="Initializes all necessary bits of the renderer." alt="" coords="7,5,178,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="11,71,175,112"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_debug_renderer.html#adfa84d84a1525f62c888ecdcdc3e874a" title="Initializes with very rudimentary shaders (hardcoded), adds vertex attributes." alt="" coords="5,136,180,177"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a371f0d8b66a1fecb592b6d8b2b3cb1a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a371f0d8b66a1fecb592b6d8b2b3cb1a0">&#9670;&nbsp;</a></span>initUniforms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BARE2D::Renderer::initUniforms </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes all uniforms, such as colour attachments, depth attachments, etc. </p>
+
+<p>Reimplemented in <a class="el" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ad27e4c76b6f82a74b967464560254a87">BARE2D::FBORenderer</a>, and <a class="el" href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#a6700a581c23f6874f4547ea80d4f4535">BARE2D::BumpyRenderer</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_renderer_8cpp_source.html#l00050">50</a> of file <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_renderer_8cpp_source.html#l00027">init()</a>.</p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_renderer_a371f0d8b66a1fecb592b6d8b2b3cb1a0_icgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_renderer_a371f0d8b66a1fecb592b6d8b2b3cb1a0_icgraph" alt=""/></div>
+<map name="class_b_a_r_e2_d_1_1_renderer_a371f0d8b66a1fecb592b6d8b2b3cb1a0_icgraph" id="class_b_a_r_e2_d_1_1_renderer_a371f0d8b66a1fecb592b6d8b2b3cb1a0_icgraph">
+<area shape="rect" title="Initializes all uniforms, such as colour attachments, depth attachments, etc." alt="" coords="439,78,653,105"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_renderer.html#addafa95f7a6f451e359d1300031bdde1" title="Initializes all necessary bits of the renderer." alt="" coords="228,78,391,105"/>
 <area shape="rect" href="class_b_a_r_e2_d_1_1_basic_renderer.html#aa228c647d7fe74772a4736d51fdb7796" title="Initializes all necessary bits of the renderer." alt="" coords="7,5,178,47"/>
 <area shape="rect" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="11,71,175,112"/>
 <area shape="rect" href="class_b_a_r_e2_d_1_1_debug_renderer.html#adfa84d84a1525f62c888ecdcdc3e874a" title="Initializes with very rudimentary shaders (hardcoded), adds vertex attributes." alt="" coords="5,136,180,177"/>
@@ -504,16 +607,16 @@ Protected Attributes</h2></td></tr>
 
 <p>Does stuff inside of the render function, within the shader's use. </p>
 
-<p>Reimplemented in <a class="el" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a6a0113b8f8806828e460e41bd7697b6c">BARE2D::FBORenderer</a>, and <a class="el" href="class_b_a_r_e2_d_1_1_basic_renderer.html#aaf24fe92216128173a92b9c23dc4dd56">BARE2D::BasicRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a6a0113b8f8806828e460e41bd7697b6c">BARE2D::FBORenderer</a>, <a class="el" href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#a33dd21c340b2ea4cdfda0c4306883275">BARE2D::BumpyRenderer</a>, and <a class="el" href="class_b_a_r_e2_d_1_1_basic_renderer.html#aaf24fe92216128173a92b9c23dc4dd56">BARE2D::BasicRenderer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_renderer_8hpp_source.html#l00050">50</a> of file <a class="el" href="_renderer_8hpp_source.html">Renderer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_renderer_8hpp_source.html#l00057">57</a> of file <a class="el" href="_renderer_8hpp_source.html">Renderer.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_renderer_8cpp_source.html#l00038">render()</a>.</p>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="_renderer_8cpp_source.html#l00060">render()</a>.</p>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_renderer_a9aab9d938c89c6d3d9c4ff6de02d3c4d_icgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_renderer_a9aab9d938c89c6d3d9c4ff6de02d3c4d_icgraph" alt=""/></div>
 <map name="class_b_a_r_e2_d_1_1_renderer_a9aab9d938c89c6d3d9c4ff6de02d3c4d_icgraph" id="class_b_a_r_e2_d_1_1_renderer_a9aab9d938c89c6d3d9c4ff6de02d3c4d_icgraph">
 <area shape="rect" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="235,5,440,32"/>
@@ -548,16 +651,16 @@ Protected Attributes</h2></td></tr>
 
 <p>Actually renders the contents to the screen! </p>
 
-<p>Reimplemented in <a class="el" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a52b8a86d9eb1e621b49dcf17b88b4cd4">BARE2D::DebugRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a52b8a86d9eb1e621b49dcf17b88b4cd4">BARE2D::DebugRenderer</a>, <a class="el" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aaccc7bddd25f99cca5b734d097383c6e">BARE2D::FBORenderer</a>, and <a class="el" href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#adf8f29d89f859671a39cde7fb94cc7e7">BARE2D::BumpyRenderer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_renderer_8cpp_source.html#l00038">38</a> of file <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_renderer_8cpp_source.html#l00060">60</a> of file <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_v_a_o_8cpp_source.html#l00048">BARE2D::VAO::bind()</a>, <a class="el" href="_g_l_context_manager_8cpp_source.html#l00022">BARE2D::GLContext::bindTexture()</a>, <a class="el" href="class_b_a_r_e2_d_1_1_renderer.html#abf344beacb334d74a7c5c2d15815fe4f">createRenderBatches()</a>, <a class="el" href="_g_l_context_manager_8cpp_source.html#l00044">BARE2D::GLContextManager::getContext()</a>, <a class="el" href="_renderer_8hpp_source.html#l00059">m_batches</a>, <a class="el" href="_renderer_8hpp_source.html#l00057">m_shader</a>, <a class="el" href="_renderer_8hpp_source.html#l00058">m_vertexArrayObject</a>, <a class="el" href="_render_batch_8hpp_source.html#l00016">RenderBatch::numVertices</a>, <a class="el" href="_render_batch_8hpp_source.html#l00015">RenderBatch::offset</a>, <a class="el" href="_renderer_8hpp_source.html#l00050">preRender()</a>, <a class="el" href="_g_l_context_manager_8cpp_source.html#l00013">BARE2D::GLContext::setActiveTexture()</a>, <a class="el" href="_render_batch_8hpp_source.html#l00017">RenderBatch::textureID</a>, <a class="el" href="_v_a_o_8cpp_source.html#l00053">BARE2D::VAO::unbind()</a>, <a class="el" href="_shader_program_8cpp_source.html#l00149">BARE2D::ShaderProgram::unuse()</a>, and <a class="el" href="_shader_program_8cpp_source.html#l00136">BARE2D::ShaderProgram::use()</a>.</p>
-<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="_v_a_o_8cpp_source.html#l00048">BARE2D::VAO::bind()</a>, <a class="el" href="_g_l_context_manager_8cpp_source.html#l00022">BARE2D::GLContext::bindTexture()</a>, <a class="el" href="class_b_a_r_e2_d_1_1_renderer.html#abf344beacb334d74a7c5c2d15815fe4f">createRenderBatches()</a>, <a class="el" href="_g_l_context_manager_8cpp_source.html#l00044">BARE2D::GLContextManager::getContext()</a>, <a class="el" href="_renderer_8hpp_source.html#l00066">m_batches</a>, <a class="el" href="_renderer_8hpp_source.html#l00064">m_shader</a>, <a class="el" href="_renderer_8hpp_source.html#l00065">m_vertexArrayObject</a>, <a class="el" href="_render_batch_8hpp_source.html#l00016">RenderBatch::numVertices</a>, <a class="el" href="_render_batch_8hpp_source.html#l00015">RenderBatch::offset</a>, <a class="el" href="_renderer_8hpp_source.html#l00057">preRender()</a>, <a class="el" href="_g_l_context_manager_8cpp_source.html#l00013">BARE2D::GLContext::setActiveTexture()</a>, <a class="el" href="_render_batch_8hpp_source.html#l00017">RenderBatch::textureID</a>, <a class="el" href="_v_a_o_8cpp_source.html#l00053">BARE2D::VAO::unbind()</a>, <a class="el" href="_shader_program_8cpp_source.html#l00160">BARE2D::ShaderProgram::unuse()</a>, and <a class="el" href="_shader_program_8cpp_source.html#l00147">BARE2D::ShaderProgram::use()</a>.</p>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_renderer_af6c7b543d54be3ce30224e21d5606be3_cgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_renderer_af6c7b543d54be3ce30224e21d5606be3_cgraph" alt=""/></div>
 <map name="class_b_a_r_e2_d_1_1_renderer_af6c7b543d54be3ce30224e21d5606be3_cgraph" id="class_b_a_r_e2_d_1_1_renderer_af6c7b543d54be3ce30224e21d5606be3_cgraph">
 <area shape="rect" title="Actually renders the contents to the screen!" alt="" coords="5,253,187,280"/>
@@ -597,9 +700,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_renderer_8hpp_source.html#l00059">59</a> of file <a class="el" href="_renderer_8hpp_source.html">Renderer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_renderer_8hpp_source.html#l00066">66</a> of file <a class="el" href="_renderer_8hpp_source.html">Renderer.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_renderer_8cpp_source.html#l00015">begin()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00134">BARE2D::FBORenderer::createRenderBatches()</a>, <a class="el" href="_basic_renderer_8cpp_source.html#l00070">BARE2D::BasicRenderer::createRenderBatches()</a>, and <a class="el" href="_renderer_8cpp_source.html#l00038">render()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_renderer_8cpp_source.html#l00015">begin()</a>, <a class="el" href="_basic_renderer_8cpp_source.html#l00058">BARE2D::BasicRenderer::createRenderBatches()</a>, <a class="el" href="_bumpy_renderer_8cpp_source.html#l00089">BARE2D::BumpyRenderer::createRenderBatches()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00177">BARE2D::FBORenderer::createRenderBatches()</a>, <a class="el" href="_bumpy_renderer_8cpp_source.html#l00037">BARE2D::BumpyRenderer::render()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00216">BARE2D::FBORenderer::render()</a>, and <a class="el" href="_renderer_8cpp_source.html#l00060">render()</a>.</p>
 
 </div>
 </div>
@@ -623,9 +726,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_renderer_8hpp_source.html#l00057">57</a> of file <a class="el" href="_renderer_8hpp_source.html">Renderer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_renderer_8hpp_source.html#l00064">64</a> of file <a class="el" href="_renderer_8hpp_source.html">Renderer.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_renderer_8cpp_source.html#l00032">destroy()</a>, <a class="el" href="_basic_renderer_8cpp_source.html#l00015">BARE2D::BasicRenderer::init()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00031">BARE2D::FBORenderer::init()</a>, <a class="el" href="_debug_renderer_8cpp_source.html#l00078">BARE2D::DebugRenderer::init()</a>, <a class="el" href="_basic_renderer_8cpp_source.html#l00035">BARE2D::BasicRenderer::preRender()</a>, <a class="el" href="_renderer_8cpp_source.html#l00038">render()</a>, and <a class="el" href="_debug_renderer_8cpp_source.html#l00189">BARE2D::DebugRenderer::render()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_renderer_8cpp_source.html#l00015">begin()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00115">BARE2D::FBORenderer::begin()</a>, <a class="el" href="_renderer_8cpp_source.html#l00054">destroy()</a>, <a class="el" href="_renderer_8cpp_source.html#l00022">end()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00147">BARE2D::FBORenderer::end()</a>, <a class="el" href="_renderer_8cpp_source.html#l00094">getShader()</a>, <a class="el" href="_basic_renderer_8cpp_source.html#l00015">BARE2D::BasicRenderer::init()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00046">BARE2D::FBORenderer::init()</a>, <a class="el" href="_renderer_8cpp_source.html#l00027">init()</a>, <a class="el" href="_debug_renderer_8cpp_source.html#l00078">BARE2D::DebugRenderer::init()</a>, <a class="el" href="_bumpy_renderer_8cpp_source.html#l00020">BARE2D::BumpyRenderer::initUniforms()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00087">BARE2D::FBORenderer::initUniforms()</a>, <a class="el" href="_basic_renderer_8cpp_source.html#l00035">BARE2D::BasicRenderer::preRender()</a>, <a class="el" href="_bumpy_renderer_8cpp_source.html#l00028">BARE2D::BumpyRenderer::preRender()</a>, <a class="el" href="_bumpy_renderer_8cpp_source.html#l00037">BARE2D::BumpyRenderer::render()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00216">BARE2D::FBORenderer::render()</a>, <a class="el" href="_debug_renderer_8cpp_source.html#l00189">BARE2D::DebugRenderer::render()</a>, and <a class="el" href="_renderer_8cpp_source.html#l00060">render()</a>.</p>
 
 </div>
 </div>
@@ -649,9 +752,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_renderer_8hpp_source.html#l00058">58</a> of file <a class="el" href="_renderer_8hpp_source.html">Renderer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_renderer_8hpp_source.html#l00065">65</a> of file <a class="el" href="_renderer_8hpp_source.html">Renderer.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00134">BARE2D::FBORenderer::createRenderBatches()</a>, <a class="el" href="_basic_renderer_8cpp_source.html#l00070">BARE2D::BasicRenderer::createRenderBatches()</a>, <a class="el" href="_debug_renderer_8cpp_source.html#l00117">BARE2D::DebugRenderer::createRenderBatches()</a>, <a class="el" href="_renderer_8cpp_source.html#l00032">destroy()</a>, <a class="el" href="_basic_renderer_8cpp_source.html#l00015">BARE2D::BasicRenderer::init()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00031">BARE2D::FBORenderer::init()</a>, <a class="el" href="_renderer_8cpp_source.html#l00024">init()</a>, <a class="el" href="_debug_renderer_8cpp_source.html#l00078">BARE2D::DebugRenderer::init()</a>, <a class="el" href="_renderer_8cpp_source.html#l00038">render()</a>, and <a class="el" href="_debug_renderer_8cpp_source.html#l00189">BARE2D::DebugRenderer::render()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_basic_renderer_8cpp_source.html#l00058">BARE2D::BasicRenderer::createRenderBatches()</a>, <a class="el" href="_bumpy_renderer_8cpp_source.html#l00089">BARE2D::BumpyRenderer::createRenderBatches()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00177">BARE2D::FBORenderer::createRenderBatches()</a>, <a class="el" href="_debug_renderer_8cpp_source.html#l00117">BARE2D::DebugRenderer::createRenderBatches()</a>, <a class="el" href="_renderer_8cpp_source.html#l00054">destroy()</a>, <a class="el" href="_basic_renderer_8cpp_source.html#l00015">BARE2D::BasicRenderer::init()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00046">BARE2D::FBORenderer::init()</a>, <a class="el" href="_renderer_8cpp_source.html#l00027">init()</a>, <a class="el" href="_debug_renderer_8cpp_source.html#l00078">BARE2D::DebugRenderer::init()</a>, <a class="el" href="_bumpy_renderer_8cpp_source.html#l00037">BARE2D::BumpyRenderer::render()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00216">BARE2D::FBORenderer::render()</a>, <a class="el" href="_debug_renderer_8cpp_source.html#l00189">BARE2D::DebugRenderer::render()</a>, and <a class="el" href="_renderer_8cpp_source.html#l00060">render()</a>.</p>
 
 </div>
 </div>

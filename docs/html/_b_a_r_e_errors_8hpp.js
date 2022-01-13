@@ -18,7 +18,16 @@ var _b_a_r_e_errors_8hpp =
       [ "LOGGER_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a396430326452fe792ad9891baac4e76b", null ],
       [ "XML_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8", null ],
       [ "UNINITIALIZED_FUNCTION", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15abcb313a5c9f8965d7b75833af33d16be", null ],
-      [ "LUA_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba", null ]
+      [ "LUA_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba", null ],
+      [ "SDL_MIXER_FLAC_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a532a71eb42f790768ea7b8a0fc21c7f7", null ],
+      [ "SDL_MIXER_OGG_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a270d890766f0830b9a49e81e737e9646", null ],
+      [ "SDL_MIXER_MP3_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a3279ee465d768abc31baf3fa4a04a939", null ],
+      [ "SDL_MIXER_MOD_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a558725ad5285e00d8e0ecc6659151af6", null ],
+      [ "SDL_MIXER_CLOSE_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a302c7e07e257bacc806bef6f25576f3d", null ],
+      [ "SDL_MIXER_LOAD_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a8c106f4878dae2d0ad02cd72ef80dc0b", null ],
+      [ "SDL_MIXER_SOUND_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a55a6fde42c31348fccbcaad7ead6de1f", null ],
+      [ "OTHER_ERROR", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a5c0de8157fd24b5627deda20298b5c2d", null ],
+      [ "CACHE_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a66dc4c888c801d815b8f5f1f1038393c", null ]
     ] ],
     [ "GLErrorSeverity", "_b_a_r_e_errors_8hpp.html#a2fa71018d57aea370eff28f6e1a50bc3", [
       [ "NOTIF", "_b_a_r_e_errors_8hpp.html#a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da", null ],

@@ -10,161 +10,173 @@
 \DoxyCodeLine{00006 }
 \DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{rapidxml}\textcolor{preprocessor}{/}\textcolor{preprocessor}{rapidxml}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00008 }
-\DoxyCodeLine{00009 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00010}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{00010}}     \textcolor{keyword}{enum} \textcolor{keyword}{class} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}} \{}
-\DoxyCodeLine{00011         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}{STRING}},}
-\DoxyCodeLine{00012         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}{UNSIGNED\_INT}},}
-\DoxyCodeLine{00013         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a358c00737f6938bb5efb0674c7521b54}{VECTOR\_UNSIGNED\_INT}},}
-\DoxyCodeLine{00014         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a53f93baa3057821107c750323892fa92}{INT}},}
-\DoxyCodeLine{00015         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ae738c26bf4ce1037fa81b039a915cbf6}{FLOAT}},}
-\DoxyCodeLine{00016         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a38bbbd837be5914a8667d76948e1537b}{VECTOR\_FLOAT}},}
-\DoxyCodeLine{00017         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02aa97b2c144243b2b9d2c593ec268b62f5}{BOOL}},}
-\DoxyCodeLine{00018         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ab916a458e01349ca08eb2a51f541e424}{VECTOR\_BOOL}},}
-\DoxyCodeLine{00019         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9bd71a29dd44a2e0252b56ce5c6d251a}{VEC2}},}
-\DoxyCodeLine{00020         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a885431a8d6e8227dbbbe0da37138b4e5}{VECTOR\_VEC2}}}
-\DoxyCodeLine{00021     \};}
-\DoxyCodeLine{00022 }
-\DoxyCodeLine{00023     \textcolor{comment}{/**}}
-\DoxyCodeLine{00024 \textcolor{comment}{     * @class AttributeBase}}
-\DoxyCodeLine{00025 \textcolor{comment}{     * @brief The AttributeBase class only exists for some templating acrobatics reasons (as an abstract base class for Attribute)}}
-\DoxyCodeLine{00026 \textcolor{comment}{     */}}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00027}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{00027}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}} \{}
-\DoxyCodeLine{00028     \textcolor{keyword}{public}:}
-\DoxyCodeLine{00029         \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{00030         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(T data);}
-\DoxyCodeLine{00031 }
-\DoxyCodeLine{00032         \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{00033         T \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a670445dd8920546d37a49d8b4ff71a26}{getData}}();}
-\DoxyCodeLine{00034 }
-\DoxyCodeLine{00035         \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{00036         T* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a1f46e2e756959cc6c9220cccfd598e44}{getDataPointer}}();}
-\DoxyCodeLine{00037 }
-\DoxyCodeLine{00038         \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{00039         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{swapDataPointer}}(T* newPtr);}
-\DoxyCodeLine{00040 }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00041}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a03735b753c9ca81b2ca7c58ea03dc0f5}{00041}}         \textcolor{keyword}{virtual} \string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a03735b753c9ca81b2ca7c58ea03dc0f5}{AttributeBase}}() \{\}}
-\DoxyCodeLine{00042 }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00043}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_af991938222f7eb1facde0b371ece23ad}{00043}}         std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_af991938222f7eb1facde0b371ece23ad}{name}};}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00044}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_ad0f728ccf154d324fa0353b0a6550896}{00044}}         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_ad0f728ccf154d324fa0353b0a6550896}{type}};}
-\DoxyCodeLine{00045 }
-\DoxyCodeLine{00046         \textcolor{keyword}{virtual} std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a57439a81db9dcc04dd4ed0f3b39789a7}{getDataString}}() = 0;}
-\DoxyCodeLine{00047 }
-\DoxyCodeLine{00048     \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00049         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a986e068817a587c1ae2b5a26f4ce40c0}{setDefaultData}}() = 0;}
-\DoxyCodeLine{00050     \};}
+\DoxyCodeLine{00009 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}}
+\DoxyCodeLine{00010 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00011}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{00011}}     \textcolor{keyword}{enum} \textcolor{keyword}{class} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}} \{}
+\DoxyCodeLine{00012         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}{STRING}},}
+\DoxyCodeLine{00013         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}{UNSIGNED\_INT}},}
+\DoxyCodeLine{00014         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a358c00737f6938bb5efb0674c7521b54}{VECTOR\_UNSIGNED\_INT}},}
+\DoxyCodeLine{00015         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a53f93baa3057821107c750323892fa92}{INT}},}
+\DoxyCodeLine{00016         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ae738c26bf4ce1037fa81b039a915cbf6}{FLOAT}},}
+\DoxyCodeLine{00017         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a38bbbd837be5914a8667d76948e1537b}{VECTOR\_FLOAT}},}
+\DoxyCodeLine{00018         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02aa97b2c144243b2b9d2c593ec268b62f5}{BOOL}},}
+\DoxyCodeLine{00019         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ab916a458e01349ca08eb2a51f541e424}{VECTOR\_BOOL}},}
+\DoxyCodeLine{00020         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9bd71a29dd44a2e0252b56ce5c6d251a}{VEC2}},}
+\DoxyCodeLine{00021         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a885431a8d6e8227dbbbe0da37138b4e5}{VECTOR\_VEC2}},}
+\DoxyCodeLine{00022         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02abc283a640f11da0ce7f95dd103c0b38f}{SCRIPT}},}
+\DoxyCodeLine{00023         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a3f92f542bd9ec48f912b9350e22736ac}{TEXTURE}}}
+\DoxyCodeLine{00024     \};}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026     \textcolor{comment}{/**}}
+\DoxyCodeLine{00027 \textcolor{comment}{     * @class AttributeBase}}
+\DoxyCodeLine{00028 \textcolor{comment}{     * @brief The AttributeBase class only exists for some templating acrobatics reasons (as an abstract base class for Attribute)}}
+\DoxyCodeLine{00029 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00030}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{00030}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}}
+\DoxyCodeLine{00031     \{}
+\DoxyCodeLine{00032     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033         \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{00034         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(T data);}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036         \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{00037         T \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a670445dd8920546d37a49d8b4ff71a26}{getData}}();}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039         \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{00040         T* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a1f46e2e756959cc6c9220cccfd598e44}{getDataPointer}}();}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{00042         \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{00043         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{swapDataPointer}}(T* newPtr);}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00045}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a03735b753c9ca81b2ca7c58ea03dc0f5}{00045}}         \textcolor{keyword}{virtual} \string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a03735b753c9ca81b2ca7c58ea03dc0f5}{AttributeBase}}() \{\}}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00047}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_af991938222f7eb1facde0b371ece23ad}{00047}}         std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_af991938222f7eb1facde0b371ece23ad}{name}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00048}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_ad0f728ccf154d324fa0353b0a6550896}{00048}}         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_ad0f728ccf154d324fa0353b0a6550896}{type}};}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050         \textcolor{keyword}{virtual} std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a57439a81db9dcc04dd4ed0f3b39789a7}{getDataString}}() = 0;}
 \DoxyCodeLine{00051 }
-\DoxyCodeLine{00052 }
-\DoxyCodeLine{00053     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00054}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{00054}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}} \{}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00055}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a5f37fe695198fde75eef3c1593991789}{00055}}         \textcolor{keyword}{friend} \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}};}
+\DoxyCodeLine{00052     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00053         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a986e068817a587c1ae2b5a26f4ce40c0}{setDefaultData}}() = 0;}
+\DoxyCodeLine{00054     \};}
+\DoxyCodeLine{00055 }
 \DoxyCodeLine{00056 }
-\DoxyCodeLine{00057     \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00058}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_abac3836f74d59b8efed671317a5660c3}{00058}}         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_abac3836f74d59b8efed671317a5660c3}{Attribute}}() \{\}}
-\DoxyCodeLine{00059         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a94be133efd820d80ee7db4b9fdfdff0c}{Attribute}}(std::string Name, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}} Type, T* data);}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00060}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_adbec9f34452b082f93c6d8fdcba2cc50}{00060}}         \string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_adbec9f34452b082f93c6d8fdcba2cc50}{Attribute}}() \{\}}
+\DoxyCodeLine{00057     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00058}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{00058}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}}
+\DoxyCodeLine{00059     \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00060}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a5f37fe695198fde75eef3c1593991789}{00060}}         \textcolor{keyword}{friend} \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}};}
 \DoxyCodeLine{00061 }
-\DoxyCodeLine{00062         \textcolor{comment}{/**}}
-\DoxyCodeLine{00063 \textcolor{comment}{         * @brief Sets the actual value of the data pointer, not the address.}}
-\DoxyCodeLine{00064 \textcolor{comment}{         * @param data The data to set it to.}}
-\DoxyCodeLine{00065 \textcolor{comment}{         */}}
-\DoxyCodeLine{00066         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}(T data);}
-\DoxyCodeLine{00067 }
-\DoxyCodeLine{00068         \textcolor{comment}{/**}}
-\DoxyCodeLine{00069 \textcolor{comment}{         * @brief Changes the old value of newPtr to that of this class' data, then changes this class' data pointer to newPtr.}}
-\DoxyCodeLine{00070 \textcolor{comment}{         * @param newPtr}}
-\DoxyCodeLine{00071 \textcolor{comment}{         */}}
-\DoxyCodeLine{00072         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac6fcd55ffbb9cd794156de772870420c}{swapDataPointer}}(T* newPtr);}
-\DoxyCodeLine{00073 }
-\DoxyCodeLine{00074         \textcolor{comment}{/**}}
-\DoxyCodeLine{00075 \textcolor{comment}{         * @return The data }}
+\DoxyCodeLine{00062     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00063}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_abac3836f74d59b8efed671317a5660c3}{00063}}         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_abac3836f74d59b8efed671317a5660c3}{Attribute}}() \{\}}
+\DoxyCodeLine{00064         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a94be133efd820d80ee7db4b9fdfdff0c}{Attribute}}(std::string Name, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}} Type, T* data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00065}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_adbec9f34452b082f93c6d8fdcba2cc50}{00065}}         \string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_adbec9f34452b082f93c6d8fdcba2cc50}{Attribute}}() \{\}}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067         \textcolor{comment}{/**}}
+\DoxyCodeLine{00068 \textcolor{comment}{         * @brief Sets the actual value of the data pointer, not the address.}}
+\DoxyCodeLine{00069 \textcolor{comment}{         * @param data The data to set it to.}}
+\DoxyCodeLine{00070 \textcolor{comment}{         */}}
+\DoxyCodeLine{00071         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}(T data);}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073         \textcolor{comment}{/**}}
+\DoxyCodeLine{00074 \textcolor{comment}{         * @brief Changes the old value of newPtr to that of this class' data, then changes this class' data pointer to newPtr.}}
+\DoxyCodeLine{00075 \textcolor{comment}{         * @param newPtr}}
 \DoxyCodeLine{00076 \textcolor{comment}{         */}}
-\DoxyCodeLine{00077         T \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a03d5bba88eb30e3b92c1f24247dffdac}{getData}}();}
-\DoxyCodeLine{00078         \textcolor{comment}{/**}}
-\DoxyCodeLine{00079 \textcolor{comment}{         * @return A pointer to the data. }}
-\DoxyCodeLine{00080 \textcolor{comment}{         */}}
-\DoxyCodeLine{00081         T* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a2eb7e081b3c98be11eb6aee0e2b7328e}{getDataPointer}}();}
-\DoxyCodeLine{00082 }
+\DoxyCodeLine{00077         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac6fcd55ffbb9cd794156de772870420c}{swapDataPointer}}(T* newPtr);}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079         \textcolor{comment}{/**}}
+\DoxyCodeLine{00080 \textcolor{comment}{         * @return The data}}
+\DoxyCodeLine{00081 \textcolor{comment}{         */}}
+\DoxyCodeLine{00082         T \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a03d5bba88eb30e3b92c1f24247dffdac}{getData}}();}
 \DoxyCodeLine{00083         \textcolor{comment}{/**}}
-\DoxyCodeLine{00084 \textcolor{comment}{         * @brief Creates a string for XML writing of the data.}}
-\DoxyCodeLine{00085 \textcolor{comment}{         * @return A writable string.}}
-\DoxyCodeLine{00086 \textcolor{comment}{         */}}
-\DoxyCodeLine{00087         \textcolor{keyword}{virtual} std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{00088 }
-\DoxyCodeLine{00089     \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00090}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a9bb8d5ea30d35ee697929cea85dd3c83}{00090}}         T* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a9bb8d5ea30d35ee697929cea85dd3c83}{m\_data}} = \textcolor{keywordtype}{nullptr};}
-\DoxyCodeLine{00091 }
-\DoxyCodeLine{00092         \textcolor{comment}{/**}}
-\DoxyCodeLine{00093 \textcolor{comment}{         * @brief Sets the data to its format's equivalent to 0.}}
-\DoxyCodeLine{00094 \textcolor{comment}{         */}}
-\DoxyCodeLine{00095         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{00096     \};}
-\DoxyCodeLine{00097 }
-\DoxyCodeLine{00098     \textcolor{comment}{/**}}
-\DoxyCodeLine{00099 \textcolor{comment}{     * @class XMLData}}
-\DoxyCodeLine{00100 \textcolor{comment}{     * @brief Holds all the very basic information for XML data. Designed to be a base class from which a user can derive custom data formats.}}
-\DoxyCodeLine{00101 \textcolor{comment}{     */}}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00102}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{00102}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}} \{}
-\DoxyCodeLine{00103     \textcolor{keyword}{public}:}
-\DoxyCodeLine{00104         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{XMLData}}();}
-\DoxyCodeLine{00105         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aca53e7158465dd39509c0046817fa426}{XMLData}}(std::string dataType, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ID);}
-\DoxyCodeLine{00106         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0fdadc0bef7ce4b52bed23ed5d270333}{XMLData}}(std::vector<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}*> attributes);}
-\DoxyCodeLine{00107         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aae7ce8bc410d7f962b10f6298ee9a24b}{XMLData}}(std::unordered\_map<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}*> attributes);}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00108}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a41315c1ffe3fda73732919c8f37d5e66}{00108}}         \string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a41315c1ffe3fda73732919c8f37d5e66}{XMLData}}() \{\}}
-\DoxyCodeLine{00109 }
-\DoxyCodeLine{00110         \textcolor{comment}{/**}}
-\DoxyCodeLine{00111 \textcolor{comment}{         * @brief Reads the entire piece of data from a given XML node}}
-\DoxyCodeLine{00112 \textcolor{comment}{         * @param node The node to interpret and read from}}
-\DoxyCodeLine{00113 \textcolor{comment}{         */}}
-\DoxyCodeLine{00114         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_acf63925319a7b15a53989db54702ea60}{read}}(rapidxml::xml\_node<>* node);}
-\DoxyCodeLine{00115         \textcolor{comment}{/**}}
-\DoxyCodeLine{00116 \textcolor{comment}{         * @brief Writes the entire piece of data to a new node in the XML document}}
-\DoxyCodeLine{00117 \textcolor{comment}{         * @param doc The document to write to.}}
-\DoxyCodeLine{00118 \textcolor{comment}{         */}}
-\DoxyCodeLine{00119         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a72bb614851475c6510195cd7ebacf67a}{write}}(rapidxml::xml\_document<>* doc);}
-\DoxyCodeLine{00120 }
-\DoxyCodeLine{00121         \textcolor{comment}{/**}}
-\DoxyCodeLine{00122 \textcolor{comment}{         * @brief Finds an attribute by its name (eg. "name", "id")}}
-\DoxyCodeLine{00123 \textcolor{comment}{         * @param name The name of the attribute}}
-\DoxyCodeLine{00124 \textcolor{comment}{         * @return A copy of the data held by the attribute.}}
+\DoxyCodeLine{00084 \textcolor{comment}{         * @return A pointer to the data.}}
+\DoxyCodeLine{00085 \textcolor{comment}{         */}}
+\DoxyCodeLine{00086         T* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a2eb7e081b3c98be11eb6aee0e2b7328e}{getDataPointer}}();}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{00088         \textcolor{comment}{/**}}
+\DoxyCodeLine{00089 \textcolor{comment}{         * @brief Creates a string for XML writing of the data.}}
+\DoxyCodeLine{00090 \textcolor{comment}{         * @return A writable string.}}
+\DoxyCodeLine{00091 \textcolor{comment}{         */}}
+\DoxyCodeLine{00092         \textcolor{keyword}{virtual} std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00095}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a9bb8d5ea30d35ee697929cea85dd3c83}{00095}}         T* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a9bb8d5ea30d35ee697929cea85dd3c83}{m\_data}} = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00096 }
+\DoxyCodeLine{00097         \textcolor{comment}{/**}}
+\DoxyCodeLine{00098 \textcolor{comment}{         * @brief Sets the data to its format's equivalent to 0.}}
+\DoxyCodeLine{00099 \textcolor{comment}{         */}}
+\DoxyCodeLine{00100         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{00101     \};}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103     \textcolor{comment}{/**}}
+\DoxyCodeLine{00104 \textcolor{comment}{     * @class XMLData}}
+\DoxyCodeLine{00105 \textcolor{comment}{     * @brief Holds all the very basic information for XML data. Designed to be a base class from which a user can derive custom data formats.}}
+\DoxyCodeLine{00106 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00107}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{00107}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}}
+\DoxyCodeLine{00108     \{}
+\DoxyCodeLine{00109     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00110         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{XMLData}}();}
+\DoxyCodeLine{00111         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aca53e7158465dd39509c0046817fa426}{XMLData}}(std::string dataType, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ID);}
+\DoxyCodeLine{00112         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0fdadc0bef7ce4b52bed23ed5d270333}{XMLData}}(std::vector<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}*> attributes);}
+\DoxyCodeLine{00113         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aae7ce8bc410d7f962b10f6298ee9a24b}{XMLData}}(std::unordered\_map<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}*> attributes);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00114}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a41315c1ffe3fda73732919c8f37d5e66}{00114}}         \string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a41315c1ffe3fda73732919c8f37d5e66}{XMLData}}() \{\}}
+\DoxyCodeLine{00115 }
+\DoxyCodeLine{00116         \textcolor{comment}{/**}}
+\DoxyCodeLine{00117 \textcolor{comment}{         * @brief Allocates and populates a copy of this *type* of data, then returns it. No guarantees that the names are the same or anything. Important -\/ Make sure to override this in all derived custom types.}}
+\DoxyCodeLine{00118 \textcolor{comment}{         * @return A copy of this type or subtype of data, complete with their own allocated members and so linked attributes.}}
+\DoxyCodeLine{00119 \textcolor{comment}{         */}}
+\DoxyCodeLine{00120         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a37ea76284f5f4fd4367499f329c7d2fb}{cloneType}}();}
+\DoxyCodeLine{00121 }
+\DoxyCodeLine{00122         \textcolor{comment}{/**}}
+\DoxyCodeLine{00123 \textcolor{comment}{         * @brief Reads the entire piece of data from a given XML node}}
+\DoxyCodeLine{00124 \textcolor{comment}{         * @param node The node to interpret and read from}}
 \DoxyCodeLine{00125 \textcolor{comment}{         */}}
-\DoxyCodeLine{00126         \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{00127         T \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a005915fa3e921266e6abb2ec862072b8}{getAttributeByName}}(std::string name);}
-\DoxyCodeLine{00128 }
-\DoxyCodeLine{00129         \textcolor{comment}{/**}}
-\DoxyCodeLine{00130 \textcolor{comment}{         * @return Returns a copy of the entire attributes map. Useful for pseudo-\/copy operations. }}
-\DoxyCodeLine{00131 \textcolor{comment}{         */}}
-\DoxyCodeLine{00132         std::unordered\_map<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}*> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}{getAttributes}}();}
-\DoxyCodeLine{00133 }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00134}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{00134}}         std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}};}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00135}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aea06249fd8d84972b44d3407d57e64ed}{00135}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aea06249fd8d84972b44d3407d57e64ed}{id}};}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00136}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a721101754e4e286aacea1e537141374b}{00136}}         std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a721101754e4e286aacea1e537141374b}{nodeName}};}
-\DoxyCodeLine{00137 }
-\DoxyCodeLine{00138     \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00139         \textcolor{comment}{/**}}
-\DoxyCodeLine{00140 \textcolor{comment}{         * @brief Constructs and adds an attribute to the data.}}
-\DoxyCodeLine{00141 \textcolor{comment}{         * @param name The name of the attribute. "name" and "id" are already in use, please don't break things like that.}}
-\DoxyCodeLine{00142 \textcolor{comment}{         * @param type The type of data. Eg. AttributeType::FLOAT is a float, AttributeType::VECTOR\_FLOAT is a vector of floats, etc.}}
-\DoxyCodeLine{00143 \textcolor{comment}{         * @param data A pointer to the data that the attribute is linked to.}}
-\DoxyCodeLine{00144 \textcolor{comment}{         */}}
-\DoxyCodeLine{00145         \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{00146         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{addAttribute}}(std::string name, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}} type, T* data);}
-\DoxyCodeLine{00147         \textcolor{comment}{/**}}
-\DoxyCodeLine{00148 \textcolor{comment}{         * @brief Adds an attribute to the data}}
-\DoxyCodeLine{00149 \textcolor{comment}{         * @param attr A pointer to the attribute to be added.}}
-\DoxyCodeLine{00150 \textcolor{comment}{         */}}
-\DoxyCodeLine{00151         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a15c8f82112e0e0a89eb255aacb7cb801}{addAttribute}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}* attr);}
-\DoxyCodeLine{00152 }
-\DoxyCodeLine{00153         \textcolor{comment}{/**}}
-\DoxyCodeLine{00154 \textcolor{comment}{         * @brief Bulk adds attributes to the data.}}
-\DoxyCodeLine{00155 \textcolor{comment}{         * @param attrs A vector of pointers to attributes to add.}}
+\DoxyCodeLine{00126         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_acf63925319a7b15a53989db54702ea60}{read}}(rapidxml::xml\_node<>* node);}
+\DoxyCodeLine{00127         \textcolor{comment}{/**}}
+\DoxyCodeLine{00128 \textcolor{comment}{         * @brief Writes the entire piece of data to a new node in the XML document}}
+\DoxyCodeLine{00129 \textcolor{comment}{         * @param doc The document to write to.}}
+\DoxyCodeLine{00130 \textcolor{comment}{         */}}
+\DoxyCodeLine{00131         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a72bb614851475c6510195cd7ebacf67a}{write}}(rapidxml::xml\_document<>* doc);}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133         \textcolor{comment}{/**}}
+\DoxyCodeLine{00134 \textcolor{comment}{         * @brief Finds an attribute by its name (eg. "name", "id")}}
+\DoxyCodeLine{00135 \textcolor{comment}{         * @param name The name of the attribute}}
+\DoxyCodeLine{00136 \textcolor{comment}{         * @return A copy of the data held by the attribute.}}
+\DoxyCodeLine{00137 \textcolor{comment}{         */}}
+\DoxyCodeLine{00138         \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{00139         T \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a005915fa3e921266e6abb2ec862072b8}{getAttributeByName}}(std::string name);}
+\DoxyCodeLine{00140 }
+\DoxyCodeLine{00141         \textcolor{comment}{/**}}
+\DoxyCodeLine{00142 \textcolor{comment}{         * @return Returns a copy of the entire attributes map. Useful for pseudo-\/copy operations.}}
+\DoxyCodeLine{00143 \textcolor{comment}{         */}}
+\DoxyCodeLine{00144         std::unordered\_map<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}*> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}{getAttributes}}();}
+\DoxyCodeLine{00145 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00146}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{00146}}         std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00147}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aea06249fd8d84972b44d3407d57e64ed}{00147}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aea06249fd8d84972b44d3407d57e64ed}{id}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00148}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a721101754e4e286aacea1e537141374b}{00148}}         std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a721101754e4e286aacea1e537141374b}{nodeName}};}
+\DoxyCodeLine{00149 }
+\DoxyCodeLine{00150     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00151         \textcolor{comment}{/**}}
+\DoxyCodeLine{00152 \textcolor{comment}{         * @brief Constructs and adds an attribute to the data.}}
+\DoxyCodeLine{00153 \textcolor{comment}{         * @param name The name of the attribute. "name" and "id" are already in use, please don't break things like that.}}
+\DoxyCodeLine{00154 \textcolor{comment}{         * @param type The type of data. Eg. AttributeType::FLOAT is a float, AttributeType::VECTOR\_FLOAT is a vector of floats, etc.}}
+\DoxyCodeLine{00155 \textcolor{comment}{         * @param data A pointer to the data that the attribute is linked to.}}
 \DoxyCodeLine{00156 \textcolor{comment}{         */}}
-\DoxyCodeLine{00157         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6}{addAttributes}}(std::vector<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}*> attrs);}
-\DoxyCodeLine{00158 }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00159}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{00159}}         std::unordered\_map<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}*> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}};}
-\DoxyCodeLine{00160 }
-\DoxyCodeLine{00161     \};}
-\DoxyCodeLine{00162 \}}
-\DoxyCodeLine{00163 }
-\DoxyCodeLine{00164 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_x_m_l_data_types_8tcc}{"XMLDataTypes.tcc"}}}
+\DoxyCodeLine{00157         \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{00158         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{addAttribute}}(std::string name, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}} type, T* data);}
+\DoxyCodeLine{00159         \textcolor{comment}{/**}}
+\DoxyCodeLine{00160 \textcolor{comment}{         * @brief Adds an attribute to the data}}
+\DoxyCodeLine{00161 \textcolor{comment}{         * @param attr A pointer to the attribute to be added.}}
+\DoxyCodeLine{00162 \textcolor{comment}{         */}}
+\DoxyCodeLine{00163         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a15c8f82112e0e0a89eb255aacb7cb801}{addAttribute}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}* attr);}
+\DoxyCodeLine{00164 }
+\DoxyCodeLine{00165         \textcolor{comment}{/**}}
+\DoxyCodeLine{00166 \textcolor{comment}{         * @brief Bulk adds attributes to the data.}}
+\DoxyCodeLine{00167 \textcolor{comment}{         * @param attrs A vector of pointers to attributes to add.}}
+\DoxyCodeLine{00168 \textcolor{comment}{         */}}
+\DoxyCodeLine{00169         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6}{addAttributes}}(std::vector<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}*> attrs);}
+\DoxyCodeLine{00170 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8hpp_source_l00171}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{00171}}         std::unordered\_map<std::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}*> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}};}
+\DoxyCodeLine{00172 }
+\DoxyCodeLine{00173     \};}
+\DoxyCodeLine{00174 \}}
+\DoxyCodeLine{00175 }
+\DoxyCodeLine{00176 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_x_m_l_data_types_8tcc}{"XMLDataTypes.tcc"}}}
 
 \end{DoxyCode}

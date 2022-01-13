@@ -1,36 +1,31 @@
 <map id="BARE2D::FBORenderer::init" name="BARE2D::FBORenderer::init">
-<area shape="rect" id="node1" title="Initializes all necessary bits of the renderer." alt="" coords="5,449,169,490"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a96ee05539c58614ee273b7df85143804" title="Wrapper for glVertexAttribPointer &#45; Adds an attribute to the VBO &#45; each vertex data slot will gain so..." alt="" coords="468,107,695,133"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a5765d077d8aff3402f717863169a0176" title="Binds the FBO and appropriate texture attachments." alt="" coords="499,209,663,250"/>
-<area shape="rect" id="node11" href="$class_b_a_r_e2_d_1_1_shader_program.html#acf78cf9b4988abf40d62d67471a168a3" title="Compiles the shaders. Does not link them." alt="" coords="231,573,406,614"/>
-<area shape="rect" id="node22" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#af0312bfcb60be2285bb443a79ae9678f" title="Creates the OpenGL FBO instance and holds its handle in m_fboID;." alt="" coords="237,390,401,431"/>
-<area shape="rect" id="node24" href="$class_b_a_r_e2_d_1_1_shader_program.html#af711102689d9552b2b54c1c9da8f8589" title=" " alt="" coords="231,638,406,679"/>
-<area shape="rect" id="node26" href="$class_b_a_r_e2_d_1_1_renderer.html#addafa95f7a6f451e359d1300031bdde1" title="Initializes all necessary bits of the renderer." alt="" coords="237,85,400,112"/>
-<area shape="rect" id="node28" href="$class_b_a_r_e2_d_1_1_shader_program.html#a096bc5e267753d6054aa8039e4cc44a9" title="Links the compiled shaders together to create a coherent shader program." alt="" coords="995,457,1170,498"/>
-<area shape="rect" id="node29" href="$class_b_a_r_e2_d_1_1_shader_program.html#aea20b0b7244458c2384e7d652b506767" title="A generalized wrapper to find and set a uniform for this shader." alt="" coords="231,507,406,549"/>
-<area shape="rect" id="node31" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a01768136e2e36b131a23d422ded3bd5b" title="Unbinds the FBO + textures." alt="" coords="237,273,401,314"/>
-<area shape="rect" id="node33" href="$class_b_a_r_e2_d_1_1_shader_program.html#a7847844b8a2e5ab0677340b47d180841" title="Deactivates this shader program." alt="" coords="231,703,406,745"/>
-<area shape="rect" id="node34" href="$class_b_a_r_e2_d_1_1_shader_program.html#a8687213986c6f5633887609e8169b24e" title="Activates this shader program for the renderer to use." alt="" coords="217,769,420,796"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a61c99f69bf5feb2ac95189381a48e638" title="Binds this vertex array object." alt="" coords="771,56,913,83"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_v_a_o.html#aaaec16d98be94aa5cfed015df40dda70" title="Binds the VAO&#39;s VBO." alt="" coords="757,107,927,133"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a6c224737a43f43dbe7c9e25ecd47d1da" title="Unbinds the vao." alt="" coords="764,5,920,32"/>
-<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a1815cdbe70cc6fdbc66ec69a7131b5be" title="Binds a texture to target in the currently active texture slot." alt="" coords="765,223,919,265"/>
-<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_g_l_context_manager.html#a733646522bf07c33576f9a1e0bb76c28" title=" " alt="" coords="743,158,941,199"/>
-<area shape="rect" id="node10" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a529bb80b0bd7bbf86f10be7c30be514c" title="Sets the active texture &quot;slot&quot;. This can be GL_TEXTURE0 to GL_TEXTURE8 (I think. Check the literature..." alt="" coords="765,289,919,330"/>
-<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a62f46a348cc1f4e91fe3ab48c9a5cc1b" title=" " alt="" coords="1005,158,1160,199"/>
-<area shape="rect" id="node12" href="$class_b_a_r_e2_d_1_1_shader_program.html#a805e1e0c2b0ecd5d9625deed62d45c1c" title="Similar to compileShaders, this just compiles the shaders." alt="" coords="745,685,939,726"/>
-<area shape="rect" id="node18" href="$class_b_a_r_e2_d_1_1_i_o_manager.html#a22c857b612a97f087c27d5c0120acc43" title=" " alt="" coords="503,609,659,650"/>
-<area shape="rect" id="node13" href="$class_b_a_r_e2_d_1_1_shader_program.html#a2b1206fc5359147dbce6be72051d44c6" title="Compiles a shader from source with OpenGL id." alt="" coords="989,625,1176,666"/>
-<area shape="rect" id="node14" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="1225,548,1398,575"/>
-<area shape="rect" id="node17" href="$class_b_a_r_e2_d_1_1_shader_program.html#a5b58eb971ff8352683380938e263e9ad" title="Releases all bound objects and deletes any allocated stuff." alt="" coords="995,690,1170,731"/>
-<area shape="rect" id="node15" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="1447,548,1607,575"/>
-<area shape="rect" id="node16" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="1455,603,1599,629"/>
-<area shape="rect" id="node19" href="$class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec" title=" " alt="" coords="743,573,941,600"/>
-<area shape="rect" id="node21" href="$class_b_a_r_e2_d_1_1_logger.html#a76c97e021ee75d17defbc794f68a965b" title="Logs a message to a file and the terminal." alt="" coords="768,624,916,651"/>
-<area shape="rect" id="node20" href="$class_b_a_r_e2_d_1_1_logger.html#a731b4fafcc2878fe66360b1c9c0febdc" title=" " alt="" coords="997,573,1168,600"/>
-<area shape="rect" id="node23" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aff19a68622b2fdf7033ffee1ab32a7c6" title="Creates all of the OpenGL textures, and takes their handles into m_colourTextureID,..." alt="" coords="499,339,663,381"/>
-<area shape="rect" id="node25" href="$class_b_a_r_e2_d_1_1_shader_program.html#a080f32d28d14f94892d77edf1188e3c2" title="Gets the location of a uniform in a program." alt="" coords="1224,686,1399,727"/>
-<area shape="rect" id="node27" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a95e6c292d64ff927870783e464ad49cd" title="Initializes the necessary components, combining the VBO and VAO." alt="" coords="514,56,649,83"/>
-<area shape="rect" id="node30" href="$_b_a_r_e_errors_8cpp.html#ad6c3fb278e5310c3250bab181be717d6" title="PLEASE NOTE THAT IF MINGW BREAKS, THIS IS PROBABLY WHY." alt="" coords="542,507,621,533"/>
-<area shape="rect" id="node32" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a99f228aa049e960dace1970e09b24246" title="Unbinds a texture." alt="" coords="504,274,659,315"/>
+<area shape="rect" id="node1" title="Initializes all necessary bits of the renderer." alt="" coords="5,378,169,419"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a96ee05539c58614ee273b7df85143804" title="Wrapper for glVertexAttribPointer &#45; Adds an attribute to the VBO &#45; each vertex data slot will gain so..." alt="" coords="440,5,667,32"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a5765d077d8aff3402f717863169a0176" title="Binds the FBO and appropriate texture attachments." alt="" coords="471,407,635,449"/>
+<area shape="rect" id="node11" href="$class_b_a_r_e2_d_1_1_shader_program.html#acf78cf9b4988abf40d62d67471a168a3" title="Compiles the shaders. Does not link them." alt="" coords="217,601,392,642"/>
+<area shape="rect" id="node12" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#af0312bfcb60be2285bb443a79ae9678f" title="Creates the OpenGL FBO instance and holds its handle in m_fboID;." alt="" coords="223,470,387,511"/>
+<area shape="rect" id="node17" href="$class_b_a_r_e2_d_1_1_renderer.html#addafa95f7a6f451e359d1300031bdde1" title="Initializes all necessary bits of the renderer." alt="" coords="223,181,386,208"/>
+<area shape="rect" id="node21" href="$class_b_a_r_e2_d_1_1_shader_program.html#a7847844b8a2e5ab0677340b47d180841" title="Deactivates this shader program." alt="" coords="466,225,641,266"/>
+<area shape="rect" id="node22" href="$class_b_a_r_e2_d_1_1_shader_program.html#a8687213986c6f5633887609e8169b24e" title="Activates this shader program for the renderer to use." alt="" coords="452,291,655,317"/>
+<area shape="rect" id="node23" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ad27e4c76b6f82a74b967464560254a87" title="Initializes all uniforms, such as colour attachments, depth attachments, etc." alt="" coords="223,535,387,577"/>
+<area shape="rect" id="node27" href="$class_b_a_r_e2_d_1_1_shader_program.html#a096bc5e267753d6054aa8039e4cc44a9" title="Links the compiled shaders together to create a coherent shader program." alt="" coords="217,666,392,707"/>
+<area shape="rect" id="node28" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a01768136e2e36b131a23d422ded3bd5b" title="Unbinds the FBO + textures." alt="" coords="223,349,387,390"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a61c99f69bf5feb2ac95189381a48e638" title="Binds this vertex array object." alt="" coords="742,157,885,184"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_v_a_o.html#aaaec16d98be94aa5cfed015df40dda70" title="Binds the VAO&#39;s VBO." alt="" coords="728,5,899,32"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a6c224737a43f43dbe7c9e25ecd47d1da" title="Unbinds the vao." alt="" coords="735,89,891,116"/>
+<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a1815cdbe70cc6fdbc66ec69a7131b5be" title="Binds a texture to target in the currently active texture slot." alt="" coords="736,407,891,449"/>
+<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_g_l_context_manager.html#a733646522bf07c33576f9a1e0bb76c28" title=" " alt="" coords="715,473,912,514"/>
+<area shape="rect" id="node10" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a529bb80b0bd7bbf86f10be7c30be514c" title="Sets the active texture &quot;slot&quot;. This can be GL_TEXTURE0 to GL_TEXTURE8 (I think. Check the literature..." alt="" coords="736,342,891,383"/>
+<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a62f46a348cc1f4e91fe3ab48c9a5cc1b" title=" " alt="" coords="963,473,1117,514"/>
+<area shape="rect" id="node13" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aff19a68622b2fdf7033ffee1ab32a7c6" title="Creates all of the OpenGL textures, and takes their handles into m_colourTextureID,..." alt="" coords="471,473,635,514"/>
+<area shape="rect" id="node14" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="727,608,900,635"/>
+<area shape="rect" id="node15" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="960,625,1120,652"/>
+<area shape="rect" id="node16" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="968,575,1112,601"/>
+<area shape="rect" id="node18" href="$class_b_a_r_e2_d_1_1_shader_program.html#a05a721b577417d9d28bf0cec20896e16" title="A call to glBindFragDataLocation() &#45; Causes an output variable of the fragment shader to output to a ..." alt="" coords="466,107,641,149"/>
+<area shape="rect" id="node19" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a95e6c292d64ff927870783e464ad49cd" title="Initializes the necessary components, combining the VBO and VAO." alt="" coords="486,173,621,200"/>
+<area shape="rect" id="node20" href="$class_b_a_r_e2_d_1_1_renderer.html#a371f0d8b66a1fecb592b6d8b2b3cb1a0" title="Initializes all uniforms, such as colour attachments, depth attachments, etc." alt="" coords="446,56,661,83"/>
+<area shape="rect" id="node24" href="$class_b_a_r_e2_d_1_1_shader_program.html#af711102689d9552b2b54c1c9da8f8589" title=" " alt="" coords="466,641,641,682"/>
+<area shape="rect" id="node25" href="$class_b_a_r_e2_d_1_1_shader_program.html#a70aa79c9886b261f8380985ca20a487d" title="A generalized wrapper to find and set a uniform for this shader." alt="" coords="466,706,641,747"/>
+<area shape="rect" id="node26" href="$_b_a_r_e_errors_8cpp.html#ad6c3fb278e5310c3250bab181be717d6" title="PLEASE NOTE THAT IF MINGW BREAKS, THIS IS PROBABLY WHY." alt="" coords="774,713,853,740"/>
+<area shape="rect" id="node29" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a99f228aa049e960dace1970e09b24246" title="Unbinds a texture." alt="" coords="476,342,631,383"/>
 </map>

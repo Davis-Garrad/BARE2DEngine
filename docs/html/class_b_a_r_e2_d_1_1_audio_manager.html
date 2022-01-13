@@ -91,6 +91,10 @@ $(document).ready(function(){initNavTree('class_b_a_r_e2_d_1_1_audio_manager.htm
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_b_a_r_e2_d_1_1_audio_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">BARE2D::AudioManager Class Reference</div>  </div>
@@ -98,49 +102,114 @@ $(document).ready(function(){initNavTree('class_b_a_r_e2_d_1_1_audio_manager.htm
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_audio_manager_8hpp_source.html">AudioManager.hpp</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for BARE2D::AudioManager:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_audio_manager__coll__graph.png" border="0" usemap="#_b_a_r_e2_d_1_1_audio_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="_b_a_r_e2_d_1_1_audio_manager_coll__map" id="_b_a_r_e2_d_1_1_audio_manager_coll__map">
+<area shape="rect" title=" " alt="" coords="12,124,179,151"/>
+<area shape="rect" title=" " alt="" coords="5,5,52,32"/>
+<area shape="rect" title=" " alt="" coords="139,5,185,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a8d19a9540129548e8a6c26472d0b0c4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a8d19a9540129548e8a6c26472d0b0c4d">init</a> ()</td></tr>
+<tr class="memdesc:a8d19a9540129548e8a6c26472d0b0c4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes all necessary bits and pieces.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#a8d19a9540129548e8a6c26472d0b0c4d">More...</a><br /></td></tr>
+<tr class="separator:a8d19a9540129548e8a6c26472d0b0c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab60447762de121487a99ff9b66d0fb1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#ab60447762de121487a99ff9b66d0fb1b">destroy</a> ()</td></tr>
+<tr class="memdesc:ab60447762de121487a99ff9b66d0fb1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys/quits all necessary bits and pieces.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#ab60447762de121487a99ff9b66d0fb1b">More...</a><br /></td></tr>
+<tr class="separator:ab60447762de121487a99ff9b66d0fb1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaea5896a893ca7571f9f996410662f3b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#aaea5896a893ca7571f9f996410662f3b">playSound</a> (<a class="el" href="struct_b_a_r_e2_d_1_1_sound.html">Sound</a> &amp;sound, unsigned int fadeTime=0, unsigned int timeOut=0, int angle=0, unsigned char distance=128)</td></tr>
+<tr class="memdesc:aaea5896a893ca7571f9f996410662f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays a sound at a position.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#aaea5896a893ca7571f9f996410662f3b">More...</a><br /></td></tr>
+<tr class="separator:aaea5896a893ca7571f9f996410662f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18066e694ed639067819cf07528240fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a18066e694ed639067819cf07528240fe">moveSound</a> (unsigned int &amp;soundID, int angle, unsigned char distance=128)</td></tr>
+<tr class="memdesc:a18066e694ed639067819cf07528240fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the sound's position for positional audio.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#a18066e694ed639067819cf07528240fe">More...</a><br /></td></tr>
+<tr class="separator:a18066e694ed639067819cf07528240fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c0ff9d1def21c04aaa2efbb88339975"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a3c0ff9d1def21c04aaa2efbb88339975">stopSound</a> (unsigned int &amp;soundID, unsigned int fadeTime=0)</td></tr>
+<tr class="memdesc:a3c0ff9d1def21c04aaa2efbb88339975"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops a sound.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#a3c0ff9d1def21c04aaa2efbb88339975">More...</a><br /></td></tr>
+<tr class="separator:a3c0ff9d1def21c04aaa2efbb88339975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fc05e737bab89ce70d78add65c52a50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a2fc05e737bab89ce70d78add65c52a50">pauseSound</a> (unsigned int &amp;soundID)</td></tr>
+<tr class="memdesc:a2fc05e737bab89ce70d78add65c52a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses a sound.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#a2fc05e737bab89ce70d78add65c52a50">More...</a><br /></td></tr>
+<tr class="separator:a2fc05e737bab89ce70d78add65c52a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6126bf1f8733914e9e1a17b08087fba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#ab6126bf1f8733914e9e1a17b08087fba">resumeSound</a> (unsigned int &amp;soundID)</td></tr>
+<tr class="memdesc:ab6126bf1f8733914e9e1a17b08087fba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resumes a paused sound.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#ab6126bf1f8733914e9e1a17b08087fba">More...</a><br /></td></tr>
+<tr class="separator:ab6126bf1f8733914e9e1a17b08087fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c40cea80160da2a6dcdc518e80c7743"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a9c40cea80160da2a6dcdc518e80c7743">playMusic</a> (<a class="el" href="struct_b_a_r_e2_d_1_1_music.html">Music</a> &amp;music, unsigned int fadeTime=0)</td></tr>
+<tr class="memdesc:a9c40cea80160da2a6dcdc518e80c7743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays some music! Only one "music" can be played at a time.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#a9c40cea80160da2a6dcdc518e80c7743">More...</a><br /></td></tr>
+<tr class="separator:a9c40cea80160da2a6dcdc518e80c7743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13127e869425dc7d396a2a86d44763db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a13127e869425dc7d396a2a86d44763db">stopMusic</a> (unsigned int fadeTime=0)</td></tr>
+<tr class="memdesc:a13127e869425dc7d396a2a86d44763db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the music.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#a13127e869425dc7d396a2a86d44763db">More...</a><br /></td></tr>
+<tr class="separator:a13127e869425dc7d396a2a86d44763db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91f15e85f8ac67f0317ef1c7c7973dcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a91f15e85f8ac67f0317ef1c7c7973dcd">pauseMusic</a> ()</td></tr>
+<tr class="memdesc:a91f15e85f8ac67f0317ef1c7c7973dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses the music.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#a91f15e85f8ac67f0317ef1c7c7973dcd">More...</a><br /></td></tr>
+<tr class="separator:a91f15e85f8ac67f0317ef1c7c7973dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b184aaae5a2676eee30ff8961abfd60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a7b184aaae5a2676eee30ff8961abfd60">resumeMusic</a> ()</td></tr>
+<tr class="memdesc:a7b184aaae5a2676eee30ff8961abfd60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resumes the paused music.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#a7b184aaae5a2676eee30ff8961abfd60">More...</a><br /></td></tr>
+<tr class="separator:a7b184aaae5a2676eee30ff8961abfd60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4448b750a6b0df1ea06d188fefe06b2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a4448b750a6b0df1ea06d188fefe06b2e">mute</a> ()</td></tr>
+<tr class="memdesc:a4448b750a6b0df1ea06d188fefe06b2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutes all sounds and music.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#a4448b750a6b0df1ea06d188fefe06b2e">More...</a><br /></td></tr>
+<tr class="separator:a4448b750a6b0df1ea06d188fefe06b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d77be444ed398c46a0705ba043b023"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#ac4d77be444ed398c46a0705ba043b023">unmute</a> ()</td></tr>
+<tr class="memdesc:ac4d77be444ed398c46a0705ba043b023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unmutes all sounds and music.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#ac4d77be444ed398c46a0705ba043b023">More...</a><br /></td></tr>
+<tr class="separator:ac4d77be444ed398c46a0705ba043b023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7deaaf50a6974c505a6f5f525fa39884"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a7deaaf50a6974c505a6f5f525fa39884">setSoundVolume</a> (unsigned char volumeLevel)</td></tr>
+<tr class="memdesc:a7deaaf50a6974c505a6f5f525fa39884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the volume level of all sounds.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#a7deaaf50a6974c505a6f5f525fa39884">More...</a><br /></td></tr>
+<tr class="separator:a7deaaf50a6974c505a6f5f525fa39884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2620da48de00a311b34986ec341cbf41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a2620da48de00a311b34986ec341cbf41">setMusicVolume</a> (unsigned char volumeLevel)</td></tr>
+<tr class="memdesc:a2620da48de00a311b34986ec341cbf41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the volume level of all music.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#a2620da48de00a311b34986ec341cbf41">More...</a><br /></td></tr>
+<tr class="separator:a2620da48de00a311b34986ec341cbf41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e351ef6720a8a9eaadd2c29508fb8b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a0e351ef6720a8a9eaadd2c29508fb8b0">setMasterVolumeModifier</a> (unsigned char masterLevel)</td></tr>
+<tr class="memdesc:a0e351ef6720a8a9eaadd2c29508fb8b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the modifier of all sound levels - eg., if sounds were set at 40% and music at 60%, setting the master modifier to 50% would set sounds to 20% and music to 30%.  <a href="class_b_a_r_e2_d_1_1_audio_manager.html#a0e351ef6720a8a9eaadd2c29508fb8b0">More...</a><br /></td></tr>
+<tr class="separator:a0e351ef6720a8a9eaadd2c29508fb8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a890b53a567ce658da9686403ec8ee29a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a890b53a567ce658da9686403ec8ee29a">isMusicPlaying</a> ()</td></tr>
+<tr class="separator:a890b53a567ce658da9686403ec8ee29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ad1dfe27d3ca15d1087e274313d926ad8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html">AudioManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#ad1dfe27d3ca15d1087e274313d926ad8">getInstance</a> ()</td></tr>
+<tr class="separator:ad1dfe27d3ca15d1087e274313d926ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b07b591f0add8a92a333a1589b09b2c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a4b07b591f0add8a92a333a1589b09b2c">release</a> ()</td></tr>
+<tr class="separator:a4b07b591f0add8a92a333a1589b09b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
 <tr class="memitem:a2ad1c7e845597f70b9d0a5d14969f3b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a2ad1c7e845597f70b9d0a5d14969f3b5">AudioManager</a> ()</td></tr>
 <tr class="separator:a2ad1c7e845597f70b9d0a5d14969f3b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5328303ce6ed6d376f081b235e369e17"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a5328303ce6ed6d376f081b235e369e17">~AudioManager</a> ()</td></tr>
 <tr class="separator:a5328303ce6ed6d376f081b235e369e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77a1de536956470bda18e9e51f59b222"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a77a1de536956470bda18e9e51f59b222">playSound</a> (<a class="el" href="class_b_a_r_e2_d_1_1_sound.html">Sound</a> &amp;sound)</td></tr>
-<tr class="separator:a77a1de536956470bda18e9e51f59b222"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1289d03213645b6114d6dc574827f83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#ab1289d03213645b6114d6dc574827f83">stopSound</a> (unsigned int &amp;soundID)</td></tr>
-<tr class="separator:ab1289d03213645b6114d6dc574827f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fc05e737bab89ce70d78add65c52a50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a2fc05e737bab89ce70d78add65c52a50">pauseSound</a> (unsigned int &amp;soundID)</td></tr>
-<tr class="separator:a2fc05e737bab89ce70d78add65c52a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6126bf1f8733914e9e1a17b08087fba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#ab6126bf1f8733914e9e1a17b08087fba">resumeSound</a> (unsigned int &amp;soundID)</td></tr>
-<tr class="separator:ab6126bf1f8733914e9e1a17b08087fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a842102b760fd78415fe91cc246aaa948"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a842102b760fd78415fe91cc246aaa948">playMusic</a> (<a class="el" href="class_b_a_r_e2_d_1_1_music.html">Music</a> &amp;music)</td></tr>
-<tr class="separator:a842102b760fd78415fe91cc246aaa948"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c90c305fded15d17ae864bccde6cb95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a0c90c305fded15d17ae864bccde6cb95">stopMusic</a> (unsigned int &amp;musicID)</td></tr>
-<tr class="separator:a0c90c305fded15d17ae864bccde6cb95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad388cfe2fcf9561a546d9d485af259aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#ad388cfe2fcf9561a546d9d485af259aa">pauseMusic</a> (unsigned int &amp;musicID)</td></tr>
-<tr class="separator:ad388cfe2fcf9561a546d9d485af259aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9973a700f6e3a597a3fbcddbab6af1e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a9973a700f6e3a597a3fbcddbab6af1e5">resumeMusic</a> (unsigned int &amp;musicID)</td></tr>
-<tr class="separator:a9973a700f6e3a597a3fbcddbab6af1e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4448b750a6b0df1ea06d188fefe06b2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a4448b750a6b0df1ea06d188fefe06b2e">mute</a> ()</td></tr>
-<tr class="separator:a4448b750a6b0df1ea06d188fefe06b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4d77be444ed398c46a0705ba043b023"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#ac4d77be444ed398c46a0705ba043b023">unmute</a> ()</td></tr>
-<tr class="separator:ac4d77be444ed398c46a0705ba043b023"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80c757719949d24f121dbca73df34094"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a80c757719949d24f121dbca73df34094">setSoundVolume</a> (float &amp;volumeLevel)</td></tr>
-<tr class="separator:a80c757719949d24f121dbca73df34094"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cdbff3a4422c1c4c31c6242b8113307"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a2cdbff3a4422c1c4c31c6242b8113307">setMusicVolume</a> (float &amp;volumeLevel)</td></tr>
-<tr class="separator:a2cdbff3a4422c1c4c31c6242b8113307"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83a88fde307bb7e002d1c0a05dbd0589"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a83a88fde307bb7e002d1c0a05dbd0589">setMasterVolumeModifier</a> (float &amp;masterLevel)</td></tr>
-<tr class="separator:a83a88fde307bb7e002d1c0a05dbd0589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ace48414811952d078da7d54ac5b437ff"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#ace48414811952d078da7d54ac5b437ff">m_soundVolume</a> = 255</td></tr>
+<tr class="separator:ace48414811952d078da7d54ac5b437ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedbbc0903ee931180d6d819248af756c"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#aedbbc0903ee931180d6d819248af756c">m_musicVolume</a> = 255</td></tr>
+<tr class="separator:aedbbc0903ee931180d6d819248af756c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f02401ded65dbe776c095339575aabf"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a2f02401ded65dbe776c095339575aabf">m_masterVolume</a> = 255</td></tr>
+<tr class="separator:a2f02401ded65dbe776c095339575aabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370017c99d2ba0ad7821e939ede67eaf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a370017c99d2ba0ad7821e939ede67eaf">m_muted</a> = false</td></tr>
+<tr class="separator:a370017c99d2ba0ad7821e939ede67eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a47eceac49f0cecec3daba4e73f3e38d6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html">AudioManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html#a47eceac49f0cecec3daba4e73f3e38d6">m_instance</a> = nullptr</td></tr>
+<tr class="separator:a47eceac49f0cecec3daba4e73f3e38d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_audio_manager_8hpp_source.html#l00013">13</a> of file <a class="el" href="_audio_manager_8hpp_source.html">AudioManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8hpp_source.html#l00014">14</a> of file <a class="el" href="_audio_manager_8hpp_source.html">AudioManager.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2ad1c7e845597f70b9d0a5d14969f3b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ad1c7e845597f70b9d0a5d14969f3b5">&#9670;&nbsp;</a></span>AudioManager()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">BARE2D::AudioManager::AudioManager </td>
@@ -149,9 +218,27 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00005">5</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00028">28</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_audio_manager_8cpp_source.html#l00012">getInstance()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_audio_manager_a2ad1c7e845597f70b9d0a5d14969f3b5_icgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_audio_manager_a2ad1c7e845597f70b9d0a5d14969f3b5_icgraph" alt=""/></div>
+<map name="class_b_a_r_e2_d_1_1_audio_manager_a2ad1c7e845597f70b9d0a5d14969f3b5_icgraph" id="class_b_a_r_e2_d_1_1_audio_manager_a2ad1c7e845597f70b9d0a5d14969f3b5_icgraph">
+<area shape="rect" title=" " alt="" coords="220,5,387,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_audio_manager.html#ad1dfe27d3ca15d1087e274313d926ad8" title=" " alt="" coords="5,5,172,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -160,6 +247,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">BARE2D::AudioManager::~AudioManager </td>
@@ -168,13 +258,179 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00009">9</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00032">32</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab60447762de121487a99ff9b66d0fb1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab60447762de121487a99ff9b66d0fb1b">&#9670;&nbsp;</a></span>destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BARE2D::AudioManager::destroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroys/quits all necessary bits and pieces. </p>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00071">71</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_audio_manager_8cpp_source.html#l00020">release()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b_icgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b_icgraph" alt=""/></div>
+<map name="class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b_icgraph" id="class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b_icgraph">
+<area shape="rect" title="Destroys/quits all necessary bits and pieces." alt="" coords="220,5,387,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_audio_manager.html#a4b07b591f0add8a92a333a1589b09b2c" title=" " alt="" coords="5,5,172,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad1dfe27d3ca15d1087e274313d926ad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1dfe27d3ca15d1087e274313d926ad8">&#9670;&nbsp;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html">AudioManager</a> * BARE2D::AudioManager::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00012">12</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_audio_manager_8cpp_source.html#l00028">AudioManager()</a>, and <a class="el" href="_audio_manager_8hpp_source.html#l00118">m_instance</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_audio_manager_ad1dfe27d3ca15d1087e274313d926ad8_cgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_audio_manager_ad1dfe27d3ca15d1087e274313d926ad8_cgraph" alt=""/></div>
+<map name="class_b_a_r_e2_d_1_1_audio_manager_ad1dfe27d3ca15d1087e274313d926ad8_cgraph" id="class_b_a_r_e2_d_1_1_audio_manager_ad1dfe27d3ca15d1087e274313d926ad8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,172,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_audio_manager.html#a2ad1c7e845597f70b9d0a5d14969f3b5" title=" " alt="" coords="220,5,387,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8d19a9540129548e8a6c26472d0b0c4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d19a9540129548e8a6c26472d0b0c4d">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BARE2D::AudioManager::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes all necessary bits and pieces. </p>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00037">37</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a890b53a567ce658da9686403ec8ee29a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a890b53a567ce658da9686403ec8ee29a">&#9670;&nbsp;</a></span>isMusicPlaying()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BARE2D::AudioManager::isMusicPlaying </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>True if there is music currently playing, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00222">222</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a18066e694ed639067819cf07528240fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18066e694ed639067819cf07528240fe">&#9670;&nbsp;</a></span>moveSound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BARE2D::AudioManager::moveSound </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>soundID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>distance</em> = <code>128</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resets the sound's position for positional audio. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">soundID</td><td>A reference to the ID that represents the sound to move. </td></tr>
+    <tr><td class="paramname">angle</td><td>The angle (clockwise in degrees, where 0 is directly forward) that the sound is to be played at. </td></tr>
+    <tr><td class="paramname">distance</td><td>The distance from the camera that the sound should be played (from 0 (very near, loud) to 255 (very distant, quiet)) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00118">118</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a4448b750a6b0df1ea06d188fefe06b2e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4448b750a6b0df1ea06d188fefe06b2e">&#9670;&nbsp;</a></span>mute()</h2>
 
@@ -190,10 +446,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Mutes all sounds and music. </p>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00178">178</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_audio_manager_8hpp_source.html#l00120">m_musicVolume</a>, <a class="el" href="_audio_manager_8hpp_source.html#l00121">m_muted</a>, and <a class="el" href="_audio_manager_8hpp_source.html#l00120">m_soundVolume</a>.</p>
+
 </div>
 </div>
-<a id="ad388cfe2fcf9561a546d9d485af259aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad388cfe2fcf9561a546d9d485af259aa">&#9670;&nbsp;</a></span>pauseMusic()</h2>
+<a id="a91f15e85f8ac67f0317ef1c7c7973dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91f15e85f8ac67f0317ef1c7c7973dcd">&#9670;&nbsp;</a></span>pauseMusic()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,12 +463,15 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void BARE2D::AudioManager::pauseMusic </td>
           <td>(</td>
-          <td class="paramtype">unsigned int &amp;&#160;</td>
-          <td class="paramname"><em>musicID</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Pauses the music. </p>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00168">168</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -226,28 +491,61 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Pauses a sound. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">soundID</td><td>The ID of the sound to pause, given by playSound(...) calls. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00134">134</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
 </div>
 </div>
-<a id="a842102b760fd78415fe91cc246aaa948"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a842102b760fd78415fe91cc246aaa948">&#9670;&nbsp;</a></span>playMusic()</h2>
+<a id="a9c40cea80160da2a6dcdc518e80c7743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c40cea80160da2a6dcdc518e80c7743">&#9670;&nbsp;</a></span>playMusic()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int BARE2D::AudioManager::playMusic </td>
+          <td class="memname">void BARE2D::AudioManager::playMusic </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_b_a_r_e2_d_1_1_music.html">Music</a> &amp;&#160;</td>
-          <td class="paramname"><em>music</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_b_a_r_e2_d_1_1_music.html">Music</a> &amp;&#160;</td>
+          <td class="paramname"><em>music</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>fadeTime</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Plays some music! Only one "music" can be played at a time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">music</td><td>The music to play </td></tr>
+    <tr><td class="paramname">fadeTime</td><td>The number of milliseconds that the sound will take to fade in. Defaults to 0 (no fade). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00144">144</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_music_8hpp_source.html#l00008">BARE2D::Music::music</a>.</p>
+
 </div>
 </div>
-<a id="a77a1de536956470bda18e9e51f59b222"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77a1de536956470bda18e9e51f59b222">&#9670;&nbsp;</a></span>playSound()</h2>
+<a id="aaea5896a893ca7571f9f996410662f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaea5896a893ca7571f9f996410662f3b">&#9670;&nbsp;</a></span>playSound()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,17 +553,102 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">unsigned int BARE2D::AudioManager::playSound </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_b_a_r_e2_d_1_1_sound.html">Sound</a> &amp;&#160;</td>
-          <td class="paramname"><em>sound</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_b_a_r_e2_d_1_1_sound.html">Sound</a> &amp;&#160;</td>
+          <td class="paramname"><em>sound</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>fadeTime</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>timeOut</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>angle</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>distance</em> = <code>128</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Plays a sound at a position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sound</td><td>A reference to the sound that is to be played. </td></tr>
+    <tr><td class="paramname">fadeTime</td><td>The number of milliseconds that the sound will take to fade in. Defaults to 0 (no fade). </td></tr>
+    <tr><td class="paramname">timeOut</td><td>the number of milliseconds before the sound times out. Defaults to 0 (never). </td></tr>
+    <tr><td class="paramname">angle</td><td>The angle (clockwise in degrees, where 0 is directly forward) that the sound is to be played at. Defaults to 0 (directly in front) </td></tr>
+    <tr><td class="paramname">distance</td><td>The distance from the camera that the sound should be played (from 0 (very near, loud) to 255 (very distant, quiet)) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The unsigned integer that represents the sound's ID. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00091">91</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_sound_8hpp_source.html#l00008">BARE2D::Sound::chunk</a>.</p>
+
 </div>
 </div>
-<a id="a9973a700f6e3a597a3fbcddbab6af1e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9973a700f6e3a597a3fbcddbab6af1e5">&#9670;&nbsp;</a></span>resumeMusic()</h2>
+<a id="a4b07b591f0add8a92a333a1589b09b2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b07b591f0add8a92a333a1589b09b2c">&#9670;&nbsp;</a></span>release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BARE2D::AudioManager::release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00020">20</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_audio_manager_8cpp_source.html#l00071">destroy()</a>, and <a class="el" href="_audio_manager_8hpp_source.html#l00118">m_instance</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_audio_manager_a4b07b591f0add8a92a333a1589b09b2c_cgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_audio_manager_a4b07b591f0add8a92a333a1589b09b2c_cgraph" alt=""/></div>
+<map name="class_b_a_r_e2_d_1_1_audio_manager_a4b07b591f0add8a92a333a1589b09b2c_cgraph" id="class_b_a_r_e2_d_1_1_audio_manager_a4b07b591f0add8a92a333a1589b09b2c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,172,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_audio_manager.html#ab60447762de121487a99ff9b66d0fb1b" title="Destroys/quits all necessary bits and pieces." alt="" coords="220,5,387,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7b184aaae5a2676eee30ff8961abfd60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b184aaae5a2676eee30ff8961abfd60">&#9670;&nbsp;</a></span>resumeMusic()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -273,12 +656,15 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void BARE2D::AudioManager::resumeMusic </td>
           <td>(</td>
-          <td class="paramtype">unsigned int &amp;&#160;</td>
-          <td class="paramname"><em>musicID</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Resumes the paused music. </p>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00173">173</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -298,10 +684,20 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Resumes a paused sound. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">soundID</td><td>The ID of the sound to resume, given by playSound(...) calls. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00139">139</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
 </div>
 </div>
-<a id="a83a88fde307bb7e002d1c0a05dbd0589"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83a88fde307bb7e002d1c0a05dbd0589">&#9670;&nbsp;</a></span>setMasterVolumeModifier()</h2>
+<a id="a0e351ef6720a8a9eaadd2c29508fb8b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e351ef6720a8a9eaadd2c29508fb8b0">&#9670;&nbsp;</a></span>setMasterVolumeModifier()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -309,17 +705,41 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void BARE2D::AudioManager::setMasterVolumeModifier </td>
           <td>(</td>
-          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramtype">unsigned char&#160;</td>
           <td class="paramname"><em>masterLevel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets the modifier of all sound levels - eg., if sounds were set at 40% and music at 60%, setting the master modifier to 50% would set sounds to 20% and music to 30%. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">masterLevel</td><td>The level of the volume - 0 is muted, 255 is very loud. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00209">209</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_audio_manager_8hpp_source.html#l00120">m_masterVolume</a>, <a class="el" href="_audio_manager_8hpp_source.html#l00120">m_musicVolume</a>, <a class="el" href="_audio_manager_8hpp_source.html#l00120">m_soundVolume</a>, <a class="el" href="_audio_manager_8cpp_source.html#l00203">setMusicVolume()</a>, and <a class="el" href="_audio_manager_8cpp_source.html#l00197">setSoundVolume()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_audio_manager_a0e351ef6720a8a9eaadd2c29508fb8b0_cgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_audio_manager_a0e351ef6720a8a9eaadd2c29508fb8b0_cgraph" alt=""/></div>
+<map name="class_b_a_r_e2_d_1_1_audio_manager_a0e351ef6720a8a9eaadd2c29508fb8b0_cgraph" id="class_b_a_r_e2_d_1_1_audio_manager_a0e351ef6720a8a9eaadd2c29508fb8b0_cgraph">
+<area shape="rect" title="Sets the modifier of all sound levels &#45; eg., if sounds were set at 40% and music at 60%,..." alt="" coords="5,39,184,80"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_audio_manager.html#a2620da48de00a311b34986ec341cbf41" title="Sets the volume level of all music." alt="" coords="232,5,399,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_audio_manager.html#a7deaaf50a6974c505a6f5f525fa39884" title="Sets the volume level of all sounds." alt="" coords="232,71,399,112"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="a2cdbff3a4422c1c4c31c6242b8113307"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cdbff3a4422c1c4c31c6242b8113307">&#9670;&nbsp;</a></span>setMusicVolume()</h2>
+<a id="a2620da48de00a311b34986ec341cbf41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2620da48de00a311b34986ec341cbf41">&#9670;&nbsp;</a></span>setMusicVolume()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -327,17 +747,42 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void BARE2D::AudioManager::setMusicVolume </td>
           <td>(</td>
-          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramtype">unsigned char&#160;</td>
           <td class="paramname"><em>volumeLevel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets the volume level of all music. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">volumeLevel</td><td>The level of the volume - 0 is muted, 255 is very loud. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00203">203</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_audio_manager_8hpp_source.html#l00120">m_masterVolume</a>, and <a class="el" href="_audio_manager_8hpp_source.html#l00120">m_musicVolume</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_audio_manager_8cpp_source.html#l00209">setMasterVolumeModifier()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41_icgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41_icgraph" alt=""/></div>
+<map name="class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41_icgraph" id="class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41_icgraph">
+<area shape="rect" title="Sets the volume level of all music." alt="" coords="232,5,399,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_audio_manager.html#a0e351ef6720a8a9eaadd2c29508fb8b0" title="Sets the modifier of all sound levels &#45; eg., if sounds were set at 40% and music at 60%,..." alt="" coords="5,5,184,47"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="a80c757719949d24f121dbca73df34094"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80c757719949d24f121dbca73df34094">&#9670;&nbsp;</a></span>setSoundVolume()</h2>
+<a id="a7deaaf50a6974c505a6f5f525fa39884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7deaaf50a6974c505a6f5f525fa39884">&#9670;&nbsp;</a></span>setSoundVolume()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -345,17 +790,42 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void BARE2D::AudioManager::setSoundVolume </td>
           <td>(</td>
-          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramtype">unsigned char&#160;</td>
           <td class="paramname"><em>volumeLevel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets the volume level of all sounds. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">volumeLevel</td><td>The level of the volume (clamped from 0 (muted) to 255(loud)) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00197">197</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_audio_manager_8hpp_source.html#l00120">m_masterVolume</a>, and <a class="el" href="_audio_manager_8hpp_source.html#l00120">m_soundVolume</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_audio_manager_8cpp_source.html#l00209">setMasterVolumeModifier()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884_icgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884_icgraph" alt=""/></div>
+<map name="class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884_icgraph" id="class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884_icgraph">
+<area shape="rect" title="Sets the volume level of all sounds." alt="" coords="232,5,399,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_audio_manager.html#a0e351ef6720a8a9eaadd2c29508fb8b0" title="Sets the modifier of all sound levels &#45; eg., if sounds were set at 40% and music at 60%,..." alt="" coords="5,5,184,47"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="a0c90c305fded15d17ae864bccde6cb95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c90c305fded15d17ae864bccde6cb95">&#9670;&nbsp;</a></span>stopMusic()</h2>
+<a id="a13127e869425dc7d396a2a86d44763db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13127e869425dc7d396a2a86d44763db">&#9670;&nbsp;</a></span>stopMusic()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -363,17 +833,27 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void BARE2D::AudioManager::stopMusic </td>
           <td>(</td>
-          <td class="paramtype">unsigned int &amp;&#160;</td>
-          <td class="paramname"><em>musicID</em></td><td>)</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>fadeTime</em> = <code>0</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Stops the music. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fadeTime</td><td>The number of milliseconds the sound will take to fade out. Defaults to 0 (no fade). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00159">159</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
 </div>
 </div>
-<a id="ab1289d03213645b6114d6dc574827f83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1289d03213645b6114d6dc574827f83">&#9670;&nbsp;</a></span>stopSound()</h2>
+<a id="a3c0ff9d1def21c04aaa2efbb88339975"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c0ff9d1def21c04aaa2efbb88339975">&#9670;&nbsp;</a></span>stopSound()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -382,11 +862,32 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void BARE2D::AudioManager::stopSound </td>
           <td>(</td>
           <td class="paramtype">unsigned int &amp;&#160;</td>
-          <td class="paramname"><em>soundID</em></td><td>)</td>
+          <td class="paramname"><em>soundID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>fadeTime</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Stops a sound. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fadeTime</td><td>The number of milliseconds the sound will take to fade out. Defaults to 0 (no fade). </td></tr>
+    <tr><td class="paramname">soundID</td><td>The ID of the sound to stop, given by playSound(...) calls. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00125">125</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -404,6 +905,143 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Unmutes all sounds and music. </p>
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8cpp_source.html#l00188">188</a> of file <a class="el" href="_audio_manager_8cpp_source.html">AudioManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_audio_manager_8hpp_source.html#l00120">m_musicVolume</a>, <a class="el" href="_audio_manager_8hpp_source.html#l00121">m_muted</a>, and <a class="el" href="_audio_manager_8hpp_source.html#l00120">m_soundVolume</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a47eceac49f0cecec3daba4e73f3e38d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47eceac49f0cecec3daba4e73f3e38d6">&#9670;&nbsp;</a></span>m_instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_a_r_e2_d_1_1_audio_manager.html">AudioManager</a> * BARE2D::AudioManager::m_instance = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8hpp_source.html#l00118">118</a> of file <a class="el" href="_audio_manager_8hpp_source.html">AudioManager.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_audio_manager_8cpp_source.html#l00012">getInstance()</a>, and <a class="el" href="_audio_manager_8cpp_source.html#l00020">release()</a>.</p>
+
+</div>
+</div>
+<a id="a2f02401ded65dbe776c095339575aabf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f02401ded65dbe776c095339575aabf">&#9670;&nbsp;</a></span>m_masterVolume</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char BARE2D::AudioManager::m_masterVolume = 255</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8hpp_source.html#l00120">120</a> of file <a class="el" href="_audio_manager_8hpp_source.html">AudioManager.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_audio_manager_8cpp_source.html#l00209">setMasterVolumeModifier()</a>, <a class="el" href="_audio_manager_8cpp_source.html#l00203">setMusicVolume()</a>, and <a class="el" href="_audio_manager_8cpp_source.html#l00197">setSoundVolume()</a>.</p>
+
+</div>
+</div>
+<a id="aedbbc0903ee931180d6d819248af756c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedbbc0903ee931180d6d819248af756c">&#9670;&nbsp;</a></span>m_musicVolume</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char BARE2D::AudioManager::m_musicVolume = 255</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8hpp_source.html#l00120">120</a> of file <a class="el" href="_audio_manager_8hpp_source.html">AudioManager.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_audio_manager_8cpp_source.html#l00178">mute()</a>, <a class="el" href="_audio_manager_8cpp_source.html#l00209">setMasterVolumeModifier()</a>, <a class="el" href="_audio_manager_8cpp_source.html#l00203">setMusicVolume()</a>, and <a class="el" href="_audio_manager_8cpp_source.html#l00188">unmute()</a>.</p>
+
+</div>
+</div>
+<a id="a370017c99d2ba0ad7821e939ede67eaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a370017c99d2ba0ad7821e939ede67eaf">&#9670;&nbsp;</a></span>m_muted</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BARE2D::AudioManager::m_muted = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8hpp_source.html#l00121">121</a> of file <a class="el" href="_audio_manager_8hpp_source.html">AudioManager.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_audio_manager_8cpp_source.html#l00178">mute()</a>, and <a class="el" href="_audio_manager_8cpp_source.html#l00188">unmute()</a>.</p>
+
+</div>
+</div>
+<a id="ace48414811952d078da7d54ac5b437ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace48414811952d078da7d54ac5b437ff">&#9670;&nbsp;</a></span>m_soundVolume</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char BARE2D::AudioManager::m_soundVolume = 255</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_audio_manager_8hpp_source.html#l00120">120</a> of file <a class="el" href="_audio_manager_8hpp_source.html">AudioManager.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_audio_manager_8cpp_source.html#l00178">mute()</a>, <a class="el" href="_audio_manager_8cpp_source.html#l00209">setMasterVolumeModifier()</a>, <a class="el" href="_audio_manager_8cpp_source.html#l00197">setSoundVolume()</a>, and <a class="el" href="_audio_manager_8cpp_source.html#l00188">unmute()</a>.</p>
 
 </div>
 </div>

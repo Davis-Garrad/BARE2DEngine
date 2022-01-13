@@ -99,6 +99,7 @@ $(document).ready(function(){initNavTree('_b_a_r_e_errors_8cpp.html',''); initRe
 <div class="textblock"><code>#include &quot;<a class="el" href="_b_a_r_e_errors_8hpp_source.html">BAREErrors.hpp</a>&quot;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;csignal&gt;</code><br />
 <code>#include &lt;SDL2/SDL.h&gt;</code><br />
 <code>#include &lt;GL/glew.h&gt;</code><br />
 <code>#include &lt;cxxabi.h&gt;</code><br />
@@ -113,20 +114,21 @@ $(document).ready(function(){initNavTree('_b_a_r_e_errors_8cpp.html',''); initRe
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="_b_a_r_e_errors_8cpp__incl.png" border="0" usemap="#_source_2_b_a_r_e_errors_8cpp" alt=""/></div>
 <map name="_source_2_b_a_r_e_errors_8cpp" id="_source_2_b_a_r_e_errors_8cpp">
-<area shape="rect" title=" " alt="" coords="463,5,627,32"/>
+<area shape="rect" title=" " alt="" coords="501,5,665,32"/>
 <area shape="rect" href="_b_a_r_e_errors_8hpp.html" title=" " alt="" coords="5,80,124,107"/>
 <area shape="rect" title=" " alt="" coords="149,80,221,107"/>
 <area shape="rect" title=" " alt="" coords="245,80,311,107"/>
-<area shape="rect" title=" " alt="" coords="335,80,431,107"/>
-<area shape="rect" title=" " alt="" coords="456,80,535,107"/>
-<area shape="rect" title=" " alt="" coords="559,80,629,107"/>
-<area shape="rect" title=" " alt="" coords="653,80,721,107"/>
-<area shape="rect" title=" " alt="" coords="746,80,815,107"/>
-<area shape="rect" title=" " alt="" coords="840,80,900,107"/>
-<area shape="rect" href="_logger_8hpp.html" title=" " alt="" coords="925,80,1010,107"/>
-<area shape="rect" title=" " alt="" coords="487,155,541,181"/>
+<area shape="rect" title=" " alt="" coords="336,80,399,107"/>
+<area shape="rect" title=" " alt="" coords="423,80,519,107"/>
+<area shape="rect" title=" " alt="" coords="544,80,623,107"/>
+<area shape="rect" title=" " alt="" coords="647,80,717,107"/>
+<area shape="rect" title=" " alt="" coords="741,80,809,107"/>
+<area shape="rect" title=" " alt="" coords="834,80,903,107"/>
+<area shape="rect" title=" " alt="" coords="928,80,988,107"/>
+<area shape="rect" href="_logger_8hpp.html" title=" " alt="" coords="1013,80,1098,107"/>
+<area shape="rect" title=" " alt="" coords="531,155,585,181"/>
 <area shape="rect" title=" " alt="" coords="35,155,94,181"/>
-<area shape="rect" title=" " alt="" coords="934,155,1001,181"/>
+<area shape="rect" title=" " alt="" coords="1022,155,1089,181"/>
 </map>
 </div>
 </div>
@@ -186,7 +188,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A demangled version of mangled. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_errors_8cpp_source.html#l00015">15</a> of file <a class="el" href="_b_a_r_e_errors_8cpp_source.html">BAREErrors.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_errors_8cpp_source.html#l00016">16</a> of file <a class="el" href="_b_a_r_e_errors_8cpp_source.html">BAREErrors.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_shader_program_8tcc_source.html#l00010">BARE2D::ShaderProgram::setUniform()</a>, and <a class="el" href="_shader_program_8tcc_source.html#l00015">BARE2D::ShaderProgram::setUniformMatrix()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -196,11 +198,15 @@ Functions</h2></td></tr>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6_icgraph.png" border="0" usemap="#_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6_icgraph" alt=""/></div>
 <map name="_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6_icgraph" id="_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6_icgraph">
-<area shape="rect" title="PLEASE NOTE THAT IF MINGW BREAKS, THIS IS PROBABLY WHY." alt="" coords="447,46,525,73"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_shader_program.html#aea20b0b7244458c2384e7d652b506767" title="A generalized wrapper to find and set a uniform for this shader." alt="" coords="224,5,399,47"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_shader_program.html#a66aa33c1300b58bfb37ecd4b5500321c" title="Similar to setUniform." alt="" coords="224,71,399,112"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="9,5,173,47"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_basic_renderer.html#aaf24fe92216128173a92b9c23dc4dd56" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="5,71,176,112"/>
+<area shape="rect" title="PLEASE NOTE THAT IF MINGW BREAKS, THIS IS PROBABLY WHY." alt="" coords="681,111,760,138"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_shader_program.html#a70aa79c9886b261f8380985ca20a487d" title="A generalized wrapper to find and set a uniform for this shader." alt="" coords="459,71,633,112"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_shader_program.html#adfa74453d9bc2f1100e5d19bb45a5512" title="Similar to setUniform." alt="" coords="459,136,633,177"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#a6700a581c23f6874f4547ea80d4f4535" title="Initializes all uniforms, such as colour attachments, depth attachments, etc." alt="" coords="232,5,411,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ad27e4c76b6f82a74b967464560254a87" title="Initializes all uniforms, such as colour attachments, depth attachments, etc." alt="" coords="239,71,403,112"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_basic_renderer.html#aaf24fe92216128173a92b9c23dc4dd56" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="236,136,407,177"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="13,71,177,112"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#a33dd21c340b2ea4cdfda0c4306883275" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="232,201,411,243"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#adf8f29d89f859671a39cde7fb94cc7e7" title="Actually renders the contents to the screen!" alt="" coords="5,201,184,243"/>
 </map>
 </div>
 
@@ -262,11 +268,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_r_e_errors_8cpp_source.html#l00023">23</a> of file <a class="el" href="_b_a_r_e_errors_8cpp_source.html">BAREErrors.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_r_e_errors_8cpp_source.html#l00024">24</a> of file <a class="el" href="_b_a_r_e_errors_8cpp_source.html">BAREErrors.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_logger_8cpp_source.html#l00034">BARE2D::Logger::getInstance()</a>, <a class="el" href="_b_a_r_e_errors_8cpp_source.html#l00132">BARE2D::GLErrorMinSeverity</a>, <a class="el" href="namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c">BARE2D::HIGH</a>, <a class="el" href="_logger_8cpp_source.html#l00042">BARE2D::Logger::log()</a>, <a class="el" href="namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88">BARE2D::LOW</a>, <a class="el" href="namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c">BARE2D::MED</a>, <a class="el" href="namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da">BARE2D::NOTIF</a>, and <a class="el" href="namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3">BARE2D::UNKNOWN</a>.</p>
+<p class="reference">References <a class="el" href="_logger_8cpp_source.html#l00034">BARE2D::Logger::getInstance()</a>, <a class="el" href="_b_a_r_e_errors_8cpp_source.html#l00134">BARE2D::GLErrorMinSeverity</a>, <a class="el" href="namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c">BARE2D::HIGH</a>, <a class="el" href="_logger_8cpp_source.html#l00042">BARE2D::Logger::log()</a>, <a class="el" href="namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88">BARE2D::LOW</a>, <a class="el" href="namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c">BARE2D::MED</a>, <a class="el" href="namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da">BARE2D::NOTIF</a>, and <a class="el" href="namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3">BARE2D::UNKNOWN</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_b_a_r_e_errors_8cpp_source.html#l00210">BARE2D::initGLErrorCallback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_b_a_r_e_errors_8cpp_source.html#l00215">BARE2D::initGLErrorCallback()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">

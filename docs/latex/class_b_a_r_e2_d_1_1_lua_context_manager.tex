@@ -19,7 +19,9 @@ Collaboration diagram for B\+A\+R\+E2D\+::Lua\+Context\+Manager\+:\nopagebreak
 void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager_a5d5afd3c292c652399de872b7d2781da}{update}} ()
 \begin{DoxyCompactList}\small\item\em Updates all of the context wrappers, pausing, removing (if finished), or resuming them as is correct. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager_ae5cd0d9c17a813a06fb0f5e8b702f06d}{add\+Context}} (unsigned int id, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper}{Lua\+Script\+Context\+Wrapper}} $\ast$context)
-\begin{DoxyCompactList}\small\item\em Adds a context wrapper to the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Adds a context wrapper to the map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper}{Lua\+Script\+Context\+Wrapper}} $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager_acebd036b54fb1ce96a3d65fbe5ba03f3}{get\+Context}} (unsigned int id)
+\begin{DoxyCompactList}\small\item\em Gets a context wrapper from the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -113,7 +115,7 @@ Definition at line \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00054}{54}
 
 
 
-References \mbox{\hyperlink{_lua_context_manager_8hpp_source_l00045}{m\+\_\+contexts}}.
+References \mbox{\hyperlink{_lua_context_manager_8hpp_source_l00052}{m\+\_\+contexts}}.
 
 
 
@@ -138,7 +140,33 @@ Definition at line \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00029}{29}
 
 
 
-References \mbox{\hyperlink{_lua_context_manager_8hpp_source_l00036}{m\+\_\+instance}}.
+References \mbox{\hyperlink{_lua_context_manager_8hpp_source_l00043}{m\+\_\+instance}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_context_manager_acebd036b54fb1ce96a3d65fbe5ba03f3}\label{class_b_a_r_e2_d_1_1_lua_context_manager_acebd036b54fb1ce96a3d65fbe5ba03f3}} 
+\index{BARE2D::LuaContextManager@{BARE2D::LuaContextManager}!getContext@{getContext}}
+\index{getContext@{getContext}!BARE2D::LuaContextManager@{BARE2D::LuaContextManager}}
+\doxysubsubsection{\texorpdfstring{getContext()}{getContext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper}{Lua\+Script\+Context\+Wrapper}} $\ast$ B\+A\+R\+E2\+D\+::\+Lua\+Context\+Manager\+::get\+Context (\begin{DoxyParamCaption}\item[{unsigned int}]{id }\end{DoxyParamCaption})}
+
+
+
+Gets a context wrapper from the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the context, given by the Lua\+Script\+Queue\+::add\+Script() call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the wrapper, and a nullptr if it doesn\textquotesingle{}t exist. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00080}{80}} of file \mbox{\hyperlink{_lua_context_manager_8cpp_source}{Lua\+Context\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_lua_context_manager_8hpp_source_l00052}{m\+\_\+contexts}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_context_manager_a0352be9754f64024631091f1e2b73c15}\label{class_b_a_r_e2_d_1_1_lua_context_manager_a0352be9754f64024631091f1e2b73c15}} 
 \index{BARE2D::LuaContextManager@{BARE2D::LuaContextManager}!getInstance@{getInstance}}
@@ -152,7 +180,7 @@ Definition at line \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00021}{21}
 
 
 
-References \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00011}{Lua\+Context\+Manager()}}, and \mbox{\hyperlink{_lua_context_manager_8hpp_source_l00036}{m\+\_\+instance}}.
+References \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00011}{Lua\+Context\+Manager()}}, and \mbox{\hyperlink{_lua_context_manager_8hpp_source_l00043}{m\+\_\+instance}}.
 
 
 
@@ -193,7 +221,7 @@ Definition at line \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00060}{60}
 
 
 
-References \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba}{B\+A\+R\+E2\+D\+::\+L\+U\+A\+\_\+\+F\+A\+I\+L\+U\+RE}}, \mbox{\hyperlink{_lua_context_manager_8hpp_source_l00045}{m\+\_\+contexts}}, and \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00187}{B\+A\+R\+E2\+D\+::throw\+Error()}}.
+References \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba}{B\+A\+R\+E2\+D\+::\+L\+U\+A\+\_\+\+F\+A\+I\+L\+U\+RE}}, \mbox{\hyperlink{_lua_context_manager_8hpp_source_l00052}{m\+\_\+contexts}}, and \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00192}{B\+A\+R\+E2\+D\+::throw\+Error()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -218,7 +246,7 @@ Definition at line \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00033}{33}
 
 
 
-References \mbox{\hyperlink{_lua_script_8cpp_source_l00049}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::destroy()}}, \mbox{\hyperlink{_lua_script_8cpp_source_l00143}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::is\+Completed()}}, \mbox{\hyperlink{_lua_context_manager_8hpp_source_l00045}{m\+\_\+contexts}}, and \mbox{\hyperlink{_lua_script_8cpp_source_l00083}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::update()}}.
+References \mbox{\hyperlink{_lua_script_8cpp_source_l00049}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::destroy()}}, \mbox{\hyperlink{_lua_script_8cpp_source_l00143}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::is\+Completed()}}, \mbox{\hyperlink{_lua_context_manager_8hpp_source_l00052}{m\+\_\+contexts}}, and \mbox{\hyperlink{_lua_script_8cpp_source_l00083}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::update()}}.
 
 
 
@@ -249,11 +277,11 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line \mbox{\hyperlink{_lua_context_manager_8hpp_source_l00045}{45}} of file \mbox{\hyperlink{_lua_context_manager_8hpp_source}{Lua\+Context\+Manager.\+hpp}}.
+Definition at line \mbox{\hyperlink{_lua_context_manager_8hpp_source_l00052}{52}} of file \mbox{\hyperlink{_lua_context_manager_8hpp_source}{Lua\+Context\+Manager.\+hpp}}.
 
 
 
-Referenced by \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00054}{add\+Context()}}, \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00060}{remove\+Context()}}, and \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00033}{update()}}.
+Referenced by \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00054}{add\+Context()}}, \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00080}{get\+Context()}}, \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00060}{remove\+Context()}}, and \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00033}{update()}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_context_manager_a16d3c3ad3e54bb72284e982bfdcbab3a}\label{class_b_a_r_e2_d_1_1_lua_context_manager_a16d3c3ad3e54bb72284e982bfdcbab3a}} 
 \index{BARE2D::LuaContextManager@{BARE2D::LuaContextManager}!m\_instance@{m\_instance}}
@@ -263,7 +291,7 @@ Referenced by \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00054}{add\+Con
 
 
 
-Definition at line \mbox{\hyperlink{_lua_context_manager_8hpp_source_l00036}{36}} of file \mbox{\hyperlink{_lua_context_manager_8hpp_source}{Lua\+Context\+Manager.\+hpp}}.
+Definition at line \mbox{\hyperlink{_lua_context_manager_8hpp_source_l00043}{43}} of file \mbox{\hyperlink{_lua_context_manager_8hpp_source}{Lua\+Context\+Manager.\+hpp}}.
 
 
 

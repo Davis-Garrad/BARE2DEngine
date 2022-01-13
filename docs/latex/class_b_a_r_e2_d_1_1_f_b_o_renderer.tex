@@ -20,7 +20,8 @@ Inheritance diagram for B\+A\+R\+E2D\+::F\+B\+O\+Renderer\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for B\+A\+R\+E2D\+::F\+B\+O\+Renderer\+:\nopagebreak
+Collaboration diagram for B\+A\+R\+E2D\+::F\+B\+O\+Renderer\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,25 +31,31 @@ Collaboration diagram for B\+A\+R\+E2D\+::F\+B\+O\+Renderer\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aac7d5ece2b52edbd344a1bcd8fa45437}{F\+B\+O\+Renderer}} (std\+::string \&frag\+Shader, std\+::string \&vert\+Shader, unsigned int window\+Width, unsigned int window\+Height, glm\+::vec2 size)
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a97d2c3b426dd8f3c79a4d3c5ee707788}{F\+B\+O\+Renderer}} (std\+::string \&frag\+Shader, std\+::string \&vert\+Shader, unsigned int window\+Width, unsigned int window\+Height, glm\+::vec2 size, unsigned int num\+Colour\+Attachments=1)
 \item 
 virtual \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aeb5ab1b6abc77d9ec3943d1966574d1b}{$\sim$\+F\+B\+O\+Renderer}} ()
 \item 
 virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ac1902310c37a001b0f6d53b7d6066867}{init}} () override
 \begin{DoxyCompactList}\small\item\em Initializes all necessary bits of the renderer. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a87a980415cbacedb6a8af619d0558294}{get\+Camera}} ()
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ad27e4c76b6f82a74b967464560254a87}{init\+Uniforms}} () override
+\begin{DoxyCompactList}\small\item\em Initializes all uniforms, such as colour attachments, depth attachments, etc. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ae64dbdf46c5bf05c7c976303a072f08c}{set\+Camera}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $>$ \&cam)
 \item 
-virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a6a0113b8f8806828e460e41bd7697b6c}{pre\+Render}} () override
-\begin{DoxyCompactList}\small\item\em Does stuff inside of the render function, within the shader\textquotesingle{}s use. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_abcccb35e9cdf13c41ba6b11edf1a286e}{get\+Camera}} ()
+\item 
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aaccc7bddd25f99cca5b734d097383c6e}{render}} () override
+\begin{DoxyCompactList}\small\item\em Actually renders the contents to the screen! \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5e94ee6c2c34dcdcbd65c9b05f3a465a}{begin}} () override
 \begin{DoxyCompactList}\small\item\em Clears the necessary vectors, etc. to prepare for draw() calls, etc. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a4dde75642694aa34aa463bb298cb34cd}{end}} () override
-\begin{DoxyCompactList}\small\item\em Creates the renderbatches, does necessary stuff before \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_af6c7b543d54be3ce30224e21d5606be3}{render()}} call. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Creates the renderbatches, does necessary stuff before \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aaccc7bddd25f99cca5b734d097383c6e}{render()}} call. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a0e3cc5707a16360dbaf0832058f28b1a}{destroy}} () override
 \begin{DoxyCompactList}\small\item\em Frees all necessary memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a6a0113b8f8806828e460e41bd7697b6c}{pre\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Does stuff inside of the render function, within the shader\textquotesingle{}s use. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aa6da4902046ce59bb009570f12f0aaaa}{create\+Render\+Batches}} () override
 \begin{DoxyCompactList}\small\item\em Constructs all of the render batches from data given by, say, draw() calls. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5765d077d8aff3402f717863169a0176}{bind}} ()
@@ -66,9 +73,9 @@ G\+Luint \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b1ec62a3954d7be5
 \item 
 G\+Luint $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}{m\+\_\+texture\+I\+Ds}} = nullptr
 \item 
-const unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a660594972124533d103708456396000b}{m\+\_\+num\+Textures}} = 2
+unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\+\_\+num\+Textures}}
 \item 
-\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_acd2e97237d9f55faa5ab75a84e0d5a6c}{m\+\_\+camera}} = nullptr
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}{m\+\_\+camera}}
 \item 
 std\+::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a3ca9f890aa6cd904a6ba201a219ccb5e}{m\+\_\+fragment\+Shader\+Path}}
 \item 
@@ -83,30 +90,31 @@ bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a8cb0768b5c42501e8e329
 \doxysubsection{Detailed Description}
 The \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer}{F\+B\+O\+Renderer}} represents and manages an entire Frame\+Buffer\+Object. This allows one to draw entire scenes first to a texture, then perform some operations on that texture, then draw that texture to the screen. Shaders have uniforms projection\+Matrix (mat4), colour\+Texture (sampler2D), and depth\+Texture (sampler2D) 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00018}{18}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_aac7d5ece2b52edbd344a1bcd8fa45437}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_aac7d5ece2b52edbd344a1bcd8fa45437}} 
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a97d2c3b426dd8f3c79a4d3c5ee707788}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a97d2c3b426dd8f3c79a4d3c5ee707788}} 
 \index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!FBORenderer@{FBORenderer}}
 \index{FBORenderer@{FBORenderer}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
 \doxysubsubsection{\texorpdfstring{FBORenderer()}{FBORenderer()}}
-{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::\+F\+B\+O\+Renderer (\begin{DoxyParamCaption}\item[{std\+::string \&}]{frag\+Shader,  }\item[{std\+::string \&}]{vert\+Shader,  }\item[{unsigned int}]{window\+Width,  }\item[{unsigned int}]{window\+Height,  }\item[{glm\+::vec2}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::\+F\+B\+O\+Renderer (\begin{DoxyParamCaption}\item[{std\+::string \&}]{frag\+Shader,  }\item[{std\+::string \&}]{vert\+Shader,  }\item[{unsigned int}]{window\+Width,  }\item[{unsigned int}]{window\+Height,  }\item[{glm\+::vec2}]{size,  }\item[{unsigned int}]{num\+Colour\+Attachments = {\ttfamily 1} }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_camera2_d_8cpp_source_l00007}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::\+Camera2\+D()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00025}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::init()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00061}{m\+\_\+camera}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00064}{m\+\_\+fragment\+Shader\+Path}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00067}{m\+\_\+size}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00064}{m\+\_\+vertex\+Shader\+Path}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00149}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::offset\+Position()}}.
+References \mbox{\hyperlink{_camera2_d_8cpp_source_l00023}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::init()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00076}{m\+\_\+camera}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00079}{m\+\_\+fragment\+Shader\+Path}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00072}{m\+\_\+num\+Textures}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00082}{m\+\_\+size}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00079}{m\+\_\+vertex\+Shader\+Path}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00144}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::offset\+Position()}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_f_b_o_renderer_aac7d5ece2b52edbd344a1bcd8fa45437_cgraph}
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_f_b_o_renderer_a97d2c3b426dd8f3c79a4d3c5ee707788_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_aeb5ab1b6abc77d9ec3943d1966574d1b}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_aeb5ab1b6abc77d9ec3943d1966574d1b}} 
@@ -117,11 +125,11 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00061}{m\+\_\+camera}}, and \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00056}{m\+\_\+texture\+I\+Ds}}.
+References \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00069}{m\+\_\+texture\+I\+Ds}}.
 
 
 
@@ -142,13 +150,14 @@ Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a7b894142f3046
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00081}{81}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00115}{115}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_renderer_8cpp_source_l00015}{B\+A\+R\+E2\+D\+::\+Renderer\+::begin()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00244}{bind()}}.
+References \mbox{\hyperlink{_renderer_8cpp_source_l00015}{B\+A\+R\+E2\+D\+::\+Renderer\+::begin()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00327}{bind()}}, \mbox{\hyperlink{_renderer_8hpp_source_l00064}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+shader}}, and \mbox{\hyperlink{_shader_program_8cpp_source_l00147}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::use()}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -167,15 +176,15 @@ Binds the F\+BO and appropriate texture attachments.
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00244}{244}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00327}{327}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::bind\+Texture()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00054}{m\+\_\+fbo\+ID}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00056}{m\+\_\+texture\+I\+Ds}}, and \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::set\+Active\+Texture()}}.
+References \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::bind\+Texture()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00067}{m\+\_\+fbo\+ID}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00072}{m\+\_\+num\+Textures}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00069}{m\+\_\+texture\+I\+Ds}}, and \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::set\+Active\+Texture()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00081}{begin()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00031}{init()}}.
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00115}{begin()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00046}{init()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -203,17 +212,18 @@ Creates the Open\+GL F\+BO instance and holds its handle in m\+\_\+fbo\+ID;.
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00222}{222}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00303}{303}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00171}{create\+Textures()}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a56134db1e8559ae4b32bf967c15fc4df}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+\_\+\+F\+A\+I\+L\+U\+RE}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00054}{m\+\_\+fbo\+ID}}, and \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00177}{B\+A\+R\+E2\+D\+::throw\+Fatal\+Error()}}.
+References \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00253}{create\+Textures()}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a56134db1e8559ae4b32bf967c15fc4df}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+\_\+\+F\+A\+I\+L\+U\+RE}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00067}{m\+\_\+fbo\+ID}}, and \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00180}{B\+A\+R\+E2\+D\+::throw\+Fatal\+Error()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00031}{init()}}.
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00046}{init()}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -243,17 +253,30 @@ Implements \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_abf344beacb334d74a7c5c
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00134}{134}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00177}{177}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_v_a_o_8cpp_source_l00057}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::bind\+V\+B\+O()}}, \mbox{\hyperlink{_vertex_8hpp_source_l00097}{B\+A\+R\+E2\+D\+::\+Glyph\+::bottom\+Left}}, \mbox{\hyperlink{_vertex_8hpp_source_l00097}{B\+A\+R\+E2\+D\+::\+Glyph\+::bottom\+Right}}, \mbox{\hyperlink{_vertex_8hpp_source_l00022}{B\+A\+R\+E2\+D\+::\+Colour\+::\+Colour()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00179}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Position()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00116}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Screen\+Size\+From\+Viewed\+Size()}}, \mbox{\hyperlink{_vertex_8cpp_source_l00004}{B\+A\+R\+E2\+D\+::\+Glyph\+::\+Glyph()}}, \mbox{\hyperlink{_renderer_8hpp_source_l00059}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+batches}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00061}{m\+\_\+camera}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00067}{m\+\_\+size}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00056}{m\+\_\+texture\+I\+Ds}}, \mbox{\hyperlink{_renderer_8hpp_source_l00058}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, \mbox{\hyperlink{_vertex_8hpp_source_l00092}{B\+A\+R\+E2\+D\+::\+Glyph\+::texture}}, \mbox{\hyperlink{_vertex_8hpp_source_l00097}{B\+A\+R\+E2\+D\+::\+Glyph\+::top\+Left}}, \mbox{\hyperlink{_vertex_8hpp_source_l00097}{B\+A\+R\+E2\+D\+::\+Glyph\+::top\+Right}}, and \mbox{\hyperlink{_v_a_o_8cpp_source_l00062}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::unbind\+V\+B\+O()}}.
+References \mbox{\hyperlink{_v_a_o_8cpp_source_l00057}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::bind\+V\+B\+O()}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::bottom\+Left}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::bottom\+Right}}, \mbox{\hyperlink{_vertex_8hpp_source_l00022}{B\+A\+R\+E2\+D\+::\+Colour\+::\+Colour()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00181}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Position()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00111}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Screen\+Size\+From\+Viewed\+Size()}}, \mbox{\hyperlink{_vertex_8cpp_source_l00004}{B\+A\+R\+E2\+D\+::\+Glyph\+::\+Glyph()}}, \mbox{\hyperlink{_renderer_8hpp_source_l00066}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+batches}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00076}{m\+\_\+camera}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00082}{m\+\_\+size}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00069}{m\+\_\+texture\+I\+Ds}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, \mbox{\hyperlink{_vertex_8hpp_source_l00094}{B\+A\+R\+E2\+D\+::\+Glyph\+::texture}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::top\+Left}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::top\+Right}}, and \mbox{\hyperlink{_v_a_o_8cpp_source_l00062}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::unbind\+V\+B\+O()}}.
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00216}{render()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_f_b_o_renderer_aa6da4902046ce59bb009570f12f0aaaa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_f_b_o_renderer_aa6da4902046ce59bb009570f12f0aaaa_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_aff19a68622b2fdf7033ffee1ab32a7c6}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_aff19a68622b2fdf7033ffee1ab32a7c6}} 
@@ -268,17 +291,18 @@ Creates all of the Open\+GL textures, and takes their handles into m\+\_\+colour
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00171}{171}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00253}{253}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::bind\+Texture()}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a56134db1e8559ae4b32bf967c15fc4df}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+\_\+\+F\+A\+I\+L\+U\+RE}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00058}{m\+\_\+num\+Textures}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00067}{m\+\_\+size}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00056}{m\+\_\+texture\+I\+Ds}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::set\+Active\+Texture()}}, and \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00177}{B\+A\+R\+E2\+D\+::throw\+Fatal\+Error()}}.
+References \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::bind\+Texture()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00072}{m\+\_\+num\+Textures}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00082}{m\+\_\+size}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00069}{m\+\_\+texture\+I\+Ds}}, and \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::set\+Active\+Texture()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00222}{create\+F\+B\+O()}}.
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00303}{create\+F\+B\+O()}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -308,11 +332,11 @@ Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a62d8bb52afdd8
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00104}{104}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_renderer_8cpp_source_l00032}{B\+A\+R\+E2\+D\+::\+Renderer\+::destroy()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00054}{m\+\_\+fbo\+ID}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00058}{m\+\_\+num\+Textures}}, and \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00056}{m\+\_\+texture\+I\+Ds}}.
+References \mbox{\hyperlink{_renderer_8cpp_source_l00054}{B\+A\+R\+E2\+D\+::\+Renderer\+::destroy()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00067}{m\+\_\+fbo\+ID}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00072}{m\+\_\+num\+Textures}}, and \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00069}{m\+\_\+texture\+I\+Ds}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -329,7 +353,7 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Creates the renderbatches, does necessary stuff before \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_af6c7b543d54be3ce30224e21d5606be3}{render()}} call. 
+Creates the renderbatches, does necessary stuff before \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aaccc7bddd25f99cca5b734d097383c6e}{render()}} call. 
 
 
 
@@ -337,32 +361,33 @@ Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a8a07d633d1288
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00110}{110}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00147}{147}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00257}{unbind()}}.
+References \mbox{\hyperlink{_renderer_8hpp_source_l00064}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00341}{unbind()}}, and \mbox{\hyperlink{_shader_program_8cpp_source_l00160}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::unuse()}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_f_b_o_renderer_a4dde75642694aa34aa463bb298cb34cd_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a87a980415cbacedb6a8af619d0558294}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a87a980415cbacedb6a8af619d0558294}} 
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_abcccb35e9cdf13c41ba6b11edf1a286e}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_abcccb35e9cdf13c41ba6b11edf1a286e}} 
 \index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!getCamera@{getCamera}}
 \index{getCamera@{getCamera}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
 \doxysubsubsection{\texorpdfstring{getCamera()}{getCamera()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $\ast$ B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::get\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $>$ B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::get\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00061}{m\+\_\+camera}}.
+References \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00076}{m\+\_\+camera}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_ac1902310c37a001b0f6d53b7d6066867}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_ac1902310c37a001b0f6d53b7d6066867}} 
 \index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!init@{init}}
@@ -380,24 +405,67 @@ Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f4
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_v_a_o_8cpp_source_l00066}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::add\+Vertex\+Attribute()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00244}{bind()}}, \mbox{\hyperlink{_vertex_8hpp_source_l00042}{B\+A\+R\+E2\+D\+::\+Vertex\+::colour}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00021}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::compile\+Shaders()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00222}{create\+F\+B\+O()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00202}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::does\+Uniform\+Exist()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00024}{B\+A\+R\+E2\+D\+::\+Renderer\+::init()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00070}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::link\+Shaders()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00064}{m\+\_\+fragment\+Shader\+Path}}, \mbox{\hyperlink{_renderer_8hpp_source_l00057}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00070}{m\+\_\+shader\+Has\+Depth}}, \mbox{\hyperlink{_renderer_8hpp_source_l00058}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00064}{m\+\_\+vertex\+Shader\+Path}}, \mbox{\hyperlink{_vertex_8hpp_source_l00040}{B\+A\+R\+E2\+D\+::\+Vertex\+::position}}, \mbox{\hyperlink{_shader_program_8tcc_source_l00010}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00257}{unbind()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00149}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::unuse()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00136}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::use()}}, and \mbox{\hyperlink{_vertex_8hpp_source_l00044}{B\+A\+R\+E2\+D\+::\+Vertex\+::uv}}.
+References \mbox{\hyperlink{_v_a_o_8cpp_source_l00066}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::add\+Vertex\+Attribute()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00327}{bind()}}, \mbox{\hyperlink{_vertex_8hpp_source_l00042}{B\+A\+R\+E2\+D\+::\+Vertex\+::colour}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00023}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::compile\+Shaders()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00303}{create\+F\+B\+O()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00027}{B\+A\+R\+E2\+D\+::\+Renderer\+::init()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00087}{init\+Uniforms()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00075}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::link\+Shaders()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00079}{m\+\_\+fragment\+Shader\+Path}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00072}{m\+\_\+num\+Textures}}, \mbox{\hyperlink{_renderer_8hpp_source_l00064}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00079}{m\+\_\+vertex\+Shader\+Path}}, \mbox{\hyperlink{_vertex_8hpp_source_l00040}{B\+A\+R\+E2\+D\+::\+Vertex\+::position}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00341}{unbind()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00160}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::unuse()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00147}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::use()}}, and \mbox{\hyperlink{_vertex_8hpp_source_l00044}{B\+A\+R\+E2\+D\+::\+Vertex\+::uv}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_f_b_o_renderer_ac1902310c37a001b0f6d53b7d6066867_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_ad27e4c76b6f82a74b967464560254a87}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_ad27e4c76b6f82a74b967464560254a87}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!initUniforms@{initUniforms}}
+\index{initUniforms@{initUniforms}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{initUniforms()}{initUniforms()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::init\+Uniforms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes all uniforms, such as colour attachments, depth attachments, etc. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a371f0d8b66a1fecb592b6d8b2b3cb1a0}{B\+A\+R\+E2\+D\+::\+Renderer}}.
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00087}{87}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8cpp_source_l00213}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::does\+Uniform\+Exist()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00072}{m\+\_\+num\+Textures}}, \mbox{\hyperlink{_renderer_8hpp_source_l00064}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00085}{m\+\_\+shader\+Has\+Depth}}, and \mbox{\hyperlink{_shader_program_8tcc_source_l00010}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00046}{init()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_f_b_o_renderer_ad27e4c76b6f82a74b967464560254a87_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_f_b_o_renderer_ad27e4c76b6f82a74b967464560254a87_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a6a0113b8f8806828e460e41bd7697b6c}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a6a0113b8f8806828e460e41bd7697b6c}} 
 \index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!preRender@{preRender}}
 \index{preRender@{preRender}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
 \doxysubsubsection{\texorpdfstring{preRender()}{preRender()}}
-{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::pre\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::pre\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
 
 
@@ -409,11 +477,15 @@ Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a9aab9d938c89c
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00116}{116}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00155}{155}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::bind\+Texture()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00061}{m\+\_\+camera}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00056}{m\+\_\+texture\+I\+Ds}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::set\+Active\+Texture()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00046}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::update()}}.
+References \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::bind\+Texture()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00076}{m\+\_\+camera}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00072}{m\+\_\+num\+Textures}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00069}{m\+\_\+texture\+I\+Ds}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::set\+Active\+Texture()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00043}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::update()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00216}{render()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -422,6 +494,58 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_f_b_o_renderer_a6a0113b8f8806828e460e41bd7697b6c_cgraph}
 \end{center}
 \end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_f_b_o_renderer_a6a0113b8f8806828e460e41bd7697b6c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_aaccc7bddd25f99cca5b734d097383c6e}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_aaccc7bddd25f99cca5b734d097383c6e}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!render@{render}}
+\index{render@{render}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Actually renders the contents to the screen! 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_af6c7b543d54be3ce30224e21d5606be3}{B\+A\+R\+E2\+D\+::\+Renderer}}.
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00216}{216}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_v_a_o_8cpp_source_l00048}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::bind()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00177}{create\+Render\+Batches()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_renderer_8hpp_source_l00066}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+batches}}, \mbox{\hyperlink{_renderer_8hpp_source_l00064}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, \mbox{\hyperlink{_render_batch_8hpp_source_l00016}{Render\+Batch\+::num\+Vertices}}, \mbox{\hyperlink{_render_batch_8hpp_source_l00015}{Render\+Batch\+::offset}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00155}{pre\+Render()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::set\+Active\+Texture()}}, \mbox{\hyperlink{_v_a_o_8cpp_source_l00053}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::unbind()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00160}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::unuse()}}, and \mbox{\hyperlink{_shader_program_8cpp_source_l00147}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::use()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_f_b_o_renderer_aaccc7bddd25f99cca5b734d097383c6e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_ae64dbdf46c5bf05c7c976303a072f08c}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_ae64dbdf46c5bf05c7c976303a072f08c}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!setCamera@{setCamera}}
+\index{setCamera@{setCamera}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{setCamera()}{setCamera()}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::set\+Camera (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $>$ \&}]{cam }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00076}{m\+\_\+camera}}.
+
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a01768136e2e36b131a23d422ded3bd5b}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a01768136e2e36b131a23d422ded3bd5b}} 
 \index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!unbind@{unbind}}
 \index{unbind@{unbind}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
@@ -434,15 +558,15 @@ Unbinds the F\+BO + textures.
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00257}{257}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00341}{341}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{F\+B\+O\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+Manager\+::get\+Context()}}, and \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00032}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::unbind\+Texture()}}.
+References \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00072}{m\+\_\+num\+Textures}}, and \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00032}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::unbind\+Texture()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00110}{end()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00031}{init()}}.
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00147}{end()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00046}{init()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -461,19 +585,19 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_acd2e97237d9f55faa5ab75a84e0d5a6c}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_acd2e97237d9f55faa5ab75a84e0d5a6c}} 
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}} 
 \index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!m\_camera@{m\_camera}}
 \index{m\_camera@{m\_camera}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
 \doxysubsubsection{\texorpdfstring{m\_camera}{m\_camera}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}}$\ast$ B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::m\+\_\+camera = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}}$>$ B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::m\+\_\+camera\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00061}{61}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00076}{76}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
 
 
 
-Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00134}{create\+Render\+Batches()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00013}{F\+B\+O\+Renderer()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00027}{get\+Camera()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00116}{pre\+Render()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00021}{$\sim$\+F\+B\+O\+Renderer()}}.
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00177}{create\+Render\+Batches()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00014}{F\+B\+O\+Renderer()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00041}{get\+Camera()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00155}{pre\+Render()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00036}{set\+Camera()}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b1ec62a3954d7be5b309ac4a52337d2}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b1ec62a3954d7be5b309ac4a52337d2}} 
 \index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!m\_fboID@{m\_fboID}}
@@ -483,11 +607,11 @@ Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00134}{create\+Rende
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00054}{54}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00067}{67}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
 
 
 
-Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00244}{bind()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00222}{create\+F\+B\+O()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00071}{destroy()}}.
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00327}{bind()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00303}{create\+F\+B\+O()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00104}{destroy()}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a3ca9f890aa6cd904a6ba201a219ccb5e}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a3ca9f890aa6cd904a6ba201a219ccb5e}} 
 \index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!m\_fragmentShaderPath@{m\_fragmentShaderPath}}
@@ -497,25 +621,25 @@ Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00244}{bind()}}, \mb
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00064}{64}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00079}{79}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
 
 
 
-Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00013}{F\+B\+O\+Renderer()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00031}{init()}}.
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00014}{F\+B\+O\+Renderer()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00046}{init()}}.
 
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a660594972124533d103708456396000b}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a660594972124533d103708456396000b}} 
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}} 
 \index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!m\_numTextures@{m\_numTextures}}
 \index{m\_numTextures@{m\_numTextures}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
 \doxysubsubsection{\texorpdfstring{m\_numTextures}{m\_numTextures}}
-{\footnotesize\ttfamily const unsigned int B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::m\+\_\+num\+Textures = 2\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily unsigned int B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::m\+\_\+num\+Textures\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00058}{58}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00072}{72}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
 
 
 
-Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00171}{create\+Textures()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00071}{destroy()}}.
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00327}{bind()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00253}{create\+Textures()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00104}{destroy()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00014}{F\+B\+O\+Renderer()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00046}{init()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00087}{init\+Uniforms()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00155}{pre\+Render()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00341}{unbind()}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a8cb0768b5c42501e8e3299d45e917114}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a8cb0768b5c42501e8e3299d45e917114}} 
 \index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!m\_shaderHasDepth@{m\_shaderHasDepth}}
@@ -525,11 +649,11 @@ Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00171}{create\+Textu
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00070}{70}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00085}{85}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
 
 
 
-Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00031}{init()}}.
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00087}{init\+Uniforms()}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_ad180b814eabde3793654d66ef40a8118}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_ad180b814eabde3793654d66ef40a8118}} 
 \index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!m\_size@{m\_size}}
@@ -539,11 +663,11 @@ Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00031}{init()}}.
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00067}{67}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00082}{82}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
 
 
 
-Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00134}{create\+Render\+Batches()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00171}{create\+Textures()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00013}{F\+B\+O\+Renderer()}}.
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00177}{create\+Render\+Batches()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00253}{create\+Textures()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00014}{F\+B\+O\+Renderer()}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}} 
 \index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!m\_textureIDs@{m\_textureIDs}}
@@ -553,11 +677,11 @@ Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00134}{create\+Rende
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00056}{56}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00069}{69}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
 
 
 
-Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00244}{bind()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00134}{create\+Render\+Batches()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00171}{create\+Textures()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00071}{destroy()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00116}{pre\+Render()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00021}{$\sim$\+F\+B\+O\+Renderer()}}.
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00327}{bind()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00177}{create\+Render\+Batches()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00253}{create\+Textures()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00104}{destroy()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00155}{pre\+Render()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00031}{$\sim$\+F\+B\+O\+Renderer()}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_ac4b73ba3b179c0cf854d36b77d535b8a}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_ac4b73ba3b179c0cf854d36b77d535b8a}} 
 \index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!m\_vertexShaderPath@{m\_vertexShaderPath}}
@@ -567,11 +691,11 @@ Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00244}{bind()}}, \mb
 
 
 
-Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00064}{64}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00079}{79}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{F\+B\+O\+Renderer.\+hpp}}.
 
 
 
-Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00013}{F\+B\+O\+Renderer()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00031}{init()}}.
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00014}{F\+B\+O\+Renderer()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00046}{init()}}.
 
 
 

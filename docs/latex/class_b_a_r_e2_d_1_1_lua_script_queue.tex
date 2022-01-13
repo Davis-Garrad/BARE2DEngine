@@ -16,8 +16,10 @@ Collaboration diagram for B\+A\+R\+E2D\+::Lua\+Script\+Queue\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_afcd0264f2cd12fd5d9b0f6d304949c48}{add\+Lua\+Script}} (const \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{Lua\+Script}} \&script)
+unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a862fbd9245d6e0d623cc327c2fbfd43a}{add\+Lua\+Script}} (\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{Lua\+Script}} \&script)
 \begin{DoxyCompactList}\small\item\em Adds a script to the queue to be run. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_ad5a82f0714d8b4178ea6498aa9f8368f}{add\+Lua\+Script}} (std\+::string script)
+\begin{DoxyCompactList}\small\item\em Adds a script to the queue to be run by its source code. \end{DoxyCompactList}\item 
 std\+::map$<$ unsigned int, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{Lua\+Script}} $\ast$ $>$ \& \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_acddabdadd43bd97c17fb9688954a002d}{get\+Queue}} ()
 \begin{DoxyCompactList}\small\item\em Returns the queue of scripts to activate. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue_a45b878abc0f5e6e91af7b88c7bae81c2}{clear\+Queue}} ()
@@ -92,11 +94,11 @@ Definition at line \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00014}{14}} o
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_script_queue_afcd0264f2cd12fd5d9b0f6d304949c48}\label{class_b_a_r_e2_d_1_1_lua_script_queue_afcd0264f2cd12fd5d9b0f6d304949c48}} 
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_script_queue_a862fbd9245d6e0d623cc327c2fbfd43a}\label{class_b_a_r_e2_d_1_1_lua_script_queue_a862fbd9245d6e0d623cc327c2fbfd43a}} 
 \index{BARE2D::LuaScriptQueue@{BARE2D::LuaScriptQueue}!addLuaScript@{addLuaScript}}
 \index{addLuaScript@{addLuaScript}!BARE2D::LuaScriptQueue@{BARE2D::LuaScriptQueue}}
-\doxysubsubsection{\texorpdfstring{addLuaScript()}{addLuaScript()}}
-{\footnotesize\ttfamily unsigned int B\+A\+R\+E2\+D\+::\+Lua\+Script\+Queue\+::add\+Lua\+Script (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{Lua\+Script}} \&}]{script }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{addLuaScript()}{addLuaScript()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned int B\+A\+R\+E2\+D\+::\+Lua\+Script\+Queue\+::add\+Lua\+Script (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{Lua\+Script}} \&}]{script }\end{DoxyParamCaption})}
 
 
 
@@ -116,13 +118,60 @@ Definition at line \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00031}{31}} o
 
 
 
-References \mbox{\hyperlink{_lua_script_8cpp_source_l00007}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+::\+Lua\+Script()}}, \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00056}{m\+\_\+last\+U\+U\+ID}}, and \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00053}{m\+\_\+scripts}}.
+References \mbox{\hyperlink{_lua_script_8cpp_source_l00007}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+::\+Lua\+Script()}}, \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00063}{m\+\_\+last\+U\+U\+ID}}, and \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00060}{m\+\_\+scripts}}.
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Referenced by \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00042}{add\+Lua\+Script()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_lua_script_queue_afcd0264f2cd12fd5d9b0f6d304949c48_cgraph}
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_lua_script_queue_a862fbd9245d6e0d623cc327c2fbfd43a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_lua_script_queue_a862fbd9245d6e0d623cc327c2fbfd43a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_script_queue_ad5a82f0714d8b4178ea6498aa9f8368f}\label{class_b_a_r_e2_d_1_1_lua_script_queue_ad5a82f0714d8b4178ea6498aa9f8368f}} 
+\index{BARE2D::LuaScriptQueue@{BARE2D::LuaScriptQueue}!addLuaScript@{addLuaScript}}
+\index{addLuaScript@{addLuaScript}!BARE2D::LuaScriptQueue@{BARE2D::LuaScriptQueue}}
+\doxysubsubsection{\texorpdfstring{addLuaScript()}{addLuaScript()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned int B\+A\+R\+E2\+D\+::\+Lua\+Script\+Queue\+::add\+Lua\+Script (\begin{DoxyParamCaption}\item[{std\+::string}]{script }\end{DoxyParamCaption})}
+
+
+
+Adds a script to the queue to be run by its source code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em script} & The code to run. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An unsigned int which represents the U\+U\+ID of the script added. This U\+U\+ID will persist throughout all of the pipeline 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{_lua_script_queue_8cpp_source}{Lua\+Script\+Queue.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00031}{add\+Lua\+Script()}}, \mbox{\hyperlink{_lua_script_8hpp_source_l00024}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+::inited}}, and \mbox{\hyperlink{_lua_script_8hpp_source_l00021}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+::m\+\_\+script}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_lua_script_queue_ad5a82f0714d8b4178ea6498aa9f8368f_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_script_queue_a45b878abc0f5e6e91af7b88c7bae81c2}\label{class_b_a_r_e2_d_1_1_lua_script_queue_a45b878abc0f5e6e91af7b88c7bae81c2}} 
@@ -137,11 +186,11 @@ Clears the stored script queue -\/ for regular use by tbe Script Engine. Dealloc
 
 
 
-Definition at line \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{_lua_script_queue_8cpp_source}{Lua\+Script\+Queue.\+cpp}}.
+Definition at line \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{_lua_script_queue_8cpp_source}{Lua\+Script\+Queue.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00053}{m\+\_\+scripts}}.
+References \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00060}{m\+\_\+scripts}}.
 
 
 
@@ -170,7 +219,7 @@ Definition at line \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00027}{27}} o
 
 
 
-References \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00050}{m\+\_\+instance}}.
+References \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00057}{m\+\_\+instance}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_script_queue_ab2db531a9ecaa50fba9f27715124d948}\label{class_b_a_r_e2_d_1_1_lua_script_queue_ab2db531a9ecaa50fba9f27715124d948}} 
 \index{BARE2D::LuaScriptQueue@{BARE2D::LuaScriptQueue}!getInstance@{getInstance}}
@@ -191,7 +240,7 @@ Definition at line \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00019}{19}} o
 
 
 
-References \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00009}{Lua\+Script\+Queue()}}, and \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00050}{m\+\_\+instance}}.
+References \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00009}{Lua\+Script\+Queue()}}, and \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00057}{m\+\_\+instance}}.
 
 
 
@@ -226,11 +275,11 @@ A reference to m\+\_\+scripts.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{_lua_script_queue_8cpp_source}{Lua\+Script\+Queue.\+cpp}}.
+Definition at line \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{_lua_script_queue_8cpp_source}{Lua\+Script\+Queue.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00053}{m\+\_\+scripts}}.
+References \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00060}{m\+\_\+scripts}}.
 
 
 
@@ -254,7 +303,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00050}{50}} of file \mbox{\hyperlink{_lua_script_queue_8hpp_source}{Lua\+Script\+Queue.\+hpp}}.
+Definition at line \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00057}{57}} of file \mbox{\hyperlink{_lua_script_queue_8hpp_source}{Lua\+Script\+Queue.\+hpp}}.
 
 
 
@@ -268,7 +317,7 @@ Referenced by \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00027}{destroy\+In
 
 
 
-Definition at line \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00056}{56}} of file \mbox{\hyperlink{_lua_script_queue_8hpp_source}{Lua\+Script\+Queue.\+hpp}}.
+Definition at line \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00063}{63}} of file \mbox{\hyperlink{_lua_script_queue_8hpp_source}{Lua\+Script\+Queue.\+hpp}}.
 
 
 
@@ -282,11 +331,11 @@ Referenced by \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00031}{add\+Lua\+S
 
 
 
-Definition at line \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00053}{53}} of file \mbox{\hyperlink{_lua_script_queue_8hpp_source}{Lua\+Script\+Queue.\+hpp}}.
+Definition at line \mbox{\hyperlink{_lua_script_queue_8hpp_source_l00060}{60}} of file \mbox{\hyperlink{_lua_script_queue_8hpp_source}{Lua\+Script\+Queue.\+hpp}}.
 
 
 
-Referenced by \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00031}{add\+Lua\+Script()}}, \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00047}{clear\+Queue()}}, and \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00042}{get\+Queue()}}.
+Referenced by \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00031}{add\+Lua\+Script()}}, \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00056}{clear\+Queue()}}, and \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00051}{get\+Queue()}}.
 
 
 

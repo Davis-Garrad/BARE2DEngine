@@ -6,222 +6,228 @@
 \DoxyCodeLine{00002 }
 \DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{iostream}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{iomanip}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{SDL2}\textcolor{preprocessor}{/}\textcolor{preprocessor}{SDL}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{GL}\textcolor{preprocessor}{/}\textcolor{preprocessor}{glew}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00007 }
-\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cxxabi}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{typeinfo}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00010 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{memory}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00011 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cstdlib}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00012 }
-\DoxyCodeLine{00013 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_logger_8hpp}{"Logger.hpp"}}}
-\DoxyCodeLine{00014 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00015}\mbox{\hyperlink{_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6}{00015}} std::string \mbox{\hyperlink{_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6}{demangle}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* mangled)}
-\DoxyCodeLine{00016 \{}
-\DoxyCodeLine{00017       \textcolor{keywordtype}{int} status;}
-\DoxyCodeLine{00018       std::unique\_ptr<\textcolor{keywordtype}{char}[], \textcolor{keywordtype}{void} (*)(\textcolor{keywordtype}{void}*)> result(}
-\DoxyCodeLine{00019         abi::\_\_cxa\_demangle(mangled, 0, 0, \&status), std::free);}
-\DoxyCodeLine{00020       \textcolor{keywordflow}{return} result.get() ? std::string(result.get()) : \textcolor{stringliteral}{"error occurred"};}
-\DoxyCodeLine{00021 \}}
-\DoxyCodeLine{00022 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00023}\mbox{\hyperlink{_b_a_r_e_errors_8cpp_a76259e93488aa188c59d8b8a80517f74}{00023}} \textcolor{keywordtype}{void} GLAPIENTRY \mbox{\hyperlink{_b_a_r_e_errors_8cpp_a76259e93488aa188c59d8b8a80517f74}{MessageCallback}}( GLenum source,}
-\DoxyCodeLine{00024                  GLenum type,}
-\DoxyCodeLine{00025                  GLuint id,}
-\DoxyCodeLine{00026                  GLenum severity,}
-\DoxyCodeLine{00027                  GLsizei length,}
-\DoxyCodeLine{00028                  \textcolor{keyword}{const} GLchar* message,}
-\DoxyCodeLine{00029                  \textcolor{keyword}{const} \textcolor{keywordtype}{void}* userParam )}
-\DoxyCodeLine{00030 \{}
-\DoxyCodeLine{00031     std::string severityStr = \textcolor{stringliteral}{"Unspecified"};}
-\DoxyCodeLine{00032     \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}::\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}} severityEnum = \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3}{UNKNOWN}};}
-\DoxyCodeLine{00033     \textcolor{keywordflow}{switch}(severity) \{}
-\DoxyCodeLine{00034         \textcolor{keywordflow}{case} GL\_DEBUG\_SEVERITY\_HIGH:}
-\DoxyCodeLine{00035             severityStr = \textcolor{stringliteral}{"High (UB)"};}
-\DoxyCodeLine{00036             severityEnum = \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c}{HIGH}};}
-\DoxyCodeLine{00037             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00038         \textcolor{keywordflow}{case} GL\_DEBUG\_SEVERITY\_MEDIUM:}
-\DoxyCodeLine{00039             severityStr = \textcolor{stringliteral}{"Medium (Performance, deprecated)"};}
-\DoxyCodeLine{00040             severityEnum = \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c}{MED}};}
-\DoxyCodeLine{00041             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00042         \textcolor{keywordflow}{case} GL\_DEBUG\_SEVERITY\_LOW:}
-\DoxyCodeLine{00043             severityStr = \textcolor{stringliteral}{"Low (performance generally)"};}
-\DoxyCodeLine{00044             severityEnum = \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88}{LOW}};}
-\DoxyCodeLine{00045             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00046         \textcolor{keywordflow}{case} GL\_DEBUG\_SEVERITY\_NOTIFICATION:}
-\DoxyCodeLine{00047             severityStr = \textcolor{stringliteral}{"Notification"};}
-\DoxyCodeLine{00048             severityEnum = \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{NOTIF}};}
-\DoxyCodeLine{00049             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00050         \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{00051             severityStr = \textcolor{stringliteral}{"Unspecified"};}
-\DoxyCodeLine{00052             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00053     \}}
-\DoxyCodeLine{00054 }
-\DoxyCodeLine{00055     \textcolor{keywordflow}{if}((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})severityEnum < (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}{GLErrorMinSeverity}}) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00056 }
-\DoxyCodeLine{00057     std::string sourceStr = \textcolor{stringliteral}{"Unspecified"};}
-\DoxyCodeLine{00058     \textcolor{keywordflow}{switch}(source) \{}
-\DoxyCodeLine{00059         \textcolor{keywordflow}{case} GL\_DEBUG\_SOURCE\_API:}
-\DoxyCodeLine{00060             sourceStr = \textcolor{stringliteral}{"OpenGL API"};}
-\DoxyCodeLine{00061             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00062         \textcolor{keywordflow}{case} GL\_DEBUG\_SOURCE\_WINDOW\_SYSTEM:}
-\DoxyCodeLine{00063             sourceStr = \textcolor{stringliteral}{"Window System"};}
-\DoxyCodeLine{00064             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00065         \textcolor{keywordflow}{case} GL\_DEBUG\_SOURCE\_SHADER\_COMPILER:}
-\DoxyCodeLine{00066             sourceStr = \textcolor{stringliteral}{"Shader Compiler"};}
-\DoxyCodeLine{00067             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00068         \textcolor{keywordflow}{case} GL\_DEBUG\_SOURCE\_THIRD\_PARTY:}
-\DoxyCodeLine{00069             sourceStr = \textcolor{stringliteral}{"Assoc. Application"};}
-\DoxyCodeLine{00070             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00071         \textcolor{keywordflow}{case} GL\_DEBUG\_SOURCE\_APPLICATION:}
-\DoxyCodeLine{00072             sourceStr = \textcolor{stringliteral}{"Application User"};}
-\DoxyCodeLine{00073             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00074         \textcolor{keywordflow}{case} GL\_DEBUG\_SOURCE\_OTHER:}
-\DoxyCodeLine{00075             sourceStr = \textcolor{stringliteral}{"Other"};}
-\DoxyCodeLine{00076             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00077         \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{00078             sourceStr = \textcolor{stringliteral}{"Unspecified"};}
-\DoxyCodeLine{00079             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00080     \}}
-\DoxyCodeLine{00081 }
-\DoxyCodeLine{00082     std::string typeStr = \textcolor{stringliteral}{"Unspecified"};}
-\DoxyCodeLine{00083     \textcolor{keywordflow}{switch}(type) \{}
-\DoxyCodeLine{00084         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_ERROR:}
-\DoxyCodeLine{00085             typeStr = \textcolor{stringliteral}{"Error"};}
-\DoxyCodeLine{00086             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00087         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_DEPRECATED\_BEHAVIOR:}
-\DoxyCodeLine{00088             typeStr = \textcolor{stringliteral}{"Deprecated Behaviour"};}
-\DoxyCodeLine{00089             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00090         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_UNDEFINED\_BEHAVIOR:}
-\DoxyCodeLine{00091             typeStr = \textcolor{stringliteral}{"Undefined Behaviour"};}
-\DoxyCodeLine{00092             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00093         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_PORTABILITY:}
-\DoxyCodeLine{00094             typeStr = \textcolor{stringliteral}{"Portability Concern"};}
-\DoxyCodeLine{00095             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00096         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_PERFORMANCE:}
-\DoxyCodeLine{00097             typeStr = \textcolor{stringliteral}{"Performance Issue"};}
-\DoxyCodeLine{00098             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00099         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_MARKER:}
-\DoxyCodeLine{00100             typeStr = \textcolor{stringliteral}{"Command Stream Annotation"};}
-\DoxyCodeLine{00101             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00102         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_PUSH\_GROUP:}
-\DoxyCodeLine{00103             typeStr = \textcolor{stringliteral}{"Group Pushing"};}
-\DoxyCodeLine{00104             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00105         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_POP\_GROUP:}
-\DoxyCodeLine{00106             typeStr = \textcolor{stringliteral}{"Documented as 'foo'"};}
-\DoxyCodeLine{00107             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00108         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_OTHER:}
-\DoxyCodeLine{00109             typeStr = \textcolor{stringliteral}{"Other"};}
-\DoxyCodeLine{00110             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00111         \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{00112             typeStr = \textcolor{stringliteral}{"Unspecified"};}
-\DoxyCodeLine{00113             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00114     \}}
-\DoxyCodeLine{00115 }
-\DoxyCodeLine{00116     std::string errorString = \textcolor{stringliteral}{"GL Callback: "} + std::string(type == GL\_DEBUG\_TYPE\_ERROR ? \textcolor{stringliteral}{"** GL ERROR **"} : \textcolor{stringliteral}{""}) + \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00117     errorString += \textcolor{stringliteral}{"Type: "} + typeStr + \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00118     errorString += \textcolor{stringliteral}{"Severity: "} + severityStr + \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00119     errorString += \textcolor{stringliteral}{"Message: "} + std::string(message) + \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00120 }
-\DoxyCodeLine{00121     \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger}{Logger}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{getInstance}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{log}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{(}}errorString\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{)}};}
-\DoxyCodeLine{00122 }
-\DoxyCodeLine{00123     \textcolor{comment}{/*fprintf(stderr, "GL Callback: \%s \(\backslash\)nType: \%s \(\backslash\)nSeverity: \%s \(\backslash\)nMessage: \%s\(\backslash\)n\(\backslash\)n", }}
-\DoxyCodeLine{00124 \textcolor{comment}{        (type == GL\_DEBUG\_TYPE\_ERROR ? "** GL ERROR **" : ""), }}
-\DoxyCodeLine{00125 \textcolor{comment}{        typeStr.c\_str(), }}
-\DoxyCodeLine{00126 \textcolor{comment}{        severityStr.c\_str(), }}
-\DoxyCodeLine{00127 \textcolor{comment}{        message);*/}}
-\DoxyCodeLine{00128 }
-\DoxyCodeLine{00129 \}}
-\DoxyCodeLine{00130 }
-\DoxyCodeLine{00131 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00132}\mbox{\hyperlink{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}{00132}}     \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}} \mbox{\hyperlink{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}{GLErrorMinSeverity}} = \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{NOTIF}};}
-\DoxyCodeLine{00133 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00134}\mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{00134}}     \mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{std}}::\mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{vector}}<\mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{BAREError}}> \mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{thrownErrors}};}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{csignal}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{SDL2}\textcolor{preprocessor}{/}\textcolor{preprocessor}{SDL}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{GL}\textcolor{preprocessor}{/}\textcolor{preprocessor}{glew}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cxxabi}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{typeinfo}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{memory}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cstdlib}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_logger_8hpp}{"Logger.hpp"}}}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00016}\mbox{\hyperlink{_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6}{00016}} std::string \mbox{\hyperlink{_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6}{demangle}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* mangled)}
+\DoxyCodeLine{00017 \{}
+\DoxyCodeLine{00018     \textcolor{keywordtype}{int} status;}
+\DoxyCodeLine{00019     std::unique\_ptr<\textcolor{keywordtype}{char}[], \textcolor{keywordtype}{void} (*)(\textcolor{keywordtype}{void}*)> result(}
+\DoxyCodeLine{00020         abi::\_\_cxa\_demangle(mangled, 0, 0, \&status), std::free);}
+\DoxyCodeLine{00021     \textcolor{keywordflow}{return} result.get() ? std::string(result.get()) : \textcolor{stringliteral}{"error occurred"};}
+\DoxyCodeLine{00022 \}}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00024}\mbox{\hyperlink{_b_a_r_e_errors_8cpp_a76259e93488aa188c59d8b8a80517f74}{00024}} \textcolor{keywordtype}{void} GLAPIENTRY \mbox{\hyperlink{_b_a_r_e_errors_8cpp_a76259e93488aa188c59d8b8a80517f74}{MessageCallback}}(GLenum source,}
+\DoxyCodeLine{00025                                 GLenum type,}
+\DoxyCodeLine{00026                                 GLuint id,}
+\DoxyCodeLine{00027                                 GLenum severity,}
+\DoxyCodeLine{00028                                 GLsizei length,}
+\DoxyCodeLine{00029                                 \textcolor{keyword}{const} GLchar* message,}
+\DoxyCodeLine{00030                                 \textcolor{keyword}{const} \textcolor{keywordtype}{void}* userParam)}
+\DoxyCodeLine{00031 \{}
+\DoxyCodeLine{00032     std::string severityStr = \textcolor{stringliteral}{"Unspecified"};}
+\DoxyCodeLine{00033     \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}::\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}} severityEnum = \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3}{UNKNOWN}};}
+\DoxyCodeLine{00034     \textcolor{keywordflow}{switch}(severity) \{}
+\DoxyCodeLine{00035         \textcolor{keywordflow}{case} GL\_DEBUG\_SEVERITY\_HIGH:}
+\DoxyCodeLine{00036             severityStr = \textcolor{stringliteral}{"High (UB)"};}
+\DoxyCodeLine{00037             severityEnum = \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c}{HIGH}};}
+\DoxyCodeLine{00038             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00039         \textcolor{keywordflow}{case} GL\_DEBUG\_SEVERITY\_MEDIUM:}
+\DoxyCodeLine{00040             severityStr = \textcolor{stringliteral}{"Medium (Performance, deprecated)"};}
+\DoxyCodeLine{00041             severityEnum = \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c}{MED}};}
+\DoxyCodeLine{00042             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00043         \textcolor{keywordflow}{case} GL\_DEBUG\_SEVERITY\_LOW:}
+\DoxyCodeLine{00044             severityStr = \textcolor{stringliteral}{"Low (performance generally)"};}
+\DoxyCodeLine{00045             severityEnum = \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88}{LOW}};}
+\DoxyCodeLine{00046             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00047         \textcolor{keywordflow}{case} GL\_DEBUG\_SEVERITY\_NOTIFICATION:}
+\DoxyCodeLine{00048             severityStr = \textcolor{stringliteral}{"Notification"};}
+\DoxyCodeLine{00049             severityEnum = \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{NOTIF}};}
+\DoxyCodeLine{00050             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00051         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00052             severityStr = \textcolor{stringliteral}{"Unspecified"};}
+\DoxyCodeLine{00053             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00054     \}}
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{00056     \textcolor{keywordflow}{if}((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})severityEnum < (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}{GLErrorMinSeverity}}) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058     std::string sourceStr = \textcolor{stringliteral}{"Unspecified"};}
+\DoxyCodeLine{00059     \textcolor{keywordflow}{switch}(source) \{}
+\DoxyCodeLine{00060         \textcolor{keywordflow}{case} GL\_DEBUG\_SOURCE\_API:}
+\DoxyCodeLine{00061             sourceStr = \textcolor{stringliteral}{"OpenGL API"};}
+\DoxyCodeLine{00062             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00063         \textcolor{keywordflow}{case} GL\_DEBUG\_SOURCE\_WINDOW\_SYSTEM:}
+\DoxyCodeLine{00064             sourceStr = \textcolor{stringliteral}{"Window System"};}
+\DoxyCodeLine{00065             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00066         \textcolor{keywordflow}{case} GL\_DEBUG\_SOURCE\_SHADER\_COMPILER:}
+\DoxyCodeLine{00067             sourceStr = \textcolor{stringliteral}{"Shader Compiler"};}
+\DoxyCodeLine{00068             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00069         \textcolor{keywordflow}{case} GL\_DEBUG\_SOURCE\_THIRD\_PARTY:}
+\DoxyCodeLine{00070             sourceStr = \textcolor{stringliteral}{"Assoc. Application"};}
+\DoxyCodeLine{00071             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00072         \textcolor{keywordflow}{case} GL\_DEBUG\_SOURCE\_APPLICATION:}
+\DoxyCodeLine{00073             sourceStr = \textcolor{stringliteral}{"Application User"};}
+\DoxyCodeLine{00074             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00075         \textcolor{keywordflow}{case} GL\_DEBUG\_SOURCE\_OTHER:}
+\DoxyCodeLine{00076             sourceStr = \textcolor{stringliteral}{"Other"};}
+\DoxyCodeLine{00077             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00078         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00079             sourceStr = \textcolor{stringliteral}{"Unspecified"};}
+\DoxyCodeLine{00080             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00081     \}}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083     std::string typeStr = \textcolor{stringliteral}{"Unspecified"};}
+\DoxyCodeLine{00084     \textcolor{keywordflow}{switch}(type) \{}
+\DoxyCodeLine{00085         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_ERROR:}
+\DoxyCodeLine{00086             typeStr = \textcolor{stringliteral}{"Error"};}
+\DoxyCodeLine{00087             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00088         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_DEPRECATED\_BEHAVIOR:}
+\DoxyCodeLine{00089             typeStr = \textcolor{stringliteral}{"Deprecated Behaviour"};}
+\DoxyCodeLine{00090             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00091         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_UNDEFINED\_BEHAVIOR:}
+\DoxyCodeLine{00092             typeStr = \textcolor{stringliteral}{"Undefined Behaviour"};}
+\DoxyCodeLine{00093             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00094         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_PORTABILITY:}
+\DoxyCodeLine{00095             typeStr = \textcolor{stringliteral}{"Portability Concern"};}
+\DoxyCodeLine{00096             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00097         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_PERFORMANCE:}
+\DoxyCodeLine{00098             typeStr = \textcolor{stringliteral}{"Performance Issue"};}
+\DoxyCodeLine{00099             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00100         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_MARKER:}
+\DoxyCodeLine{00101             typeStr = \textcolor{stringliteral}{"Command Stream Annotation"};}
+\DoxyCodeLine{00102             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00103         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_PUSH\_GROUP:}
+\DoxyCodeLine{00104             typeStr = \textcolor{stringliteral}{"Group Pushing"};}
+\DoxyCodeLine{00105             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00106         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_POP\_GROUP:}
+\DoxyCodeLine{00107             typeStr = \textcolor{stringliteral}{"Documented as 'foo'"};}
+\DoxyCodeLine{00108             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00109         \textcolor{keywordflow}{case} GL\_DEBUG\_TYPE\_OTHER:}
+\DoxyCodeLine{00110             typeStr = \textcolor{stringliteral}{"Other"};}
+\DoxyCodeLine{00111             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00112         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00113             typeStr = \textcolor{stringliteral}{"Unspecified"};}
+\DoxyCodeLine{00114             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00115     \}}
+\DoxyCodeLine{00116 }
+\DoxyCodeLine{00117     std::string errorString = \textcolor{stringliteral}{"GL Callback: "} + std::string(type == GL\_DEBUG\_TYPE\_ERROR ? \textcolor{stringliteral}{"** GL ERROR **"} : \textcolor{stringliteral}{""}) + \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00118     errorString += \textcolor{stringliteral}{"Type: "} + typeStr + \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00119     errorString += \textcolor{stringliteral}{"Severity: "} + severityStr + \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00120     errorString += \textcolor{stringliteral}{"Message: "} + std::string(message) + \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00121 }
+\DoxyCodeLine{00122     \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger}{Logger}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{getInstance}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{log}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{(}}errorString\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{)}};}
+\DoxyCodeLine{00123 }
+\DoxyCodeLine{00124     \textcolor{comment}{/*fprintf(stderr, "GL Callback: \%s \(\backslash\)nType: \%s \(\backslash\)nSeverity: \%s \(\backslash\)nMessage: \%s\(\backslash\)n\(\backslash\)n",}}
+\DoxyCodeLine{00125 \textcolor{comment}{        (type == GL\_DEBUG\_TYPE\_ERROR ? "** GL ERROR **" : ""),}}
+\DoxyCodeLine{00126 \textcolor{comment}{        typeStr.c\_str(),}}
+\DoxyCodeLine{00127 \textcolor{comment}{        severityStr.c\_str(),}}
+\DoxyCodeLine{00128 \textcolor{comment}{        message);*/}}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130 \}}
+\DoxyCodeLine{00131 }
+\DoxyCodeLine{00132 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}}
+\DoxyCodeLine{00133 \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00134}\mbox{\hyperlink{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}{00134}}     \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}} \mbox{\hyperlink{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}{GLErrorMinSeverity}} = \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{NOTIF}};}
 \DoxyCodeLine{00135 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00136}\mbox{\hyperlink{namespace_b_a_r_e2_d_a7951c5decc1f7edc3c4f78ed2f579c85}{00136}}     std::string \mbox{\hyperlink{namespace_b_a_r_e2_d_a7951c5decc1f7edc3c4f78ed2f579c85}{getErrString}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} err) \{}
-\DoxyCodeLine{00137         \textcolor{keywordflow}{switch}(err) \{}
-\DoxyCodeLine{00138             \textcolor{keywordflow}{case} BAREError::SDL\_FAILURE:}
-\DoxyCodeLine{00139                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC SDL\_FAILURE -\/ SDL Failure to initialize. SDL\_GetError() yields the following: \(\backslash\)n\(\backslash\)n"} + std::string(SDL\_GetError());}
-\DoxyCodeLine{00140             \textcolor{keywordflow}{case} BAREError::DOUBLE\_INIT:}
-\DoxyCodeLine{00141                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC DOUBLE\_INIT -\/ There was an attempted double-\/initialization in the program. Not too serious, but fix it anyways, nerd."};}
-\DoxyCodeLine{00142             \textcolor{keywordflow}{case} BAREError::GLEW\_FAILURE:}
-\DoxyCodeLine{00143                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC GLEW\_FAILURE -\/ GLEW could not be initialized!"};}
-\DoxyCodeLine{00144             \textcolor{keywordflow}{case} BAREError::GL\_FAILURE\_VERSION:}
-\DoxyCodeLine{00145                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC GL\_FAILURE\_VERSION -\/ GL Version is not good enough."};}
-\DoxyCodeLine{00146             \textcolor{keywordflow}{case} BAREError::TEXTURE\_FAILURE:}
-\DoxyCodeLine{00147                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC TEXTURE\_FAILURE -\/ Texture could not be loaded from file or created."};}
-\DoxyCodeLine{00148             \textcolor{keywordflow}{case} BAREError::VERTEX\_SHADER\_FAILURE:}
-\DoxyCodeLine{00149                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC VERTEX\_SHADER\_FAILURE"};}
-\DoxyCodeLine{00150             \textcolor{keywordflow}{case} BAREError::FRAGMENT\_SHADER\_FAILURE:}
-\DoxyCodeLine{00151                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC FRAGMENT\_SHADER\_FAILURE"};}
-\DoxyCodeLine{00152             \textcolor{keywordflow}{case} BAREError::UNIFORM\_NOT\_FOUND:}
-\DoxyCodeLine{00153                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC UNIFORM\_NOT\_FOUND"};}
-\DoxyCodeLine{00154             \textcolor{keywordflow}{case} BAREError::SHADER\_COMPILE\_FAILURE:}
-\DoxyCodeLine{00155                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC SHADER\_COMPILE\_FAILURE"};}
-\DoxyCodeLine{00156             \textcolor{keywordflow}{case} BAREError::SHADER\_LINK\_FAILURE:}
-\DoxyCodeLine{00157                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC SHADER\_LINK\_FAILURE"};}
-\DoxyCodeLine{00158             \textcolor{keywordflow}{case} BAREError::GLSL\_PROGRAM\_FAILURE:}
-\DoxyCodeLine{00159                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC GLSL\_PROGRAM\_FAILURE"};}
-\DoxyCodeLine{00160             \textcolor{keywordflow}{case} BAREError::FONT\_FAILURE:}
-\DoxyCodeLine{00161                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC FONT\_FAILURE"};}
-\DoxyCodeLine{00162             \textcolor{keywordflow}{case} BAREError::FBO\_FAILURE:}
-\DoxyCodeLine{00163                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC FBO\_FAILURE"};}
-\DoxyCodeLine{00164             \textcolor{keywordflow}{case} BAREError::LOGGER\_FAILURE:}
-\DoxyCodeLine{00165                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC LOGGER\_FAILURE"};}
-\DoxyCodeLine{00166             \textcolor{keywordflow}{case} BAREError::XML\_FAILURE:}
-\DoxyCodeLine{00167                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC XML\_FAILURE"};}
-\DoxyCodeLine{00168             \textcolor{keywordflow}{case} BAREError::UNINITIALIZED\_FUNCTION:}
-\DoxyCodeLine{00169                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC UNINITIALIZED\_FUNCTION"};}
-\DoxyCodeLine{00170             \textcolor{keywordflow}{case} BAREError::LUA\_FAILURE:}
-\DoxyCodeLine{00171                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC LUA\_FAILURE"};}
-\DoxyCodeLine{00172             \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{00173                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC DNE -\/ Unknown error."};}
-\DoxyCodeLine{00174         \}}
-\DoxyCodeLine{00175     \}}
-\DoxyCodeLine{00176 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00177}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{00177}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} err, std::string message) \{}
-\DoxyCodeLine{00178         std::cout << \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00179         std::cout << std::setfill(\textcolor{stringliteral}{'\#'}) << std::setw(50) << \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00180         std::cout << \textcolor{stringliteral}{"FATAL ERROR: "} << \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00181         std::cout << std::setfill(\textcolor{stringliteral}{'\#'}) << std::setw(50) << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"};}
-\DoxyCodeLine{00182         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{(}}err\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{,}} message\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{)}};}
-\DoxyCodeLine{00183         \mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{displayErrors}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{)}};}
-\DoxyCodeLine{00184         exit(EXIT\_FAILURE);}
-\DoxyCodeLine{00185     \}}
-\DoxyCodeLine{00186 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00187}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{00187}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} err, std::string message)}
-\DoxyCodeLine{00188     \{}
-\DoxyCodeLine{00189         thrownErrors.push\_back(err);}
-\DoxyCodeLine{00190         \textcolor{comment}{// We use std::cout just in case the Logger never actually got inited.}}
-\DoxyCodeLine{00191         \textcolor{keywordflow}{if}(message != \textcolor{stringliteral}{""}) \{}
-\DoxyCodeLine{00192             std::cout << std::setfill(\textcolor{stringliteral}{'-\/'}) << std::setw(50) << \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00193             std::cout << \textcolor{stringliteral}{"Error: "} << message << std::endl;}
-\DoxyCodeLine{00194             std::cout << thrownErrors.size()-\/1 << \textcolor{stringliteral}{": "} << getErrString(err) << std::endl;}
-\DoxyCodeLine{00195             std::cout << std::setfill(\textcolor{stringliteral}{'-\/'}) << std::setw(50) << \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00196         \}}
-\DoxyCodeLine{00197     \}}
-\DoxyCodeLine{00198 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00199}\mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{00199}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{displayErrors}}()}
-\DoxyCodeLine{00200     \{}
-\DoxyCodeLine{00201         std::cout << std::endl << \textcolor{stringliteral}{"Thrown Errors: "} << std::endl;}
-\DoxyCodeLine{00202         std::cout << std::setfill(\textcolor{stringliteral}{'-\/'}) << std::setw(50) << \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00203         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < thrownErrors.size(); i++) \{}
-\DoxyCodeLine{00204             std::cout << i << \textcolor{stringliteral}{": "} << getErrString(thrownErrors[i]) << std::endl;}
-\DoxyCodeLine{00205             std::cout << std::setfill(\textcolor{stringliteral}{'-\/'}) << std::setw(50) << \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00206         \}}
-\DoxyCodeLine{00207         thrownErrors.clear();}
-\DoxyCodeLine{00208     \}}
-\DoxyCodeLine{00209 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00210}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984}{00210}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984}{initGLErrorCallback}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}} minSeverity) \{}
-\DoxyCodeLine{00211         \mbox{\hyperlink{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}{GLErrorMinSeverity}} = minSeverity;}
-\DoxyCodeLine{00212 }
-\DoxyCodeLine{00213         GLboolean inited = GL\_FALSE;}
-\DoxyCodeLine{00214         glGetBooleanv(GL\_DEBUG\_OUTPUT, \&inited);}
-\DoxyCodeLine{00215 }
-\DoxyCodeLine{00216         \textcolor{keywordflow}{if}(!inited) \{}
-\DoxyCodeLine{00217             glEnable(GL\_DEBUG\_OUTPUT);}
-\DoxyCodeLine{00218             glDebugMessageCallback(\mbox{\hyperlink{_b_a_r_e_errors_8cpp_a76259e93488aa188c59d8b8a80517f74}{MessageCallback}}, 0);}
-\DoxyCodeLine{00219         \}}
-\DoxyCodeLine{00220     \}}
-\DoxyCodeLine{00221 \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00136}\mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{00136}}     \mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{std}}::\mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{vector}}<\mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{BAREError}}> \mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{thrownErrors}};}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00138}\mbox{\hyperlink{namespace_b_a_r_e2_d_a7951c5decc1f7edc3c4f78ed2f579c85}{00138}}     std::string \mbox{\hyperlink{namespace_b_a_r_e2_d_a7951c5decc1f7edc3c4f78ed2f579c85}{getErrString}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} err)}
+\DoxyCodeLine{00139     \{}
+\DoxyCodeLine{00140         \textcolor{keywordflow}{switch}(err) \{}
+\DoxyCodeLine{00141             \textcolor{keywordflow}{case} BAREError::SDL\_FAILURE:}
+\DoxyCodeLine{00142                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC SDL\_FAILURE -\/ SDL Failure to initialize. SDL\_GetError() yields the following: \(\backslash\)n\(\backslash\)n"} + std::string(SDL\_GetError());}
+\DoxyCodeLine{00143             \textcolor{keywordflow}{case} BAREError::DOUBLE\_INIT:}
+\DoxyCodeLine{00144                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC DOUBLE\_INIT -\/ There was an attempted double-\/initialization in the program. Not too serious, but fix it anyways, nerd."};}
+\DoxyCodeLine{00145             \textcolor{keywordflow}{case} BAREError::GLEW\_FAILURE:}
+\DoxyCodeLine{00146                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC GLEW\_FAILURE -\/ GLEW could not be initialized!"};}
+\DoxyCodeLine{00147             \textcolor{keywordflow}{case} BAREError::GL\_FAILURE\_VERSION:}
+\DoxyCodeLine{00148                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC GL\_FAILURE\_VERSION -\/ GL Version is not good enough."};}
+\DoxyCodeLine{00149             \textcolor{keywordflow}{case} BAREError::TEXTURE\_FAILURE:}
+\DoxyCodeLine{00150                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC TEXTURE\_FAILURE -\/ Texture could not be loaded from file or created."};}
+\DoxyCodeLine{00151             \textcolor{keywordflow}{case} BAREError::VERTEX\_SHADER\_FAILURE:}
+\DoxyCodeLine{00152                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC VERTEX\_SHADER\_FAILURE"};}
+\DoxyCodeLine{00153             \textcolor{keywordflow}{case} BAREError::FRAGMENT\_SHADER\_FAILURE:}
+\DoxyCodeLine{00154                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC FRAGMENT\_SHADER\_FAILURE"};}
+\DoxyCodeLine{00155             \textcolor{keywordflow}{case} BAREError::UNIFORM\_NOT\_FOUND:}
+\DoxyCodeLine{00156                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC UNIFORM\_NOT\_FOUND"};}
+\DoxyCodeLine{00157             \textcolor{keywordflow}{case} BAREError::SHADER\_COMPILE\_FAILURE:}
+\DoxyCodeLine{00158                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC SHADER\_COMPILE\_FAILURE"};}
+\DoxyCodeLine{00159             \textcolor{keywordflow}{case} BAREError::SHADER\_LINK\_FAILURE:}
+\DoxyCodeLine{00160                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC SHADER\_LINK\_FAILURE"};}
+\DoxyCodeLine{00161             \textcolor{keywordflow}{case} BAREError::GLSL\_PROGRAM\_FAILURE:}
+\DoxyCodeLine{00162                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC GLSL\_PROGRAM\_FAILURE"};}
+\DoxyCodeLine{00163             \textcolor{keywordflow}{case} BAREError::FONT\_FAILURE:}
+\DoxyCodeLine{00164                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC FONT\_FAILURE"};}
+\DoxyCodeLine{00165             \textcolor{keywordflow}{case} BAREError::FBO\_FAILURE:}
+\DoxyCodeLine{00166                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC FBO\_FAILURE"};}
+\DoxyCodeLine{00167             \textcolor{keywordflow}{case} BAREError::LOGGER\_FAILURE:}
+\DoxyCodeLine{00168                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC LOGGER\_FAILURE"};}
+\DoxyCodeLine{00169             \textcolor{keywordflow}{case} BAREError::XML\_FAILURE:}
+\DoxyCodeLine{00170                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC XML\_FAILURE"};}
+\DoxyCodeLine{00171             \textcolor{keywordflow}{case} BAREError::UNINITIALIZED\_FUNCTION:}
+\DoxyCodeLine{00172                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC UNINITIALIZED\_FUNCTION"};}
+\DoxyCodeLine{00173             \textcolor{keywordflow}{case} BAREError::LUA\_FAILURE:}
+\DoxyCodeLine{00174                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC LUA\_FAILURE"};}
+\DoxyCodeLine{00175             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00176                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EC DNE -\/ Unknown error. (enum "} + std::to\_string((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})err) + \textcolor{stringliteral}{")"};}
+\DoxyCodeLine{00177         \}}
+\DoxyCodeLine{00178     \}}
+\DoxyCodeLine{00179 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00180}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{00180}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} err, std::string message)}
+\DoxyCodeLine{00181     \{}
+\DoxyCodeLine{00182         std::cout << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00183         std::cout << std::setfill(\textcolor{stringliteral}{'\#'}) << std::setw(50) << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00184         std::cout << \textcolor{stringliteral}{"FATAL ERROR: "} << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00185         std::cout << std::setfill(\textcolor{stringliteral}{'\#'}) << std::setw(50) << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"};}
+\DoxyCodeLine{00186         \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{(}}err\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{,}} message\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{)}};}
+\DoxyCodeLine{00187         \mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{displayErrors}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{)}};}
+\DoxyCodeLine{00188         std::raise(SIGABRT);}
+\DoxyCodeLine{00189         exit(EXIT\_FAILURE);}
+\DoxyCodeLine{00190     \}}
+\DoxyCodeLine{00191 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00192}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{00192}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} err, std::string message)}
+\DoxyCodeLine{00193     \{}
+\DoxyCodeLine{00194         thrownErrors.push\_back(err);}
+\DoxyCodeLine{00195         \textcolor{comment}{// We use std::cout just in case the Logger never actually got inited.}}
+\DoxyCodeLine{00196         \textcolor{keywordflow}{if}(message != \textcolor{stringliteral}{""}) \{}
+\DoxyCodeLine{00197             std::cout << std::setfill(\textcolor{stringliteral}{'-\/'}) << std::setw(50) << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00198             std::cout << \textcolor{stringliteral}{"Error: "} << message << std::endl;}
+\DoxyCodeLine{00199             std::cout << thrownErrors.size() -\/ 1 << \textcolor{stringliteral}{": "} << getErrString(err) << std::endl;}
+\DoxyCodeLine{00200             std::cout << std::setfill(\textcolor{stringliteral}{'-\/'}) << std::setw(50) << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00201         \}}
+\DoxyCodeLine{00202     \}}
+\DoxyCodeLine{00203 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00204}\mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{00204}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{displayErrors}}()}
+\DoxyCodeLine{00205     \{}
+\DoxyCodeLine{00206         std::cout << std::endl << \textcolor{stringliteral}{"Thrown Errors: "} << std::endl;}
+\DoxyCodeLine{00207         std::cout << std::setfill(\textcolor{stringliteral}{'-\/'}) << std::setw(50) << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00208         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < thrownErrors.size(); i++) \{}
+\DoxyCodeLine{00209             std::cout << i << \textcolor{stringliteral}{": "} << getErrString(thrownErrors[i]) << std::endl;}
+\DoxyCodeLine{00210             std::cout << std::setfill(\textcolor{stringliteral}{'-\/'}) << std::setw(50) << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00211         \}}
+\DoxyCodeLine{00212         thrownErrors.clear();}
+\DoxyCodeLine{00213     \}}
+\DoxyCodeLine{00214 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8cpp_source_l00215}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984}{00215}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984}{initGLErrorCallback}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}} minSeverity)}
+\DoxyCodeLine{00216     \{}
+\DoxyCodeLine{00217         \mbox{\hyperlink{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}{GLErrorMinSeverity}} = minSeverity;}
+\DoxyCodeLine{00218 }
+\DoxyCodeLine{00219         GLboolean inited = GL\_FALSE;}
+\DoxyCodeLine{00220         glGetBooleanv(GL\_DEBUG\_OUTPUT, \&inited);}
+\DoxyCodeLine{00221 }
+\DoxyCodeLine{00222         \textcolor{keywordflow}{if}(!inited) \{}
+\DoxyCodeLine{00223             glEnable(GL\_DEBUG\_OUTPUT);}
+\DoxyCodeLine{00224             glDebugMessageCallback(\mbox{\hyperlink{_b_a_r_e_errors_8cpp_a76259e93488aa188c59d8b8a80517f74}{MessageCallback}}, 0);}
+\DoxyCodeLine{00225         \}}
+\DoxyCodeLine{00226     \}}
+\DoxyCodeLine{00227 \}}
 
 \end{DoxyCode}

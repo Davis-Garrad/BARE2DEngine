@@ -1,5 +1,4 @@
 <map id="BARE2D::Cache::clear" name="BARE2D::Cache::clear">
-<area shape="rect" id="node1" title="Clears the cache. Destroys all data, calling their respective destructors, then delete." alt="" coords="244,46,403,73"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a4471f2cadfa727e9a3ef81b937ab8687" title="Clears the various caches and subcaches that the class uses. Useful for refreshes." alt="" coords="6,5,195,47"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_resource_manager.html#acbc049762c33d9f98ddbc5add7e20174" title="Clears the various caches. This is useful for debugging." alt="" coords="5,71,196,112"/>
+<area shape="rect" id="node1" title="Clears the cache. Destroys all data, calling their respective destructors, then delete." alt="" coords="243,13,401,39"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a4471f2cadfa727e9a3ef81b937ab8687" title="Clears the various caches and subcaches that the class uses. Useful for refreshes." alt="" coords="5,5,195,47"/>
 </map>

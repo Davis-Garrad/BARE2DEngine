@@ -6,7 +6,7 @@ var class_b_a_r_e2_d_1_1_x_m_l_data_manager =
     [ "getData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a8ca2d79250a0f9e24c013d593007a2c1", null ],
     [ "getDataCache", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#aac1a58615a6a568a2f7d0e0f1e8f170c", null ],
     [ "getDataCount", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#ad1eda009d1ee739e4795d954a9fba092", null ],
-    [ "getDataType", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a32e71d04c96275c732a1d8913c5eae54", null ],
+    [ "getDataType", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a6cdad1dd229afdea64a81e9bb591e547", null ],
     [ "loadXML", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#ac4a9f3f5c2a496e2df493a10df0003d3", null ],
     [ "readValue", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#afe95eafa0657855d0cb0ec302a192f5c", null ],
     [ "readValue", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#aaefe53ce8b0f8cc23ee3b53c2fb41bf4", null ],
@@ -23,6 +23,6 @@ var class_b_a_r_e2_d_1_1_x_m_l_data_manager =
     [ "saveXML", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#af9f6c07f0c2cecffd0ffde59174d4621", null ],
     [ "writeXMLData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a64420cd9463430e186035296d982c553", null ],
     [ "XMLData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a5f37fe695198fde75eef3c1593991789", null ],
-    [ "m_dataTypes", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a1e53bb8af9bf46df94f700f34afab3e2", null ],
+    [ "m_dataTypingFunctions", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a3e05e9442cc78303a489fb87ce201abc", null ],
     [ "m_storedData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a2de577045a9016c8f7fd538919d6e664", null ]
 ];

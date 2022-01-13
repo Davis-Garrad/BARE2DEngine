@@ -4,7 +4,7 @@ var class_b_a_r_e2_d_1_1_screen =
     [ "~Screen", "class_b_a_r_e2_d_1_1_screen.html#a9ded848d0855127fe5cfeb4309d25af8", null ],
     [ "destroyScreen", "class_b_a_r_e2_d_1_1_screen.html#addca78a8061f1ff428982fcd25b26a1d", null ],
     [ "draw", "class_b_a_r_e2_d_1_1_screen.html#abd0a8557f5ad544a0cf657b242197ad2", null ],
-    [ "getNextScreenIndex", "class_b_a_r_e2_d_1_1_screen.html#a3163144145fb74bf61641fdb9011a152", null ],
+    [ "getNextScreenIndex", "class_b_a_r_e2_d_1_1_screen.html#a106d7066baf13bedb8e6280839719661", null ],
     [ "getState", "class_b_a_r_e2_d_1_1_screen.html#aece272b6c2301f4cbe8a20cff0474c4d", null ],
     [ "initScreen", "class_b_a_r_e2_d_1_1_screen.html#a0d3e860e94de16f6200272b71390272d", null ],
     [ "onEntry", "class_b_a_r_e2_d_1_1_screen.html#a4c427b38cca9a1fc2cad147e9e2a1a5e", null ],
