@@ -1,8 +1,11 @@
 <map id="BARE2D::BasicRenderer::draw" name="BARE2D::BasicRenderer::draw">
-<area shape="rect" id="node1" title=" " alt="" coords="5,78,176,119"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_glyph.html#a6f185a8114aa0e31269e28b06fe38d14" title=" " alt="" coords="241,56,401,83"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_camera2_d.html#a8b30d128929ca6161be0ee282d2a47b5" title="Checks if a rectangle is within the scene covered by the camera." alt="" coords="224,107,417,149"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_glyph.html#a25c195b87f163cad61d36798a164297c" title=" " alt="" coords="468,5,657,32"/>
-<area shape="rect" id="node4" href="$struct_b_a_r_e2_d_1_1_vertex.html#abc02c06e4c046c1db77747592534a8a2" title="Literally just sets the position. Convenient." alt="" coords="465,56,660,83"/>
-<area shape="rect" id="node5" href="$struct_b_a_r_e2_d_1_1_vertex.html#a028b850fa99d561233130a0f227c9036" title="Sets the UV coords/dimensions." alt="" coords="479,107,646,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,103,176,145"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_glyph.html#a6f185a8114aa0e31269e28b06fe38d14" title=" " alt="" coords="241,69,401,96"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_camera2_d.html#a8b30d128929ca6161be0ee282d2a47b5" title="Checks if a rectangle is within the scene covered by the camera." alt="" coords="224,133,417,174"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_glyph.html#a25c195b87f163cad61d36798a164297c" title=" " alt="" coords="478,5,667,32"/>
+<area shape="rect" id="node4" href="$struct_b_a_r_e2_d_1_1_vertex.html#abc02c06e4c046c1db77747592534a8a2" title="Literally just sets the position. Convenient." alt="" coords="475,56,670,83"/>
+<area shape="rect" id="node5" href="$struct_b_a_r_e2_d_1_1_vertex.html#a028b850fa99d561233130a0f227c9036" title="Sets the UV coords/dimensions." alt="" coords="489,107,656,133"/>
+<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_camera2_d.html#a50541205dc08b5067c5c6b18d403948c" title="Converts a rectangle from viewspace to screenspace." alt="" coords="465,158,680,199"/>
+<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_camera2_d.html#a57fc25c8ff96874144f558a940ecbfbc" title=" " alt="" coords="728,125,943,166"/>
+<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_camera2_d.html#ac5cb2034f0ba69eeec5ff52a20b49a74" title=" " alt="" coords="728,190,943,231"/>
 </map>

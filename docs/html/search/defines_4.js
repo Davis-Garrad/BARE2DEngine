@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['max_5ftexture_5fres_1364',['MAX_TEXTURE_RES',['../_font_8hpp.html#a0452c495abe98070258839b95ccbb83b',1,'Font.hpp']]]
+  ['max_5ftexture_5fres_1368',['MAX_TEXTURE_RES',['../_font_8hpp.html#a0452c495abe98070258839b95ccbb83b',1,'Font.hpp']]]
 ];

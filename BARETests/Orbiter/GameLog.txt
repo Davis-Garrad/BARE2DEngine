@@ -1,10 +1,56 @@
 
 
 
-### LOG: Thu Nov 25 22:30:34 2021 ###
+### LOG: Wed Jan 12 22:43:23 2022 ###
 
 Thanks for using BARE2D! Original engine by Davis Garrad
 
-Cleared all caches.
-Cleared all caches.
-Cleared all caches.
+GL Callback: 
+Type: Performance Issue
+Severity: Notification
+Message: SIMD32 shader inefficient
+
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: FS SIMD8 shader: 17 inst, 0 loops, 1252 cycles, 0:0 spills:fills, 4 sends, scheduled with mode top-down, Promoted 0 constants, compacted 272 to 176 bytes.
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: FS SIMD16 shader: 17 inst, 0 loops, 1774 cycles, 0:0 spills:fills, 4 sends, scheduled with mode top-down, Promoted 0 constants, compacted 272 to 176 bytes.
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: VS SIMD8 shader: 20 inst, 0 loops, 70 cycles, 0:0 spills:fills, 2 sends, scheduled with mode top-down, Promoted 0 constants, compacted 320 to 224 bytes.
+
+GL Callback: 
+Type: Performance Issue
+Severity: Notification
+Message: SIMD32 shader inefficient
+
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: FS SIMD8 shader: 12 inst, 0 loops, 798 cycles, 0:0 spills:fills, 2 sends, scheduled with mode top-down, Promoted 0 constants, compacted 192 to 112 bytes.
+
+GL Callback: 
+Type: Other
+Severity: Notification
+Message: FS SIMD16 shader: 12 inst, 0 loops, 834 cycles, 0:0 spills:fills, 2 sends, scheduled with mode top-down, Promoted 0 constants, compacted 192 to 112 bytes.
+
+GL Callback: 
+Type: Performance Issue
+Severity: Notification
+Message: Recompiling fragment shader for program GLSL1: 
+
+
+GL Callback: 
+Type: Performance Issue
+Severity: Notification
+Message:   number of color buffers 2->1
+
+

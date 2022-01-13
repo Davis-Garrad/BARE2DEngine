@@ -2,33 +2,29 @@
 
 #include <glm/gtc/matrix_transform.hpp>
 
-namespace BARE2D
-{
+namespace BARE2D {
 
 	Camera2D::Camera2D() :
-		m_screenWidth(400),
-		m_screenHeight(400),
+		m_screenWidth(1),
+		m_screenHeight(1),
 		m_cameraMatrix(glm::mat4(0.0f)),
 		m_orthographicMatrix(glm::mat4(0.0f)),
-		m_matrixNeedsUpdate(true)
-	{
+		m_matrixNeedsUpdate(true) {
 
 	}
 
-	Camera2D::~Camera2D()
-	{
+	Camera2D::~Camera2D() {
 
 	}
 
-	void Camera2D::init(float screenWidth, float screenHeight)
-	{
+	void Camera2D::init(float screenWidth, float screenHeight) {
 		// Set the necessary bits
 		m_screenWidth = screenWidth;
 		m_screenHeight = screenHeight;
 
 		// Reset the necessary bits
 		m_state.scale = glm::vec2(1.0f);
-		m_state.position = glm::vec2(1.0f);
+		m_state.position = glm::vec2(0.0f);
 		m_lastState = m_state;
 
 		// Specifies a 2D coordinate system from 0.0-screenWidth in the X dimension and 0.0-screenHeight in the y direction.
@@ -40,13 +36,12 @@ namespace BARE2D
 		m_matrixNeedsUpdate = true;
 	}
 
-	void Camera2D::update()
-	{
+	void Camera2D::update() {
 		// Check if we need to do expensive operations
 		if(m_matrixNeedsUpdate) {
 			// Shit. We do need to.
 			// First, find the world's translation relative to the camera.
-			glm::vec3 translation = glm::vec3(m_screenWidth / 2.0f, m_screenHeight / 2.0f, 0.0f) - glm::vec3(m_state.position.x, m_state.position.y, 0.0f);
+			glm::vec3 translation = glm::vec3(m_screenWidth, m_screenHeight, 0.0f)/2.0f-glm::vec3(m_state.position.x, m_state.position.y, 0.0f);
 
 			// Multiply by our transforming vector to actually move it.
 			m_cameraMatrix = glm::translate(m_orthographicMatrix, translation);
@@ -63,94 +58,83 @@ namespace BARE2D
 		}
 	}
 
-	glm::vec2 Camera2D::getScreenPositionFromViewedPosition(glm::vec2 viewedPosition)
-	{
-		// Converts the viewed (in-camera) position to a screen-space position. The inverse of getViewedFromScreen.
+	glm::vec4 Camera2D::getScreenSpaceFromViewSpace(glm::vec4 destRect) {
+		glm::vec4 res(0.0f);
+		glm::vec2 pos = getScreenPositionFromViewedPosition(glm::vec2(destRect.x, destRect.y));
+		glm::vec2 size = getScreenSizeFromViewedSize(glm::vec2(destRect.w, destRect.z));
+		res = glm::vec4(pos.x, pos.y, size.x, size.y);
 
-		// Move them from the camera position
-		viewedPosition -= m_state.position;
-
-		// Scale them to the screen-space world
-		// Make sure they aren't just getting destroyed if scale == 0.0f
-		if(m_state.scale.x > 0.0f && m_state.scale.y > 0.0f) {
-			viewedPosition *= m_state.scale;
-		}
-
-		// Give the camera position back its offset to make it screen-space again
-		//viewedPosition -= glm::vec2(m_screenWidth/2, m_screenHeight/2);
-
-		// Lastly, (un?)invert the Y direction again.
-		//viewedPosition.y = m_screenHeight - viewedPosition.y;
-
-		// Now we have our result!
-		return viewedPosition;
+		return res;
 	}
 
-	glm::vec2 Camera2D::getViewedPositionFromScreenPosition(glm::vec2 screenPosition)
-	{
-		// Converts the on-screen position to an in-camera position
-		// First, invert the Y direction
-		screenPosition.y = m_screenHeight - screenPosition.y;
+	glm::vec4 Camera2D::getViewSpaceFromScreenSpace(glm::vec4 destRect) {
+		glm::vec4 res(0.0f);
+		glm::vec2 pos = getViewedPositionFromScreenPosition(glm::vec2(destRect.x, destRect.y));
+		glm::vec2 size = getViewedSizeFromScreenSize(glm::vec2(destRect.w, destRect.z));
+		res = glm::vec4(pos.x, pos.y, size.x, size.y);
 
-		// Centre the screen coordinates
-		//screenPosition += glm::vec2(m_screenWidth/2, m_screenHeight/2);
+		return res;
+	}
 
-		// Scale them to the camera world
-		// Make sure we aren't inverting them with a teeny scale somehow or dividing by zero
-		if(m_state.scale.x > 0.0f && m_state.scale.y > 0.0f) {
-			screenPosition /= m_state.scale;
-		}
+	glm::vec2 Camera2D::getScreenPositionFromViewedPosition(glm::vec2 viewedPosition) {
+		// Converts position from viewspace to screenspace.
+		// Viewspace goes from (campos - size/(2scale)) -> (campos + size/(2scale))
+		// Screenspace goes from (-1,-1)->(1,1)
 
-		// Now move em along to the camera position
-		screenPosition += m_state.position;
+		glm::vec2 maxAmplitude = (glm::vec2(m_screenWidth, m_screenHeight) / 2.0f) / m_state.scale;
 
-		// Now we have our result!
+		glm::vec2 screenPosition = viewedPosition - m_state.position;
+		screenPosition /= maxAmplitude;
+
 		return screenPosition;
 	}
 
-	glm::vec2 Camera2D::getScreenSizeFromViewedSize(glm::vec2 viewedSize)
-	{
-		// Converts an in-camera size to a screen-space size.
-		// Offsets and stuff are unnecessary.
-		// Just scale:
-		viewedSize *= m_state.scale;
+	glm::vec2 Camera2D::getViewedPositionFromScreenPosition(glm::vec2 screenPosition) {
+		// Converts position from screenspace to viewspace.
+		// Viewspace goes from (campos - size/(2scale)) -> (campos + size/(2scale))
+		// Screenspace goes from (-1,-1)->(1,1)
 
-		// And since sizes are relative to their container, divide by the "scale" of the screen - the screenWidth and Height
-		viewedSize /= glm::vec2(m_screenWidth / 2, m_screenHeight / 2);
+		glm::vec2 maxAmplitude = (glm::vec2(m_screenWidth, m_screenHeight) / 2.0f) / m_state.scale;
 
-		return viewedSize;
+		glm::vec2 viewedPosition = screenPosition * maxAmplitude;
+		viewedPosition += m_state.position;
+
+		return viewedPosition;
 	}
 
-	glm::vec2 Camera2D::getViewedSizeFromScreenSize(glm::vec2 screenSize)
-	{
-		// Does the opposite of getScreenSizefromViewed...
-		// Multiplies by the "scale" of the screen to get it to the true size
-		screenSize *= glm::vec2(m_screenWidth / 2, m_screenHeight / 2);
+	glm::vec2 Camera2D::getScreenSizeFromViewedSize(glm::vec2 viewedSize) {
+		// Literally just treat viewedSize as a rectangle from (0, 0) (centre in both spaces) -> (viewedSize)
+		glm::vec2 fullMagnitude = (glm::vec2(m_screenWidth, m_screenHeight) / 2.0f) / m_state.scale;
 
-		// Divides by the camera's scale to put it back into the camera world
-		screenSize /= m_state.scale;
+		glm::vec2 screenSize = viewedSize / fullMagnitude;
 
 		return screenSize;
 	}
 
-	void Camera2D::setPosition(glm::vec2 newPos)
-	{
+	glm::vec2 Camera2D::getViewedSizeFromScreenSize(glm::vec2 screenSize) {
+		// Literally just treat screenSize as a rectangle from (0, 0) (centre in both spaces) -> (screenSize)
+		glm::vec2 fullMagnitude = (glm::vec2(m_screenWidth, m_screenHeight) / 2.0f) / m_state.scale;
+
+		glm::vec2 viewedSize = screenSize * fullMagnitude;
+
+		return viewedSize;
+	}
+
+	void Camera2D::setPosition(glm::vec2 newPos) {
 		m_lastState = m_state;
 
 		m_state.position = newPos;
 		m_matrixNeedsUpdate = true;
 	}
 
-	void Camera2D::offsetPosition(glm::vec2 offset)
-	{
+	void Camera2D::offsetPosition(glm::vec2 offset) {
 		m_lastState = m_state;
 
 		m_state.position += offset;
 		m_matrixNeedsUpdate = true;
 	}
 
-	void Camera2D::setScale(float newScaleX, float newScaleY)
-	{
+	void Camera2D::setScale(float newScaleX, float newScaleY) {
 		m_lastState = m_state;
 
 		m_state.scale.x = newScaleX;
@@ -158,8 +142,7 @@ namespace BARE2D
 		m_matrixNeedsUpdate = true;
 	}
 
-	void Camera2D::offsetScale(float offsetX, float offsetY)
-	{
+	void Camera2D::offsetScale(float offsetX, float offsetY) {
 		// Set the state before modification to the current state, then modify
 		m_lastState = m_state;
 
@@ -168,62 +151,52 @@ namespace BARE2D
 		m_matrixNeedsUpdate = true;
 	}
 
-	float Camera2D::getScreenWidth() const
-	{
+	float Camera2D::getScreenWidth() const {
 		return m_screenWidth;
 	}
 
-	float Camera2D::getScreenHeight() const
-	{
+	float Camera2D::getScreenHeight() const {
 		return m_screenHeight;
 	}
 
-	glm::vec2 Camera2D::getPosition() const
-	{
+	glm::vec2 Camera2D::getPosition() const {
 		return m_state.position;
 	}
 
-	float Camera2D::getScaleX() const
-	{
+	float Camera2D::getScaleX() const {
 		return m_state.scale.x;
 	}
 
-	float Camera2D::getScaleY() const
-	{
+	float Camera2D::getScaleY() const {
 		return m_state.scale.y;
 	}
 
-	const glm::mat4& Camera2D::getCameraMatrix() const
-	{
+	const glm::mat4& Camera2D::getCameraMatrix() const {
 		return m_cameraMatrix;
 	}
 
-	bool Camera2D::isRectInScene(glm::vec4& rectangle)
-	{
-		// Create the scene's rectangle.
-		glm::vec2 pos0 = m_state.position - (glm::vec2(m_screenWidth / 2, m_screenHeight / 2) / m_state.scale);
-		glm::vec2 pos1 = m_state.position + (glm::vec2(m_screenWidth / 2, m_screenHeight / 2) / m_state.scale);
+	bool Camera2D::isRectInScene(glm::vec4& rectangle) {
+
+		glm::vec4 screenSpaceRect = getScreenSpaceFromViewSpace(rectangle);
 
 		// Check if either of the positive x or negative x sides are too far to be seen
-		if(rectangle.x + rectangle.z + m_screenWidth / 2 < pos0.x || rectangle.x > pos1.x) {
+		if(screenSpaceRect.x + screenSpaceRect.z < -1.0f || screenSpaceRect.x > 1.0f) {
 			return false;
 		}
 
 		// Check if the y value causes un-seeability
-		if(rectangle.y + rectangle.w + m_screenHeight / 2 < pos0.y || rectangle.y > pos1.y) {
+		if(screenSpaceRect.y + screenSpaceRect.w < -1.0f || screenSpaceRect.y > 1.0f) {
 			return false;
 		}
 
 		return true;
 	}
 
-	CameraState Camera2D::getState()
-	{
+	CameraState Camera2D::getState() {
 		return m_state;
 	}
 
-	CameraState Camera2D::getLastState()
-	{
+	CameraState Camera2D::getLastState() {
 		return m_lastState;
 	}
 
