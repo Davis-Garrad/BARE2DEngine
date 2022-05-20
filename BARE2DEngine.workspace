@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="BARE2DEngine" Database="" Version="10000">
   <Project Name="BARE2DEngine" Path="BARE2DEngine.project" Active="No"/>
-  <Project Name="BARETest_ThreeBody" Path="BARETests/Orbiter/BARETest_ThreeBody.project" Active="Yes"/>
-  <Project Name="BARETests" Path="BARETests/BasicTest/BARETests.project" Active="No"/>
+  <Project Name="BARETest_ThreeBody" Path="BARETests/Orbiter/BARETest_ThreeBody.project" Active="No"/>
+  <Project Name="BARETests" Path="BARETests/BasicTest/BARETests.project" Active="Yes"/>
   <Project Name="BAREBoids" Path="BARETests/Boids/Boids.project" Active="No"/>
   <Project Name="BAREXML" Path="BARETests/BAREXML/BAREXML.project" Active="No"/>
   <BuildMatrix>

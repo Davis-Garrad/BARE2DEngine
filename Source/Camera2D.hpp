@@ -9,13 +9,16 @@ namespace BARE2D {
 	 * @brief Holds some basic information that the camera holds in a state.
 	 */
 	struct CameraState {
-		glm::vec2 position = glm::vec2(0.0f);
+		glm::vec2 focus = glm::vec2(0.0f);
 		glm::vec2 scale = glm::vec2(1.0f);
 	};
 
 	/**
 	 * @class Camera2D
-	 * @brief The basic camera for a 2D world.
+	 * @brief The basic camera for a 2D world. There are two spaces - the Worldspace and the Viewspace.
+	 * The Worldspace is standard for all cameras, it is the 'gameworld' space.
+	 * The Viewspace is the subspace of the worldspace. It is what the camera captures.
+	 * Scale is zoom factor. NOT resolution scalar.
 	 */
 	class Camera2D {
 		public:
@@ -35,50 +38,50 @@ namespace BARE2D {
 			void update();
 
 			/**
-			 * @brief Converts a rectangle from viewspace to screenspace
-			 * @param destRect A destination rectangle
-			 * @return The converted rectangle.
+			 * @brief Converts a coordinate from Worldspace to Viewspace
+			 * @param pos A point in Viewspace
+			 * @return The converted point in Worldspace.
 			 */
-			glm::vec4 getScreenSpaceFromViewSpace(glm::vec4 destRect);
+			glm::vec2 getWorldspaceCoord(glm::vec2 pos) const;
 
 			/**
-			 * @brief Converts a rectangle from screenspace to viewspace
-			 * @param destRect A destination/rectangle
-			 * @return The converted rectangle.
+			 * @brief Converts a coordinate from Worldspace to Viewspace
+			 * @param pos A point in Worldspace
+			 * @return The converted point in Viewspace.
 			 */
-			glm::vec4 getViewSpaceFromScreenSpace(glm::vec4 destRect);
+			glm::vec2 getViewspaceCoord(glm::vec2 pos) const;
 
 			/**
-			 * @return Returns the on-screen position (from 0 to screenWidth, screenHeight)
+			 * @return The Worldspace size from a Viewspace size
 			 */
-			glm::vec2 getScreenPositionFromViewedPosition(glm::vec2 viewedPosition);
+			glm::vec2 getWorldspaceSize(glm::vec2 size) const;
 
 			/**
-			 * @return Returns the in-camera position
+			 * @return The Viewspace size from a Worldspace size
 			 */
-			glm::vec2 getViewedPositionFromScreenPosition(glm::vec2 screenPosition);
+			glm::vec2 getViewspaceSize(glm::vec2 size) const;
 
 			/**
-			 * @return Returns the on-screen size.
+			 * @return The Worldspace rectangle (dest/rect) from a Viewspace rectangle (dest/rect)
 			 */
-			glm::vec2 getScreenSizeFromViewedSize(glm::vec2 viewedSize);
+			glm::vec4 getWorldspaceRect(glm::vec4 destRect) const;
 
 			/**
-			 * @return Returns the in-camera size
+			 * @return The Viewspace rectangle (dest/rect) from a Worldspace rectangle (dest/rect)
 			 */
-			glm::vec2 getViewedSizeFromScreenSize(glm::vec2 screenSize);
+			glm::vec4 getViewspaceRect(glm::vec4 destRect) const;
 
 			/**
-			 * @brief Sets the position of the camera to newPos
-			 * @param newPos The position to set to
+			 * @brief Sets the center of the camera to newFocus
+			 * @param newFocus The position to set the center of the camera to
 			 */
-			void setPosition(glm::vec2 newPos);
+			void setFocus(glm::vec2 newFocus);
 
 			/**
-			 * @brief Offsets the x and y position of the camera by some increment
-			 * @param offset The x and y increments.
+			 * @brief Moves the center of the camera to focus + deltaPos
+			 * @param deltaPos The change to move by
 			 */
-			void offsetPosition(glm::vec2 offset);
+			void offsetFocus(glm::vec2 deltaPos);
 
 			/**
 			 * @brief Sets the scale of the camera
@@ -88,40 +91,38 @@ namespace BARE2D {
 			void setScale(float newScaleX, float newScaleY);
 
 			/**
-			 * @brief Offsets the scale by some increment
-			 * @param offsetX The increment of scale to add.
-			 * @param offsetY The increment of scale to add.
+			 * @brief Adds to the zoom factor of the camera.
+			 * @param deltaScaleX The x direction
+			 * @param deltaScaleY The y direction
 			 */
-			void offsetScale(float offsetX, float offsetY);
+			void offsetScale(float deltaScaleX, float deltaScaleY);
 
 			/**
-			 * @return The screen width
+			 * @return The POV size
 			 */
-			float getScreenWidth() const;
+			glm::vec2 getViewspaceResolution() const;
+
 			/**
-			 * @return The screen height
+			 * @return The camera focus
 			 */
-			float getScreenHeight() const;
+			glm::vec2 getFocus() const;
+
 			/**
-			 * @return The camera position
+			 * @return The camera's bottom-left position.
 			 */
-			glm::vec2 getPosition() const;
+			glm::vec2 getStatePosition() const;
+
 			/**
-			 * @return The zoom level
+			 * @return The zoom levels
 			 */
-			float getScaleX() const;
-			float getScaleY() const;
+			glm::vec2 getScale() const;
+
 			/**
 			 * @return The camera matrix.
 			 */
 			const glm::mat4& getCameraMatrix() const;
 
-			/**
-			 * @brief Checks if a rectangle is within the scene covered by the camera
-			 * @param rectangle The rectangle to check against (format: x0, y0, w, h)
-			 * @return True if the rectangle is see-able
-			 */
-			bool isRectInScene(glm::vec4& rectangle);
+			bool isRectInViewspace(glm::vec4& destRect) const;
 
 			/**
 			 * @return The camera's current state.
@@ -133,8 +134,8 @@ namespace BARE2D {
 			CameraState getLastState();
 
 		private:
-			// The size of the screen (the camera's viewing field)
-			float m_screenWidth, m_screenHeight;
+			// The size of the POV.
+			glm::vec2 m_resolution;
 			// This holds the state of the camera - the position as well as scale.
 			CameraState m_state;
 			// Holds the last state - only changes after being modified

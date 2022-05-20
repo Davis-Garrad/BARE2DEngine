@@ -43,7 +43,7 @@ namespace BARE2D {
 
 	void BasicRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour/*255, 255, 255, 255*/, float angle/* = 0.0f*/, glm::vec2 COR/*=glm::vec2(0.5f)*/) {
 		// Make sure it's actually in the scene.
-		if(!m_camera->isRectInScene(destRect))
+		if(!m_camera->isRectInViewspace(destRect))
 			return;
 
 		// At this point we can just scale the size (the position should be translated in the shader) and draw it

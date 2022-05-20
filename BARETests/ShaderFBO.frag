@@ -25,6 +25,7 @@ void main() {
 	
 	float brightness = abs(dot(normal, normalize(lightSource - fragmentPosition)) / (5.0 * distance(fragmentPosition.xy, lightSource.xy) + 0.66));
 	
-	colour0.rgb *= brightness;
+	colour0.rgb *= min(brightness + 0.2, 1.0) * 0.000001;
+	colour0.rgba += texColour;
 }
 
