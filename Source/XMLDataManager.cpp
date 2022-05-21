@@ -1,36 +1,35 @@
 #include "XMLDataManager.hpp"
 
+#include <algorithm>
+#include <glm/glm.hpp>
+#include <rapidxml/rapidxml_print.hpp> // For the overloaded << operator
 #include <string>
 #include <vector>
-#include <glm/glm.hpp>
-#include <algorithm>
-#include <rapidxml/rapidxml_print.hpp> // For the overloaded << operator
 
-#include "Logger.hpp"
 #include "Filesystem.hpp"
+#include "Logger.hpp"
 
 class string;
-namespace BARE2D
-{
 
-	Cache<std::string, Cache<unsigned int, XMLData>> XMLDataManager::m_storedData;
+namespace BARE2D {
+	Cache<std::string, Cache<unsigned int, XMLData>>		   XMLDataManager::m_storedData;
 	std::unordered_map<std::string, std::function<XMLData*()>> XMLDataManager::m_dataTypingFunctions;
 
-	void XMLDataManager::loadXML(std::string filepath)
-	{
+	void XMLDataManager::loadXML(std::string filepath) {
 		Logger::getInstance()->log("Beginning XML Data Load.");
 
 		// Get all the different file names
 		std::vector<std::string> files = Filesystem::getFilesIn(filepath);
-		std::vector<std::string> xmlTypes{};
+		std::vector<std::string> xmlTypes {};
 
 		for(unsigned int i = 0; i < files.size(); i++) {
 			// Convert file names - (foobar.xml) - to data types - (foobar)
 			std::string fileNameNoExt = files[i].substr(0, files[i].size() - 4);
-			std::string fileNameExt = files[i].substr(files[i].size() - 4, 4);
+			std::string fileNameExt	  = files[i].substr(files[i].size() - 4, 4);
 
 			if(fileNameExt == ".xml") {
-				// It ends with .xml, so it's probably an XML file. This is dirty and bad and we should probably do this better. But we won't.
+				// It ends with .xml, so it's probably an XML file. This is dirty and bad and we should probably do this
+				// better. But we won't.
 				xmlTypes.push_back(fileNameNoExt);
 			}
 		}
@@ -40,7 +39,8 @@ namespace BARE2D
 			std::ifstream file(filepath + "/" + xmlTypes[i] + ".xml");
 
 			if(file.fail())
-				throwFatalError(BAREError::XML_FAILURE, "Could not read from file: " + filepath + "/" + xmlTypes[i] + ".xml");
+				throwFatalError(BAREError::XML_FAILURE,
+								"Could not read from file: " + filepath + "/" + xmlTypes[i] + ".xml");
 
 			readXMLData(file, xmlTypes[i]);
 
@@ -50,8 +50,7 @@ namespace BARE2D
 		Logger::getInstance()->log("XML Data Load Complete.");
 	}
 
-	void XMLDataManager::readXMLData(std::ifstream& file, std::string dataType)
-	{
+	void XMLDataManager::readXMLData(std::ifstream& file, std::string dataType) {
 		Logger::getInstance()->log("Starting XML data read from file");
 
 		// Create an XML document for the file
@@ -72,29 +71,30 @@ namespace BARE2D
 				// Find the function to create a new, unsliced datatype.
 				auto it = m_dataTypingFunctions.find(nodeName);
 				if(it == m_dataTypingFunctions.end()) {
-					throwFatalError(BAREError::XML_FAILURE, "Failed to construct XML data of type " + nodeName + ". Is this type registered?");
+					throwFatalError(BAREError::XML_FAILURE,
+									"Failed to construct XML data of type " + nodeName + ". Is this type registered?");
 				}
 
 				// Actually call the derived class' cloneType() function
-				XMLData* d = (it->second)();
+				XMLData* d	= (it->second)();
 				d->nodeName = nodeName;
 
 				d->read(node);
 
 				addData(d);
 
-				Logger::getInstance()->log("\tRead XML: " + d->nodeName + ": " + d->name + " (" + std::to_string(d->id) + ")");
+				Logger::getInstance()->log("\tRead XML: " + d->nodeName + ": " + d->name + " (" +
+										   std::to_string(d->id) + ")");
 			}
 		}
 
 		Logger::getInstance()->log("Finished XML data read from file");
 	}
 
-	void XMLDataManager::saveXML(std::string filepath)
-	{
+	void XMLDataManager::saveXML(std::string filepath) {
 		Logger::getInstance()->log("Beginning XML Data Write.");
 
-		for(auto& cache : m_storedData) {
+		for(auto& cache: m_storedData) {
 			// For every cache of data, we need to write to their own file
 			std::string dataType = cache.first;
 
@@ -103,7 +103,8 @@ namespace BARE2D
 
 			// Make sure the file was created/opened A-okay.
 			if(file.fail())
-				throwFatalError(BAREError::XML_FAILURE, "Could not save to file: " + filepath + "/" + dataType + ".xml");
+				throwFatalError(BAREError::XML_FAILURE,
+								"Could not save to file: " + filepath + "/" + dataType + ".xml");
 
 			// Now actually write the data to the open file
 			writeXMLData(file, cache.second);
@@ -115,19 +116,19 @@ namespace BARE2D
 		Logger::getInstance()->log("XML Data Write Complete.");
 	}
 
-	void XMLDataManager::writeXMLData(std::ofstream& file, Cache<unsigned int, XMLData>* data)
-	{
+	void XMLDataManager::writeXMLData(std::ofstream& file, Cache<unsigned int, XMLData>* data) {
 		Logger::getInstance()->log("Starting XML data save to file");
 
 		// Create an XML document for the file
 		rapidxml::xml_document<> doc;
 
 		// Now just write every piece of data to the doc
-		for(auto& e : *data) {
+		for(auto& e: *data) {
 			// Use the data-specific write function
 			e.second->write(&doc);
 
-			Logger::getInstance()->log("\tWrote XML: " + e.second->nodeName + ": " + e.second->name + " (" + std::to_string(e.second->id) + ")");
+			Logger::getInstance()->log("\tWrote XML: " + e.second->nodeName + ": " + e.second->name + " (" +
+									   std::to_string(e.second->id) + ")");
 		}
 
 		// Actually write the XML doc to the file, using rapidXML's overloaded << operator.
@@ -136,13 +137,11 @@ namespace BARE2D
 		Logger::getInstance()->log("Finished XML data save to file");
 	}
 
-	unsigned int XMLDataManager::getDataCount(std::string dataType)
-	{
+	unsigned int XMLDataManager::getDataCount(std::string dataType) {
 		return getDataCache(dataType)->getCount();
 	}
 
-	void XMLDataManager::addData(XMLData* data)
-	{
+	void XMLDataManager::addData(XMLData* data) {
 		Cache<unsigned int, XMLData>* c = getDataCache(data->nodeName);
 
 		XMLData* dataPointer = c->findItem(data->id);
@@ -155,57 +154,55 @@ namespace BARE2D
 		c->addItem(data->id, data);
 	}
 
-	template<>
-	bool XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, std::string& variable)
-	{
+	template<> bool
+		XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, std::string& variable) {
 		// Find the node that has a name valueName
 		rapidxml::xml_node<>* node = parent->first_node(valueName.c_str());
 
 		// Make sure that such a node actually exists
 		if(!node) {
-
 			return false;
 		}
 
-		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a value.
+		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a
+		// value.
 		if(std::string(node->value()) != std::string("")) {
 			variable = std::string(node->value());
 		}
 
 		return true;
 	}
-	template<>
-	bool XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, unsigned int& variable)
-	{
+	template<> bool
+		XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, unsigned int& variable) {
 		// Find the node that has a name valueName
 		rapidxml::xml_node<>* node = parent->first_node(valueName.c_str());
 
 		// Make sure that such a node actually exists
 		if(!node) {
-
 			return false;
 		}
 
-		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a value.
+		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a
+		// value.
 		if(std::string(node->value()) != std::string("")) {
 			variable = std::stoi(std::string(node->value()));
 		}
 
 		return true;
 	}
-	template<>
-	bool XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, std::vector<unsigned int>& variable)
-	{
+	template<> bool XMLDataManager::readValue(rapidxml::xml_node<>*		 parent,
+											  std::string				 valueName,
+											  std::vector<unsigned int>& variable) {
 		// Find the node that has a name valueName
 		rapidxml::xml_node<>* node = parent->first_node(valueName.c_str());
 
 		// Make sure that such a node actually exists
 		if(!node) {
-
 			return false;
 		}
 
-		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a value.
+		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a
+		// value.
 		if(std::string(node->value()) != std::string("")) {
 			variable = std::vector<unsigned int> {};
 
@@ -233,57 +230,52 @@ namespace BARE2D
 
 		return true;
 	}
-	template<>
-	bool XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, int& variable)
-	{
+	template<> bool XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, int& variable) {
 		// Find the node that has a name valueName
 		rapidxml::xml_node<>* node = parent->first_node(valueName.c_str());
 
 		// Make sure that such a node actually exists
 		if(!node) {
-
 			return false;
 		}
 
-		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a value.
+		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a
+		// value.
 		if(std::string(node->value()) != std::string("")) {
 			variable = std::stoi(std::string(node->value()));
 		}
 
 		return true;
 	}
-	template<>
-	bool XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, float& variable)
-	{
+	template<> bool XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, float& variable) {
 		// Find the node that has a name valueName
 		rapidxml::xml_node<>* node = parent->first_node(valueName.c_str());
 
 		// Make sure that such a node actually exists
 		if(!node) {
-
 			return false;
 		}
 
-		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a value.
+		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a
+		// value.
 		if(std::string(node->value()) != std::string("")) {
 			variable = std::stof(std::string(node->value()));
 		}
 
 		return true;
 	}
-	template<>
-	bool XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, std::vector<float>& variable)
-	{
+	template<> bool
+		XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, std::vector<float>& variable) {
 		// Find the node that has a name valueName
 		rapidxml::xml_node<>* node = parent->first_node(valueName.c_str());
 
 		// Make sure that such a node actually exists
 		if(!node) {
-
 			return false;
 		}
 
-		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a value.
+		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a
+		// value.
 		if(std::string(node->value()) != std::string("")) {
 			variable = std::vector<float> {};
 
@@ -311,38 +303,35 @@ namespace BARE2D
 
 		return true;
 	}
-	template<>
-	bool XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, bool& variable)
-	{
+	template<> bool XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, bool& variable) {
 		// Find the node that has a name valueName
 		rapidxml::xml_node<>* node = parent->first_node(valueName.c_str());
 
 		// Make sure that such a node actually exists
 		if(!node) {
-
 			return false;
 		}
 
-		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a value.
+		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a
+		// value.
 		if(std::string(node->value()) != std::string("")) {
 			variable = (std::string(node->value()) != "0");
 		}
 
 		return true;
 	}
-	template<>
-	bool XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, std::vector<bool>& variable)
-	{
+	template<> bool
+		XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, std::vector<bool>& variable) {
 		// Find the node that has a name valueName
 		rapidxml::xml_node<>* node = parent->first_node(valueName.c_str());
 
 		// Make sure that such a node actually exists
 		if(!node) {
-
 			return false;
 		}
 
-		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a value.
+		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a
+		// value.
 		if(std::string(node->value()) != std::string("")) {
 			variable = std::vector<bool> {};
 
@@ -370,19 +359,18 @@ namespace BARE2D
 
 		return true;
 	}
-	template<>
-	bool XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, glm::vec2& variable)
-	{
+	template<> bool
+		XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, glm::vec2& variable) {
 		// Find the node that has a name valueName
 		rapidxml::xml_node<>* node = parent->first_node(valueName.c_str());
 
 		// Make sure that such a node actually exists
 		if(!node) {
-
 			return false;
 		}
 
-		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a value.
+		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a
+		// value.
 		if(std::string(node->value()) != std::string("")) {
 			std::string value = node->value();
 
@@ -396,19 +384,19 @@ namespace BARE2D
 
 		return true;
 	}
-	template<>
-	bool XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, std::vector<glm::vec2>& variable)
-	{
+	template<> bool XMLDataManager::readValue(rapidxml::xml_node<>*	  parent,
+											  std::string			  valueName,
+											  std::vector<glm::vec2>& variable) {
 		// Find the node that has a name valueName
 		rapidxml::xml_node<>* node = parent->first_node(valueName.c_str());
 
 		// Make sure that such a node actually exists
 		if(!node) {
-
 			return false;
 		}
 
-		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a value.
+		// We're good if we reach here, so its time to just read the value and interpret it, as long as it actually has a
+		// value.
 		if(std::string(node->value()) != std::string("")) {
 			variable = std::vector<glm::vec2> {};
 
@@ -438,8 +426,7 @@ namespace BARE2D
 		return true;
 	}
 
-	Cache<unsigned int, XMLData>* XMLDataManager::getDataCache(std::string dataType)
-	{
+	Cache<unsigned int, XMLData>* XMLDataManager::getDataCache(std::string dataType) {
 		Cache<unsigned int, XMLData>* cache = m_storedData[dataType];
 
 		if(!cache) {
@@ -449,9 +436,8 @@ namespace BARE2D
 		return cache;
 	}
 
-	void XMLDataManager::clearCache()
-	{
+	void XMLDataManager::clearCache() {
 		m_storedData.clear();
 		m_dataTypingFunctions.clear();
 	}
-}
+} // namespace BARE2D
