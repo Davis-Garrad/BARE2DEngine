@@ -5,36 +5,50 @@
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/BasicTest/TestScreen.cpp" Name="FileName"/>
-      <int Value="65" Name="FirstVisibleLine"/>
-      <int Value="77" Name="CurrentLine"/>
+      <int Value="72" Name="FirstVisibleLine"/>
+      <int Value="85" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/BasicTest/TestScreen.h" Name="FileName"/>
-      <int Value="30" Name="FirstVisibleLine"/>
+      <int Value="0" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/BumpyRenderer.cpp" Name="FileName"/>
-      <int Value="15" Name="FirstVisibleLine"/>
-      <int Value="82" Name="CurrentLine"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/FBORenderer.cpp" Name="FileName"/>
-      <int Value="84" Name="FirstVisibleLine"/>
-      <int Value="87" Name="CurrentLine"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/Camera2D.cpp" Name="FileName"/>
-      <int Value="60" Name="FirstVisibleLine"/>
-      <int Value="69" Name="CurrentLine"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/Renderer.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/BasicTest/main.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>

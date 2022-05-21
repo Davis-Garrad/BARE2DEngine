@@ -23,9 +23,8 @@ void main() {
 	normal.b += 1.0;
 	vec3 lightSource = vec3(mousePos, -0.05);//vec3(cos(time * 0.01), sin(time * 0.01), -1.0);
 	
-	float brightness = abs(dot(normal, normalize(lightSource - fragmentPosition)) / (5.0 * distance(fragmentPosition.xy, lightSource.xy) + 0.66));
+	float brightness = abs(dot(normal, normalize(lightSource - fragmentPosition)) / (5.0 * distance(fragmentPosition.xy, lightSource.xy) + 1.0));
 	
-	colour0.rgb *= min(brightness + 0.2, 1.0) * 0.000001;
-	colour0.rgba += texColour;
+	colour0.rgb *= min(brightness, 1.0);
 }
 

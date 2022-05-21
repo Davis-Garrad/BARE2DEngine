@@ -5,6 +5,7 @@
 ## Debug
 ProjectName            :=BARE2DEngine
 ConfigurationName      :=Debug
+WorkspaceConfiguration :=Debug
 WorkspacePath          :=/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine
 ProjectPath            :=/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine
 IntermediateDirectory  :=$(ConfigurationName)
@@ -12,8 +13,8 @@ OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=Davis-Dev
-Date                   :=20/04/22
+User                   :=Davis-dev
+Date                   :=21/05/22
 CodeLitePath           :=/home/davis-dev/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -27,6 +28,7 @@ OutputSwitch           :=-o
 LibraryPathSwitch      :=-L
 PreprocessorSwitch     :=-D
 SourceSwitch           :=-c 
+OutputDirectory        :=$(IntermediateDirectory)
 OutputFile             :=$(IntermediateDirectory)/lib$(ProjectName).a
 Preprocessors          :=$(PreprocessorSwitch)DEBUG 
 ObjectSwitch           :=-o 
@@ -45,7 +47,7 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch). $(LibraryP
 
 ##
 ## Common variables
-## AR, CXX, CC, AS, CXXFLAGS and CFLAGS can be overriden using an environment variables
+## AR, CXX, CC, AS, CXXFLAGS and CFLAGS can be overridden using an environment variable
 ##
 AR       := /usr/bin/ar rcu
 CXX      := /usr/bin/g++
