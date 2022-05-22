@@ -36,8 +36,8 @@ namespace BARE2D {
 		// Check if we need to do expensive operations
 		if(m_matrixNeedsUpdate) {
 			// Shit. We do need to.
-			// First, find the world's translation relative to the camera.
-			glm::vec2 statePosition = getStatePosition();
+			// First, translate the focus of the camera to the origin, so that we scale from the center.
+			glm::vec2 statePosition = m_state.focus;
 			glm::vec3 translation	= -glm::vec3(statePosition.x, statePosition.y, 0.0f);
 
 			// Multiply by our transforming vector to actually move it.
@@ -49,6 +49,11 @@ namespace BARE2D {
 			// Multiply by our scale matrix.
 			m_cameraMatrix = glm::scale(glm::mat4(1.0f), scale) * m_cameraMatrix;
 
+			// Now that we're scaled, translate the bottom left to the origin, so that we have 0-resolution in both axes.
+			glm::vec3 translation1 = glm::vec3(m_resolution.x / 2.0f, m_resolution.y / 2.0f, 0.0f);
+			// Multiply
+			m_cameraMatrix = glm::translate(m_cameraMatrix, translation1);
+
 			// Make sure we don't have to do this again every goddamn frame
 			m_matrixNeedsUpdate = false;
 		}
@@ -56,20 +61,25 @@ namespace BARE2D {
 
 	glm::vec2 Camera2D::getWorldspaceCoord(glm::vec2 pos) const {
 		// Inverse of viewspacecoord
-		glm::vec2 result = pos * m_state.scale;
+		/*glm::vec2 result = pos * m_state.scale;
 		result -= m_state.focus * m_state.scale;
 		result += m_state.focus;
-		result -= getStatePosition();
+		result -= getStatePosition();*/
+
+		glm::vec2 result = getStatePosition() + pos / m_state.scale;
 
 		return result;
 	}
 
 	glm::vec2 Camera2D::getViewspaceCoord(glm::vec2 pos) const {
-		glm::vec2 diffUnscaled = (pos - m_state.focus);
+		/*glm::vec2 diffUnscaled = (pos - m_state.focus);
 		glm::vec2 result	   = m_state.focus;
 
 		result += getStatePosition() / m_state.scale;
-		result += diffUnscaled / m_state.scale;
+		result += diffUnscaled / m_state.scale;*/
+
+		glm::vec2 result = pos - getStatePosition();
+		result *= m_state.scale;
 
 		return result;
 	}
@@ -173,7 +183,7 @@ namespace BARE2D {
 	}
 
 	glm::vec2 Camera2D::getStatePosition() const {
-		return m_state.focus - m_resolution / 2.0f;
+		return m_state.focus - (m_resolution / 2.0f) / m_state.scale;
 	}
 
 } // namespace BARE2D
