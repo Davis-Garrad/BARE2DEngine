@@ -5,8 +5,8 @@
 ## Debug
 ProjectName            :=BARE2DEngine
 ConfigurationName      :=Debug
-WorkspaceConfiguration :=Debug
-WorkspacePath          :=/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine
+WorkspaceConfiguration :=Linux Debug
+WorkspacePath          :=/home/davis-dev/Documents/Programming/C++/CodingGithub/Fear-Of-The-Dark/Code
 ProjectPath            :=/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine
 IntermediateDirectory  :=$(ConfigurationName)
 OutDir                 := $(IntermediateDirectory)
@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Davis-dev
-Date                   :=21/05/22
+Date                   :=23/05/22
 CodeLitePath           :=/home/davis-dev/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -62,10 +62,10 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/Source_Renderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_DebugRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_BasicRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_FBORenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_BumpyRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Font.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_MutableTexture.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_VAO.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Camera2D.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_App.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/Source_Screen.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaContextManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Other_Libraries_PicoPNG.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Window.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Timer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_GLContextManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_ParticleEngine2D.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_FontRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_BARECEGUI.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Filesystem.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/Source_ShaderProgram.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_XMLDataTypes.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Cache.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_AudioManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaScriptEngine.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_ResourceManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Vertex.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_XMLDataManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_IOManager.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/Source_Logger.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaScript.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaFunctions.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_InputManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_ScreenList.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_BAREErrors.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_BARE2DEngine.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/Source_Renderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_DebugRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_BasicRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_FBORenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_BumpyRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_TexturelessRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Font.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_MutableTexture.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_VAO.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Camera2D.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/Source_App.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Screen.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaContextManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Other_Libraries_PicoPNG.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Window.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Timer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_GLContextManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_ParticleEngine2D.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_FontRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_BARECEGUI.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/Source_Filesystem.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_ShaderProgram.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaScriptQueue.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_XMLDataTypes.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Cache.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_AudioManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaScriptEngine.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_ResourceManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Vertex.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_XMLDataManager.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/Source_IOManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_Logger.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaScript.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_LuaFunctions.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_InputManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_ScreenList.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_BAREErrors.cpp$(ObjectSuffix) $(IntermediateDirectory)/Source_BARE2DEngine.cpp$(ObjectSuffix) 
 
 
 
@@ -82,8 +82,8 @@ $(OutputFile): $(Objects)
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects0)  > $(ObjectsFileList)
 	$(AR) $(ArchiveOutputSwitch)$(OutputFile) @$(ObjectsFileList)
-	@$(MakeDirCommand) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/.build-debug"
-	@echo rebuilt > "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/.build-debug/BARE2DEngine"
+	@$(MakeDirCommand) "/home/davis-dev/Documents/Programming/C++/CodingGithub/Fear-Of-The-Dark/Code/.build-linux_debug"
+	@echo rebuilt > "/home/davis-dev/Documents/Programming/C++/CodingGithub/Fear-Of-The-Dark/Code/.build-linux_debug/BARE2DEngine"
 
 MakeIntermediateDirs:
 	@test -d $(ConfigurationName) || $(MakeDirCommand) $(ConfigurationName)
@@ -127,6 +127,12 @@ $(IntermediateDirectory)/Source_BumpyRenderer.cpp$(ObjectSuffix): Source/BumpyRe
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/BumpyRenderer.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_BumpyRenderer.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Source_BumpyRenderer.cpp$(PreprocessSuffix): Source/BumpyRenderer.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_BumpyRenderer.cpp$(PreprocessSuffix) Source/BumpyRenderer.cpp
+
+$(IntermediateDirectory)/Source_TexturelessRenderer.cpp$(ObjectSuffix): Source/TexturelessRenderer.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_TexturelessRenderer.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_TexturelessRenderer.cpp$(DependSuffix) -MM Source/TexturelessRenderer.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/Source/TexturelessRenderer.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Source_TexturelessRenderer.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Source_TexturelessRenderer.cpp$(PreprocessSuffix): Source/TexturelessRenderer.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Source_TexturelessRenderer.cpp$(PreprocessSuffix) Source/TexturelessRenderer.cpp
 
 $(IntermediateDirectory)/Source_Font.cpp$(ObjectSuffix): Source/Font.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Source_Font.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Source_Font.cpp$(DependSuffix) -MM Source/Font.cpp

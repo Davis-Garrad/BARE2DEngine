@@ -40,7 +40,7 @@ namespace BARE2D {
 		// Actually initialize our shader
 		m_shader.compileShaders(m_vertexShaderPath.c_str(), m_fragmentShaderPath.c_str());
 
-		m_shader.linkShaders({"vertexPosition", "vertexColour", "vertexUV"});
+		link({"vertexPosition", "vertexColour", "vertexUV"});
 
 		Renderer::init(); // Initializes the VAO, so we can add attributes
 
@@ -73,7 +73,7 @@ namespace BARE2D {
 			i++) { // Remember that the number of colour attachments will always be number of textures - 1
 			m_colourAttachments.push_back(GL_COLOR_ATTACHMENT0 + i);
 		}
-		glDrawBuffers(m_numTextures - 1, m_colourAttachments.data());
+		glDrawBuffers(m_numTextures, m_colourAttachments.data());
 
 		unbind();
 	}
@@ -115,7 +115,8 @@ namespace BARE2D {
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 
 		// Enable writing to the depth attachment
-		glEnable(GL_DEPTH_TEST);
+		if(m_shaderHasDepth)
+			glEnable(GL_DEPTH_TEST);
 		// Set a normalized depth variable
 		glDepthMask(GL_TRUE);
 		// Set it so that closer depths are smaller numbers (0.0 appears in front of 0.5 which appears in front of 1.0, etc)

@@ -2,7 +2,12 @@
 
 namespace BARE2D {
 
-	BasicRenderer::BasicRenderer(std::string& fragShader, std::string& vertShader, unsigned int perspectiveWidth, unsigned int perspectiveHeight) : Renderer(), m_fragShader(fragShader), m_vertShader(vertShader) {
+	BasicRenderer::BasicRenderer(std::string& fragShader,
+								 std::string& vertShader,
+								 unsigned int perspectiveWidth,
+								 unsigned int perspectiveHeight) :
+		Renderer(),
+		m_fragShader(fragShader), m_vertShader(vertShader) {
 		m_camera = std::make_shared<Camera2D>();
 		m_camera->init(perspectiveWidth, perspectiveHeight);
 	}
@@ -13,12 +18,16 @@ namespace BARE2D {
 	void BasicRenderer::init() {
 		m_shader.compileShaders(m_vertShader.c_str(), m_fragShader.c_str());
 
-		m_shader.linkShaders({"vertexPosition", "vertexColour", "vertexUV"});
+		link({"vertexPosition", "vertexColour", "vertexUV"});
 
 		Renderer::init(); // Initializes the VAO, so we can add attributes.
 
 		m_vertexArrayObject.addVertexAttribute(3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, position));
-		m_vertexArrayObject.addVertexAttribute(4, GL_UNSIGNED_BYTE, GL_TRUE, sizeof(Vertex), (void*)offsetof(Vertex, colour));
+		m_vertexArrayObject.addVertexAttribute(4,
+											   GL_UNSIGNED_BYTE,
+											   GL_TRUE,
+											   sizeof(Vertex),
+											   (void*)offsetof(Vertex, colour));
 		m_vertexArrayObject.addVertexAttribute(2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, uv));
 	}
 
@@ -41,7 +50,13 @@ namespace BARE2D {
 		m_shader.setUniformMatrix<glm::mat4>("projectionMatrix", GL_FALSE, &projectionMatrix);
 	}
 
-	void BasicRenderer::draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour/*255, 255, 255, 255*/, float angle/* = 0.0f*/, glm::vec2 COR/*=glm::vec2(0.5f)*/) {
+	void BasicRenderer::draw(glm::vec4 destRect,
+							 glm::vec4 uvRect,
+							 GLuint	   texture,
+							 float	   depth,
+							 Colour	   colour /*255, 255, 255, 255*/,
+							 float	   angle /* = 0.0f*/,
+							 glm::vec2 COR /*=glm::vec2(0.5f)*/) {
 		// Make sure it's actually in the scene.
 		if(!m_camera->isRectInViewspace(destRect))
 			return;
@@ -120,4 +135,4 @@ namespace BARE2D {
 		m_vertexArrayObject.unbindVBO();
 	}
 
-}
+} // namespace BARE2D

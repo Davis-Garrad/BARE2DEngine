@@ -58,7 +58,7 @@ void TestScreen::draw() {
 			depth = 1.0f / std::pow(xNum + yNum, 2) * std::pow(i + j, 2);
 
 			m_renderer->draw(glm::vec4(pos.x + i * size.x, pos.y + j * size.y, size.x, size.y),
-							 glm::vec4(0.0f, 1.0f, 1.0f, -1.0f),
+							 glm::vec4(0.0f, 0.0f, 1.0f, 1.0f),
 							 m_texture.id,
 							 m_textureNormal.id,
 							 depth);

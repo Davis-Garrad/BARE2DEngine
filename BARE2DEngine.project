@@ -106,6 +106,8 @@
       <File Name="Source/Camera2D.hpp"/>
       <File Name="Source/ShaderProgram.tcc"/>
       <VirtualDirectory Name="Renderers">
+        <File Name="Source/TexturelessRenderer.cpp"/>
+        <File Name="Source/TexturelessRenderer.hpp"/>
         <File Name="Source/BumpyRenderer.cpp"/>
         <File Name="Source/BumpyRenderer.hpp"/>
         <File Name="Source/FBORenderer.cpp"/>
