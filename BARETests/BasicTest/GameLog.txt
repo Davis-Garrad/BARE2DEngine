@@ -1,8 +1,10 @@
 
 
 
-### LOG: Mon May 23 22:35:32 2022 ###
+### LOG: Tue May 24 13:39:14 2022 ###
 
 Thanks for using BARE2D! Original engine by Davis Garrad
 
 Entering screen! Will display pretty colours for a bit, then shrink, then leave!
+Lua Output: Hello there!
+Lua Output: Delaying for 4 seconds...

@@ -1,373 +1,372 @@
-23/05/2022 22:03:49 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-23/05/2022 22:03:49 (Std) 	+                     Crazy Eddie's GUI System - Event log                    +
-23/05/2022 22:03:49 (Std) 	+                          (http://www.cegui.org.uk/)                         +
-23/05/2022 22:03:49 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+24/05/2022 13:39:15 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+24/05/2022 13:39:15 (Std) 	+                     Crazy Eddie's GUI System - Event log                    +
+24/05/2022 13:39:15 (Std) 	+                          (http://www.cegui.org.uk/)                         +
+24/05/2022 13:39:15 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
-23/05/2022 22:03:49 (Std) 	CEGUI::Logger singleton created. (0x55eaeee59c10)
-23/05/2022 22:03:49 (Std) 	
-23/05/2022 22:03:49 (Std) 	********************************************************************************
-23/05/2022 22:03:49 (Std) 	* Important:                                                                   *
-23/05/2022 22:03:49 (Std) 	*     To get support at the CEGUI forums, you must post _at least_ the section *
-23/05/2022 22:03:49 (Std) 	*     of this log file indicated below.  Failure to do this will result in no  *
-23/05/2022 22:03:49 (Std) 	*     support being given; please do not waste our time.                       *
-23/05/2022 22:03:49 (Std) 	********************************************************************************
-23/05/2022 22:03:49 (Std) 	********************************************************************************
-23/05/2022 22:03:49 (Std) 	* -------- START OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM       -------- *
-23/05/2022 22:03:49 (Std) 	********************************************************************************
-23/05/2022 22:03:49 (Std) 	---- Version: 0.8.7 (Build: Feb 19 2020 Debug GNU/Linux g++ 9.2.1 20200203 64 bit) ----
-23/05/2022 22:03:49 (Std) 	---- Renderer module is: CEGUI::OpenGL3Renderer - Official OpenGL 3.2 core based renderer module.  TextureTarget support enabled via FBO OGL 3.2 core implementation. ----
-23/05/2022 22:03:49 (Std) 	---- XML Parser module is: CEGUI::ExpatParser - Official expat based parser module for CEGUI ----
-23/05/2022 22:03:49 (Std) 	---- Image Codec module is: SILLYImageCodec - Official SILLY based image codec ----
-23/05/2022 22:03:49 (Std) 	---- Scripting module is: None ----
-23/05/2022 22:03:49 (Std) 	********************************************************************************
-23/05/2022 22:03:49 (Std) 	* -------- END OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM         -------- *
-23/05/2022 22:03:49 (Std) 	********************************************************************************
-23/05/2022 22:03:49 (Std) 	
-23/05/2022 22:03:49 (Std) 	---- Begining CEGUI System initialisation ----
-23/05/2022 22:03:49 (Std) 	[CEGUI::ImageManager] Singleton created (0x55eaef9ab4e0)
-23/05/2022 22:03:49 (Std) 	[CEGUI::ImageManager] Registered Image type: BasicImage
-23/05/2022 22:03:49 (Std) 	CEGUI::FontManager singleton created. (0x55eaef97e7e0)
-23/05/2022 22:03:49 (Std) 	CEGUI::WindowFactoryManager singleton created
-23/05/2022 22:03:49 (Std) 	CEGUI::WindowManager singleton created (0x55eaef9ac530)
-23/05/2022 22:03:49 (Std) 	CEGUI::SchemeManager singleton created. (0x55eaef9c6730)
-23/05/2022 22:03:49 (Std) 	CEGUI::GlobalEventSet singleton created. (0x55eaef9c9800)
-23/05/2022 22:03:49 (Std) 	CEGUI::AnimationManager singleton created (0x55eaef9a9d10)
-23/05/2022 22:03:49 (Std) 	CEGUI::WidgetLookManager singleton created. (0x55eaef9a5450)
-23/05/2022 22:03:49 (Std) 	CEGUI::WindowRendererManager singleton created (0x55eaef9a5410)
-23/05/2022 22:03:49 (Std) 	CEGUI::RenderEffectManager singleton created (0x55eaef9adaa0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'DefaultWindow' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'DefaultWindow' windows added. (0x55eaef9af710)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'DragContainer' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'DragContainer' windows added. (0x55eaef9b09b0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'ScrolledContainer' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'ScrolledContainer' windows added. (0x55eaef9b0b70)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'ClippedContainer' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'ClippedContainer' windows added. (0x55eaef9b0c30)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/PushButton' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/PushButton' windows added. (0x55eaef9b0cf0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/RadioButton' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/RadioButton' windows added. (0x55eaef9b11e0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/Combobox' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/Combobox' windows added. (0x55eaef9b1380)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/ComboDropList' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/ComboDropList' windows added. (0x55eaef9b1520)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/Editbox' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/Editbox' windows added. (0x55eaef9b18e0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/FrameWindow' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/FrameWindow' windows added. (0x55eaef9b19a0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/ItemEntry' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/ItemEntry' windows added. (0x55eaef9b1a60)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/Listbox' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/Listbox' windows added. (0x55eaef9b1b20)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/ListHeader' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/ListHeader' windows added. (0x55eaef9b1e80)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/ListHeaderSegment' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/ListHeaderSegment' windows added. (0x55eaef9b20b0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/Menubar' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/Menubar' windows added. (0x55eaef9b2170)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/PopupMenu' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/PopupMenu' windows added. (0x55eaef9b23f0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/MenuItem' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/MenuItem' windows added. (0x55eaef9b24b0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/MultiColumnList' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/MultiColumnList' windows added. (0x55eaef9b2570)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/MultiLineEditbox' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/MultiLineEditbox' windows added. (0x55eaef9b29b0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/ProgressBar' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/ProgressBar' windows added. (0x55eaef9b2a70)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/ScrollablePane' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/ScrollablePane' windows added. (0x55eaef9b2b30)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/Scrollbar' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/Scrollbar' windows added. (0x55eaef9b2bf0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/Slider' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/Slider' windows added. (0x55eaef9b2f50)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/Spinner' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/Spinner' windows added. (0x55eaef9b3010)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/TabButton' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/TabButton' windows added. (0x55eaef9b33a0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/TabControl' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/TabControl' windows added. (0x55eaef9b3460)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/Thumb' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/Thumb' windows added. (0x55eaef9b3520)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/Titlebar' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/Titlebar' windows added. (0x55eaef9b3880)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/ToggleButton' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/ToggleButton' windows added. (0x55eaef9b3be0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/Tooltip' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/Tooltip' windows added. (0x55eaef9b3ca0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/ItemListbox' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/ItemListbox' windows added. (0x55eaef9b3d60)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/GroupBox' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/GroupBox' windows added. (0x55eaef9b3e20)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'CEGUI/Tree' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'CEGUI/Tree' windows added. (0x55eaef9b3ee0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'LayoutCell' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'LayoutCell' windows added. (0x55eaef9b4530)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'HorizontalLayoutContainer' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'HorizontalLayoutContainer' windows added. (0x55eaef9b45f0)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'VerticalLayoutContainer' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'VerticalLayoutContainer' windows added. (0x55eaef9b4870)
-23/05/2022 22:03:49 (Std) 	Created WindowFactory for 'GridLayoutContainer' windows.
-23/05/2022 22:03:49 (Std) 	WindowFactory for 'GridLayoutContainer' windows added. (0x55eaef9b4930)
-23/05/2022 22:03:49 (Std) 	CEGUI::System singleton created. (0x55eaef9ac3b0)
-23/05/2022 22:03:49 (Std) 	---- CEGUI System initialisation completed ----
-23/05/2022 22:03:49 (Std) 	
-23/05/2022 22:03:49 (Std) 	Started creation of Scheme from XML specification:
-23/05/2022 22:03:49 (Std) 	---- CEGUI GUIScheme name: WindowsLookSkin
-23/05/2022 22:03:49 (Std) 	[ImageManager] Started creation of Imageset from XML specification:
-23/05/2022 22:03:49 (Std) 	[ImageManager] ---- CEGUI Imageset name: WindowsLook
-23/05/2022 22:03:49 (Std) 	[ImageManager] ---- Source texture file: WindowsLook.png
-23/05/2022 22:03:49 (Std) 	[ImageManager] ---- Source texture resource group: (Default)
-23/05/2022 22:03:49 (Std) 	[OpenGLRenderer] Created texture: WindowsLook
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/Background' (0x55eaef9c2400) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameLeft' (0x55eaef2a6390) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameRight' (0x55eaef186160) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameTop' (0x55eaef9d3180) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameBottom' (0x55eaefa16a80) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameTopLeft' (0x55eaef9d3fb0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameTopRight' (0x55eaef9d40d0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameBottomLeft' (0x55eaef9d43f0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameBottomRight' (0x55eaef9d4690) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalLeft' (0x55eaef9dcda0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalRight' (0x55eaef9dd040) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalTop' (0x55eaef9dd3e0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalBottom' (0x55eaef9dd780) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalTopLeft' (0x55eaefa168f0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalTopRight' (0x55eaef9dda80) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalBottomLeft' (0x55eaef9ddd20) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalBottomRight' (0x55eaef9dde40) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedLeft' (0x55eaef9de0e0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedRight' (0x55eaef9de410) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedTop' (0x55eaef9de2f0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedBottom' (0x55eaef9d2b90) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedTopLeft' (0x55eaef9dea30) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedTopRight' (0x55eaef9dec40) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedBottomLeft' (0x55eaef9deee0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedBottomRight' (0x55eaef9df000) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverLeft' (0x55eaef9df340) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverRight' (0x55eaef9df7b0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverTop' (0x55eaef9df690) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverBottom' (0x55eaef9de620) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverTopLeft' (0x55eaef9dffb0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverTopRight' (0x55eaef9e00d0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverBottomLeft' (0x55eaef9e02e0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverBottomRight' (0x55eaef9e0580) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameLeft' (0x55eaef9e06a0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameRight' (0x55eaef9e09e0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameTop' (0x55eaef9dfa60) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameBottom' (0x55eaef9e1140) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameTopLeft' (0x55eaef9e13f0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameTopRight' (0x55eaef9e1510) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameBottomLeft' (0x55eaef9e1720) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameBottomRight' (0x55eaef9e1930) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameLeft' (0x55eaef9e1bd0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameRight' (0x55eaef9e1cf0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameTop' (0x55eaef9e2080) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameBottom' (0x55eaef9e2470) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameTopLeft' (0x55eaef9e2590) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameTopRight' (0x55eaef9e26b0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameBottomLeft' (0x55eaef9e28c0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameBottomRight' (0x55eaef9f0900) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/CloseButtonNormal' (0x55eaef9f0a20) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/CloseButtonHover' (0x55eaef9f0e00) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/CloseButtonPushed' (0x55eaef9f1100) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarTopLeft' (0x55eaef9f1310) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarTopRight' (0x55eaef9f1520) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarBottomLeft' (0x55eaef9f1730) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarBottomRight' (0x55eaef9f1940) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarLeft' (0x55eaef9f1b50) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarRight' (0x55eaef9f1f40) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarTop' (0x55eaef9f2150) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarBottom' (0x55eaef9f2450) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarFill' (0x55eaef9f2570) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/CheckboxNormal' (0x55eaef9f2780) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/CheckboxHover' (0x55eaef9f2990) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/CheckboxMark' (0x55eaef9f2ba0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/RadioButtonNormal' (0x55eaef9f2db0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/RadioButtonHover' (0x55eaef9f2ed0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/RadioButtonMark' (0x55eaef9f2ff0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/SliderThumbNormal' (0x55eaef9f3200) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/SliderThumbHover' (0x55eaef9f3410) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/SliderTrackLeft' (0x55eaef9f3620) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/SlidertrackMiddle' (0x55eaef9f3830) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/SliderTrackRight' (0x55eaef9f3a40) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/SliderTick' (0x55eaef9f3c50) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/HeaderMainBrush' (0x55eaef9f4040) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/HeaderBottomEdge' (0x55eaef9f4160) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/HeaderSplitter' (0x55eaef9f4280) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/VertScrollbarGrip' (0x55eaef9f4670) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/HorzScrollbarGrip' (0x55eaef9f4790) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/LargeLeftArrow' (0x55eaef9f48b0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/LargeRightArrow' (0x55eaef9f4ca0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/LargeUpArrow' (0x55eaef9f4dc0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/LargeDownArrow' (0x55eaef9f50c0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/SmallLeftArrow' (0x55eaef9f52d0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/SmallRightArrow' (0x55eaef9f54e0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/SmallUpArrow' (0x55eaef9f5600) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/SmallDownArrow' (0x55eaef9f5900) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/EditBoxCaret' (0x55eaef9f5b10) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MouseArrow' (0x55eaef9f61d0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MouseMoveCursor' (0x55eaef9f6440) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MouseNoSoCursor' (0x55eaef9f6040) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MouseEsWeCursor' (0x55eaef9f6880) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MouseNeSwCursor' (0x55eaef9f5eb0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MouseNwSeCursor' (0x55eaef9f6d10) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MouseTextBar' (0x55eaef9f6f20) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabHorizontalTopFiller' (0x55eaef9d3e20) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabHorizontalBottomFiller' (0x55eaef9d1970) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneUpperLeft' (0x55eaef9df8d0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneTop' (0x55eaef9f7450) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneUpperRight' (0x55eaef9f78c0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneLeft' (0x55eaef9f77a0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneMiddle' (0x55eaef9f7b70) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneRight' (0x55eaef9f8130) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneLower' (0x55eaef9f8250) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneLowerLeft' (0x55eaef9f85e0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneLowerRight' (0x55eaef9f8890) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonUpperLeftNormal' (0x55eaef9f8ad0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonUpperNormal' (0x55eaef9f89b0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonUpperRightNormal' (0x55eaef9f90a0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLeftNormal' (0x55eaef9f8f00) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonMiddleNormal' (0x55eaef9f9610) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonRightNormal' (0x55eaef9f9bd0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLowerLeftNormal' (0x55eaef9f9cf0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLowerNormal' (0x55eaef9fa020) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLowerRightNormal' (0x55eaef9fa360) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonUpperLeftSelected' (0x55eaef9fa610) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonUpperSelected' (0x55eaef9fa9f0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonUpperRightSelected' (0x55eaef9faca0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLeftSelected' (0x55eaef9faf50) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonMiddleSelected' (0x55eaef9fb390) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonRightSelected' (0x55eaef9fb4b0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLowerLeftSelected' (0x55eaef9fb910) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLowerSelected' (0x55eaef9fb7f0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLowerRightSelected' (0x55eaef9fc040) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonScrollLeftNormal' (0x55eaef9fc390) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonScrollRightNormal' (0x55eaef9fc930) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonScrollLeftHover' (0x55eaef9fca50) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonScrollRightHover' (0x55eaef9fcea0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipTopLeft' (0x55eaef9fd150) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipTopRight' (0x55eaef9fd4a0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipBottomLeft' (0x55eaef9fd930) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipBottomRight' (0x55eaef9fda50) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipLeftEdge' (0x55eaef9fdc60) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipRightEdge' (0x55eaef9fde70) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipTopEdge' (0x55eaef9fe080) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipBottomEdge' (0x55eaef9fe470) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipMiddle' (0x55eaef9fe590) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuTopLeft' (0x55eaef9fe890) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuTopRight' (0x55eaef9feb90) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuBottomLeft' (0x55eaef9fecb0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuBottomRight' (0x55eaef9feec0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuLeft' (0x55eaef9fefe0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuRight' (0x55eaef9ff2e0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuTop' (0x55eaef9ff400) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuBottom' (0x55eaef9ff610) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameTopLeft' (0x55eaef9ff810) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameTopRight' (0x55eaef9ffb10) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameBottomLeft' (0x55eaef9ffc30) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameBottomRight' (0x55eaef9fff20) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameLeft' (0x55eaefa00270) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameRight' (0x55eaefa005c0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameTop' (0x55eaefa00960) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameBottom' (0x55eaefa00b70) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuArrowRight' (0x55eaefa00e10) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuArrowLeft' (0x55eaefa00f30) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	[ImageManager] Created image: 'WindowsLook/MultiListSelectionBrush' (0x55eaefa012c0) of type: BasicImage
-23/05/2022 22:03:49 (Std) 	===== Falagard 'root' element: look and feel parsing begins =====
-23/05/2022 22:03:49 (Std) 	===== Look and feel parsing completed =====
-23/05/2022 22:03:49 (Std) 	No window renderer factories specified for module 'CEGUICoreWindowRendererSet' - adding all available factories...
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/Button' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/Button' added. (0x55eaef9d1790)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/Default' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/Default' added. (0x55eaef9d8c80)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/Editbox' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/Editbox' added. (0x55eaef9d8d40)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/FrameWindow' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/FrameWindow' added. (0x55eaef9d8e00)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/ItemEntry' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/ItemEntry' added. (0x55eaef9d7b10)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/ListHeader' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/ListHeader' added. (0x55eaef9d7d90)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/ListHeaderSegment' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/ListHeaderSegment' added. (0x55eaef9d8010)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/Listbox' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/Listbox' added. (0x55eaef9d80d0)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/Menubar' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/Menubar' added. (0x55eaef9d8190)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/MenuItem' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/MenuItem' added. (0x55eaef9d8330)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/MultiColumnList' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/MultiColumnList' added. (0x55eaefb78e40)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/MultiLineEditbox' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/MultiLineEditbox' added. (0x55eaefb78f00)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/PopupMenu' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/PopupMenu' added. (0x55eaefb790a0)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/ProgressBar' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/ProgressBar' added. (0x55eaefb79320)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/ScrollablePane' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/ScrollablePane' added. (0x55eaefb795a0)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/Scrollbar' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/Scrollbar' added. (0x55eaefb79660)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/Slider' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/Slider' added. (0x55eaefb79720)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/Static' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/Static' added. (0x55eaefb799a0)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/StaticImage' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/StaticImage' added. (0x55eaefb79a60)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/StaticText' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/StaticText' added. (0x55eaefb74410)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/TabButton' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/TabButton' added. (0x55eaefb74770)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/TabControl' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/TabControl' added. (0x55eaefb74830)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/Titlebar' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/Titlebar' added. (0x55eaefb74ab0)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/ToggleButton' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/ToggleButton' added. (0x55eaefb74b70)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/Tooltip' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/Tooltip' added. (0x55eaefb74c30)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/ItemListbox' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/ItemListbox' added. (0x55eaefb74eb0)
-23/05/2022 22:03:49 (Std) 	Created WindowRendererFactory for 'Core/Tree' WindowRenderers.
-23/05/2022 22:03:49 (Std) 	WindowRendererFactory 'Core/Tree' added. (0x55eaefb74f70)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/Label' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'WindowsLook/Label' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/Button' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'WindowsLook/Button' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/Checkbox' using base type 'CEGUI/ToggleButton', window renderer 'Core/ToggleButton' Look'N'Feel 'WindowsLook/Checkbox' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/IconButton' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'WindowsLook/IconButton' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/RadioButton' using base type 'CEGUI/RadioButton', window renderer 'Core/ToggleButton' Look'N'Feel 'WindowsLook/RadioButton' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/FrameWindow' using base type 'CEGUI/FrameWindow', window renderer 'Core/FrameWindow' Look'N'Feel 'WindowsLook/FrameWindow' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/Titlebar' using base type 'CEGUI/Titlebar', window renderer 'Core/Titlebar' Look'N'Feel 'WindowsLook/Titlebar' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/SystemButton' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'WindowsLook/SystemButton' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/Editbox' using base type 'CEGUI/Editbox', window renderer 'Core/Editbox' Look'N'Feel 'WindowsLook/Editbox' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/MultiLineEditbox' using base type 'CEGUI/MultiLineEditbox', window renderer 'Core/MultiLineEditbox' Look'N'Feel 'WindowsLook/MultiLineEditbox' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/Menubar' using base type 'CEGUI/Menubar', window renderer 'Core/Menubar' Look'N'Feel 'WindowsLook/Menubar' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/PopupMenu' using base type 'CEGUI/PopupMenu', window renderer 'Core/PopupMenu' Look'N'Feel 'WindowsLook/PopupMenu' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/MenuItem' using base type 'CEGUI/MenuItem', window renderer 'Core/MenuItem' Look'N'Feel 'WindowsLook/MenuItem' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/ProgressBar' using base type 'CEGUI/ProgressBar', window renderer 'Core/ProgressBar' Look'N'Feel 'WindowsLook/ProgressBar' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/VerticalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Core/Scrollbar' Look'N'Feel 'WindowsLook/VerticalScrollbar' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/HorizontalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Core/Scrollbar' Look'N'Feel 'WindowsLook/HorizontalScrollbar' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/VerticalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'WindowsLook/VerticalScrollbarThumb' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/HorizontalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'WindowsLook/HorizontalScrollbarThumb' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/TabButton' using base type 'CEGUI/TabButton', window renderer 'Core/TabButton' Look'N'Feel 'WindowsLook/TabButton' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/TabControl' using base type 'CEGUI/TabControl', window renderer 'Core/TabControl' Look'N'Feel 'WindowsLook/TabControl' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/TabContentPane' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'WindowsLook/TabContentPane' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/TabButtonPane' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'WindowsLook/TabButtonPane' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/ComboDropList' using base type 'CEGUI/ComboDropList', window renderer 'Core/Listbox' Look'N'Feel 'WindowsLook/ComboDropList' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/Combobox' using base type 'CEGUI/Combobox', window renderer 'Core/Default' Look'N'Feel 'WindowsLook/Combobox' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/Listbox' using base type 'CEGUI/Listbox', window renderer 'Core/Listbox' Look'N'Feel 'WindowsLook/Listbox' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/ListHeader' using base type 'CEGUI/ListHeader', window renderer 'Core/ListHeader' Look'N'Feel 'WindowsLook/ListHeader' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/ListHeaderSegment' using base type 'CEGUI/ListHeaderSegment', window renderer 'Core/ListHeaderSegment' Look'N'Feel 'WindowsLook/ListHeaderSegment' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/MultiColumnList' using base type 'CEGUI/MultiColumnList', window renderer 'Core/MultiColumnList' Look'N'Feel 'WindowsLook/MultiColumnList' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/Slider' using base type 'CEGUI/Slider', window renderer 'Core/Slider' Look'N'Feel 'WindowsLook/Slider' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/SliderThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'WindowsLook/SliderThumb' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/ScrollablePane' using base type 'CEGUI/ScrollablePane', window renderer 'Core/ScrollablePane' Look'N'Feel 'WindowsLook/ScrollablePane' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/Spinner' using base type 'CEGUI/Spinner', window renderer 'Core/Default' Look'N'Feel 'WindowsLook/Spinner' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/Tooltip' using base type 'CEGUI/Tooltip', window renderer 'Core/Tooltip' Look'N'Feel 'WindowsLook/Tooltip' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/Static' using base type 'DefaultWindow', window renderer 'Core/Static' Look'N'Feel 'WindowsLook/Static' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/StaticImage' using base type 'DefaultWindow', window renderer 'Core/StaticImage' Look'N'Feel 'WindowsLook/StaticImage' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/StaticText' using base type 'DefaultWindow', window renderer 'Core/StaticText' Look'N'Feel 'WindowsLook/StaticText' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/ItemListbox' using base type 'CEGUI/ItemListbox', window renderer 'Core/ItemListbox' Look'N'Feel 'WindowsLook/ItemListbox' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	Creating falagard mapping for type 'WindowsLook/ListboxItem' using base type 'CEGUI/ItemEntry', window renderer 'Core/ItemEntry' Look'N'Feel 'WindowsLook/ListboxItem' and RenderEffect ''. (0x7ffee0dff240)
-23/05/2022 22:03:49 (Std) 	[OpenGLRenderer] Created texture: _ogl_tt_tex_0
-23/05/2022 22:03:53 (Std) 	[OpenGLRenderer] Destroyed texture: _ogl_tt_tex_0
+24/05/2022 13:39:15 (Std) 	CEGUI::Logger singleton created. (0x56395be756f0)
+24/05/2022 13:39:15 (Std) 	
+24/05/2022 13:39:15 (Std) 	********************************************************************************
+24/05/2022 13:39:15 (Std) 	* Important:                                                                   *
+24/05/2022 13:39:15 (Std) 	*     To get support at the CEGUI forums, you must post _at least_ the section *
+24/05/2022 13:39:15 (Std) 	*     of this log file indicated below.  Failure to do this will result in no  *
+24/05/2022 13:39:15 (Std) 	*     support being given; please do not waste our time.                       *
+24/05/2022 13:39:15 (Std) 	********************************************************************************
+24/05/2022 13:39:15 (Std) 	********************************************************************************
+24/05/2022 13:39:15 (Std) 	* -------- START OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM       -------- *
+24/05/2022 13:39:15 (Std) 	********************************************************************************
+24/05/2022 13:39:15 (Std) 	---- Version: 0.8.7 (Build: Feb 19 2020 Debug GNU/Linux g++ 9.2.1 20200203 64 bit) ----
+24/05/2022 13:39:15 (Std) 	---- Renderer module is: CEGUI::OpenGL3Renderer - Official OpenGL 3.2 core based renderer module.  TextureTarget support enabled via FBO OGL 3.2 core implementation. ----
+24/05/2022 13:39:15 (Std) 	---- XML Parser module is: CEGUI::ExpatParser - Official expat based parser module for CEGUI ----
+24/05/2022 13:39:15 (Std) 	---- Image Codec module is: SILLYImageCodec - Official SILLY based image codec ----
+24/05/2022 13:39:15 (Std) 	---- Scripting module is: None ----
+24/05/2022 13:39:15 (Std) 	********************************************************************************
+24/05/2022 13:39:15 (Std) 	* -------- END OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM         -------- *
+24/05/2022 13:39:15 (Std) 	********************************************************************************
+24/05/2022 13:39:15 (Std) 	
+24/05/2022 13:39:15 (Std) 	---- Begining CEGUI System initialisation ----
+24/05/2022 13:39:15 (Std) 	[CEGUI::ImageManager] Singleton created (0x56395be7ff40)
+24/05/2022 13:39:15 (Std) 	[CEGUI::ImageManager] Registered Image type: BasicImage
+24/05/2022 13:39:15 (Std) 	CEGUI::FontManager singleton created. (0x56395b6c1e00)
+24/05/2022 13:39:15 (Std) 	CEGUI::WindowFactoryManager singleton created
+24/05/2022 13:39:15 (Std) 	CEGUI::WindowManager singleton created (0x56395be9dfb0)
+24/05/2022 13:39:15 (Std) 	CEGUI::SchemeManager singleton created. (0x56395bebc350)
+24/05/2022 13:39:15 (Std) 	CEGUI::GlobalEventSet singleton created. (0x56395be960a0)
+24/05/2022 13:39:15 (Std) 	CEGUI::AnimationManager singleton created (0x56395be9eb90)
+24/05/2022 13:39:15 (Std) 	CEGUI::WidgetLookManager singleton created. (0x56395be9e060)
+24/05/2022 13:39:15 (Std) 	CEGUI::WindowRendererManager singleton created (0x56395be960f0)
+24/05/2022 13:39:15 (Std) 	CEGUI::RenderEffectManager singleton created (0x56395be9edd0)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'DefaultWindow' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'DefaultWindow' windows added. (0x56395bea09d0)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'DragContainer' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'DragContainer' windows added. (0x56395be9a9a0)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'ScrolledContainer' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'ScrolledContainer' windows added. (0x56395bea1d40)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'ClippedContainer' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'ClippedContainer' windows added. (0x56395bea1e00)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/PushButton' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/PushButton' windows added. (0x56395bea1ec0)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/RadioButton' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/RadioButton' windows added. (0x56395bea2480)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/Combobox' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/Combobox' windows added. (0x56395bea2620)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/ComboDropList' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/ComboDropList' windows added. (0x56395bea27c0)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/Editbox' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/Editbox' windows added. (0x56395bea2b80)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/FrameWindow' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/FrameWindow' windows added. (0x56395bea2c40)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/ItemEntry' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/ItemEntry' windows added. (0x56395bea2d00)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/Listbox' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/Listbox' windows added. (0x56395bea2dc0)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/ListHeader' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/ListHeader' windows added. (0x56395bea3120)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/ListHeaderSegment' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/ListHeaderSegment' windows added. (0x56395bea3350)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/Menubar' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/Menubar' windows added. (0x56395bea3410)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/PopupMenu' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/PopupMenu' windows added. (0x56395bea3690)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/MenuItem' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/MenuItem' windows added. (0x56395bea3750)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/MultiColumnList' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/MultiColumnList' windows added. (0x56395bea3810)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/MultiLineEditbox' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/MultiLineEditbox' windows added. (0x56395bea3c50)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/ProgressBar' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/ProgressBar' windows added. (0x56395bea3d10)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/ScrollablePane' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/ScrollablePane' windows added. (0x56395bea3dd0)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/Scrollbar' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/Scrollbar' windows added. (0x56395bea3e90)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/Slider' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/Slider' windows added. (0x56395bea41f0)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/Spinner' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/Spinner' windows added. (0x56395bea42b0)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/TabButton' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/TabButton' windows added. (0x56395bea4640)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/TabControl' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/TabControl' windows added. (0x56395bea4700)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/Thumb' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/Thumb' windows added. (0x56395bea47c0)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/Titlebar' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/Titlebar' windows added. (0x56395bea4b20)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/ToggleButton' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/ToggleButton' windows added. (0x56395bea4e80)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/Tooltip' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/Tooltip' windows added. (0x56395bea4f40)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/ItemListbox' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/ItemListbox' windows added. (0x56395bea5000)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/GroupBox' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/GroupBox' windows added. (0x56395bea50c0)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'CEGUI/Tree' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'CEGUI/Tree' windows added. (0x56395bea5180)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'LayoutCell' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'LayoutCell' windows added. (0x56395bea57d0)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'HorizontalLayoutContainer' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'HorizontalLayoutContainer' windows added. (0x56395bea5890)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'VerticalLayoutContainer' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'VerticalLayoutContainer' windows added. (0x56395bea5b10)
+24/05/2022 13:39:15 (Std) 	Created WindowFactory for 'GridLayoutContainer' windows.
+24/05/2022 13:39:15 (Std) 	WindowFactory for 'GridLayoutContainer' windows added. (0x56395bea5bd0)
+24/05/2022 13:39:15 (Std) 	CEGUI::System singleton created. (0x56395be9dcb0)
+24/05/2022 13:39:15 (Std) 	---- CEGUI System initialisation completed ----
+24/05/2022 13:39:15 (Std) 	
+24/05/2022 13:39:15 (Std) 	Started creation of Scheme from XML specification:
+24/05/2022 13:39:15 (Std) 	---- CEGUI GUIScheme name: WindowsLookSkin
+24/05/2022 13:39:15 (Std) 	[ImageManager] Started creation of Imageset from XML specification:
+24/05/2022 13:39:15 (Std) 	[ImageManager] ---- CEGUI Imageset name: WindowsLook
+24/05/2022 13:39:15 (Std) 	[ImageManager] ---- Source texture file: WindowsLook.png
+24/05/2022 13:39:15 (Std) 	[ImageManager] ---- Source texture resource group: (Default)
+24/05/2022 13:39:15 (Std) 	[OpenGLRenderer] Created texture: WindowsLook
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/Background' (0x56395be872e0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameLeft' (0x56395beb7540) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameRight' (0x56395b7987d0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameTop' (0x56395bec2930) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameBottom' (0x56395bf06120) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameTopLeft' (0x56395bec3810) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameTopRight' (0x56395bec3930) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameBottomLeft' (0x56395bec3dd0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/WindowFrameBottomRight' (0x56395becc050) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalLeft' (0x56395becc170) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalRight' (0x56395becc410) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalTop' (0x56395bec32a0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalBottom' (0x56395bf05f90) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalTopLeft' (0x56395beccc10) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalTopRight' (0x56395becce20) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalBottomLeft' (0x56395becd0c0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonNormalBottomRight' (0x56395becd1e0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedLeft' (0x56395becd480) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedRight' (0x56395becd850) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedTop' (0x56395becd730) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedBottom' (0x56395bec22d0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedTopLeft' (0x56395becdf10) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedTopRight' (0x56395bece120) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedBottomLeft' (0x56395bece3c0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonPushedBottomRight' (0x56395bece4e0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverLeft' (0x56395bece820) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverRight' (0x56395becebf0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverTop' (0x56395becead0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverBottom' (0x56395becf490) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverTopLeft' (0x56395becf030) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverTopRight' (0x56395becf5b0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverBottomLeft' (0x56395becf7c0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/ButtonHoverBottomRight' (0x56395becfa60) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameLeft' (0x56395becfb80) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameRight' (0x56395becfe20) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameTop' (0x56395bed0490) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameBottom' (0x56395bed06a0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameTopLeft' (0x56395beceea0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameTopRight' (0x56395bed0950) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameBottomLeft' (0x56395bed0b60) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/EditFrameBottomRight' (0x56395bed0d70) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameLeft' (0x56395bed1010) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameRight' (0x56395bed1130) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameTop' (0x56395bed14c0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameBottom' (0x56395bed18b0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameTopLeft' (0x56395bed19d0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameTopRight' (0x56395bed1af0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameBottomLeft' (0x56395bedfb20) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/StaticFrameBottomRight' (0x56395bedfdc0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/CloseButtonNormal' (0x56395bedfee0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/CloseButtonHover' (0x56395bee0220) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/CloseButtonPushed' (0x56395bee0520) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarTopLeft' (0x56395bee0730) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarTopRight' (0x56395bee0940) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarBottomLeft' (0x56395bee0b50) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarBottomRight' (0x56395bee0d60) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarLeft' (0x56395bee0f70) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarRight' (0x56395bee1360) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarTop' (0x56395bee1570) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarBottom' (0x56395bee1870) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TitlebarFill' (0x56395bee1990) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/CheckboxNormal' (0x56395bee1ba0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/CheckboxHover' (0x56395bee1db0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/CheckboxMark' (0x56395bee1fc0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/RadioButtonNormal' (0x56395bee21d0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/RadioButtonHover' (0x56395bee22f0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/RadioButtonMark' (0x56395bee2410) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/SliderThumbNormal' (0x56395bee2620) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/SliderThumbHover' (0x56395bee2830) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/SliderTrackLeft' (0x56395bee2a40) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/SlidertrackMiddle' (0x56395bee2c50) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/SliderTrackRight' (0x56395bee2e60) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/SliderTick' (0x56395bee3070) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/HeaderMainBrush' (0x56395bee3460) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/HeaderBottomEdge' (0x56395bee3580) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/HeaderSplitter' (0x56395bee36a0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/VertScrollbarGrip' (0x56395bee3a90) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/HorzScrollbarGrip' (0x56395bee3bb0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/LargeLeftArrow' (0x56395bee3cd0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/LargeRightArrow' (0x56395bee40c0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/LargeUpArrow' (0x56395bee41e0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/LargeDownArrow' (0x56395bee44e0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/SmallLeftArrow' (0x56395bee46f0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/SmallRightArrow' (0x56395bee4900) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/SmallUpArrow' (0x56395bee4a20) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/SmallDownArrow' (0x56395bee4d20) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/EditBoxCaret' (0x56395bee4f30) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MouseArrow' (0x56395bee55f0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MouseMoveCursor' (0x56395bee5820) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MouseNoSoCursor' (0x56395bee5460) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MouseEsWeCursor' (0x56395bee5c60) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MouseNeSwCursor' (0x56395bee52d0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MouseNwSeCursor' (0x56395bee60f0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MouseTextBar' (0x56395bee6300) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabHorizontalTopFiller' (0x56395bec10b0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabHorizontalBottomFiller' (0x56395bed07c0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneUpperLeft' (0x56395becdd80) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneTop' (0x56395bee6830) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneUpperRight' (0x56395bee6ca0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneLeft' (0x56395bee6b80) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneMiddle' (0x56395bee6f50) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneRight' (0x56395bee7510) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneLower' (0x56395bee7630) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneLowerLeft' (0x56395bee79c0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabContentPaneLowerRight' (0x56395bee7c70) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonUpperLeftNormal' (0x56395bee7eb0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonUpperNormal' (0x56395bee7d90) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonUpperRightNormal' (0x56395bee8480) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLeftNormal' (0x56395bee82e0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonMiddleNormal' (0x56395bee89f0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonRightNormal' (0x56395bee8fb0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLowerLeftNormal' (0x56395bee90d0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLowerNormal' (0x56395bee9400) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLowerRightNormal' (0x56395bee9740) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonUpperLeftSelected' (0x56395bee99f0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonUpperSelected' (0x56395bee9dd0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonUpperRightSelected' (0x56395beea080) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLeftSelected' (0x56395beea330) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonMiddleSelected' (0x56395beea910) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonRightSelected' (0x56395beeaa30) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLowerLeftSelected' (0x56395beeae90) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLowerSelected' (0x56395beead70) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonLowerRightSelected' (0x56395beeb5c0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonScrollLeftNormal' (0x56395beeb910) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonScrollRightNormal' (0x56395beebeb0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonScrollLeftHover' (0x56395beebfd0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TabButtonScrollRightHover' (0x56395beec420) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipTopLeft' (0x56395beec6d0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipTopRight' (0x56395beeca20) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipBottomLeft' (0x56395beeceb0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipBottomRight' (0x56395beecfd0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipLeftEdge' (0x56395beed1e0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipRightEdge' (0x56395beed3f0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipTopEdge' (0x56395beed600) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipBottomEdge' (0x56395beed9f0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/TooltipMiddle' (0x56395beedb10) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuTopLeft' (0x56395beede10) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuTopRight' (0x56395beee110) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuBottomLeft' (0x56395beee230) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuBottomRight' (0x56395beee440) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuLeft' (0x56395beee560) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuRight' (0x56395beee860) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuTop' (0x56395beee980) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MenuBottom' (0x56395beeeb90) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameTopLeft' (0x56395beeed90) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameTopRight' (0x56395beef090) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameBottomLeft' (0x56395beef1b0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameBottomRight' (0x56395beef4a0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameLeft' (0x56395beef7f0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameRight' (0x56395beefb40) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameTop' (0x56395beefee0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuFrameBottom' (0x56395bef00f0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuArrowRight' (0x56395bef0390) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/PopupMenuArrowLeft' (0x56395bef04b0) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	[ImageManager] Created image: 'WindowsLook/MultiListSelectionBrush' (0x56395bef0840) of type: BasicImage
+24/05/2022 13:39:15 (Std) 	===== Falagard 'root' element: look and feel parsing begins =====
+24/05/2022 13:39:15 (Std) 	===== Look and feel parsing completed =====
+24/05/2022 13:39:15 (Std) 	No window renderer factories specified for module 'CEGUICoreWindowRendererSet' - adding all available factories...
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/Button' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/Button' added. (0x56395bec7b80)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/Default' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/Default' added. (0x56395bec7d50)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/Editbox' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/Editbox' added. (0x56395bec7e10)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/FrameWindow' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/FrameWindow' added. (0x56395bec7ed0)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/ItemEntry' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/ItemEntry' added. (0x56395bec7f90)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/ListHeader' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/ListHeader' added. (0x56395bec6b60)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/ListHeaderSegment' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/ListHeaderSegment' added. (0x56395bec6de0)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/Listbox' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/Listbox' added. (0x56395bec6ea0)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/Menubar' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/Menubar' added. (0x56395bec6f60)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/MenuItem' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/MenuItem' added. (0x56395bec7100)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/MultiColumnList' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/MultiColumnList' added. (0x56395bec72a0)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/MultiLineEditbox' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/MultiLineEditbox' added. (0x56395bec7440)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/PopupMenu' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/PopupMenu' added. (0x56395bec75e0)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/ProgressBar' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/ProgressBar' added. (0x56395c068a00)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/ScrollablePane' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/ScrollablePane' added. (0x56395c068c80)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/Scrollbar' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/Scrollbar' added. (0x56395c068d40)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/Slider' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/Slider' added. (0x56395c068e00)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/Static' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/Static' added. (0x56395c069080)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/StaticImage' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/StaticImage' added. (0x56395c069140)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/StaticText' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/StaticText' added. (0x56395c0693f0)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/TabButton' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/TabButton' added. (0x56395c063830)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/TabControl' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/TabControl' added. (0x56395c0638f0)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/Titlebar' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/Titlebar' added. (0x56395c063b70)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/ToggleButton' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/ToggleButton' added. (0x56395c063c30)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/Tooltip' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/Tooltip' added. (0x56395c063cf0)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/ItemListbox' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/ItemListbox' added. (0x56395c063f70)
+24/05/2022 13:39:15 (Std) 	Created WindowRendererFactory for 'Core/Tree' WindowRenderers.
+24/05/2022 13:39:15 (Std) 	WindowRendererFactory 'Core/Tree' added. (0x56395c064030)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/Label' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'WindowsLook/Label' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/Button' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'WindowsLook/Button' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/Checkbox' using base type 'CEGUI/ToggleButton', window renderer 'Core/ToggleButton' Look'N'Feel 'WindowsLook/Checkbox' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/IconButton' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'WindowsLook/IconButton' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/RadioButton' using base type 'CEGUI/RadioButton', window renderer 'Core/ToggleButton' Look'N'Feel 'WindowsLook/RadioButton' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/FrameWindow' using base type 'CEGUI/FrameWindow', window renderer 'Core/FrameWindow' Look'N'Feel 'WindowsLook/FrameWindow' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/Titlebar' using base type 'CEGUI/Titlebar', window renderer 'Core/Titlebar' Look'N'Feel 'WindowsLook/Titlebar' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/SystemButton' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'WindowsLook/SystemButton' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/Editbox' using base type 'CEGUI/Editbox', window renderer 'Core/Editbox' Look'N'Feel 'WindowsLook/Editbox' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/MultiLineEditbox' using base type 'CEGUI/MultiLineEditbox', window renderer 'Core/MultiLineEditbox' Look'N'Feel 'WindowsLook/MultiLineEditbox' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/Menubar' using base type 'CEGUI/Menubar', window renderer 'Core/Menubar' Look'N'Feel 'WindowsLook/Menubar' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/PopupMenu' using base type 'CEGUI/PopupMenu', window renderer 'Core/PopupMenu' Look'N'Feel 'WindowsLook/PopupMenu' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/MenuItem' using base type 'CEGUI/MenuItem', window renderer 'Core/MenuItem' Look'N'Feel 'WindowsLook/MenuItem' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/ProgressBar' using base type 'CEGUI/ProgressBar', window renderer 'Core/ProgressBar' Look'N'Feel 'WindowsLook/ProgressBar' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/VerticalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Core/Scrollbar' Look'N'Feel 'WindowsLook/VerticalScrollbar' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/HorizontalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Core/Scrollbar' Look'N'Feel 'WindowsLook/HorizontalScrollbar' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/VerticalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'WindowsLook/VerticalScrollbarThumb' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/HorizontalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'WindowsLook/HorizontalScrollbarThumb' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/TabButton' using base type 'CEGUI/TabButton', window renderer 'Core/TabButton' Look'N'Feel 'WindowsLook/TabButton' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/TabControl' using base type 'CEGUI/TabControl', window renderer 'Core/TabControl' Look'N'Feel 'WindowsLook/TabControl' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/TabContentPane' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'WindowsLook/TabContentPane' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/TabButtonPane' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'WindowsLook/TabButtonPane' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/ComboDropList' using base type 'CEGUI/ComboDropList', window renderer 'Core/Listbox' Look'N'Feel 'WindowsLook/ComboDropList' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/Combobox' using base type 'CEGUI/Combobox', window renderer 'Core/Default' Look'N'Feel 'WindowsLook/Combobox' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/Listbox' using base type 'CEGUI/Listbox', window renderer 'Core/Listbox' Look'N'Feel 'WindowsLook/Listbox' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/ListHeader' using base type 'CEGUI/ListHeader', window renderer 'Core/ListHeader' Look'N'Feel 'WindowsLook/ListHeader' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/ListHeaderSegment' using base type 'CEGUI/ListHeaderSegment', window renderer 'Core/ListHeaderSegment' Look'N'Feel 'WindowsLook/ListHeaderSegment' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/MultiColumnList' using base type 'CEGUI/MultiColumnList', window renderer 'Core/MultiColumnList' Look'N'Feel 'WindowsLook/MultiColumnList' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/Slider' using base type 'CEGUI/Slider', window renderer 'Core/Slider' Look'N'Feel 'WindowsLook/Slider' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/SliderThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'WindowsLook/SliderThumb' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/ScrollablePane' using base type 'CEGUI/ScrollablePane', window renderer 'Core/ScrollablePane' Look'N'Feel 'WindowsLook/ScrollablePane' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/Spinner' using base type 'CEGUI/Spinner', window renderer 'Core/Default' Look'N'Feel 'WindowsLook/Spinner' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/Tooltip' using base type 'CEGUI/Tooltip', window renderer 'Core/Tooltip' Look'N'Feel 'WindowsLook/Tooltip' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/Static' using base type 'DefaultWindow', window renderer 'Core/Static' Look'N'Feel 'WindowsLook/Static' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/StaticImage' using base type 'DefaultWindow', window renderer 'Core/StaticImage' Look'N'Feel 'WindowsLook/StaticImage' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/StaticText' using base type 'DefaultWindow', window renderer 'Core/StaticText' Look'N'Feel 'WindowsLook/StaticText' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/ItemListbox' using base type 'CEGUI/ItemListbox', window renderer 'Core/ItemListbox' Look'N'Feel 'WindowsLook/ItemListbox' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	Creating falagard mapping for type 'WindowsLook/ListboxItem' using base type 'CEGUI/ItemEntry', window renderer 'Core/ItemEntry' Look'N'Feel 'WindowsLook/ListboxItem' and RenderEffect ''. (0x7ffc2afea3c0)
+24/05/2022 13:39:15 (Std) 	[OpenGLRenderer] Created texture: _ogl_tt_tex_0

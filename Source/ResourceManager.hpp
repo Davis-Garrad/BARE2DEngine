@@ -10,17 +10,15 @@
 #include "Sound.hpp"
 #include "Texture.hpp"
 
-namespace BARE2D
-{
+namespace BARE2D {
 
 	/**
 	 * @class ResourceManager
 	 * @brief The resource manager manages resources. Groundbreaking news, I know. In short, the resource manager loads and
 	 * manages Textures, Sounds, Scripts, Fonts, etc.
 	 */
-	class ResourceManager
-	{
-	public:
+	class ResourceManager {
+	  public:
 		/**
 		 * @brief Loads some shaders. Combines both to give a full shader program. Does not cache.
 		 * @param vertShaderPath The path to the vertex shader
@@ -46,19 +44,26 @@ namespace BARE2D
 		static Texture loadTexture(std::string& texturePath);
 
 		/**
-		 * @brief Sets the data of some created texture. This can be used to create "dummy" textures for use in FBOs,
-		 * shaders, etc. Creates a GL texture in the context if one doesn't already exist.
-		 * @param textureName The "filepath" of the texture. This is used to identify the texture in the cache when
-		 * loadTexture is called.
-		 * @param texture The data for the mutable texture.
+		 * @brief Creates a new mutable texture, or replaces one that exists with a new texture.
+		 * @param width The width of the texture
+		 * @param height The height of the texture.
+		 * @param textureName The identifier for the cache
+		 * @param minMagFilter The GLenum which corresponds to how minimizing and magnifying is going to be handled. Generally, GL_LINEAR or GL_NEAREST. Defaults to GL_LINEAR
+		 * @param channels The number of colour channels. For RGBA, it's 4. For just red, it's one. etc. etc. Defaults to 4.
+		 * @param format The format of texture data. Generally GL_RGBA, GL_RED, etc. Defaults to GL_RGBA.
 		 * @return A pointer to the mutable texture.
 		 */
-		static MutableTexture* setMutableTexture(std::string& textureName, Texture& texture);
+		static MutableTexture* createMutableTexture(std::string& textureName,
+													unsigned int width,
+													unsigned int height,
+													GLenum		 minMagFilter = GL_LINEAR,
+													unsigned int channels	  = 4,
+													GLenum		 format		  = GL_RGBA);
 
 		/**
 		 * @brief Gets a texture from the cache, or creates a new, empty texture
 		 * @param textureName The "filepath" of the texture, this is used to identify the texture in the cache.
-		 * @return A pointer to the mutable texture.
+		 * @return A pointer to the mutable texture. Nullptr if none can be found. Must be set first.
 		 */
 		static MutableTexture* loadMutableTexture(std::string& textureName);
 
@@ -121,16 +126,16 @@ namespace BARE2D
 		 */
 		static void setTexturePathPrefix(std::string prefix);
 
-	private:
+	  private:
 		static std::string m_assetsPathPrefix;
 		static std::string m_texturePathPrefix;
 
-		static Cache<std::string, Texture>* m_textures;
+		static Cache<std::string, Texture>*		   m_textures;
 		static Cache<std::string, MutableTexture>* m_mutableTextures;
-		static Cache<std::string, Sound>* m_sounds;
-		static Cache<std::string, Music>* m_music;
-		static Cache<std::string, LuaScript>* m_scripts;
-		static Cache<std::string, Font>* m_fonts;
+		static Cache<std::string, Sound>*		   m_sounds;
+		static Cache<std::string, Music>*		   m_music;
+		static Cache<std::string, LuaScript>*	   m_scripts;
+		static Cache<std::string, Font>*		   m_fonts;
 	};
 
-}
+} // namespace BARE2D

@@ -55,7 +55,7 @@ void TestScreen::draw() {
 			glm::vec2 pos  = glm::vec2(0.0f);
 			glm::vec2 size = glm::vec2(700.0f / (float)xNum, 400.0f / (float)yNum);
 
-			depth = 1.0f / std::pow(xNum + yNum, 2) * std::pow(i + j, 2);
+			depth = 1.0f / std::pow(xNum + yNum, 3) * std::pow(i + j, 3);
 
 			m_renderer->draw(glm::vec4(pos.x + i * size.x, pos.y + j * size.y, size.x, size.y),
 							 glm::vec4(0.0f, 0.0f, 1.0f, 1.0f),
@@ -150,7 +150,7 @@ void TestScreen::onEntry() {
 	m_renderer = new BARE2D::BumpyRenderer(fShaderPath, vShaderPath, m_window->getWidth(), m_window->getHeight());
 	m_renderer->init();
 
-	m_fbo = new BARE2D::FBORenderer(fShaderPath_fbo, vShaderPath, m_window->getWidth(), m_window->getHeight(), 2);
+	m_fbo = new BARE2D::FBORenderer(fShaderPath_fbo, vShaderPath, m_window->getWidth(), m_window->getHeight(), 3);
 	m_fbo->init();
 
 	std::string fontPath =

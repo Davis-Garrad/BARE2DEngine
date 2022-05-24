@@ -8,6 +8,8 @@
 #include "BAREErrors.hpp"
 #include "Vertex.hpp"
 
+#include "Logger.hpp"
+
 namespace BARE2D {
 
 	FBORenderer::FBORenderer(std::string& fragShader,
@@ -20,8 +22,9 @@ namespace BARE2D {
 		m_camera = std::make_unique<Camera2D>();
 		m_camera->init(windowWidth, windowHeight);
 		m_camera->setFocus(glm::vec2(0.0f));
+		m_camera->setScale(windowWidth / 2.0f, windowHeight / 2.0f);
 
-		m_numTextures = numColourAttachments + 1; // n colour attachments, one depth/stencil attachment
+		m_numTextures = numColourAttachments + 1; // n colour attachments, one depth attachment
 	}
 
 	FBORenderer::~FBORenderer() {
@@ -69,11 +72,13 @@ namespace BARE2D {
 		// buffers. That's why this is in the init. Here we just generate all the colour attachments from 0 to
 		// (m_numColourAttachments-1).
 		std::vector<GLenum> m_colourAttachments;
+
 		for(unsigned int i = 0; i < m_numTextures - 1;
 			i++) { // Remember that the number of colour attachments will always be number of textures - 1
 			m_colourAttachments.push_back(GL_COLOR_ATTACHMENT0 + i);
 		}
-		glDrawBuffers(m_numTextures, m_colourAttachments.data());
+
+		glNamedFramebufferDrawBuffers(m_fboID, m_numTextures, m_colourAttachments.data());
 
 		unbind();
 	}
@@ -115,8 +120,7 @@ namespace BARE2D {
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 
 		// Enable writing to the depth attachment
-		if(m_shaderHasDepth)
-			glEnable(GL_DEPTH_TEST);
+		glEnable(GL_DEPTH_TEST);
 		// Set a normalized depth variable
 		glDepthMask(GL_TRUE);
 		// Set it so that closer depths are smaller numbers (0.0 appears in front of 0.5 which appears in front of 1.0, etc)
@@ -147,11 +151,11 @@ namespace BARE2D {
 
 		// Pre-render is going to be pretty bare, as our shader just needs to be called for the uploading of texture data
 		// (in createRenderBatches()), and the only uniforms used are constants.
-		// glm::mat4 matrix = m_camera->getCameraMatrix();
-		// m_shader.setUniformMatrix("projectionMatrix", GL_FALSE, matrix);
+		glm::mat4 matrix = m_camera->getCameraMatrix();
+		m_shader.setUniformMatrix("projectionMatrix", GL_FALSE, &matrix);
 		/// The camera should only be used to actually draw the FBO.
 
-		// Set GL_TEXTURE's
+		// Set GL_TEXTUREs
 		GLContext* context = GLContextManager::getContext();
 		for(int i = m_numTextures - 1; i >= 0; i--) {
 			context->setActiveTexture(GL_TEXTURE0 + i);
@@ -256,7 +260,7 @@ namespace BARE2D {
 			GLenum attachmentType = (i == m_numTextures - 1) ? GL_DEPTH_ATTACHMENT : (GL_COLOR_ATTACHMENT0 + i);
 			switch(attachmentType) {
 				case GL_DEPTH_ATTACHMENT:
-					// Set the texture's type to 32 total bits, with 8 reserved for the stencil.
+					/*// Set the texture's type to 32 total bits, with 8 reserved for the stencil.
 					glTexImage2D(GL_TEXTURE_2D,
 								 0,
 								 GL_DEPTH24_STENCIL8,
@@ -265,6 +269,17 @@ namespace BARE2D {
 								 0,
 								 GL_DEPTH_STENCIL,
 								 GL_UNSIGNED_INT_24_8,
+								 nullptr);
+					break;*/
+					// Just add a depth component
+					glTexImage2D(GL_TEXTURE_2D,
+								 0,
+								 GL_DEPTH_COMPONENT,
+								 m_camera->getViewspaceResolution().x,
+								 m_camera->getViewspaceResolution().y,
+								 0,
+								 GL_DEPTH_COMPONENT,
+								 GL_FLOAT,
 								 nullptr);
 					break;
 				default:
@@ -286,8 +301,8 @@ namespace BARE2D {
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
 			float backColour[] = {0.0f, 0.0f, 0.0f, 0.0f}; // Fully transparent
 			glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, backColour);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 
 			// Now that we've defined the texture, we need to attach it to the FBO!
 			// Attaches either a color or depth attachment of type texture2D with 0 mipmapping levels.
@@ -334,7 +349,7 @@ namespace BARE2D {
 
 	void FBORenderer::unbind() {
 		// First, unbind the textures
-		for(unsigned int i = 0; i < m_numTextures; i++)
+		for(unsigned int i = 0; i < m_numTextures - 1; i++)
 			GLContextManager::getContext()->unbindTexture(GL_TEXTURE_2D, GL_TEXTURE0 + i);
 
 		// Now, unbind the FBO

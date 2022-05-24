@@ -8,29 +8,27 @@
 #include "PicoPNG.hpp"
 #include "GLContextManager.hpp"
 
-namespace BARE2D
-{
+namespace BARE2D {
 
-	std::string ResourceManager::m_assetsPathPrefix = "";
-	std::string ResourceManager::m_texturePathPrefix = "";
-	Cache<std::string, Texture>* ResourceManager::m_textures = new Cache<std::string, Texture>();
-	Cache<std::string, MutableTexture>* ResourceManager::m_mutableTextures = new Cache<std::string, MutableTexture>();
-	Cache<std::string, Sound>* ResourceManager::m_sounds = new Cache<std::string, Sound>();
-	Cache<std::string, Music>* ResourceManager::m_music = new Cache<std::string, Music>();
-	Cache<std::string, LuaScript>* ResourceManager::m_scripts = new Cache<std::string, LuaScript>();
-	Cache<std::string, Font>* ResourceManager::m_fonts = new Cache<std::string, Font>();
+	std::string							ResourceManager::m_assetsPathPrefix	 = "";
+	std::string							ResourceManager::m_texturePathPrefix = "";
+	Cache<std::string, Texture>*		ResourceManager::m_textures			 = new Cache<std::string, Texture>();
+	Cache<std::string, MutableTexture>* ResourceManager::m_mutableTextures	 = new Cache<std::string, MutableTexture>();
+	Cache<std::string, Sound>*			ResourceManager::m_sounds			 = new Cache<std::string, Sound>();
+	Cache<std::string, Music>*			ResourceManager::m_music			 = new Cache<std::string, Music>();
+	Cache<std::string, LuaScript>*		ResourceManager::m_scripts			 = new Cache<std::string, LuaScript>();
+	Cache<std::string, Font>*			ResourceManager::m_fonts			 = new Cache<std::string, Font>();
 
-	ShaderProgram ResourceManager::loadShaders(std::string& vertShaderSource, std::string& fragShaderSource)
-	{
+	ShaderProgram ResourceManager::loadShaders(std::string& vertShaderSource, std::string& fragShaderSource) {
 		ShaderProgram newProgram;
 
-		newProgram.compileShaders((m_assetsPathPrefix + vertShaderSource).c_str(), (m_assetsPathPrefix + fragShaderSource).c_str());
+		newProgram.compileShaders((m_assetsPathPrefix + vertShaderSource).c_str(),
+								  (m_assetsPathPrefix + fragShaderSource).c_str());
 
 		return newProgram;
 	}
 
-	ShaderProgram ResourceManager::loadShadersFromSource(std::string& vertShaderSource, std::string& fragShaderSource)
-	{
+	ShaderProgram ResourceManager::loadShadersFromSource(std::string& vertShaderSource, std::string& fragShaderSource) {
 		ShaderProgram newProgram;
 
 		newProgram.compileShadersFromSource(vertShaderSource.c_str(), fragShaderSource.c_str());
@@ -38,8 +36,7 @@ namespace BARE2D
 		return newProgram;
 	}
 
-	Texture ResourceManager::loadTexture(std::string& texturePath)
-	{
+	Texture ResourceManager::loadTexture(std::string& texturePath) {
 		std::string fullPath = m_assetsPathPrefix + m_texturePathPrefix + texturePath;
 
 		{
@@ -52,13 +49,12 @@ namespace BARE2D
 
 		// So, it's not in the cache if we're still here. Load it from a file, create it in the cache, and add it.
 		// Creates it in the cache and returns a pointer.
-		Texture* loadedTex = m_textures->createItem(fullPath);
+		Texture* loadedTex	= m_textures->createItem(fullPath);
 		loadedTex->filepath = fullPath;
 		{
-
 			// Load raw data from the file
 			std::vector<unsigned char> fileData;
-			bool good = IOManager::readFileToBuffer(fullPath, fileData);
+			bool					   good = IOManager::readFileToBuffer(fullPath, fileData);
 
 			// Check for errors
 			if(!good) {
@@ -68,10 +64,10 @@ namespace BARE2D
 
 			// Decode the raw information into texture data (thanks PicoPNG!)
 			std::vector<unsigned char> textureData;
-			unsigned long width, height;
-			int errCode = decodePNG(textureData, width, height, &(fileData[0]), fileData.size());
-			loadedTex->width = width;
-			loadedTex->height = height;
+			unsigned long			   width, height;
+			int						   errCode = decodePNG(textureData, width, height, &(fileData[0]), fileData.size());
+			loadedTex->width				   = width;
+			loadedTex->height				   = height;
 
 			// Check if pico broke
 			if(errCode != 0) {
@@ -86,13 +82,21 @@ namespace BARE2D
 			GLContextManager::getContext()->bindTexture(GL_TEXTURE_2D, loadedTex->id);
 
 			// Upload pixel data
-			glTexImage2D(GL_TEXTURE_2D, (GLint)0, GL_RGBA, (GLsizei)loadedTex->width, (GLsizei)loadedTex->height, (GLint)0, GL_RGBA, GL_UNSIGNED_BYTE, &(textureData[0]));
+			glTexImage2D(GL_TEXTURE_2D,
+						 (GLint)0,
+						 GL_RGBA,
+						 (GLsizei)loadedTex->width,
+						 (GLsizei)loadedTex->height,
+						 (GLint)0,
+						 GL_RGBA,
+						 GL_UNSIGNED_BYTE,
+						 &(textureData[0]));
 
 			// Set some basic parameters
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_LINEAR);
 
 			// Generate mipmaps
 			glGenerateMipmap(GL_TEXTURE_2D);
@@ -105,22 +109,55 @@ namespace BARE2D
 		return *loadedTex;
 	}
 
-	MutableTexture* ResourceManager::setMutableTexture(std::string& textureName, Texture& texture)
-	{
-		throwFatalError(BAREError::UNINITIALIZED_FUNCTION, "ResourceManager::setMutableTexture");
+	MutableTexture* ResourceManager::createMutableTexture(std::string& textureName,
+														  unsigned int width,
+														  unsigned int height,
+														  GLenum	   minMagFilter /* = GL_LINEAR*/,
+														  unsigned int channels /* = 4*/,
+														  GLenum	   format /* = GL_RGBA*/) {
+		// First, check if there's already a texture by this name:
+		MutableTexture* tex = loadMutableTexture(textureName);
 
-		return nullptr;
+		// If we don't already have one generated, we need to do so:
+		if(!tex) {
+			tex = m_mutableTextures->createItem(textureName);
+			glGenTextures(1, &(tex->id));
+		}
+
+		// Now that we have a texture, we need to set some parameters
+		// First, BARE parameters.
+		tex->width	  = width;
+		tex->height	  = height;
+		tex->filepath = textureName;
+		tex->channels = channels;
+		tex->format	  = format;
+
+		// Now for OpenGL parameters.
+		GLContextManager::getContext()->bindTexture(GL_TEXTURE_2D, tex->id);
+
+		// Specify it as a texture
+		glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, nullptr);
+
+		// Will never want wrapping hopefully.
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, minMagFilter);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, minMagFilter);
+
+		GLContextManager::getContext()->bindTexture(GL_TEXTURE_2D, 0);
+
+		return tex;
 	}
 
-	MutableTexture* ResourceManager::loadMutableTexture(std::string& textureName)
-	{
-		throwFatalError(BAREError::UNINITIALIZED_FUNCTION, "ResourceManager::loadMutableTexture");
+	MutableTexture* ResourceManager::loadMutableTexture(std::string& textureName) {
+		// Find it in the cache. If none exists, return nullptr, not a new one.
+		MutableTexture* tex = m_mutableTextures->findItem(textureName);
 
-		return nullptr;
+		return tex;
 	}
 
-	Sound ResourceManager::loadSound(std::string& soundPath)
-	{
+	Sound ResourceManager::loadSound(std::string& soundPath) {
 		std::string fullPath = m_assetsPathPrefix + soundPath;
 
 		Sound* searched = m_sounds->findItem(fullPath);
@@ -142,8 +179,7 @@ namespace BARE2D
 		return *created;
 	}
 
-	Music ResourceManager::loadMusic(std::string& musicPath)
-	{
+	Music ResourceManager::loadMusic(std::string& musicPath) {
 		std::string fullPath = m_assetsPathPrefix + musicPath;
 
 		Music* searched = m_music->findItem(fullPath);
@@ -165,9 +201,9 @@ namespace BARE2D
 		return *created;
 	}
 
-	LuaScript ResourceManager::loadScript(std::string& scriptPath)
-	{
-		if(scriptPath == "") return LuaScript();
+	LuaScript ResourceManager::loadScript(std::string& scriptPath) {
+		if(scriptPath == "")
+			return LuaScript();
 
 		std::string fullPath = m_assetsPathPrefix + scriptPath;
 
@@ -189,14 +225,13 @@ namespace BARE2D
 		LuaScript* script = m_scripts->createItem(fullPath);
 		// and actually give it data lol.
 		script->m_script = scriptSource;
-		script->m_path = fullPath;
-		script->inited = true;
+		script->m_path	 = fullPath;
+		script->inited	 = true;
 
 		return *script;
 	}
 
-	LuaScript ResourceManager::loadScriptFromSource(std::string& scriptSource, std::string name)
-	{
+	LuaScript ResourceManager::loadScriptFromSource(std::string& scriptSource, std::string name) {
 		// Make sure we don't already have it loaded
 		LuaScript* searched = m_scripts->findItem(name);
 		if(searched) {
@@ -207,14 +242,13 @@ namespace BARE2D
 		LuaScript* script = m_scripts->createItem(name);
 		// and actually give it data lol.
 		script->m_script = scriptSource;
-		script->m_path = "NO_PATH";
-		script->inited = true;
+		script->m_path	 = "NO_PATH";
+		script->inited	 = true;
 
 		return *script;
 	}
 
-	Font ResourceManager::loadFont(std::string& fontPath, int size)
-	{
+	Font ResourceManager::loadFont(std::string& fontPath, int size) {
 		std::string path = m_assetsPathPrefix + fontPath + std::to_string(size);
 
 		// Check we haven't cached it
@@ -233,8 +267,7 @@ namespace BARE2D
 		return *font;
 	}
 
-	void ResourceManager::clearCaches()
-	{
+	void ResourceManager::clearCaches() {
 		m_textures->clear();
 		m_mutableTextures->clear();
 		m_sounds->clear();
@@ -244,19 +277,16 @@ namespace BARE2D
 		Logger::getInstance()->log("Cleared all caches.");
 	}
 
-	void ResourceManager::setAssetsPathPrefix(std::string prefix)
-	{
+	void ResourceManager::setAssetsPathPrefix(std::string prefix) {
 		m_assetsPathPrefix = prefix;
 	}
 
-	std::string ResourceManager::getAssetsPathPrefix()
-	{
+	std::string ResourceManager::getAssetsPathPrefix() {
 		return m_assetsPathPrefix;
 	}
 
-	void ResourceManager::setTexturePathPrefix(std::string prefix)
-	{
+	void ResourceManager::setTexturePathPrefix(std::string prefix) {
 		m_texturePathPrefix = prefix;
 	}
 
-}
+} // namespace BARE2D
