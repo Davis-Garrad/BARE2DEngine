@@ -13,39 +13,36 @@
 
 #include "Logger.hpp"
 
-std::string demangle(const char* mangled)
-{
-	int status;
-	std::unique_ptr<char[], void (*)(void*)> result(
-	    abi::__cxa_demangle(mangled, 0, 0, &status), std::free);
+std::string demangle(const char* mangled) {
+	int										 status;
+	std::unique_ptr<char[], void (*)(void*)> result(abi::__cxa_demangle(mangled, 0, 0, &status), std::free);
 	return result.get() ? std::string(result.get()) : "error occurred";
 }
 
-void GLAPIENTRY MessageCallback(GLenum source,
-                                GLenum type,
-                                GLuint id,
-                                GLenum severity,
-                                GLsizei length,
-                                const GLchar* message,
-                                const void* userParam)
-{
-	std::string severityStr = "Unspecified";
+void GLAPIENTRY MessageCallback(GLenum		  source,
+								GLenum		  type,
+								GLuint		  id,
+								GLenum		  severity,
+								GLsizei		  length,
+								const GLchar* message,
+								const void*	  userParam) {
+	std::string				severityStr	 = "Unspecified";
 	BARE2D::GLErrorSeverity severityEnum = BARE2D::GLErrorSeverity::UNKNOWN;
 	switch(severity) {
 		case GL_DEBUG_SEVERITY_HIGH:
-			severityStr = "High (UB)";
+			severityStr	 = "High (UB)";
 			severityEnum = BARE2D::GLErrorSeverity::HIGH;
 			break;
 		case GL_DEBUG_SEVERITY_MEDIUM:
-			severityStr = "Medium (Performance, deprecated)";
+			severityStr	 = "Medium (Performance, deprecated)";
 			severityEnum = BARE2D::GLErrorSeverity::MED;
 			break;
 		case GL_DEBUG_SEVERITY_LOW:
-			severityStr = "Low (performance generally)";
+			severityStr	 = "Low (performance generally)";
 			severityEnum = BARE2D::GLErrorSeverity::LOW;
 			break;
 		case GL_DEBUG_SEVERITY_NOTIFICATION:
-			severityStr = "Notification";
+			severityStr	 = "Notification";
 			severityEnum = BARE2D::GLErrorSeverity::NOTIF;
 			break;
 		default:
@@ -53,7 +50,8 @@ void GLAPIENTRY MessageCallback(GLenum source,
 			break;
 	}
 
-	if((unsigned int)severityEnum < (unsigned int)BARE2D::GLErrorMinSeverity) return;
+	if((unsigned int)severityEnum < (unsigned int)BARE2D::GLErrorMinSeverity)
+		return;
 
 	std::string sourceStr = "Unspecified";
 	switch(source) {
@@ -126,20 +124,18 @@ void GLAPIENTRY MessageCallback(GLenum source,
 		typeStr.c_str(),
 		severityStr.c_str(),
 		message);*/
-
 }
 
-namespace BARE2D
-{
-	GLErrorSeverity GLErrorMinSeverity = GLErrorSeverity::NOTIF;
+namespace BARE2D {
+	GLErrorSeverity GLErrorMinSeverity = GLErrorSeverity::LOW;
 
 	std::vector<BAREError> thrownErrors;
 
-	std::string getErrString(BAREError err)
-	{
+	std::string getErrString(BAREError err) {
 		switch(err) {
 			case BAREError::SDL_FAILURE:
-				return "EC SDL_FAILURE - SDL Failure to initialize. SDL_GetError() yields the following: \n\n" + std::string(SDL_GetError());
+				return "EC SDL_FAILURE - SDL Failure to initialize. SDL_GetError() yields the following: \n\n" +
+					   std::string(SDL_GetError());
 			case BAREError::DOUBLE_INIT:
 				return "EC DOUBLE_INIT - There was an attempted double-initialization in the program. Not too serious, but fix it anyways, nerd.";
 			case BAREError::GLEW_FAILURE:
@@ -172,16 +168,18 @@ namespace BARE2D
 				return "EC UNINITIALIZED_FUNCTION";
 			case BAREError::LUA_FAILURE:
 				return "EC LUA_FAILURE";
+			case BAREError::NULL_PTR_ACCESS:
+				return "EC NULL_PTR_ACCESS";
 			default:
 				return "EC DNE - Unknown error. (enum " + std::to_string((unsigned int)err) + ")";
 		}
 	}
 
-	void throwFatalError(BAREError err, std::string message)
-	{
+	void throwFatalError(BAREError err, std::string message) {
 		std::cout << "\n";
 		std::cout << std::setfill('#') << std::setw(50) << "\n";
-		std::cout << "FATAL ERROR: " << "\n";
+		std::cout << "FATAL ERROR: "
+				  << "\n";
 		std::cout << std::setfill('#') << std::setw(50) << "\n\n";
 		throwError(err, message);
 		displayErrors();
@@ -189,8 +187,7 @@ namespace BARE2D
 		exit(EXIT_FAILURE);
 	}
 
-	void throwError(BAREError err, std::string message)
-	{
+	void throwError(BAREError err, std::string message) {
 		thrownErrors.push_back(err);
 		// We use std::cout just in case the Logger never actually got inited.
 		if(message != "") {
@@ -201,8 +198,7 @@ namespace BARE2D
 		}
 	}
 
-	void displayErrors()
-	{
+	void displayErrors() {
 		std::cout << std::endl << "Thrown Errors: " << std::endl;
 		std::cout << std::setfill('-') << std::setw(50) << "\n";
 		for(unsigned int i = 0; i < thrownErrors.size(); i++) {
@@ -212,8 +208,7 @@ namespace BARE2D
 		thrownErrors.clear();
 	}
 
-	void initGLErrorCallback(GLErrorSeverity minSeverity)
-	{
+	void initGLErrorCallback(GLErrorSeverity minSeverity) {
 		GLErrorMinSeverity = minSeverity;
 
 		GLboolean inited = GL_FALSE;
@@ -224,4 +219,4 @@ namespace BARE2D
 			glDebugMessageCallback(MessageCallback, 0);
 		}
 	}
-}
+} // namespace BARE2D

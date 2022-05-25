@@ -39,6 +39,26 @@ namespace BARE2D {
 		return m_camera;
 	}
 
+	void FBORenderer::disableAttachment(unsigned int index) {
+		glColorMaski(index, GL_FALSE, GL_FALSE, GL_FALSE, GL_FALSE);
+	}
+
+	void FBORenderer::enableAttachment(unsigned int index) {
+		glColorMaski(index, GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE);
+	}
+
+	void FBORenderer::disableAttachments() {
+		for(unsigned int i = 0; i < m_numTextures - 1; i++) {
+			glColorMaski(i, GL_FALSE, GL_FALSE, GL_FALSE, GL_FALSE);
+		}
+	}
+
+	void FBORenderer::enableAttachments() {
+		for(unsigned int i = 0; i < m_numTextures - 1; i++) {
+			glColorMaski(i, GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE);
+		}
+	}
+
 	void FBORenderer::init() {
 		// Actually initialize our shader
 		m_shader.compileShaders(m_vertexShaderPath.c_str(), m_fragmentShaderPath.c_str());
@@ -71,14 +91,18 @@ namespace BARE2D {
 		// texture! Please note that the Framebuffer object actually stores a lot of state information, such as draw
 		// buffers. That's why this is in the init. Here we just generate all the colour attachments from 0 to
 		// (m_numColourAttachments-1).
-		std::vector<GLenum> m_colourAttachments;
+		const unsigned int attachments = m_numTextures - 1;
+		GLenum			   m_colourAttachments[attachments];
 
-		for(unsigned int i = 0; i < m_numTextures - 1;
+		int max = 0;
+		glGetIntegerv(GL_MAX_DRAW_BUFFERS, &max);
+
+		for(unsigned int i = 0; i < attachments;
 			i++) { // Remember that the number of colour attachments will always be number of textures - 1
-			m_colourAttachments.push_back(GL_COLOR_ATTACHMENT0 + i);
+			m_colourAttachments[i] = (GL_COLOR_ATTACHMENT0 + i);
 		}
 
-		glNamedFramebufferDrawBuffers(m_fboID, m_numTextures, m_colourAttachments.data());
+		glNamedFramebufferDrawBuffers(m_fboID, m_numTextures - 1, &(m_colourAttachments[0]));
 
 		unbind();
 	}
@@ -124,7 +148,7 @@ namespace BARE2D {
 		// Set a normalized depth variable
 		glDepthMask(GL_TRUE);
 		// Set it so that closer depths are smaller numbers (0.0 appears in front of 0.5 which appears in front of 1.0, etc)
-		glDepthFunc(GL_LESS);
+		glDepthFunc(GL_ALWAYS);
 
 		// Make sure that we blend the alpha channels on each texture
 		glEnable(GL_BLEND);
@@ -257,7 +281,8 @@ namespace BARE2D {
 			GLContextManager::getContext()->bindTexture(GL_TEXTURE_2D, m_textureIDs[i]);
 
 			// Just define the texture's basic properties - how it stores data, its size, etc. No data is added here.
-			GLenum attachmentType = (i == m_numTextures - 1) ? GL_DEPTH_ATTACHMENT : (GL_COLOR_ATTACHMENT0 + i);
+			GLenum attachmentType =
+				((i == m_numTextures - 1) && m_shaderHasDepth) ? GL_DEPTH_ATTACHMENT : (GL_COLOR_ATTACHMENT0 + i);
 			switch(attachmentType) {
 				case GL_DEPTH_ATTACHMENT:
 					/*// Set the texture's type to 32 total bits, with 8 reserved for the stencil.

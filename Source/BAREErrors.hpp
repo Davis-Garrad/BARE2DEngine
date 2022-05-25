@@ -11,8 +11,7 @@
  */
 extern std::string demangle(const char* mangled);
 
-namespace BARE2D
-{
+namespace BARE2D {
 	/**
 	 * @brief Represents a specific type of error that has occured.
 	 */
@@ -42,6 +41,7 @@ namespace BARE2D
 		SDL_MIXER_CLOSE_FAILURE,
 		SDL_MIXER_LOAD_FAILURE,
 		SDL_MIXER_SOUND_FAILURE,
+		NULL_PTR_ACCESS,
 		OTHER_ERROR,
 		CACHE_FAILURE
 	};
@@ -82,4 +82,4 @@ namespace BARE2D
 	extern void initGLErrorCallback(GLErrorSeverity minSeverity = GLErrorSeverity::NOTIF);
 
 	extern std::vector<BAREError> thrownErrors;
-}
+} // namespace BARE2D
