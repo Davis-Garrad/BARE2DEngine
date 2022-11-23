@@ -5,7 +5,7 @@
 ## Release
 ProjectName            :=BARETests
 ConfigurationName      :=Release
-WorkspaceConfiguration :=All
+WorkspaceConfiguration :=Release
 WorkspacePath          :=/home/davis-dev/Documents/BARE2DEngine
 ProjectPath            :=/home/davis-dev/Documents/BARE2DEngine/BARETests/BasicTest
 IntermediateDirectory  :=$(ConfigurationName)
@@ -42,8 +42,8 @@ IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch).
 IncludePCH             := 
 RcIncludePath          := 
 Libs                   := $(LibrarySwitch)boost_thread $(LibrarySwitch)boost_filesystem $(LibrarySwitch)boost_system $(LibrarySwitch)lua5.3 $(LibrarySwitch)BARE2DEngine $(LibrarySwitch)CEGUIBase-0 $(LibrarySwitch)CEGUIOpenGLRenderer-0 $(LibrarySwitch)SDL2 $(LibrarySwitch)SDL2_mixer $(LibrarySwitch)SDL2_ttf $(LibrarySwitch)GL $(LibrarySwitch)GLU $(LibrarySwitch)GLEW $(LibrarySwitch)pthread 
-ArLibs                 :=  "libboost_thread.a" "libboost_filesystem.a" "libboost_system.a" "lua5.3" "libBARE2DEngine.a" "CEGUIBase-0" "CEGUIOpenGLRenderer-0" "SDL2" "SDL2_mixer" "SDL2_ttf" "GL" "GLU" "GLEW" "pthread" 
-LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)../../Release/ 
+ArLibs                 :=  "libboost_thread" "libboost_filesystem" "libboost_system" "lua5.3" "libBARE2DEngine.a" "CEGUIBase-0" "CEGUIOpenGLRenderer-0" "SDL2" "SDL2_mixer" "SDL2_ttf" "GL" "GLU" "GLEW" "pthread" 
+LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)../../Release/ $(LibraryPathSwitch)/usr/lib/x86_64-linux-gnu/ 
 
 ##
 ## Common variables
@@ -74,11 +74,18 @@ Objects=$(Objects0)
 .PHONY: all clean PreBuild PrePreBuild PostBuild MakeIntermediateDirs
 all: $(OutputFile)
 
-$(OutputFile): $(IntermediateDirectory)/.d $(Objects) 
+$(OutputFile): $(IntermediateDirectory)/.d "../../.build-release/BARE2DEngine" $(Objects) 
 	@$(MakeDirCommand) $(@D)
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects0)  > $(ObjectsFileList)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
+
+"../../.build-release/BARE2DEngine":
+	@$(MakeDirCommand) "../../.build-release"
+	@echo stam > "../../.build-release/BARE2DEngine"
+
+
+
 
 MakeIntermediateDirs:
 	@test -d $(ConfigurationName) || $(MakeDirCommand) $(ConfigurationName)

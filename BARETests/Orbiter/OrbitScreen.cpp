@@ -1,6 +1,7 @@
 #include "OrbitScreen.hpp"
 
 #include <Camera2D.hpp>
+#include <Filesystem.hpp>
 
 #include <string>
 
@@ -86,14 +87,11 @@ void OrbitScreen::loadAssets()
     if(m_regrenderer)
 	delete m_regrenderer;
 
-    std::string fragShader =
-        "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Shader.frag";
-    std::string vertShader =
-        "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Shader.vert";
+    std::string fragShader = BARE2D::Filesystem::getWorkingDirectory() + "/../Shader.frag";
+    std::string vertShader = BARE2D::Filesystem::getWorkingDirectory() + "/../Shader.vert";
 
-    std::string texturePath =
-        "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/planet.png";
-    std::string starsPath = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/stars.png";
+    std::string texturePath = BARE2D::Filesystem::getWorkingDirectory() + "/../planet.png";
+    std::string starsPath = BARE2D::Filesystem::getWorkingDirectory() + "/../stars.png";
 
     m_planetTexture = BARE2D::ResourceManager::loadTexture(texturePath);
     m_starsTexture = BARE2D::ResourceManager::loadTexture(starsPath);
@@ -124,7 +122,7 @@ void OrbitScreen::update(double dt)
     if(m_input->isKeyDown(SDL_BUTTON_LEFT))
 	{
 	    glm::vec2 movement = m_lastMouse - m_input->getMousePosition() * glm::vec2(1.0f, -1.0f);
-	    movement /= m_renderer->getCamera()->getScale().x;
+	    movement = m_renderer->getCamera()->getWorldspaceSize(movement);
 	    m_renderer->getCamera()->offsetFocus(movement);
     }
     m_lastMouse = m_input->getMousePosition() * glm::vec2(1.0f, -1.0f);

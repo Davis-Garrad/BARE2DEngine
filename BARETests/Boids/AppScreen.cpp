@@ -1,5 +1,7 @@
 #include "AppScreen.hpp"
 
+#include <Filesystem.hpp>
+
 #include <string>
 
 #include <GL/glew.h>
@@ -64,10 +66,8 @@ void AppScreen::initScreen()
 
 void AppScreen::onEntry()
 {
-    std::string fragShader =
-        "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Shader.frag";
-    std::string vertShader =
-        "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Shader.vert";
+    std::string fragShader = BARE2D::Filesystem::getWorkingDirectory() + "/../Shader.frag";
+    std::string vertShader = BARE2D::Filesystem::getWorkingDirectory() + "/../Shader.vert";
 
     m_renderer = new BARE2D::BasicRenderer(fragShader, vertShader, m_window->getWidth(), m_window->getHeight());
     m_renderer->init();
@@ -77,7 +77,7 @@ void AppScreen::onEntry()
     m_debug = new BARE2D::DebugRenderer();
     m_debug->init();
 
-    std::string boidTex = "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/planet.png";
+    std::string boidTex = BARE2D::Filesystem::getWorkingDirectory() + "/../planet.png";
 
     m_boidTexture = BARE2D::ResourceManager::loadTexture(boidTex);
 

@@ -30,7 +30,7 @@
         <IncludePath Value="include"/>
         <IncludePath Value="/usr/include"/>
       </Compiler>
-      <Linker Options="-lboost_filesystem -lboost_system -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW" Required="yes">
+      <Linker Options="" Required="yes">
         <LibraryPath Value="../../Debug/"/>
         <LibraryPath Value="/usr/include/x86_64-linux-gnu/cegui-0.8.7/"/>
         <Library Value="libBARE2DEngine.a"/>
@@ -132,4 +132,7 @@
       </Completion>
     </Configuration>
   </Settings>
+  <Dependencies Name="Release">
+    <Project Name="BARE2DEngine"/>
+  </Dependencies>
 </CodeLite_Project>

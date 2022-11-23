@@ -32,9 +32,9 @@
         <IncludePath Value="."/>
         <IncludePath Value="../../Source/"/>
       </Compiler>
-      <Linker Options=" -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW" Required="yes">
-        <LibraryPath Value="../../Debug/"/>
-        <LibraryPath Value="/usr/include/x86_64-linux-gnu/cegui-0.8.7/"/>
+      <Linker Options="" Required="yes">
+        <LibraryPath Value="../../Release/"/>
+        <LibraryPath Value="/usr/lib/x86_64-linux-gnu/"/>
         <Library Value="libBARE2DEngine.a"/>
         <Library Value="CEGUIBase-0"/>
         <Library Value="CEGUIOpenGLRenderer-0"/>
@@ -79,11 +79,11 @@
         <IncludePath Value="."/>
         <IncludePath Value="../../Source/"/>
       </Compiler>
-      <Linker Options=" -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW -llua" Required="yes">
+      <Linker Options="" Required="yes">
         <LibraryPath Value="../../Release/"/>
-        <Library Value="libboost_thread.a"/>
-        <Library Value="libboost_filesystem.a"/>
-        <Library Value="libboost_system.a"/>
+        <Library Value="libboost_thread"/>
+        <Library Value="libboost_filesystem"/>
+        <Library Value="libboost_system"/>
         <Library Value="lua5.3"/>
         <Library Value="libBARE2DEngine.a"/>
         <Library Value="CEGUIBase-0"/>
@@ -131,4 +131,7 @@
       </Completion>
     </Configuration>
   </Settings>
+  <Dependencies Name="Release">
+    <Project Name="BARE2DEngine"/>
+  </Dependencies>
 </CodeLite_Project>

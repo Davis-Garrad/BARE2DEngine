@@ -2,10 +2,10 @@
 ## Auto Generated makefile by CodeLite IDE
 ## any manual changes will be erased      
 ##
-## Debug
+## Release
 ProjectName            :=BARE2DEngine
-ConfigurationName      :=Debug
-WorkspaceConfiguration :=Debug
+ConfigurationName      :=Release
+WorkspaceConfiguration :=Release
 WorkspacePath          :=/home/davis-dev/Documents/BARE2DEngine
 ProjectPath            :=/home/davis-dev/Documents/BARE2DEngine
 IntermediateDirectory  :=$(ConfigurationName)
@@ -30,7 +30,7 @@ PreprocessorSwitch     :=-D
 SourceSwitch           :=-c 
 OutputDirectory        :=$(IntermediateDirectory)
 OutputFile             :=$(IntermediateDirectory)/lib$(ProjectName).a
-Preprocessors          :=$(PreprocessorSwitch)DEBUG 
+Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E
@@ -41,9 +41,9 @@ LinkOptions            :=  -lboost_filesystem -lboost_system -lSDL2 -lSDL2_ttf -
 IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)include $(IncludeSwitch)/usr/include $(IncludeSwitch)/usr/include/x86_64-linux-gnu/cegui-0.8.7/ $(IncludeSwitch)./Other_Libraries 
 IncludePCH             := 
 RcIncludePath          := 
-Libs                   := $(LibrarySwitch)lua5.3 
-ArLibs                 :=  "lua5.3" 
-LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch). $(LibraryPathSwitch)/usr/lib/x86_64-linux-gnu/ $(LibraryPathSwitch)/usr/include/x86_64-linux-gnu/cegui-0.8.7/ 
+Libs                   := 
+ArLibs                 :=  
+LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch). $(LibraryPathSwitch)/usr/lib/x86_64-linux-gnu/ 
 
 ##
 ## Common variables
@@ -52,7 +52,7 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch). $(LibraryP
 AR       := /usr/bin/ar rcu
 CXX      := /usr/bin/g++
 CC       := /usr/bin/gcc
-CXXFLAGS :=  -g -std=c++17 -Wall $(Preprocessors)
+CXXFLAGS :=  -g -O3 -std=c++17 -Wall $(Preprocessors)
 CFLAGS   :=   $(Preprocessors)
 ASFLAGS  := 
 AS       := /usr/bin/as
@@ -82,8 +82,8 @@ $(OutputFile): $(Objects)
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects0)  > $(ObjectsFileList)
 	$(AR) $(ArchiveOutputSwitch)$(OutputFile) @$(ObjectsFileList)
-	@$(MakeDirCommand) "/home/davis-dev/Documents/BARE2DEngine/.build-debug"
-	@echo rebuilt > "/home/davis-dev/Documents/BARE2DEngine/.build-debug/BARE2DEngine"
+	@$(MakeDirCommand) "/home/davis-dev/Documents/BARE2DEngine/.build-release"
+	@echo rebuilt > "/home/davis-dev/Documents/BARE2DEngine/.build-release/BARE2DEngine"
 
 MakeIntermediateDirs:
 	@test -d $(ConfigurationName) || $(MakeDirCommand) $(ConfigurationName)

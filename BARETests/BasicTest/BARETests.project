@@ -43,7 +43,7 @@
         <IncludePath Value="../../Source/"/>
         <IncludePath Value="/usr/include/x86_64-linux-gnu/cegui-0.8.7"/>
       </Compiler>
-      <Linker Options=" -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW" Required="yes">
+      <Linker Options="" Required="yes">
         <LibraryPath Value="../../Debug/"/>
         <LibraryPath Value="/usr/include/x86_64-linux-gnu/cegui-0.8.7/"/>
         <Library Value="libBARE2DEngine.a"/>
@@ -92,9 +92,10 @@
       </Compiler>
       <Linker Options="" Required="yes">
         <LibraryPath Value="../../Release/"/>
-        <Library Value="libboost_thread.a"/>
-        <Library Value="libboost_filesystem.a"/>
-        <Library Value="libboost_system.a"/>
+        <LibraryPath Value="/usr/lib/x86_64-linux-gnu/"/>
+        <Library Value="libboost_thread"/>
+        <Library Value="libboost_filesystem"/>
+        <Library Value="libboost_system"/>
         <Library Value="lua5.3"/>
         <Library Value="libBARE2DEngine.a"/>
         <Library Value="CEGUIBase-0"/>

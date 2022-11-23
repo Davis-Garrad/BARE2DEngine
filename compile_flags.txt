@@ -9,7 +9,6 @@
 -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include
 -I/usr/local/include
 -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed
--DDEBUG
 -std=c++17
 -target
 x86_64-pc-linux-gnu

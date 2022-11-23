@@ -138,14 +138,7 @@
   </VirtualDirectory>
   <Description/>
   <Dependencies/>
-  <Dependencies Name="Debug"/>
   <Dependencies Name="Release"/>
-  <Dependencies Name="All">
-    <Project Name="BAREBoids"/>
-    <Project Name="BARETest_ThreeBody"/>
-    <Project Name="BARETests"/>
-    <Project Name="BAREXML"/>
-  </Dependencies>
   <Settings Type="Static Library">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
@@ -305,4 +298,11 @@
       </Completion>
     </Configuration>
   </Settings>
+  <Dependencies Name="Debug">
+    <Project Name="BAREBoids"/>
+    <Project Name="BARETest_ThreeBody"/>
+    <Project Name="BARETests"/>
+    <Project Name="BAREXML"/>
+  </Dependencies>
+  <Dependencies Name="All"/>
 </CodeLite_Project>

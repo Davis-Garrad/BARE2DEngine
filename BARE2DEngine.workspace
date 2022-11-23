@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Workspace Name="BARE2DEngine" Database="" Version="10000">
+<CodeLite_Workspace Name="BARE2DEngine" Database="" Version="10000" SWTLW="Yes">
+  <WorkspaceParserMacros/>
+  <WorkspaceParserPaths/>
   <Project Name="BARE2DEngine" Path="BARE2DEngine.project" Active="No"/>
   <Project Name="BARETest_ThreeBody" Path="BARETests/Orbiter/BARETest_ThreeBody.project" Active="No"/>
   <Project Name="BARETests" Path="BARETests/BasicTest/BARETests.project" Active="No"/>
@@ -17,14 +19,6 @@
     <WorkspaceConfiguration Name="Release">
       <Environment/>
       <Project Name="BARE2DEngine" ConfigName="Release"/>
-      <Project Name="BAREBoids" ConfigName="Release"/>
-      <Project Name="BARETest_ThreeBody" ConfigName="Release"/>
-      <Project Name="BARETests" ConfigName="Release"/>
-      <Project Name="BAREXML" ConfigName="Release"/>
-    </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="All">
-      <Environment/>
-      <Project Name="BARE2DEngine" ConfigName="All"/>
       <Project Name="BAREBoids" ConfigName="Release"/>
       <Project Name="BARETest_ThreeBody" ConfigName="Release"/>
       <Project Name="BARETests" ConfigName="Release"/>
