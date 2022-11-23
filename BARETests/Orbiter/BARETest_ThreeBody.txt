@@ -1,1 +1,1 @@
-Debug/main.cpp.o Debug/OrbitScreen.cpp.o Debug/Body.cpp.o
+Release/main.cpp.o Release/OrbitScreen.cpp.o Release/Body.cpp.o

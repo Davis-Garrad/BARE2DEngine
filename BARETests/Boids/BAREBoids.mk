@@ -5,15 +5,16 @@
 ## Debug
 ProjectName            :=BAREBoids
 ConfigurationName      :=Debug
-WorkspacePath          :=/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine
-ProjectPath            :=/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Boids
+WorkspaceConfiguration :=Debug
+WorkspacePath          :=/home/davis-dev/Documents/BARE2DEngine
+ProjectPath            :=/home/davis-dev/Documents/BARE2DEngine/BARETests/Boids
 IntermediateDirectory  :=$(ConfigurationName)
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=Davis-dev
-Date                   :=31/12/21
+User                   :=
+Date                   :=2022-11-23
 CodeLitePath           :=/home/davis-dev/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -27,6 +28,7 @@ OutputSwitch           :=-o
 LibraryPathSwitch      :=-L
 PreprocessorSwitch     :=-D
 SourceSwitch           :=-c 
+OutputDirectory        :=$(IntermediateDirectory)
 OutputFile             :=$(IntermediateDirectory)/$(ProjectName)
 Preprocessors          :=
 ObjectSwitch           :=-o 
@@ -45,7 +47,7 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)../../Debug/
 
 ##
 ## Common variables
-## AR, CXX, CC, AS, CXXFLAGS and CFLAGS can be overriden using an environment variables
+## AR, CXX, CC, AS, CXXFLAGS and CFLAGS can be overridden using an environment variable
 ##
 AR       := /usr/bin/ar rcu
 CXX      := /usr/bin/g++
@@ -100,19 +102,19 @@ PreBuild:
 ##
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Boids/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/BARE2DEngine/BARETests/Boids/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
 $(IntermediateDirectory)/AppScreen.cpp$(ObjectSuffix): AppScreen.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/AppScreen.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/AppScreen.cpp$(DependSuffix) -MM AppScreen.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Boids/AppScreen.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/AppScreen.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/BARE2DEngine/BARETests/Boids/AppScreen.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/AppScreen.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/AppScreen.cpp$(PreprocessSuffix): AppScreen.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/AppScreen.cpp$(PreprocessSuffix) AppScreen.cpp
 
 $(IntermediateDirectory)/Boid.cpp$(ObjectSuffix): Boid.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Boid.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Boid.cpp$(DependSuffix) -MM Boid.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/Boids/Boid.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Boid.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/BARE2DEngine/BARETests/Boids/Boid.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Boid.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Boid.cpp$(PreprocessSuffix): Boid.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Boid.cpp$(PreprocessSuffix) Boid.cpp
 

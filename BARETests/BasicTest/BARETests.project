@@ -90,9 +90,22 @@
         <IncludePath Value="."/>
         <IncludePath Value="../../Source/"/>
       </Compiler>
-      <Linker Options=" -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW" Required="yes">
+      <Linker Options="" Required="yes">
         <LibraryPath Value="../../Release/"/>
+        <Library Value="libboost_thread.a"/>
+        <Library Value="libboost_filesystem.a"/>
+        <Library Value="libboost_system.a"/>
+        <Library Value="lua5.3"/>
         <Library Value="libBARE2DEngine.a"/>
+        <Library Value="CEGUIBase-0"/>
+        <Library Value="CEGUIOpenGLRenderer-0"/>
+        <Library Value="SDL2"/>
+        <Library Value="SDL2_mixer"/>
+        <Library Value="SDL2_ttf"/>
+        <Library Value="GL"/>
+        <Library Value="GLU"/>
+        <Library Value="GLEW"/>
+        <Library Value="pthread"/>
       </Linker>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="$(ConfigurationName)" Command="$(OutputFile)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>

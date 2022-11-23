@@ -84,6 +84,7 @@
 /home/davis-dev/Documents/BARE2DEngine/Source/Filesystem.cpp
 /home/davis-dev/Documents/BARE2DEngine/Source/Timer.hpp
 /home/davis-dev/Documents/BARE2DEngine/Source/InputManager.hpp
+/home/davis-dev/Documents/BARE2DEngine/docs/html/index.html
 /home/davis-dev/Documents/BARE2DEngine/Source/FontRenderer.hpp
 /home/davis-dev/Documents/BARE2DEngine/Source/DebugRenderer.cpp
 /home/davis-dev/Documents/BARE2DEngine/Other_Libraries/utf8/checked.h

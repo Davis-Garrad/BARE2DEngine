@@ -1,5 +1,6 @@
 -I/home/davis-dev/Documents/BARE2DEngine/BARETests/BasicTest
 -I/home/davis-dev/Documents/BARE2DEngine/Source
+-I/usr/include/x86_64-linux-gnu/cegui-0.8.7
 -I/usr/include/c++/12.2.0
 -I/usr/include/c++/12.2.0/x86_64-pc-linux-gnu
 -I/usr/include/c++/12.2.0/backward

@@ -2,19 +2,19 @@
 ## Auto Generated makefile by CodeLite IDE
 ## any manual changes will be erased      
 ##
-## Debug
+## Release
 ProjectName            :=BARETests
-ConfigurationName      :=Debug
-WorkspaceConfiguration :=Debug
-WorkspacePath          :=/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine
-ProjectPath            :=/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/BasicTest
+ConfigurationName      :=Release
+WorkspaceConfiguration :=All
+WorkspacePath          :=/home/davis-dev/Documents/BARE2DEngine
+ProjectPath            :=/home/davis-dev/Documents/BARE2DEngine/BARETests/BasicTest
 IntermediateDirectory  :=$(ConfigurationName)
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=Davis-dev
-Date                   :=24/05/22
+User                   :=
+Date                   :=2022-11-23
 CodeLitePath           :=/home/davis-dev/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -37,13 +37,13 @@ PreprocessOnlySwitch   :=-E
 ObjectsFileList        :="BARETests.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=mkdir -p
-LinkOptions            :=   -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW
-IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)../../Source/ $(IncludeSwitch)/usr/include/x86_64-linux-gnu/cegui-0.8.7 
+LinkOptions            :=  
+IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)../../Source/ 
 IncludePCH             := 
 RcIncludePath          := 
-Libs                   := $(LibrarySwitch)BARE2DEngine $(LibrarySwitch)CEGUIBase-0 $(LibrarySwitch)CEGUIOpenGLRenderer-0 $(LibrarySwitch)lua5.3 
-ArLibs                 :=  "libBARE2DEngine.a" "CEGUIBase-0" "CEGUIOpenGLRenderer-0" "lua5.3" 
-LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)../../Debug/ $(LibraryPathSwitch)/usr/include/x86_64-linux-gnu/cegui-0.8.7/ 
+Libs                   := $(LibrarySwitch)boost_thread $(LibrarySwitch)boost_filesystem $(LibrarySwitch)boost_system $(LibrarySwitch)lua5.3 $(LibrarySwitch)BARE2DEngine $(LibrarySwitch)CEGUIBase-0 $(LibrarySwitch)CEGUIOpenGLRenderer-0 $(LibrarySwitch)SDL2 $(LibrarySwitch)SDL2_mixer $(LibrarySwitch)SDL2_ttf $(LibrarySwitch)GL $(LibrarySwitch)GLU $(LibrarySwitch)GLEW $(LibrarySwitch)pthread 
+ArLibs                 :=  "libboost_thread.a" "libboost_filesystem.a" "libboost_system.a" "lua5.3" "libBARE2DEngine.a" "CEGUIBase-0" "CEGUIOpenGLRenderer-0" "SDL2" "SDL2_mixer" "SDL2_ttf" "GL" "GLU" "GLEW" "pthread" 
+LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)../../Release/ 
 
 ##
 ## Common variables
@@ -52,8 +52,8 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)../../Debug/
 AR       := /usr/bin/ar rcu
 CXX      := /usr/bin/g++
 CC       := /usr/bin/gcc
-CXXFLAGS :=  -g -O0 -Wall $(Preprocessors)
-CFLAGS   :=  -g -O0 -Wall $(Preprocessors)
+CXXFLAGS :=  -g -O3 -Wall $(Preprocessors)
+CFLAGS   :=  -g -O3 -Wall $(Preprocessors)
 ASFLAGS  := 
 AS       := /usr/bin/as
 
@@ -74,18 +74,11 @@ Objects=$(Objects0)
 .PHONY: all clean PreBuild PrePreBuild PostBuild MakeIntermediateDirs
 all: $(OutputFile)
 
-$(OutputFile): $(IntermediateDirectory)/.d "../../.build-debug/BARE2DEngine" $(Objects) 
+$(OutputFile): $(IntermediateDirectory)/.d $(Objects) 
 	@$(MakeDirCommand) $(@D)
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects0)  > $(ObjectsFileList)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
-
-"../../.build-debug/BARE2DEngine":
-	@$(MakeDirCommand) "../../.build-debug"
-	@echo stam > "../../.build-debug/BARE2DEngine"
-
-
-
 
 MakeIntermediateDirs:
 	@test -d $(ConfigurationName) || $(MakeDirCommand) $(ConfigurationName)
@@ -102,13 +95,13 @@ PreBuild:
 ##
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/BasicTest/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/BARE2DEngine/BARETests/BasicTest/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
 $(IntermediateDirectory)/TestScreen.cpp$(ObjectSuffix): TestScreen.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/TestScreen.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/TestScreen.cpp$(DependSuffix) -MM TestScreen.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/Programming/C++/CodingGithub/BARE2DEngine/BARETests/BasicTest/TestScreen.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/TestScreen.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/davis-dev/Documents/BARE2DEngine/BARETests/BasicTest/TestScreen.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/TestScreen.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/TestScreen.cpp$(PreprocessSuffix): TestScreen.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/TestScreen.cpp$(PreprocessSuffix) TestScreen.cpp
 

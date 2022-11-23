@@ -1,7 +1,7 @@
 
 
 
-### LOG: Tue Dec 14 16:39:07 2021 ###
+### LOG: Wed Nov 23 01:32:55 2022 ###
 
 Thanks for using BARE2D! Original engine by Davis Garrad
 
@@ -25,6 +25,8 @@ XML Data Write Complete.
 
 Beginning XML Data Load.
 Starting XML data read from file
+		Reading attribute customDataFloatVector
+		Reading attribute customDataFloat
 Creating new cache for XML Data: testDataType
 	Read XML: testDataType: Some pointless name here (420)
 Finished XML data read from file

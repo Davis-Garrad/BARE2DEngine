@@ -39,6 +39,6 @@ namespace BARE2D {
 		
 		T sample;
 		
-		m_dataTypingFunctions[sample.nodeName] = T::cloneType;
+		m_dataTypingFunctions[sample.nodeName] = []() ->  XMLData* { return new T; };
 	}
 }

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="BARE2DEngine" Version="11000" InternalType="Library">
+  <VirtualDirectory Name="Documentation">
+    <File Name="docs/html/index.html"/>
+  </VirtualDirectory>
   <Plugins>
     <Plugin Name="qmake">
       <![CDATA[00010001N0005Debug000000000000]]>
@@ -135,6 +138,14 @@
   </VirtualDirectory>
   <Description/>
   <Dependencies/>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
+  <Dependencies Name="All">
+    <Project Name="BAREBoids"/>
+    <Project Name="BARETest_ThreeBody"/>
+    <Project Name="BARETests"/>
+    <Project Name="BAREXML"/>
+  </Dependencies>
   <Settings Type="Static Library">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
@@ -145,6 +156,59 @@
       </Linker>
       <ResourceCompiler Options=""/>
     </GlobalSettings>
+    <Configuration Name="All" CompilerType="GCC" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-O3;-std=c++17;-Wall -DBOOST_NO_CXX11_SCOPED_ENUMS" C_Options="" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="."/>
+        <IncludePath Value="include"/>
+        <IncludePath Value="/usr/include"/>
+        <IncludePath Value="/usr/include/x86_64-linux-gnu/cegui-0.8.7/"/>
+        <IncludePath Value="./Other_Libraries"/>
+      </Compiler>
+      <Linker Options="" Required="yes">
+        <LibraryPath Value="."/>
+        <LibraryPath Value="/usr/lib/x86_64-linux-gnu/"/>
+        <Library Value="boost_filesystem"/>
+        <Library Value="boost_system"/>
+        <Library Value="SDL2"/>
+        <Library Value="SDL2_ttf"/>
+        <Library Value="SDL2_mixer"/>
+        <Library Value="GL"/>
+        <Library Value="GLEW"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/lib$(ProjectName).a" IntermediateDirectory="$(ConfigurationName)" Command="$(OutputFile)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <BuildSystem Name="Default"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName/>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
     <Configuration Name="Debug" CompilerType="GCC" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g;-std=c++17;-Wall" C_Options="" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
@@ -241,6 +305,4 @@
       </Completion>
     </Configuration>
   </Settings>
-  <Dependencies Name="Debug"/>
-  <Dependencies Name="Release"/>
 </CodeLite_Project>
