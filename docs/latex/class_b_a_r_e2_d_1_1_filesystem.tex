@@ -8,8 +8,10 @@
 \begin{DoxyCompactItemize}
 \item 
 static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_filesystem_a23890174d5f60eea6149350359a58de1}{get\+Directories\+In}} (std\+::string path)
-\item 
+\begin{DoxyCompactList}\small\item\em Gets all the names of directories at the given path. \end{DoxyCompactList}\item 
 static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_filesystem_a31a5f3c47231fd9490590f398ce3e4e5}{get\+Files\+In}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Gets all the names of files at the given path. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_filesystem_a84e797bdd45a73258c9a25ae186f3e71}{get\+Working\+Directory}} ()
 \end{DoxyCompactItemize}
 
 
@@ -29,6 +31,18 @@ Definition at line \mbox{\hyperlink{_filesystem_8hpp_source_l00009}{9}} of file 
 
 
 
+Gets all the names of directories at the given path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of string names of directories 
+\end{DoxyReturn}
+
+
 Definition at line \mbox{\hyperlink{_filesystem_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_filesystem_8cpp_source}{Filesystem.\+cpp}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_filesystem_a31a5f3c47231fd9490590f398ce3e4e5}\label{class_b_a_r_e2_d_1_1_filesystem_a31a5f3c47231fd9490590f398ce3e4e5}} 
@@ -39,7 +53,19 @@ Definition at line \mbox{\hyperlink{_filesystem_8cpp_source_l00007}{7}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{_filesystem_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{_filesystem_8cpp_source}{Filesystem.\+cpp}}.
+Gets all the names of files at the given path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of string names of files 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_filesystem_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{_filesystem_8cpp_source}{Filesystem.\+cpp}}.
 
 
 
@@ -47,6 +73,19 @@ Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00018}{BARE2\+D\
 
 Here is the caller graph for this function\+:
 % FIG 0
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_filesystem_a84e797bdd45a73258c9a25ae186f3e71}\label{class_b_a_r_e2_d_1_1_filesystem_a84e797bdd45a73258c9a25ae186f3e71}} 
+\index{BARE2D::Filesystem@{BARE2D::Filesystem}!getWorkingDirectory@{getWorkingDirectory}}
+\index{getWorkingDirectory@{getWorkingDirectory}!BARE2D::Filesystem@{BARE2D::Filesystem}}
+\doxysubsubsection{\texorpdfstring{getWorkingDirectory()}{getWorkingDirectory()}}
+{\footnotesize\ttfamily std\+::string BARE2\+D\+::\+Filesystem\+::get\+Working\+Directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+The path to the program\textquotesingle{}s working directory. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_filesystem_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{_filesystem_8cpp_source}{Filesystem.\+cpp}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

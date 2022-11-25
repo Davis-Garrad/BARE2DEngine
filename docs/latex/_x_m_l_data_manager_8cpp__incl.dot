@@ -20,9 +20,9 @@ digraph "Source/XMLDataManager.cpp"
   Node7 [label="XMLDataTypes.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_x_m_l_data_types_8hpp.html",tooltip=" "];
   Node7 -> Node3 [color="steelblue1",style="solid"];
   Node7 -> Node8 [color="steelblue1",style="solid"];
-  Node8 [label="vector",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node8 [label="unordered_map",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node7 -> Node9 [color="steelblue1",style="solid"];
-  Node9 [label="unordered_map",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node9 [label="vector",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node7 -> Node4 [color="steelblue1",style="solid"];
   Node7 -> Node10 [color="steelblue1",style="solid"];
   Node10 [label="XMLDataTypes.tcc",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_x_m_l_data_types_8tcc.html",tooltip=" "];
@@ -34,7 +34,7 @@ digraph "Source/XMLDataManager.cpp"
   Node1 -> Node13 [color="steelblue1",style="solid"];
   Node13 [label="rapidxml/rapidxml_print.hpp",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node1 -> Node3 [color="steelblue1",style="solid"];
-  Node1 -> Node8 [color="steelblue1",style="solid"];
+  Node1 -> Node9 [color="steelblue1",style="solid"];
   Node1 -> Node14 [color="steelblue1",style="solid"];
   Node14 [label="Filesystem.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_filesystem_8hpp.html",tooltip=" "];
   Node14 -> Node15 [color="steelblue1",style="solid"];

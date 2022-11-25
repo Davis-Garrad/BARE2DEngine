@@ -1,12 +1,12 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ BARE2DEngine - Release ]----------"
+	@echo "----------Building project:[ BARE2DEngine - Debug ]----------"
 	@"$(MAKE)" -f  "BARE2DEngine.mk"
-	@echo "----------Building project:[ BAREXML - Release ]----------"
-	@cd "BARETests/BAREXML" && "$(MAKE)" -f  "BAREXML.mk"
+	@echo "----------Building project:[ BARETests - Debug ]----------"
+	@cd "BARETests/BasicTest" && "$(MAKE)" -f  "BARETests.mk"
 clean:
-	@echo "----------Cleaning project:[ BARE2DEngine - Release ]----------"
+	@echo "----------Cleaning project:[ BARE2DEngine - Debug ]----------"
 	@"$(MAKE)" -f  "BARE2DEngine.mk"  clean
-	@echo "----------Cleaning project:[ BAREXML - Release ]----------"
-	@cd "BARETests/BAREXML" && "$(MAKE)" -f  "BAREXML.mk" clean
+	@echo "----------Cleaning project:[ BARETests - Debug ]----------"
+	@cd "BARETests/BasicTest" && "$(MAKE)" -f  "BARETests.mk" clean

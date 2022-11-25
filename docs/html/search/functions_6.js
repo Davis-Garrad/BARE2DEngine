@@ -50,9 +50,10 @@ var searchData=
   ['getviewspacesize_47',['getViewspaceSize',['../class_b_a_r_e2_d_1_1_camera2_d.html#a15f5aa21ca6788f07c3827cf9ed5b169',1,'BARE2D::Camera2D']]],
   ['getwidth_48',['getWidth',['../class_b_a_r_e2_d_1_1_window.html#ae0055549c7e1f9b1e16e71b1cb17ac54',1,'BARE2D::Window']]],
   ['getwindow_49',['getWindow',['../class_b_a_r_e2_d_1_1_app.html#ae500d02161dd750e8f4c659369e1fe5d',1,'BARE2D::App']]],
-  ['getworldspacecoord_50',['getWorldspaceCoord',['../class_b_a_r_e2_d_1_1_camera2_d.html#a05e5822ce1e602fccb1ebf8ff569e0d3',1,'BARE2D::Camera2D']]],
-  ['getworldspacerect_51',['getWorldspaceRect',['../class_b_a_r_e2_d_1_1_camera2_d.html#a9101871c433a6d0b289b7972270b19df',1,'BARE2D::Camera2D']]],
-  ['getworldspacesize_52',['getWorldspaceSize',['../class_b_a_r_e2_d_1_1_camera2_d.html#a51f101faa7a4e7f5f7ec77ffdf68bd2d',1,'BARE2D::Camera2D']]],
-  ['glcontext_53',['GLContext',['../class_b_a_r_e2_d_1_1_g_l_context.html#a62f46a348cc1f4e91fe3ab48c9a5cc1b',1,'BARE2D::GLContext']]],
-  ['glyph_54',['Glyph',['../class_b_a_r_e2_d_1_1_glyph.html#a082649e9c11e7dcb7efb885905a0ecfa',1,'BARE2D::Glyph::Glyph(glm::vec4 &amp;destRect, glm::vec4 &amp;uvRect, GLuint &amp;Texture, float &amp;Depth, Colour &amp;colour)'],['../class_b_a_r_e2_d_1_1_glyph.html#a137e522e6afc33a43d93eb893a48586a',1,'BARE2D::Glyph::Glyph(glm::vec4 &amp;destRect, glm::vec4 &amp;uvRect, GLuint &amp;Texture, float &amp;Depth, Colour &amp;colour, float &amp;angle)'],['../class_b_a_r_e2_d_1_1_glyph.html#a6f185a8114aa0e31269e28b06fe38d14',1,'BARE2D::Glyph::Glyph(glm::vec4 &amp;destRect, glm::vec4 &amp;uvRect, GLuint &amp;Texture, float &amp;Depth, Colour &amp;colour, float &amp;angle, glm::vec2 &amp;COR)']]]
+  ['getworkingdirectory_50',['getWorkingDirectory',['../class_b_a_r_e2_d_1_1_filesystem.html#a84e797bdd45a73258c9a25ae186f3e71',1,'BARE2D::Filesystem']]],
+  ['getworldspacecoord_51',['getWorldspaceCoord',['../class_b_a_r_e2_d_1_1_camera2_d.html#a05e5822ce1e602fccb1ebf8ff569e0d3',1,'BARE2D::Camera2D']]],
+  ['getworldspacerect_52',['getWorldspaceRect',['../class_b_a_r_e2_d_1_1_camera2_d.html#a9101871c433a6d0b289b7972270b19df',1,'BARE2D::Camera2D']]],
+  ['getworldspacesize_53',['getWorldspaceSize',['../class_b_a_r_e2_d_1_1_camera2_d.html#a51f101faa7a4e7f5f7ec77ffdf68bd2d',1,'BARE2D::Camera2D']]],
+  ['glcontext_54',['GLContext',['../class_b_a_r_e2_d_1_1_g_l_context.html#a62f46a348cc1f4e91fe3ab48c9a5cc1b',1,'BARE2D::GLContext']]],
+  ['glyph_55',['Glyph',['../class_b_a_r_e2_d_1_1_glyph.html#a082649e9c11e7dcb7efb885905a0ecfa',1,'BARE2D::Glyph::Glyph(glm::vec4 &amp;destRect, glm::vec4 &amp;uvRect, GLuint &amp;Texture, float &amp;Depth, Colour &amp;colour)'],['../class_b_a_r_e2_d_1_1_glyph.html#a137e522e6afc33a43d93eb893a48586a',1,'BARE2D::Glyph::Glyph(glm::vec4 &amp;destRect, glm::vec4 &amp;uvRect, GLuint &amp;Texture, float &amp;Depth, Colour &amp;colour, float &amp;angle)'],['../class_b_a_r_e2_d_1_1_glyph.html#a6f185a8114aa0e31269e28b06fe38d14',1,'BARE2D::Glyph::Glyph(glm::vec4 &amp;destRect, glm::vec4 &amp;uvRect, GLuint &amp;Texture, float &amp;Depth, Colour &amp;colour, float &amp;angle, glm::vec2 &amp;COR)']]]
 ];

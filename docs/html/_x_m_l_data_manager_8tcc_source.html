@@ -141,7 +141,7 @@ $(document).ready(function(){initNavTree('_x_m_l_data_manager_8tcc_source.html',
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        T sample;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        m_dataTypingFunctions[sample.nodeName] = T::cloneType;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        m_dataTypingFunctions[sample.nodeName] = []() -&gt;  XMLData* { return new T; };</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
 </div><!-- fragment --></div><!-- contents -->

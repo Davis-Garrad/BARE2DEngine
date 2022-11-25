@@ -8,7 +8,6 @@ var class_b_a_r_e2_d_1_1_x_m_l_data =
     [ "addAttribute", "class_b_a_r_e2_d_1_1_x_m_l_data.html#a15c8f82112e0e0a89eb255aacb7cb801", null ],
     [ "addAttribute", "class_b_a_r_e2_d_1_1_x_m_l_data.html#a128262a998e45f6f321de4b12448d02a", null ],
     [ "addAttributes", "class_b_a_r_e2_d_1_1_x_m_l_data.html#ae24bd7eff4c51255b28e903805e768d6", null ],
-    [ "cloneType", "class_b_a_r_e2_d_1_1_x_m_l_data.html#a37ea76284f5f4fd4367499f329c7d2fb", null ],
     [ "getAttributeByName", "class_b_a_r_e2_d_1_1_x_m_l_data.html#a005915fa3e921266e6abb2ec862072b8", null ],
     [ "getAttributes", "class_b_a_r_e2_d_1_1_x_m_l_data.html#a4d74a9f01423efa88b7c7ea69d9d870d", null ],
     [ "read", "class_b_a_r_e2_d_1_1_x_m_l_data.html#acf63925319a7b15a53989db54702ea60", null ],

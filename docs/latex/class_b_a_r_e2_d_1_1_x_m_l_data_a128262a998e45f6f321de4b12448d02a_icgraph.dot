@@ -13,6 +13,4 @@ digraph "BARE2D::XMLData::addAttribute"
   Node3 [label="BARE2D::XMLData::XMLData",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_x_m_l_data.html#a0fdadc0bef7ce4b52bed23ed5d270333",tooltip=" "];
   Node1 -> Node4 [dir="back",color="steelblue1",style="solid"];
   Node4 [label="BARE2D::XMLData::XMLData",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_x_m_l_data.html#a0e1d536a1efe35025dcb05bc4236e072",tooltip=" "];
-  Node4 -> Node5 [dir="back",color="steelblue1",style="solid"];
-  Node5 [label="BARE2D::XMLData::cloneType",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_x_m_l_data.html#a37ea76284f5f4fd4367499f329c7d2fb",tooltip="Allocates and populates a copy of this type of data, then returns it. No guarantees that the names ar..."];
 }

@@ -9,9 +9,9 @@ digraph "Source/Font.cpp"
   Node1 -> Node2 [color="steelblue1",style="solid"];
   Node2 [label="Font.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_font_8hpp.html",tooltip=" "];
   Node2 -> Node3 [color="steelblue1",style="solid"];
-  Node3 [label="glm/glm.hpp",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node3 [label="GL/glew.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node2 -> Node4 [color="steelblue1",style="solid"];
-  Node4 [label="GL/glew.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node4 [label="glm/glm.hpp",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node2 -> Node5 [color="steelblue1",style="solid"];
   Node5 [label="vector",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node1 -> Node6 [color="steelblue1",style="solid"];

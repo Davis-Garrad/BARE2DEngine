@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace>
   <WorkspaceParserPaths/>
-  <BuildMatrix SelectedConfiguration="Release"/>
+  <BuildMatrix SelectedConfiguration="Debug"/>
   <WorkspaceParserFlags flags="9"/>
   <Environment Name="&lt;Use Defaults&gt;"/>
   <VirtualFoldersColours/>

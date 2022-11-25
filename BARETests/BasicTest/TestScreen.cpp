@@ -78,7 +78,7 @@ void TestScreen::draw()
     float fps = renderCount / (updateCount / 60.0f);
 
     glm::vec2 pos = m_fontRenderer->getCamera()->getWorldspaceCoord(glm::vec2(0.0f, 0.0f));
-    glm::vec2 size = m_renderer->getCamera()->getWorldspaceSize(glm::vec2(1.0f, 1.0f));
+    glm::vec2 size = m_renderer->getCamera()->getWorldspaceSize(glm::vec2(0.4f, 0.4f));
 
     m_fontRenderer->draw(m_font_openSans, size, glm::vec4(pos.x, pos.y, size.x, size.y),
                          std::string("Updates: " + std::to_string((int)(updateCount)) + "\nDraw Calls: " +
@@ -153,7 +153,7 @@ void TestScreen::onEntry()
     m_fbo->init();
 
     std::string fontPath = assetsPath + "/OpenSans-Regular.ttf";
-    m_font_openSans = BARE2D::ResourceManager::loadFont(fontPath, 36);
+    m_font_openSans = BARE2D::ResourceManager::loadFont(fontPath, 96);  // 24 is decent
 
     m_fontRenderer = new BARE2D::FontRenderer(fShaderPath, vShaderPath);
     m_fontRenderer->init();

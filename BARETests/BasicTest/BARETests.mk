@@ -2,10 +2,10 @@
 ## Auto Generated makefile by CodeLite IDE
 ## any manual changes will be erased      
 ##
-## Release
+## Debug
 ProjectName            :=BARETests
-ConfigurationName      :=Release
-WorkspaceConfiguration :=Release
+ConfigurationName      :=Debug
+WorkspaceConfiguration :=Debug
 WorkspacePath          :=/home/davis-dev/Documents/BARE2DEngine
 ProjectPath            :=/home/davis-dev/Documents/BARE2DEngine/BARETests/BasicTest
 IntermediateDirectory  :=$(ConfigurationName)
@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=
-Date                   :=2022-11-23
+Date                   :=2022-11-24
 CodeLitePath           :=/home/davis-dev/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -38,12 +38,12 @@ ObjectsFileList        :="BARETests.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=mkdir -p
 LinkOptions            :=  
-IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)../../Source/ 
+IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)../../Source/ $(IncludeSwitch)/usr/include/x86_64-linux-gnu/cegui-0.8.7 
 IncludePCH             := 
 RcIncludePath          := 
 Libs                   := $(LibrarySwitch)boost_thread $(LibrarySwitch)boost_filesystem $(LibrarySwitch)boost_system $(LibrarySwitch)lua5.3 $(LibrarySwitch)BARE2DEngine $(LibrarySwitch)CEGUIBase-0 $(LibrarySwitch)CEGUIOpenGLRenderer-0 $(LibrarySwitch)SDL2 $(LibrarySwitch)SDL2_mixer $(LibrarySwitch)SDL2_ttf $(LibrarySwitch)GL $(LibrarySwitch)GLU $(LibrarySwitch)GLEW $(LibrarySwitch)pthread 
 ArLibs                 :=  "libboost_thread" "libboost_filesystem" "libboost_system" "lua5.3" "libBARE2DEngine.a" "CEGUIBase-0" "CEGUIOpenGLRenderer-0" "SDL2" "SDL2_mixer" "SDL2_ttf" "GL" "GLU" "GLEW" "pthread" 
-LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)../../Release/ $(LibraryPathSwitch)/usr/lib/x86_64-linux-gnu/ 
+LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)../../Debug/ $(LibraryPathSwitch)/usr/lib/x86_64-linux-gnu/ 
 
 ##
 ## Common variables
@@ -52,8 +52,8 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)../../Releas
 AR       := /usr/bin/ar rcu
 CXX      := /usr/bin/g++
 CC       := /usr/bin/gcc
-CXXFLAGS :=  -g -O3 -Wall $(Preprocessors)
-CFLAGS   :=  -g -O3 -Wall $(Preprocessors)
+CXXFLAGS :=  -g -O0 -Wall $(Preprocessors)
+CFLAGS   :=  -g -O0 -Wall $(Preprocessors)
 ASFLAGS  := 
 AS       := /usr/bin/as
 
@@ -74,15 +74,15 @@ Objects=$(Objects0)
 .PHONY: all clean PreBuild PrePreBuild PostBuild MakeIntermediateDirs
 all: $(OutputFile)
 
-$(OutputFile): $(IntermediateDirectory)/.d "../../.build-release/BARE2DEngine" $(Objects) 
+$(OutputFile): $(IntermediateDirectory)/.d "../../.build-debug/BARE2DEngine" $(Objects) 
 	@$(MakeDirCommand) $(@D)
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects0)  > $(ObjectsFileList)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
 
-"../../.build-release/BARE2DEngine":
-	@$(MakeDirCommand) "../../.build-release"
-	@echo stam > "../../.build-release/BARE2DEngine"
+"../../.build-debug/BARE2DEngine":
+	@$(MakeDirCommand) "../../.build-debug"
+	@echo stam > "../../.build-debug/BARE2DEngine"
 
 
 

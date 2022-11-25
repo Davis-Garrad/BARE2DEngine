@@ -8,7 +8,7 @@ digraph "BARE2D::XMLDataManager::loadXML"
   rankdir="LR";
   Node1 [label="BARE2D::XMLDataManager\l::loadXML",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Loads all of the files from the filepath that end in .xml to the caches. Does not clear caches."];
   Node1 -> Node2 [color="steelblue1",style="solid"];
-  Node2 [label="BARE2D::Filesystem\l::getFilesIn",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_filesystem.html#a31a5f3c47231fd9490590f398ce3e4e5",tooltip=" "];
+  Node2 [label="BARE2D::Filesystem\l::getFilesIn",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_filesystem.html#a31a5f3c47231fd9490590f398ce3e4e5",tooltip="Gets all the names of files at the given path."];
   Node1 -> Node3 [color="steelblue1",style="solid"];
   Node3 [label="BARE2D::Logger::getInstance",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec",tooltip=" "];
   Node3 -> Node4 [color="steelblue1",style="solid"];

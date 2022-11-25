@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="BARE2DEngine" Version="11000" InternalType="Library">
-  <VirtualDirectory Name="Documentation">
-    <File Name="docs/html/index.html"/>
-  </VirtualDirectory>
   <Plugins>
     <Plugin Name="qmake">
       <![CDATA[00010001N0005Debug000000000000]]>
     </Plugin>
   </Plugins>
+  <VirtualDirectory Name="Documentation">
+    <File Name="docs/html/index.html"/>
+  </VirtualDirectory>
   <VirtualDirectory Name="Other Libraries">
     <VirtualDirectory Name="UTF8">
       <File Name="Other_Libraries/utf8.h"/>
@@ -139,6 +139,13 @@
   <Description/>
   <Dependencies/>
   <Dependencies Name="Release"/>
+  <Dependencies Name="Debug">
+    <Project Name="BAREBoids"/>
+    <Project Name="BARETest_ThreeBody"/>
+    <Project Name="BARETests"/>
+    <Project Name="BAREXML"/>
+  </Dependencies>
+  <Dependencies Name="All"/>
   <Settings Type="Static Library">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
@@ -214,8 +221,6 @@
       <Linker Options="-lboost_filesystem -lboost_system -lSDL2 -lSDL2_ttf -lSDL2_mixer -lGL -lGLEW" Required="yes">
         <LibraryPath Value="."/>
         <LibraryPath Value="/usr/lib/x86_64-linux-gnu/"/>
-        <LibraryPath Value="/usr/include/x86_64-linux-gnu/cegui-0.8.7/"/>
-        <Library Value="lua5.3"/>
       </Linker>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/lib$(ProjectName).a" IntermediateDirectory="$(ConfigurationName)" Command="$(OutputFile)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
@@ -298,11 +303,4 @@
       </Completion>
     </Configuration>
   </Settings>
-  <Dependencies Name="Debug">
-    <Project Name="BAREBoids"/>
-    <Project Name="BARETest_ThreeBody"/>
-    <Project Name="BARETests"/>
-    <Project Name="BAREXML"/>
-  </Dependencies>
-  <Dependencies Name="All"/>
 </CodeLite_Project>
