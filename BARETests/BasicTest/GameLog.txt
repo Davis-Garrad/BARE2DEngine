@@ -1,12 +1,10 @@
 
 
 
-### LOG: Thu Nov 24 19:39:18 2022 ###
+### LOG: Thu Nov 24 20:07:15 2022 ###
 
 Thanks for using BARE2D! Original engine by Davis Garrad
 
 Entering screen! Will display pretty colours for a bit, then shrink, then leave!
 Lua Output: Hello there!
 Lua Output: Delaying for 4 seconds...
-Lua Output: Delayed for 4 seconds (240 ticks).cUsToM fUnCtIoN!
-Leaving screen!
