@@ -45,7 +45,7 @@ namespace BARE2D {
 		scr.m_script = script;
 		scr.inited = true;
 		
-		addLuaScript(scr);
+		return addLuaScript(scr);
 	}
 
 	std::map<unsigned int,LuaScript*>& LuaScriptQueue::getQueue()

@@ -1,10 +1,8 @@
 <map id="Source/Cache.cpp" name="Source/Cache.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="127,5,258,32"/>
-<area shape="rect" id="node2" href="$_cache_8hpp.html" title=" " alt="" coords="150,80,235,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,155,116,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="160,304,215,331"/>
-<area shape="rect" id="node5" title=" " alt="" coords="192,155,271,181"/>
-<area shape="rect" id="node6" href="$_cache__impl_8tcc.html" title=" " alt="" coords="295,155,408,181"/>
-<area shape="rect" id="node7" href="$_b_a_r_e_errors_8hpp.html" title=" " alt="" coords="241,229,360,256"/>
-<area shape="rect" id="node8" title=" " alt="" coords="271,304,330,331"/>
+<area shape="rect" id="node1" title=" " alt="" coords="147,5,278,31"/>
+<area shape="rect" id="node2" href="$_cache_8hpp.html" title=" " alt="" coords="170,79,255,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,152,116,177"/>
+<area shape="rect" id="node4" title=" " alt="" coords="140,152,195,177"/>
+<area shape="rect" id="node5" title=" " alt="" coords="219,152,297,177"/>
+<area shape="rect" id="node6" href="$_cache__impl_8tcc.html" title=" " alt="" coords="321,152,435,177"/>
 </map>

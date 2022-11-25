@@ -1,4 +1,4 @@
 <map id="BARE2D::Timer::integrateFrame" name="BARE2D::Timer::integrateFrame">
-<area shape="rect" id="node1" title="IntegrateFrame gives an indication of whether we should be updatign again with dt or if we should exi..." alt="" coords="187,5,361,47"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_app.html#a767c055c78bbf86b34bbd47e4b05ee01" title="Runs the program! Starts the update&#45;draw loop." alt="" coords="5,13,139,39"/>
+<area shape="rect" id="node1" title="IntegrateFrame gives an indication of whether we should be updatign again with dt or if we should exi..." alt="" coords="187,5,361,45"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_app.html#a767c055c78bbf86b34bbd47e4b05ee01" title="Runs the program! Starts the update&#45;draw loop." alt="" coords="5,13,139,38"/>
 </map>

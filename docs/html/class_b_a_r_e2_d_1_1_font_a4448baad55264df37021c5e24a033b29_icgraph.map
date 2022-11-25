@@ -1,4 +1,4 @@
 <map id="BARE2D::Font::init" name="BARE2D::Font::init">
-<area shape="rect" id="node1" title="Creates font resources." alt="" coords="244,13,379,39"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_resource_manager.html#a779c084be78d6e03a8083cb109b85509" title="Loads a font to the cache." alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node1" title="Creates font resources." alt="" coords="244,13,379,38"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_resource_manager.html#a779c084be78d6e03a8083cb109b85509" title="Loads a font to the cache." alt="" coords="5,5,196,45"/>
 </map>

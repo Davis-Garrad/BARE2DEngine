@@ -1,7 +1,7 @@
 <map id="BARE2D::FBORenderer::destroy" name="BARE2D::FBORenderer::destroy">
-<area shape="rect" id="node1" title="Frees all necessary memory." alt="" coords="5,27,169,69"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_renderer.html#a62d8bb52afdd8a38f96fe89677e03f53" title="Frees all necessary memory." alt="" coords="217,35,405,61"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a1932f8495f96a00b61f300b6220357da" title="Releases necessary memory." alt="" coords="460,5,621,32"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_shader_program.html#a5b58eb971ff8352683380938e263e9ad" title="Releases all bound objects and deletes any allocated stuff." alt="" coords="453,57,628,98"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a6c224737a43f43dbe7c9e25ecd47d1da" title="Unbinds the vao." alt="" coords="676,5,832,32"/>
+<area shape="rect" id="node1" title="Frees all necessary memory." alt="" coords="5,35,169,75"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_renderer.html#a62d8bb52afdd8a38f96fe89677e03f53" title="Frees all necessary memory." alt="" coords="217,42,405,67"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_shader_program.html#a5b58eb971ff8352683380938e263e9ad" title="Releases all bound objects and deletes any allocated stuff." alt="" coords="453,5,628,45"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a1932f8495f96a00b61f300b6220357da" title="Releases necessary memory." alt="" coords="460,70,621,95"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a6c224737a43f43dbe7c9e25ecd47d1da" title="Unbinds the vao." alt="" coords="676,70,832,95"/>
 </map>

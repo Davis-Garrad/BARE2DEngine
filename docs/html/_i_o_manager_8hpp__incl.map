@@ -1,8 +1,7 @@
 <map id="Source/IOManager.hpp" name="Source/IOManager.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="40,5,195,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="36,229,90,256"/>
-<area shape="rect" id="node3" title=" " alt="" coords="27,80,86,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="188,229,255,256"/>
-<area shape="rect" id="node5" href="$_i_o_manager__impl_8tcc.html" title=" " alt="" coords="110,80,248,107"/>
-<area shape="rect" id="node6" href="$_logger_8hpp.html" title=" " alt="" coords="136,155,222,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="79,5,234,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,79,60,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="85,79,143,104"/>
+<area shape="rect" id="node4" title=" " alt="" coords="167,79,234,104"/>
+<area shape="rect" id="node5" href="$_i_o_manager__impl_8tcc.html" title=" " alt="" coords="258,79,397,104"/>
 </map>

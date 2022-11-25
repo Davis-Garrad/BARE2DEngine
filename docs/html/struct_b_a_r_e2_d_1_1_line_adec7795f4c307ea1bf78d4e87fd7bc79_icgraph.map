@@ -1,8 +1,5 @@
 <map id="BARE2D::Line::construct" name="BARE2D::Line::construct">
-<area shape="rect" id="node1" title=" " alt="" coords="456,77,627,103"/>
-<area shape="rect" id="node2" href="$struct_b_a_r_e2_d_1_1_circle.html#a9b16ba07258cf092cef0ebdcb690b5c9" title=" " alt="" coords="228,15,408,42"/>
-<area shape="rect" id="node4" href="$struct_b_a_r_e2_d_1_1_rectangle.html#aa773e44c74598c24c065aa05a768a141" title=" " alt="" coords="243,69,393,111"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_debug_renderer.html#a6d21704f5a666d2b2e2095b53a3c0850" title="Draws a line." alt="" coords="231,135,405,176"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_debug_renderer.html#a53387c43bc4270cee538f3969a8e1c67" title="Draws a circle." alt="" coords="5,5,180,47"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_debug_renderer.html#a4ca37cab4b67c5d523293fb49753ab6d" title="Draws a rectangle." alt="" coords="5,71,180,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="233,35,404,60"/>
+<area shape="rect" id="node2" href="$struct_b_a_r_e2_d_1_1_circle.html#a9b16ba07258cf092cef0ebdcb690b5c9" title=" " alt="" coords="5,5,185,31"/>
+<area shape="rect" id="node3" href="$struct_b_a_r_e2_d_1_1_rectangle.html#aa773e44c74598c24c065aa05a768a141" title=" " alt="" coords="20,55,171,95"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="BARE2D::TexturelessRenderer::preRender" name="BARE2D::TexturelessRenderer::preRender">
+<area shape="rect" id="node1" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="5,5,209,45"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_shader_program.html#adfa74453d9bc2f1100e5d19bb45a5512" title="Similar to setUniform." alt="" coords="257,5,432,45"/>
+</map>

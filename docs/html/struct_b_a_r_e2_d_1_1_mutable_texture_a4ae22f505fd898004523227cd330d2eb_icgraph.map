@@ -1,4 +1,0 @@
-<map id="BARE2D::MutableTexture::setData" name="BARE2D::MutableTexture::setData">
-<area shape="rect" id="node1" title="Sets the data of the mutable texture, as well as updates the OpenGL context&#39;s texture data for it (us..." alt="" coords="227,5,400,47"/>
-<area shape="rect" id="node2" href="$struct_b_a_r_e2_d_1_1_mutable_texture.html#a435afd98683ca058bdfd8abcb0ad9529" title="Sets the data of the mutable texture, as well as updates the OpenGL context&#39;s texture data for it (us..." alt="" coords="5,5,179,47"/>
-</map>

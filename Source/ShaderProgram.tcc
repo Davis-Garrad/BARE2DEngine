@@ -1,5 +1,7 @@
 #pragma once
 
+#include <typeinfo>
+
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
 

@@ -20,7 +20,7 @@ var hierarchy =
     [ "BARE2D::CharacterGlyph", "struct_b_a_r_e2_d_1_1_character_glyph.html", null ],
     [ "BARE2D::Circle", "struct_b_a_r_e2_d_1_1_circle.html", null ],
     [ "BARE2D::Colour", "struct_b_a_r_e2_d_1_1_colour.html", null ],
-    [ "exception", null, [
+    [ "std::exception", null, [
       [ "utf8::exception", "classutf8_1_1exception.html", [
         [ "utf8::invalid_code_point", "classutf8_1_1invalid__code__point.html", null ],
         [ "utf8::invalid_utf16", "classutf8_1_1invalid__utf16.html", null ],
@@ -37,7 +37,7 @@ var hierarchy =
     ] ],
     [ "BARE2D::InputManager", "class_b_a_r_e2_d_1_1_input_manager.html", null ],
     [ "BARE2D::IOManager", "class_b_a_r_e2_d_1_1_i_o_manager.html", null ],
-    [ "iterator", null, [
+    [ "std::iterator", null, [
       [ "utf8::iterator< octet_iterator >", "classutf8_1_1iterator.html", null ],
       [ "utf8::unchecked::iterator< octet_iterator >", "classutf8_1_1unchecked_1_1iterator.html", null ]
     ] ],
@@ -60,7 +60,8 @@ var hierarchy =
         [ "BARE2D::FontRenderer", "class_b_a_r_e2_d_1_1_font_renderer.html", null ]
       ] ],
       [ "BARE2D::DebugRenderer", "class_b_a_r_e2_d_1_1_debug_renderer.html", null ],
-      [ "BARE2D::FBORenderer", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html", null ]
+      [ "BARE2D::FBORenderer", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html", null ],
+      [ "BARE2D::TexturelessRenderer", "class_b_a_r_e2_d_1_1_textureless_renderer.html", null ]
     ] ],
     [ "BARE2D::ResourceManager", "class_b_a_r_e2_d_1_1_resource_manager.html", null ],
     [ "BARE2D::Screen", "class_b_a_r_e2_d_1_1_screen.html", null ],
@@ -76,5 +77,12 @@ var hierarchy =
     [ "BARE2D::Vertex", "struct_b_a_r_e2_d_1_1_vertex.html", null ],
     [ "BARE2D::Window", "class_b_a_r_e2_d_1_1_window.html", null ],
     [ "BARE2D::XMLData", "class_b_a_r_e2_d_1_1_x_m_l_data.html", null ],
-    [ "BARE2D::XMLDataManager", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html", null ]
+    [ "BARE2D::XMLDataManager", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html", null ],
+    [ "unordered_map< std::string, BARE2D::Cache< unsigned int, BARE2D::XMLData > * >", "classstd_1_1unordered__map_3_01std_1_1string_00_01_b_a_r_e2_d_1_1_cache_3_01unsigned_01int_00_017de32dce4cb33931513df94ab001d9c8.html", null ],
+    [ "unordered_map< std::string, BARE2D::Font * >", "classstd_1_1unordered__map_3_01std_1_1string_00_01_b_a_r_e2_d_1_1_font_01_5_01_4.html", null ],
+    [ "unordered_map< std::string, BARE2D::LuaScript * >", "classstd_1_1unordered__map_3_01std_1_1string_00_01_b_a_r_e2_d_1_1_lua_script_01_5_01_4.html", null ],
+    [ "unordered_map< std::string, BARE2D::Music * >", "classstd_1_1unordered__map_3_01std_1_1string_00_01_b_a_r_e2_d_1_1_music_01_5_01_4.html", null ],
+    [ "unordered_map< std::string, BARE2D::MutableTexture * >", "classstd_1_1unordered__map_3_01std_1_1string_00_01_b_a_r_e2_d_1_1_mutable_texture_01_5_01_4.html", null ],
+    [ "unordered_map< std::string, BARE2D::Sound * >", "classstd_1_1unordered__map_3_01std_1_1string_00_01_b_a_r_e2_d_1_1_sound_01_5_01_4.html", null ],
+    [ "unordered_map< std::string, BARE2D::Texture * >", "classstd_1_1unordered__map_3_01std_1_1string_00_01_b_a_r_e2_d_1_1_texture_01_5_01_4.html", null ]
 ];

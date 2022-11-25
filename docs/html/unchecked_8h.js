@@ -1,9 +1,9 @@
 var unchecked_8h =
 [
-    [ "iterator", "classutf8_1_1unchecked_1_1iterator.html", "classutf8_1_1unchecked_1_1iterator" ],
+    [ "utf8::unchecked::iterator< octet_iterator >", "classutf8_1_1unchecked_1_1iterator.html", "classutf8_1_1unchecked_1_1iterator" ],
     [ "advance", "unchecked_8h.html#a66ea3b93a81a8f961e7a1700d13efc57", null ],
     [ "append", "unchecked_8h.html#acab3a56b1772ed871f36757883d63788", null ],
-    [ "distance", "unchecked_8h.html#a3796d7a15edc244a872a9ca559ea2693", null ],
+    [ "distance", "unchecked_8h.html#a033fb7223533ef6d9c92ae7c38f57138", null ],
     [ "next", "unchecked_8h.html#ac5932c0cbb2498a111d53d26fd82f260", null ],
     [ "peek_next", "unchecked_8h.html#aaf5ddbe24f8dbb83390e2d33d75b9ea1", null ],
     [ "previous", "unchecked_8h.html#a454cdd8f6b6771bd0425be1ccd94f788", null ],

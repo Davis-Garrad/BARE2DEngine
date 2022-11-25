@@ -26,6 +26,7 @@ var _b_a_r_e_errors_8hpp =
       [ "SDL_MIXER_CLOSE_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a302c7e07e257bacc806bef6f25576f3d", null ],
       [ "SDL_MIXER_LOAD_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a8c106f4878dae2d0ad02cd72ef80dc0b", null ],
       [ "SDL_MIXER_SOUND_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a55a6fde42c31348fccbcaad7ead6de1f", null ],
+      [ "NULL_PTR_ACCESS", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a914ca2cceda5a54e946a4212cab3b05d", null ],
       [ "OTHER_ERROR", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a5c0de8157fd24b5627deda20298b5c2d", null ],
       [ "CACHE_FAILURE", "_b_a_r_e_errors_8hpp.html#a598d6ee5637b8d61de038646a6674f15a66dc4c888c801d815b8f5f1f1038393c", null ]
     ] ],
@@ -41,7 +42,5 @@ var _b_a_r_e_errors_8hpp =
     [ "getErrString", "_b_a_r_e_errors_8hpp.html#a7951c5decc1f7edc3c4f78ed2f579c85", null ],
     [ "initGLErrorCallback", "_b_a_r_e_errors_8hpp.html#a2e37a4d16611398b81332bb834395984", null ],
     [ "throwError", "_b_a_r_e_errors_8hpp.html#a0d8f8a98bf559e6d2eda28ae744f486c", null ],
-    [ "throwFatalError", "_b_a_r_e_errors_8hpp.html#aed4332e42208fed2905a8b0845dad4d1", null ],
-    [ "GLErrorMinSeverity", "_b_a_r_e_errors_8hpp.html#a7ebdadee6e21138680eb929277d0da7b", null ],
-    [ "thrownErrors", "_b_a_r_e_errors_8hpp.html#a78e4606c66dcc65416419cade7db0255", null ]
+    [ "throwFatalError", "_b_a_r_e_errors_8hpp.html#aed4332e42208fed2905a8b0845dad4d1", null ]
 ];

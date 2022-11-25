@@ -1,11 +1,11 @@
 <map id="BARE2D::FBORenderer::createFBO" name="BARE2D::FBORenderer::createFBO">
-<area shape="rect" id="node1" title="Creates the OpenGL FBO instance and holds its handle in m_fboID;." alt="" coords="5,165,169,207"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aff19a68622b2fdf7033ffee1ab32a7c6" title="Creates all of the OpenGL textures, and takes their handles into m_colourTextureID,..." alt="" coords="222,104,386,145"/>
-<area shape="rect" id="node7" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="217,202,391,229"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a1815cdbe70cc6fdbc66ec69a7131b5be" title="Binds a texture to target in the currently active texture slot." alt="" coords="460,5,615,47"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_g_l_context_manager.html#a733646522bf07c33576f9a1e0bb76c28" title=" " alt="" coords="439,71,636,112"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a529bb80b0bd7bbf86f10be7c30be514c" title="Sets the active texture &quot;slot&quot;. This can be GL_TEXTURE0 to GL_TEXTURE8 (I think. Check the literature..." alt="" coords="460,136,615,177"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a62f46a348cc1f4e91fe3ab48c9a5cc1b" title=" " alt="" coords="684,71,839,112"/>
-<area shape="rect" id="node8" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="457,202,617,229"/>
-<area shape="rect" id="node9" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="465,253,609,279"/>
+<area shape="rect" id="node1" title="Creates the OpenGL FBO instance and holds its handle in m_fboID;." alt="" coords="5,163,169,203"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aff19a68622b2fdf7033ffee1ab32a7c6" title="Creates all of the OpenGL textures, and takes their handles into m_colourTextureID,..." alt="" coords="222,101,386,141"/>
+<area shape="rect" id="node6" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="217,198,391,223"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a1815cdbe70cc6fdbc66ec69a7131b5be" title="Binds a texture to target in the currently active texture slot." alt="" coords="460,5,615,45"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_g_l_context_manager.html#a733646522bf07c33576f9a1e0bb76c28" title=" " alt="" coords="439,69,636,109"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a529bb80b0bd7bbf86f10be7c30be514c" title="Sets the active texture &quot;slot&quot;. This can be GL_TEXTURE0 to GL_TEXTURE8 (I think. Check the literature..." alt="" coords="460,133,615,173"/>
+<area shape="rect" id="node7" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="457,198,617,223"/>
+<area shape="rect" id="node9" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="465,247,609,273"/>
+<area shape="rect" id="node8" href="$namespace_b_a_r_e2_d.html#a7951c5decc1f7edc3c4f78ed2f579c85" title="Returns the string representing/explaining the error that occurred." alt="" coords="684,223,837,249"/>
 </map>

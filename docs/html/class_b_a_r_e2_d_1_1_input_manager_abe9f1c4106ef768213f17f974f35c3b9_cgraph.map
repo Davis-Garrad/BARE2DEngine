@@ -1,5 +1,5 @@
 <map id="BARE2D::InputManager::isKeyPressed" name="BARE2D::InputManager::isKeyPressed">
-<area shape="rect" id="node1" title="Checks if the key has just been pressed." alt="" coords="5,39,168,80"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_input_manager.html#aa0cae9c2bef867659510a5873d58f2ad" title="Checks if the key is down at all." alt="" coords="216,5,379,47"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_input_manager.html#a5a574a794a5f14be2ec97c62d1fa127d" title="Checks if the key was down last frame." alt="" coords="216,71,379,112"/>
+<area shape="rect" id="node1" title="Checks if the key has just been pressed." alt="" coords="5,37,168,77"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_input_manager.html#aa0cae9c2bef867659510a5873d58f2ad" title="Checks if the key is down at all." alt="" coords="216,5,379,45"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_input_manager.html#a5a574a794a5f14be2ec97c62d1fa127d" title="Checks if the key was down last frame." alt="" coords="216,69,379,109"/>
 </map>

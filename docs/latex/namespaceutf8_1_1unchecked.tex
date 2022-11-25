@@ -1,6 +1,6 @@
 \hypertarget{namespaceutf8_1_1unchecked}{}\doxysection{utf8\+::unchecked Namespace Reference}
 \label{namespaceutf8_1_1unchecked}\index{utf8::unchecked@{utf8::unchecked}}
-\doxysubsection*{Classes}
+\doxysubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classutf8_1_1unchecked_1_1iterator}{iterator}}
@@ -20,7 +20,7 @@ class \mbox{\hyperlink{classutf8_1_1unchecked_1_1iterator}{iterator}}
 \item 
 {\footnotesize template$<$typename octet\+\_\+iterator , typename distance\+\_\+type $>$ }\\void \mbox{\hyperlink{namespaceutf8_1_1unchecked_a66ea3b93a81a8f961e7a1700d13efc57}{advance}} (octet\+\_\+iterator \&it, distance\+\_\+type n)
 \item 
-{\footnotesize template$<$typename octet\+\_\+iterator $>$ }\\std\+::iterator\+\_\+traits$<$ octet\+\_\+iterator $>$\+::difference\+\_\+type \mbox{\hyperlink{namespaceutf8_1_1unchecked_a3796d7a15edc244a872a9ca559ea2693}{distance}} (octet\+\_\+iterator first, octet\+\_\+iterator last)
+{\footnotesize template$<$typename octet\+\_\+iterator $>$ }\\std\+::iterator\+\_\+traits$<$ octet\+\_\+iterator $>$\+::difference\+\_\+type \mbox{\hyperlink{namespaceutf8_1_1unchecked_a033fb7223533ef6d9c92ae7c38f57138}{distance}} (octet\+\_\+iterator first, octet\+\_\+iterator last)
 \item 
 {\footnotesize template$<$typename u16bit\+\_\+iterator , typename octet\+\_\+iterator $>$ }\\octet\+\_\+iterator \mbox{\hyperlink{namespaceutf8_1_1unchecked_adfbd29a875d0aafeeaae511dc1aa5d77}{utf16to8}} (u16bit\+\_\+iterator start, u16bit\+\_\+iterator end, octet\+\_\+iterator result)
 \item 
@@ -44,6 +44,12 @@ void utf8\+::unchecked\+::advance (\begin{DoxyParamCaption}\item[{octet\+\_\+ite
 
 Definition at line \mbox{\hyperlink{unchecked_8h_source_l00113}{113}} of file \mbox{\hyperlink{unchecked_8h_source}{unchecked.\+h}}.
 
+
+
+References \mbox{\hyperlink{unchecked_8h_source_l00061}{next()}}.
+
+Here is the call graph for this function\+:
+% FIG 0
 \mbox{\Hypertarget{namespaceutf8_1_1unchecked_acab3a56b1772ed871f36757883d63788}\label{namespaceutf8_1_1unchecked_acab3a56b1772ed871f36757883d63788}} 
 \index{utf8::unchecked@{utf8::unchecked}!append@{append}}
 \index{append@{append}!utf8::unchecked@{utf8::unchecked}}
@@ -55,17 +61,29 @@ octet\+\_\+iterator utf8\+::unchecked\+::append (\begin{DoxyParamCaption}\item[{
 
 Definition at line \mbox{\hyperlink{unchecked_8h_source_l00038}{38}} of file \mbox{\hyperlink{unchecked_8h_source}{unchecked.\+h}}.
 
-\mbox{\Hypertarget{namespaceutf8_1_1unchecked_a3796d7a15edc244a872a9ca559ea2693}\label{namespaceutf8_1_1unchecked_a3796d7a15edc244a872a9ca559ea2693}} 
+
+
+Referenced by \mbox{\hyperlink{unchecked_8h_source_l00130}{utf16to8()}}, and \mbox{\hyperlink{unchecked_8h_source_l00160}{utf32to8()}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{namespaceutf8_1_1unchecked_a033fb7223533ef6d9c92ae7c38f57138}\label{namespaceutf8_1_1unchecked_a033fb7223533ef6d9c92ae7c38f57138}} 
 \index{utf8::unchecked@{utf8::unchecked}!distance@{distance}}
 \index{distance@{distance}!utf8::unchecked@{utf8::unchecked}}
 \doxysubsubsection{\texorpdfstring{distance()}{distance()}}
 {\footnotesize\ttfamily template$<$typename octet\+\_\+iterator $>$ \\
-std\+::iterator\+\_\+traits$<$octet\+\_\+iterator$>$\+::difference\+\_\+type utf8\+::unchecked\+::distance (\begin{DoxyParamCaption}\item[{octet\+\_\+iterator}]{first,  }\item[{octet\+\_\+iterator}]{last }\end{DoxyParamCaption})}
+std\+::iterator\+\_\+traits$<$ octet\+\_\+iterator $>$\+::difference\+\_\+type utf8\+::unchecked\+::distance (\begin{DoxyParamCaption}\item[{octet\+\_\+iterator}]{first,  }\item[{octet\+\_\+iterator}]{last }\end{DoxyParamCaption})}
 
 
 
 Definition at line \mbox{\hyperlink{unchecked_8h_source_l00121}{121}} of file \mbox{\hyperlink{unchecked_8h_source}{unchecked.\+h}}.
 
+
+
+References \mbox{\hyperlink{unchecked_8h_source_l00061}{next()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
 \mbox{\Hypertarget{namespaceutf8_1_1unchecked_ac5932c0cbb2498a111d53d26fd82f260}\label{namespaceutf8_1_1unchecked_ac5932c0cbb2498a111d53d26fd82f260}} 
 \index{utf8::unchecked@{utf8::unchecked}!next@{next}}
 \index{next@{next}!utf8::unchecked@{utf8::unchecked}}
@@ -77,6 +95,18 @@ Definition at line \mbox{\hyperlink{unchecked_8h_source_l00121}{121}} of file \m
 
 Definition at line \mbox{\hyperlink{unchecked_8h_source_l00061}{61}} of file \mbox{\hyperlink{unchecked_8h_source}{unchecked.\+h}}.
 
+
+
+References \mbox{\hyperlink{core_8h_source_l00059}{utf8\+::internal\+::mask8()}}, and \mbox{\hyperlink{core_8h_source_l00100}{utf8\+::internal\+::sequence\+\_\+length()}}.
+
+
+
+Referenced by \mbox{\hyperlink{unchecked_8h_source_l00113}{advance()}}, \mbox{\hyperlink{unchecked_8h_source_l00121}{distance()}}, \mbox{\hyperlink{unchecked_8h_source_l00186}{utf8\+::unchecked\+::iterator$<$ octet\+\_\+iterator $>$\+::operator$\ast$()}}, \mbox{\hyperlink{unchecked_8h_source_l00092}{peek\+\_\+next()}}, \mbox{\hyperlink{unchecked_8h_source_l00098}{prior()}}, \mbox{\hyperlink{unchecked_8h_source_l00145}{utf8to16()}}, and \mbox{\hyperlink{unchecked_8h_source_l00169}{utf8to32()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
 \mbox{\Hypertarget{namespaceutf8_1_1unchecked_aaf5ddbe24f8dbb83390e2d33d75b9ea1}\label{namespaceutf8_1_1unchecked_aaf5ddbe24f8dbb83390e2d33d75b9ea1}} 
 \index{utf8::unchecked@{utf8::unchecked}!peek\_next@{peek\_next}}
 \index{peek\_next@{peek\_next}!utf8::unchecked@{utf8::unchecked}}
@@ -88,6 +118,12 @@ Definition at line \mbox{\hyperlink{unchecked_8h_source_l00061}{61}} of file \mb
 
 Definition at line \mbox{\hyperlink{unchecked_8h_source_l00092}{92}} of file \mbox{\hyperlink{unchecked_8h_source}{unchecked.\+h}}.
 
+
+
+References \mbox{\hyperlink{unchecked_8h_source_l00061}{next()}}.
+
+Here is the call graph for this function\+:
+% FIG 5
 \mbox{\Hypertarget{namespaceutf8_1_1unchecked_a454cdd8f6b6771bd0425be1ccd94f788}\label{namespaceutf8_1_1unchecked_a454cdd8f6b6771bd0425be1ccd94f788}} 
 \index{utf8::unchecked@{utf8::unchecked}!previous@{previous}}
 \index{previous@{previous}!utf8::unchecked@{utf8::unchecked}}
@@ -99,6 +135,12 @@ Definition at line \mbox{\hyperlink{unchecked_8h_source_l00092}{92}} of file \mb
 
 Definition at line \mbox{\hyperlink{unchecked_8h_source_l00107}{107}} of file \mbox{\hyperlink{unchecked_8h_source}{unchecked.\+h}}.
 
+
+
+References \mbox{\hyperlink{unchecked_8h_source_l00098}{prior()}}.
+
+Here is the call graph for this function\+:
+% FIG 6
 \mbox{\Hypertarget{namespaceutf8_1_1unchecked_ad2c0e4b9693713ac18ee543e214b3ef9}\label{namespaceutf8_1_1unchecked_ad2c0e4b9693713ac18ee543e214b3ef9}} 
 \index{utf8::unchecked@{utf8::unchecked}!prior@{prior}}
 \index{prior@{prior}!utf8::unchecked@{utf8::unchecked}}
@@ -110,6 +152,18 @@ Definition at line \mbox{\hyperlink{unchecked_8h_source_l00107}{107}} of file \m
 
 Definition at line \mbox{\hyperlink{unchecked_8h_source_l00098}{98}} of file \mbox{\hyperlink{unchecked_8h_source}{unchecked.\+h}}.
 
+
+
+References \mbox{\hyperlink{core_8h_source_l00069}{utf8\+::internal\+::is\+\_\+trail()}}, and \mbox{\hyperlink{unchecked_8h_source_l00061}{next()}}.
+
+
+
+Referenced by \mbox{\hyperlink{unchecked_8h_source_l00210}{utf8\+::unchecked\+::iterator$<$ octet\+\_\+iterator $>$\+::operator-\/-\/()}}, and \mbox{\hyperlink{unchecked_8h_source_l00107}{previous()}}.
+
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
 \mbox{\Hypertarget{namespaceutf8_1_1unchecked_adfbd29a875d0aafeeaae511dc1aa5d77}\label{namespaceutf8_1_1unchecked_adfbd29a875d0aafeeaae511dc1aa5d77}} 
 \index{utf8::unchecked@{utf8::unchecked}!utf16to8@{utf16to8}}
 \index{utf16to8@{utf16to8}!utf8::unchecked@{utf8::unchecked}}
@@ -123,8 +177,10 @@ Definition at line \mbox{\hyperlink{unchecked_8h_source_l00130}{130}} of file \m
 
 
 
-References \mbox{\hyperlink{core_8h_source_l00053}{utf8\+::internal\+::\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+O\+F\+F\+S\+ET}}.
+References \mbox{\hyperlink{unchecked_8h_source_l00038}{append()}}, \mbox{\hyperlink{core_8h_source_l00075}{utf8\+::internal\+::is\+\_\+lead\+\_\+surrogate()}}, \mbox{\hyperlink{core_8h_source_l00064}{utf8\+::internal\+::mask16()}}, and \mbox{\hyperlink{core_8h_source_l00053}{utf8\+::internal\+::\+SURROGATE\+\_\+\+OFFSET}}.
 
+Here is the call graph for this function\+:
+% FIG 9
 \mbox{\Hypertarget{namespaceutf8_1_1unchecked_af4edb29ad18a1f389ac968a93629e9fb}\label{namespaceutf8_1_1unchecked_af4edb29ad18a1f389ac968a93629e9fb}} 
 \index{utf8::unchecked@{utf8::unchecked}!utf32to8@{utf32to8}}
 \index{utf32to8@{utf32to8}!utf8::unchecked@{utf8::unchecked}}
@@ -136,6 +192,12 @@ octet\+\_\+iterator utf8\+::unchecked\+::utf32to8 (\begin{DoxyParamCaption}\item
 
 Definition at line \mbox{\hyperlink{unchecked_8h_source_l00160}{160}} of file \mbox{\hyperlink{unchecked_8h_source}{unchecked.\+h}}.
 
+
+
+References \mbox{\hyperlink{unchecked_8h_source_l00038}{append()}}.
+
+Here is the call graph for this function\+:
+% FIG 10
 \mbox{\Hypertarget{namespaceutf8_1_1unchecked_ae323b9faa6a47cb8d0aeaea44c1787eb}\label{namespaceutf8_1_1unchecked_ae323b9faa6a47cb8d0aeaea44c1787eb}} 
 \index{utf8::unchecked@{utf8::unchecked}!utf8to16@{utf8to16}}
 \index{utf8to16@{utf8to16}!utf8::unchecked@{utf8::unchecked}}
@@ -149,8 +211,10 @@ Definition at line \mbox{\hyperlink{unchecked_8h_source_l00145}{145}} of file \m
 
 
 
-References \mbox{\hyperlink{core_8h_source_l00052}{utf8\+::internal\+::\+L\+E\+A\+D\+\_\+\+O\+F\+F\+S\+ET}}, and \mbox{\hyperlink{core_8h_source_l00050}{utf8\+::internal\+::\+T\+R\+A\+I\+L\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN}}.
+References \mbox{\hyperlink{core_8h_source_l00052}{utf8\+::internal\+::\+LEAD\+\_\+\+OFFSET}}, \mbox{\hyperlink{unchecked_8h_source_l00061}{next()}}, and \mbox{\hyperlink{core_8h_source_l00050}{utf8\+::internal\+::\+TRAIL\+\_\+\+SURROGATE\+\_\+\+MIN}}.
 
+Here is the call graph for this function\+:
+% FIG 11
 \mbox{\Hypertarget{namespaceutf8_1_1unchecked_aa4b554922a06a7487118982ff41da590}\label{namespaceutf8_1_1unchecked_aa4b554922a06a7487118982ff41da590}} 
 \index{utf8::unchecked@{utf8::unchecked}!utf8to32@{utf8to32}}
 \index{utf8to32@{utf8to32}!utf8::unchecked@{utf8::unchecked}}
@@ -162,3 +226,9 @@ u32bit\+\_\+iterator utf8\+::unchecked\+::utf8to32 (\begin{DoxyParamCaption}\ite
 
 Definition at line \mbox{\hyperlink{unchecked_8h_source_l00169}{169}} of file \mbox{\hyperlink{unchecked_8h_source}{unchecked.\+h}}.
 
+
+
+References \mbox{\hyperlink{unchecked_8h_source_l00061}{next()}}.
+
+Here is the call graph for this function\+:
+% FIG 12

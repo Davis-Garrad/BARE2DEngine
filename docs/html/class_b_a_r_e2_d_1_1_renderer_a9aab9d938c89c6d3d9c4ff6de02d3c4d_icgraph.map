@@ -1,4 +1,4 @@
 <map id="BARE2D::Renderer::preRender" name="BARE2D::Renderer::preRender">
-<area shape="rect" id="node1" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="235,5,440,32"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_renderer.html#af6c7b543d54be3ce30224e21d5606be3" title="Actually renders the contents to the screen!" alt="" coords="5,5,187,32"/>
+<area shape="rect" id="node1" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="235,5,440,31"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_renderer.html#af6c7b543d54be3ce30224e21d5606be3" title="Actually renders the contents to the screen!" alt="" coords="5,5,187,31"/>
 </map>

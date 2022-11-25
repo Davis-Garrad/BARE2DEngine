@@ -9,6 +9,7 @@ var class_b_a_r_e2_d_1_1_renderer =
     [ "getShader", "class_b_a_r_e2_d_1_1_renderer.html#a429bc2941f762e04ada60f7a17b46d99", null ],
     [ "init", "class_b_a_r_e2_d_1_1_renderer.html#addafa95f7a6f451e359d1300031bdde1", null ],
     [ "initUniforms", "class_b_a_r_e2_d_1_1_renderer.html#a371f0d8b66a1fecb592b6d8b2b3cb1a0", null ],
+    [ "link", "class_b_a_r_e2_d_1_1_renderer.html#a5ff18e853da7784b3085181c5e52e8ac", null ],
     [ "preRender", "class_b_a_r_e2_d_1_1_renderer.html#a9aab9d938c89c6d3d9c4ff6de02d3c4d", null ],
     [ "render", "class_b_a_r_e2_d_1_1_renderer.html#af6c7b543d54be3ce30224e21d5606be3", null ],
     [ "m_batches", "class_b_a_r_e2_d_1_1_renderer.html#a4a5d71addd82c34de80ab86704a4f847", null ],

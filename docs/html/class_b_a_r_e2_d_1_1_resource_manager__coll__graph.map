@@ -1,18 +1,18 @@
 <map id="BARE2D::ResourceManager" name="BARE2D::ResourceManager">
-<area shape="rect" id="node1" title="The resource manager manages resources. Groundbreaking news, I know. In short, the resource manager l..." alt="" coords="1103,298,1293,325"/>
-<area shape="rect" id="node2" title=" " alt="" coords="788,94,843,121"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="726,291,905,332"/>
-<area shape="rect" id="node4" title=" " alt="" coords="298,176,486,217"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_cache.html" title="This is a skeleton cache class. This can only be used by the ResourceManager or other classes who act..." alt="" coords="307,334,477,361"/>
-<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="699,225,932,267"/>
-<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="730,145,901,187"/>
-<area shape="rect" id="node11" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="722,356,909,397"/>
-<area shape="rect" id="node13" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="716,421,915,463"/>
-<area shape="rect" id="node15" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="725,521,906,563"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,334,175,361"/>
-<area shape="rect" id="node8" title=" " alt="" coords="271,71,513,112"/>
-<area shape="rect" id="node10" title=" " alt="" coords="303,5,481,47"/>
-<area shape="rect" id="node12" title=" " alt="" coords="294,461,490,503"/>
-<area shape="rect" id="node14" title=" " alt="" coords="288,567,496,608"/>
-<area shape="rect" id="node16" title=" " alt="" coords="297,632,487,673"/>
+<area shape="rect" id="node1" title="The resource manager manages resources. Groundbreaking news, I know. In short, the resource manager l..." alt="" coords="1103,298,1293,323"/>
+<area shape="rect" id="node2" title=" " alt="" coords="788,97,843,122"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="722,291,909,331"/>
+<area shape="rect" id="node4" href="$classstd_1_1unordered__map_3_01std_1_1string_00_01_b_a_r_e2_d_1_1_texture_01_5_01_4.html" title=" " alt="" coords="294,175,490,215"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_cache.html" title="This is a skeleton cache class. This can only be used by the ResourceManager or other classes who act..." alt="" coords="307,333,477,358"/>
+<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="699,227,932,267"/>
+<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="725,147,906,187"/>
+<area shape="rect" id="node11" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="726,355,905,395"/>
+<area shape="rect" id="node13" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="716,419,915,459"/>
+<area shape="rect" id="node15" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="730,520,901,560"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,333,175,358"/>
+<area shape="rect" id="node8" href="$classstd_1_1unordered__map_3_01std_1_1string_00_01_b_a_r_e2_d_1_1_mutable_texture_01_5_01_4.html" title=" " alt="" coords="271,69,513,109"/>
+<area shape="rect" id="node10" href="$classstd_1_1unordered__map_3_01std_1_1string_00_01_b_a_r_e2_d_1_1_sound_01_5_01_4.html" title=" " alt="" coords="297,5,487,45"/>
+<area shape="rect" id="node12" href="$classstd_1_1unordered__map_3_01std_1_1string_00_01_b_a_r_e2_d_1_1_music_01_5_01_4.html" title=" " alt="" coords="298,460,486,500"/>
+<area shape="rect" id="node14" href="$classstd_1_1unordered__map_3_01std_1_1string_00_01_b_a_r_e2_d_1_1_lua_script_01_5_01_4.html" title=" " alt="" coords="288,565,496,605"/>
+<area shape="rect" id="node16" href="$classstd_1_1unordered__map_3_01std_1_1string_00_01_b_a_r_e2_d_1_1_font_01_5_01_4.html" title=" " alt="" coords="303,629,481,669"/>
 </map>

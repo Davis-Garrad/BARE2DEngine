@@ -1,13 +1,12 @@
 <map id="BARE2D::ShaderProgram::compileShaders" name="BARE2D::ShaderProgram::compileShaders">
-<area shape="rect" id="node1" title="Compiles the shaders. Does not link them." alt="" coords="5,144,180,185"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_shader_program.html#a805e1e0c2b0ecd5d9625deed62d45c1c" title="Similar to compileShaders, this just compiles the shaders." alt="" coords="434,71,629,112"/>
-<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_i_o_manager.html#a22c857b612a97f087c27d5c0120acc43" title=" " alt="" coords="228,173,384,215"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_shader_program.html#a2b1206fc5359147dbce6be72051d44c6" title="Compiles a shader from source with OpenGL id." alt="" coords="679,5,865,47"/>
-<area shape="rect" id="node4" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="913,71,1087,98"/>
-<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_shader_program.html#a5b58eb971ff8352683380938e263e9ad" title="Releases all bound objects and deletes any allocated stuff." alt="" coords="685,123,859,164"/>
-<area shape="rect" id="node5" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="1135,46,1295,73"/>
-<area shape="rect" id="node6" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="1143,97,1287,123"/>
-<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec" title=" " alt="" coords="432,181,631,207"/>
-<area shape="rect" id="node11" href="$class_b_a_r_e2_d_1_1_logger.html#a76c97e021ee75d17defbc794f68a965b" title="Logs a message to a file and the terminal." alt="" coords="457,231,605,258"/>
-<area shape="rect" id="node10" href="$class_b_a_r_e2_d_1_1_logger.html#a731b4fafcc2878fe66360b1c9c0febdc" title=" " alt="" coords="687,189,857,215"/>
+<area shape="rect" id="node1" title="Compiles the shaders. Does not link them." alt="" coords="5,127,180,167"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_shader_program.html#a805e1e0c2b0ecd5d9625deed62d45c1c" title="Similar to compileShaders, this just compiles the shaders." alt="" coords="228,63,423,103"/>
+<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_resource_manager.html#a1a07f9d4bebd35321669d3fb0049962e" title="Returns the assets path prefix. Pretty simple." alt="" coords="230,127,421,167"/>
+<area shape="rect" id="node10" href="$class_b_a_r_e2_d_1_1_i_o_manager.html#a41811805a88efeab7589a0e0c9015f90" title="Loads a file into a buffer." alt="" coords="247,191,403,231"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_shader_program.html#a2b1206fc5359147dbce6be72051d44c6" title="Compiles a shader from source with OpenGL id." alt="" coords="471,5,657,45"/>
+<area shape="rect" id="node4" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="705,42,879,67"/>
+<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_shader_program.html#a5b58eb971ff8352683380938e263e9ad" title="Releases all bound objects and deletes any allocated stuff." alt="" coords="477,120,651,160"/>
+<area shape="rect" id="node5" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="927,17,1087,42"/>
+<area shape="rect" id="node7" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="935,66,1079,91"/>
+<area shape="rect" id="node6" href="$namespace_b_a_r_e2_d.html#a7951c5decc1f7edc3c4f78ed2f579c85" title="Returns the string representing/explaining the error that occurred." alt="" coords="1135,42,1288,67"/>
 </map>

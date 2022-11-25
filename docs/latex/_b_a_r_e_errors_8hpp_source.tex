@@ -1,91 +1,91 @@
-\hypertarget{_b_a_r_e_errors_8hpp_source}{}\doxysection{B\+A\+R\+E\+Errors.\+hpp}
+\hypertarget{_b_a_r_e_errors_8hpp_source}{}\doxysection{BAREErrors.\+hpp}
 \label{_b_a_r_e_errors_8hpp_source}\index{Source/BAREErrors.hpp@{Source/BAREErrors.hpp}}
-
+\mbox{\hyperlink{_b_a_r_e_errors_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
-\DoxyCodeLine{00002 }
-\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{string}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{vector}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00005 }
-\DoxyCodeLine{00006 \textcolor{comment}{/// PLEASE NOTE THAT IF MINGW BREAKS, THIS IS PROBABLY WHY}}
-\DoxyCodeLine{00007 \textcolor{comment}{/**}}
-\DoxyCodeLine{00008 \textcolor{comment}{ * @brief De-\/mangles a typeid.name() return value}}
-\DoxyCodeLine{00009 \textcolor{comment}{ * @param mangled The mangled typeid.name() return value}}
-\DoxyCodeLine{00010 \textcolor{comment}{ * @return A demangled version of mangled.}}
-\DoxyCodeLine{00011 \textcolor{comment}{ */}}
-\DoxyCodeLine{00012 \textcolor{keyword}{extern} std::string \mbox{\hyperlink{_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6}{demangle}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* mangled);}
-\DoxyCodeLine{00013 }
-\DoxyCodeLine{00014 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}}
-\DoxyCodeLine{00015 \{}
-\DoxyCodeLine{00016     \textcolor{comment}{/**}}
-\DoxyCodeLine{00017 \textcolor{comment}{     * @brief Represents a specific type of error that has occured.}}
-\DoxyCodeLine{00018 \textcolor{comment}{     */}}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00019}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{00019}}     \textcolor{keyword}{enum} \textcolor{keyword}{class} \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} \{}
-\DoxyCodeLine{00020         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a2eea2c536f4e062c3b1832f9cea1356d}{SDL\_FAILURE}},}
-\DoxyCodeLine{00021         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aac184187fe6248f102d81fc64e36c57d}{GL\_FAILURE\_VERSION}},}
-\DoxyCodeLine{00022         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aed6ff68f5f52346f2c0754edb81b83ed}{DOUBLE\_INIT}},}
-\DoxyCodeLine{00023         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aa4c46509c81b14752ae8ff94452ff486}{GLEW\_FAILURE}},}
-\DoxyCodeLine{00024         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a804b6ec52f621f93ab2f5026201f0d76}{FILE\_FAILURE}},}
-\DoxyCodeLine{00025         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a875ae376eb2fbd99c364b0c2ed42fedc}{TEXTURE\_FAILURE}},}
-\DoxyCodeLine{00026         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a1f208845587ac9c0c53c388d4d385b1a}{VERTEX\_SHADER\_FAILURE}},}
-\DoxyCodeLine{00027         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad860107dd407ff9736d6208998d710f6}{FRAGMENT\_SHADER\_FAILURE}},}
-\DoxyCodeLine{00028         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad6e29903fb0c6eb8c57d20d9ad478d9e}{UNIFORM\_NOT\_FOUND}},}
-\DoxyCodeLine{00029         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abaa8fdfa9df78eba172c4aaa8b8046a2}{SHADER\_COMPILE\_FAILURE}},}
-\DoxyCodeLine{00030         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15af2f6cbcd601921a638724130311f22cd}{SHADER\_LINK\_FAILURE}},}
-\DoxyCodeLine{00031         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8bc03ea7709e07920eab3b6c56df1fd8}{GLSL\_PROGRAM\_FAILURE}},}
-\DoxyCodeLine{00032         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a59e2044a4165c83216dbbca34417462b}{FONT\_FAILURE}},}
-\DoxyCodeLine{00033         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a56134db1e8559ae4b32bf967c15fc4df}{FBO\_FAILURE}},}
-\DoxyCodeLine{00034         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a396430326452fe792ad9891baac4e76b}{LOGGER\_FAILURE}},}
-\DoxyCodeLine{00035         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{XML\_FAILURE}},}
-\DoxyCodeLine{00036         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abcb313a5c9f8965d7b75833af33d16be}{UNINITIALIZED\_FUNCTION}},}
-\DoxyCodeLine{00037         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba}{LUA\_FAILURE}},}
-\DoxyCodeLine{00038         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a532a71eb42f790768ea7b8a0fc21c7f7}{SDL\_MIXER\_FLAC\_FAILURE}},}
-\DoxyCodeLine{00039         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a270d890766f0830b9a49e81e737e9646}{SDL\_MIXER\_OGG\_FAILURE}},}
-\DoxyCodeLine{00040         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a3279ee465d768abc31baf3fa4a04a939}{SDL\_MIXER\_MP3\_FAILURE}},}
-\DoxyCodeLine{00041         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a558725ad5285e00d8e0ecc6659151af6}{SDL\_MIXER\_MOD\_FAILURE}},}
-\DoxyCodeLine{00042         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a302c7e07e257bacc806bef6f25576f3d}{SDL\_MIXER\_CLOSE\_FAILURE}},}
-\DoxyCodeLine{00043         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8c106f4878dae2d0ad02cd72ef80dc0b}{SDL\_MIXER\_LOAD\_FAILURE}},}
-\DoxyCodeLine{00044         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a55a6fde42c31348fccbcaad7ead6de1f}{SDL\_MIXER\_SOUND\_FAILURE}},}
-\DoxyCodeLine{00045         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a5c0de8157fd24b5627deda20298b5c2d}{OTHER\_ERROR}},}
-\DoxyCodeLine{00046         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a66dc4c888c801d815b8f5f1f1038393c}{CACHE\_FAILURE}}}
-\DoxyCodeLine{00047     \};}
-\DoxyCodeLine{00048 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00049}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{00049}}     \textcolor{keyword}{enum} \textcolor{keyword}{class} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}} \{ \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{NOTIF}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88}{LOW}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c}{MED}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c}{HIGH}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3}{UNKNOWN}} \};}
-\DoxyCodeLine{00050 }
-\DoxyCodeLine{00051     \textcolor{keyword}{extern} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}} \mbox{\hyperlink{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}{GLErrorMinSeverity}};}
-\DoxyCodeLine{00052 }
-\DoxyCodeLine{00053     \textcolor{comment}{/**}}
-\DoxyCodeLine{00054 \textcolor{comment}{     * @brief Returns the string representing/explaining the error that occurred.}}
-\DoxyCodeLine{00055 \textcolor{comment}{     * @param err The error enum, which a function returns.}}
-\DoxyCodeLine{00056 \textcolor{comment}{     * @return The representative string.}}
-\DoxyCodeLine{00057 \textcolor{comment}{     */}}
-\DoxyCodeLine{00058     \textcolor{keyword}{extern} std::string \mbox{\hyperlink{namespace_b_a_r_e2_d_a7951c5decc1f7edc3c4f78ed2f579c85}{getErrString}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} err);}
-\DoxyCodeLine{00059 }
-\DoxyCodeLine{00060     \textcolor{comment}{/**}}
-\DoxyCodeLine{00061 \textcolor{comment}{     * @brief Throws an error (fatal). Also calls displayErrors and exits the program.}}
-\DoxyCodeLine{00062 \textcolor{comment}{     * @param err The type of error to throw.}}
-\DoxyCodeLine{00063 \textcolor{comment}{     * @param message (Optional) The message to display along with the error.}}
-\DoxyCodeLine{00064 \textcolor{comment}{     */}}
-\DoxyCodeLine{00065     \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} err, std::string message = \textcolor{stringliteral}{""});}
-\DoxyCodeLine{00066 }
-\DoxyCodeLine{00067     \textcolor{comment}{/**}}
-\DoxyCodeLine{00068 \textcolor{comment}{     * @brief Throws an error silently. Adds it to the pile.}}
-\DoxyCodeLine{00069 \textcolor{comment}{     * @param err The error to throw.}}
-\DoxyCodeLine{00070 \textcolor{comment}{     * @param message (Optional) The message to display along with the error.}}
-\DoxyCodeLine{00071 \textcolor{comment}{     */}}
-\DoxyCodeLine{00072     \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} err, std::string message = \textcolor{stringliteral}{""});}
-\DoxyCodeLine{00073 }
-\DoxyCodeLine{00074     \textcolor{comment}{/**}}
-\DoxyCodeLine{00075 \textcolor{comment}{     * @brief Displays the latest thrown errors (really just all the thrown errors) in the console.}}
-\DoxyCodeLine{00076 \textcolor{comment}{     */}}
-\DoxyCodeLine{00077     \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{displayErrors}}();}
-\DoxyCodeLine{00078 }
-\DoxyCodeLine{00079     \textcolor{comment}{/**}}
-\DoxyCodeLine{00080 \textcolor{comment}{     * @brief Initializes the GL Debug Message Callback function, and enables debug output straight from OpenGL}}
-\DoxyCodeLine{00081 \textcolor{comment}{     */}}
-\DoxyCodeLine{00082     \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984}{initGLErrorCallback}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}} minSeverity = \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{NOTIF}});}
-\DoxyCodeLine{00083 }
-\DoxyCodeLine{00084     \textcolor{keyword}{extern} std::vector<\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}> \mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{thrownErrors}};}
-\DoxyCodeLine{00085 \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00003}00003 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00004}00004 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00005}00005 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00006}00006 \textcolor{comment}{/// PLEASE NOTE THAT IF MINGW BREAKS, THIS IS PROBABLY WHY}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00007}00007 \textcolor{comment}{}\textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00008}00008 \textcolor{comment}{ * @brief De-\/mangles a typeid.name() return value}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00009}00009 \textcolor{comment}{ * @param mangled The mangled typeid.name() return value}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00010}00010 \textcolor{comment}{ * @return A demangled version of mangled.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00011}00011 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00012}00012 \textcolor{keyword}{extern} std::string \mbox{\hyperlink{_b_a_r_e_errors_8hpp_ad6c3fb278e5310c3250bab181be717d6}{demangle}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* mangled);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00014}00014 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00015}00015 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00016}00016 \textcolor{comment}{     * @brief Represents a specific type of error that has occured.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00017}00017 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00018}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{00018}}     \textcolor{keyword}{enum class} \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00019}00019         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a2eea2c536f4e062c3b1832f9cea1356d}{SDL\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00020}00020         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aac184187fe6248f102d81fc64e36c57d}{GL\_FAILURE\_VERSION}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00021}00021         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aed6ff68f5f52346f2c0754edb81b83ed}{DOUBLE\_INIT}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00022}00022         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aa4c46509c81b14752ae8ff94452ff486}{GLEW\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00023}00023         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a804b6ec52f621f93ab2f5026201f0d76}{FILE\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00024}00024         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a875ae376eb2fbd99c364b0c2ed42fedc}{TEXTURE\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00025}00025         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a1f208845587ac9c0c53c388d4d385b1a}{VERTEX\_SHADER\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00026}00026         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad860107dd407ff9736d6208998d710f6}{FRAGMENT\_SHADER\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00027}00027         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad6e29903fb0c6eb8c57d20d9ad478d9e}{UNIFORM\_NOT\_FOUND}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00028}00028         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abaa8fdfa9df78eba172c4aaa8b8046a2}{SHADER\_COMPILE\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00029}00029         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15af2f6cbcd601921a638724130311f22cd}{SHADER\_LINK\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00030}00030         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8bc03ea7709e07920eab3b6c56df1fd8}{GLSL\_PROGRAM\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00031}00031         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a59e2044a4165c83216dbbca34417462b}{FONT\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00032}00032         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a56134db1e8559ae4b32bf967c15fc4df}{FBO\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00033}00033         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a396430326452fe792ad9891baac4e76b}{LOGGER\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00034}00034         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{XML\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00035}00035         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abcb313a5c9f8965d7b75833af33d16be}{UNINITIALIZED\_FUNCTION}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00036}00036         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba}{LUA\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00037}00037         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a532a71eb42f790768ea7b8a0fc21c7f7}{SDL\_MIXER\_FLAC\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00038}00038         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a270d890766f0830b9a49e81e737e9646}{SDL\_MIXER\_OGG\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00039}00039         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a3279ee465d768abc31baf3fa4a04a939}{SDL\_MIXER\_MP3\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00040}00040         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a558725ad5285e00d8e0ecc6659151af6}{SDL\_MIXER\_MOD\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00041}00041         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a302c7e07e257bacc806bef6f25576f3d}{SDL\_MIXER\_CLOSE\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00042}00042         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8c106f4878dae2d0ad02cd72ef80dc0b}{SDL\_MIXER\_LOAD\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00043}00043         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a55a6fde42c31348fccbcaad7ead6de1f}{SDL\_MIXER\_SOUND\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00044}00044         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a914ca2cceda5a54e946a4212cab3b05d}{NULL\_PTR\_ACCESS}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00045}00045         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a5c0de8157fd24b5627deda20298b5c2d}{OTHER\_ERROR}},}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00046}00046         \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a66dc4c888c801d815b8f5f1f1038393c}{CACHE\_FAILURE}}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00047}00047     \};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00049}\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{00049}}     \textcolor{keyword}{enum class} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}} \{ \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{NOTIF}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88}{LOW}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c}{MED}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c}{HIGH}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3}{UNKNOWN}} \};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00051}00051     \textcolor{keyword}{extern} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}} \mbox{\hyperlink{namespace_b_a_r_e2_d_a7ebdadee6e21138680eb929277d0da7b}{GLErrorMinSeverity}};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00052}00052 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00053}00053 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00054}00054 \textcolor{comment}{     * @brief Returns the string representing/explaining the error that occurred.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00055}00055 \textcolor{comment}{     * @param err The error enum, which a function returns.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00056}00056 \textcolor{comment}{     * @return The representative string.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00057}00057 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00058}00058     \textcolor{keyword}{extern} std::string \mbox{\hyperlink{namespace_b_a_r_e2_d_a7951c5decc1f7edc3c4f78ed2f579c85}{getErrString}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} err);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00059}00059 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00060}00060 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00061}00061 \textcolor{comment}{     * @brief Throws an error (fatal). Also calls displayErrors and exits the program.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00062}00062 \textcolor{comment}{     * @param err The type of error to throw.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00063}00063 \textcolor{comment}{     * @param message (Optional) The message to display along with the error.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00064}00064 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00065}00065     \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} err, std::string message = \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00066}00066 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00067}00067 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00068}00068 \textcolor{comment}{     * @brief Throws an error silently. Adds it to the pile.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00069}00069 \textcolor{comment}{     * @param err The error to throw.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00070}00070 \textcolor{comment}{     * @param message (Optional) The message to display along with the error.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00071}00071 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00072}00072     \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}} err, std::string message = \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00073}00073 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00074}00074 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00075}00075 \textcolor{comment}{     * @brief Displays the latest thrown errors (really just all the thrown errors) in the console.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00076}00076 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00077}00077     \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{displayErrors}}();}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00078}00078 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00079}00079 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00080}00080 \textcolor{comment}{     * @brief Initializes the GL Debug Message Callback function, and enables debug output straight from OpenGL}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00081}00081 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00082}00082     \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984}{initGLErrorCallback}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{GLErrorSeverity}} minSeverity = \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{GLErrorSeverity::NOTIF}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00084}00084     \textcolor{keyword}{extern} std::vector<BAREError> \mbox{\hyperlink{namespace_b_a_r_e2_d_a78e4606c66dcc65416419cade7db0255}{thrownErrors}};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_errors_8hpp_source_l00085}00085 \} \textcolor{comment}{// namespace BARE2D}}
 
 \end{DoxyCode}

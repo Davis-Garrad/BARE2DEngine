@@ -6,5 +6,7 @@ var _b_a_r_e_errors_8cpp =
     [ "initGLErrorCallback", "_b_a_r_e_errors_8cpp.html#a2e37a4d16611398b81332bb834395984", null ],
     [ "MessageCallback", "_b_a_r_e_errors_8cpp.html#a76259e93488aa188c59d8b8a80517f74", null ],
     [ "throwError", "_b_a_r_e_errors_8cpp.html#a0d8f8a98bf559e6d2eda28ae744f486c", null ],
-    [ "throwFatalError", "_b_a_r_e_errors_8cpp.html#aed4332e42208fed2905a8b0845dad4d1", null ]
+    [ "throwFatalError", "_b_a_r_e_errors_8cpp.html#aed4332e42208fed2905a8b0845dad4d1", null ],
+    [ "GLErrorMinSeverity", "_b_a_r_e_errors_8cpp.html#a7ebdadee6e21138680eb929277d0da7b", null ],
+    [ "thrownErrors", "_b_a_r_e_errors_8cpp.html#a78e4606c66dcc65416419cade7db0255", null ]
 ];

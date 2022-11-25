@@ -1,0 +1,55 @@
+digraph "Source/ResourceManager.hpp"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="Source/ResourceManager.hpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="Cache.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_cache_8hpp.html",tooltip=" "];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="unordered_map",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node2 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="string",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node2 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="functional",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node2 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="Cache_impl.tcc",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_cache__impl_8tcc.html",tooltip=" "];
+  Node1 -> Node7 [color="steelblue1",style="solid"];
+  Node7 [label="Font.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_font_8hpp.html",tooltip=" "];
+  Node7 -> Node8 [color="steelblue1",style="solid"];
+  Node8 [label="glm/glm.hpp",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node7 -> Node9 [color="steelblue1",style="solid"];
+  Node9 [label="GL/glew.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node7 -> Node10 [color="steelblue1",style="solid"];
+  Node10 [label="vector",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node11 [color="steelblue1",style="solid"];
+  Node11 [label="LuaScript.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_lua_script_8hpp.html",tooltip="This is the basic Lua script wrapper - it is what the end-user will create and add to the queue...."];
+  Node11 -> Node4 [color="steelblue1",style="solid"];
+  Node11 -> Node12 [color="steelblue1",style="solid"];
+  Node12 [label="lua5.3/lua.hpp",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node13 [color="steelblue1",style="solid"];
+  Node13 [label="Music.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_music_8hpp.html",tooltip=" "];
+  Node13 -> Node14 [color="steelblue1",style="solid"];
+  Node14 [label="SDL2/SDL_mixer.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node15 [color="steelblue1",style="solid"];
+  Node15 [label="MutableTexture.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_mutable_texture_8hpp.html",tooltip=" "];
+  Node15 -> Node9 [color="steelblue1",style="solid"];
+  Node15 -> Node16 [color="steelblue1",style="solid"];
+  Node16 [label="Texture.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_texture_8hpp.html",tooltip=" "];
+  Node16 -> Node9 [color="steelblue1",style="solid"];
+  Node16 -> Node4 [color="steelblue1",style="solid"];
+  Node1 -> Node17 [color="steelblue1",style="solid"];
+  Node17 [label="ShaderProgram.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_shader_program_8hpp.html",tooltip=" "];
+  Node17 -> Node4 [color="steelblue1",style="solid"];
+  Node17 -> Node18 [color="steelblue1",style="solid"];
+  Node18 [label="initializer_list",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node17 -> Node9 [color="steelblue1",style="solid"];
+  Node17 -> Node19 [color="steelblue1",style="solid"];
+  Node19 [label="ShaderProgram.tcc",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_shader_program_8tcc.html",tooltip=" "];
+  Node1 -> Node20 [color="steelblue1",style="solid"];
+  Node20 [label="Sound.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_sound_8hpp.html",tooltip=" "];
+  Node20 -> Node14 [color="steelblue1",style="solid"];
+  Node1 -> Node16 [color="steelblue1",style="solid"];
+}

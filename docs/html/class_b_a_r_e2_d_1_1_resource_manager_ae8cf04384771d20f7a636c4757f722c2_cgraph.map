@@ -1,5 +1,0 @@
-<map id="BARE2D::ResourceManager::loadScriptFromSource" name="BARE2D::ResourceManager::loadScriptFromSource">
-<area shape="rect" id="node1" title="Creates and caches a script from the given source code." alt="" coords="5,23,196,65"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_cache.html#a4a998f5952f2412d5f35f5291f8ff0c8" title="Creates an item with a given key and uses the constructor to fill out the rest. If it already exists,..." alt="" coords="244,5,436,32"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_cache.html#a9b565e37194850c038b5bb3c3a784567" title="Finds an item based on a key." alt="" coords="251,56,429,83"/>
-</map>

@@ -1,0 +1,17 @@
+\hypertarget{_app_8cpp}{}\doxysection{Source/\+App.cpp File Reference}
+\label{_app_8cpp}\index{Source/App.cpp@{Source/App.cpp}}
+{\ttfamily \#include \char`\"{}App.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}BARECEGUI.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$SDL2/\+SDL.\+h$>$}\newline
+{\ttfamily \#include $<$GL/gl.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}BARE2\+DEngine.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Input\+Manager.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Screen.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Window.\+hpp\char`\"{}}\newline
+Include dependency graph for App.\+cpp\+:
+% FIG 0
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}
+\end{DoxyCompactItemize}

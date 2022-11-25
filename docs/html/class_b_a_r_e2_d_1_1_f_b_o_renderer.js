@@ -1,6 +1,6 @@
 var class_b_a_r_e2_d_1_1_f_b_o_renderer =
 [
-    [ "FBORenderer", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a97d2c3b426dd8f3c79a4d3c5ee707788", null ],
+    [ "FBORenderer", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aa89d9713a2c8a8ca10a71a2ac9380172", null ],
     [ "~FBORenderer", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aeb5ab1b6abc77d9ec3943d1966574d1b", null ],
     [ "begin", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a5e94ee6c2c34dcdcbd65c9b05f3a465a", null ],
     [ "bind", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a5765d077d8aff3402f717863169a0176", null ],
@@ -8,6 +8,10 @@ var class_b_a_r_e2_d_1_1_f_b_o_renderer =
     [ "createRenderBatches", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aa6da4902046ce59bb009570f12f0aaaa", null ],
     [ "createTextures", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aff19a68622b2fdf7033ffee1ab32a7c6", null ],
     [ "destroy", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a0e3cc5707a16360dbaf0832058f28b1a", null ],
+    [ "disableAttachment", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a7a4adab89d1e38a44e1886ccd073e81f", null ],
+    [ "disableAttachments", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a1e6d54c56e4dfefcc024d003ff1e09c0", null ],
+    [ "enableAttachment", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a7ca81f68ae89ed82d845d01c39eb6803", null ],
+    [ "enableAttachments", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ae537bdebb48a800bd3169b5ebed18f3b", null ],
     [ "end", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a4dde75642694aa34aa463bb298cb34cd", null ],
     [ "getCamera", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#abcccb35e9cdf13c41ba6b11edf1a286e", null ],
     [ "init", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867", null ],
@@ -21,7 +25,6 @@ var class_b_a_r_e2_d_1_1_f_b_o_renderer =
     [ "m_fragmentShaderPath", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a3ca9f890aa6cd904a6ba201a219ccb5e", null ],
     [ "m_numTextures", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aef32219b7769258d2e2af288d0e71e5d", null ],
     [ "m_shaderHasDepth", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a8cb0768b5c42501e8e3299d45e917114", null ],
-    [ "m_size", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ad180b814eabde3793654d66ef40a8118", null ],
     [ "m_textureIDs", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a636af190f493550d7ce629e7ffaf157b", null ],
     [ "m_vertexShaderPath", "class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac4b73ba3b179c0cf854d36b77d535b8a", null ]
 ];

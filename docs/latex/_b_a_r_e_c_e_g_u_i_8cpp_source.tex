@@ -1,499 +1,499 @@
-\hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source}{}\doxysection{B\+A\+R\+E\+C\+E\+G\+U\+I.\+cpp}
+\hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source}{}\doxysection{BARECEGUI.\+cpp}
 \label{_b_a_r_e_c_e_g_u_i_8cpp_source}\index{Source/BARECEGUI.cpp@{Source/BARECEGUI.cpp}}
-
+\mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp}{"BARECEGUI.hpp"}}}
-\DoxyCodeLine{00002 }
-\DoxyCodeLine{00003 \textcolor{comment}{// For SDL\_GetTicks64()}}
-\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{SDL2}\textcolor{preprocessor}{/}\textcolor{preprocessor}{SDL\_timer}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{utf8_8h}{"utf8.h"}}}
-\DoxyCodeLine{00006 }
-\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_logger_8hpp}{"Logger.hpp"}}}
-\DoxyCodeLine{00008 }
-\DoxyCodeLine{00009 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{00010 }
-\DoxyCodeLine{00011     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a497b5ecd274895ea0a74d6603cd0ffb9}{m\_initialized}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{00012     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a15472ee784e1eaf1d97876cc3565f477}{m\_instance}} = \textcolor{keywordtype}{nullptr};}
-\DoxyCodeLine{00013 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00014}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca}{00014}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca}{getInstance}}() \{}
-\DoxyCodeLine{00015         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a15472ee784e1eaf1d97876cc3565f477}{m\_instance}}) \{}
-\DoxyCodeLine{00016             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a15472ee784e1eaf1d97876cc3565f477}{m\_instance}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ade528b2e05e0562fd5ecda850a49ec14}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ade528b2e05e0562fd5ecda850a49ec14}{)}};}
-\DoxyCodeLine{00017         \}}
-\DoxyCodeLine{00018         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a15472ee784e1eaf1d97876cc3565f477}{m\_instance}};}
-\DoxyCodeLine{00019     \}}
-\DoxyCodeLine{00020 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00021}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ad1850903003bf2b3b10608e6d3aa1f20}{00021}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ad1850903003bf2b3b10608e6d3aa1f20}{release}}() \{}
-\DoxyCodeLine{00022         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a15472ee784e1eaf1d97876cc3565f477}{m\_instance}})}
-\DoxyCodeLine{00023             \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a15472ee784e1eaf1d97876cc3565f477}{m\_instance}};}
-\DoxyCodeLine{00024     \}}
-\DoxyCodeLine{00025 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00026}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ade528b2e05e0562fd5ecda850a49ec14}{00026}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ade528b2e05e0562fd5ecda850a49ec14}{BARECEGUI}}() \{}
-\DoxyCodeLine{00027 }
-\DoxyCodeLine{00028     \}}
-\DoxyCodeLine{00029 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00030}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a44960ac3a16b7b657636483f24d625ec}{00030}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a44960ac3a16b7b657636483f24d625ec}{BARECEGUI}}() \{}
-\DoxyCodeLine{00031         \textcolor{keywordflow}{for}(CEGUIContextWrapper* e : m\_contexts) \{}
-\DoxyCodeLine{00032             e-\/>rootWindow-\/>destroy();}
-\DoxyCodeLine{00033 }
-\DoxyCodeLine{00034             \textcolor{keyword}{delete} e;}
-\DoxyCodeLine{00035         \}}
-\DoxyCodeLine{00036         m\_contexts.clear();}
-\DoxyCodeLine{00037     \}}
-\DoxyCodeLine{00038 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00039}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a5efde9a21fff6c7e43ebc7c2c69ffe78}{00039}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a5efde9a21fff6c7e43ebc7c2c69ffe78}{init}}(std::string\& resourceDirectory, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} numContexts) \{}
-\DoxyCodeLine{00040         m\_contexts.clear(); \textcolor{comment}{// Just in case :)}}
-\DoxyCodeLine{00041 }
-\DoxyCodeLine{00042         \textcolor{comment}{// Create the first context wrapper -\/ we never have less than 1 context.}}
-\DoxyCodeLine{00043         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper}{CEGUIContextWrapper}}* primary = \textcolor{keyword}{new} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper}{CEGUIContextWrapper}};}
-\DoxyCodeLine{00044 }
-\DoxyCodeLine{00045         \textcolor{comment}{// Make sure we reuse resources if we can:}}
-\DoxyCodeLine{00046         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a497b5ecd274895ea0a74d6603cd0ffb9}{m\_initialized}}) \{}
-\DoxyCodeLine{00047             \textcolor{comment}{// We can reuse the renderer -\/ it has no mutable state.}}
-\DoxyCodeLine{00048             primary\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_ab371b920c909d36faf02e2af42e47a78}{-\/>}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_ab371b920c909d36faf02e2af42e47a78}{renderer}} = \textcolor{keyword}{static\_cast}<CEGUI::OpenGL3Renderer*>(CEGUI::System::getSingleton().getRenderer());}
-\DoxyCodeLine{00049         \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00050             \textcolor{comment}{// This is our first time initializing, we need to actually create the renderer.}}
-\DoxyCodeLine{00051             primary\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_ab371b920c909d36faf02e2af42e47a78}{-\/>}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_ab371b920c909d36faf02e2af42e47a78}{renderer}} = \&CEGUI::OpenGL3Renderer::bootstrapSystem();}
-\DoxyCodeLine{00052             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a497b5ecd274895ea0a74d6603cd0ffb9}{m\_initialized}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{00053         \}}
-\DoxyCodeLine{00054 }
-\DoxyCodeLine{00055         \textcolor{comment}{// Now that we have our renderer, we can load all of our resources}}
-\DoxyCodeLine{00056         \textcolor{comment}{// First, get the resource provider}}
-\DoxyCodeLine{00057         CEGUI::DefaultResourceProvider* rp = \textcolor{keyword}{static\_cast}<CEGUI::DefaultResourceProvider*>(CEGUI::System::getSingleton().getResourceProvider());}
-\DoxyCodeLine{00058 }
-\DoxyCodeLine{00059         \textcolor{comment}{// Next, set where CEGUI can actually find each of its specialized types of data.}}
-\DoxyCodeLine{00060         rp-\/>setResourceGroupDirectory(\textcolor{stringliteral}{"imagesets"}, resourceDirectory + \textcolor{stringliteral}{"/imagesets/"});}
-\DoxyCodeLine{00061         rp-\/>setResourceGroupDirectory(\textcolor{stringliteral}{"schemes"}, resourceDirectory + \textcolor{stringliteral}{"/schemes/"});}
-\DoxyCodeLine{00062         rp-\/>setResourceGroupDirectory(\textcolor{stringliteral}{"fonts"}, resourceDirectory + \textcolor{stringliteral}{"/fonts/"});}
-\DoxyCodeLine{00063         rp-\/>setResourceGroupDirectory(\textcolor{stringliteral}{"layouts"}, resourceDirectory + \textcolor{stringliteral}{"/layouts/"});}
-\DoxyCodeLine{00064         rp-\/>setResourceGroupDirectory(\textcolor{stringliteral}{"looknfeels"}, resourceDirectory + \textcolor{stringliteral}{"/looknfeel/"});}
-\DoxyCodeLine{00065         rp-\/>setResourceGroupDirectory(\textcolor{stringliteral}{"lua\_scripts"}, resourceDirectory + \textcolor{stringliteral}{"/lua\_scripts/"});}
-\DoxyCodeLine{00066 }
-\DoxyCodeLine{00067         \textcolor{comment}{// Finally, set the labels for the specialized data types.}}
-\DoxyCodeLine{00068         CEGUI::ImageManager::setImagesetDefaultResourceGroup(\textcolor{stringliteral}{"imagesets"});}
-\DoxyCodeLine{00069         CEGUI::Scheme::setDefaultResourceGroup(\textcolor{stringliteral}{"schemes"});}
-\DoxyCodeLine{00070         CEGUI::Font::setDefaultResourceGroup(\textcolor{stringliteral}{"fonts"});}
-\DoxyCodeLine{00071         CEGUI::WindowManager::setDefaultResourceGroup(\textcolor{stringliteral}{"layouts"});}
-\DoxyCodeLine{00072         CEGUI::WidgetLookManager::setDefaultResourceGroup(\textcolor{stringliteral}{"looknfeels"});}
-\DoxyCodeLine{00073         CEGUI::ScriptModule::setDefaultResourceGroup(\textcolor{stringliteral}{"lua\_scripts"});}
-\DoxyCodeLine{00074 }
-\DoxyCodeLine{00075         \textcolor{comment}{// Now create the context + root window, so we can actually have something to draw/with}}
-\DoxyCodeLine{00076         \textcolor{comment}{// The actual GUI context}}
-\DoxyCodeLine{00077         primary\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_adc541f6c8de00ccbd95d702118ec93be}{-\/>}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_adc541f6c8de00ccbd95d702118ec93be}{context}} = \&CEGUI::System::getSingleton().createGUIContext(primary\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_ab371b920c909d36faf02e2af42e47a78}{-\/>}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_ab371b920c909d36faf02e2af42e47a78}{renderer}}-\/>getDefaultRenderTarget());}
-\DoxyCodeLine{00078         \textcolor{comment}{// The root window (always with a name of root)}}
-\DoxyCodeLine{00079         primary\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_a22ab46acc40e7333232ad005cb8a25a7}{-\/>}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_a22ab46acc40e7333232ad005cb8a25a7}{rootWindow}} = CEGUI::WindowManager::getSingleton().createWindow(\textcolor{stringliteral}{"DefaultWindow"}, \textcolor{stringliteral}{"root"});}
-\DoxyCodeLine{00080         primary\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_a22ab46acc40e7333232ad005cb8a25a7}{-\/>}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_a22ab46acc40e7333232ad005cb8a25a7}{rootWindow}}-\/>setSize(CEGUI::USize(cegui\_reldim(1.0f), cegui\_reldim(1.0f)));}
-\DoxyCodeLine{00081         primary\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_a22ab46acc40e7333232ad005cb8a25a7}{-\/>}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_a22ab46acc40e7333232ad005cb8a25a7}{rootWindow}}-\/>setPosition(CEGUI::UVector2(cegui\_reldim(0.0f), cegui\_reldim(0.0f)));}
-\DoxyCodeLine{00082         \textcolor{comment}{// Tie it together!}}
-\DoxyCodeLine{00083         primary\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_adc541f6c8de00ccbd95d702118ec93be}{-\/>}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_adc541f6c8de00ccbd95d702118ec93be}{context}}-\/>setRootWindow(primary\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_a22ab46acc40e7333232ad005cb8a25a7}{-\/>}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_a22ab46acc40e7333232ad005cb8a25a7}{rootWindow}});}
-\DoxyCodeLine{00084 }
-\DoxyCodeLine{00085         \textcolor{comment}{// Add the context!}}
-\DoxyCodeLine{00086         m\_contexts.push\_back(primary);}
-\DoxyCodeLine{00087 }
-\DoxyCodeLine{00088         \textcolor{comment}{// Create the other contexts and their root windows}}
-\DoxyCodeLine{00089         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 1; i < numContexts; i++) \{}
-\DoxyCodeLine{00090             \textcolor{comment}{// As before, use the same renderer if we can (we, indeed, can)}}
-\DoxyCodeLine{00091             CEGUI::OpenGL3Renderer* secondaryRenderer = primary\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_ab371b920c909d36faf02e2af42e47a78}{-\/>}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_ab371b920c909d36faf02e2af42e47a78}{renderer}};}
-\DoxyCodeLine{00092 }
-\DoxyCodeLine{00093             \textcolor{comment}{// Create a new context, so that we can handle input/output differently from the primary context}}
-\DoxyCodeLine{00094             CEGUI::GUIContext* secondaryContext = \&CEGUI::System::getSingleton().createGUIContext(secondaryRenderer-\/>getDefaultRenderTarget());}
-\DoxyCodeLine{00095 }
-\DoxyCodeLine{00096             \textcolor{comment}{// Create a new root window for this context}}
-\DoxyCodeLine{00097             CEGUI::Window* secondaryRootWindow = CEGUI::WindowManager::getSingleton().createWindow(\textcolor{stringliteral}{"DefaultWindow"}, \textcolor{stringliteral}{"secondary\_root\_"} + std::to\_string(i-\/1));}
-\DoxyCodeLine{00098             secondaryRootWindow-\/>setSize(CEGUI::USize(cegui\_reldim(1.0f), cegui\_reldim(1.0f)));}
-\DoxyCodeLine{00099             secondaryRootWindow-\/>setPosition(CEGUI::UVector2(cegui\_reldim(0.0f), cegui\_reldim(0.0f)));}
-\DoxyCodeLine{00100 }
-\DoxyCodeLine{00101             \textcolor{comment}{// Set the (new) context's root}}
-\DoxyCodeLine{00102             secondaryContext-\/>setRootWindow(secondaryRootWindow);}
-\DoxyCodeLine{00103 }
-\DoxyCodeLine{00104             \textcolor{comment}{// Create a new wrapper and add it to the vector of contexts!}}
-\DoxyCodeLine{00105             \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper}{CEGUIContextWrapper}}* secondary = \textcolor{keyword}{new} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper}{CEGUIContextWrapper}};}
-\DoxyCodeLine{00106             secondary\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_ab371b920c909d36faf02e2af42e47a78}{-\/>}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_ab371b920c909d36faf02e2af42e47a78}{renderer}} = secondaryRenderer;}
-\DoxyCodeLine{00107             secondary\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_a22ab46acc40e7333232ad005cb8a25a7}{-\/>}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_a22ab46acc40e7333232ad005cb8a25a7}{rootWindow}} = secondaryRootWindow;}
-\DoxyCodeLine{00108             secondary\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_adc541f6c8de00ccbd95d702118ec93be}{-\/>}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_adc541f6c8de00ccbd95d702118ec93be}{context}} = secondaryContext;}
-\DoxyCodeLine{00109 }
-\DoxyCodeLine{00110             m\_contexts.push\_back(secondary);}
-\DoxyCodeLine{00111         \}}
-\DoxyCodeLine{00112     \}}
-\DoxyCodeLine{00113 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00114}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a6b69baba42d43ae2761bda9ace328bc4}{00114}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a6b69baba42d43ae2761bda9ace328bc4}{destroy}}() \{}
-\DoxyCodeLine{00115         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < m\_contexts.size(); i++) \{}
-\DoxyCodeLine{00116             \textcolor{comment}{// Destroy all of the GUI contexts, as well as the root windows for each context.}}
-\DoxyCodeLine{00117             CEGUI::System::getSingleton().destroyGUIContext(*m\_contexts[i]-\/>context);}
-\DoxyCodeLine{00118             CEGUI::WindowManager::getSingleton().destroyWindow(m\_contexts[i]-\/>rootWindow);}
-\DoxyCodeLine{00119         \}}
-\DoxyCodeLine{00120 }
-\DoxyCodeLine{00121         \textcolor{comment}{// Clear our last little bit of memory.}}
-\DoxyCodeLine{00122         m\_contexts.clear();}
-\DoxyCodeLine{00123     \}}
-\DoxyCodeLine{00124 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00125}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a1129545c46dc260d9ef466ca402a99a3}{00125}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a1129545c46dc260d9ef466ca402a99a3}{draw}}() \{}
-\DoxyCodeLine{00126         \textcolor{comment}{// To enable semi-\/transparency within widgets, we must turn off depth-\/testing.}}
-\DoxyCodeLine{00127         glDisable(GL\_DEPTH\_TEST);}
-\DoxyCodeLine{00128 }
-\DoxyCodeLine{00129         glBindTexture(GL\_TEXTURE\_2D, 0);}
-\DoxyCodeLine{00130         glUseProgram(0);}
-\DoxyCodeLine{00131         glActiveTexture(GL\_TEXTURE0);}
-\DoxyCodeLine{00132 }
-\DoxyCodeLine{00133         \textcolor{comment}{// First, 'begin' rendering for this current context.}}
-\DoxyCodeLine{00134         m\_contexts[m\_activeContext]-\/>renderer-\/>beginRendering();}
-\DoxyCodeLine{00135         \textcolor{comment}{// Actually add the glyphs to whatever data structure}}
-\DoxyCodeLine{00136         m\_contexts[m\_activeContext]-\/>context-\/>draw();}
-\DoxyCodeLine{00137         \textcolor{comment}{// Finally, actually draw the stuff}}
-\DoxyCodeLine{00138         m\_contexts[m\_activeContext]-\/>renderer-\/>endRendering();}
-\DoxyCodeLine{00139 }
-\DoxyCodeLine{00140         \textcolor{comment}{// Now to clean up after CEGUI.}}
-\DoxyCodeLine{00141         \textcolor{comment}{// Unbind their vertex array}}
-\DoxyCodeLine{00142         glBindVertexArray(0);}
-\DoxyCodeLine{00143         \textcolor{comment}{// Disable scissor-\/testing.}}
-\DoxyCodeLine{00144         glDisable(GL\_SCISSOR\_TEST);}
-\DoxyCodeLine{00145         \textcolor{comment}{// Re-\/enable blending}}
-\DoxyCodeLine{00146         glEnable(GL\_BLEND);}
-\DoxyCodeLine{00147         glBlendFunc(GL\_SRC\_ALPHA, GL\_ONE\_MINUS\_SRC\_ALPHA);}
-\DoxyCodeLine{00148         \textcolor{comment}{// Unbind whatever texture they've bound}}
-\DoxyCodeLine{00149         glBindTexture(GL\_TEXTURE\_2D, 0);}
-\DoxyCodeLine{00150     \}}
-\DoxyCodeLine{00151 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00152}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a0650f87bb7a1e8f6f8dddef1faf67da6}{00152}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a0650f87bb7a1e8f6f8dddef1faf67da6}{update}}() \{}
-\DoxyCodeLine{00153         \textcolor{comment}{// First of all, find our delta time}}
-\DoxyCodeLine{00154         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} elapsed;}
-\DoxyCodeLine{00155         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa32fb1c941f5296b050622675a1361d4}{m\_lastTime}} == 0) \{}
-\DoxyCodeLine{00156             \textcolor{comment}{// We are at the verrrrry beginning, so elapsed time is really 0}}
-\DoxyCodeLine{00157             elapsed = 0;}
-\DoxyCodeLine{00158             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa32fb1c941f5296b050622675a1361d4}{m\_lastTime}} = SDL\_GetTicks();}
-\DoxyCodeLine{00159         \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00160             \textcolor{comment}{// SDL\_GetTicks will wrap over at \string~49 days. Not a huge deal and I don't really want to use SDL\_GetTicks64}}
-\DoxyCodeLine{00161             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nowTime = SDL\_GetTicks();}
-\DoxyCodeLine{00162             elapsed = nowTime -\/ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa32fb1c941f5296b050622675a1361d4}{m\_lastTime}};}
-\DoxyCodeLine{00163             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa32fb1c941f5296b050622675a1361d4}{m\_lastTime}} = nowTime;}
-\DoxyCodeLine{00164         \}}
-\DoxyCodeLine{00165 }
-\DoxyCodeLine{00166         \textcolor{comment}{// Tell CEGUI how much time has passed for updates.}}
-\DoxyCodeLine{00167         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < m\_contexts.size(); i++) \{}
-\DoxyCodeLine{00168             \textcolor{comment}{// SDL\_GetTicks returns time in milliseconds (seconds * 1e-\/3) whereas CEGUI takes time pulses in seconds.}}
-\DoxyCodeLine{00169             m\_contexts[i]-\/>context-\/>injectTimePulse((\textcolor{keywordtype}{float})elapsed / 1000.0f);}
-\DoxyCodeLine{00170         \}}
-\DoxyCodeLine{00171     \}}
-\DoxyCodeLine{00172 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00173}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_abda90814bb22fe7f7b64dc8922f29b58}{00173}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_abda90814bb22fe7f7b64dc8922f29b58}{setActiveContext}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} contextIndex) \{}
-\DoxyCodeLine{00174         \textcolor{keywordflow}{if}(contextIndex < m\_contexts.size()) \{}
-\DoxyCodeLine{00175             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}{m\_activeContext}} = contextIndex;}
-\DoxyCodeLine{00176         \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00177             Logger::getInstance()-\/>log(\textcolor{stringliteral}{"WARNING: Access of CEGUI Context with index "} + std::to\_string(contextIndex) + \textcolor{stringliteral}{" was attempted. This context does not exist."}, \textcolor{keyword}{true});}
-\DoxyCodeLine{00178         \}}
-\DoxyCodeLine{00179     \}}
-\DoxyCodeLine{00180 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00181}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a69778a5ba2537399cc419de8cd55f4bf}{00181}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a69778a5ba2537399cc419de8cd55f4bf}{setMouseCursor}}(std::string imageFile) \{}
-\DoxyCodeLine{00182         m\_contexts[m\_activeContext]-\/>context-\/>getMouseCursor().setDefaultImage(imageFile);}
-\DoxyCodeLine{00183     \}}
-\DoxyCodeLine{00184 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00185}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a40870938bcb2207329998b68bb11c70e}{00185}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a40870938bcb2207329998b68bb11c70e}{setMouseCursorShown}}(\textcolor{keywordtype}{bool} shown) \{}
-\DoxyCodeLine{00186         \textcolor{keywordflow}{if}(shown) \{}
-\DoxyCodeLine{00187             m\_contexts[m\_activeContext]-\/>context-\/>getMouseCursor().show();}
-\DoxyCodeLine{00188         \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00189             m\_contexts[m\_activeContext]-\/>context-\/>getMouseCursor().hide();}
-\DoxyCodeLine{00190         \}}
-\DoxyCodeLine{00191     \}}
-\DoxyCodeLine{00192 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00193}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7}{00193}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7}{handleSDLEvent}}(SDL\_Event\& evnt) \{}
-\DoxyCodeLine{00194         \textcolor{comment}{// spark event in each context.}}
-\DoxyCodeLine{00195         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < m\_contexts.size(); i++) \{}
-\DoxyCodeLine{00196             \textcolor{keywordflow}{switch}(evnt.type) \{}
-\DoxyCodeLine{00197                 \textcolor{keywordflow}{case} SDL\_MOUSEMOTION:}
-\DoxyCodeLine{00198                     \textcolor{comment}{// The mouse has moved, so tell CEGUI}}
-\DoxyCodeLine{00199                     m\_contexts[i]-\/>context-\/>injectMousePosition((\textcolor{keywordtype}{float})evnt.motion.x, (\textcolor{keywordtype}{float})evnt.motion.y);}
-\DoxyCodeLine{00200                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00201                 \textcolor{keywordflow}{case} SDL\_KEYDOWN:}
-\DoxyCodeLine{00202                     \textcolor{comment}{// A key is pressed. Tell CEGUI}}
-\DoxyCodeLine{00203                     m\_contexts[i]-\/>context-\/>injectKeyDown(SDLKeyToCEGUIKey(evnt.key.keysym.sym));}
-\DoxyCodeLine{00204                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00205                 \textcolor{keywordflow}{case} SDL\_KEYUP:}
-\DoxyCodeLine{00206                     \textcolor{comment}{// Conversely, a key has been released. Tell CEGUI}}
-\DoxyCodeLine{00207                     m\_contexts[i]-\/>context-\/>injectKeyUp(SDLKeyToCEGUIKey(evnt.key.keysym.sym));}
-\DoxyCodeLine{00208                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00209                 \textcolor{keywordflow}{case} SDL\_MOUSEBUTTONDOWN:}
-\DoxyCodeLine{00210                     \textcolor{comment}{// A button has been pressed. Convert it to CEGUI enums and inject it}}
-\DoxyCodeLine{00211                     m\_contexts[m\_activeContext]-\/>context-\/>injectMouseButtonDown(SDLButtonToCEGUIButton(evnt.button.button));}
-\DoxyCodeLine{00212                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00213                 \textcolor{keywordflow}{case} SDL\_MOUSEBUTTONUP:}
-\DoxyCodeLine{00214                     \textcolor{comment}{// A button has been released. Convert it to CEGUI enums and inject it}}
-\DoxyCodeLine{00215                     m\_contexts[m\_activeContext]-\/>context-\/>injectMouseButtonUp(SDLButtonToCEGUIButton(evnt.button.button));}
-\DoxyCodeLine{00216                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00217                 \textcolor{keywordflow}{case} SDL\_MOUSEWHEEL:}
-\DoxyCodeLine{00218                     \textcolor{comment}{// Scrolled! Tell CEGUI}}
-\DoxyCodeLine{00219                     m\_contexts[i]-\/>context-\/>injectMouseWheelChange(evnt.wheel.y);}
-\DoxyCodeLine{00220                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00221                     \textcolor{keywordflow}{case} SDL\_TEXTINPUT:}
-\DoxyCodeLine{00222                     \textcolor{comment}{// SDL Inputs text in UTF8 -\/ CEGUI takes it in UTF32. This is slightly problematic.}}
-\DoxyCodeLine{00223                     \textcolor{comment}{// We will use UTF8 (the library) to convert!}}
-\DoxyCodeLine{00224 }
-\DoxyCodeLine{00225                     \textcolor{comment}{// First, get the text in string form}}
-\DoxyCodeLine{00226                     std::string evntText = std::string(evnt.text.text);}
-\DoxyCodeLine{00227                     \textcolor{comment}{// Allocate space for the converted result}}
-\DoxyCodeLine{00228                     std::vector<\textcolor{keywordtype}{int}> utf32result;}
-\DoxyCodeLine{00229                     \textcolor{comment}{// Actually convert it}}
-\DoxyCodeLine{00230                     utf8::utf8to32(evnt.text.text, evnt.text.text + evntText.size(), std::back\_inserter(utf32result));}
-\DoxyCodeLine{00231                     \textcolor{comment}{// Cast to CEGUI's UTF32 type}}
-\DoxyCodeLine{00232                     CEGUI::utf32 codePoint = (CEGUI::utf32)utf32result[0];}
-\DoxyCodeLine{00233 }
-\DoxyCodeLine{00234                     \textcolor{comment}{// Finally, inject the actual UTF32 version of the input.}}
-\DoxyCodeLine{00235                     m\_contexts[i]-\/>context-\/>injectChar(codePoint);}
-\DoxyCodeLine{00236                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00237             \}}
-\DoxyCodeLine{00238         \}}
-\DoxyCodeLine{00239     \}}
-\DoxyCodeLine{00240 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00241}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a3737b344e427bd5b2f92fa08f1e44885}{00241}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a3737b344e427bd5b2f92fa08f1e44885}{loadScheme}}(std::string schemeFile) \{}
-\DoxyCodeLine{00242         \textcolor{comment}{// Load a scheme}}
-\DoxyCodeLine{00243         CEGUI::SchemeManager::getSingleton().createFromFile(schemeFile);}
-\DoxyCodeLine{00244     \}}
-\DoxyCodeLine{00245 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00246}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ac931fcf21bb8ae2289c31ab0370772bd}{00246}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ac931fcf21bb8ae2289c31ab0370772bd}{setFont}}(std::string fontFile) \{}
-\DoxyCodeLine{00247         \textcolor{comment}{// Create the font}}
-\DoxyCodeLine{00248         CEGUI::FontManager::getSingleton().createFromFile(fontFile + \textcolor{stringliteral}{".font"});}
-\DoxyCodeLine{00249         \textcolor{comment}{// Set the font in each context.}}
-\DoxyCodeLine{00250         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < m\_contexts.size(); i++) \{}
-\DoxyCodeLine{00251             m\_contexts[i]-\/>context-\/>setDefaultFont(fontFile);}
-\DoxyCodeLine{00252         \}}
-\DoxyCodeLine{00253     \}}
-\DoxyCodeLine{00254 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00255}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a4887d95ac1f2dc8becc75cf11d6cf9dd}{00255}}     CEGUI::Window* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a4887d95ac1f2dc8becc75cf11d6cf9dd}{createWidget}}(std::string type, glm::vec4 destRectPercent, glm::vec4 destRectPixels, CEGUI::Window* parent, std::string name) \{}
-\DoxyCodeLine{00256         \textcolor{comment}{// Create the window for the widget}}
-\DoxyCodeLine{00257         CEGUI::Window* newWindow = CEGUI::WindowManager::getSingleton().createWindow(type, name);}
-\DoxyCodeLine{00258         \textcolor{comment}{// Set its size, position too}}
-\DoxyCodeLine{00259         newWindow-\/>setPosition(CEGUI::UVector2(CEGUI::UDim(destRectPercent.x, destRectPixels.x), CEGUI::UDim(destRectPercent.y, destRectPixels.y)));}
-\DoxyCodeLine{00260         newWindow-\/>setSize(CEGUI::USize(CEGUI::UDim(destRectPercent.z, destRectPixels.z), CEGUI::UDim(destRectPercent.w, destRectPixels.w)));}
-\DoxyCodeLine{00261 }
-\DoxyCodeLine{00262         \textcolor{comment}{// If a parent is given, add it as a child}}
-\DoxyCodeLine{00263         \textcolor{keywordflow}{if}(parent) \{}
-\DoxyCodeLine{00264             parent-\/>addChild(newWindow);}
-\DoxyCodeLine{00265         \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00266             \textcolor{comment}{// If it's not, add it to the root.}}
-\DoxyCodeLine{00267             m\_contexts[m\_activeContext]-\/>rootWindow-\/>addChild(newWindow);}
-\DoxyCodeLine{00268         \}}
-\DoxyCodeLine{00269 }
-\DoxyCodeLine{00270         \textcolor{keywordflow}{return} newWindow;}
-\DoxyCodeLine{00271     \}}
-\DoxyCodeLine{00272 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00273}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa3c3feb09e2c328426f057336e6ad2ae}{00273}}     CEGUI::OpenGL3Renderer* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa3c3feb09e2c328426f057336e6ad2ae}{getRenderer}}() \{}
-\DoxyCodeLine{00274         \textcolor{keywordflow}{return} m\_contexts[m\_activeContext]-\/>renderer;}
-\DoxyCodeLine{00275     \}}
-\DoxyCodeLine{00276 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00277}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea}{00277}}     CEGUI::GUIContext* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea}{getContext}}() \{}
-\DoxyCodeLine{00278         \textcolor{keywordflow}{if}(m\_activeContext < m\_contexts.size())}
-\DoxyCodeLine{00279             \textcolor{keywordflow}{return} m\_contexts[m\_activeContext]-\/>context;}
-\DoxyCodeLine{00280         \textcolor{keywordflow}{return} \textcolor{keywordtype}{nullptr};}
-\DoxyCodeLine{00281     \}}
-\DoxyCodeLine{00282 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp}{BARECEGUI.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00003}00003 \textcolor{comment}{// For SDL\_GetTicks64()}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <SDL2/SDL\_timer.h>}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{utf8_8h}{utf8.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_logger_8hpp}{Logger.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00009}00009 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00011}00011     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a497b5ecd274895ea0a74d6603cd0ffb9}{BARECEGUI::m\_initialized}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00012}00012     BARECEGUI* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a15472ee784e1eaf1d97876cc3565f477}{BARECEGUI::m\_instance}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00013}00013     }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00014}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca}{00014}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca}{BARECEGUI::getInstance}}() \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00015}00015         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a15472ee784e1eaf1d97876cc3565f477}{m\_instance}}) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00016}00016             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a15472ee784e1eaf1d97876cc3565f477}{m\_instance}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ade528b2e05e0562fd5ecda850a49ec14}{BARECEGUI}}();}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00017}00017         \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00018}00018         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a15472ee784e1eaf1d97876cc3565f477}{m\_instance}};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00019}00019     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00020}00020     }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00021}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ad1850903003bf2b3b10608e6d3aa1f20}{00021}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ad1850903003bf2b3b10608e6d3aa1f20}{BARECEGUI::release}}() \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00022}00022         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a15472ee784e1eaf1d97876cc3565f477}{m\_instance}})}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00023}00023             \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a15472ee784e1eaf1d97876cc3565f477}{m\_instance}};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00024}00024     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00025}00025     }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00026}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ade528b2e05e0562fd5ecda850a49ec14}{00026}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ade528b2e05e0562fd5ecda850a49ec14}{BARECEGUI::BARECEGUI}}() \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00027}00027         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00028}00028     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00029}00029     }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00030}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a44960ac3a16b7b657636483f24d625ec}{00030}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a44960ac3a16b7b657636483f24d625ec}{BARECEGUI::\string~BARECEGUI}}() \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00031}00031         \textcolor{keywordflow}{for}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper}{CEGUIContextWrapper}}* e : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00032}00032             e-\/>rootWindow-\/>destroy();}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00033}00033             }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00034}00034             \textcolor{keyword}{delete} e;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00035}00035         \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00036}00036         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}.clear();}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00038}00038     }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00039}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a5efde9a21fff6c7e43ebc7c2c69ffe78}{00039}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a5efde9a21fff6c7e43ebc7c2c69ffe78}{BARECEGUI::init}}(std::string\& resourceDirectory, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} numContexts) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00040}00040         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}.clear(); \textcolor{comment}{// Just in case :)}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00041}00041         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00042}00042         \textcolor{comment}{// Create the first context wrapper -\/ we never have less than 1 context.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00043}00043         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper}{CEGUIContextWrapper}}* primary = \textcolor{keyword}{new} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper}{CEGUIContextWrapper}};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00044}00044         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00045}00045         \textcolor{comment}{// Make sure we reuse resources if we can:}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00046}00046         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a497b5ecd274895ea0a74d6603cd0ffb9}{m\_initialized}}) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00047}00047             \textcolor{comment}{// We can reuse the renderer -\/ it has no mutable state.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00048}00048             primary-\/>\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_ab371b920c909d36faf02e2af42e47a78}{renderer}} = \textcolor{keyword}{static\_cast<}CEGUI::OpenGL3Renderer*\textcolor{keyword}{>}(CEGUI::System::getSingleton().getRenderer());}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00049}00049         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00050}00050             \textcolor{comment}{// This is our first time initializing, we need to actually create the renderer.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00051}00051             primary-\/>\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_ab371b920c909d36faf02e2af42e47a78}{renderer}} = \&CEGUI::OpenGL3Renderer::bootstrapSystem();}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00052}00052             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a497b5ecd274895ea0a74d6603cd0ffb9}{m\_initialized}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00053}00053         \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00054}00054         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00055}00055         \textcolor{comment}{// Now that we have our renderer, we can load all of our resources}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00056}00056         \textcolor{comment}{// First, get the resource provider}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00057}00057         CEGUI::DefaultResourceProvider* rp = \textcolor{keyword}{static\_cast<}CEGUI::DefaultResourceProvider*\textcolor{keyword}{>}(CEGUI::System::getSingleton().getResourceProvider());}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00058}00058         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00059}00059         \textcolor{comment}{// Next, set where CEGUI can actually find each of its specialized types of data.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00060}00060         rp-\/>setResourceGroupDirectory(\textcolor{stringliteral}{"{}imagesets"{}}, resourceDirectory + \textcolor{stringliteral}{"{}/imagesets/"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00061}00061         rp-\/>setResourceGroupDirectory(\textcolor{stringliteral}{"{}schemes"{}}, resourceDirectory + \textcolor{stringliteral}{"{}/schemes/"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00062}00062         rp-\/>setResourceGroupDirectory(\textcolor{stringliteral}{"{}fonts"{}}, resourceDirectory + \textcolor{stringliteral}{"{}/fonts/"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00063}00063         rp-\/>setResourceGroupDirectory(\textcolor{stringliteral}{"{}layouts"{}}, resourceDirectory + \textcolor{stringliteral}{"{}/layouts/"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00064}00064         rp-\/>setResourceGroupDirectory(\textcolor{stringliteral}{"{}looknfeels"{}}, resourceDirectory + \textcolor{stringliteral}{"{}/looknfeel/"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00065}00065         rp-\/>setResourceGroupDirectory(\textcolor{stringliteral}{"{}lua\_scripts"{}}, resourceDirectory + \textcolor{stringliteral}{"{}/lua\_scripts/"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00066}00066         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00067}00067         \textcolor{comment}{// Finally, set the labels for the specialized data types.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00068}00068         CEGUI::ImageManager::setImagesetDefaultResourceGroup(\textcolor{stringliteral}{"{}imagesets"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00069}00069         CEGUI::Scheme::setDefaultResourceGroup(\textcolor{stringliteral}{"{}schemes"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00070}00070         CEGUI::Font::setDefaultResourceGroup(\textcolor{stringliteral}{"{}fonts"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00071}00071         CEGUI::WindowManager::setDefaultResourceGroup(\textcolor{stringliteral}{"{}layouts"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00072}00072         CEGUI::WidgetLookManager::setDefaultResourceGroup(\textcolor{stringliteral}{"{}looknfeels"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00073}00073         CEGUI::ScriptModule::setDefaultResourceGroup(\textcolor{stringliteral}{"{}lua\_scripts"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00074}00074         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00075}00075         \textcolor{comment}{// Now create the context + root window, so we can actually have something to draw/with}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00076}00076         \textcolor{comment}{// The actual GUI context}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00077}00077         primary-\/>\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_adc541f6c8de00ccbd95d702118ec93be}{context}} = \&CEGUI::System::getSingleton().createGUIContext(primary-\/>\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_ab371b920c909d36faf02e2af42e47a78}{renderer}}-\/>getDefaultRenderTarget());}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00078}00078         \textcolor{comment}{// The root window (always with a name of root)}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00079}00079         primary-\/>\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_a22ab46acc40e7333232ad005cb8a25a7}{rootWindow}} = CEGUI::WindowManager::getSingleton().createWindow(\textcolor{stringliteral}{"{}DefaultWindow"{}}, \textcolor{stringliteral}{"{}root"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00080}00080         primary-\/>\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_a22ab46acc40e7333232ad005cb8a25a7}{rootWindow}}-\/>setSize(CEGUI::USize(cegui\_reldim(1.0f), cegui\_reldim(1.0f)));}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00081}00081         primary-\/>\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_a22ab46acc40e7333232ad005cb8a25a7}{rootWindow}}-\/>setPosition(CEGUI::UVector2(cegui\_reldim(0.0f), cegui\_reldim(0.0f)));}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00082}00082         \textcolor{comment}{// Tie it together!}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00083}00083         primary-\/>\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_adc541f6c8de00ccbd95d702118ec93be}{context}}-\/>setRootWindow(primary-\/>\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_a22ab46acc40e7333232ad005cb8a25a7}{rootWindow}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00084}00084         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00085}00085         \textcolor{comment}{// Add the context!}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00086}00086         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}.push\_back(primary);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00087}00087         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00088}00088         \textcolor{comment}{// Create the other contexts and their root windows}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00089}00089         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 1; i < numContexts; i++) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00090}00090             \textcolor{comment}{// As before, use the same renderer if we can (we, indeed, can)}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00091}00091             CEGUI::OpenGL3Renderer* secondaryRenderer = primary-\/>\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_ab371b920c909d36faf02e2af42e47a78}{renderer}};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00092}00092             }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00093}00093             \textcolor{comment}{// Create a new context, so that we can handle input/output differently from the primary context}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00094}00094             CEGUI::GUIContext* secondaryContext = \&CEGUI::System::getSingleton().createGUIContext(secondaryRenderer-\/>getDefaultRenderTarget());}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00095}00095             }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00096}00096             \textcolor{comment}{// Create a new root window for this context}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00097}00097             CEGUI::Window* secondaryRootWindow = CEGUI::WindowManager::getSingleton().createWindow(\textcolor{stringliteral}{"{}DefaultWindow"{}}, \textcolor{stringliteral}{"{}secondary\_root\_"{}} + std::to\_string(i-\/1));}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00098}00098             secondaryRootWindow-\/>setSize(CEGUI::USize(cegui\_reldim(1.0f), cegui\_reldim(1.0f)));}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00099}00099             secondaryRootWindow-\/>setPosition(CEGUI::UVector2(cegui\_reldim(0.0f), cegui\_reldim(0.0f)));}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00100}00100             }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00101}00101             \textcolor{comment}{// Set the (new) context's root}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00102}00102             secondaryContext-\/>setRootWindow(secondaryRootWindow);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00103}00103             }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00104}00104             \textcolor{comment}{// Create a new wrapper and add it to the vector of contexts!}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00105}00105             \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper}{CEGUIContextWrapper}}* secondary = \textcolor{keyword}{new} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper}{CEGUIContextWrapper}};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00106}00106             secondary-\/>\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_ab371b920c909d36faf02e2af42e47a78}{renderer}} = secondaryRenderer;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00107}00107             secondary-\/>\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_a22ab46acc40e7333232ad005cb8a25a7}{rootWindow}} = secondaryRootWindow;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00108}00108             secondary-\/>\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper_adc541f6c8de00ccbd95d702118ec93be}{context}} = secondaryContext;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00109}00109             }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00110}00110             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}.push\_back(secondary);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00111}00111         \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00112}00112     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00114}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a6b69baba42d43ae2761bda9ace328bc4}{00114}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a6b69baba42d43ae2761bda9ace328bc4}{BARECEGUI::destroy}}() \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00115}00115         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}.size(); i++) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00116}00116             \textcolor{comment}{// Destroy all of the GUI contexts, as well as the root windows for each context.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00117}00117             CEGUI::System::getSingleton().destroyGUIContext(*\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[i]-\/>context);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00118}00118             CEGUI::WindowManager::getSingleton().destroyWindow(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[i]-\/>rootWindow);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00119}00119         \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00120}00120         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00121}00121         \textcolor{comment}{// Clear our last little bit of memory.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00122}00122         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}.clear();}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00123}00123     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00125}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a1129545c46dc260d9ef466ca402a99a3}{00125}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a1129545c46dc260d9ef466ca402a99a3}{BARECEGUI::draw}}() \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00126}00126         \textcolor{comment}{// To enable semi-\/transparency within widgets, we must turn off depth-\/testing.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00127}00127         glDisable(GL\_DEPTH\_TEST);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00128}00128         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00129}00129         glBindTexture(GL\_TEXTURE\_2D, 0);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00130}00130         glUseProgram(0);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00131}00131         glActiveTexture(GL\_TEXTURE0);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00132}00132         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00133}00133         \textcolor{comment}{// First, 'begin' rendering for this current context.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00134}00134         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}{m\_activeContext}}]-\/>renderer-\/>beginRendering();}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00135}00135         \textcolor{comment}{// Actually add the glyphs to whatever data structure}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00136}00136         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}{m\_activeContext}}]-\/>context-\/>draw();}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00137}00137         \textcolor{comment}{// Finally, actually draw the stuff}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00138}00138         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}{m\_activeContext}}]-\/>renderer-\/>endRendering();}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00139}00139         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00140}00140         \textcolor{comment}{// Now to clean up after CEGUI.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00141}00141         \textcolor{comment}{// Unbind their vertex array}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00142}00142         glBindVertexArray(0);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00143}00143         \textcolor{comment}{// Disable scissor-\/testing.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00144}00144         glDisable(GL\_SCISSOR\_TEST);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00145}00145         \textcolor{comment}{// Re-\/enable blending}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00146}00146         glEnable(GL\_BLEND);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00147}00147         glBlendFunc(GL\_SRC\_ALPHA, GL\_ONE\_MINUS\_SRC\_ALPHA);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00148}00148         \textcolor{comment}{// Unbind whatever texture they've bound}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00149}00149         glBindTexture(GL\_TEXTURE\_2D, 0);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00150}00150     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00151}00151 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00152}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a0650f87bb7a1e8f6f8dddef1faf67da6}{00152}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a0650f87bb7a1e8f6f8dddef1faf67da6}{BARECEGUI::update}}() \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00153}00153         \textcolor{comment}{// First of all, find our delta time}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00154}00154         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} elapsed;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00155}00155         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa32fb1c941f5296b050622675a1361d4}{m\_lastTime}} == 0) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00156}00156             \textcolor{comment}{// We are at the verrrrry beginning, so elapsed time is really 0}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00157}00157             elapsed = 0;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00158}00158             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa32fb1c941f5296b050622675a1361d4}{m\_lastTime}} = SDL\_GetTicks();}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00159}00159         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00160}00160             \textcolor{comment}{// SDL\_GetTicks will wrap over at \string~49 days. Not a huge deal and I don't really want to use SDL\_GetTicks64}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00161}00161             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nowTime = SDL\_GetTicks();}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00162}00162             elapsed = nowTime -\/ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa32fb1c941f5296b050622675a1361d4}{m\_lastTime}};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00163}00163             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa32fb1c941f5296b050622675a1361d4}{m\_lastTime}} = nowTime;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00164}00164         \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00165}00165         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00166}00166         \textcolor{comment}{// Tell CEGUI how much time has passed for updates.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00167}00167         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}.size(); i++) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00168}00168             \textcolor{comment}{// SDL\_GetTicks returns time in milliseconds (seconds * 1e-\/3) whereas CEGUI takes time pulses in seconds.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00169}00169             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[i]-\/>context-\/>injectTimePulse((\textcolor{keywordtype}{float})elapsed / 1000.0f);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00170}00170         \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00171}00171     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00172}00172 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00173}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_abda90814bb22fe7f7b64dc8922f29b58}{00173}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_abda90814bb22fe7f7b64dc8922f29b58}{BARECEGUI::setActiveContext}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} contextIndex) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00174}00174         \textcolor{keywordflow}{if}(contextIndex < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}.size()) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00175}00175             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}{m\_activeContext}} = contextIndex;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00176}00176         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00177}00177             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{Logger::getInstance}}()-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{log}}(\textcolor{stringliteral}{"{}WARNING: Access of CEGUI Context with index "{}} + std::to\_string(contextIndex) + \textcolor{stringliteral}{"{} was attempted. This context does not exist."{}}, \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00178}00178         \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00179}00179     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00181}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a69778a5ba2537399cc419de8cd55f4bf}{00181}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a69778a5ba2537399cc419de8cd55f4bf}{BARECEGUI::setMouseCursor}}(std::string imageFile) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00182}00182         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}{m\_activeContext}}]-\/>context-\/>getMouseCursor().setDefaultImage(imageFile);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00183}00183     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00184}00184 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00185}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a40870938bcb2207329998b68bb11c70e}{00185}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a40870938bcb2207329998b68bb11c70e}{BARECEGUI::setMouseCursorShown}}(\textcolor{keywordtype}{bool} shown) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00186}00186         \textcolor{keywordflow}{if}(shown) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00187}00187             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}{m\_activeContext}}]-\/>context-\/>getMouseCursor().show();}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00188}00188         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00189}00189             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}{m\_activeContext}}]-\/>context-\/>getMouseCursor().hide();}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00190}00190         \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00191}00191     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00192}00192 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00193}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7}{00193}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7}{BARECEGUI::handleSDLEvent}}(SDL\_Event\& evnt) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00194}00194         \textcolor{comment}{// spark event in each context.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00195}00195         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}.size(); i++) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00196}00196             \textcolor{keywordflow}{switch}(evnt.type) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00197}00197                 \textcolor{keywordflow}{case} SDL\_MOUSEMOTION:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00198}00198                     \textcolor{comment}{// The mouse has moved, so tell CEGUI}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00199}00199                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[i]-\/>context-\/>injectMousePosition((\textcolor{keywordtype}{float})evnt.motion.x, (\textcolor{keywordtype}{float})evnt.motion.y);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00200}00200                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00201}00201                 \textcolor{keywordflow}{case} SDL\_KEYDOWN:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00202}00202                     \textcolor{comment}{// A key is pressed. Tell CEGUI}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00203}00203                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[i]-\/>context-\/>injectKeyDown(\mbox{\hyperlink{namespace_b_a_r_e2_d_a4308f8684a05ffbf8ef36cd49541765b}{SDLKeyToCEGUIKey}}(evnt.key.keysym.sym));}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00204}00204                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00205}00205                 \textcolor{keywordflow}{case} SDL\_KEYUP:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00206}00206                     \textcolor{comment}{// Conversely, a key has been released. Tell CEGUI}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00207}00207                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[i]-\/>context-\/>injectKeyUp(\mbox{\hyperlink{namespace_b_a_r_e2_d_a4308f8684a05ffbf8ef36cd49541765b}{SDLKeyToCEGUIKey}}(evnt.key.keysym.sym));}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00208}00208                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00209}00209                 \textcolor{keywordflow}{case} SDL\_MOUSEBUTTONDOWN:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00210}00210                     \textcolor{comment}{// A button has been pressed. Convert it to CEGUI enums and inject it}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00211}00211                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}{m\_activeContext}}]-\/>context-\/>injectMouseButtonDown(\mbox{\hyperlink{namespace_b_a_r_e2_d_add368291490f34b060048b5cbb5245f9}{SDLButtonToCEGUIButton}}(evnt.button.button));}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00212}00212                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00213}00213                 \textcolor{keywordflow}{case} SDL\_MOUSEBUTTONUP:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00214}00214                     \textcolor{comment}{// A button has been released. Convert it to CEGUI enums and inject it}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00215}00215                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}{m\_activeContext}}]-\/>context-\/>injectMouseButtonUp(\mbox{\hyperlink{namespace_b_a_r_e2_d_add368291490f34b060048b5cbb5245f9}{SDLButtonToCEGUIButton}}(evnt.button.button));}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00216}00216                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00217}00217                 \textcolor{keywordflow}{case} SDL\_MOUSEWHEEL:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00218}00218                     \textcolor{comment}{// Scrolled! Tell CEGUI}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00219}00219                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[i]-\/>context-\/>injectMouseWheelChange(evnt.wheel.y);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00220}00220                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00221}00221                     \textcolor{keywordflow}{case} SDL\_TEXTINPUT:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00222}00222                     \textcolor{comment}{// SDL Inputs text in UTF8 -\/ CEGUI takes it in UTF32. This is slightly problematic.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00223}00223                     \textcolor{comment}{// We will use UTF8 (the library) to convert!}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00224}00224                     }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00225}00225                     \textcolor{comment}{// First, get the text in string form}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00226}00226                     std::string evntText = std::string(evnt.text.text);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00227}00227                     \textcolor{comment}{// Allocate space for the converted result}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00228}00228                     std::vector<int> utf32result;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00229}00229                     \textcolor{comment}{// Actually convert it}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00230}00230                     \mbox{\hyperlink{namespaceutf8_a8020ed399788dca779663adf061ed718}{utf8::utf8to32}}(evnt.text.text, evnt.text.text + evntText.size(), std::back\_inserter(utf32result));}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00231}00231                     \textcolor{comment}{// Cast to CEGUI's UTF32 type}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00232}00232                     CEGUI::utf32 codePoint = (CEGUI::utf32)utf32result[0];}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00233}00233                     }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00234}00234                     \textcolor{comment}{// Finally, inject the actual UTF32 version of the input.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00235}00235                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[i]-\/>context-\/>injectChar(codePoint);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00236}00236                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00237}00237             \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00238}00238         \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00239}00239     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00240}00240 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00241}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a3737b344e427bd5b2f92fa08f1e44885}{00241}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a3737b344e427bd5b2f92fa08f1e44885}{BARECEGUI::loadScheme}}(std::string schemeFile) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00242}00242         \textcolor{comment}{// Load a scheme}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00243}00243         CEGUI::SchemeManager::getSingleton().createFromFile(schemeFile);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00244}00244     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00245}00245 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00246}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ac931fcf21bb8ae2289c31ab0370772bd}{00246}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ac931fcf21bb8ae2289c31ab0370772bd}{BARECEGUI::setFont}}(std::string fontFile) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00247}00247         \textcolor{comment}{// Create the font}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00248}00248         CEGUI::FontManager::getSingleton().createFromFile(fontFile + \textcolor{stringliteral}{"{}.font"{}});}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00249}00249         \textcolor{comment}{// Set the font in each context.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00250}00250         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}.size(); i++) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00251}00251             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[i]-\/>context-\/>setDefaultFont(fontFile);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00252}00252         \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00253}00253     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00254}00254 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00255}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a4887d95ac1f2dc8becc75cf11d6cf9dd}{00255}}     CEGUI::Window* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a4887d95ac1f2dc8becc75cf11d6cf9dd}{BARECEGUI::createWidget}}(std::string type, glm::vec4 destRectPercent, glm::vec4 destRectPixels, CEGUI::Window* parent, std::string name) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00256}00256         \textcolor{comment}{// Create the window for the widget}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00257}00257         CEGUI::Window* newWindow = CEGUI::WindowManager::getSingleton().createWindow(type, name);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00258}00258         \textcolor{comment}{// Set its size, position too}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00259}00259         newWindow-\/>setPosition(CEGUI::UVector2(CEGUI::UDim(destRectPercent.x, destRectPixels.x), CEGUI::UDim(destRectPercent.y, destRectPixels.y)));}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00260}00260         newWindow-\/>setSize(CEGUI::USize(CEGUI::UDim(destRectPercent.z, destRectPixels.z), CEGUI::UDim(destRectPercent.w, destRectPixels.w)));}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00261}00261         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00262}00262         \textcolor{comment}{// If a parent is given, add it as a child}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00263}00263         \textcolor{keywordflow}{if}(parent) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00264}00264             parent-\/>addChild(newWindow);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00265}00265         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00266}00266             \textcolor{comment}{// If it's not, add it to the root.}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00267}00267             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}{m\_activeContext}}]-\/>rootWindow-\/>addChild(newWindow);}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00268}00268         \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00269}00269         }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00270}00270         \textcolor{keywordflow}{return} newWindow;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00271}00271     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00272}00272 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00273}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa3c3feb09e2c328426f057336e6ad2ae}{00273}}     CEGUI::OpenGL3Renderer* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa3c3feb09e2c328426f057336e6ad2ae}{BARECEGUI::getRenderer}}() \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00274}00274         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}{m\_activeContext}}]-\/>renderer;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00275}00275     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00276}00276     }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00277}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea}{00277}}     CEGUI::GUIContext* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea}{BARECEGUI::getContext}}() \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00278}00278         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}{m\_activeContext}} < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}.size())}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00279}00279             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\_contexts}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}{m\_activeContext}}]-\/>context;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00280}00280         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00281}00281     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00282}00282     }
 \DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00283}\mbox{\hyperlink{namespace_b_a_r_e2_d_a4308f8684a05ffbf8ef36cd49541765b}{00283}}     CEGUI::Key::Scan \mbox{\hyperlink{namespace_b_a_r_e2_d_a4308f8684a05ffbf8ef36cd49541765b}{SDLKeyToCEGUIKey}}(SDL\_Keycode key) \{}
-\DoxyCodeLine{00284         \textcolor{keyword}{using} \textcolor{keyword}{namespace} CEGUI;}
-\DoxyCodeLine{00285         \textcolor{keywordflow}{switch} (key) \{}
-\DoxyCodeLine{00286             \textcolor{keywordflow}{case} SDLK\_BACKSPACE:}
-\DoxyCodeLine{00287                 \textcolor{keywordflow}{return} Key::Backspace;}
-\DoxyCodeLine{00288             \textcolor{keywordflow}{case} SDLK\_TAB:}
-\DoxyCodeLine{00289                 \textcolor{keywordflow}{return} Key::Tab;}
-\DoxyCodeLine{00290             \textcolor{keywordflow}{case} SDLK\_RETURN:}
-\DoxyCodeLine{00291                 \textcolor{keywordflow}{return} Key::Return;}
-\DoxyCodeLine{00292             \textcolor{keywordflow}{case} SDLK\_PAUSE:}
-\DoxyCodeLine{00293                 \textcolor{keywordflow}{return} Key::Pause;}
-\DoxyCodeLine{00294             \textcolor{keywordflow}{case} SDLK\_ESCAPE:}
-\DoxyCodeLine{00295                 \textcolor{keywordflow}{return} Key::Escape;}
-\DoxyCodeLine{00296             \textcolor{keywordflow}{case} SDLK\_SPACE:}
-\DoxyCodeLine{00297                 \textcolor{keywordflow}{return} Key::Space;}
-\DoxyCodeLine{00298             \textcolor{keywordflow}{case} SDLK\_COMMA:}
-\DoxyCodeLine{00299                 \textcolor{keywordflow}{return} Key::Comma;}
-\DoxyCodeLine{00300             \textcolor{keywordflow}{case} SDLK\_MINUS:}
-\DoxyCodeLine{00301                 \textcolor{keywordflow}{return} Key::Minus;}
-\DoxyCodeLine{00302             \textcolor{keywordflow}{case} SDLK\_PERIOD:}
-\DoxyCodeLine{00303                 \textcolor{keywordflow}{return} Key::Period;}
-\DoxyCodeLine{00304             \textcolor{keywordflow}{case} SDLK\_SLASH:}
-\DoxyCodeLine{00305                 \textcolor{keywordflow}{return} Key::Slash;}
-\DoxyCodeLine{00306             \textcolor{keywordflow}{case} SDLK\_0:}
-\DoxyCodeLine{00307                 \textcolor{keywordflow}{return} Key::Zero;}
-\DoxyCodeLine{00308             \textcolor{keywordflow}{case} SDLK\_1:}
-\DoxyCodeLine{00309                 \textcolor{keywordflow}{return} Key::One;}
-\DoxyCodeLine{00310             \textcolor{keywordflow}{case} SDLK\_2:}
-\DoxyCodeLine{00311                 \textcolor{keywordflow}{return} Key::Two;}
-\DoxyCodeLine{00312             \textcolor{keywordflow}{case} SDLK\_3:}
-\DoxyCodeLine{00313                 \textcolor{keywordflow}{return} Key::Three;}
-\DoxyCodeLine{00314             \textcolor{keywordflow}{case} SDLK\_4:}
-\DoxyCodeLine{00315                 \textcolor{keywordflow}{return} Key::Four;}
-\DoxyCodeLine{00316             \textcolor{keywordflow}{case} SDLK\_5:}
-\DoxyCodeLine{00317                 \textcolor{keywordflow}{return} Key::Five;}
-\DoxyCodeLine{00318             \textcolor{keywordflow}{case} SDLK\_6:}
-\DoxyCodeLine{00319                 \textcolor{keywordflow}{return} Key::Six;}
-\DoxyCodeLine{00320             \textcolor{keywordflow}{case} SDLK\_7:}
-\DoxyCodeLine{00321                 \textcolor{keywordflow}{return} Key::Seven;}
-\DoxyCodeLine{00322             \textcolor{keywordflow}{case} SDLK\_8:}
-\DoxyCodeLine{00323                 \textcolor{keywordflow}{return} Key::Eight;}
-\DoxyCodeLine{00324             \textcolor{keywordflow}{case} SDLK\_9:}
-\DoxyCodeLine{00325                 \textcolor{keywordflow}{return} Key::Nine;}
-\DoxyCodeLine{00326             \textcolor{keywordflow}{case} SDLK\_COLON:}
-\DoxyCodeLine{00327                 \textcolor{keywordflow}{return} Key::Colon;}
-\DoxyCodeLine{00328             \textcolor{keywordflow}{case} SDLK\_SEMICOLON:}
-\DoxyCodeLine{00329                 \textcolor{keywordflow}{return} Key::Semicolon;}
-\DoxyCodeLine{00330             \textcolor{keywordflow}{case} SDLK\_EQUALS:}
-\DoxyCodeLine{00331                 \textcolor{keywordflow}{return} Key::Equals;}
-\DoxyCodeLine{00332             \textcolor{keywordflow}{case} SDLK\_LEFTBRACKET:}
-\DoxyCodeLine{00333                 \textcolor{keywordflow}{return} Key::LeftBracket;}
-\DoxyCodeLine{00334             \textcolor{keywordflow}{case} SDLK\_BACKSLASH:}
-\DoxyCodeLine{00335                 \textcolor{keywordflow}{return} Key::Backslash;}
-\DoxyCodeLine{00336             \textcolor{keywordflow}{case} SDLK\_RIGHTBRACKET:}
-\DoxyCodeLine{00337                 \textcolor{keywordflow}{return} Key::RightBracket;}
-\DoxyCodeLine{00338             \textcolor{keywordflow}{case} SDLK\_a:}
-\DoxyCodeLine{00339                 \textcolor{keywordflow}{return} Key::A;}
-\DoxyCodeLine{00340             \textcolor{keywordflow}{case} SDLK\_b:}
-\DoxyCodeLine{00341                 \textcolor{keywordflow}{return} Key::B;}
-\DoxyCodeLine{00342             \textcolor{keywordflow}{case} SDLK\_c:}
-\DoxyCodeLine{00343                 \textcolor{keywordflow}{return} Key::C;}
-\DoxyCodeLine{00344             \textcolor{keywordflow}{case} SDLK\_d:}
-\DoxyCodeLine{00345                 \textcolor{keywordflow}{return} Key::D;}
-\DoxyCodeLine{00346             \textcolor{keywordflow}{case} SDLK\_e:}
-\DoxyCodeLine{00347                 \textcolor{keywordflow}{return} Key::E;}
-\DoxyCodeLine{00348             \textcolor{keywordflow}{case} SDLK\_f:}
-\DoxyCodeLine{00349                 \textcolor{keywordflow}{return} Key::F;}
-\DoxyCodeLine{00350             \textcolor{keywordflow}{case} SDLK\_g:}
-\DoxyCodeLine{00351                 \textcolor{keywordflow}{return} Key::G;}
-\DoxyCodeLine{00352             \textcolor{keywordflow}{case} SDLK\_h:}
-\DoxyCodeLine{00353                 \textcolor{keywordflow}{return} Key::H;}
-\DoxyCodeLine{00354             \textcolor{keywordflow}{case} SDLK\_i:}
-\DoxyCodeLine{00355                 \textcolor{keywordflow}{return} Key::I;}
-\DoxyCodeLine{00356             \textcolor{keywordflow}{case} SDLK\_j:}
-\DoxyCodeLine{00357                 \textcolor{keywordflow}{return} Key::J;}
-\DoxyCodeLine{00358             \textcolor{keywordflow}{case} SDLK\_k:}
-\DoxyCodeLine{00359                 \textcolor{keywordflow}{return} Key::K;}
-\DoxyCodeLine{00360             \textcolor{keywordflow}{case} SDLK\_l:}
-\DoxyCodeLine{00361                 \textcolor{keywordflow}{return} Key::L;}
-\DoxyCodeLine{00362             \textcolor{keywordflow}{case} SDLK\_m:}
-\DoxyCodeLine{00363                 \textcolor{keywordflow}{return} Key::M;}
-\DoxyCodeLine{00364             \textcolor{keywordflow}{case} SDLK\_n:}
-\DoxyCodeLine{00365                 \textcolor{keywordflow}{return} Key::N;}
-\DoxyCodeLine{00366             \textcolor{keywordflow}{case} SDLK\_o:}
-\DoxyCodeLine{00367                 \textcolor{keywordflow}{return} Key::O;}
-\DoxyCodeLine{00368             \textcolor{keywordflow}{case} SDLK\_p:}
-\DoxyCodeLine{00369                 \textcolor{keywordflow}{return} Key::P;}
-\DoxyCodeLine{00370             \textcolor{keywordflow}{case} SDLK\_q:}
-\DoxyCodeLine{00371                 \textcolor{keywordflow}{return} Key::Q;}
-\DoxyCodeLine{00372             \textcolor{keywordflow}{case} SDLK\_r:}
-\DoxyCodeLine{00373                 \textcolor{keywordflow}{return} Key::R;}
-\DoxyCodeLine{00374             \textcolor{keywordflow}{case} SDLK\_s:}
-\DoxyCodeLine{00375                 \textcolor{keywordflow}{return} Key::S;}
-\DoxyCodeLine{00376             \textcolor{keywordflow}{case} SDLK\_t:}
-\DoxyCodeLine{00377                 \textcolor{keywordflow}{return} Key::T;}
-\DoxyCodeLine{00378             \textcolor{keywordflow}{case} SDLK\_u:}
-\DoxyCodeLine{00379                 \textcolor{keywordflow}{return} Key::U;}
-\DoxyCodeLine{00380             \textcolor{keywordflow}{case} SDLK\_v:}
-\DoxyCodeLine{00381                 \textcolor{keywordflow}{return} Key::V;}
-\DoxyCodeLine{00382             \textcolor{keywordflow}{case} SDLK\_w:}
-\DoxyCodeLine{00383                 \textcolor{keywordflow}{return} Key::W;}
-\DoxyCodeLine{00384             \textcolor{keywordflow}{case} SDLK\_x:}
-\DoxyCodeLine{00385                 \textcolor{keywordflow}{return} Key::X;}
-\DoxyCodeLine{00386             \textcolor{keywordflow}{case} SDLK\_y:}
-\DoxyCodeLine{00387                 \textcolor{keywordflow}{return} Key::Y;}
-\DoxyCodeLine{00388             \textcolor{keywordflow}{case} SDLK\_z:}
-\DoxyCodeLine{00389                 \textcolor{keywordflow}{return} Key::Z;}
-\DoxyCodeLine{00390             \textcolor{keywordflow}{case} SDLK\_DELETE:}
-\DoxyCodeLine{00391                 \textcolor{keywordflow}{return} Key::Delete;}
-\DoxyCodeLine{00392             \textcolor{keywordflow}{case} SDLK\_KP\_PERIOD:}
-\DoxyCodeLine{00393                 \textcolor{keywordflow}{return} Key::Decimal;}
-\DoxyCodeLine{00394             \textcolor{keywordflow}{case} SDLK\_KP\_DIVIDE:}
-\DoxyCodeLine{00395                 \textcolor{keywordflow}{return} Key::Divide;}
-\DoxyCodeLine{00396             \textcolor{keywordflow}{case} SDLK\_KP\_MULTIPLY:}
-\DoxyCodeLine{00397                 \textcolor{keywordflow}{return} Key::Multiply;}
-\DoxyCodeLine{00398             \textcolor{keywordflow}{case} SDLK\_KP\_MINUS:}
-\DoxyCodeLine{00399                 \textcolor{keywordflow}{return} Key::Subtract;}
-\DoxyCodeLine{00400             \textcolor{keywordflow}{case} SDLK\_KP\_PLUS:}
-\DoxyCodeLine{00401                 \textcolor{keywordflow}{return} Key::Add;}
-\DoxyCodeLine{00402             \textcolor{keywordflow}{case} SDLK\_KP\_ENTER:}
-\DoxyCodeLine{00403                 \textcolor{keywordflow}{return} Key::NumpadEnter;}
-\DoxyCodeLine{00404             \textcolor{keywordflow}{case} SDLK\_KP\_EQUALS:}
-\DoxyCodeLine{00405                 \textcolor{keywordflow}{return} Key::NumpadEquals;}
-\DoxyCodeLine{00406             \textcolor{keywordflow}{case} SDLK\_UP:}
-\DoxyCodeLine{00407                 \textcolor{keywordflow}{return} Key::ArrowUp;}
-\DoxyCodeLine{00408             \textcolor{keywordflow}{case} SDLK\_DOWN:}
-\DoxyCodeLine{00409                 \textcolor{keywordflow}{return} Key::ArrowDown;}
-\DoxyCodeLine{00410             \textcolor{keywordflow}{case} SDLK\_RIGHT:}
-\DoxyCodeLine{00411                 \textcolor{keywordflow}{return} Key::ArrowRight;}
-\DoxyCodeLine{00412             \textcolor{keywordflow}{case} SDLK\_LEFT:}
-\DoxyCodeLine{00413                 \textcolor{keywordflow}{return} Key::ArrowLeft;}
-\DoxyCodeLine{00414             \textcolor{keywordflow}{case} SDLK\_INSERT:}
-\DoxyCodeLine{00415                 \textcolor{keywordflow}{return} Key::Insert;}
-\DoxyCodeLine{00416             \textcolor{keywordflow}{case} SDLK\_HOME:}
-\DoxyCodeLine{00417                 \textcolor{keywordflow}{return} Key::Home;}
-\DoxyCodeLine{00418             \textcolor{keywordflow}{case} SDLK\_END:}
-\DoxyCodeLine{00419                 \textcolor{keywordflow}{return} Key::End;}
-\DoxyCodeLine{00420             \textcolor{keywordflow}{case} SDLK\_PAGEUP:}
-\DoxyCodeLine{00421                 \textcolor{keywordflow}{return} Key::PageUp;}
-\DoxyCodeLine{00422             \textcolor{keywordflow}{case} SDLK\_PAGEDOWN:}
-\DoxyCodeLine{00423                 \textcolor{keywordflow}{return} Key::PageDown;}
-\DoxyCodeLine{00424             \textcolor{keywordflow}{case} SDLK\_F1:}
-\DoxyCodeLine{00425                 \textcolor{keywordflow}{return} Key::F1;}
-\DoxyCodeLine{00426             \textcolor{keywordflow}{case} SDLK\_F2:}
-\DoxyCodeLine{00427                 \textcolor{keywordflow}{return} Key::F2;}
-\DoxyCodeLine{00428             \textcolor{keywordflow}{case} SDLK\_F3:}
-\DoxyCodeLine{00429                 \textcolor{keywordflow}{return} Key::F3;}
-\DoxyCodeLine{00430             \textcolor{keywordflow}{case} SDLK\_F4:}
-\DoxyCodeLine{00431                 \textcolor{keywordflow}{return} Key::F4;}
-\DoxyCodeLine{00432             \textcolor{keywordflow}{case} SDLK\_F5:}
-\DoxyCodeLine{00433                 \textcolor{keywordflow}{return} Key::F5;}
-\DoxyCodeLine{00434             \textcolor{keywordflow}{case} SDLK\_F6:}
-\DoxyCodeLine{00435                 \textcolor{keywordflow}{return} Key::F6;}
-\DoxyCodeLine{00436             \textcolor{keywordflow}{case} SDLK\_F7:}
-\DoxyCodeLine{00437                 \textcolor{keywordflow}{return} Key::F7;}
-\DoxyCodeLine{00438             \textcolor{keywordflow}{case} SDLK\_F8:}
-\DoxyCodeLine{00439                 \textcolor{keywordflow}{return} Key::F8;}
-\DoxyCodeLine{00440             \textcolor{keywordflow}{case} SDLK\_F9:}
-\DoxyCodeLine{00441                 \textcolor{keywordflow}{return} Key::F9;}
-\DoxyCodeLine{00442             \textcolor{keywordflow}{case} SDLK\_F10:}
-\DoxyCodeLine{00443                 \textcolor{keywordflow}{return} Key::F10;}
-\DoxyCodeLine{00444             \textcolor{keywordflow}{case} SDLK\_F11:}
-\DoxyCodeLine{00445                 \textcolor{keywordflow}{return} Key::F11;}
-\DoxyCodeLine{00446             \textcolor{keywordflow}{case} SDLK\_F12:}
-\DoxyCodeLine{00447                 \textcolor{keywordflow}{return} Key::F12;}
-\DoxyCodeLine{00448             \textcolor{keywordflow}{case} SDLK\_F13:}
-\DoxyCodeLine{00449                 \textcolor{keywordflow}{return} Key::F13;}
-\DoxyCodeLine{00450             \textcolor{keywordflow}{case} SDLK\_F14:}
-\DoxyCodeLine{00451                 \textcolor{keywordflow}{return} Key::F14;}
-\DoxyCodeLine{00452             \textcolor{keywordflow}{case} SDLK\_F15:}
-\DoxyCodeLine{00453                 \textcolor{keywordflow}{return} Key::F15;}
-\DoxyCodeLine{00454             \textcolor{keywordflow}{case} SDLK\_RSHIFT:}
-\DoxyCodeLine{00455                 \textcolor{keywordflow}{return} Key::RightShift;}
-\DoxyCodeLine{00456             \textcolor{keywordflow}{case} SDLK\_LSHIFT:}
-\DoxyCodeLine{00457                 \textcolor{keywordflow}{return} Key::LeftShift;}
-\DoxyCodeLine{00458             \textcolor{keywordflow}{case} SDLK\_RCTRL:}
-\DoxyCodeLine{00459                 \textcolor{keywordflow}{return} Key::RightControl;}
-\DoxyCodeLine{00460             \textcolor{keywordflow}{case} SDLK\_LCTRL:}
-\DoxyCodeLine{00461                 \textcolor{keywordflow}{return} Key::LeftControl;}
-\DoxyCodeLine{00462             \textcolor{keywordflow}{case} SDLK\_RALT:}
-\DoxyCodeLine{00463                 \textcolor{keywordflow}{return} Key::RightAlt;}
-\DoxyCodeLine{00464             \textcolor{keywordflow}{case} SDLK\_LALT:}
-\DoxyCodeLine{00465                 \textcolor{keywordflow}{return} Key::LeftAlt;}
-\DoxyCodeLine{00466             \textcolor{keywordflow}{case} SDLK\_SYSREQ:}
-\DoxyCodeLine{00467                 \textcolor{keywordflow}{return} Key::SysRq;}
-\DoxyCodeLine{00468             \textcolor{keywordflow}{case} SDLK\_MENU:}
-\DoxyCodeLine{00469                 \textcolor{keywordflow}{return} Key::AppMenu;}
-\DoxyCodeLine{00470             \textcolor{keywordflow}{case} SDLK\_POWER:}
-\DoxyCodeLine{00471                 \textcolor{keywordflow}{return} Key::Power;}
-\DoxyCodeLine{00472             \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{00473                 \textcolor{keywordflow}{return} Key::Unknown;}
-\DoxyCodeLine{00474         \}}
-\DoxyCodeLine{00475     \}}
-\DoxyCodeLine{00476 }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00284}00284         \textcolor{keyword}{using namespace }CEGUI;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00285}00285         \textcolor{keywordflow}{switch} (key) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00286}00286             \textcolor{keywordflow}{case} SDLK\_BACKSPACE:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00287}00287                 \textcolor{keywordflow}{return} Key::Backspace;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00288}00288             \textcolor{keywordflow}{case} SDLK\_TAB:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00289}00289                 \textcolor{keywordflow}{return} Key::Tab;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00290}00290             \textcolor{keywordflow}{case} SDLK\_RETURN:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00291}00291                 \textcolor{keywordflow}{return} Key::Return;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00292}00292             \textcolor{keywordflow}{case} SDLK\_PAUSE:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00293}00293                 \textcolor{keywordflow}{return} Key::Pause;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00294}00294             \textcolor{keywordflow}{case} SDLK\_ESCAPE:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00295}00295                 \textcolor{keywordflow}{return} Key::Escape;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00296}00296             \textcolor{keywordflow}{case} SDLK\_SPACE:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00297}00297                 \textcolor{keywordflow}{return} Key::Space;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00298}00298             \textcolor{keywordflow}{case} SDLK\_COMMA:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00299}00299                 \textcolor{keywordflow}{return} Key::Comma;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00300}00300             \textcolor{keywordflow}{case} SDLK\_MINUS:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00301}00301                 \textcolor{keywordflow}{return} Key::Minus;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00302}00302             \textcolor{keywordflow}{case} SDLK\_PERIOD:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00303}00303                 \textcolor{keywordflow}{return} Key::Period;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00304}00304             \textcolor{keywordflow}{case} SDLK\_SLASH:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00305}00305                 \textcolor{keywordflow}{return} Key::Slash;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00306}00306             \textcolor{keywordflow}{case} SDLK\_0:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00307}00307                 \textcolor{keywordflow}{return} Key::Zero;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00308}00308             \textcolor{keywordflow}{case} SDLK\_1:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00309}00309                 \textcolor{keywordflow}{return} Key::One;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00310}00310             \textcolor{keywordflow}{case} SDLK\_2:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00311}00311                 \textcolor{keywordflow}{return} Key::Two;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00312}00312             \textcolor{keywordflow}{case} SDLK\_3:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00313}00313                 \textcolor{keywordflow}{return} Key::Three;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00314}00314             \textcolor{keywordflow}{case} SDLK\_4:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00315}00315                 \textcolor{keywordflow}{return} Key::Four;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00316}00316             \textcolor{keywordflow}{case} SDLK\_5:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00317}00317                 \textcolor{keywordflow}{return} Key::Five;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00318}00318             \textcolor{keywordflow}{case} SDLK\_6:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00319}00319                 \textcolor{keywordflow}{return} Key::Six;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00320}00320             \textcolor{keywordflow}{case} SDLK\_7:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00321}00321                 \textcolor{keywordflow}{return} Key::Seven;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00322}00322             \textcolor{keywordflow}{case} SDLK\_8:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00323}00323                 \textcolor{keywordflow}{return} Key::Eight;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00324}00324             \textcolor{keywordflow}{case} SDLK\_9:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00325}00325                 \textcolor{keywordflow}{return} Key::Nine;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00326}00326             \textcolor{keywordflow}{case} SDLK\_COLON:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00327}00327                 \textcolor{keywordflow}{return} Key::Colon;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00328}00328             \textcolor{keywordflow}{case} SDLK\_SEMICOLON:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00329}00329                 \textcolor{keywordflow}{return} Key::Semicolon;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00330}00330             \textcolor{keywordflow}{case} SDLK\_EQUALS:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00331}00331                 \textcolor{keywordflow}{return} Key::Equals;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00332}00332             \textcolor{keywordflow}{case} SDLK\_LEFTBRACKET:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00333}00333                 \textcolor{keywordflow}{return} Key::LeftBracket;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00334}00334             \textcolor{keywordflow}{case} SDLK\_BACKSLASH:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00335}00335                 \textcolor{keywordflow}{return} Key::Backslash;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00336}00336             \textcolor{keywordflow}{case} SDLK\_RIGHTBRACKET:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00337}00337                 \textcolor{keywordflow}{return} Key::RightBracket;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00338}00338             \textcolor{keywordflow}{case} SDLK\_a:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00339}00339                 \textcolor{keywordflow}{return} Key::A;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00340}00340             \textcolor{keywordflow}{case} SDLK\_b:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00341}00341                 \textcolor{keywordflow}{return} Key::B;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00342}00342             \textcolor{keywordflow}{case} SDLK\_c:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00343}00343                 \textcolor{keywordflow}{return} Key::C;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00344}00344             \textcolor{keywordflow}{case} SDLK\_d:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00345}00345                 \textcolor{keywordflow}{return} Key::D;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00346}00346             \textcolor{keywordflow}{case} SDLK\_e:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00347}00347                 \textcolor{keywordflow}{return} Key::E;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00348}00348             \textcolor{keywordflow}{case} SDLK\_f:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00349}00349                 \textcolor{keywordflow}{return} Key::F;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00350}00350             \textcolor{keywordflow}{case} SDLK\_g:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00351}00351                 \textcolor{keywordflow}{return} Key::G;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00352}00352             \textcolor{keywordflow}{case} SDLK\_h:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00353}00353                 \textcolor{keywordflow}{return} Key::H;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00354}00354             \textcolor{keywordflow}{case} SDLK\_i:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00355}00355                 \textcolor{keywordflow}{return} Key::I;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00356}00356             \textcolor{keywordflow}{case} SDLK\_j:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00357}00357                 \textcolor{keywordflow}{return} Key::J;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00358}00358             \textcolor{keywordflow}{case} SDLK\_k:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00359}00359                 \textcolor{keywordflow}{return} Key::K;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00360}00360             \textcolor{keywordflow}{case} SDLK\_l:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00361}00361                 \textcolor{keywordflow}{return} Key::L;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00362}00362             \textcolor{keywordflow}{case} SDLK\_m:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00363}00363                 \textcolor{keywordflow}{return} Key::M;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00364}00364             \textcolor{keywordflow}{case} SDLK\_n:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00365}00365                 \textcolor{keywordflow}{return} Key::N;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00366}00366             \textcolor{keywordflow}{case} SDLK\_o:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00367}00367                 \textcolor{keywordflow}{return} Key::O;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00368}00368             \textcolor{keywordflow}{case} SDLK\_p:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00369}00369                 \textcolor{keywordflow}{return} Key::P;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00370}00370             \textcolor{keywordflow}{case} SDLK\_q:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00371}00371                 \textcolor{keywordflow}{return} Key::Q;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00372}00372             \textcolor{keywordflow}{case} SDLK\_r:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00373}00373                 \textcolor{keywordflow}{return} Key::R;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00374}00374             \textcolor{keywordflow}{case} SDLK\_s:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00375}00375                 \textcolor{keywordflow}{return} Key::S;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00376}00376             \textcolor{keywordflow}{case} SDLK\_t:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00377}00377                 \textcolor{keywordflow}{return} Key::T;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00378}00378             \textcolor{keywordflow}{case} SDLK\_u:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00379}00379                 \textcolor{keywordflow}{return} Key::U;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00380}00380             \textcolor{keywordflow}{case} SDLK\_v:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00381}00381                 \textcolor{keywordflow}{return} Key::V;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00382}00382             \textcolor{keywordflow}{case} SDLK\_w:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00383}00383                 \textcolor{keywordflow}{return} Key::W;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00384}00384             \textcolor{keywordflow}{case} SDLK\_x:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00385}00385                 \textcolor{keywordflow}{return} Key::X;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00386}00386             \textcolor{keywordflow}{case} SDLK\_y:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00387}00387                 \textcolor{keywordflow}{return} Key::Y;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00388}00388             \textcolor{keywordflow}{case} SDLK\_z:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00389}00389                 \textcolor{keywordflow}{return} Key::Z;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00390}00390             \textcolor{keywordflow}{case} SDLK\_DELETE:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00391}00391                 \textcolor{keywordflow}{return} Key::Delete;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00392}00392             \textcolor{keywordflow}{case} SDLK\_KP\_PERIOD:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00393}00393                 \textcolor{keywordflow}{return} Key::Decimal;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00394}00394             \textcolor{keywordflow}{case} SDLK\_KP\_DIVIDE:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00395}00395                 \textcolor{keywordflow}{return} Key::Divide;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00396}00396             \textcolor{keywordflow}{case} SDLK\_KP\_MULTIPLY:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00397}00397                 \textcolor{keywordflow}{return} Key::Multiply;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00398}00398             \textcolor{keywordflow}{case} SDLK\_KP\_MINUS:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00399}00399                 \textcolor{keywordflow}{return} Key::Subtract;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00400}00400             \textcolor{keywordflow}{case} SDLK\_KP\_PLUS:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00401}00401                 \textcolor{keywordflow}{return} Key::Add;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00402}00402             \textcolor{keywordflow}{case} SDLK\_KP\_ENTER:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00403}00403                 \textcolor{keywordflow}{return} Key::NumpadEnter;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00404}00404             \textcolor{keywordflow}{case} SDLK\_KP\_EQUALS:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00405}00405                 \textcolor{keywordflow}{return} Key::NumpadEquals;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00406}00406             \textcolor{keywordflow}{case} SDLK\_UP:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00407}00407                 \textcolor{keywordflow}{return} Key::ArrowUp;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00408}00408             \textcolor{keywordflow}{case} SDLK\_DOWN:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00409}00409                 \textcolor{keywordflow}{return} Key::ArrowDown;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00410}00410             \textcolor{keywordflow}{case} SDLK\_RIGHT:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00411}00411                 \textcolor{keywordflow}{return} Key::ArrowRight;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00412}00412             \textcolor{keywordflow}{case} SDLK\_LEFT:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00413}00413                 \textcolor{keywordflow}{return} Key::ArrowLeft;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00414}00414             \textcolor{keywordflow}{case} SDLK\_INSERT:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00415}00415                 \textcolor{keywordflow}{return} Key::Insert;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00416}00416             \textcolor{keywordflow}{case} SDLK\_HOME:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00417}00417                 \textcolor{keywordflow}{return} Key::Home;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00418}00418             \textcolor{keywordflow}{case} SDLK\_END:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00419}00419                 \textcolor{keywordflow}{return} Key::End;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00420}00420             \textcolor{keywordflow}{case} SDLK\_PAGEUP:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00421}00421                 \textcolor{keywordflow}{return} Key::PageUp;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00422}00422             \textcolor{keywordflow}{case} SDLK\_PAGEDOWN:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00423}00423                 \textcolor{keywordflow}{return} Key::PageDown;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00424}00424             \textcolor{keywordflow}{case} SDLK\_F1:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00425}00425                 \textcolor{keywordflow}{return} Key::F1;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00426}00426             \textcolor{keywordflow}{case} SDLK\_F2:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00427}00427                 \textcolor{keywordflow}{return} Key::F2;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00428}00428             \textcolor{keywordflow}{case} SDLK\_F3:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00429}00429                 \textcolor{keywordflow}{return} Key::F3;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00430}00430             \textcolor{keywordflow}{case} SDLK\_F4:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00431}00431                 \textcolor{keywordflow}{return} Key::F4;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00432}00432             \textcolor{keywordflow}{case} SDLK\_F5:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00433}00433                 \textcolor{keywordflow}{return} Key::F5;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00434}00434             \textcolor{keywordflow}{case} SDLK\_F6:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00435}00435                 \textcolor{keywordflow}{return} Key::F6;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00436}00436             \textcolor{keywordflow}{case} SDLK\_F7:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00437}00437                 \textcolor{keywordflow}{return} Key::F7;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00438}00438             \textcolor{keywordflow}{case} SDLK\_F8:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00439}00439                 \textcolor{keywordflow}{return} Key::F8;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00440}00440             \textcolor{keywordflow}{case} SDLK\_F9:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00441}00441                 \textcolor{keywordflow}{return} Key::F9;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00442}00442             \textcolor{keywordflow}{case} SDLK\_F10:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00443}00443                 \textcolor{keywordflow}{return} Key::F10;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00444}00444             \textcolor{keywordflow}{case} SDLK\_F11:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00445}00445                 \textcolor{keywordflow}{return} Key::F11;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00446}00446             \textcolor{keywordflow}{case} SDLK\_F12:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00447}00447                 \textcolor{keywordflow}{return} Key::F12;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00448}00448             \textcolor{keywordflow}{case} SDLK\_F13:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00449}00449                 \textcolor{keywordflow}{return} Key::F13;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00450}00450             \textcolor{keywordflow}{case} SDLK\_F14:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00451}00451                 \textcolor{keywordflow}{return} Key::F14;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00452}00452             \textcolor{keywordflow}{case} SDLK\_F15:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00453}00453                 \textcolor{keywordflow}{return} Key::F15;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00454}00454             \textcolor{keywordflow}{case} SDLK\_RSHIFT:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00455}00455                 \textcolor{keywordflow}{return} Key::RightShift;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00456}00456             \textcolor{keywordflow}{case} SDLK\_LSHIFT:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00457}00457                 \textcolor{keywordflow}{return} Key::LeftShift;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00458}00458             \textcolor{keywordflow}{case} SDLK\_RCTRL:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00459}00459                 \textcolor{keywordflow}{return} Key::RightControl;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00460}00460             \textcolor{keywordflow}{case} SDLK\_LCTRL:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00461}00461                 \textcolor{keywordflow}{return} Key::LeftControl;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00462}00462             \textcolor{keywordflow}{case} SDLK\_RALT:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00463}00463                 \textcolor{keywordflow}{return} Key::RightAlt;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00464}00464             \textcolor{keywordflow}{case} SDLK\_LALT:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00465}00465                 \textcolor{keywordflow}{return} Key::LeftAlt;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00466}00466             \textcolor{keywordflow}{case} SDLK\_SYSREQ:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00467}00467                 \textcolor{keywordflow}{return} Key::SysRq;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00468}00468             \textcolor{keywordflow}{case} SDLK\_MENU:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00469}00469                 \textcolor{keywordflow}{return} Key::AppMenu;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00470}00470             \textcolor{keywordflow}{case} SDLK\_POWER:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00471}00471                 \textcolor{keywordflow}{return} Key::Power;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00472}00472             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00473}00473                 \textcolor{keywordflow}{return} Key::Unknown;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00474}00474         \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00475}00475     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00476}00476     }
 \DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00477}\mbox{\hyperlink{namespace_b_a_r_e2_d_add368291490f34b060048b5cbb5245f9}{00477}}     CEGUI::MouseButton \mbox{\hyperlink{namespace_b_a_r_e2_d_add368291490f34b060048b5cbb5245f9}{SDLButtonToCEGUIButton}}(Uint8 sdlButton) \{}
-\DoxyCodeLine{00478         \textcolor{keywordflow}{switch} (sdlButton) \{}
-\DoxyCodeLine{00479             \textcolor{keywordflow}{case} SDL\_BUTTON\_LEFT:}
-\DoxyCodeLine{00480                 \textcolor{keywordflow}{return} CEGUI::MouseButton::LeftButton;}
-\DoxyCodeLine{00481             \textcolor{keywordflow}{case} SDL\_BUTTON\_MIDDLE:}
-\DoxyCodeLine{00482                 \textcolor{keywordflow}{return} CEGUI::MouseButton::MiddleButton;}
-\DoxyCodeLine{00483             \textcolor{keywordflow}{case} SDL\_BUTTON\_RIGHT:}
-\DoxyCodeLine{00484                 \textcolor{keywordflow}{return} CEGUI::MouseButton::RightButton;}
-\DoxyCodeLine{00485             \textcolor{keywordflow}{case} SDL\_BUTTON\_X1:}
-\DoxyCodeLine{00486                 \textcolor{keywordflow}{return} CEGUI::MouseButton::X1Button;}
-\DoxyCodeLine{00487             \textcolor{keywordflow}{case} SDL\_BUTTON\_X2:}
-\DoxyCodeLine{00488                 \textcolor{keywordflow}{return} CEGUI::MouseButton::X2Button;}
-\DoxyCodeLine{00489         \}}
-\DoxyCodeLine{00490         \textcolor{keywordflow}{return} CEGUI::MouseButton::NoButton;}
-\DoxyCodeLine{00491     \}}
-\DoxyCodeLine{00492 }
-\DoxyCodeLine{00493 \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00478}00478         \textcolor{keywordflow}{switch} (sdlButton) \{}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00479}00479             \textcolor{keywordflow}{case} SDL\_BUTTON\_LEFT:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00480}00480                 \textcolor{keywordflow}{return} CEGUI::MouseButton::LeftButton;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00481}00481             \textcolor{keywordflow}{case} SDL\_BUTTON\_MIDDLE:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00482}00482                 \textcolor{keywordflow}{return} CEGUI::MouseButton::MiddleButton;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00483}00483             \textcolor{keywordflow}{case} SDL\_BUTTON\_RIGHT:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00484}00484                 \textcolor{keywordflow}{return} CEGUI::MouseButton::RightButton;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00485}00485             \textcolor{keywordflow}{case} SDL\_BUTTON\_X1:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00486}00486                 \textcolor{keywordflow}{return} CEGUI::MouseButton::X1Button;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00487}00487             \textcolor{keywordflow}{case} SDL\_BUTTON\_X2:}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00488}00488                 \textcolor{keywordflow}{return} CEGUI::MouseButton::X2Button;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00489}00489         \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00490}00490         \textcolor{keywordflow}{return} CEGUI::MouseButton::NoButton;}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00491}00491     \}}
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00492}00492     }
+\DoxyCodeLine{\Hypertarget{_b_a_r_e_c_e_g_u_i_8cpp_source_l00493}00493 \}}
 
 \end{DoxyCode}

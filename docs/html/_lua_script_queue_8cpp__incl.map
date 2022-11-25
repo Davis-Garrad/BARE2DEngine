@@ -1,13 +1,8 @@
 <map id="Source/LuaScriptQueue.cpp" name="Source/LuaScriptQueue.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="69,5,255,32"/>
-<area shape="rect" id="node2" href="$_lua_script_queue_8hpp.html" title="This class essentially just collects all of the scripts that need to be run from all the various end&#45;..." alt="" coords="20,80,160,107"/>
-<area shape="rect" id="node4" href="$_lua_script_8hpp.html" title="This is the basic Lua script wrapper &#45; it is what the end&#45;user will create and add to the queue...." alt="" coords="184,80,287,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="67,155,113,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="172,155,227,181"/>
-<area shape="rect" id="node6" href="$_lua_headers_8hpp.html" title=" " alt="" coords="251,155,369,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="5,229,95,256"/>
-<area shape="rect" id="node8" title=" " alt="" coords="119,229,229,256"/>
-<area shape="rect" id="node9" title=" " alt="" coords="253,229,367,256"/>
-<area shape="rect" id="node10" title=" " alt="" coords="392,229,495,256"/>
-<area shape="rect" id="node11" title=" " alt="" coords="519,229,621,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="55,5,240,31"/>
+<area shape="rect" id="node2" href="$_lua_script_queue_8hpp.html" title="This class essentially just collects all of the scripts that need to be run from all the various end&#45;..." alt="" coords="5,79,145,104"/>
+<area shape="rect" id="node5" href="$_lua_script_8hpp.html" title="This is the basic Lua script wrapper &#45; it is what the end&#45;user will create and add to the queue...." alt="" coords="169,79,272,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="36,152,83,177"/>
+<area shape="rect" id="node4" title=" " alt="" coords="107,152,161,177"/>
+<area shape="rect" id="node6" title=" " alt="" coords="185,152,288,177"/>
 </map>

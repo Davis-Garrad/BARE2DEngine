@@ -1,6 +1,0 @@
-<map id="BARE2D::FBORenderer::FBORenderer" name="BARE2D::FBORenderer::FBORenderer">
-<area shape="rect" id="node1" title=" " alt="" coords="5,49,169,90"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_camera2_d.html#ab946a4bc02d5e3ede6280dc9227b93f7" title=" " alt="" coords="217,5,436,32"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_camera2_d.html#a7dc4acd9d8d0cc2e7b7d956528fd488f" title="Initializes the camera." alt="" coords="241,56,413,83"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_camera2_d.html#a4a2d87a57c0f696b5d5398cc0e55f9b6" title="Offsets the x and y position of the camera by some increment." alt="" coords="233,107,421,149"/>
-</map>

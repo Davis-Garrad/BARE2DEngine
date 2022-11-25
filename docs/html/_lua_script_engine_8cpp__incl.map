@@ -1,22 +1,20 @@
 <map id="Source/LuaScriptEngine.cpp" name="Source/LuaScriptEngine.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="428,5,615,32"/>
-<area shape="rect" id="node2" href="$_lua_script_engine_8hpp.html" title="This is the class which actually processes all of the scripts in the script queue,..." alt="" coords="372,80,514,107"/>
-<area shape="rect" id="node10" href="$_lua_script_8hpp.html" title="This is the basic Lua script wrapper &#45; it is what the end&#45;user will create and add to the queue...." alt="" coords="113,155,216,181"/>
-<area shape="rect" id="node12" href="$_lua_script_queue_8hpp.html" title="This class essentially just collects all of the scripts that need to be run from all the various end&#45;..." alt="" coords="641,155,781,181"/>
-<area shape="rect" id="node17" href="$_lua_context_manager_8hpp.html" title="NOTE: This is a singleton class. The LuaContextManager, well, manages the Lua Contexts which the Scri..." alt="" coords="739,80,902,107"/>
-<area shape="rect" id="node18" href="$_lua_functions_8hpp.html" title=" " alt="" coords="539,80,664,107"/>
-<area shape="rect" id="node19" href="$_logger_8hpp.html" title=" " alt="" coords="12,80,98,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="436,155,514,181"/>
-<area shape="rect" id="node4" href="$_lua_headers_8hpp.html" title=" " alt="" coords="519,229,636,256"/>
-<area shape="rect" id="node14" href="$_lua_script_engine__impl_8tcc.html" title=" " alt="" coords="240,155,411,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="870,304,960,331"/>
-<area shape="rect" id="node6" title=" " alt="" coords="344,304,454,331"/>
-<area shape="rect" id="node7" title=" " alt="" coords="478,304,592,331"/>
-<area shape="rect" id="node8" title=" " alt="" coords="617,304,720,331"/>
-<area shape="rect" id="node9" title=" " alt="" coords="744,304,846,331"/>
-<area shape="rect" id="node11" title=" " alt="" coords="162,304,217,331"/>
-<area shape="rect" id="node13" title=" " alt="" coords="742,229,789,256"/>
-<area shape="rect" id="node15" href="$_b_a_r_e_errors_8hpp.html" title=" " alt="" coords="253,229,372,256"/>
-<area shape="rect" id="node16" title=" " alt="" coords="262,304,320,331"/>
-<area shape="rect" id="node20" title=" " alt="" coords="22,155,88,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="693,5,880,31"/>
+<area shape="rect" id="node2" href="$_lua_script_engine_8hpp.html" title="This is the class which actually processes all of the scripts in the script queue,..." alt="" coords="509,79,651,104"/>
+<area shape="rect" id="node9" href="$_lua_script_8hpp.html" title="This is the basic Lua script wrapper &#45; it is what the end&#45;user will create and add to the queue...." alt="" coords="645,152,747,177"/>
+<area shape="rect" id="node12" href="$_lua_script_queue_8hpp.html" title="This class essentially just collects all of the scripts that need to be run from all the various end&#45;..." alt="" coords="771,152,911,177"/>
+<area shape="rect" id="node15" href="$_lua_context_manager_8hpp.html" title="NOTE: This is a singleton class. The LuaContextManager, well, manages the Lua Contexts which the Scri..." alt="" coords="1009,79,1172,104"/>
+<area shape="rect" id="node16" href="$_lua_functions_8hpp.html" title=" " alt="" coords="276,79,401,104"/>
+<area shape="rect" id="node17" href="$_logger_8hpp.html" title=" " alt="" coords="900,79,985,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="346,152,425,177"/>
+<area shape="rect" id="node4" href="$_lua_headers_8hpp.html" title=" " alt="" coords="204,152,321,177"/>
+<area shape="rect" id="node14" href="$_lua_script_engine__impl_8tcc.html" title=" " alt="" coords="449,152,620,177"/>
+<area shape="rect" id="node5" title=" " alt="" coords="405,225,494,251"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,225,115,251"/>
+<area shape="rect" id="node7" title=" " alt="" coords="139,225,253,251"/>
+<area shape="rect" id="node8" title=" " alt="" coords="278,225,381,251"/>
+<area shape="rect" id="node10" title=" " alt="" coords="814,225,869,251"/>
+<area shape="rect" id="node11" title=" " alt="" coords="645,225,747,251"/>
+<area shape="rect" id="node13" title=" " alt="" coords="979,225,1026,251"/>
+<area shape="rect" id="node18" title=" " alt="" coords="987,152,1053,177"/>
 </map>

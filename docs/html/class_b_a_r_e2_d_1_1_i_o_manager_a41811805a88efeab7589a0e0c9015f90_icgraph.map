@@ -1,0 +1,13 @@
+<map id="BARE2D::IOManager::readFileToBuffer" name="BARE2D::IOManager::readFileToBuffer">
+<area shape="rect" id="node1" title="Loads a file into a buffer." alt="" coords="971,195,1127,235"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_shader_program.html#acf78cf9b4988abf40d62d67471a168a3" title="Compiles the shaders. Does not link them." alt="" coords="740,131,915,171"/>
+<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_resource_manager.html#aa40f3016ed65df8b01ce2608349ee61b" title="Loads a script from the filepath given from the cache or from the file if it&#39;s not already in the cac..." alt="" coords="732,195,923,235"/>
+<area shape="rect" id="node11" href="$class_b_a_r_e2_d_1_1_resource_manager.html#af4bb03a60f5fdb3ec94064e17c84e823" title="Loads a texture if it isn&#39;t already in the cache." alt="" coords="732,259,923,299"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_basic_renderer.html#aa228c647d7fe74772a4736d51fdb7796" title="Initializes all necessary bits of the renderer." alt="" coords="497,5,667,45"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="500,69,664,109"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_textureless_renderer.html#a01951b878023daee5eef45428e8e858e" title="Initializes all necessary bits of the renderer." alt="" coords="480,133,684,173"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_resource_manager.html#a00ef658172786a81106218cc6035bc13" title="Loads some shaders. Combines both to give a full shader program. Does not cache." alt="" coords="487,197,677,237"/>
+<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_x_m_l_data.html#acf63925319a7b15a53989db54702ea60" title="Reads the entire piece of data from a given XML node." alt="" coords="496,263,668,289"/>
+<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a85100a24e685d21a8f2af8f87def391a" title="Reads a single subcache from a single file." alt="" coords="243,256,432,296"/>
+<area shape="rect" id="node10" href="$class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#ac4a9f3f5c2a496e2df493a10df0003d3" title="Loads all of the files from the filepath that end in .xml to the caches. Does not clear caches." alt="" coords="5,256,195,296"/>
+</map>

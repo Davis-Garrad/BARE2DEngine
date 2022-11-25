@@ -1,9 +1,7 @@
 <map id="Source/Cache.hpp" name="Source/Cache.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="127,5,258,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,116,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="160,229,215,256"/>
-<area shape="rect" id="node4" title=" " alt="" coords="192,80,271,107"/>
-<area shape="rect" id="node5" href="$_cache__impl_8tcc.html" title=" " alt="" coords="295,80,408,107"/>
-<area shape="rect" id="node6" href="$_b_a_r_e_errors_8hpp.html" title=" " alt="" coords="241,155,360,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="271,229,330,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="147,5,278,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,79,116,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="140,79,195,104"/>
+<area shape="rect" id="node4" title=" " alt="" coords="219,79,297,104"/>
+<area shape="rect" id="node5" href="$_cache__impl_8tcc.html" title=" " alt="" coords="321,79,435,104"/>
 </map>

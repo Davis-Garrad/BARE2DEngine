@@ -1,11 +1,11 @@
 <map id="BARE2D::XMLDataManager::saveXML" name="BARE2D::XMLDataManager::saveXML">
-<area shape="rect" id="node1" title="Writes all of the currently cached data to the data&#39;s respective files in a folder at filepath...." alt="" coords="5,78,195,119"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec" title=" " alt="" coords="480,56,679,83"/>
-<area shape="rect" id="node4" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="945,31,1119,57"/>
-<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_logger.html#a76c97e021ee75d17defbc794f68a965b" title="Logs a message to a file and the terminal." alt="" coords="505,169,653,196"/>
-<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a64420cd9463430e186035296d982c553" title="Writes a single subcache of data to a single file." alt="" coords="243,107,432,149"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_logger.html#a731b4fafcc2878fe66360b1c9c0febdc" title=" " alt="" coords="727,56,897,83"/>
-<area shape="rect" id="node5" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="1167,5,1327,32"/>
-<area shape="rect" id="node6" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="1175,56,1319,83"/>
-<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_x_m_l_data.html#a72bb614851475c6510195cd7ebacf67a" title="Writes the entire piece of data to a new node in the XML document." alt="" coords="492,115,667,141"/>
+<area shape="rect" id="node1" title="Writes all of the currently cached data to the data&#39;s respective files in a folder at filepath...." alt="" coords="5,78,195,118"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec" title=" " alt="" coords="480,56,679,81"/>
+<area shape="rect" id="node4" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="945,31,1119,56"/>
+<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_logger.html#a76c97e021ee75d17defbc794f68a965b" title="Logs a message to a file and the terminal." alt="" coords="505,141,653,167"/>
+<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a64420cd9463430e186035296d982c553" title="Writes a single subcache of data to a single file." alt="" coords="243,106,432,146"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_logger.html#a731b4fafcc2878fe66360b1c9c0febdc" title=" " alt="" coords="727,56,897,81"/>
+<area shape="rect" id="node5" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="1167,5,1327,31"/>
+<area shape="rect" id="node7" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="1175,55,1319,80"/>
+<area shape="rect" id="node6" href="$namespace_b_a_r_e2_d.html#a7951c5decc1f7edc3c4f78ed2f579c85" title="Returns the string representing/explaining the error that occurred." alt="" coords="1375,31,1528,56"/>
 </map>

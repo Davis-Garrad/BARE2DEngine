@@ -56,10 +56,10 @@ namespace BARE2D {
 		// To hold all glyph metrics given by TTF_GlyphMetrics
 		glm::ivec4* glyphRectangles = new glm::ivec4[m_regLength];
 		// Some incremental variables.
-		unsigned int i = 0;
+		int i = 0;
 		
 		// Loop through every character
-		for(char c = m_regStart; c < m_regStart + m_regLength; c++) {
+		for(char c = m_regStart; (unsigned int)c < m_regStart + m_regLength; c++) {
 			// Get the metrics for the character
 			const char str[2] = { c, '\0' };
 			
@@ -205,7 +205,7 @@ namespace BARE2D {
 		// Create character glyphs for the font renderer.
 		m_characterGlyphs = new CharacterGlyph[m_regLength + 1]; // all characters + unsupported character
 		
-		for(i = 0; i < m_regLength; i++) {
+		for(i = 0; (unsigned int)i < m_regLength; i++) {
 			// Set every glyph's basic characteristics
 			m_characterGlyphs[i].character = (char)((FIRST_PRINTABLE_CHAR) + i);
 			m_characterGlyphs[i].size = glm::vec2(glyphRectangles[i].z, glyphRectangles[i].w);

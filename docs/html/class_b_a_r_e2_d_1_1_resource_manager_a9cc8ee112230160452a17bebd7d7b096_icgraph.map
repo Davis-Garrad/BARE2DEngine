@@ -1,0 +1,4 @@
+<map id="BARE2D::ResourceManager::loadMutableTexture" name="BARE2D::ResourceManager::loadMutableTexture">
+<area shape="rect" id="node1" title="Gets a texture from the cache, or creates a new, empty texture." alt="" coords="244,5,435,45"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_resource_manager.html#a05a7123519dfb03fa23088785eb4ece4" title="Creates a new mutable texture, or replaces one that exists with a new texture." alt="" coords="5,5,196,45"/>
+</map>

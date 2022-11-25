@@ -72,7 +72,8 @@ namespace BARE2D
 	{
 		// Clean up SDL
 		// Get how many times we called Mix_OpenAudio (the dummies store the frequency, format, and the number of channels)
-		int numTimesOpened, dummyA, dummyC;
+		unsigned int numTimesOpened;
+		int dummyA, dummyC;
 		Uint16 dummyB;
 		numTimesOpened = Mix_QuerySpec(&dummyA, &dummyB, &dummyC);
 		// Check for errors

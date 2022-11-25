@@ -1,5 +1,5 @@
 <map id="BARE2D::FBORenderer::createTextures" name="BARE2D::FBORenderer::createTextures">
-<area shape="rect" id="node1" title="Creates all of the OpenGL textures, and takes their handles into m_colourTextureID,..." alt="" coords="429,5,593,47"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#af0312bfcb60be2285bb443a79ae9678f" title="Creates the OpenGL FBO instance and holds its handle in m_fboID;." alt="" coords="217,5,381,47"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="5,5,169,47"/>
+<area shape="rect" id="node1" title="Creates all of the OpenGL textures, and takes their handles into m_colourTextureID,..." alt="" coords="429,5,593,45"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#af0312bfcb60be2285bb443a79ae9678f" title="Creates the OpenGL FBO instance and holds its handle in m_fboID;." alt="" coords="217,5,381,45"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="5,5,169,45"/>
 </map>

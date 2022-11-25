@@ -1,233 +1,234 @@
 \hypertarget{_audio_manager_8cpp_source}{}\doxysection{Audio\+Manager.\+cpp}
 \label{_audio_manager_8cpp_source}\index{Source/AudioManager.cpp@{Source/AudioManager.cpp}}
-
+\mbox{\hyperlink{_audio_manager_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_audio_manager_8hpp}{"AudioManager.hpp"}}}
-\DoxyCodeLine{00002 }
-\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{SDL2}\textcolor{preprocessor}{/}\textcolor{preprocessor}{SDL\_mixer}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00004 }
-\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_b_a_r_e_errors_8hpp}{"BAREErrors.hpp"}}}
-\DoxyCodeLine{00006 }
-\DoxyCodeLine{00007 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}}
-\DoxyCodeLine{00008 \{}
-\DoxyCodeLine{00009 }
-\DoxyCodeLine{00010     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}{m\_instance}} = \textcolor{keywordtype}{nullptr};}
-\DoxyCodeLine{00011 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00012}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ad1dfe27d3ca15d1087e274313d926ad8}{00012}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ad1dfe27d3ca15d1087e274313d926ad8}{getInstance}}()}
-\DoxyCodeLine{00013     \{}
-\DoxyCodeLine{00014         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}{m\_instance}}) \{}
-\DoxyCodeLine{00015             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}{m\_instance}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2ad1c7e845597f70b9d0a5d14969f3b5}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2ad1c7e845597f70b9d0a5d14969f3b5}{)}};}
-\DoxyCodeLine{00016         \}}
-\DoxyCodeLine{00017         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}{m\_instance}};}
-\DoxyCodeLine{00018     \}}
-\DoxyCodeLine{00019 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00020}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a4b07b591f0add8a92a333a1589b09b2c}{00020}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a4b07b591f0add8a92a333a1589b09b2c}{release}}()}
-\DoxyCodeLine{00021     \{}
-\DoxyCodeLine{00022         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}{m\_instance}}) \{}
-\DoxyCodeLine{00023             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}{m\_instance}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b}{destroy}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b}{)}};}
-\DoxyCodeLine{00024             \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}{m\_instance}};}
-\DoxyCodeLine{00025         \}}
-\DoxyCodeLine{00026     \}}
-\DoxyCodeLine{00027 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00028}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2ad1c7e845597f70b9d0a5d14969f3b5}{00028}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2ad1c7e845597f70b9d0a5d14969f3b5}{AudioManager}}()}
-\DoxyCodeLine{00029     \{}
-\DoxyCodeLine{00030     \}}
-\DoxyCodeLine{00031 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00032}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a5328303ce6ed6d376f081b235e369e17}{00032}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a5328303ce6ed6d376f081b235e369e17}{AudioManager}}()}
-\DoxyCodeLine{00033     \{}
-\DoxyCodeLine{00034     \}}
-\DoxyCodeLine{00035 }
-\DoxyCodeLine{00036 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00037}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a8d19a9540129548e8a6c26472d0b0c4d}{00037}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a8d19a9540129548e8a6c26472d0b0c4d}{init}}()}
-\DoxyCodeLine{00038     \{}
-\DoxyCodeLine{00039         \textcolor{comment}{// Load all of the DLLs which may or may not exist on our system.}}
-\DoxyCodeLine{00040         \textcolor{keywordtype}{int} initedFlags = Mix\_Init(MIX\_INIT\_FLAC | MIX\_INIT\_MOD | MIX\_INIT\_MP3 | MIX\_INIT\_OGG);}
-\DoxyCodeLine{00041 }
-\DoxyCodeLine{00042         \textcolor{comment}{// Check each flag, and report if it couldn't be inited.}}
-\DoxyCodeLine{00043         \textcolor{keywordflow}{if}(!(initedFlags \& MIX\_INIT\_FLAC)) \{}
-\DoxyCodeLine{00044             \textcolor{comment}{// Couldn't init .flac extension. report}}
-\DoxyCodeLine{00045             throwError(BAREError::SDL\_MIXER\_FLAC\_FAILURE, Mix\_GetError());}
-\DoxyCodeLine{00046         \}}
-\DoxyCodeLine{00047         \textcolor{keywordflow}{if}(!(initedFlags \& MIX\_INIT\_MOD)) \{}
-\DoxyCodeLine{00048             \textcolor{comment}{// Couldn't init .mod extension. report}}
-\DoxyCodeLine{00049             throwError(BAREError::SDL\_MIXER\_MOD\_FAILURE, Mix\_GetError());}
-\DoxyCodeLine{00050         \}}
-\DoxyCodeLine{00051         \textcolor{keywordflow}{if}(!(initedFlags \& MIX\_INIT\_MP3)) \{}
-\DoxyCodeLine{00052             \textcolor{comment}{// Couldn't init .mp3 extension. report}}
-\DoxyCodeLine{00053             throwError(BAREError::SDL\_MIXER\_MP3\_FAILURE, Mix\_GetError());}
-\DoxyCodeLine{00054         \}}
-\DoxyCodeLine{00055         \textcolor{keywordflow}{if}(!(initedFlags \& MIX\_INIT\_OGG)) \{}
-\DoxyCodeLine{00056             \textcolor{comment}{// Couldn't init .ogg extension. report}}
-\DoxyCodeLine{00057             throwError(BAREError::SDL\_MIXER\_OGG\_FAILURE, Mix\_GetError());}
-\DoxyCodeLine{00058         \}}
-\DoxyCodeLine{00059 }
-\DoxyCodeLine{00060         \textcolor{comment}{// Now actually open the API and allow calls to the library}}
-\DoxyCodeLine{00061         \textcolor{comment}{// The default frequency is a decent middleground for weaker and stronger CPUs but still sounds good}}
-\DoxyCodeLine{00062         \textcolor{comment}{// The default format is "Signed 16-\/bit samples, in system byte order"}}
-\DoxyCodeLine{00063         \textcolor{comment}{// There will be 2 output channels open (for stereo) -\/ this is different than the mixer channels, which are what sounds are actually played in}}
-\DoxyCodeLine{00064         \textcolor{comment}{// Each chunk will be of size 1024 -\/ this is a decent size as our hooks will not be called too often, but audio won't skip either.}}
-\DoxyCodeLine{00065         Mix\_OpenAudio(MIX\_DEFAULT\_FREQUENCY, MIX\_DEFAULT\_FORMAT, 2, 1024);}
-\DoxyCodeLine{00066 }
-\DoxyCodeLine{00067         \textcolor{comment}{// Arbitrarily allocate a bunch of channels.}}
-\DoxyCodeLine{00068         Mix\_AllocateChannels(32); \textcolor{comment}{// 32 is almost definitely going to be enough for anything reasonable. This can be jacked up, however.}}
-\DoxyCodeLine{00069     \}}
-\DoxyCodeLine{00070 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00071}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b}{00071}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b}{destroy}}()}
-\DoxyCodeLine{00072     \{}
-\DoxyCodeLine{00073         \textcolor{comment}{// Clean up SDL}}
-\DoxyCodeLine{00074         \textcolor{comment}{// Get how many times we called Mix\_OpenAudio (the dummies store the frequency, format, and the number of channels)}}
-\DoxyCodeLine{00075         \textcolor{keywordtype}{int} numTimesOpened, dummyA, dummyC;}
-\DoxyCodeLine{00076         Uint16 dummyB;}
-\DoxyCodeLine{00077         numTimesOpened = Mix\_QuerySpec(\&dummyA, \&dummyB, \&dummyC);}
-\DoxyCodeLine{00078         \textcolor{comment}{// Check for errors}}
-\DoxyCodeLine{00079         \textcolor{keywordflow}{if}(numTimesOpened == 0) \{}
-\DoxyCodeLine{00080             throwError(BAREError::SDL\_MIXER\_CLOSE\_FAILURE, Mix\_GetError());}
-\DoxyCodeLine{00081         \}}
-\DoxyCodeLine{00082 }
-\DoxyCodeLine{00083         \textcolor{comment}{// Actually close each mixer.}}
-\DoxyCodeLine{00084         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < numTimesOpened; i++)}
-\DoxyCodeLine{00085             Mix\_CloseAudio();}
-\DoxyCodeLine{00086 }
-\DoxyCodeLine{00087         \textcolor{keywordflow}{while}(Mix\_Init(0)) \textcolor{comment}{// This makes sure that no matter how many DLLs are loaded, we quit them all.}}
-\DoxyCodeLine{00088             Mix\_Quit();}
-\DoxyCodeLine{00089     \}}
-\DoxyCodeLine{00090 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00091}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aaea5896a893ca7571f9f996410662f3b}{00091}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aaea5896a893ca7571f9f996410662f3b}{playSound}}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound}{Sound}}\& sound, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} fadeTime, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} timeOut, \textcolor{keywordtype}{int} angle, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} distance)}
-\DoxyCodeLine{00092     \{}
-\DoxyCodeLine{00093         \textcolor{keywordtype}{int} channel = -\/1;}
-\DoxyCodeLine{00094         \textcolor{keywordflow}{if}(fadeTime > 0) \{}
-\DoxyCodeLine{00095             \textcolor{keywordflow}{if}(timeOut > 0) \{}
-\DoxyCodeLine{00096                 \textcolor{comment}{// Fade + Timeout}}
-\DoxyCodeLine{00097                 \textcolor{comment}{// -\/1 represents the first available chunk}}
-\DoxyCodeLine{00098                 \textcolor{comment}{// It will loop 0 times}}
-\DoxyCodeLine{00099                 channel = Mix\_FadeInChannelTimed(-\/1, sound\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound_a7a7988496f24001a00c9bc9ab435c7f0}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound_a7a7988496f24001a00c9bc9ab435c7f0}{chunk}}, 0, fadeTime, timeOut);}
-\DoxyCodeLine{00100             \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00101                 \textcolor{comment}{// Just Fade -\/ no timeout}}
-\DoxyCodeLine{00102                 \textcolor{comment}{// -\/1 represents the first available chunk}}
-\DoxyCodeLine{00103                 channel = Mix\_FadeInChannel(-\/1, sound\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound_a7a7988496f24001a00c9bc9ab435c7f0}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound_a7a7988496f24001a00c9bc9ab435c7f0}{chunk}}, 0, fadeTime);}
-\DoxyCodeLine{00104             \}}
-\DoxyCodeLine{00105         \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00106             \textcolor{keywordflow}{if}(timeOut > 0) \{}
-\DoxyCodeLine{00107                 channel = Mix\_PlayChannelTimed(-\/1, sound\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound_a7a7988496f24001a00c9bc9ab435c7f0}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound_a7a7988496f24001a00c9bc9ab435c7f0}{chunk}}, 0, timeOut);}
-\DoxyCodeLine{00108             \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00109                 channel = Mix\_PlayChannel(-\/1, sound\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound_a7a7988496f24001a00c9bc9ab435c7f0}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound_a7a7988496f24001a00c9bc9ab435c7f0}{chunk}}, 0);}
-\DoxyCodeLine{00110             \}}
-\DoxyCodeLine{00111         \}}
-\DoxyCodeLine{00112         \textcolor{keywordflow}{if}(channel == -\/1) \{}
-\DoxyCodeLine{00113             throwFatalError(BAREError::SDL\_MIXER\_SOUND\_FAILURE, \textcolor{stringliteral}{"Failed to play sound: "} + std::string(Mix\_GetError()));}
-\DoxyCodeLine{00114         \}}
-\DoxyCodeLine{00115         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})channel;}
-\DoxyCodeLine{00116     \}}
-\DoxyCodeLine{00117 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00118}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a18066e694ed639067819cf07528240fe}{00118}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a18066e694ed639067819cf07528240fe}{moveSound}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& soundID, \textcolor{keywordtype}{int} angle, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} distance)}
-\DoxyCodeLine{00119     \{}
-\DoxyCodeLine{00120         \textcolor{keywordflow}{if}(!Mix\_SetPosition(soundID, angle, distance)) \{}
-\DoxyCodeLine{00121             throwFatalError(BAREError::SDL\_MIXER\_SOUND\_FAILURE, \textcolor{stringliteral}{"Failed to move sound: "} + std::string(Mix\_GetError()));}
-\DoxyCodeLine{00122         \}}
-\DoxyCodeLine{00123     \}}
-\DoxyCodeLine{00124 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00125}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a3c0ff9d1def21c04aaa2efbb88339975}{00125}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a3c0ff9d1def21c04aaa2efbb88339975}{stopSound}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& soundID, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} fadeTime)}
-\DoxyCodeLine{00126     \{}
-\DoxyCodeLine{00127         \textcolor{keywordflow}{if}(fadeTime > 0) \{}
-\DoxyCodeLine{00128             Mix\_FadeOutChannel(soundID, fadeTime);}
-\DoxyCodeLine{00129         \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00130             Mix\_HaltChannel(soundID);}
-\DoxyCodeLine{00131         \}}
-\DoxyCodeLine{00132     \}}
-\DoxyCodeLine{00133 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00134}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2fc05e737bab89ce70d78add65c52a50}{00134}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2fc05e737bab89ce70d78add65c52a50}{pauseSound}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& soundID)}
-\DoxyCodeLine{00135     \{}
-\DoxyCodeLine{00136         Mix\_Pause(soundID);}
-\DoxyCodeLine{00137     \}}
-\DoxyCodeLine{00138 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00139}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab6126bf1f8733914e9e1a17b08087fba}{00139}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab6126bf1f8733914e9e1a17b08087fba}{resumeSound}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& soundID)}
-\DoxyCodeLine{00140     \{}
-\DoxyCodeLine{00141         Mix\_Resume(soundID);}
-\DoxyCodeLine{00142     \}}
-\DoxyCodeLine{00143 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00144}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a9c40cea80160da2a6dcdc518e80c7743}{00144}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a9c40cea80160da2a6dcdc518e80c7743}{playMusic}}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music}{Music}}\& music, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} fadeTime)}
-\DoxyCodeLine{00145     \{}
-\DoxyCodeLine{00146         \textcolor{keywordtype}{int} error = -\/1;}
-\DoxyCodeLine{00147         \textcolor{keywordflow}{if}(fadeTime > 0) \{}
-\DoxyCodeLine{00148             \textcolor{comment}{// Never loops, fades.}}
-\DoxyCodeLine{00149             error = Mix\_FadeInMusic(music\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music_a5f2efbe8587e9f5e8a03492e868cf848}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music_a5f2efbe8587e9f5e8a03492e868cf848}{music}}, 0, fadeTime);}
-\DoxyCodeLine{00150         \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00151             \textcolor{comment}{// Never loops, doesn't fade.}}
-\DoxyCodeLine{00152             error = Mix\_PlayMusic(music\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music_a5f2efbe8587e9f5e8a03492e868cf848}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music_a5f2efbe8587e9f5e8a03492e868cf848}{music}}, 0);}
-\DoxyCodeLine{00153         \}}
-\DoxyCodeLine{00154         \textcolor{keywordflow}{if}(error == -\/1) \{}
-\DoxyCodeLine{00155             throwFatalError(BAREError::SDL\_MIXER\_SOUND\_FAILURE, \textcolor{stringliteral}{"Failed to play music: "} + std::string(Mix\_GetError()));}
-\DoxyCodeLine{00156         \}}
-\DoxyCodeLine{00157     \}}
-\DoxyCodeLine{00158 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00159}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a13127e869425dc7d396a2a86d44763db}{00159}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a13127e869425dc7d396a2a86d44763db}{stopMusic}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} fadeTime)}
-\DoxyCodeLine{00160     \{}
-\DoxyCodeLine{00161         \textcolor{keywordflow}{if}(fadeTime > 0) \{}
-\DoxyCodeLine{00162             Mix\_FadeOutMusic(fadeTime);}
-\DoxyCodeLine{00163         \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00164             Mix\_HaltMusic();}
-\DoxyCodeLine{00165         \}}
-\DoxyCodeLine{00166     \}}
-\DoxyCodeLine{00167 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00168}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a91f15e85f8ac67f0317ef1c7c7973dcd}{00168}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a91f15e85f8ac67f0317ef1c7c7973dcd}{pauseMusic}}()}
-\DoxyCodeLine{00169     \{}
-\DoxyCodeLine{00170         Mix\_PauseMusic();}
-\DoxyCodeLine{00171     \}}
-\DoxyCodeLine{00172 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00173}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a7b184aaae5a2676eee30ff8961abfd60}{00173}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a7b184aaae5a2676eee30ff8961abfd60}{resumeMusic}}()}
-\DoxyCodeLine{00174     \{}
-\DoxyCodeLine{00175         Mix\_ResumeMusic();}
-\DoxyCodeLine{00176     \}}
-\DoxyCodeLine{00177 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00178}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a4448b750a6b0df1ea06d188fefe06b2e}{00178}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a4448b750a6b0df1ea06d188fefe06b2e}{mute}}()}
-\DoxyCodeLine{00179     \{}
-\DoxyCodeLine{00180         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a370017c99d2ba0ad7821e939ede67eaf}{m\_muted}}) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00181 }
-\DoxyCodeLine{00182         \textcolor{comment}{// Get the original volumes and set the current volumes to 0 (muted)}}
-\DoxyCodeLine{00183         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ace48414811952d078da7d54ac5b437ff}{m\_soundVolume}} = Mix\_Volume(-\/1, 0);}
-\DoxyCodeLine{00184         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aedbbc0903ee931180d6d819248af756c}{m\_musicVolume}} = Mix\_VolumeMusic(0);}
-\DoxyCodeLine{00185         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a370017c99d2ba0ad7821e939ede67eaf}{m\_muted}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{00186     \}}
-\DoxyCodeLine{00187 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00188}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ac4d77be444ed398c46a0705ba043b023}{00188}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ac4d77be444ed398c46a0705ba043b023}{unmute}}()}
-\DoxyCodeLine{00189     \{}
-\DoxyCodeLine{00190         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a370017c99d2ba0ad7821e939ede67eaf}{m\_muted}}) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00191         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a370017c99d2ba0ad7821e939ede67eaf}{m\_muted}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{00192 }
-\DoxyCodeLine{00193         Mix\_Volume(-\/1, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ace48414811952d078da7d54ac5b437ff}{m\_soundVolume}});}
-\DoxyCodeLine{00194         Mix\_VolumeMusic(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aedbbc0903ee931180d6d819248af756c}{m\_musicVolume}});}
-\DoxyCodeLine{00195     \}}
-\DoxyCodeLine{00196 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00197}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884}{00197}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884}{setSoundVolume}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} volumeLevel)}
-\DoxyCodeLine{00198     \{}
-\DoxyCodeLine{00199         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ace48414811952d078da7d54ac5b437ff}{m\_soundVolume}} = volumeLevel * \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2f02401ded65dbe776c095339575aabf}{m\_masterVolume}};}
-\DoxyCodeLine{00200         Mix\_Volume(-\/1, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ace48414811952d078da7d54ac5b437ff}{m\_soundVolume}} / (255 * 255) * 128); \textcolor{comment}{// Normalize the volume from 0-\/128 (that's the mixer max)}}
-\DoxyCodeLine{00201     \}}
-\DoxyCodeLine{00202 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00203}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41}{00203}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41}{setMusicVolume}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} volumeLevel)}
-\DoxyCodeLine{00204     \{}
-\DoxyCodeLine{00205         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aedbbc0903ee931180d6d819248af756c}{m\_musicVolume}} = volumeLevel * \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2f02401ded65dbe776c095339575aabf}{m\_masterVolume}};}
-\DoxyCodeLine{00206         Mix\_VolumeMusic(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aedbbc0903ee931180d6d819248af756c}{m\_musicVolume}} / (255 * 255) * 128); \textcolor{comment}{// Normalize the volume from 0-\/128 (that's the mixer max)}}
-\DoxyCodeLine{00207     \}}
-\DoxyCodeLine{00208 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00209}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a0e351ef6720a8a9eaadd2c29508fb8b0}{00209}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a0e351ef6720a8a9eaadd2c29508fb8b0}{setMasterVolumeModifier}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} masterLevel)}
-\DoxyCodeLine{00210     \{}
-\DoxyCodeLine{00211         \textcolor{comment}{// First, get the oldl music and sound volumes before the master adjustment.}}
-\DoxyCodeLine{00212         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aedbbc0903ee931180d6d819248af756c}{m\_musicVolume}} /= \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2f02401ded65dbe776c095339575aabf}{m\_masterVolume}};}
-\DoxyCodeLine{00213         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ace48414811952d078da7d54ac5b437ff}{m\_soundVolume}} /= \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2f02401ded65dbe776c095339575aabf}{m\_masterVolume}};}
-\DoxyCodeLine{00214 }
-\DoxyCodeLine{00215         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2f02401ded65dbe776c095339575aabf}{m\_masterVolume}} = masterLevel;}
-\DoxyCodeLine{00216 }
-\DoxyCodeLine{00217         \textcolor{comment}{// Now reset the new music and sound volumes}}
-\DoxyCodeLine{00218         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41}{setMusicVolume}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aedbbc0903ee931180d6d819248af756c}{m\_musicVolume}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41}{)}};}
-\DoxyCodeLine{00219         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884}{setSoundVolume}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ace48414811952d078da7d54ac5b437ff}{m\_soundVolume}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884}{)}};}
-\DoxyCodeLine{00220     \}}
-\DoxyCodeLine{00221 }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00222}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a890b53a567ce658da9686403ec8ee29a}{00222}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a890b53a567ce658da9686403ec8ee29a}{isMusicPlaying}}()}
-\DoxyCodeLine{00223     \{}
-\DoxyCodeLine{00224         \textcolor{keywordflow}{return} Mix\_PlayingMusic();}
-\DoxyCodeLine{00225     \}}
-\DoxyCodeLine{00226 }
-\DoxyCodeLine{00227 \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_audio_manager_8hpp}{AudioManager.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <SDL2/SDL\_mixer.h>}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_b_a_r_e_errors_8hpp}{BAREErrors.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00007}00007 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00010}00010     AudioManager* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}{AudioManager::m\_instance}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00012}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ad1dfe27d3ca15d1087e274313d926ad8}{00012}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager}{AudioManager}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ad1dfe27d3ca15d1087e274313d926ad8}{AudioManager::getInstance}}()}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00014}00014         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}{m\_instance}}) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00015}00015             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}{m\_instance}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2ad1c7e845597f70b9d0a5d14969f3b5}{AudioManager}}();}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00016}00016         \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00017}00017         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}{m\_instance}};}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00018}00018     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00020}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a4b07b591f0add8a92a333a1589b09b2c}{00020}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a4b07b591f0add8a92a333a1589b09b2c}{AudioManager::release}}()}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00021}00021     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00022}00022         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}{m\_instance}}) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00023}00023             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}{m\_instance}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b}{destroy}}();}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00024}00024             \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a47eceac49f0cecec3daba4e73f3e38d6}{m\_instance}};}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00025}00025         \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00026}00026     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00028}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2ad1c7e845597f70b9d0a5d14969f3b5}{00028}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2ad1c7e845597f70b9d0a5d14969f3b5}{AudioManager::AudioManager}}()}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00029}00029     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00030}00030     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00032}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a5328303ce6ed6d376f081b235e369e17}{00032}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a5328303ce6ed6d376f081b235e369e17}{AudioManager::\string~AudioManager}}()}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00033}00033     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00034}00034     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00037}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a8d19a9540129548e8a6c26472d0b0c4d}{00037}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a8d19a9540129548e8a6c26472d0b0c4d}{AudioManager::init}}()}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00038}00038     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00039}00039         \textcolor{comment}{// Load all of the DLLs which may or may not exist on our system.}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00040}00040         \textcolor{keywordtype}{int} initedFlags = Mix\_Init(MIX\_INIT\_FLAC | MIX\_INIT\_MOD | MIX\_INIT\_MP3 | MIX\_INIT\_OGG);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00042}00042         \textcolor{comment}{// Check each flag, and report if it couldn't be inited.}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00043}00043         \textcolor{keywordflow}{if}(!(initedFlags \& MIX\_INIT\_FLAC)) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00044}00044             \textcolor{comment}{// Couldn't init .flac extension. report}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00045}00045             \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a532a71eb42f790768ea7b8a0fc21c7f7}{BAREError::SDL\_MIXER\_FLAC\_FAILURE}}, Mix\_GetError());}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00046}00046         \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00047}00047         \textcolor{keywordflow}{if}(!(initedFlags \& MIX\_INIT\_MOD)) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00048}00048             \textcolor{comment}{// Couldn't init .mod extension. report}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00049}00049             \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a558725ad5285e00d8e0ecc6659151af6}{BAREError::SDL\_MIXER\_MOD\_FAILURE}}, Mix\_GetError());}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00050}00050         \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00051}00051         \textcolor{keywordflow}{if}(!(initedFlags \& MIX\_INIT\_MP3)) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00052}00052             \textcolor{comment}{// Couldn't init .mp3 extension. report}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00053}00053             \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a3279ee465d768abc31baf3fa4a04a939}{BAREError::SDL\_MIXER\_MP3\_FAILURE}}, Mix\_GetError());}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00054}00054         \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00055}00055         \textcolor{keywordflow}{if}(!(initedFlags \& MIX\_INIT\_OGG)) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00056}00056             \textcolor{comment}{// Couldn't init .ogg extension. report}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00057}00057             \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a270d890766f0830b9a49e81e737e9646}{BAREError::SDL\_MIXER\_OGG\_FAILURE}}, Mix\_GetError());}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00058}00058         \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00060}00060         \textcolor{comment}{// Now actually open the API and allow calls to the library}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00061}00061         \textcolor{comment}{// The default frequency is a decent middleground for weaker and stronger CPUs but still sounds good}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00062}00062         \textcolor{comment}{// The default format is "{}Signed 16-\/bit samples, in system byte order"{}}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00063}00063         \textcolor{comment}{// There will be 2 output channels open (for stereo) -\/ this is different than the mixer channels, which are what sounds are actually played in}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00064}00064         \textcolor{comment}{// Each chunk will be of size 1024 -\/ this is a decent size as our hooks will not be called too often, but audio won't skip either.}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00065}00065         Mix\_OpenAudio(MIX\_DEFAULT\_FREQUENCY, MIX\_DEFAULT\_FORMAT, 2, 1024);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00067}00067         \textcolor{comment}{// Arbitrarily allocate a bunch of channels.}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00068}00068         Mix\_AllocateChannels(32); \textcolor{comment}{// 32 is almost definitely going to be enough for anything reasonable. This can be jacked up, however.}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00069}00069     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00071}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b}{00071}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab60447762de121487a99ff9b66d0fb1b}{AudioManager::destroy}}()}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00072}00072     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00073}00073         \textcolor{comment}{// Clean up SDL}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00074}00074         \textcolor{comment}{// Get how many times we called Mix\_OpenAudio (the dummies store the frequency, format, and the number of channels)}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00075}00075         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} numTimesOpened;}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00076}00076         \textcolor{keywordtype}{int} dummyA, dummyC;}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00077}00077         Uint16 dummyB;}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00078}00078         numTimesOpened = Mix\_QuerySpec(\&dummyA, \&dummyB, \&dummyC);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00079}00079         \textcolor{comment}{// Check for errors}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00080}00080         \textcolor{keywordflow}{if}(numTimesOpened == 0) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00081}00081             \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a302c7e07e257bacc806bef6f25576f3d}{BAREError::SDL\_MIXER\_CLOSE\_FAILURE}}, Mix\_GetError());}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00082}00082         \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00084}00084         \textcolor{comment}{// Actually close each mixer.}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00085}00085         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < numTimesOpened; i++)}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00086}00086             Mix\_CloseAudio();}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00088}00088         \textcolor{keywordflow}{while}(Mix\_Init(0)) \textcolor{comment}{// This makes sure that no matter how many DLLs are loaded, we quit them all.}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00089}00089             Mix\_Quit();}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00090}00090     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00092}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aaea5896a893ca7571f9f996410662f3b}{00092}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aaea5896a893ca7571f9f996410662f3b}{AudioManager::playSound}}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound}{Sound}}\& sound, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} fadeTime, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} timeOut, \textcolor{keywordtype}{int} angle, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} distance)}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00093}00093     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00094}00094         \textcolor{keywordtype}{int} channel = -\/1;}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00095}00095         \textcolor{keywordflow}{if}(fadeTime > 0) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00096}00096             \textcolor{keywordflow}{if}(timeOut > 0) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00097}00097                 \textcolor{comment}{// Fade + Timeout}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00098}00098                 \textcolor{comment}{// -\/1 represents the first available chunk}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00099}00099                 \textcolor{comment}{// It will loop 0 times}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00100}00100                 channel = Mix\_FadeInChannelTimed(-\/1, sound.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound_a7a7988496f24001a00c9bc9ab435c7f0}{chunk}}, 0, fadeTime, timeOut);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00101}00101             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00102}00102                 \textcolor{comment}{// Just Fade -\/ no timeout}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00103}00103                 \textcolor{comment}{// -\/1 represents the first available chunk}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00104}00104                 channel = Mix\_FadeInChannel(-\/1, sound.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound_a7a7988496f24001a00c9bc9ab435c7f0}{chunk}}, 0, fadeTime);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00105}00105             \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00106}00106         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00107}00107             \textcolor{keywordflow}{if}(timeOut > 0) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00108}00108                 channel = Mix\_PlayChannelTimed(-\/1, sound.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound_a7a7988496f24001a00c9bc9ab435c7f0}{chunk}}, 0, timeOut);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00109}00109             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00110}00110                 channel = Mix\_PlayChannel(-\/1, sound.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_sound_a7a7988496f24001a00c9bc9ab435c7f0}{chunk}}, 0);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00111}00111             \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00112}00112         \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00113}00113         \textcolor{keywordflow}{if}(channel == -\/1) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00114}00114             \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a55a6fde42c31348fccbcaad7ead6de1f}{BAREError::SDL\_MIXER\_SOUND\_FAILURE}}, \textcolor{stringliteral}{"{}Failed to play sound: "{}} + std::string(Mix\_GetError()));}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00115}00115         \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00116}00116         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})channel;}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00117}00117     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00119}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a18066e694ed639067819cf07528240fe}{00119}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a18066e694ed639067819cf07528240fe}{AudioManager::moveSound}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& soundID, \textcolor{keywordtype}{int} angle, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} distance)}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00120}00120     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00121}00121         \textcolor{keywordflow}{if}(!Mix\_SetPosition(soundID, angle, distance)) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00122}00122             \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a55a6fde42c31348fccbcaad7ead6de1f}{BAREError::SDL\_MIXER\_SOUND\_FAILURE}}, \textcolor{stringliteral}{"{}Failed to move sound: "{}} + std::string(Mix\_GetError()));}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00123}00123         \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00124}00124     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00126}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a3c0ff9d1def21c04aaa2efbb88339975}{00126}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a3c0ff9d1def21c04aaa2efbb88339975}{AudioManager::stopSound}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& soundID, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} fadeTime)}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00127}00127     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00128}00128         \textcolor{keywordflow}{if}(fadeTime > 0) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00129}00129             Mix\_FadeOutChannel(soundID, fadeTime);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00130}00130         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00131}00131             Mix\_HaltChannel(soundID);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00132}00132         \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00133}00133     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00135}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2fc05e737bab89ce70d78add65c52a50}{00135}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2fc05e737bab89ce70d78add65c52a50}{AudioManager::pauseSound}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& soundID)}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00136}00136     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00137}00137         Mix\_Pause(soundID);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00138}00138     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00140}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab6126bf1f8733914e9e1a17b08087fba}{00140}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ab6126bf1f8733914e9e1a17b08087fba}{AudioManager::resumeSound}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& soundID)}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00141}00141     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00142}00142         Mix\_Resume(soundID);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00143}00143     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00145}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a9c40cea80160da2a6dcdc518e80c7743}{00145}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a9c40cea80160da2a6dcdc518e80c7743}{AudioManager::playMusic}}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music}{Music}}\& music, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} fadeTime)}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00146}00146     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00147}00147         \textcolor{keywordtype}{int} error = -\/1;}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00148}00148         \textcolor{keywordflow}{if}(fadeTime > 0) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00149}00149             \textcolor{comment}{// Never loops, fades.}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00150}00150             error = Mix\_FadeInMusic(music.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music_a5f2efbe8587e9f5e8a03492e868cf848}{music}}, 0, fadeTime);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00151}00151         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00152}00152             \textcolor{comment}{// Never loops, doesn't fade.}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00153}00153             error = Mix\_PlayMusic(music.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_music_a5f2efbe8587e9f5e8a03492e868cf848}{music}}, 0);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00154}00154         \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00155}00155         \textcolor{keywordflow}{if}(error == -\/1) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00156}00156             \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a55a6fde42c31348fccbcaad7ead6de1f}{BAREError::SDL\_MIXER\_SOUND\_FAILURE}}, \textcolor{stringliteral}{"{}Failed to play music: "{}} + std::string(Mix\_GetError()));}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00157}00157         \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00158}00158     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00160}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a13127e869425dc7d396a2a86d44763db}{00160}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a13127e869425dc7d396a2a86d44763db}{AudioManager::stopMusic}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} fadeTime)}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00161}00161     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00162}00162         \textcolor{keywordflow}{if}(fadeTime > 0) \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00163}00163             Mix\_FadeOutMusic(fadeTime);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00164}00164         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00165}00165             Mix\_HaltMusic();}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00166}00166         \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00167}00167     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00168}00168 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00169}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a91f15e85f8ac67f0317ef1c7c7973dcd}{00169}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a91f15e85f8ac67f0317ef1c7c7973dcd}{AudioManager::pauseMusic}}()}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00170}00170     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00171}00171         Mix\_PauseMusic();}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00172}00172     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00174}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a7b184aaae5a2676eee30ff8961abfd60}{00174}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a7b184aaae5a2676eee30ff8961abfd60}{AudioManager::resumeMusic}}()}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00175}00175     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00176}00176         Mix\_ResumeMusic();}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00177}00177     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00179}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a4448b750a6b0df1ea06d188fefe06b2e}{00179}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a4448b750a6b0df1ea06d188fefe06b2e}{AudioManager::mute}}()}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00180}00180     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00181}00181         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a370017c99d2ba0ad7821e939ede67eaf}{m\_muted}}) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00183}00183         \textcolor{comment}{// Get the original volumes and set the current volumes to 0 (muted)}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00184}00184         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ace48414811952d078da7d54ac5b437ff}{m\_soundVolume}} = Mix\_Volume(-\/1, 0);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00185}00185         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aedbbc0903ee931180d6d819248af756c}{m\_musicVolume}} = Mix\_VolumeMusic(0);}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00186}00186         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a370017c99d2ba0ad7821e939ede67eaf}{m\_muted}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00187}00187     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00188}00188 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00189}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ac4d77be444ed398c46a0705ba043b023}{00189}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ac4d77be444ed398c46a0705ba043b023}{AudioManager::unmute}}()}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00190}00190     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00191}00191         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a370017c99d2ba0ad7821e939ede67eaf}{m\_muted}}) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00192}00192         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a370017c99d2ba0ad7821e939ede67eaf}{m\_muted}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00193}00193 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00194}00194         Mix\_Volume(-\/1, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ace48414811952d078da7d54ac5b437ff}{m\_soundVolume}});}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00195}00195         Mix\_VolumeMusic(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aedbbc0903ee931180d6d819248af756c}{m\_musicVolume}});}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00196}00196     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00197}00197 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00198}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884}{00198}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884}{AudioManager::setSoundVolume}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} volumeLevel)}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00199}00199     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00200}00200         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ace48414811952d078da7d54ac5b437ff}{m\_soundVolume}} = volumeLevel * \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2f02401ded65dbe776c095339575aabf}{m\_masterVolume}};}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00201}00201         Mix\_Volume(-\/1, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ace48414811952d078da7d54ac5b437ff}{m\_soundVolume}} / (255 * 255) * 128); \textcolor{comment}{// Normalize the volume from 0-\/128 (that's the mixer max)}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00202}00202     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00203}00203 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00204}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41}{00204}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41}{AudioManager::setMusicVolume}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} volumeLevel)}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00205}00205     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00206}00206         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aedbbc0903ee931180d6d819248af756c}{m\_musicVolume}} = volumeLevel * \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2f02401ded65dbe776c095339575aabf}{m\_masterVolume}};}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00207}00207         Mix\_VolumeMusic(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aedbbc0903ee931180d6d819248af756c}{m\_musicVolume}} / (255 * 255) * 128); \textcolor{comment}{// Normalize the volume from 0-\/128 (that's the mixer max)}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00208}00208     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00209}00209 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00210}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a0e351ef6720a8a9eaadd2c29508fb8b0}{00210}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a0e351ef6720a8a9eaadd2c29508fb8b0}{AudioManager::setMasterVolumeModifier}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} masterLevel)}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00211}00211     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00212}00212         \textcolor{comment}{// First, get the oldl music and sound volumes before the master adjustment.}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00213}00213         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aedbbc0903ee931180d6d819248af756c}{m\_musicVolume}} /= \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2f02401ded65dbe776c095339575aabf}{m\_masterVolume}};}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00214}00214         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ace48414811952d078da7d54ac5b437ff}{m\_soundVolume}} /= \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2f02401ded65dbe776c095339575aabf}{m\_masterVolume}};}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00215}00215 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00216}00216         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2f02401ded65dbe776c095339575aabf}{m\_masterVolume}} = masterLevel;}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00217}00217 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00218}00218         \textcolor{comment}{// Now reset the new music and sound volumes}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00219}00219         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a2620da48de00a311b34986ec341cbf41}{setMusicVolume}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_aedbbc0903ee931180d6d819248af756c}{m\_musicVolume}});}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00220}00220         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a7deaaf50a6974c505a6f5f525fa39884}{setSoundVolume}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_ace48414811952d078da7d54ac5b437ff}{m\_soundVolume}});}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00221}00221     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00222}00222 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00223}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a890b53a567ce658da9686403ec8ee29a}{00223}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_audio_manager_a890b53a567ce658da9686403ec8ee29a}{AudioManager::isMusicPlaying}}()}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00224}00224     \{}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00225}00225         \textcolor{keywordflow}{return} Mix\_PlayingMusic();}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00226}00226     \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00227}00227 }
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cpp_source_l00228}00228 \}}
 
 \end{DoxyCode}

@@ -1,4 +1,4 @@
 <map id="BARE2D::FBORenderer::createRenderBatches" name="BARE2D::FBORenderer::createRenderBatches">
-<area shape="rect" id="node1" title="Constructs all of the render batches from data given by, say, draw() calls." alt="" coords="217,5,381,47"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aaccc7bddd25f99cca5b734d097383c6e" title="Actually renders the contents to the screen!" alt="" coords="5,5,169,47"/>
+<area shape="rect" id="node1" title="Constructs all of the render batches from data given by, say, draw() calls." alt="" coords="217,5,381,45"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aaccc7bddd25f99cca5b734d097383c6e" title="Actually renders the contents to the screen!" alt="" coords="5,5,169,45"/>
 </map>

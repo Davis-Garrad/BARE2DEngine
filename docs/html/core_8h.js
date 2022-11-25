@@ -28,7 +28,7 @@ var core_8h =
     [ "is_valid", "core_8h.html#add2dbec3d058aa66500ec4f97cc8174b", null ],
     [ "mask16", "core_8h.html#ab1e3c2fe2296ac185993a183d1bd0678", null ],
     [ "mask8", "core_8h.html#adf6e0469e279b9562aa461b4c3c1e7e4", null ],
-    [ "sequence_length", "core_8h.html#aadbe437cba7bfcc4df2638f633e9787c", null ],
+    [ "sequence_length", "core_8h.html#adb347cc81d32ebb0fd22d849f7bff5ea", null ],
     [ "starts_with_bom", "core_8h.html#a498c8e7d7a6fd92d4672ef05661dc783", null ],
     [ "validate_next", "core_8h.html#afd41668f94ce9f60f8e314d05804cecc", null ],
     [ "validate_next", "core_8h.html#abe95547575fcc81911e381df03f8ebfe", null ],

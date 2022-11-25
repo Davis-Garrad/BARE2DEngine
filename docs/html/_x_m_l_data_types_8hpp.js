@@ -1,8 +1,8 @@
 var _x_m_l_data_types_8hpp =
 [
-    [ "AttributeBase", "class_b_a_r_e2_d_1_1_attribute_base.html", "class_b_a_r_e2_d_1_1_attribute_base" ],
-    [ "Attribute", "class_b_a_r_e2_d_1_1_attribute.html", "class_b_a_r_e2_d_1_1_attribute" ],
-    [ "XMLData", "class_b_a_r_e2_d_1_1_x_m_l_data.html", "class_b_a_r_e2_d_1_1_x_m_l_data" ],
+    [ "BARE2D::AttributeBase", "class_b_a_r_e2_d_1_1_attribute_base.html", "class_b_a_r_e2_d_1_1_attribute_base" ],
+    [ "BARE2D::Attribute< T >", "class_b_a_r_e2_d_1_1_attribute.html", "class_b_a_r_e2_d_1_1_attribute" ],
+    [ "BARE2D::XMLData", "class_b_a_r_e2_d_1_1_x_m_l_data.html", "class_b_a_r_e2_d_1_1_x_m_l_data" ],
     [ "AttributeType", "_x_m_l_data_types_8hpp.html#a0c44bfbd2820598bfcbf4986a6252b02", [
       [ "STRING", "_x_m_l_data_types_8hpp.html#a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949", null ],
       [ "UNSIGNED_INT", "_x_m_l_data_types_8hpp.html#a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5", null ],

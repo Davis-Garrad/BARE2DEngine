@@ -87,7 +87,7 @@ namespace BARE2D {
 		// This must be done before linking!!!
 		GLint maxDrawBuffers = 0;
 		glGetIntegerv(GL_MAX_DRAW_BUFFERS, &maxDrawBuffers);
-		for(unsigned int i = 0; i < maxDrawBuffers; i++) {
+		for(int i = 0; i < maxDrawBuffers; i++) {
 			m_shader.bindFragOutputLocation("colour" + std::to_string(i), i);
 		}
 

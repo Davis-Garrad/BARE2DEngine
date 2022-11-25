@@ -1,12 +1,26 @@
 <map id="BARE2D::App::pollSDLInput" name="BARE2D::App::pollSDLInput">
-<area shape="rect" id="node1" title="Polls inputs from SDL and updates the inputmanager as appropriate." alt="" coords="5,228,196,255"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_app.html#a1e4549ad082fd4afee1503611fb65ad1" title="Calls the screen&#39;s exit function, and then cleans this class up for destruction." alt="" coords="265,5,424,32"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aecad6d159917b2821f9fcb4429adccea" title=" " alt="" coords="259,57,431,98"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ab3f339793671b90bb449bf17a9d953ca" title=" " alt="" coords="259,122,431,163"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a770264d8c510bbfe0585abe493011ed7" title="Handles and propagates input." alt="" coords="259,187,431,229"/>
-<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_input_manager.html#a3a1cea0b15ba38865bbf446e2ef3fc1d" title="Sets a key as &#39;pressed&#39;." alt="" coords="263,253,426,294"/>
-<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_input_manager.html#a235d3c2a87ddf27e8544a0bafc3000a0" title="Sets a key as &#39;released&#39;." alt="" coords="263,318,426,359"/>
-<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_input_manager.html#a3d72db48544d6a6d347af02889e7e1d6" title="Sets the mouse position to (x,y)" alt="" coords="263,383,426,425"/>
-<area shape="rect" id="node10" href="$class_b_a_r_e2_d_1_1_input_manager.html#ab8ca096f8108649a0e5b9be5e370e36c" title="Sets the &quot;position&quot; of the scrollwheel &#45; essentially, how much it has moved since the last frame." alt="" coords="244,449,445,490"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ade528b2e05e0562fd5ecda850a49ec14" title=" " alt="" coords="493,122,665,163"/>
+<area shape="rect" id="node1" title="Polls inputs from SDL and updates the inputmanager as appropriate." alt="" coords="5,265,196,290"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_app.html#a1e4549ad082fd4afee1503611fb65ad1" title="Calls the screen&#39;s exit function, and then cleans this class up for destruction." alt="" coords="265,47,424,73"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aecad6d159917b2821f9fcb4429adccea" title=" " alt="" coords="259,97,431,137"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ab3f339793671b90bb449bf17a9d953ca" title=" " alt="" coords="259,161,431,201"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a770264d8c510bbfe0585abe493011ed7" title="Handles and propagates input." alt="" coords="259,225,431,265"/>
+<area shape="rect" id="node21" href="$class_b_a_r_e2_d_1_1_input_manager.html#a3a1cea0b15ba38865bbf446e2ef3fc1d" title="Sets a key as &#39;pressed&#39;." alt="" coords="263,289,426,329"/>
+<area shape="rect" id="node22" href="$class_b_a_r_e2_d_1_1_input_manager.html#a235d3c2a87ddf27e8544a0bafc3000a0" title="Sets a key as &#39;released&#39;." alt="" coords="263,353,426,393"/>
+<area shape="rect" id="node23" href="$class_b_a_r_e2_d_1_1_input_manager.html#a3d72db48544d6a6d347af02889e7e1d6" title="Sets the mouse position to (x,y)" alt="" coords="263,417,426,457"/>
+<area shape="rect" id="node24" href="$class_b_a_r_e2_d_1_1_input_manager.html#ab8ca096f8108649a0e5b9be5e370e36c" title="Sets the &quot;position&quot; of the scrollwheel &#45; essentially, how much it has moved since the last frame." alt="" coords="244,481,445,521"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ade528b2e05e0562fd5ecda850a49ec14" title=" " alt="" coords="529,140,701,180"/>
+<area shape="rect" id="node7" href="$namespace_b_a_r_e2_d.html#add368291490f34b060048b5cbb5245f9" title=" " alt="" coords="493,254,736,279"/>
+<area shape="rect" id="node8" href="$namespace_b_a_r_e2_d.html#a4308f8684a05ffbf8ef36cd49541765b" title=" " alt="" coords="508,303,721,329"/>
+<area shape="rect" id="node9" href="$namespaceutf8.html#a8020ed399788dca779663adf061ed718" title=" " alt="" coords="565,205,664,230"/>
+<area shape="rect" id="node10" href="$namespaceutf8.html#afc093dfde66a6f52cb4a5caefe0e580d" title=" " alt="" coords="784,205,861,230"/>
+<area shape="rect" id="node11" href="$namespaceutf8_1_1internal.html#abe95547575fcc81911e381df03f8ebfe" title=" " alt="" coords="909,205,1088,230"/>
+<area shape="rect" id="node12" href="$namespaceutf8_1_1internal.html#a6e5df73716136aec55e8fcf3309038b6" title="get_sequence_x functions decode utf&#45;8 sequences of the length x" alt="" coords="1155,133,1275,173"/>
+<area shape="rect" id="node14" href="$namespaceutf8_1_1internal.html#a9d641b9546be985f9f0fd4955ac42a24" title=" " alt="" coords="1155,197,1275,237"/>
+<area shape="rect" id="node15" href="$namespaceutf8_1_1internal.html#ac1809a1fb3fa6983d64a0d3a39646008" title=" " alt="" coords="1155,261,1275,301"/>
+<area shape="rect" id="node16" href="$namespaceutf8_1_1internal.html#ad1958e7c6746ba6b1fbb0d81b88b346c" title=" " alt="" coords="1155,5,1275,45"/>
+<area shape="rect" id="node17" href="$namespaceutf8_1_1internal.html#a97b553137aaeda6e8ca6f8d46f78fd79" title=" " alt="" coords="1152,389,1279,429"/>
+<area shape="rect" id="node19" href="$namespaceutf8_1_1internal.html#a3160f6f24dff465f64f83cb0e66995c6" title=" " alt="" coords="1145,325,1286,365"/>
+<area shape="rect" id="node20" href="$namespaceutf8_1_1internal.html#adb347cc81d32ebb0fd22d849f7bff5ea" title=" " alt="" coords="1136,69,1295,109"/>
+<area shape="rect" id="node13" href="$namespaceutf8_1_1internal.html#adf6e0469e279b9562aa461b4c3c1e7e4" title=" " alt="" coords="1343,141,1484,166"/>
+<area shape="rect" id="node18" href="$namespaceutf8_1_1internal.html#a31a185a6bc8b9bf454191a8a95a93595" title=" " alt="" coords="1357,389,1469,429"/>
 </map>

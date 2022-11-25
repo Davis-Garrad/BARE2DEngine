@@ -1,5 +1,5 @@
 <map id="BARE2D::GLContext::unbindTexture" name="BARE2D::GLContext::unbindTexture">
-<area shape="rect" id="node1" title="Unbinds a texture." alt="" coords="5,39,160,80"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a1815cdbe70cc6fdbc66ec69a7131b5be" title="Binds a texture to target in the currently active texture slot." alt="" coords="208,5,363,47"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a529bb80b0bd7bbf86f10be7c30be514c" title="Sets the active texture &quot;slot&quot;. This can be GL_TEXTURE0 to GL_TEXTURE8 (I think. Check the literature..." alt="" coords="208,71,363,112"/>
+<area shape="rect" id="node1" title="Unbinds a texture." alt="" coords="5,37,160,77"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a1815cdbe70cc6fdbc66ec69a7131b5be" title="Binds a texture to target in the currently active texture slot." alt="" coords="208,5,363,45"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a529bb80b0bd7bbf86f10be7c30be514c" title="Sets the active texture &quot;slot&quot;. This can be GL_TEXTURE0 to GL_TEXTURE8 (I think. Check the literature..." alt="" coords="208,69,363,109"/>
 </map>

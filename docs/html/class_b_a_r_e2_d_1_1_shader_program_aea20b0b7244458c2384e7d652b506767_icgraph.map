@@ -1,5 +1,0 @@
-<map id="BARE2D::ShaderProgram::setUniform" name="BARE2D::ShaderProgram::setUniform">
-<area shape="rect" id="node1" title="A generalized wrapper to find and set a uniform for this shader." alt="" coords="224,39,399,80"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="9,5,173,47"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_basic_renderer.html#aaf24fe92216128173a92b9c23dc4dd56" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="5,71,176,112"/>
-</map>

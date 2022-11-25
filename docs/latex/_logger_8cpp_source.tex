@@ -1,58 +1,58 @@
 \hypertarget{_logger_8cpp_source}{}\doxysection{Logger.\+cpp}
 \label{_logger_8cpp_source}\index{Source/Logger.cpp@{Source/Logger.cpp}}
-
+\mbox{\hyperlink{_logger_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_logger_8hpp}{"Logger.hpp"}}}
-\DoxyCodeLine{00002 }
-\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{chrono}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00004 }
-\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_b_a_r_e_errors_8hpp}{"BAREErrors.hpp"}}}
-\DoxyCodeLine{00006 }
-\DoxyCodeLine{00007 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{00008 }
-\DoxyCodeLine{00009     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger}{Logger}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger}{Logger}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a74de48b60a7ee6f5e099395d00245a6a}{m\_instance}} = \textcolor{keywordtype}{nullptr};}
-\DoxyCodeLine{00010 }
-\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00011}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a731b4fafcc2878fe66360b1c9c0febdc}{00011}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger}{Logger}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a731b4fafcc2878fe66360b1c9c0febdc}{Logger}}()}
-\DoxyCodeLine{00012     \{}
-\DoxyCodeLine{00013         \textcolor{comment}{// Open the log file!}}
-\DoxyCodeLine{00014         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a4862f206932fad8878458c08048913d2}{m\_logFile}}.open(\textcolor{stringliteral}{"GameLog.txt"}, std::ios::trunc);}
-\DoxyCodeLine{00015 }
-\DoxyCodeLine{00016         \textcolor{comment}{// Make sure we can load it.}}
-\DoxyCodeLine{00017         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a4862f206932fad8878458c08048913d2}{m\_logFile}}.fail()) \{}
-\DoxyCodeLine{00018             \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a396430326452fe792ad9891baac4e76b}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a396430326452fe792ad9891baac4e76b}{LOGGER\_FAILURE}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{,}} \textcolor{stringliteral}{"Logger failed to open log file."}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{)}};}
-\DoxyCodeLine{00019             \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00020         \}}
-\DoxyCodeLine{00021 }
-\DoxyCodeLine{00022         \textcolor{comment}{// Just to timestamp the log}}
-\DoxyCodeLine{00023         \textcolor{keyword}{auto} timeA = std::chrono::system\_clock::now();}
-\DoxyCodeLine{00024         \textcolor{keyword}{auto} timeB = std::chrono::system\_clock::to\_time\_t(timeA);}
-\DoxyCodeLine{00025 }
-\DoxyCodeLine{00026         std::string date = std::ctime(\&timeB);}
-\DoxyCodeLine{00027         date.pop\_back();}
-\DoxyCodeLine{00028 }
-\DoxyCodeLine{00029         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a4862f206932fad8878458c08048913d2}{m\_logFile}} << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n\(\backslash\)n\#\#\# LOG: "} << date << \textcolor{stringliteral}{" \#\#\#\(\backslash\)n\(\backslash\)n"};}
-\DoxyCodeLine{00030         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a4862f206932fad8878458c08048913d2}{m\_logFile}} << \textcolor{stringliteral}{"Thanks for using BARE2D! Original engine by Davis Garrad\(\backslash\)n\(\backslash\)n"};}
-\DoxyCodeLine{00031         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a4862f206932fad8878458c08048913d2}{m\_logFile}}.flush();}
-\DoxyCodeLine{00032     \}}
-\DoxyCodeLine{00033 }
-\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00034}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{00034}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger}{Logger}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger}{Logger}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{getInstance}}()}
-\DoxyCodeLine{00035     \{}
-\DoxyCodeLine{00036         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a74de48b60a7ee6f5e099395d00245a6a}{m\_instance}} == \textcolor{keywordtype}{nullptr}) \{}
-\DoxyCodeLine{00037             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a74de48b60a7ee6f5e099395d00245a6a}{m\_instance}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger}{Logger}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a731b4fafcc2878fe66360b1c9c0febdc}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a731b4fafcc2878fe66360b1c9c0febdc}{)}};}
-\DoxyCodeLine{00038         \}}
-\DoxyCodeLine{00039         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a74de48b60a7ee6f5e099395d00245a6a}{m\_instance}};}
-\DoxyCodeLine{00040     \}}
-\DoxyCodeLine{00041 }
-\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00042}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{00042}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger}{Logger}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{log}}(std::string message, \textcolor{keywordtype}{bool} important\textcolor{comment}{/** = false*/}) \{}
-\DoxyCodeLine{00043         \textcolor{keywordflow}{if}(important) \{}
-\DoxyCodeLine{00044             message = \textcolor{stringliteral}{"\(\backslash\)n\#\#\# "} + message + \textcolor{stringliteral}{" \#\#\#\(\backslash\)n"};}
-\DoxyCodeLine{00045         \}}
-\DoxyCodeLine{00046         message = message + \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00047         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a4862f206932fad8878458c08048913d2}{m\_logFile}} << message;}
-\DoxyCodeLine{00048         std::printf(\textcolor{stringliteral}{"\%s"}, message.c\_str());}
-\DoxyCodeLine{00049         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a4862f206932fad8878458c08048913d2}{m\_logFile}}.flush();}
-\DoxyCodeLine{00050     \}}
-\DoxyCodeLine{00051 }
-\DoxyCodeLine{00052 \}}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_logger_8hpp}{Logger.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_b_a_r_e_errors_8hpp}{BAREErrors.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00007}00007 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00009}00009     Logger* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a74de48b60a7ee6f5e099395d00245a6a}{Logger::m\_instance}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00011}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a731b4fafcc2878fe66360b1c9c0febdc}{00011}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a731b4fafcc2878fe66360b1c9c0febdc}{Logger::Logger}}()}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00012}00012     \{}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00013}00013         \textcolor{comment}{// Open the log file!}}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00014}00014         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a4862f206932fad8878458c08048913d2}{m\_logFile}}.open(\textcolor{stringliteral}{"{}GameLog.txt"{}}, std::ios::trunc);}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00015}00015         }
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00016}00016         \textcolor{comment}{// Make sure we can load it.}}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00017}00017         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a4862f206932fad8878458c08048913d2}{m\_logFile}}.fail()) \{}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00018}00018             \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a396430326452fe792ad9891baac4e76b}{BAREError::LOGGER\_FAILURE}}, \textcolor{stringliteral}{"{}Logger failed to open log file."{}});}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00019}00019             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00020}00020         \}}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00021}00021         }
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00022}00022         \textcolor{comment}{// Just to timestamp the log}}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00023}00023         \textcolor{keyword}{auto} timeA = std::chrono::system\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00024}00024         \textcolor{keyword}{auto} timeB = std::chrono::system\_clock::to\_time\_t(timeA);}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00025}00025         }
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00026}00026         std::string date = std::ctime(\&timeB);}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00027}00027         date.pop\_back();}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00028}00028         }
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00029}00029         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a4862f206932fad8878458c08048913d2}{m\_logFile}} << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n\(\backslash\)n\#\#\# LOG: "{}} << date << \textcolor{stringliteral}{"{} \#\#\#\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00030}00030         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a4862f206932fad8878458c08048913d2}{m\_logFile}} << \textcolor{stringliteral}{"{}Thanks for using BARE2D! Original engine by Davis Garrad\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00031}00031         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a4862f206932fad8878458c08048913d2}{m\_logFile}}.flush();}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00032}00032     \}}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00034}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{00034}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger}{Logger}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{Logger::getInstance}}()}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00035}00035     \{}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00036}00036         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a74de48b60a7ee6f5e099395d00245a6a}{m\_instance}} == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00037}00037             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a74de48b60a7ee6f5e099395d00245a6a}{m\_instance}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a731b4fafcc2878fe66360b1c9c0febdc}{Logger}}();}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00038}00038         \}}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00039}00039         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a74de48b60a7ee6f5e099395d00245a6a}{m\_instance}};}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00040}00040     \}}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00041}00041     }
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00042}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{00042}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{Logger::log}}(std::string message, \textcolor{keywordtype}{bool} important\textcolor{comment}{/** = false*/}) \{}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00043}00043         \textcolor{keywordflow}{if}(important) \{}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00044}00044             message = \textcolor{stringliteral}{"{}\(\backslash\)n\#\#\# "{}} + message + \textcolor{stringliteral}{"{} \#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00045}00045         \}}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00046}00046         message = message + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00047}00047         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a4862f206932fad8878458c08048913d2}{m\_logFile}} << message;}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00048}00048         std::printf(\textcolor{stringliteral}{"{}\%s"{}}, message.c\_str());}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00049}00049         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a4862f206932fad8878458c08048913d2}{m\_logFile}}.flush();}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00050}00050     \}}
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_logger_8cpp_source_l00052}00052 \}}
 
 \end{DoxyCode}

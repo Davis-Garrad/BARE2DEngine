@@ -1,4 +1,0 @@
-<map id="BARE2D::ScreenList::~ScreenList" name="BARE2D::ScreenList::~ScreenList">
-<area shape="rect" id="node1" title="Destroys the screen list, &quot;taking care&quot; of the screen pointers it owns." alt="" coords="5,5,152,47"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_screen.html#addca78a8061f1ff428982fcd25b26a1d" title="Destroys the screen, called when the screen list is destroyed." alt="" coords="200,13,417,39"/>
-</map>

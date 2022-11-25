@@ -1,12 +1,4 @@
 <map id="BARE2D::ResourceManager::loadScript" name="BARE2D::ResourceManager::loadScript">
-<area shape="rect" id="node1" title="Loads a script from the filepath given from the cache or from the file if it&#39;s not already in the cac..." alt="" coords="5,49,196,90"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_cache.html#a4a998f5952f2412d5f35f5291f8ff0c8" title="Creates an item with a given key and uses the constructor to fill out the rest. If it already exists,..." alt="" coords="244,5,436,32"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_cache.html#a9b565e37194850c038b5bb3c3a784567" title="Finds an item based on a key." alt="" coords="251,56,429,83"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_i_o_manager.html#a22c857b612a97f087c27d5c0120acc43" title=" " alt="" coords="262,107,418,149"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec" title=" " alt="" coords="484,89,683,116"/>
-<area shape="rect" id="node10" href="$class_b_a_r_e2_d_1_1_logger.html#a76c97e021ee75d17defbc794f68a965b" title="Logs a message to a file and the terminal." alt="" coords="509,140,657,167"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_logger.html#a731b4fafcc2878fe66360b1c9c0febdc" title=" " alt="" coords="731,89,901,116"/>
-<area shape="rect" id="node7" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="949,89,1123,116"/>
-<area shape="rect" id="node8" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="1171,64,1331,91"/>
-<area shape="rect" id="node9" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="1179,115,1323,141"/>
+<area shape="rect" id="node1" title="Loads a script from the filepath given from the cache or from the file if it&#39;s not already in the cac..." alt="" coords="5,5,196,45"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_i_o_manager.html#a41811805a88efeab7589a0e0c9015f90" title="Loads a file into a buffer." alt="" coords="244,5,400,45"/>
 </map>

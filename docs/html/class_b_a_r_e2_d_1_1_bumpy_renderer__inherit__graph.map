@@ -1,5 +1,5 @@
 <map id="BARE2D::BumpyRenderer" name="BARE2D::BumpyRenderer">
-<area shape="rect" id="node1" title="This is a BasicRenderer, but it includes the usage of bumpmaps. This can be useful for lighting." alt="" coords="5,155,184,181"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_basic_renderer.html" title=" " alt="" coords="9,80,180,107"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_renderer.html" title="The renderer class holds some shader program, manages some VBO, some render batch(es),..." alt="" coords="26,5,163,32"/>
+<area shape="rect" id="node1" title="This is a BasicRenderer, but it includes the usage of bumpmaps. This can be useful for lighting." alt="" coords="5,152,184,177"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_basic_renderer.html" title=" " alt="" coords="9,79,180,104"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_renderer.html" title="The renderer class holds some shader program, manages some VBO, some render batch(es),..." alt="" coords="26,5,163,31"/>
 </map>

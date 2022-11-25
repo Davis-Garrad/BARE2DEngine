@@ -34,7 +34,7 @@ namespace BARE2D {
 	{
 		// Make sure we don't do something dumb.
 		if(m_currentScreen) {
-			if(m_currentScreen->getNextScreenIndex() < m_screens.size()) {
+			if((long unsigned int)m_currentScreen->getNextScreenIndex() < m_screens.size()) {
 				// Exit the current screen
 				m_currentScreen->onExit();
 				

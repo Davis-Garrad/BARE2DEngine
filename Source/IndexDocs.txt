@@ -1,0 +1,58 @@
+/*! \mainpage Index
+ *
+ * \section intro_sec Introduction
+ *
+ * This is BARE2D, a game engine written over a bit, by Davis Garrad. This documentation exists purely because Davis Garrad forgets what the fuck he wrote.
+ *
+ * \section install_sec Linking
+ *
+ * \subsection step1 Step 1: Linker flags
+ * 
+ * There are no required flags, doofus.
+ *
+ * \subsection step2 Step 2: Linked libraries
+ *
+ * You will require a series of other libraries:
+ *
+ * <ul>
+ * <li>libboost_thread.a</li>
+ * <li>libboost_filesystem.a</li>
+ * <li>libboost_system.a</li>
+ * <li>lua5.3</li>
+ * <li>libBARE2DEngine.a</li>
+ * <li>CEGUIBase-0</li>
+ * <li>CEGUIOpenGLRenderer-0</li>
+ * <li>SDL2</li>
+ * <li>SDL2_mixer</li>
+ * <li>SDL2_ttf</li>
+ * <li>GL</li>
+ * <li>GLU</li>
+ * <li>GLEW</li>
+ * <li>pthread</li>
+ * </ul>
+ *
+ * You should (obviously, but I'm including this so you don't forget) have the aforementioned libraries (including BARE2D) in one or more of the search directories for libraries.
+ *
+ * \subsection step3 Step 3: Included Source Files
+ *
+ * Make sure to include source files from the ``source`` directory
+ *
+ *
+ * \section getting_started Using the Engine
+ * 
+ * \subsection basics The Basics: 
+ *
+ * The first things that you'll need are some derivations of the BARE2D::Screen class, filled with the appropriate virtual overrides of its pure functions. You can think of each BARE2D::Screen as a stage of your application - there should be one for menus, one for main game, (maybe) one for some map functionality, etc. 
+ *
+ * Once you've got some BARE2D::Screen's made, you're going to want to create a BARE2D::App object in your ``main`` function. This is going to store all the screenstates, as well as the application's state (of course!). Then, just call ``run()``. This will set everything in motion.
+ *
+ * \subsection rendering Rendering:
+ * 
+ * Rendering is a fickle thing. Luckily, BARE2D makes it easy-peasy! It's genuinely really simple. First, create a vertex and fragment shader (just .vert and .frag files respectively) using GLSL, outside of your program. Then, back in the program, create a BARE2D::Renderer (or one of its derived classes, like a BARE2D::BasicRenderer for example) and initialize it. After that, you'll (probably) need a texture to render, so use the BARE2D::ResourceManager to grab one of those. Finally, you can call BARE2D::Renderer::begin() to begin the render batch, BARE2D::BasicRenderer::draw() (for example again, BARE2D::Renderer is a very basic class) for each glyph in the batch, BARE2D::Renderer::end() to close off the batch, and finally BARE2D::Renderer::render() to render the entire batch to the BARE2D::Window managed by the BARE2D::App object we created before. We can very well layer these renderers' begin() and end() calls, and in fact that's how FBOs work.
+ *
+ * \subsection fbos FBOs:
+ *
+ * FBOs make me really happy. I spent a while making these clean. We can use FBOs just by wrapping other BARE2D::Renderer::render()s with some BARE2D::FBORenderer object (after initializing it and its uniforms) and its calls to BARE2D::FBORenderer::begin() and BARE2D::FBORenderer::end(), as well as a final BARE2D::FBORenderer::render() to render the entire FBO to the screen.
+ *
+ *
+ */

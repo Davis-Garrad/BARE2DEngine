@@ -1,13 +1,13 @@
 <map id="BARE2D::FBORenderer" name="BARE2D::FBORenderer">
-<area shape="rect" id="node1" title="The FBORenderer represents and manages an entire FrameBufferObject. This allows one to draw entire sc..." alt="" coords="540,347,704,373"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_renderer.html" title="The renderer class holds some shader program, manages some VBO, some render batch(es),..." alt="" coords="271,235,408,262"/>
-<area shape="rect" id="node3" title=" " alt="" coords="31,124,189,151"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_v_a_o.html" title="A wrapper class for OpenGL&#39;s VAO, as well as its associated VBO and attributes." alt="" coords="213,124,324,151"/>
-<area shape="rect" id="node5" title=" " alt="" coords="11,5,49,32"/>
-<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_shader_program.html" title="The ShaderProgram is a GLSL program which combines two shaders &#45; the vertex shader and the fragment s..." alt="" coords="348,124,523,151"/>
-<area shape="rect" id="node6" title=" " alt="" coords="403,5,463,32"/>
-<area shape="rect" id="node8" title=" " alt="" coords="616,235,663,262"/>
-<area shape="rect" id="node9" title=" " alt="" coords="747,235,801,262"/>
-<area shape="rect" id="node10" title=" " alt="" coords="871,228,1021,269"/>
-<area shape="rect" id="node11" title=" " alt="" coords="1045,235,1095,262"/>
+<area shape="rect" id="node1" title="The FBORenderer represents and manages an entire FrameBufferObject. This allows one to draw entire sc..." alt="" coords="385,343,549,368"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_renderer.html" title="The renderer class holds some shader program, manages some VBO, some render batch(es),..." alt="" coords="188,233,325,258"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_shader_program.html" title="The ShaderProgram is a GLSL program which combines two shaders &#45; the vertex shader and the fragment s..." alt="" coords="27,123,201,148"/>
+<area shape="rect" id="node4" title=" " alt="" coords="368,5,407,31"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_v_a_o.html" title="A wrapper class for OpenGL&#39;s VAO, as well as its associated VBO and attributes." alt="" coords="408,123,519,148"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,5,65,31"/>
+<area shape="rect" id="node7" title=" " alt="" coords="225,123,384,148"/>
+<area shape="rect" id="node8" title=" " alt="" coords="349,233,441,258"/>
+<area shape="rect" id="node9" title=" " alt="" coords="466,225,615,265"/>
+<area shape="rect" id="node10" title=" " alt="" coords="640,233,695,258"/>
+<area shape="rect" id="node11" title=" " alt="" coords="800,233,847,258"/>
 </map>

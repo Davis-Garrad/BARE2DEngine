@@ -1,6 +1,7 @@
 var class_b_a_r_e2_d_1_1_resource_manager =
 [
     [ "clearCaches", "class_b_a_r_e2_d_1_1_resource_manager.html#acbc049762c33d9f98ddbc5add7e20174", null ],
+    [ "createMutableTexture", "class_b_a_r_e2_d_1_1_resource_manager.html#a05a7123519dfb03fa23088785eb4ece4", null ],
     [ "getAssetsPathPrefix", "class_b_a_r_e2_d_1_1_resource_manager.html#a1a07f9d4bebd35321669d3fb0049962e", null ],
     [ "loadFont", "class_b_a_r_e2_d_1_1_resource_manager.html#a779c084be78d6e03a8083cb109b85509", null ],
     [ "loadMusic", "class_b_a_r_e2_d_1_1_resource_manager.html#a5d3afd3f5800a9a502a2a1e5311a513a", null ],
@@ -12,7 +13,6 @@ var class_b_a_r_e2_d_1_1_resource_manager =
     [ "loadSound", "class_b_a_r_e2_d_1_1_resource_manager.html#ad6a90b54eb05009c05cdfd3794e69855", null ],
     [ "loadTexture", "class_b_a_r_e2_d_1_1_resource_manager.html#af4bb03a60f5fdb3ec94064e17c84e823", null ],
     [ "setAssetsPathPrefix", "class_b_a_r_e2_d_1_1_resource_manager.html#ab6476c13f6b092cbda16abcd0d995a39", null ],
-    [ "setMutableTexture", "class_b_a_r_e2_d_1_1_resource_manager.html#a7cd7560c57b0e8a354aa8ce362eb55f3", null ],
     [ "setTexturePathPrefix", "class_b_a_r_e2_d_1_1_resource_manager.html#ad240c178b1286f53560ead6b41e7e58b", null ],
     [ "m_assetsPathPrefix", "class_b_a_r_e2_d_1_1_resource_manager.html#a3648e65a361380d80f01a911df867e7b", null ],
     [ "m_fonts", "class_b_a_r_e2_d_1_1_resource_manager.html#af110c53a19953db73ece62790759e049", null ],

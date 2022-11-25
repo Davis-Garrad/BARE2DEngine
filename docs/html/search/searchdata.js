@@ -10,7 +10,8 @@ var indexSectionsWithContent =
   7: "abgjsu",
   8: "bcdefghilmnorstuvx",
   9: "x",
-  10: "bcflmu"
+  10: "bcflmu",
+  11: "i"
 };
 
 var indexSectionNames =
@@ -25,13 +26,14 @@ var indexSectionNames =
   7: "enums",
   8: "enumvalues",
   9: "related",
-  10: "defines"
+  10: "defines",
+  11: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
-  1: "Classes",
+  1: "Data Structures",
   2: "Namespaces",
   3: "Files",
   4: "Functions",
@@ -40,6 +42,7 @@ var indexSectionLabels =
   7: "Enumerations",
   8: "Enumerator",
   9: "Friends",
-  10: "Macros"
+  10: "Macros",
+  11: "Pages"
 };
 

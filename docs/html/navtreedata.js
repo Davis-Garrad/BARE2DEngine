@@ -1,28 +1,43 @@
 /*
-@licstart  The following is the entire license notice for the
-JavaScript code in this file.
+ @licstart  The following is the entire license notice for the JavaScript code in this file.
 
-Copyright (C) 1997-2019 by Dimitri van Heesch
+ The MIT License (MIT)
 
-This program is free software; you can redistribute it and/or modify
-it under the terms of version 2 of the GNU General Public License as published by
-the Free Software Foundation
+ Copyright (C) 1997-2020 by Dimitri van Heesch
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ and associated documentation files (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge, publish, distribute,
+ sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-You should have received a copy of the GNU General Public License along
-with this program; if not, write to the Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ The above copyright notice and this permission notice shall be included in all copies or
+ substantial portions of the Software.
 
-@licend  The above is the entire license notice
-for the JavaScript code in this file
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var NAVTREE =
 [
   [ "BARE2D", "index.html", [
+    [ "Index", "index.html", [
+      [ "Introduction", "index.html#intro_sec", null ],
+      [ "Linking", "index.html#install_sec", [
+        [ "Step 1: Linker flags", "index.html#step1", null ],
+        [ "Step 2: Linked libraries", "index.html#step2", null ],
+        [ "Step 3: Included Source Files", "index.html#step3", null ]
+      ] ],
+      [ "Using the Engine", "index.html#getting_started", [
+        [ "The Basics:", "index.html#basics", null ],
+        [ "Rendering:", "index.html#rendering", null ],
+        [ "FBOs:", "index.html#fbos", null ]
+      ] ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -34,11 +49,11 @@ var NAVTREE =
         [ "Enumerator", "namespacemembers_eval.html", null ]
       ] ]
     ] ],
-    [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
+    [ "Data Structures", "annotated.html", [
+      [ "Data Structures", "annotated.html", "annotated_dup" ],
+      [ "Data Structure Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
-      [ "Class Members", "functions.html", [
+      [ "Data Fields", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
@@ -47,7 +62,7 @@ var NAVTREE =
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
+      [ "Globals", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
@@ -60,10 +75,13 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_app_8cpp.html",
-"_x_m_l_data_manager_8cpp.html",
-"class_b_a_r_e2_d_1_1_camera2_d.html#ab946a4bc02d5e3ede6280dc9227b93f7",
-"class_b_a_r_e2_d_1_1_shader_program.html#a67023f61cb80147c8227cef6b8df4072",
-"globals.html"
+"_x_m_l_data_manager_8hpp.html",
+"class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a5efde9a21fff6c7e43ebc7c2c69ffe78",
+"class_b_a_r_e2_d_1_1_font.html",
+"class_b_a_r_e2_d_1_1_lua_script_queue.html#ac9887f9df784c42239af672d3f0c520d",
+"class_b_a_r_e2_d_1_1_v_a_o.html#aaaec16d98be94aa5cfed015df40dda70",
+"core_8h.html#ad1958e7c6746ba6b1fbb0d81b88b346c",
+"struct_b_a_r_e2_d_1_1_character_glyph.html#a94a590488ed2d9a4bc73f2e7e101b9be"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

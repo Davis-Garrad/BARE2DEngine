@@ -1,8 +1,7 @@
 <map id="BARE2D::FBORenderer::preRender" name="BARE2D::FBORenderer::preRender">
-<area shape="rect" id="node1" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="5,104,169,145"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a1815cdbe70cc6fdbc66ec69a7131b5be" title="Binds a texture to target in the currently active texture slot." alt="" coords="239,5,393,47"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_g_l_context_manager.html#a733646522bf07c33576f9a1e0bb76c28" title=" " alt="" coords="217,71,415,112"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a529bb80b0bd7bbf86f10be7c30be514c" title="Sets the active texture &quot;slot&quot;. This can be GL_TEXTURE0 to GL_TEXTURE8 (I think. Check the literature..." alt="" coords="239,136,393,177"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_camera2_d.html#aad8e6c5c18c85f5dc4d0ccd31d356d13" title="Updates the matrix if necessary." alt="" coords="219,202,413,229"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a62f46a348cc1f4e91fe3ab48c9a5cc1b" title=" " alt="" coords="463,71,617,112"/>
+<area shape="rect" id="node1" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="5,101,169,141"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a1815cdbe70cc6fdbc66ec69a7131b5be" title="Binds a texture to target in the currently active texture slot." alt="" coords="239,5,393,45"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_g_l_context_manager.html#a733646522bf07c33576f9a1e0bb76c28" title=" " alt="" coords="217,69,415,109"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a529bb80b0bd7bbf86f10be7c30be514c" title="Sets the active texture &quot;slot&quot;. This can be GL_TEXTURE0 to GL_TEXTURE8 (I think. Check the literature..." alt="" coords="239,133,393,173"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_shader_program.html#adfa74453d9bc2f1100e5d19bb45a5512" title="Similar to setUniform." alt="" coords="229,197,403,237"/>
 </map>

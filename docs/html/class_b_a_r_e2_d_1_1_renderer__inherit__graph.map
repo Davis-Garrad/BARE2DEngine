@@ -1,8 +1,9 @@
 <map id="BARE2D::Renderer" name="BARE2D::Renderer">
-<area shape="rect" id="node1" title="The renderer class holds some shader program, manages some VBO, some render batch(es),..." alt="" coords="321,5,458,32"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_basic_renderer.html" title=" " alt="" coords="107,80,277,107"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_debug_renderer.html" title=" " alt="" coords="302,80,477,107"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html" title="The FBORenderer represents and manages an entire FrameBufferObject. This allows one to draw entire sc..." alt="" coords="501,80,665,107"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_bumpy_renderer.html" title="This is a BasicRenderer, but it includes the usage of bumpmaps. This can be useful for lighting." alt="" coords="5,155,184,181"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_font_renderer.html" title="The FontRenderer... renders fonts. It is just a very basic extension of the BasicRenderer,..." alt="" coords="208,155,371,181"/>
+<area shape="rect" id="node1" title="The renderer class holds some shader program, manages some VBO, some render batch(es),..." alt="" coords="5,104,143,129"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_basic_renderer.html" title=" " alt="" coords="207,29,378,55"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_debug_renderer.html" title=" " alt="" coords="205,79,380,104"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html" title="The FBORenderer represents and manages an entire FrameBufferObject. This allows one to draw entire sc..." alt="" coords="211,128,375,153"/>
+<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_textureless_renderer.html" title=" " alt="" coords="191,177,395,203"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_bumpy_renderer.html" title="This is a BasicRenderer, but it includes the usage of bumpmaps. This can be useful for lighting." alt="" coords="443,5,621,31"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_font_renderer.html" title="The FontRenderer... renders fonts. It is just a very basic extension of the BasicRenderer,..." alt="" coords="451,55,613,80"/>
 </map>

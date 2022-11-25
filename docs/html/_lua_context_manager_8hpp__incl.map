@@ -1,4 +1,4 @@
 <map id="Source/LuaContextManager.hpp" name="Source/LuaContextManager.hpp">
-<area shape="rect" id="node1" title="NOTE: This is a singleton class. The LuaContextManager, well, manages the Lua Contexts which the Scri..." alt="" coords="5,5,213,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="86,80,133,107"/>
+<area shape="rect" id="node1" title="NOTE: This is a singleton class. The LuaContextManager, well, manages the Lua Contexts which the Scri..." alt="" coords="5,5,213,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="86,79,133,104"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="BARE2D::LuaScriptQueue::addLuaScript" name="BARE2D::LuaScriptQueue::addLuaScript">
-<area shape="rect" id="node1" title="Adds a script to the queue to be run." alt="" coords="231,5,408,47"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_lua_script_queue.html#ad5a82f0714d8b4178ea6498aa9f8368f" title="Adds a script to the queue to be run by its source code." alt="" coords="5,5,183,47"/>
+<area shape="rect" id="node1" title="Adds a script to the queue to be run." alt="" coords="231,5,408,45"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_lua_script_queue.html#ad5a82f0714d8b4178ea6498aa9f8368f" title="Adds a script to the queue to be run by its source code." alt="" coords="5,5,183,45"/>
 </map>

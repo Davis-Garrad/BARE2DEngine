@@ -1,47 +1,49 @@
 \hypertarget{_shader_program_8tcc_source}{}\doxysection{Shader\+Program.\+tcc}
 \label{_shader_program_8tcc_source}\index{Source/ShaderProgram.tcc@{Source/ShaderProgram.tcc}}
-
+\mbox{\hyperlink{_shader_program_8tcc}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
-\DoxyCodeLine{00002 }
-\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{/}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{/}\textcolor{preprocessor}{gtc}\textcolor{preprocessor}{/}\textcolor{preprocessor}{type\_ptr}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00005 }
-\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_b_a_r_e_errors_8hpp}{"BAREErrors.hpp"}}}
-\DoxyCodeLine{00007 }
-\DoxyCodeLine{00008 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{00009     \textcolor{keyword}{template}<\textcolor{keyword}{class} T>}
-\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00010}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{00010}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{setUniform}}(\textcolor{keyword}{const} std::string uniform, T* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num) \{}
-\DoxyCodeLine{00011         \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8bc03ea7709e07920eab3b6c56df1fd8}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8bc03ea7709e07920eab3b6c56df1fd8}{GLSL\_PROGRAM\_FAILURE}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{,}} \textcolor{stringliteral}{"Tried calling setUniform with unsupported type: "} + \mbox{\hyperlink{_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6}{demangle}}\mbox{\hyperlink{_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6}{(}}\textcolor{keyword}{typeid}(*data).name()\mbox{\hyperlink{_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6}{)}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{)}};}
-\DoxyCodeLine{00012     \}}
-\DoxyCodeLine{00013 }
-\DoxyCodeLine{00014     \textcolor{keyword}{template}<\textcolor{keyword}{class} T>}
-\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00015}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{00015}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{setUniformMatrix}}(\textcolor{keyword}{const} std::string uniform, \textcolor{keywordtype}{bool} transpose, T* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num) \{}
-\DoxyCodeLine{00016         \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8bc03ea7709e07920eab3b6c56df1fd8}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8bc03ea7709e07920eab3b6c56df1fd8}{GLSL\_PROGRAM\_FAILURE}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{,}} \textcolor{stringliteral}{"Tried calling setUniformMatrix with unsupported type: "} + \mbox{\hyperlink{_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6}{demangle}}\mbox{\hyperlink{_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6}{(}}\textcolor{keyword}{typeid}(*data).name()\mbox{\hyperlink{_b_a_r_e_errors_8cpp_ad6c3fb278e5310c3250bab181be717d6}{)}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{)}};}
-\DoxyCodeLine{00017     \}}
-\DoxyCodeLine{00018 }
-\DoxyCodeLine{00019     \textcolor{comment}{// Template specialization declarations}}
-\DoxyCodeLine{00020 }
-\DoxyCodeLine{00021     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{00022     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{setUniform}}<\textcolor{keywordtype}{int}>(\textcolor{keyword}{const} std::string uniform, \textcolor{keywordtype}{int}* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num);}
-\DoxyCodeLine{00023     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{00024     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{setUniform}}<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>(\textcolor{keyword}{const} std::string uniform, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num);}
-\DoxyCodeLine{00025     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{00026     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{setUniform}}<\textcolor{keywordtype}{float}>(\textcolor{keyword}{const} std::string uniform, \textcolor{keywordtype}{float}* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num);}
-\DoxyCodeLine{00027     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{00028     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{setUniform}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{vec2}}>(\textcolor{keyword}{const} std::string uniform, glm::vec2* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num);}
-\DoxyCodeLine{00029     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{00030     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{setUniform}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{vec3}}>(\textcolor{keyword}{const} std::string uniform, glm::vec3* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num);}
-\DoxyCodeLine{00031     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{00032     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{setUniform}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{vec4}}>(\textcolor{keyword}{const} std::string uniform, glm::vec4* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num) ;}
-\DoxyCodeLine{00033     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{00034     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{setUniform}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{ivec2}}>(\textcolor{keyword}{const} std::string uniform, glm::ivec2* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num) ;}
-\DoxyCodeLine{00035     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{00036     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{setUniform}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{ivec3}}>(\textcolor{keyword}{const} std::string uniform, glm::ivec3* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num);}
-\DoxyCodeLine{00037     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{00038     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{setUniform}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{ivec4}}>(\textcolor{keyword}{const} std::string uniform, glm::ivec4* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num) ;}
-\DoxyCodeLine{00039     \textcolor{keyword}{template}<>}
-\DoxyCodeLine{00040     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{ShaderProgram}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{setUniformMatrix}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{glm}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{mat4}}>(\textcolor{keyword}{const} std::string uniform, \textcolor{keywordtype}{bool} transpose, glm::mat4* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num);}
-\DoxyCodeLine{00041 \}}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00001}00001 \#pragma once}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00003}00003 \#include <typeinfo>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00005}00005 \#include <glm/glm.hpp>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00006}00006 \#include <glm/gtc/type\_ptr.hpp>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00008}00008 \#include "{}BAREErrors.hpp"{}}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00010}00010 namespace BARE2D \{}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00011}00011     template<class T>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00012}00012     void ShaderProgram::setUniform(const std::string uniform, T* data, unsigned int num) \{}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00013}00013         throwFatalError(BAREError::GLSL\_PROGRAM\_FAILURE, "{}Tried calling setUniform with unsupported type: "{} + demangle(typeid(*data).name()));}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00014}00014     \}}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00015}00015     }
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00016}00016     template<class T>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00017}00017     void ShaderProgram::setUniformMatrix(const std::string uniform, bool transpose, T* data, unsigned int num) \{}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00018}00018         throwFatalError(BAREError::GLSL\_PROGRAM\_FAILURE, "{}Tried calling setUniformMatrix with unsupported type: "{} + demangle(typeid(*data).name()));}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00019}00019     \}}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00020}00020     }
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00021}00021     // Template specialization declarations}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00022}00022     }
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00023}00023     template<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00024}00024     void ShaderProgram::setUniform<int>(const std::string uniform, int* data, unsigned int num);}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00025}00025     template<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00026}00026     void ShaderProgram::setUniform<unsigned int>(const std::string uniform, unsigned int* data, unsigned int num);}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00027}00027     template<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00028}00028     void ShaderProgram::setUniform<float>(const std::string uniform, float* data, unsigned int num);}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00029}00029     template<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00030}00030     void ShaderProgram::setUniform<glm::vec2>(const std::string uniform, glm::vec2* data, unsigned int num);}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00031}00031     template<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00032}00032     void ShaderProgram::setUniform<glm::vec3>(const std::string uniform, glm::vec3* data, unsigned int num);}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00033}00033     template<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00034}00034     void ShaderProgram::setUniform<glm::vec4>(const std::string uniform, glm::vec4* data, unsigned int num) ;}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00035}00035     template<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00036}00036     void ShaderProgram::setUniform<glm::ivec2>(const std::string uniform, glm::ivec2* data, unsigned int num) ;}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00037}00037     template<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00038}00038     void ShaderProgram::setUniform<glm::ivec3>(const std::string uniform, glm::ivec3* data, unsigned int num);}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00039}00039     template<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00040}00040     void ShaderProgram::setUniform<glm::ivec4>(const std::string uniform, glm::ivec4* data, unsigned int num) ;}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00041}00041     template<>}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00042}00042     void ShaderProgram::setUniformMatrix<glm::mat4>(const std::string uniform, bool transpose, glm::mat4* data, unsigned int num);}
+\DoxyCodeLine{\Hypertarget{_shader_program_8tcc_source_l00043}00043 \}}
 
 \end{DoxyCode}

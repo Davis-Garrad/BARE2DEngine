@@ -1,5 +1,0 @@
-<map id="BARE2D::Glyph::Glyph" name="BARE2D::Glyph::Glyph">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,165,57"/>
-<area shape="rect" id="node2" href="$struct_b_a_r_e2_d_1_1_vertex.html#abc02c06e4c046c1db77747592534a8a2" title="Literally just sets the position. Convenient." alt="" coords="213,5,408,32"/>
-<area shape="rect" id="node3" href="$struct_b_a_r_e2_d_1_1_vertex.html#a028b850fa99d561233130a0f227c9036" title="Sets the UV coords/dimensions." alt="" coords="227,56,394,83"/>
-</map>
