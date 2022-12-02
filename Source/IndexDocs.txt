@@ -54,5 +54,9 @@
  *
  * FBOs make me really happy. I spent a while making these clean. We can use FBOs just by wrapping other BARE2D::Renderer::render()s with some BARE2D::FBORenderer object (after initializing it and its uniforms) and its calls to BARE2D::FBORenderer::begin() and BARE2D::FBORenderer::end(), as well as a final BARE2D::FBORenderer::render() to render the entire FBO to the screen.
  *
+ * \subsection xml XML Data:
+ * 
+ * XML Data is a fun one. The first thing you need to do is make some custom types! Create derived subclasses of BARE2D::XMLData, and overload the default constructor only. The default constructor should call BARE2D::XMLData::addAttribute() or BARE2D::XMLData::addAttributes() to link XML nodes with actual in-class memory. Further, it should also set BARE2D::XMLData::nodeName, which sets what the actual XML object is called.
  *
+ * Once you've made some custom types, you can register them to the XML system by calling BARE2D::XMLDataManager::addDataType() with your type as the template type. Then, you can BARE2D::XMLDataManager::loadXML() from a file, or create instances of your types and BARE2D::XMLDataManager::addData(), then BARE2D::XMLDataManager::saveXML(). The possibilities are endless!
  */

@@ -2,7 +2,7 @@
 
 #include <algorithm>
 #include <glm/glm.hpp>
-#include <rapidxml/rapidxml_print.hpp>  // For the overloaded << operator
+#include <rapidxml/rapidxml_print.hpp> // For the overloaded << operator
 #include <string>
 #include <vector>
 
@@ -168,6 +168,13 @@ void XMLDataManager::addData(XMLData* data)
 
     // So it doesn't exist yet. Add it to the cache.
     c->addItem(data->id, data);
+}
+
+void XMLDataManager::setData(XMLData* data)
+{
+    Cache<unsigned int, XMLData>* c = getDataCache(data->nodeName);
+
+    c->setItem(data->id, data);
 }
 
 template <> bool XMLDataManager::readValue(rapidxml::xml_node<>* parent, std::string valueName, std::string& variable)
@@ -489,4 +496,4 @@ void XMLDataManager::clearCache()
     m_storedData.clear();
     m_dataTypingFunctions.clear();
 }
-}  // namespace BARE2D
+} // namespace BARE2D

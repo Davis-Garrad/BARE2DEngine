@@ -35,7 +35,8 @@ var NAVTREE =
       [ "Using the Engine", "index.html#getting_started", [
         [ "The Basics:", "index.html#basics", null ],
         [ "Rendering:", "index.html#rendering", null ],
-        [ "FBOs:", "index.html#fbos", null ]
+        [ "FBOs:", "index.html#fbos", null ],
+        [ "XML Data:", "index.html#xml", null ]
       ] ]
     ] ],
     [ "Namespaces", "namespaces.html", [
@@ -77,11 +78,11 @@ var NAVTREEINDEX =
 "_app_8cpp.html",
 "_x_m_l_data_manager_8hpp.html",
 "class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a5efde9a21fff6c7e43ebc7c2c69ffe78",
-"class_b_a_r_e2_d_1_1_filesystem.html#a84e797bdd45a73258c9a25ae186f3e71",
-"class_b_a_r_e2_d_1_1_lua_script_queue.html#ab5b984d86c2e18f58c086d48e5da8839",
-"class_b_a_r_e2_d_1_1_v_a_o.html#a96ee05539c58614ee273b7df85143804",
-"core_8h.html#ad1958e7c6746ba6b1fbb0d81b88b346c",
-"struct_b_a_r_e2_d_1_1_character_glyph.html#a94a590488ed2d9a4bc73f2e7e101b9be"
+"class_b_a_r_e2_d_1_1_filesystem.html#a31a5f3c47231fd9490590f398ce3e4e5",
+"class_b_a_r_e2_d_1_1_lua_script_queue.html#aa62b9af9441e8b47fa2336c9aecb7abe",
+"class_b_a_r_e2_d_1_1_v_a_o.html#a77436d8b9b995f2d47e72320b65641d0",
+"core_8h.html#abe793b552fabe390d134b97ab81d2c7f",
+"struct_b_a_r_e2_d_1_1_camera_state.html#afd9cc7582150918a69aba72a37c05ae3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

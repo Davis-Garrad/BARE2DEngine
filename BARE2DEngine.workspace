@@ -4,9 +4,9 @@
   <WorkspaceParserPaths/>
   <Project Name="BARE2DEngine" Path="BARE2DEngine.project" Active="No"/>
   <Project Name="BARETest_ThreeBody" Path="BARETests/Orbiter/BARETest_ThreeBody.project" Active="No"/>
-  <Project Name="BARETests" Path="BARETests/BasicTest/BARETests.project" Active="Yes"/>
+  <Project Name="BARETests" Path="BARETests/BasicTest/BARETests.project" Active="No"/>
   <Project Name="BAREBoids" Path="BARETests/Boids/Boids.project" Active="No"/>
-  <Project Name="BAREXML" Path="BARETests/BAREXML/BAREXML.project" Active="No"/>
+  <Project Name="BAREXML" Path="BARETests/BAREXML/BAREXML.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>

@@ -40,7 +40,6 @@
 /home/davis-dev/Documents/BARE2DEngine/Source/BAREErrors.hpp
 /home/davis-dev/Documents/BARE2DEngine/Source/LuaScriptQueue.cpp
 /home/davis-dev/Documents/BARE2DEngine/Source/Logger.cpp
-/home/davis-dev/Documents/BARE2DEngine/Source/LuaScriptEngine_impl.tcc
 /home/davis-dev/Documents/BARE2DEngine/Source/LuaFunctions.hpp
 /home/davis-dev/Documents/BARE2DEngine/Source/XMLDataTypes.hpp
 /home/davis-dev/Documents/BARE2DEngine/Source/LuaFunctions.cpp
@@ -52,13 +51,13 @@
 /home/davis-dev/Documents/BARE2DEngine/Other_Libraries/PicoPNG.hpp
 /home/davis-dev/Documents/BARE2DEngine/Source/Logger.hpp
 /home/davis-dev/Documents/BARE2DEngine/Source/LuaScript.hpp
-/home/davis-dev/Documents/BARE2DEngine/Source/DebugRenderer.hpp
-/home/davis-dev/Documents/BARE2DEngine/Source/App.hpp
-/home/davis-dev/Documents/BARE2DEngine/Source/InputManager.cpp
+/home/davis-dev/Documents/BARE2DEngine/Source/LuaScriptEngine_impl.tcc
+/home/davis-dev/Documents/BARE2DEngine/docs/index.html
 /home/davis-dev/Documents/BARE2DEngine/Source/ResourceManager.cpp
 /home/davis-dev/Documents/BARE2DEngine/Source/IOManager.cpp
 /home/davis-dev/Documents/BARE2DEngine/Source/XMLDataTypes.tcc
 /home/davis-dev/Documents/BARE2DEngine/Other_Libraries/utf8/unchecked.h
+/home/davis-dev/Documents/BARE2DEngine/Source/InputManager.cpp
 /home/davis-dev/Documents/BARE2DEngine/Source/FBORenderer.hpp
 /home/davis-dev/Documents/BARE2DEngine/Source/LuaScriptEngine.hpp
 /home/davis-dev/Documents/BARE2DEngine/Source/Renderer.cpp
@@ -91,7 +90,6 @@
 /home/davis-dev/Documents/BARE2DEngine/Source/FontRenderer.hpp
 /home/davis-dev/Documents/BARE2DEngine/Source/DebugRenderer.cpp
 /home/davis-dev/Documents/BARE2DEngine/Other_Libraries/utf8/checked.h
-/home/davis-dev/Documents/BARE2DEngine/docs/html/index.html
 /home/davis-dev/Documents/BARE2DEngine/Source/Screen.cpp
 /home/davis-dev/Documents/BARE2DEngine/Source/Texture.hpp
 /home/davis-dev/Documents/BARE2DEngine/Source/Screen.hpp
@@ -104,3 +102,5 @@
 /home/davis-dev/Documents/BARE2DEngine/Source/ParticleEngine2D.hpp
 /home/davis-dev/Documents/BARE2DEngine/Source/Filesystem.hpp
 /home/davis-dev/Documents/BARE2DEngine/Source/App.cpp
+/home/davis-dev/Documents/BARE2DEngine/Source/DebugRenderer.hpp
+/home/davis-dev/Documents/BARE2DEngine/Source/App.hpp

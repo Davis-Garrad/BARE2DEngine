@@ -15,7 +15,7 @@ class CustomDataType : public BARE2D::XMLData
     {
 	init();
     }
-    CustomDataType(unsigned int ID, std::string Name) : BARE2D::XMLData()
+    CustomDataType(unsigned int ID, std::string Name)
     {
 	init();
 	id = ID;
