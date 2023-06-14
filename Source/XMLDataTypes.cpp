@@ -183,7 +183,9 @@ template <> void Attribute<Texture>::setDefaultData()
 // Now that all the templates have been specialized, let's do some real work
 
 // XMLData
-XMLData::XMLData() : name("UNDEFINED"), id(0)
+XMLData::XMLData()
+    : name("UNDEFINED")
+    , id(0)
 {
     // All data have a typename and id
     addAttribute("name", AttributeType::STRING, &name);
@@ -199,7 +201,8 @@ XMLData::XMLData(std::string dataType, unsigned int ID)
     m_attributes["id"]->swapDataPointer(&id);
 }
 
-XMLData::XMLData(std::vector<AttributeBase*> attributes) : XMLData()
+XMLData::XMLData(std::vector<AttributeBase*> attributes)
+    : XMLData()
 {
     // All data have a typename and id
     addAttribute("name", AttributeType::STRING, &name);
@@ -209,7 +212,8 @@ XMLData::XMLData(std::vector<AttributeBase*> attributes) : XMLData()
     addAttributes(attributes);
 }
 
-XMLData::XMLData(std::unordered_map<std::string, AttributeBase*> attributes) : XMLData()
+XMLData::XMLData(std::unordered_map<std::string, AttributeBase*> attributes)
+    : XMLData()
 {
     // Purely for copy operations
     m_attributes = attributes;
@@ -254,7 +258,7 @@ void XMLData::read(rapidxml::xml_node<>* node)
 		    }
 		case AttributeType::UNSIGNED_INT:
 		    {
-			unsigned int data = (unsigned int)-1;
+			unsigned int data = 0;
 			// Use the templated function to get the string interpretation
 			XMLDataManager::readValue(node, attrName, data);
 			// Set the data now
@@ -453,4 +457,4 @@ void XMLData::addAttributes(std::vector<AttributeBase*> attrs)
 	}
 }
 
-}  // namespace BARE2D
+} // namespace BARE2D
