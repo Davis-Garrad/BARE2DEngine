@@ -153,6 +153,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abe9f1c4106ef768213f17f974f35c3b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_input_manager.html#abe9f1c4106ef768213f17f974f35c3b9">isKeyPressed</a> (unsigned int keyID) const</td></tr>
 <tr class="memdesc:abe9f1c4106ef768213f17f974f35c3b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the key has just been pressed.  <a href="class_b_a_r_e2_d_1_1_input_manager.html#abe9f1c4106ef768213f17f974f35c3b9">More...</a><br /></td></tr>
 <tr class="separator:abe9f1c4106ef768213f17f974f35c3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba3e9c456823b83de41816d9c7b7ab30"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_input_manager.html#aba3e9c456823b83de41816d9c7b7ab30">getPressedCharacter</a> (bool alpha=true, bool nums=true, bool all=true) const</td></tr>
+<tr class="memdesc:aba3e9c456823b83de41816d9c7b7ab30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets entered character (This just follows the first character that has been pressed this update)  <a href="class_b_a_r_e2_d_1_1_input_manager.html#aba3e9c456823b83de41816d9c7b7ab30">More...</a><br /></td></tr>
+<tr class="separator:aba3e9c456823b83de41816d9c7b7ab30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a492c88230777ab626d6d1778b4ee0e02"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_input_manager.html#a492c88230777ab626d6d1778b4ee0e02">getMousePosition</a> () const</td></tr>
 <tr class="memdesc:a492c88230777ab626d6d1778b4ee0e02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the position of the mouse in the window.  <a href="class_b_a_r_e2_d_1_1_input_manager.html#a492c88230777ab626d6d1778b4ee0e02">More...</a><br /></td></tr>
 <tr class="separator:a492c88230777ab626d6d1778b4ee0e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,7 +200,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00005">5</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00007">7</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -239,9 +242,9 @@ Private Attributes</h2></td></tr>
 <p>Gets the position of the mouse in the window. </p>
 <dl class="section return"><dt>Returns</dt><dd>The position of the mouse in a glm::vec2 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00075">75</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00115">115</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00090">m_mousePosition</a>.</p>
+<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00099">m_mousePosition</a>.</p>
 
 </div>
 </div>
@@ -263,9 +266,71 @@ Private Attributes</h2></td></tr>
 <p>Gets the position of the mousewheel. </p>
 <dl class="section return"><dt>Returns</dt><dd>How much the mousewheel has moved since last update. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00080">80</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00120">120</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00091">m_mouseScrollwheelPosition</a>.</p>
+<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00100">m_mouseScrollwheelPosition</a>.</p>
+
+</div>
+</div>
+<a id="aba3e9c456823b83de41816d9c7b7ab30" name="aba3e9c456823b83de41816d9c7b7ab30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba3e9c456823b83de41816d9c7b7ab30">&#9670;&#160;</a></span>getPressedCharacter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char BARE2D::InputManager::getPressedCharacter </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>alpha</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>nums</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>all</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets entered character (This just follows the first character that has been pressed this update) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alpha</td><td>If true, checks alphabetical characters </td></tr>
+    <tr><td class="paramname">nums</td><td>If true, checks numbers </td></tr>
+    <tr><td class="paramname">symbols</td><td>If true, checks all other (readable) symbols </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The character pressed. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00076">76</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_input_manager_8cpp_source.html#l00053">isKeyDown()</a>, and <a class="el" href="_input_manager_8cpp_source.html#l00070">isKeyPressed()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_input_manager_aba3e9c456823b83de41816d9c7b7ab30_cgraph.png" border="0" usemap="#aclass_b_a_r_e2_d_1_1_input_manager_aba3e9c456823b83de41816d9c7b7ab30_cgraph" alt=""/></div>
+<map name="aclass_b_a_r_e2_d_1_1_input_manager_aba3e9c456823b83de41816d9c7b7ab30_cgraph" id="aclass_b_a_r_e2_d_1_1_input_manager_aba3e9c456823b83de41816d9c7b7ab30_cgraph">
+<area shape="rect" title="Gets entered character (This just follows the first character that has been pressed this update)" alt="" coords="5,35,168,75"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_input_manager.html#aa0cae9c2bef867659510a5873d58f2ad" title="Checks if the key is down at all." alt="" coords="427,5,589,45"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_input_manager.html#abe9f1c4106ef768213f17f974f35c3b9" title="Checks if the key has just been pressed." alt="" coords="216,63,379,103"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_input_manager.html#a5a574a794a5f14be2ec97c62d1fa127d" title="Checks if the key was down last frame." alt="" coords="427,69,589,109"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -294,20 +359,21 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the key is down </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00054">54</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00053">53</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00088">m_keyMap</a>.</p>
+<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00097">m_keyMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_input_manager_8cpp_source.html#l00069">isKeyPressed()</a>.</p>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="_input_manager_8cpp_source.html#l00076">getPressedCharacter()</a>, and <a class="el" href="_input_manager_8cpp_source.html#l00070">isKeyPressed()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad_icgraph.png" border="0" usemap="#aclass_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad_icgraph" alt=""/></div>
 <map name="aclass_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad_icgraph" id="aclass_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad_icgraph">
-<area shape="rect" title="Checks if the key is down at all." alt="" coords="216,5,379,45"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_input_manager.html#abe9f1c4106ef768213f17f974f35c3b9" title="Checks if the key has just been pressed." alt="" coords="5,5,168,45"/>
+<area shape="rect" title="Checks if the key is down at all." alt="" coords="427,5,589,45"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_input_manager.html#aba3e9c456823b83de41816d9c7b7ab30" title="Gets entered character (This just follows the first character that has been pressed this update)" alt="" coords="5,5,168,45"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_input_manager.html#abe9f1c4106ef768213f17f974f35c3b9" title="Checks if the key has just been pressed." alt="" coords="216,33,379,73"/>
 </map>
 </div>
 
@@ -338,19 +404,32 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the key wasn't down last frame and is this frame. false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00069">69</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00070">70</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_input_manager_8cpp_source.html#l00054">isKeyDown()</a>, and <a class="el" href="_input_manager_8cpp_source.html#l00085">wasKeyDown()</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="_input_manager_8cpp_source.html#l00053">isKeyDown()</a>, and <a class="el" href="_input_manager_8cpp_source.html#l00125">wasKeyDown()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_input_manager_8cpp_source.html#l00076">getPressedCharacter()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9_cgraph.png" border="0" usemap="#aclass_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9_cgraph" alt=""/></div>
 <map name="aclass_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9_cgraph" id="aclass_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9_cgraph">
 <area shape="rect" title="Checks if the key has just been pressed." alt="" coords="5,37,168,77"/>
 <area shape="rect" href="class_b_a_r_e2_d_1_1_input_manager.html#aa0cae9c2bef867659510a5873d58f2ad" title="Checks if the key is down at all." alt="" coords="216,5,379,45"/>
 <area shape="rect" href="class_b_a_r_e2_d_1_1_input_manager.html#a5a574a794a5f14be2ec97c62d1fa127d" title="Checks if the key was down last frame." alt="" coords="216,69,379,109"/>
+</map>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9_icgraph.png" border="0" usemap="#aclass_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9_icgraph" alt=""/></div>
+<map name="aclass_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9_icgraph" id="aclass_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9_icgraph">
+<area shape="rect" title="Checks if the key has just been pressed." alt="" coords="216,5,379,45"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_input_manager.html#aba3e9c456823b83de41816d9c7b7ab30" title="Gets entered character (This just follows the first character that has been pressed this update)" alt="" coords="5,5,168,45"/>
 </map>
 </div>
 
@@ -380,16 +459,16 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00026">26</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00025">25</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00088">m_keyMap</a>.</p>
+<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00097">m_keyMap</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_app_8cpp_source.html#l00145">BARE2D::App::pollSDLInput()</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d_icgraph.png" border="0" usemap="#aclass_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d_icgraph" alt=""/></div>
 <map name="aclass_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d_icgraph" id="aclass_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d_icgraph">
 <area shape="rect" title="Sets a key as &#39;pressed&#39;." alt="" coords="859,5,1021,45"/>
@@ -426,16 +505,16 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00032">32</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00031">31</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00088">m_keyMap</a>.</p>
+<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00097">m_keyMap</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_app_8cpp_source.html#l00145">BARE2D::App::pollSDLInput()</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0_icgraph.png" border="0" usemap="#aclass_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0_icgraph" alt=""/></div>
 <map name="aclass_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0_icgraph" id="aclass_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0_icgraph">
 <area shape="rect" title="Sets a key as &#39;released&#39;." alt="" coords="859,5,1021,45"/>
@@ -483,16 +562,16 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00038">38</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00037">37</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00090">m_mousePosition</a>.</p>
+<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00099">m_mousePosition</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_app_8cpp_source.html#l00145">BARE2D::App::pollSDLInput()</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6_icgraph.png" border="0" usemap="#aclass_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6_icgraph" alt=""/></div>
 <map name="aclass_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6_icgraph" id="aclass_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6_icgraph">
 <area shape="rect" title="Sets the mouse position to (x,y)" alt="" coords="859,5,1021,45"/>
@@ -529,9 +608,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00044">44</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00043">43</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00090">m_mousePosition</a>.</p>
+<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00099">m_mousePosition</a>.</p>
 
 </div>
 </div>
@@ -559,16 +638,16 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00049">49</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00048">48</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00091">m_mouseScrollwheelPosition</a>.</p>
+<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00100">m_mouseScrollwheelPosition</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_app_8cpp_source.html#l00145">BARE2D::App::pollSDLInput()</a>.</p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c_icgraph.png" border="0" usemap="#aclass_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c_icgraph" alt=""/></div>
 <map name="aclass_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c_icgraph" id="aclass_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c_icgraph">
 <area shape="rect" title="Sets the &quot;position&quot; of the scrollwheel &#45; essentially, how much it has moved since the last frame." alt="" coords="859,5,1060,45"/>
@@ -598,16 +677,16 @@ Private Attributes</h2></td></tr>
 
 <p>Updates the inputmanager. Should be called every frame. </p>
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00015">15</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00013">13</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00088">m_keyMap</a>, <a class="el" href="_input_manager_8hpp_source.html#l00091">m_mouseScrollwheelPosition</a>, and <a class="el" href="_input_manager_8hpp_source.html#l00089">m_previousKeyMap</a>.</p>
+<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00097">m_keyMap</a>, <a class="el" href="_input_manager_8hpp_source.html#l00100">m_mouseScrollwheelPosition</a>, and <a class="el" href="_input_manager_8hpp_source.html#l00098">m_previousKeyMap</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_app_8cpp_source.html#l00139">BARE2D::App::updateInput()</a>.</p>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433_icgraph.png" border="0" usemap="#aclass_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433_icgraph" alt=""/></div>
 <map name="aclass_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433_icgraph" id="aclass_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433_icgraph">
 <area shape="rect" title="Updates the inputmanager. Should be called every frame." alt="" coords="620,5,783,45"/>
@@ -652,20 +731,21 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the key was down last frame, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00085">85</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8cpp_source.html#l00125">125</a> of file <a class="el" href="_input_manager_8cpp_source.html">InputManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00089">m_previousKeyMap</a>.</p>
+<p class="reference">References <a class="el" href="_input_manager_8hpp_source.html#l00098">m_previousKeyMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_input_manager_8cpp_source.html#l00069">isKeyPressed()</a>.</p>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="_input_manager_8cpp_source.html#l00070">isKeyPressed()</a>.</p>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d_icgraph.png" border="0" usemap="#aclass_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d_icgraph" alt=""/></div>
 <map name="aclass_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d_icgraph" id="aclass_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d_icgraph">
-<area shape="rect" title="Checks if the key was down last frame." alt="" coords="216,5,379,45"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_input_manager.html#abe9f1c4106ef768213f17f974f35c3b9" title="Checks if the key has just been pressed." alt="" coords="5,5,168,45"/>
+<area shape="rect" title="Checks if the key was down last frame." alt="" coords="427,5,589,45"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_input_manager.html#abe9f1c4106ef768213f17f974f35c3b9" title="Checks if the key has just been pressed." alt="" coords="216,5,379,45"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_input_manager.html#aba3e9c456823b83de41816d9c7b7ab30" title="Gets entered character (This just follows the first character that has been pressed this update)" alt="" coords="5,5,168,45"/>
 </map>
 </div>
 
@@ -692,9 +772,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8hpp_source.html#l00088">88</a> of file <a class="el" href="_input_manager_8hpp_source.html">InputManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8hpp_source.html#l00097">97</a> of file <a class="el" href="_input_manager_8hpp_source.html">InputManager.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_input_manager_8cpp_source.html#l00054">isKeyDown()</a>, <a class="el" href="_input_manager_8cpp_source.html#l00026">pressKey()</a>, <a class="el" href="_input_manager_8cpp_source.html#l00032">releaseKey()</a>, and <a class="el" href="_input_manager_8cpp_source.html#l00015">update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_input_manager_8cpp_source.html#l00053">isKeyDown()</a>, <a class="el" href="_input_manager_8cpp_source.html#l00025">pressKey()</a>, <a class="el" href="_input_manager_8cpp_source.html#l00031">releaseKey()</a>, and <a class="el" href="_input_manager_8cpp_source.html#l00013">update()</a>.</p>
 
 </div>
 </div>
@@ -718,9 +798,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8hpp_source.html#l00090">90</a> of file <a class="el" href="_input_manager_8hpp_source.html">InputManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8hpp_source.html#l00099">99</a> of file <a class="el" href="_input_manager_8hpp_source.html">InputManager.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_input_manager_8cpp_source.html#l00075">getMousePosition()</a>, and <a class="el" href="_input_manager_8cpp_source.html#l00038">setMousePosition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_input_manager_8cpp_source.html#l00115">getMousePosition()</a>, and <a class="el" href="_input_manager_8cpp_source.html#l00037">setMousePosition()</a>.</p>
 
 </div>
 </div>
@@ -744,9 +824,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8hpp_source.html#l00091">91</a> of file <a class="el" href="_input_manager_8hpp_source.html">InputManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8hpp_source.html#l00100">100</a> of file <a class="el" href="_input_manager_8hpp_source.html">InputManager.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_input_manager_8cpp_source.html#l00080">getMouseScrollwheelPosition()</a>, <a class="el" href="_input_manager_8cpp_source.html#l00049">setMouseScrollwheelPosition()</a>, and <a class="el" href="_input_manager_8cpp_source.html#l00015">update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_input_manager_8cpp_source.html#l00120">getMouseScrollwheelPosition()</a>, <a class="el" href="_input_manager_8cpp_source.html#l00048">setMouseScrollwheelPosition()</a>, and <a class="el" href="_input_manager_8cpp_source.html#l00013">update()</a>.</p>
 
 </div>
 </div>
@@ -770,9 +850,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_input_manager_8hpp_source.html#l00089">89</a> of file <a class="el" href="_input_manager_8hpp_source.html">InputManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_input_manager_8hpp_source.html#l00098">98</a> of file <a class="el" href="_input_manager_8hpp_source.html">InputManager.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_input_manager_8cpp_source.html#l00015">update()</a>, and <a class="el" href="_input_manager_8cpp_source.html#l00085">wasKeyDown()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_input_manager_8cpp_source.html#l00013">update()</a>, and <a class="el" href="_input_manager_8cpp_source.html#l00125">wasKeyDown()</a>.</p>
 
 </div>
 </div>

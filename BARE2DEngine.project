@@ -6,7 +6,7 @@
     </Plugin>
   </Plugins>
   <VirtualDirectory Name="Documentation">
-    <File Name="docs/html/index.html"/>
+    <File Name="docs/index.html"/>
   </VirtualDirectory>
   <VirtualDirectory Name="Other Libraries">
     <VirtualDirectory Name="UTF8">

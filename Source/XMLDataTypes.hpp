@@ -30,7 +30,7 @@ enum class AttributeType
  */
 class AttributeBase
 {
-   public:
+  public:
     template <typename T> void setData(T data);
 
     template <typename T> T getData();
@@ -47,7 +47,7 @@ class AttributeBase
 
     virtual std::string getDataString() = 0;
 
-   protected:
+  protected:
     virtual void setDefaultData() = 0;
 };
 
@@ -55,7 +55,7 @@ template <typename T> class Attribute : public AttributeBase
 {
     friend class XMLData;
 
-   public:
+  public:
     Attribute()
     {}
     Attribute(std::string Name, AttributeType Type, T* data);
@@ -90,7 +90,7 @@ template <typename T> class Attribute : public AttributeBase
      */
     virtual std::string getDataString() override;
 
-   private:
+  private:
     T* m_data = nullptr;
 
     /**
@@ -102,12 +102,22 @@ template <typename T> class Attribute : public AttributeBase
 /**
  * @class XMLData
  * @brief Holds all the very basic information for XML data. Designed to be a base class from which a user can derive
- * custom data formats.
+ * custom data formats. To derive, please overload the default constructor and XMLData(std::string dataType, unsigned
+ * int ID)
  */
 class XMLData
 {
-   public:
+  public:
+    /**
+     * @brief Just adds attributes, using the protected function addAttribute(AttributeBase* attr) or its vector
+     * counterpart, as well as the nodeName variable.
+     */
     XMLData();
+    /**
+     * @brief Sets all data to a known XMLData's (Uses master map to retrieve this)
+     * @param dataType The name of the type to make this
+     * @param ID The ID of the data.
+     */
     XMLData(std::string dataType, unsigned int ID);
     XMLData(std::vector<AttributeBase*> attributes);
     XMLData(std::unordered_map<std::string, AttributeBase*> attributes);
@@ -141,7 +151,7 @@ class XMLData
     unsigned int id;
     std::string nodeName;
 
-   protected:
+  protected:
     /**
      * @brief Constructs and adds an attribute to the data.
      * @param name The name of the attribute. "name" and "id" are already in use, please don't break things like that.
@@ -164,6 +174,6 @@ class XMLData
 
     std::unordered_map<std::string, AttributeBase*> m_attributes;
 };
-}  // namespace BARE2D
+} // namespace BARE2D
 
 #include "XMLDataTypes.tcc"

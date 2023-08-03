@@ -4,6 +4,7 @@ var class_b_a_r_e2_d_1_1_input_manager =
     [ "~InputManager", "class_b_a_r_e2_d_1_1_input_manager.html#ab0797f47aa7a7f5fbbb427e0cef57196", null ],
     [ "getMousePosition", "class_b_a_r_e2_d_1_1_input_manager.html#a492c88230777ab626d6d1778b4ee0e02", null ],
     [ "getMouseScrollwheelPosition", "class_b_a_r_e2_d_1_1_input_manager.html#a62da30eaa80d5d4f8d9fe32690026a94", null ],
+    [ "getPressedCharacter", "class_b_a_r_e2_d_1_1_input_manager.html#aba3e9c456823b83de41816d9c7b7ab30", null ],
     [ "isKeyDown", "class_b_a_r_e2_d_1_1_input_manager.html#aa0cae9c2bef867659510a5873d58f2ad", null ],
     [ "isKeyPressed", "class_b_a_r_e2_d_1_1_input_manager.html#abe9f1c4106ef768213f17f974f35c3b9", null ],
     [ "pressKey", "class_b_a_r_e2_d_1_1_input_manager.html#a3a1cea0b15ba38865bbf446e2ef3fc1d", null ],

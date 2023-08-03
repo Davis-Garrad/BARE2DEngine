@@ -21,6 +21,7 @@ var class_b_a_r_e2_d_1_1_x_m_l_data_manager =
     [ "readValue", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#afd322778b8321b5e030784fa8d4168cc", null ],
     [ "readXMLData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a85100a24e685d21a8f2af8f87def391a", null ],
     [ "saveXML", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#af9f6c07f0c2cecffd0ffde59174d4621", null ],
+    [ "setData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#aea6503f560af0b02371350176cf5a231", null ],
     [ "writeXMLData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a64420cd9463430e186035296d982c553", null ],
     [ "XMLData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a5f37fe695198fde75eef3c1593991789", null ],
     [ "m_dataTypingFunctions", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a3e05e9442cc78303a489fb87ce201abc", null ],
