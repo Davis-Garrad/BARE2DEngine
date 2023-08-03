@@ -1,0 +1,14 @@
+digraph "BARE2D::ScreenList::moveToPreviousScreen"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="BARE2D::ScreenList\l::moveToPreviousScreen",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Moves to the previous screen. Similar to moveToNextScreen, in that it makes sure everything's good!"];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="BARE2D::Screen::onEntry",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_screen.html#a4c427b38cca9a1fc2cad147e9e2a1a5e",tooltip="This is pretty close to the init function. It is called every time the screen is entered."];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="BARE2D::Screen::onExit",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_screen.html#a34a82dc673746b5feca4debd4d22478b",tooltip="This is close to the destroy function, but is only called when the screen is exited,..."];
+}

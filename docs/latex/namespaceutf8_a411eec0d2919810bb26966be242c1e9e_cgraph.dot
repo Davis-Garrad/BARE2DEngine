@@ -1,0 +1,36 @@
+digraph "utf8::advance"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="utf8::advance",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="utf8::next",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceutf8.html#afc093dfde66a6f52cb4a5caefe0e580d",tooltip=" "];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="utf8::internal::validate_next",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceutf8_1_1internal.html#abe95547575fcc81911e381df03f8ebfe",tooltip=" "];
+  Node3 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="utf8::internal::get\l_sequence_1",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceutf8_1_1internal.html#a6e5df73716136aec55e8fcf3309038b6",tooltip="get_sequence_x functions decode utf-8 sequences of the length x"];
+  Node4 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="utf8::internal::mask8",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceutf8_1_1internal.html#adf6e0469e279b9562aa461b4c3c1e7e4",tooltip=" "];
+  Node3 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="utf8::internal::get\l_sequence_2",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceutf8_1_1internal.html#a9d641b9546be985f9f0fd4955ac42a24",tooltip=" "];
+  Node6 -> Node5 [color="steelblue1",style="solid"];
+  Node3 -> Node7 [color="steelblue1",style="solid"];
+  Node7 [label="utf8::internal::get\l_sequence_3",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceutf8_1_1internal.html#ac1809a1fb3fa6983d64a0d3a39646008",tooltip=" "];
+  Node7 -> Node5 [color="steelblue1",style="solid"];
+  Node3 -> Node8 [color="steelblue1",style="solid"];
+  Node8 [label="utf8::internal::get\l_sequence_4",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceutf8_1_1internal.html#ad1958e7c6746ba6b1fbb0d81b88b346c",tooltip=" "];
+  Node8 -> Node5 [color="steelblue1",style="solid"];
+  Node3 -> Node9 [color="steelblue1",style="solid"];
+  Node9 [label="utf8::internal::is\l_code_point_valid",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceutf8_1_1internal.html#a97b553137aaeda6e8ca6f8d46f78fd79",tooltip=" "];
+  Node9 -> Node10 [color="steelblue1",style="solid"];
+  Node10 [label="utf8::internal::is\l_surrogate",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceutf8_1_1internal.html#a31a185a6bc8b9bf454191a8a95a93595",tooltip=" "];
+  Node3 -> Node11 [color="steelblue1",style="solid"];
+  Node11 [label="utf8::internal::is\l_overlong_sequence",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceutf8_1_1internal.html#a3160f6f24dff465f64f83cb0e66995c6",tooltip=" "];
+  Node3 -> Node12 [color="steelblue1",style="solid"];
+  Node12 [label="utf8::internal::sequence\l_length",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceutf8_1_1internal.html#adb347cc81d32ebb0fd22d849f7bff5ea",tooltip=" "];
+  Node12 -> Node5 [color="steelblue1",style="solid"];
+}

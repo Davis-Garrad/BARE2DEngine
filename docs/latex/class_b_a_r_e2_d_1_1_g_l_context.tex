@@ -1,0 +1,217 @@
+\hypertarget{class_b_a_r_e2_d_1_1_g_l_context}{}\doxysection{BARE2D\+::GLContext Class Reference}
+\label{class_b_a_r_e2_d_1_1_g_l_context}\index{BARE2D::GLContext@{BARE2D::GLContext}}
+
+
+{\ttfamily \#include $<$GLContext\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for BARE2D\+::GLContext\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a62f46a348cc1f4e91fe3ab48c9a5cc1b}{GLContext}} ()
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a39a7d299b1c77ea64d9f84d249daaa7e}{$\sim$\+GLContext}} ()
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a529bb80b0bd7bbf86f10be7c30be514c}{set\+Active\+Texture}} (GLenum texture)
+\begin{DoxyCompactList}\small\item\em Sets the active texture \char`\"{}slot\char`\"{}. This can be GL\+\_\+\+TEXTURE0 to GL\+\_\+\+TEXTURE8 (I think. Check the literature) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{bind\+Texture}} (GLenum target, GLenum texture)
+\begin{DoxyCompactList}\small\item\em Binds a texture to target in the currently active texture slot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a99f228aa049e960dace1970e09b24246}{unbind\+Texture}} (GLenum target, GLenum textureslot)
+\begin{DoxyCompactList}\small\item\em Unbinds a texture. \end{DoxyCompactList}\item 
+GLuint \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_acfa0e3577e1f5eedc2fee994ed6bfb35}{get\+Bound\+Texture}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+GLenum \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a67008edb65b567eddf3b3235495237e0}{m\+\_\+active\+Texture}} = GL\+\_\+\+TEXTURE0
+\item 
+GLuint $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a8c53ce3d7e76c5de991c4e4488f86647}{m\+\_\+bound\+Texture\+IDs}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_g_l_context_manager_8hpp_source_l00007}{7}} of file \mbox{\hyperlink{_g_l_context_manager_8hpp_source}{GLContext\+Manager.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_g_l_context_a62f46a348cc1f4e91fe3ab48c9a5cc1b}\label{class_b_a_r_e2_d_1_1_g_l_context_a62f46a348cc1f4e91fe3ab48c9a5cc1b}} 
+\index{BARE2D::GLContext@{BARE2D::GLContext}!GLContext@{GLContext}}
+\index{GLContext@{GLContext}!BARE2D::GLContext@{BARE2D::GLContext}}
+\doxysubsubsection{\texorpdfstring{GLContext()}{GLContext()}}
+{\footnotesize\ttfamily BARE2\+D\+::\+GLContext\+::\+GLContext (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_g_l_context_manager_8cpp_source}{GLContext\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_g_l_context_manager_8hpp_source_l00038}{m\+\_\+bound\+Texture\+IDs}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_g_l_context_a39a7d299b1c77ea64d9f84d249daaa7e}\label{class_b_a_r_e2_d_1_1_g_l_context_a39a7d299b1c77ea64d9f84d249daaa7e}} 
+\index{BARE2D::GLContext@{BARE2D::GLContext}!````~GLContext@{$\sim$GLContext}}
+\index{````~GLContext@{$\sim$GLContext}!BARE2D::GLContext@{BARE2D::GLContext}}
+\doxysubsubsection{\texorpdfstring{$\sim$GLContext()}{~GLContext()}}
+{\footnotesize\ttfamily BARE2\+D\+::\+GLContext\+::$\sim$\+GLContext (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_g_l_context_manager_8cpp_source}{GLContext\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_g_l_context_manager_8hpp_source_l00038}{m\+\_\+bound\+Texture\+IDs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}\label{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}} 
+\index{BARE2D::GLContext@{BARE2D::GLContext}!bindTexture@{bindTexture}}
+\index{bindTexture@{bindTexture}!BARE2D::GLContext@{BARE2D::GLContext}}
+\doxysubsubsection{\texorpdfstring{bindTexture()}{bindTexture()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+GLContext\+::bind\+Texture (\begin{DoxyParamCaption}\item[{GLenum}]{target,  }\item[{GLenum}]{texture }\end{DoxyParamCaption})}
+
+
+
+Binds a texture to target in the currently active texture slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The target to bind to \\
+\hline
+{\em texture} & The id of a texture. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{_g_l_context_manager_8cpp_source}{GLContext\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_g_l_context_manager_8hpp_source_l00035}{m\+\_\+active\+Texture}}, and \mbox{\hyperlink{_g_l_context_manager_8hpp_source_l00038}{m\+\_\+bound\+Texture\+IDs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00363}{BARE2\+D\+::\+FBORenderer\+::bind()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00112}{BARE2\+D\+::\+Resource\+Manager\+::create\+Mutable\+Texture()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00267}{BARE2\+D\+::\+FBORenderer\+::create\+Textures()}}, \mbox{\hyperlink{_textureless_renderer_8cpp_source_l00020}{BARE2\+D\+::\+Textureless\+Renderer\+::init()}}, \mbox{\hyperlink{_font_8cpp_source_l00030}{BARE2\+D\+::\+Font\+::init()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00039}{BARE2\+D\+::\+Resource\+Manager\+::load\+Texture()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00172}{BARE2\+D\+::\+FBORenderer\+::pre\+Render()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00048}{BARE2\+D\+::\+Renderer\+::render()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00035}{BARE2\+D\+::\+Bumpy\+Renderer\+::render()}}, \mbox{\hyperlink{_mutable_texture_8cpp_source_l00013}{BARE2\+D\+::\+Mutable\+Texture\+::set\+Data()}}, and \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00032}{unbind\+Texture()}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_g_l_context_acfa0e3577e1f5eedc2fee994ed6bfb35}\label{class_b_a_r_e2_d_1_1_g_l_context_acfa0e3577e1f5eedc2fee994ed6bfb35}} 
+\index{BARE2D::GLContext@{BARE2D::GLContext}!getBoundTexture@{getBoundTexture}}
+\index{getBoundTexture@{getBoundTexture}!BARE2D::GLContext@{BARE2D::GLContext}}
+\doxysubsubsection{\texorpdfstring{getBoundTexture()}{getBoundTexture()}}
+{\footnotesize\ttfamily GLuint BARE2\+D\+::\+GLContext\+::get\+Bound\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{_g_l_context_manager_8cpp_source}{GLContext\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_g_l_context_manager_8hpp_source_l00035}{m\+\_\+active\+Texture}}, and \mbox{\hyperlink{_g_l_context_manager_8hpp_source_l00038}{m\+\_\+bound\+Texture\+IDs}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_g_l_context_a529bb80b0bd7bbf86f10be7c30be514c}\label{class_b_a_r_e2_d_1_1_g_l_context_a529bb80b0bd7bbf86f10be7c30be514c}} 
+\index{BARE2D::GLContext@{BARE2D::GLContext}!setActiveTexture@{setActiveTexture}}
+\index{setActiveTexture@{setActiveTexture}!BARE2D::GLContext@{BARE2D::GLContext}}
+\doxysubsubsection{\texorpdfstring{setActiveTexture()}{setActiveTexture()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+GLContext\+::set\+Active\+Texture (\begin{DoxyParamCaption}\item[{GLenum}]{texture }\end{DoxyParamCaption})}
+
+
+
+Sets the active texture \char`\"{}slot\char`\"{}. This can be GL\+\_\+\+TEXTURE0 to GL\+\_\+\+TEXTURE8 (I think. Check the literature) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & The texture slot to tell Open\+GL is \char`\"{}active\char`\"{} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_g_l_context_manager_8cpp_source}{GLContext\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_g_l_context_manager_8hpp_source_l00035}{m\+\_\+active\+Texture}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00363}{BARE2\+D\+::\+FBORenderer\+::bind()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00267}{BARE2\+D\+::\+FBORenderer\+::create\+Textures()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00172}{BARE2\+D\+::\+FBORenderer\+::pre\+Render()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00048}{BARE2\+D\+::\+Renderer\+::render()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00035}{BARE2\+D\+::\+Bumpy\+Renderer\+::render()}}, \mbox{\hyperlink{_debug_renderer_8cpp_source_l00196}{BARE2\+D\+::\+Debug\+Renderer\+::render()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00232}{BARE2\+D\+::\+FBORenderer\+::render()}}, and \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00032}{unbind\+Texture()}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_g_l_context_a99f228aa049e960dace1970e09b24246}\label{class_b_a_r_e2_d_1_1_g_l_context_a99f228aa049e960dace1970e09b24246}} 
+\index{BARE2D::GLContext@{BARE2D::GLContext}!unbindTexture@{unbindTexture}}
+\index{unbindTexture@{unbindTexture}!BARE2D::GLContext@{BARE2D::GLContext}}
+\doxysubsubsection{\texorpdfstring{unbindTexture()}{unbindTexture()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+GLContext\+::unbind\+Texture (\begin{DoxyParamCaption}\item[{GLenum}]{target,  }\item[{GLenum}]{textureslot }\end{DoxyParamCaption})}
+
+
+
+Unbinds a texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The target (GL\+\_\+\+TEXTURE\+\_\+2D generally) \\
+\hline
+{\em textureslot} & The texture to be unbound (GL\+\_\+\+TEXTURE0-\/8) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_g_l_context_manager_8cpp_source}{GLContext\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{bind\+Texture()}}, and \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{set\+Active\+Texture()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00375}{BARE2\+D\+::\+FBORenderer\+::unbind()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_g_l_context_a67008edb65b567eddf3b3235495237e0}\label{class_b_a_r_e2_d_1_1_g_l_context_a67008edb65b567eddf3b3235495237e0}} 
+\index{BARE2D::GLContext@{BARE2D::GLContext}!m\_activeTexture@{m\_activeTexture}}
+\index{m\_activeTexture@{m\_activeTexture}!BARE2D::GLContext@{BARE2D::GLContext}}
+\doxysubsubsection{\texorpdfstring{m\_activeTexture}{m\_activeTexture}}
+{\footnotesize\ttfamily GLenum BARE2\+D\+::\+GLContext\+::m\+\_\+active\+Texture = GL\+\_\+\+TEXTURE0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_g_l_context_manager_8hpp_source_l00035}{35}} of file \mbox{\hyperlink{_g_l_context_manager_8hpp_source}{GLContext\+Manager.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{bind\+Texture()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00037}{get\+Bound\+Texture()}}, and \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{set\+Active\+Texture()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_g_l_context_a8c53ce3d7e76c5de991c4e4488f86647}\label{class_b_a_r_e2_d_1_1_g_l_context_a8c53ce3d7e76c5de991c4e4488f86647}} 
+\index{BARE2D::GLContext@{BARE2D::GLContext}!m\_boundTextureIDs@{m\_boundTextureIDs}}
+\index{m\_boundTextureIDs@{m\_boundTextureIDs}!BARE2D::GLContext@{BARE2D::GLContext}}
+\doxysubsubsection{\texorpdfstring{m\_boundTextureIDs}{m\_boundTextureIDs}}
+{\footnotesize\ttfamily GLuint$\ast$ BARE2\+D\+::\+GLContext\+::m\+\_\+bound\+Texture\+IDs = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_g_l_context_manager_8hpp_source_l00038}{38}} of file \mbox{\hyperlink{_g_l_context_manager_8hpp_source}{GLContext\+Manager.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{bind\+Texture()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00037}{get\+Bound\+Texture()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00005}{GLContext()}}, and \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00009}{$\sim$\+GLContext()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\mbox{\hyperlink{_g_l_context_manager_8hpp}{GLContext\+Manager.\+hpp}}\item 
+Source/\mbox{\hyperlink{_g_l_context_manager_8cpp}{GLContext\+Manager.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,462 @@
+\hypertarget{_x_m_l_data_types_8cpp_source}{}\doxysection{XMLData\+Types.\+cpp}
+\label{_x_m_l_data_types_8cpp_source}\index{Source/XMLDataTypes.cpp@{Source/XMLDataTypes.cpp}}
+\mbox{\hyperlink{_x_m_l_data_types_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_x_m_l_data_types_8hpp}{XMLDataTypes.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_logger_8hpp}{Logger.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_resource_manager_8hpp}{ResourceManager.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_x_m_l_data_manager_8hpp}{XMLDataManager.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00008}00008 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00010}00010 \textcolor{comment}{// AttributeBase definitions}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00011}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{00011}} \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{AttributeBase::setData}}(T data)}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00012}00012 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00013}00013     \textcolor{comment}{// template acrobatics, baby!}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00014}00014     \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<T>}}*\textcolor{keyword}{>}(\textcolor{keyword}{this})-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00015}00015 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00017}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a670445dd8920546d37a49d8b4ff71a26}{00017}} \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> T \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a670445dd8920546d37a49d8b4ff71a26}{AttributeBase::getData}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00018}00018 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00019}00019     \textcolor{comment}{// more acrobatics}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00020}00020     \textcolor{keywordflow}{return} \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<T>}}\&\textcolor{keyword}{>}(*this).\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a03d5bba88eb30e3b92c1f24247dffdac}{getData}}();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00021}00021 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00023}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{00023}} \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{AttributeBase::swapDataPointer}}(T* newPtr)}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00024}00024 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00025}00025     \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<T>}}*\textcolor{keyword}{>}(\textcolor{keyword}{this})-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a663ece402bdf45a2af91d7c15e893cae}{swapDataPointer}}(newPtr);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00026}00026 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00028}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a1f46e2e756959cc6c9220cccfd598e44}{00028}} \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> T* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a1f46e2e756959cc6c9220cccfd598e44}{AttributeBase::getDataPointer}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00029}00029 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00030}00030     \textcolor{comment}{// now, template aerobics.}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00031}00031     \textcolor{keywordflow}{return} \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<T>}}\&\textcolor{keyword}{>}(*this).\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a2eb7e081b3c98be11eb6aee0e2b7328e}{getDataPointer}}();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00032}00032 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00034}00034 \textcolor{comment}{// getDataString specializations}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00035}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a42cd3ab2b585e48b5bd43869c9bbce68}{00035}} \textcolor{keyword}{template} <> std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{Attribute<std::string>::getDataString}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00036}00036 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00037}00037     \textcolor{keywordflow}{return} *m\_data;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00038}00038 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00039}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_aaacf4b24ca78f7fba5ff4c5ae5e7c59a}{00039}} \textcolor{keyword}{template} <> std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{Attribute<unsigned int>::getDataString}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00040}00040 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00041}00041     \textcolor{keywordflow}{return} std::to\_string(*m\_data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00042}00042 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00043}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a68a4a83585e2aa880e08975adfac4f6b}{00043}} \textcolor{keyword}{template} <> std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{Attribute<int>::getDataString}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00044}00044 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00045}00045     \textcolor{keywordflow}{return} std::to\_string(*m\_data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00046}00046 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00047}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_acce41a4f9f590fafffe9b840edca1d4f}{00047}} \textcolor{keyword}{template} <> std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{Attribute<float>::getDataString}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00048}00048 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00049}00049     \textcolor{keywordflow}{return} std::to\_string(*m\_data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00050}00050 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00051}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0d040289175c22d29446366ce7da8d2f}{00051}} \textcolor{keyword}{template} <> std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{Attribute<bool>::getDataString}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00052}00052 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00053}00053     \textcolor{keywordflow}{return} std::to\_string(*m\_data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00054}00054 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00055}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a3ce085cad45df633c927dd93395ee0ab}{00055}} \textcolor{keyword}{template} <> std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{Attribute<glm::vec2>::getDataString}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00056}00056 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00057}00057     \textcolor{comment}{// "{}\{x\}\{y\}"{}}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00058}00058     \textcolor{keywordflow}{return} std::string(\textcolor{stringliteral}{"{}\{"{}} + std::to\_string(m\_data-\/>x) + \textcolor{stringliteral}{"{},"{}} + std::to\_string(m\_data-\/>y) + \textcolor{stringliteral}{"{}\}"{}});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00059}00059 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00060}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a6ca4a0e861033cd2a733d004bb0f5e2b}{00060}} \textcolor{keyword}{template} <> std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<std::vector<std::string>}}>::getDataString()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00061}00061 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00062}00062     std::string ret = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00063}00063     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} str : *m\_data)}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00064}00064     \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00065}00065         ret += \textcolor{stringliteral}{"{}\{"{}} + str + \textcolor{stringliteral}{"{}\}"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00066}00066     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00067}00067     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00068}00068 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00069}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a642ff449085eafb67aa0f00fa837b239}{00069}} \textcolor{keyword}{template} <> std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<std::vector<unsigned int>}}>::getDataString()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00070}00070 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00071}00071     std::string ret = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00072}00072     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} e : *m\_data)}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00073}00073     \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00074}00074         ret += \textcolor{stringliteral}{"{}\{"{}} + std::to\_string(e) + \textcolor{stringliteral}{"{}\}"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00075}00075     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00076}00076     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00077}00077 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00078}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_affe851fd7e6e73a83d7b48aa3670c5f9}{00078}} \textcolor{keyword}{template} <> std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<std::vector<int>}}>::getDataString()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00079}00079 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00080}00080     std::string ret = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00081}00081     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} e : *m\_data)}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00082}00082     \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00083}00083         ret += \textcolor{stringliteral}{"{}\{"{}} + std::to\_string(e) + \textcolor{stringliteral}{"{}\}"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00084}00084     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00085}00085     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00086}00086 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00087}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a22bdfbb61968291858e4a98f808cc158}{00087}} \textcolor{keyword}{template} <> std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<std::vector<float>}}>::getDataString()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00088}00088 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00089}00089     std::string ret = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00090}00090     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} e : *m\_data)}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00091}00091     \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00092}00092         ret += \textcolor{stringliteral}{"{}\{"{}} + std::to\_string(e) + \textcolor{stringliteral}{"{}\}"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00093}00093     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00094}00094     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00095}00095 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00096}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a6df3ccb35875cfa43ef9e6564f5c6b23}{00096}} \textcolor{keyword}{template} <> std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<std::vector<bool>}}>::getDataString()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00097}00097 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00098}00098     std::string ret = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00099}00099     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} e : *m\_data)}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00100}00100     \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00101}00101         ret += \textcolor{stringliteral}{"{}\{"{}} + std::to\_string(e) + \textcolor{stringliteral}{"{}\}"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00102}00102     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00103}00103     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00104}00104 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00105}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a305a948679c1b7f175df31285c95a915}{00105}} \textcolor{keyword}{template} <> std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<std::vector<glm::vec2>}}>::getDataString()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00106}00106 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00107}00107     std::string ret = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00108}00108     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} e : *m\_data)}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00109}00109     \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00110}00110         ret += \textcolor{stringliteral}{"{}\{"{}} + std::to\_string(e.x) + \textcolor{stringliteral}{"{},"{}} + std::to\_string(e.y) + \textcolor{stringliteral}{"{}\},"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00111}00111     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00112}00112     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00113}00113 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00114}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a37a4822f7c80dca43416c9f3993ca536}{00114}} \textcolor{keyword}{template} <> std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{Attribute<LuaScript>::getDataString}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00115}00115 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00116}00116     \textcolor{keywordflow}{return} m\_data-\/>m\_path;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00117}00117 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00118}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a4f8f34788b914d504b07023dfc537545}{00118}} \textcolor{keyword}{template} <> std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{Attribute<Texture>::getDataString}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00119}00119 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00120}00120     \textcolor{keywordflow}{return} m\_data-\/>filepath;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00121}00121 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00123}00123 \textcolor{comment}{// SetDefaultData}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00124}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a6346e0148e13ffe6769adc20f8283cb5}{00124}} \textcolor{keyword}{template} <> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{Attribute<std::string>::setDefaultData}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00125}00125 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00126}00126     setData(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00127}00127 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00128}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ae25c49d572b27cc525e5c9aa587ecf6f}{00128}} \textcolor{keyword}{template} <> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{Attribute<unsigned int>::setDefaultData}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00129}00129 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00130}00130     setData((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})-\/1);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00131}00131 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00132}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a289b5047865d77dbe4c65411d7890da8}{00132}} \textcolor{keyword}{template} <> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{Attribute<int>::setDefaultData}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00133}00133 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00134}00134     setData(-\/1);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00135}00135 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00136}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a14fda8147ef2f8b37abf0b9d1eb236d9}{00136}} \textcolor{keyword}{template} <> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{Attribute<float>::setDefaultData}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00137}00137 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00138}00138     setData(0.0f);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00139}00139 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00140}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a1ec68e76fd2ba0bb97a40331eb900607}{00140}} \textcolor{keyword}{template} <> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{Attribute<bool>::setDefaultData}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00141}00141 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00142}00142     setData(0);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00143}00143 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00144}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ab2c81d4eb0d536091273354cb87ac383}{00144}} \textcolor{keyword}{template} <> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{Attribute<glm::vec2>::setDefaultData}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00145}00145 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00146}00146     setData(glm::vec2(0.0f, 0.0f));}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00147}00147 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00148}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_affdfa1d477a81f4341c9ac813cea9b3d}{00148}} \textcolor{keyword}{template} <> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<std::vector<std::string>}}>::setDefaultData()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00149}00149 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00150}00150     setData(std::vector<std::string>\{\});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00151}00151 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00152}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a6dd92252a50a65b167e6570a4b2fb209}{00152}} \textcolor{keyword}{template} <> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<std::vector<unsigned int>}}>::setDefaultData()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00153}00153 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00154}00154     setData(std::vector<unsigned int>\{\});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00155}00155 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00156}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a4e876291c1966da03433d4253a9dbff5}{00156}} \textcolor{keyword}{template} <> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<std::vector<int>}}>::setDefaultData()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00157}00157 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00158}00158     setData(std::vector<int>\{\});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00159}00159 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00160}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a5d8923ae4d8b3295be3349cef56d4461}{00160}} \textcolor{keyword}{template} <> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<std::vector<float>}}>::setDefaultData()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00161}00161 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00162}00162     setData(std::vector<float>\{\});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00163}00163 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00164}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_adfbde79f49af2395aa454e395fc38583}{00164}} \textcolor{keyword}{template} <> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<std::vector<bool>}}>::setDefaultData()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00165}00165 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00166}00166     setData(std::vector<bool>\{\});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00167}00167 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00168}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a0e3a5696e5efd023d2bb67bf18260d44}{00168}} \textcolor{keyword}{template} <> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute<std::vector<glm::vec2>}}>::setDefaultData()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00169}00169 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00170}00170     setData(std::vector<glm::vec2>\{\});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00171}00171 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00172}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a70bacd0eef08d9faf2c1fdb77eac5e7b}{00172}} \textcolor{keyword}{template} <> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{Attribute<LuaScript>::setDefaultData}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00173}00173 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00174}00174     setData(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}());}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00175}00175 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00176}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a8b427421d8ddb4dcdcd80756ad6a713e}{00176}} \textcolor{keyword}{template} <> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{Attribute<Texture>::setDefaultData}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00177}00177 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00178}00178     \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}} tex;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00179}00179     tex.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a5180877b8d9b7ccc44a50418fc925511}{filepath}} = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00180}00180     setData(tex);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00181}00181 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00183}00183 \textcolor{comment}{// Now that all the templates have been specialized, let's do some real work}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00184}00184 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00185}00185 \textcolor{comment}{// XMLData}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00186}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{00186}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{XMLData::XMLData}}() : name(\textcolor{stringliteral}{"{}UNDEFINED"{}}), id(0)}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00187}00187 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00188}00188     \textcolor{comment}{// All data have a typename and id}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00189}00189     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{addAttribute}}(\textcolor{stringliteral}{"{}name"{}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}{AttributeType::STRING}}, \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00190}00190     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{addAttribute}}(\textcolor{stringliteral}{"{}id"{}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}{AttributeType::UNSIGNED\_INT}}, \&\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00191}00191 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00192}00192 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00193}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aca53e7158465dd39509c0046817fa426}{00193}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{XMLData::XMLData}}(std::string dataType, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ID)}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00194}00194 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00195}00195     \textcolor{comment}{// Also set the ID and get attributes}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00196}00196     *\textcolor{keyword}{this} = XMLDataManager::getData<XMLData>(dataType, ID);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00197}00197 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00198}00198     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}[\textcolor{stringliteral}{"{}name"{}}]-\/>swapDataPointer(\&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00199}00199     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}[\textcolor{stringliteral}{"{}id"{}}]-\/>swapDataPointer(\&\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00200}00200 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00201}00201 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00202}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0fdadc0bef7ce4b52bed23ed5d270333}{00202}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{XMLData::XMLData}}(std::vector<AttributeBase*> attributes) : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00203}00203 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00204}00204     \textcolor{comment}{// All data have a typename and id}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00205}00205     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{addAttribute}}(\textcolor{stringliteral}{"{}name"{}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}{AttributeType::STRING}}, \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00206}00206     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{addAttribute}}(\textcolor{stringliteral}{"{}id"{}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}{AttributeType::UNSIGNED\_INT}}, \&\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00207}00207 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00208}00208     \textcolor{comment}{// Add all of the extra attributes}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00209}00209     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6}{addAttributes}}(attributes);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00210}00210 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00211}00211 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00212}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_aae7ce8bc410d7f962b10f6298ee9a24b}{00212}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a0e1d536a1efe35025dcb05bc4236e072}{XMLData::XMLData}}(std::unordered\_map<std::string, AttributeBase*> attributes) : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00213}00213 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00214}00214     \textcolor{comment}{// Purely for copy operations}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00215}00215     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}} = attributes;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00216}00216 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00217}00217 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00218}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_acf63925319a7b15a53989db54702ea60}{00218}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_acf63925319a7b15a53989db54702ea60}{XMLData::read}}(rapidxml::xml\_node<>* node)}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00219}00219 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00220}00220     \textcolor{comment}{// The node is the node of the data, so we can read everything from it right away, no navigation}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00221}00221     \textcolor{comment}{// First, find the id}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00222}00222     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} readID = (\textcolor{keywordtype}{unsigned} int)std::stoi(node-\/>first\_attribute(\textcolor{stringliteral}{"{}id"{}})-\/>value());}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00223}00223     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}[\textcolor{stringliteral}{"{}id"{}}]-\/>setData(readID);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00224}00224     \textcolor{keywordtype}{id} = readID;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00225}00225     \textcolor{comment}{// Now, the name -\/ returns a c\_str, so we need to cast to std::string first}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00226}00226     std::string readName = std::string(node-\/>first\_attribute(\textcolor{stringliteral}{"{}name"{}})-\/>value());}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00227}00227     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}[\textcolor{stringliteral}{"{}name"{}}]-\/>setData(readName);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00228}00228     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}} = readName;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00229}00229 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00230}00230     \textcolor{comment}{// Now read every attribute -\/ we read by reference so we can change the values that are stored in the class!}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00231}00231     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& attr : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}})}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00232}00232     \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00233}00233         \textcolor{comment}{// Get some simple values}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00234}00234         std::string attrName = attr.first;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00235}00235         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}* attrValue = attr.second;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00236}00236 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00237}00237         \textcolor{comment}{// Make sure they're not ones we already loaded (name \& id)}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00238}00238         \textcolor{keywordflow}{if}(attrName == \textcolor{stringliteral}{"{}name"{}} || attrName == \textcolor{stringliteral}{"{}id"{}})}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00239}00239         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00240}00240 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00241}00241         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_af9e46266b594528fe87ce3e9264033ec}{Logger::getInstance}}()-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_logger_a76c97e021ee75d17defbc794f68a965b}{log}}(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)tReading attribute "{}} + attrName);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00242}00242 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00243}00243         \textcolor{comment}{// Now, get the value based on the type of attribute}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00244}00244         \textcolor{keywordflow}{switch}(attrValue-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_ad0f728ccf154d324fa0353b0a6550896}{type}})}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00245}00245         \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00246}00246         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949}{AttributeType::STRING}}:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00247}00247             \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00248}00248             std::string data = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00249}00249             \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00250}00250             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{XMLDataManager::readValue}}(node, attrName, data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00251}00251             \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00252}00252             attrValue-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00253}00253             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00254}00254             \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00255}00255         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5}{AttributeType::UNSIGNED\_INT}}:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00256}00256             \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00257}00257             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} data = (\textcolor{keywordtype}{unsigned} int)-\/1;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00258}00258             \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00259}00259             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{XMLDataManager::readValue}}(node, attrName, data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00260}00260             \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00261}00261             attrValue-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00262}00262             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00263}00263             \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00264}00264         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a358c00737f6938bb5efb0674c7521b54}{AttributeType::VECTOR\_UNSIGNED\_INT}}:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00265}00265             \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00266}00266             std::vector<unsigned int> data = \{\};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00267}00267             \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00268}00268             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{XMLDataManager::readValue}}(node, attrName, data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00269}00269             \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00270}00270             attrValue-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00271}00271             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00272}00272             \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00273}00273         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a53f93baa3057821107c750323892fa92}{AttributeType::INT}}:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00274}00274             \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00275}00275             \textcolor{keywordtype}{int} data = 0;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00276}00276             \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00277}00277             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{XMLDataManager::readValue}}(node, attrName, data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00278}00278             \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00279}00279             attrValue-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00280}00280             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00281}00281             \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00282}00282         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ae738c26bf4ce1037fa81b039a915cbf6}{AttributeType::FLOAT}}:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00283}00283             \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00284}00284             \textcolor{keywordtype}{float} data = 0.0f;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00285}00285             \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00286}00286             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{XMLDataManager::readValue}}(node, attrName, data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00287}00287             \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00288}00288             attrValue-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00289}00289             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00290}00290             \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00291}00291         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a38bbbd837be5914a8667d76948e1537b}{AttributeType::VECTOR\_FLOAT}}:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00292}00292             \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00293}00293             std::vector<float> data = \{\};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00294}00294             \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00295}00295             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{XMLDataManager::readValue}}(node, attrName, data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00296}00296             \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00297}00297             attrValue-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00298}00298             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00299}00299             \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00300}00300         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02aa97b2c144243b2b9d2c593ec268b62f5}{AttributeType::BOOL}}:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00301}00301             \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00302}00302             \textcolor{keywordtype}{bool} data = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00303}00303             \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00304}00304             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{XMLDataManager::readValue}}(node, attrName, data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00305}00305             \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00306}00306             attrValue-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00307}00307             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00308}00308             \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00309}00309         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02ab916a458e01349ca08eb2a51f541e424}{AttributeType::VECTOR\_BOOL}}:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00310}00310             \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00311}00311             std::vector<bool> data = \{\};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00312}00312             \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00313}00313             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{XMLDataManager::readValue}}(node, attrName, data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00314}00314             \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00315}00315             attrValue-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00316}00316             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00317}00317             \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00318}00318         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a9bd71a29dd44a2e0252b56ce5c6d251a}{AttributeType::VEC2}}:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00319}00319             \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00320}00320             glm::vec2 data(0.0f);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00321}00321             \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00322}00322             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{XMLDataManager::readValue}}(node, attrName, data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00323}00323             \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00324}00324             attrValue-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00325}00325             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00326}00326             \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00327}00327         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a885431a8d6e8227dbbbe0da37138b4e5}{AttributeType::VECTOR\_VEC2}}:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00328}00328             \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00329}00329             std::vector<glm::vec2> data = \{\};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00330}00330             \textcolor{comment}{// Use the templated function to get the string interpretation}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00331}00331             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{XMLDataManager::readValue}}(node, attrName, data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00332}00332             \textcolor{comment}{// Set the data now}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00333}00333             attrValue-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00334}00334             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00335}00335             \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00336}00336         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02abc283a640f11da0ce7f95dd103c0b38f}{AttributeType::SCRIPT}}:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00337}00337             \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00338}00338             std::string path = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00339}00339             \textcolor{comment}{// Get the string interpretation}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00340}00340             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{XMLDataManager::readValue}}(node, attrName, path);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00341}00341             \textcolor{comment}{// Load the script.}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00342}00342             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}} scr = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_aa40f3016ed65df8b01ce2608349ee61b}{ResourceManager::loadScript}}(path);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00343}00343             \textcolor{comment}{// Set the data.}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00344}00344             attrValue-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(scr);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00345}00345             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00346}00346             \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00347}00347         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02a3f92f542bd9ec48f912b9350e22736ac}{AttributeType::TEXTURE}}:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00348}00348             \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00349}00349             std::string path = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00350}00350             \textcolor{comment}{// Get the path}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00351}00351             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{XMLDataManager::readValue}}(node, attrName, path);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00352}00352 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00353}00353             \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}} tex;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00354}00354 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00355}00355             \textcolor{keywordflow}{if}(path == \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00356}00356                 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00357}00357                 \textcolor{comment}{// The data isn't available -\/ default to an empty texture}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00358}00358             \} \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00359}00359                 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00360}00360                 \textcolor{comment}{// Just load it!}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00361}00361                 tex = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager_af4bb03a60f5fdb3ec94064e17c84e823}{ResourceManager::loadTexture}}(path);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00362}00362                 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00363}00363             \textcolor{comment}{// Set the data}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00364}00364             attrValue-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a47d4a1d33ea605d1bba54c6dd391a735}{setData}}(tex);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00365}00365             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00366}00366             \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00367}00367 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00368}00368         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00369}00369             \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00370}00370             \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{BAREError::XML\_FAILURE}}, \textcolor{stringliteral}{"{}Failed to read attribute with type: "{}} +}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00371}00371                                                    std::to\_string((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})attrValue-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_ad0f728ccf154d324fa0353b0a6550896}{type}}) +}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00372}00372                                                    \textcolor{stringliteral}{"{} of name "{}} + attrName);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00373}00373             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00374}00374             \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00375}00375         \};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00376}00376     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00377}00377 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00378}00378 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00379}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a72bb614851475c6510195cd7ebacf67a}{00379}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a72bb614851475c6510195cd7ebacf67a}{XMLData::write}}(rapidxml::xml\_document<>* doc)}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00380}00380 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00381}00381     \textcolor{comment}{// RapidXML requires that we allocate the name of the node by their function so it doesn't get cleaned up}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00382}00382     \textcolor{keywordtype}{char}* allocatedNodeName = doc-\/>allocate\_string(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a721101754e4e286aacea1e537141374b}{nodeName}}.c\_str());}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00383}00383 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00384}00384     \textcolor{comment}{// Now we can actually allocate the node, creating a new one for this data}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00385}00385     rapidxml::xml\_node<>* node = doc-\/>allocate\_node(rapidxml::node\_element, allocatedNodeName);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00386}00386     doc-\/>append\_node(node);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00387}00387 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00388}00388     \textcolor{comment}{// Write the name and id}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00389}00389     \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00390}00390     \textcolor{comment}{// ID}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00391}00391     \textcolor{comment}{// First, allocate the value as a c\_string within rapidxml's systems}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00392}00392     \textcolor{keywordtype}{char}* allocatedValue = doc-\/>allocate\_string(std::to\_string(\textcolor{keywordtype}{id}).c\_str());}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00393}00393     \textcolor{comment}{// Now allocate the attribute itself as a node-\/ish thing}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00394}00394     rapidxml::xml\_attribute<>* idAttribute = doc-\/>allocate\_attribute(\textcolor{stringliteral}{"{}id"{}}, allocatedValue);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00395}00395     \textcolor{comment}{// Now actually add the attribute to the node}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00396}00396     node-\/>append\_attribute(idAttribute);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00397}00397     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00398}00398 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00399}00399     \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00400}00400     \textcolor{comment}{// Name}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00401}00401     \textcolor{comment}{// First, allocate the value as a c\_string within rapidxml's systems}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00402}00402     \textcolor{keywordtype}{char}* allocatedValue = doc-\/>allocate\_string(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_af7d2661bad24cda5c9dfeaa5a1d51e49}{name}}.c\_str());}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00403}00403     \textcolor{comment}{// Now allocate the attribute itself as a node-\/ish thing}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00404}00404     rapidxml::xml\_attribute<>* nameAttribute = doc-\/>allocate\_attribute(\textcolor{stringliteral}{"{}name"{}}, allocatedValue);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00405}00405     \textcolor{comment}{// Now actually add the attribute to the node}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00406}00406     node-\/>append\_attribute(nameAttribute);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00407}00407     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00408}00408 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00409}00409     \textcolor{comment}{// Now we're done with the simple name and id attributes, we need to add child nodes in the same way we loaded them}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00410}00410     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& attr : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}})}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00411}00411     \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00412}00412         \textcolor{comment}{// Get some initial stuff}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00413}00413         std::string attrName = attr.first;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00414}00414         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}* attrValue = attr.second;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00415}00415 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00416}00416         \textcolor{comment}{// Make sure we aren't re-\/saving stuff we've already done}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00417}00417         \textcolor{keywordflow}{if}(attrName == \textcolor{stringliteral}{"{}name"{}} || attrName == \textcolor{stringliteral}{"{}id"{}})}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00418}00418         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00419}00419 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00420}00420         \textcolor{comment}{// We don't even really need to interpret (exterpret?) the value, as converting from data to a string is}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00421}00421         \textcolor{comment}{// defined by the actual attribute, not by the type.}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00422}00422 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00423}00423         \textcolor{comment}{// Actually allocate that value, as well as the attribute's name}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00424}00424         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* allocatedValue = doc-\/>allocate\_string(attrValue-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_a57439a81db9dcc04dd4ed0f3b39789a7}{getDataString}}().c\_str());}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00425}00425         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* allocatedName = doc-\/>allocate\_string(attrName.c\_str());}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00426}00426 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00427}00427         \textcolor{comment}{// Allocate the node}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00428}00428         rapidxml::xml\_node<>* allocatedNode =}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00429}00429             doc-\/>allocate\_node(rapidxml::node\_element, allocatedName, allocatedValue);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00430}00430 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00431}00431         \textcolor{comment}{// Actually add the node}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00432}00432         node-\/>append\_node(allocatedNode);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00433}00433     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00434}00434 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00435}00435     \textcolor{comment}{// Now we've written all of the XML data to the document!}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00436}00436 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00437}00437 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00438}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}{00438}} std::unordered\_map<std::string, AttributeBase*> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a4d74a9f01423efa88b7c7ea69d9d870d}{XMLData::getAttributes}}()}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00439}00439 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00440}00440     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}};}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00441}00441 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00442}00442 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00443}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a15c8f82112e0e0a89eb255aacb7cb801}{00443}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{XMLData::addAttribute}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base}{AttributeBase}}* attr)}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00444}00444 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00445}00445     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}[attr-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_af991938222f7eb1facde0b371ece23ad}{name}}] = attr;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00446}00446 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00447}00447 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00448}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6}{00448}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_ae24bd7eff4c51255b28e903805e768d6}{XMLData::addAttributes}}(std::vector<AttributeBase*> attrs)}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00449}00449 \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00450}00450     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} a : attrs)}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00451}00451     \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00452}00452         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{addAttribute}}(a);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00453}00453     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00454}00454 \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00455}00455 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8cpp_source_l00456}00456 \}  \textcolor{comment}{// namespace BARE2D}}
+
+\end{DoxyCode}

@@ -1,0 +1,101 @@
+\hypertarget{_vertex_8cpp_source}{}\doxysection{Vertex.\+cpp}
+\label{_vertex_8cpp_source}\index{Source/Vertex.cpp@{Source/Vertex.cpp}}
+\mbox{\hyperlink{_vertex_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_vertex_8hpp}{Vertex.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00004}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a082649e9c11e7dcb7efb885905a0ecfa}{00004}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a082649e9c11e7dcb7efb885905a0ecfa}{Glyph::Glyph}}(glm::vec4\& destRect, glm::vec4\& uvRect, GLuint\& \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}, \textcolor{keywordtype}{float}\& Depth, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}\& colour) : texture(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}), depth(Depth) \{}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00005}00005         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = colour;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00006}00006         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}(destRect.x, destRect.y + destRect.w, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a03888563092c5edc8c1fa6d15cf6a90a}{depth}});}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00007}00007         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a028b850fa99d561233130a0f227c9036}{setUV}}(uvRect.x, uvRect.y + uvRect.w);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00009}00009         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{bottomLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = colour;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00010}00010         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{bottomLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}(destRect.x, destRect.y, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a03888563092c5edc8c1fa6d15cf6a90a}{depth}});}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00011}00011         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{bottomLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a028b850fa99d561233130a0f227c9036}{setUV}}(uvRect.x, uvRect.y);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00013}00013         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = colour;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00014}00014         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}(destRect.x + destRect.z, destRect.y, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a03888563092c5edc8c1fa6d15cf6a90a}{depth}});}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00015}00015         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a028b850fa99d561233130a0f227c9036}{setUV}}(uvRect.x + uvRect.z, uvRect.y);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00017}00017         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{topRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = colour;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00018}00018         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{topRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}(destRect.x + destRect.z, destRect.y + destRect.w, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a03888563092c5edc8c1fa6d15cf6a90a}{depth}});}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00019}00019         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{topRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a028b850fa99d561233130a0f227c9036}{setUV}}(uvRect.x + uvRect.z, uvRect.y + uvRect.w);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00020}00020     \}}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00021}00021     }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00022}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a137e522e6afc33a43d93eb893a48586a}{00022}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a082649e9c11e7dcb7efb885905a0ecfa}{Glyph::Glyph}}(glm::vec4\& destRect, glm::vec4\& uvRect, GLuint\& \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}, \textcolor{keywordtype}{float}\& Depth, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}\& colour, \textcolor{keywordtype}{float}\& angle) : texture(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}), depth(Depth) \{}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00023}00023         glm::vec2 centrePoint = glm::vec2(destRect.z, destRect.w) * glm::vec2(0.5f);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00025}00025         \textcolor{comment}{// Get points centered at origin}}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00026}00026         glm::vec2 tl(-\/centrePoint.x, centrePoint.y);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00027}00027         glm::vec2 bl(-\/centrePoint.x, -\/centrePoint.y);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00028}00028         glm::vec2 br(centrePoint.x, -\/centrePoint.y);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00029}00029         glm::vec2 tr(centrePoint.x, centrePoint.y);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00031}00031         \textcolor{comment}{// Rotate the points}}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00032}00032         tl = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a25c195b87f163cad61d36798a164297c}{rotatePoint}}(tl, angle) + centrePoint;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00033}00033         bl = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a25c195b87f163cad61d36798a164297c}{rotatePoint}}(bl, angle) + centrePoint;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00034}00034         br = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a25c195b87f163cad61d36798a164297c}{rotatePoint}}(br, angle) + centrePoint;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00035}00035         tr = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a25c195b87f163cad61d36798a164297c}{rotatePoint}}(tr, angle) + centrePoint;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00036}00036         }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00037}00037         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = colour;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00038}00038         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}(destRect.x + tl.x, destRect.y + tl.y, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a03888563092c5edc8c1fa6d15cf6a90a}{depth}});}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00039}00039         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a028b850fa99d561233130a0f227c9036}{setUV}}(uvRect.x, uvRect.y + uvRect.w);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00041}00041         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{bottomLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = colour;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00042}00042         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{bottomLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}(destRect.x + bl.x, destRect.y + bl.y, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a03888563092c5edc8c1fa6d15cf6a90a}{depth}});}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00043}00043         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{bottomLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a028b850fa99d561233130a0f227c9036}{setUV}}(uvRect.x, uvRect.y);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00045}00045         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = colour;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00046}00046         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}(destRect.x + br.x, destRect.y + br.y, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a03888563092c5edc8c1fa6d15cf6a90a}{depth}});}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00047}00047         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a028b850fa99d561233130a0f227c9036}{setUV}}(uvRect.x + uvRect.z, uvRect.y);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00049}00049         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{topRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = colour;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00050}00050         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{topRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}(destRect.x + tr.x, destRect.y + tr.y, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a03888563092c5edc8c1fa6d15cf6a90a}{depth}});}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00051}00051         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{topRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a028b850fa99d561233130a0f227c9036}{setUV}}(uvRect.x + uvRect.z, uvRect.y + uvRect.w);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00052}00052     \}}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00053}00053     }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00054}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{00054}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a082649e9c11e7dcb7efb885905a0ecfa}{Glyph::Glyph}}(glm::vec4\& destRect, glm::vec4\& uvRect, GLuint\& \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}, \textcolor{keywordtype}{float}\& Depth, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}\& colour, \textcolor{keywordtype}{float}\& angle, glm::vec2\& COR) : texture(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}), depth(Depth) \{}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00055}00055         glm::vec2 centrePoint = glm::vec2(destRect.z, destRect.w) * COR;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00056}00056         glm::vec2 invCentrePoint = glm::vec2(destRect.z, destRect.w) * (1.0f -\/ COR);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00058}00058         \textcolor{comment}{// Get points centered at origin}}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00059}00059         glm::vec2 tl(-\/invCentrePoint.x, centrePoint.y);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00060}00060         glm::vec2 bl(-\/invCentrePoint.x, -\/invCentrePoint.y);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00061}00061         glm::vec2 br(centrePoint.x, -\/invCentrePoint.y);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00062}00062         glm::vec2 tr(centrePoint.x, centrePoint.y);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00064}00064         \textcolor{comment}{// Rotate the points}}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00065}00065         tl = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a25c195b87f163cad61d36798a164297c}{rotatePoint}}(tl, angle) + centrePoint;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00066}00066         bl = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a25c195b87f163cad61d36798a164297c}{rotatePoint}}(bl, angle) + centrePoint;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00067}00067         br = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a25c195b87f163cad61d36798a164297c}{rotatePoint}}(br, angle) + centrePoint;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00068}00068         tr = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a25c195b87f163cad61d36798a164297c}{rotatePoint}}(tr, angle) + centrePoint;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00069}00069         }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00070}00070         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = colour;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00071}00071         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}(destRect.x + tl.x, destRect.y + tl.y, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a03888563092c5edc8c1fa6d15cf6a90a}{depth}});}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00072}00072         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a028b850fa99d561233130a0f227c9036}{setUV}}(uvRect.x, uvRect.y + uvRect.w);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00074}00074         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{bottomLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = colour;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00075}00075         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{bottomLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}(destRect.x + bl.x, destRect.y + bl.y, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a03888563092c5edc8c1fa6d15cf6a90a}{depth}});}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00076}00076         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{bottomLeft}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a028b850fa99d561233130a0f227c9036}{setUV}}(uvRect.x, uvRect.y);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00078}00078         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = colour;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00079}00079         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}(destRect.x + br.x, destRect.y + br.y, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a03888563092c5edc8c1fa6d15cf6a90a}{depth}});}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00080}00080         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a028b850fa99d561233130a0f227c9036}{setUV}}(uvRect.x + uvRect.z, uvRect.y);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00082}00082         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{topRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = colour;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00083}00083         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{topRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}(destRect.x + tr.x, destRect.y + tr.y, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a03888563092c5edc8c1fa6d15cf6a90a}{depth}});}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00084}00084         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{topRight}}.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a028b850fa99d561233130a0f227c9036}{setUV}}(uvRect.x + uvRect.z, uvRect.y + uvRect.w);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00085}00085     \}}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00086}00086     }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00087}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a25c195b87f163cad61d36798a164297c}{00087}}     glm::vec2 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a25c195b87f163cad61d36798a164297c}{Glyph::rotatePoint}}(\textcolor{keyword}{const} glm::vec2\& pos, \textcolor{keywordtype}{float}\& angle) \{}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00088}00088         glm::vec2 newv;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00089}00089         newv.x = pos.x * cos(angle) -\/ pos.y * sin(angle);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00090}00090         newv.y = pos.y * cos(angle) + pos.x * sin(angle);}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00091}00091         \textcolor{keywordflow}{return} newv;}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00092}00092     \}}
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00093}00093     }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00094}00094     }
+\DoxyCodeLine{\Hypertarget{_vertex_8cpp_source_l00095}00095 \}}
+
+\end{DoxyCode}

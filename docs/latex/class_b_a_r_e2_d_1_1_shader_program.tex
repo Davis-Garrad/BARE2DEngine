@@ -1,0 +1,564 @@
+\hypertarget{class_b_a_r_e2_d_1_1_shader_program}{}\doxysection{BARE2D\+::Shader\+Program Class Reference}
+\label{class_b_a_r_e2_d_1_1_shader_program}\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+
+
+The \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{Shader\+Program}} is a GLSL program which combines two shaders -\/ the vertex shader and the fragment shader -\/ to allow rendering. Each renderer should have its own program.  
+
+
+
+
+{\ttfamily \#include $<$Shader\+Program.\+hpp$>$}
+
+
+
+Collaboration diagram for BARE2D\+::Shader\+Program\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7b825f40e40a8416e8d9afcb4a81cc28}{Shader\+Program}} ()
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a67023f61cb80147c8227cef6b8df4072}{$\sim$\+Shader\+Program}} ()
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{compile\+Shaders}} (const char $\ast$vertex\+Shader\+Path, const char $\ast$fragment\+Shader\+Path)
+\begin{DoxyCompactList}\small\item\em Compiles the shaders. Does not link them. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}{compile\+Shaders\+From\+Source}} (const char $\ast$vertex\+Source, const char $\ast$fragment\+Source)
+\begin{DoxyCompactList}\small\item\em Similar to compile\+Shaders, this just compiles the shaders. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a096bc5e267753d6054aa8039e4cc44a9}{link\+Shaders}} (std\+::initializer\+\_\+list$<$ std\+::string $>$ attributes)
+\begin{DoxyCompactList}\small\item\em Links the compiled shaders together to create a coherent shader program. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{set\+Uniform}} (const std\+::string uniform, T $\ast$data, unsigned int num=1)
+\begin{DoxyCompactList}\small\item\em A generalized wrapper to find and set a uniform for this shader. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{set\+Uniform\+Matrix}} (const std\+::string uniform, bool transpose, T $\ast$data, unsigned int num=1)
+\begin{DoxyCompactList}\small\item\em Similar to set\+Uniform. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_af711102689d9552b2b54c1c9da8f8589}{does\+Uniform\+Exist}} (const std\+::string uniform)
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a05a721b577417d9d28bf0cec20896e16}{bind\+Frag\+Output\+Location}} (std\+::string output\+Variable\+Name, unsigned int location)
+\begin{DoxyCompactList}\small\item\em A call to gl\+Bind\+Frag\+Data\+Location() -\/ Causes an output variable of the fragment shader to output to a specific location. This is roughly equivalent to modern GLSL\textquotesingle{}s layout(location=n) specifier, which is unusable until GLSL 330. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a8687213986c6f5633887609e8169b24e}{use}} ()
+\begin{DoxyCompactList}\small\item\em Activates this shader program for the renderer to use. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7847844b8a2e5ab0677340b47d180841}{unuse}} ()
+\begin{DoxyCompactList}\small\item\em Deactivates this shader program. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a5b58eb971ff8352683380938e263e9ad}{destroy}} ()
+\begin{DoxyCompactList}\small\item\em Releases all bound objects and deletes any allocated stuff. \end{DoxyCompactList}\item 
+template$<$$>$ void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aa94955e2ca33efdda5dca68cc5f64c26}{set\+Uniform}} (const std\+::string uniform, int $\ast$data, unsigned int num)
+\item 
+template$<$$>$ void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_ae83a3af9dd2e73f8ddbe5bbf23a520c5}{set\+Uniform}} (const std\+::string uniform, unsigned int $\ast$data, unsigned int num)
+\item 
+template$<$$>$ void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a88c736c99824b5b1db75946c36991d3b}{set\+Uniform}} (const std\+::string uniform, float $\ast$data, unsigned int num)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}{compile\+Shader\+From\+Source}} (const char $\ast$source, const std\+::string \&name, GLuint id)
+\begin{DoxyCompactList}\small\item\em Compiles a shader from source with Open\+GL id. \end{DoxyCompactList}\item 
+GLint \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}{get\+Uniform\+Location}} (const std\+::string \&uniform)
+\begin{DoxyCompactList}\small\item\em Gets the location of a uniform in a program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_aba349b96c7229c50431f65d18ee27783}{m\+\_\+number\+Attributes}} = 0
+\item 
+GLuint \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}{m\+\_\+program\+ID}}
+\item 
+GLuint \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_afedc8e084895a3ae68b87298eebcffff}{m\+\_\+vertex\+Shader\+ID}}
+\item 
+GLuint \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a943083f0ad7e04081f15470193ec9a7f}{m\+\_\+fragment\+Shader\+ID}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program}{Shader\+Program}} is a GLSL program which combines two shaders -\/ the vertex shader and the fragment shader -\/ to allow rendering. Each renderer should have its own program. 
+
+Definition at line \mbox{\hyperlink{_shader_program_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{_shader_program_8hpp_source}{Shader\+Program.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_a7b825f40e40a8416e8d9afcb4a81cc28}\label{class_b_a_r_e2_d_1_1_shader_program_a7b825f40e40a8416e8d9afcb4a81cc28}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!ShaderProgram@{ShaderProgram}}
+\index{ShaderProgram@{ShaderProgram}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{ShaderProgram()}{ShaderProgram()}}
+{\footnotesize\ttfamily BARE2\+D\+::\+Shader\+Program\+::\+Shader\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_a67023f61cb80147c8227cef6b8df4072}\label{class_b_a_r_e2_d_1_1_shader_program_a67023f61cb80147c8227cef6b8df4072}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!````~ShaderProgram@{$\sim$ShaderProgram}}
+\index{````~ShaderProgram@{$\sim$ShaderProgram}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{$\sim$ShaderProgram()}{~ShaderProgram()}}
+{\footnotesize\ttfamily BARE2\+D\+::\+Shader\+Program\+::$\sim$\+Shader\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_a05a721b577417d9d28bf0cec20896e16}\label{class_b_a_r_e2_d_1_1_shader_program_a05a721b577417d9d28bf0cec20896e16}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!bindFragOutputLocation@{bindFragOutputLocation}}
+\index{bindFragOutputLocation@{bindFragOutputLocation}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{bindFragOutputLocation()}{bindFragOutputLocation()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+Shader\+Program\+::bind\+Frag\+Output\+Location (\begin{DoxyParamCaption}\item[{std\+::string}]{output\+Variable\+Name,  }\item[{unsigned int}]{location }\end{DoxyParamCaption})}
+
+
+
+A call to gl\+Bind\+Frag\+Data\+Location() -\/ Causes an output variable of the fragment shader to output to a specific location. This is roughly equivalent to modern GLSL\textquotesingle{}s layout(location=n) specifier, which is unusable until GLSL 330. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output\+Variable\+Name} & The name of the output variable (oftentimes just colour or something) \\
+\hline
+{\em location} & The output location, corresponding to a colour attachment. Must be less than GL\+\_\+\+MAX\+\_\+\+DRAW\+\_\+\+BUFFERS. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00141}{141}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8hpp_source_l00088}{m\+\_\+program\+ID}}.
+
+
+
+Referenced by \mbox{\hyperlink{_renderer_8cpp_source_l00085}{BARE2\+D\+::\+Renderer\+::link()}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}\label{class_b_a_r_e2_d_1_1_shader_program_a2b1206fc5359147dbce6be72051d44c6}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!compileShaderFromSource@{compileShaderFromSource}}
+\index{compileShaderFromSource@{compileShaderFromSource}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{compileShaderFromSource()}{compileShaderFromSource()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+Shader\+Program\+::compile\+Shader\+From\+Source (\begin{DoxyParamCaption}\item[{const char $\ast$}]{source,  }\item[{const std\+::string \&}]{name,  }\item[{GLuint}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compiles a shader from source with Open\+GL id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The source to compile from. \\
+\hline
+{\em name} & The name of the shader. This is normally associated with the key in the cache. \\
+\hline
+{\em id} & The ID of the shader that has been created with Open\+GL calls. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00183}{183}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abaa8fdfa9df78eba172c4aaa8b8046a2}{BARE2\+D\+::\+SHADER\+\_\+\+COMPILE\+\_\+\+FAILURE}}, and \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00178}{BARE2\+D\+::throw\+Fatal\+Error()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_shader_program_8cpp_source_l00038}{compile\+Shaders\+From\+Source()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}\label{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!compileShaders@{compileShaders}}
+\index{compileShaders@{compileShaders}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{compileShaders()}{compileShaders()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+Shader\+Program\+::compile\+Shaders (\begin{DoxyParamCaption}\item[{const char $\ast$}]{vertex\+Shader\+Path,  }\item[{const char $\ast$}]{fragment\+Shader\+Path }\end{DoxyParamCaption})}
+
+
+
+Compiles the shaders. Does not link them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex\+Shader\+Path} & The path to the vertex shader \\
+\hline
+{\em fragment\+Shader\+Path} & The path to the fragment shader. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8cpp_source_l00038}{compile\+Shaders\+From\+Source()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00284}{BARE2\+D\+::\+Resource\+Manager\+::get\+Assets\+Path\+Prefix()}}, and \mbox{\hyperlink{class_b_a_r_e2_d_1_1_i_o_manager_a41811805a88efeab7589a0e0c9015f90}{BARE2\+D\+::\+IOManager\+::read\+File\+To\+Buffer()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00018}{BARE2\+D\+::\+Basic\+Renderer\+::init()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00062}{BARE2\+D\+::\+FBORenderer\+::init()}}, \mbox{\hyperlink{_textureless_renderer_8cpp_source_l00020}{BARE2\+D\+::\+Textureless\+Renderer\+::init()}}, and \mbox{\hyperlink{_resource_manager_8cpp_source_l00022}{BARE2\+D\+::\+Resource\+Manager\+::load\+Shaders()}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}\label{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!compileShadersFromSource@{compileShadersFromSource}}
+\index{compileShadersFromSource@{compileShadersFromSource}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{compileShadersFromSource()}{compileShadersFromSource()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+Shader\+Program\+::compile\+Shaders\+From\+Source (\begin{DoxyParamCaption}\item[{const char $\ast$}]{vertex\+Source,  }\item[{const char $\ast$}]{fragment\+Source }\end{DoxyParamCaption})}
+
+
+
+Similar to compile\+Shaders, this just compiles the shaders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex\+Source} & The source code for the vertex shader \\
+\hline
+{\em fragment\+Source} & The source code for the fragment shader \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8cpp_source_l00183}{compile\+Shader\+From\+Source()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00172}{destroy()}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad860107dd407ff9736d6208998d710f6}{BARE2\+D\+::\+FRAGMENT\+\_\+\+SHADER\+\_\+\+FAILURE}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8bc03ea7709e07920eab3b6c56df1fd8}{BARE2\+D\+::\+GLSL\+\_\+\+PROGRAM\+\_\+\+FAILURE}}, \mbox{\hyperlink{_shader_program_8hpp_source_l00090}{m\+\_\+fragment\+Shader\+ID}}, \mbox{\hyperlink{_shader_program_8hpp_source_l00088}{m\+\_\+program\+ID}}, \mbox{\hyperlink{_shader_program_8hpp_source_l00089}{m\+\_\+vertex\+Shader\+ID}}, \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00178}{BARE2\+D\+::throw\+Fatal\+Error()}}, and \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a1f208845587ac9c0c53c388d4d385b1a}{BARE2\+D\+::\+VERTEX\+\_\+\+SHADER\+\_\+\+FAILURE}}.
+
+
+
+Referenced by \mbox{\hyperlink{_shader_program_8cpp_source_l00023}{compile\+Shaders()}}, \mbox{\hyperlink{_debug_renderer_8cpp_source_l00074}{BARE2\+D\+::\+Debug\+Renderer\+::init()}}, and \mbox{\hyperlink{_resource_manager_8cpp_source_l00031}{BARE2\+D\+::\+Resource\+Manager\+::load\+Shaders\+From\+Source()}}.
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_a5b58eb971ff8352683380938e263e9ad}\label{class_b_a_r_e2_d_1_1_shader_program_a5b58eb971ff8352683380938e263e9ad}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!destroy@{destroy}}
+\index{destroy@{destroy}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+Shader\+Program\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Releases all bound objects and deletes any allocated stuff. 
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00172}{172}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8hpp_source_l00090}{m\+\_\+fragment\+Shader\+ID}}, \mbox{\hyperlink{_shader_program_8hpp_source_l00086}{m\+\_\+number\+Attributes}}, \mbox{\hyperlink{_shader_program_8hpp_source_l00088}{m\+\_\+program\+ID}}, and \mbox{\hyperlink{_shader_program_8hpp_source_l00089}{m\+\_\+vertex\+Shader\+ID}}.
+
+
+
+Referenced by \mbox{\hyperlink{_shader_program_8cpp_source_l00038}{compile\+Shaders\+From\+Source()}}, and \mbox{\hyperlink{_renderer_8cpp_source_l00043}{BARE2\+D\+::\+Renderer\+::destroy()}}.
+
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_af711102689d9552b2b54c1c9da8f8589}\label{class_b_a_r_e2_d_1_1_shader_program_af711102689d9552b2b54c1c9da8f8589}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!doesUniformExist@{doesUniformExist}}
+\index{doesUniformExist@{doesUniformExist}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{doesUniformExist()}{doesUniformExist()}}
+{\footnotesize\ttfamily bool BARE2\+D\+::\+Shader\+Program\+::does\+Uniform\+Exist (\begin{DoxyParamCaption}\item[{const std\+::string}]{uniform }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em uniform} & The uniform to check for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the uniform is in the compiled shader program, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00213}{213}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8cpp_source_l00125}{get\+Uniform\+Location()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00110}{BARE2\+D\+::\+FBORenderer\+::init\+Uniforms()}}.
+
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}\label{class_b_a_r_e2_d_1_1_shader_program_a080f32d28d14f94892d77edf1188e3c2}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!getUniformLocation@{getUniformLocation}}
+\index{getUniformLocation@{getUniformLocation}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{getUniformLocation()}{getUniformLocation()}}
+{\footnotesize\ttfamily GLint BARE2\+D\+::\+Shader\+Program\+::get\+Uniform\+Location (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uniform }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets the location of a uniform in a program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uniform} & The name of the uniform to find. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The location of the uniform. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00125}{125}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8hpp_source_l00088}{m\+\_\+program\+ID}}, \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00190}{BARE2\+D\+::throw\+Error()}}, and \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad6e29903fb0c6eb8c57d20d9ad478d9e}{BARE2\+D\+::\+UNIFORM\+\_\+\+NOT\+\_\+\+FOUND}}.
+
+
+
+Referenced by \mbox{\hyperlink{_shader_program_8cpp_source_l00213}{does\+Uniform\+Exist()}}, and \mbox{\hyperlink{_shader_program_8cpp_source_l00224}{set\+Uniform()}}.
+
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_a096bc5e267753d6054aa8039e4cc44a9}\label{class_b_a_r_e2_d_1_1_shader_program_a096bc5e267753d6054aa8039e4cc44a9}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!linkShaders@{linkShaders}}
+\index{linkShaders@{linkShaders}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{linkShaders()}{linkShaders()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+Shader\+Program\+::link\+Shaders (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ std\+::string $>$}]{attributes }\end{DoxyParamCaption})}
+
+
+
+Links the compiled shaders together to create a coherent shader program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attributes} & An initializer\+\_\+list of std\+::string type of attributes to add to the program. These must link up with the renderer used to draw with this program. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8hpp_source_l00090}{m\+\_\+fragment\+Shader\+ID}}, \mbox{\hyperlink{_shader_program_8hpp_source_l00086}{m\+\_\+number\+Attributes}}, \mbox{\hyperlink{_shader_program_8hpp_source_l00088}{m\+\_\+program\+ID}}, \mbox{\hyperlink{_shader_program_8hpp_source_l00089}{m\+\_\+vertex\+Shader\+ID}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15af2f6cbcd601921a638724130311f22cd}{BARE2\+D\+::\+SHADER\+\_\+\+LINK\+\_\+\+FAILURE}}, and \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00178}{BARE2\+D\+::throw\+Fatal\+Error()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_renderer_8cpp_source_l00085}{BARE2\+D\+::\+Renderer\+::link()}}.
+
+Here is the call graph for this function\+:
+% FIG 13
+Here is the caller graph for this function\+:
+% FIG 14
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_a88c736c99824b5b1db75946c36991d3b}\label{class_b_a_r_e2_d_1_1_shader_program_a88c736c99824b5b1db75946c36991d3b}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!setUniform@{setUniform}}
+\index{setUniform@{setUniform}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{setUniform()}{setUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void BARE2\+D\+::\+Shader\+Program\+::set\+Uniform (\begin{DoxyParamCaption}\item[{const std\+::string}]{uniform,  }\item[{float $\ast$}]{data,  }\item[{unsigned int}]{num }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00248}{248}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8cpp_source_l00125}{get\+Uniform\+Location()}}.
+
+Here is the call graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_aa94955e2ca33efdda5dca68cc5f64c26}\label{class_b_a_r_e2_d_1_1_shader_program_aa94955e2ca33efdda5dca68cc5f64c26}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!setUniform@{setUniform}}
+\index{setUniform@{setUniform}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{setUniform()}{setUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void BARE2\+D\+::\+Shader\+Program\+::set\+Uniform (\begin{DoxyParamCaption}\item[{const std\+::string}]{uniform,  }\item[{int $\ast$}]{data,  }\item[{unsigned int}]{num }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00224}{224}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8cpp_source_l00125}{get\+Uniform\+Location()}}.
+
+Here is the call graph for this function\+:
+% FIG 16
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}\label{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!setUniform@{setUniform}}
+\index{setUniform@{setUniform}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{setUniform()}{setUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void BARE2\+D\+::\+Shader\+Program\+::set\+Uniform (\begin{DoxyParamCaption}\item[{const std\+::string}]{uniform,  }\item[{T $\ast$}]{data,  }\item[{unsigned int}]{num = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+A generalized wrapper to find and set a uniform for this shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uniform} & The name of the uniform in the shader \\
+\hline
+{\em data} & The variable to actually set the uniform\textquotesingle{}s value to. This can be a glm\+:\+:\{i,ui,f\}vec\{1,2,3,4\}, an unsigned int, an int, or a float \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00019}{BARE2\+D\+::\+Bumpy\+Renderer\+::init\+Uniforms()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00110}{BARE2\+D\+::\+FBORenderer\+::init\+Uniforms()}}, and \mbox{\hyperlink{_basic_renderer_8cpp_source_l00042}{BARE2\+D\+::\+Basic\+Renderer\+::pre\+Render()}}.
+
+Here is the caller graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_ae83a3af9dd2e73f8ddbe5bbf23a520c5}\label{class_b_a_r_e2_d_1_1_shader_program_ae83a3af9dd2e73f8ddbe5bbf23a520c5}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!setUniform@{setUniform}}
+\index{setUniform@{setUniform}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{setUniform()}{setUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void BARE2\+D\+::\+Shader\+Program\+::set\+Uniform (\begin{DoxyParamCaption}\item[{const std\+::string}]{uniform,  }\item[{unsigned int $\ast$}]{data,  }\item[{unsigned int}]{num }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00236}{236}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8cpp_source_l00125}{get\+Uniform\+Location()}}.
+
+Here is the call graph for this function\+:
+% FIG 18
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}\label{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!setUniformMatrix@{setUniformMatrix}}
+\index{setUniformMatrix@{setUniformMatrix}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{setUniformMatrix()}{setUniformMatrix()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void BARE2\+D\+::\+Shader\+Program\+::set\+Uniform\+Matrix (\begin{DoxyParamCaption}\item[{const std\+::string}]{uniform,  }\item[{bool}]{transpose,  }\item[{T $\ast$}]{data,  }\item[{unsigned int}]{num = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Similar to set\+Uniform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uniform} & The name of the uniform in the shader \\
+\hline
+{\em transpose} & Should the matrix be transposed when converted? If false, each matrix is assumed to be supplied in column major order. Else, row major order \\
+\hline
+{\em data} & A pointer to the matrix, which is a 1D array of floats, ints, or unsigned ints. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00042}{BARE2\+D\+::\+Basic\+Renderer\+::pre\+Render()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00027}{BARE2\+D\+::\+Bumpy\+Renderer\+::pre\+Render()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00172}{BARE2\+D\+::\+FBORenderer\+::pre\+Render()}}, and \mbox{\hyperlink{_textureless_renderer_8cpp_source_l00081}{BARE2\+D\+::\+Textureless\+Renderer\+::pre\+Render()}}.
+
+Here is the caller graph for this function\+:
+% FIG 19
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_a7847844b8a2e5ab0677340b47d180841}\label{class_b_a_r_e2_d_1_1_shader_program_a7847844b8a2e5ab0677340b47d180841}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!unuse@{unuse}}
+\index{unuse@{unuse}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{unuse()}{unuse()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+Shader\+Program\+::unuse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deactivates this shader program. 
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00160}{160}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8hpp_source_l00086}{m\+\_\+number\+Attributes}}.
+
+
+
+Referenced by \mbox{\hyperlink{_renderer_8cpp_source_l00020}{BARE2\+D\+::\+Renderer\+::end()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00165}{BARE2\+D\+::\+FBORenderer\+::end()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00025}{BARE2\+D\+::\+Renderer\+::init()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00062}{BARE2\+D\+::\+FBORenderer\+::init()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00048}{BARE2\+D\+::\+Renderer\+::render()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00035}{BARE2\+D\+::\+Bumpy\+Renderer\+::render()}}, \mbox{\hyperlink{_debug_renderer_8cpp_source_l00196}{BARE2\+D\+::\+Debug\+Renderer\+::render()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00232}{BARE2\+D\+::\+FBORenderer\+::render()}}.
+
+Here is the caller graph for this function\+:
+% FIG 20
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_a8687213986c6f5633887609e8169b24e}\label{class_b_a_r_e2_d_1_1_shader_program_a8687213986c6f5633887609e8169b24e}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!use@{use}}
+\index{use@{use}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+Shader\+Program\+::use (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Activates this shader program for the renderer to use. 
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8cpp_source_l00147}{147}} of file \mbox{\hyperlink{_shader_program_8cpp_source}{Shader\+Program.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8hpp_source_l00086}{m\+\_\+number\+Attributes}}, and \mbox{\hyperlink{_shader_program_8hpp_source_l00088}{m\+\_\+program\+ID}}.
+
+
+
+Referenced by \mbox{\hyperlink{_renderer_8cpp_source_l00013}{BARE2\+D\+::\+Renderer\+::begin()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00134}{BARE2\+D\+::\+FBORenderer\+::begin()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00025}{BARE2\+D\+::\+Renderer\+::init()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00062}{BARE2\+D\+::\+FBORenderer\+::init()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00048}{BARE2\+D\+::\+Renderer\+::render()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00035}{BARE2\+D\+::\+Bumpy\+Renderer\+::render()}}, \mbox{\hyperlink{_debug_renderer_8cpp_source_l00196}{BARE2\+D\+::\+Debug\+Renderer\+::render()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00232}{BARE2\+D\+::\+FBORenderer\+::render()}}.
+
+Here is the caller graph for this function\+:
+% FIG 21
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_a943083f0ad7e04081f15470193ec9a7f}\label{class_b_a_r_e2_d_1_1_shader_program_a943083f0ad7e04081f15470193ec9a7f}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!m\_fragmentShaderID@{m\_fragmentShaderID}}
+\index{m\_fragmentShaderID@{m\_fragmentShaderID}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{m\_fragmentShaderID}{m\_fragmentShaderID}}
+{\footnotesize\ttfamily GLuint BARE2\+D\+::\+Shader\+Program\+::m\+\_\+fragment\+Shader\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8hpp_source_l00090}{90}} of file \mbox{\hyperlink{_shader_program_8hpp_source}{Shader\+Program.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_shader_program_8cpp_source_l00038}{compile\+Shaders\+From\+Source()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00172}{destroy()}}, and \mbox{\hyperlink{_shader_program_8cpp_source_l00075}{link\+Shaders()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_aba349b96c7229c50431f65d18ee27783}\label{class_b_a_r_e2_d_1_1_shader_program_aba349b96c7229c50431f65d18ee27783}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!m\_numberAttributes@{m\_numberAttributes}}
+\index{m\_numberAttributes@{m\_numberAttributes}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{m\_numberAttributes}{m\_numberAttributes}}
+{\footnotesize\ttfamily unsigned int BARE2\+D\+::\+Shader\+Program\+::m\+\_\+number\+Attributes = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8hpp_source_l00086}{86}} of file \mbox{\hyperlink{_shader_program_8hpp_source}{Shader\+Program.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_shader_program_8cpp_source_l00172}{destroy()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00075}{link\+Shaders()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00160}{unuse()}}, and \mbox{\hyperlink{_shader_program_8cpp_source_l00147}{use()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}\label{class_b_a_r_e2_d_1_1_shader_program_adabfa5cf1b2eb3d83024c50b1174d8c3}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!m\_programID@{m\_programID}}
+\index{m\_programID@{m\_programID}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{m\_programID}{m\_programID}}
+{\footnotesize\ttfamily GLuint BARE2\+D\+::\+Shader\+Program\+::m\+\_\+program\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8hpp_source_l00088}{88}} of file \mbox{\hyperlink{_shader_program_8hpp_source}{Shader\+Program.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_shader_program_8cpp_source_l00141}{bind\+Frag\+Output\+Location()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00038}{compile\+Shaders\+From\+Source()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00172}{destroy()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00125}{get\+Uniform\+Location()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00075}{link\+Shaders()}}, and \mbox{\hyperlink{_shader_program_8cpp_source_l00147}{use()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_shader_program_afedc8e084895a3ae68b87298eebcffff}\label{class_b_a_r_e2_d_1_1_shader_program_afedc8e084895a3ae68b87298eebcffff}} 
+\index{BARE2D::ShaderProgram@{BARE2D::ShaderProgram}!m\_vertexShaderID@{m\_vertexShaderID}}
+\index{m\_vertexShaderID@{m\_vertexShaderID}!BARE2D::ShaderProgram@{BARE2D::ShaderProgram}}
+\doxysubsubsection{\texorpdfstring{m\_vertexShaderID}{m\_vertexShaderID}}
+{\footnotesize\ttfamily GLuint BARE2\+D\+::\+Shader\+Program\+::m\+\_\+vertex\+Shader\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_shader_program_8hpp_source_l00089}{89}} of file \mbox{\hyperlink{_shader_program_8hpp_source}{Shader\+Program.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_shader_program_8cpp_source_l00038}{compile\+Shaders\+From\+Source()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00172}{destroy()}}, and \mbox{\hyperlink{_shader_program_8cpp_source_l00075}{link\+Shaders()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\mbox{\hyperlink{_shader_program_8hpp}{Shader\+Program.\+hpp}}\item 
+Source/\mbox{\hyperlink{_shader_program_8cpp}{Shader\+Program.\+cpp}}\end{DoxyCompactItemize}

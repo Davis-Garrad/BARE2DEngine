@@ -1,0 +1,189 @@
+\hypertarget{_app_8cpp_source}{}\doxysection{App.\+cpp}
+\label{_app_8cpp_source}\index{Source/App.cpp@{Source/App.cpp}}
+\mbox{\hyperlink{_app_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_app_8hpp}{App.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp}{BARECEGUI.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include <SDL2/SDL.h>}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include <GL/gl.h>}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_b_a_r_e2_d_engine_8hpp}{BARE2DEngine.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_input_manager_8hpp}{InputManager.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_screen_8hpp}{Screen.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_window_8hpp}{Window.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00013}\mbox{\hyperlink{namespace_b_a_r_e2_d}{00013}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00015}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a5940a478d28f6e4d9da675023aa26144}{00015}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a5940a478d28f6e4d9da675023aa26144}{App::App}}() \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00016}00016         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{init}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00017}00017     \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00019}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1d75c4c19a39cb736ccdcd65582c3c0e}{00019}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1d75c4c19a39cb736ccdcd65582c3c0e}{App::\string~App}}() \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00020}00020         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}{m\_isGameRunning}}) \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00021}00021             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{exitApp}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00022}00022         \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00023}00023         \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00024}00024         \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00025}00025         \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00026}00026         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}.release();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00029}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a767c055c78bbf86b34bbd47e4b05ee01}{00029}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a767c055c78bbf86b34bbd47e4b05ee01}{App::run}}() \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00030}00030         \textcolor{comment}{// Init if we haven't already}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00031}00031         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a390fbdf47a840a4c515fa25f98cc9758}{m\_isInited}}) \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00032}00032             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{init}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00033}00033         \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00035}00035         \textcolor{comment}{// Start the gameloop!}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00036}00036         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}{m\_isGameRunning}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00038}00038         \textcolor{comment}{// Make sure we actually have an entry point}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00039}00039         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>getCurrentScreen())}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00040}00040             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00042}00042 \textcolor{comment}{// If we're running the debug build, make sure that we always log errors.}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00043}00043 \textcolor{preprocessor}{\#ifdef DEBUG}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00044}00044         \mbox{\hyperlink{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984}{initGLErrorCallback}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88}{GLErrorSeverity::LOW}});}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00045}00045 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00047}00047         \textcolor{comment}{// Make sure to actually "{}enter"{} the entry screen}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00048}00048         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>getCurrentScreen()-\/>onEntry();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00050}00050         \textcolor{comment}{// Gameloop}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00051}00051         \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}{m\_isGameRunning}}) \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00052}00052             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a7cc8c03901700b14cfec0c336645ae13}{startTimer}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00053}00053             \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a20ecce866aa0f272c630def64298cee9}{integrateFrame}}()) \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00054}00054                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}{update}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a4a2cfd6c8f2b4147f574f7c22247e9e8}{getDeltaTime}}());}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00055}00055             \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00056}00056             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}{draw}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00057}00057             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ad291c1daf4c2c0a550daecb7821f5084}{swapBuffer}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00058}00058             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a034a2b3086567486abbbcaaf667266f9}{endTimer}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00059}00059         \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00061}00061         \textcolor{comment}{// Exit the app!}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00062}00062         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}) \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00063}00063             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>getCurrentScreen()-\/>onExit();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00064}00064             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}.reset(); \textcolor{comment}{// Destroy the screenList}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00065}00065         \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00066}00066     \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00068}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a14fe844e84cbfafc0c7e6f8f6f7d36e0}{00068}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{ScreenList}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a14fe844e84cbfafc0c7e6f8f6f7d36e0}{App::getScreenList}}() \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00069}00069         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}.get();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00070}00070     \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00072}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae500d02161dd750e8f4c659369e1fe5d}{00072}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae500d02161dd750e8f4c659369e1fe5d}{App::getWindow}}() \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00073}00073         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00074}00074     \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00076}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a2a603b736fe6fdb0767a636ee717455d}{00076}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a2a603b736fe6fdb0767a636ee717455d}{App::getInputManager}}() \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00077}00077         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00078}00078     \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00080}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{00080}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a545e74578c9321aa800aa1673b8dc80e}{App::init}}() \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00081}00081         \textcolor{comment}{// Make sure not to init twice}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00082}00082         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a390fbdf47a840a4c515fa25f98cc9758}{m\_isInited}})}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00083}00083             \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aed6ff68f5f52346f2c0754edb81b83ed}{BAREError::DOUBLE\_INIT}});}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00085}00085         \textcolor{comment}{// Init the screen list}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00086}00086         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}} = std::make\_unique<ScreenList>();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00088}00088         \textcolor{comment}{// Init the engine}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00089}00089         \mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{BARE2D::init}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00091}00091         \textcolor{comment}{// Uncomment this to require hardware acceleration: (defaults to allow accelerated OR accept non-\/accelerated)}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00092}00092         \textcolor{comment}{// SDL\_GL\_SetAttribute(SDL\_GL\_ACCELERATED\_VISUAL, 1);}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00094}00094         \textcolor{comment}{// Init the input manager}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00095}00095         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00097}00097         \textcolor{comment}{// Init the window}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00098}00098         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00099}00099         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a02b16c4a920ed63e5bbd4e219f5d1155}{create}}(0);}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00101}00101         \textcolor{comment}{// Init the timer}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00102}00102         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer}{Timer}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00103}00103         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1ce5b3fd003d75761672af1e9518726d}{m\_timer}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_ae9153aaa0e1a26a32be36dbee2c1d395}{setDeltaTimeLimit}}(1.0 / 60.0);}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00105}00105         \textcolor{comment}{// Make sure we don't double init by setting this var to true}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00106}00106         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a390fbdf47a840a4c515fa25f98cc9758}{m\_isInited}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00107}00107     \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00109}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}{00109}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ae0fb15b02f63b3b737041135b968ac55}{App::update}}(\textcolor{keywordtype}{double} dt) \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00110}00110         \textcolor{comment}{// Update everything}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00111}00111         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}{updateInput}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00113}00113         \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>getCurrentScreen()-\/>getState()) \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00114}00114             \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}{ScreenState::RUNNING}}:}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00115}00115                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>getCurrentScreen()-\/>update(dt);}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00116}00116                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00117}00117             \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253af1b095bb6b4fb743116b8e2910c87e2a}{ScreenState::CHANGE\_NEXT}}:}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00118}00118                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>moveToNextScreen();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00119}00119                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00120}00120             \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ad99b55eff583c9982c86312bdcfdb47c}{ScreenState::CHANGE\_PREV}}:}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00121}00121                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>moveToPreviousScreen();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00122}00122             \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253ab8b26f3abe929349d415409c67b3b81e}{ScreenState::EXIT\_APPLICATION}}:}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00123}00123                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{exitApp}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00124}00124                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00125}00125             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00126}00126                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00127}00127         \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00128}00128     \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00130}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}{00130}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aa36b0982974fd0ea0854d2c7a02ed455}{App::draw}}() \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00131}00131         \textcolor{comment}{// Reset the viewport to the full window, just in case the window changed sizes or the viewport had been changed by, for example, an FBO}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00132}00132         glViewport(0, 0, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ae0055549c7e1f9b1e16e71b1cb17ac54}{getWidth}}(), \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a000fd8a1f00eb49542ada6a3effa3ce2}{m\_window}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_adce1ecfb27ebd91fd455d1e04f855496}{getHeight}}());}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00133}00133 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00134}00134         \textcolor{comment}{// If the current screen is running, draw according to its protocols}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00135}00135         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>getCurrentScreen()-\/>getState() == \mbox{\hyperlink{namespace_b_a_r_e2_d_a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd}{ScreenState::RUNNING}})}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00136}00136             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_ad42609b53c687e4053fa5cfb76678595}{m\_screenList}}-\/>getCurrentScreen()-\/>draw();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00137}00137     \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00139}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}{00139}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a88670d45389ef8ac5211227debf322e2}{App::updateInput}}() \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00140}00140         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{update}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00142}00142         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}{pollSDLInput}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00143}00143     \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00145}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}{00145}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_af9894f9e43d2620a21db76752fdb7fc4}{App::pollSDLInput}}() \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00146}00146         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}}* gui = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca}{BARECEGUI::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00148}00148         SDL\_Event event;}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00149}00149         \textcolor{keywordflow}{while}(SDL\_PollEvent(\&event)) \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00150}00150             \textcolor{comment}{// Just check if the gui is initialized and there is a context that will be handling these events}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00151}00151             \textcolor{keywordflow}{if}(gui-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea}{getContext}}())}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00152}00152                 gui-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7}{handleSDLEvent}}(event); \textcolor{comment}{// if there is, use it!}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00153}00153             \textcolor{keywordflow}{switch}(event.type) \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00154}00154                 \textcolor{keywordflow}{case} SDL\_QUIT:}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00155}00155                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{exitApp}}();}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00156}00156                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00157}00157                 \textcolor{keywordflow}{case} SDL\_MOUSEMOTION:}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00158}00158                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{setMousePosition}}((\textcolor{keywordtype}{float})event.motion.x, (\textcolor{keywordtype}{float})event.motion.y);}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00159}00159                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00160}00160                 \textcolor{keywordflow}{case} SDL\_KEYDOWN:}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00161}00161                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{pressKey}}(event.key.keysym.sym);}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00162}00162                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00163}00163                 \textcolor{keywordflow}{case} SDL\_KEYUP:}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00164}00164                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{releaseKey}}(event.key.keysym.sym);}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00165}00165                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00166}00166                 \textcolor{keywordflow}{case} SDL\_MOUSEBUTTONDOWN:}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00167}00167                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{pressKey}}(event.button.button);}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00168}00168                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00169}00169                 \textcolor{keywordflow}{case} SDL\_MOUSEBUTTONUP:}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00170}00170                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{releaseKey}}(event.button.button);}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00171}00171                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00172}00172                 \textcolor{keywordflow}{case} SDL\_MOUSEWHEEL:}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00173}00173                     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_aba62303cc2e4a3d6c7ac27dd0e51a8af}{m\_inputManager}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{setMouseScrollwheelPosition}}(event.wheel.y);}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00174}00174                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00175}00175             \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00176}00176         \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00177}00177     \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00179}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{00179}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1e4549ad082fd4afee1503611fb65ad1}{App::exitApp}}() \{}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00180}00180         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app_a1647c93ca61530c93f0e88cb26c80f81}{m\_isGameRunning}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00181}00181     \}}
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{_app_8cpp_source_l00183}00183 \} \textcolor{comment}{// namespace BARE2D}}
+
+\end{DoxyCode}

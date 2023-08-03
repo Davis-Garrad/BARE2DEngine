@@ -1,0 +1,54 @@
+digraph "BARE2D::GLContext::bindTexture"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="BARE2D::GLContext::\lbindTexture",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Binds a texture to target in the currently active texture slot."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="BARE2D::FBORenderer\l::bind",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a5765d077d8aff3402f717863169a0176",tooltip="Binds the FBO and appropriate texture attachments."];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="BARE2D::FBORenderer\l::begin",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a5e94ee6c2c34dcdcbd65c9b05f3a465a",tooltip="Clears the necessary vectors, etc. to prepare for draw() calls, etc."];
+  Node2 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="BARE2D::FBORenderer\l::init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867",tooltip="Initializes all necessary bits of the renderer."];
+  Node1 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node5 [label="BARE2D::ResourceManager\l::createMutableTexture",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_resource_manager.html#a05a7123519dfb03fa23088785eb4ece4",tooltip="Creates a new mutable texture, or replaces one that exists with a new texture."];
+  Node1 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node6 [label="BARE2D::FBORenderer\l::createTextures",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aff19a68622b2fdf7033ffee1ab32a7c6",tooltip="Creates all of the OpenGL textures, and takes their handles into m_colourTextureID,..."];
+  Node6 -> Node7 [dir="back",color="steelblue1",style="solid"];
+  Node7 [label="BARE2D::FBORenderer\l::createFBO",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#af0312bfcb60be2285bb443a79ae9678f",tooltip="Creates the OpenGL FBO instance and holds its handle in m_fboID;."];
+  Node7 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node1 -> Node8 [dir="back",color="steelblue1",style="solid"];
+  Node8 [label="BARE2D::TexturelessRenderer\l::init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_textureless_renderer.html#a01951b878023daee5eef45428e8e858e",tooltip="Initializes all necessary bits of the renderer."];
+  Node1 -> Node9 [dir="back",color="steelblue1",style="solid"];
+  Node9 [label="BARE2D::Font::init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_font.html#a4448baad55264df37021c5e24a033b29",tooltip="Creates font resources."];
+  Node9 -> Node10 [dir="back",color="steelblue1",style="solid"];
+  Node10 [label="BARE2D::ResourceManager\l::loadFont",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_resource_manager.html#a779c084be78d6e03a8083cb109b85509",tooltip="Loads a font to the cache."];
+  Node1 -> Node11 [dir="back",color="steelblue1",style="solid"];
+  Node11 [label="BARE2D::ResourceManager\l::loadTexture",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_resource_manager.html#af4bb03a60f5fdb3ec94064e17c84e823",tooltip="Loads a texture if it isn't already in the cache."];
+  Node11 -> Node12 [dir="back",color="steelblue1",style="solid"];
+  Node12 [label="BARE2D::XMLData::read",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_x_m_l_data.html#acf63925319a7b15a53989db54702ea60",tooltip="Reads the entire piece of data from a given XML node."];
+  Node12 -> Node13 [dir="back",color="steelblue1",style="solid"];
+  Node13 [label="BARE2D::XMLDataManager\l::readXMLData",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a85100a24e685d21a8f2af8f87def391a",tooltip="Reads a single subcache from a single file."];
+  Node13 -> Node14 [dir="back",color="steelblue1",style="solid"];
+  Node14 [label="BARE2D::XMLDataManager\l::loadXML",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#ac4a9f3f5c2a496e2df493a10df0003d3",tooltip="Loads all of the files from the filepath that end in .xml to the caches. Does not clear caches."];
+  Node1 -> Node15 [dir="back",color="steelblue1",style="solid"];
+  Node15 [label="BARE2D::FBORenderer\l::preRender",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a6a0113b8f8806828e460e41bd7697b6c",tooltip="Does stuff inside of the render function, within the shader's use."];
+  Node15 -> Node16 [dir="back",color="steelblue1",style="solid"];
+  Node16 [label="BARE2D::FBORenderer\l::render",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aaccc7bddd25f99cca5b734d097383c6e",tooltip="Actually renders the contents to the screen!"];
+  Node1 -> Node17 [dir="back",color="steelblue1",style="solid"];
+  Node17 [label="BARE2D::Renderer::render",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_renderer.html#af6c7b543d54be3ce30224e21d5606be3",tooltip="Actually renders the contents to the screen!"];
+  Node1 -> Node18 [dir="back",color="steelblue1",style="solid"];
+  Node18 [label="BARE2D::BumpyRenderer\l::render",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_bumpy_renderer.html#adf8f29d89f859671a39cde7fb94cc7e7",tooltip="Actually renders the contents to the screen!"];
+  Node1 -> Node19 [dir="back",color="steelblue1",style="solid"];
+  Node19 [label="BARE2D::MutableTexture\l::setData",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$struct_b_a_r_e2_d_1_1_mutable_texture.html#a78f079b17650c765dc84859a3d7a7209",tooltip="Sets the data of the mutable texture, as well as updates the OpenGL context's texture data for it (us..."];
+  Node1 -> Node20 [dir="back",color="steelblue1",style="solid"];
+  Node20 [label="BARE2D::GLContext::\lunbindTexture",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_g_l_context.html#a99f228aa049e960dace1970e09b24246",tooltip="Unbinds a texture."];
+  Node20 -> Node21 [dir="back",color="steelblue1",style="solid"];
+  Node21 [label="BARE2D::FBORenderer\l::unbind",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a01768136e2e36b131a23d422ded3bd5b",tooltip="Unbinds the FBO + textures."];
+  Node21 -> Node22 [dir="back",color="steelblue1",style="solid"];
+  Node22 [label="BARE2D::FBORenderer::end",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a4dde75642694aa34aa463bb298cb34cd",tooltip="Creates the renderbatches, does necessary stuff before render() call."];
+  Node21 -> Node4 [dir="back",color="steelblue1",style="solid"];
+}

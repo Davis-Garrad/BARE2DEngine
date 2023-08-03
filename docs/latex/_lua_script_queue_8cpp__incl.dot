@@ -1,0 +1,20 @@
+digraph "Source/LuaScriptQueue.cpp"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="Source/LuaScriptQueue.cpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="LuaScriptQueue.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_lua_script_queue_8hpp.html",tooltip="This class essentially just collects all of the scripts that need to be run from all the various end-..."];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="map",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node2 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="string",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="LuaScript.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_lua_script_8hpp.html",tooltip="This is the basic Lua script wrapper - it is what the end-user will create and add to the queue...."];
+  Node5 -> Node4 [color="steelblue1",style="solid"];
+  Node5 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="lua5.3/lua.hpp",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+}

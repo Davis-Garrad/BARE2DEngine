@@ -1,0 +1,151 @@
+\hypertarget{_lua_script_8cpp_source}{}\doxysection{Lua\+Script.\+cpp}
+\label{_lua_script_8cpp_source}\index{Source/LuaScript.cpp@{Source/LuaScript.cpp}}
+\mbox{\hyperlink{_lua_script_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_lua_script_8hpp}{LuaScript.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_b_a_r_e_errors_8hpp}{BAREErrors.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include <lua5.3/lua.hpp>}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00007}00007 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00009}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_a5686214d11e32bc31da1f7166b437b80}{00009}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_a5686214d11e32bc31da1f7166b437b80}{LuaScript::LuaScript}}() \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00010}00010     \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00012}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_acf6a9e39afc2d8ba68649610b9155841}{00012}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_acf6a9e39afc2d8ba68649610b9155841}{LuaScript::\string~LuaScript}}() \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00013}00013     \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00015}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ae0af32134c3684ef955f2143db707a22}{00015}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ae0af32134c3684ef955f2143db707a22}{LuaScriptContextWrapper::LuaScriptContextWrapper}}() \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00016}00016     \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00018}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a6e8344724ee86168c554f20d373fe2cb}{00018}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a6e8344724ee86168c554f20d373fe2cb}{LuaScriptContextWrapper::\string~LuaScriptContextWrapper}}() \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00019}00019     \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00021}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ae928c82fc3a9d2b72e0b01caf02a5bbb}{00021}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ae928c82fc3a9d2b72e0b01caf02a5bbb}{LuaScriptContextWrapper::init}}(lua\_State* parentState, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}* script) \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00022}00022         \textcolor{comment}{// Set the parent state.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00023}00023         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_abca1c61643424fc2be8f97bfde0e8756}{m\_parent}} = parentState;}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00025}00025         \textcolor{comment}{// Create the self's state, which is actually just a subroutine of the main.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00026}00026         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ab373f9b638c401a70a31a599349d81b7}{createThread}}();}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00028}00028         \textcolor{comment}{// Load and compile the script, saving it for later.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00029}00029         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_abf423ac350b4eadd0dbb2679f2b09683}{loadLua}}(script-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_a1995fc1d69d00731e44a4525542e4f2f}{m\_script}});}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00030}00030     \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00032}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ab373f9b638c401a70a31a599349d81b7}{00032}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ab373f9b638c401a70a31a599349d81b7}{LuaScriptContextWrapper::createThread}}() \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00033}00033         \textcolor{comment}{// Create the thread, as a subroutine of the parent -\/ the master state/thread.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00034}00034         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}} = lua\_newthread(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_abca1c61643424fc2be8f97bfde0e8756}{m\_parent}});}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00035}00035         \textcolor{comment}{// Push the state to the registry of the parent, and return the index}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00036}00036         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a2ec6e655e96ebec57235620024b9f6a5}{m\_threadReference}} = luaL\_ref(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_abca1c61643424fc2be8f97bfde0e8756}{m\_parent}}, LUA\_REGISTRYINDEX);}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00038}00038         \textcolor{comment}{// Make sure that we have no errors.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00039}00039         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a2ec6e655e96ebec57235620024b9f6a5}{m\_threadReference}} == LUA\_REFNIL) \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00040}00040             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00041}00041             \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba}{BAREError::LUA\_FAILURE}}, \textcolor{stringliteral}{"{}Failed to create Lua thread"{}});}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00042}00042         \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00043}00043     \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00045}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a9707c51bc4e1d9b3f5b827c79f3678a4}{00045}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a9707c51bc4e1d9b3f5b827c79f3678a4}{LuaScriptContextWrapper::destroy}}() \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00046}00046         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_adbedabb1bef4b251dfea089d2da0edf4}{m\_completed}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00047}00047         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}}) \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00048}00048             \textcolor{comment}{// Clean the stack}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00049}00049             lua\_settop(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}}, 0);}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00050}00050             \textcolor{comment}{// close and clean the thread}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00051}00051             lua\_close(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}});}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00052}00052             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00053}00053         \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00054}00054     \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00056}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a9e06de29f55ec9014c21ae0c22b86297}{00056}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a9e06de29f55ec9014c21ae0c22b86297}{LuaScriptContextWrapper::start}}() \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00057}00057         \textcolor{comment}{// To start a Lua script, we need to call lua\_callk to allow yielding.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00059}00059         \textcolor{comment}{// First, to call lua\_callk, we need to push the function (which we earlier stored in the registry) to the stack.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00060}00060         \textcolor{comment}{// Adds registry[m\_scriptReference] to the stack.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00061}00061         lua\_rawgeti(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}}, LUA\_REGISTRYINDEX, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a685f7bdce2eaa0e532b3b669350654d9}{m\_scriptReference}});}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00063}00063         \textcolor{comment}{// Then push arguments (of which there are none because it's just an entire script)}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00065}00065         \textcolor{comment}{// Now actually call the function, starting the script.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00066}00066         \textcolor{keywordtype}{int} nargs = 0;}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00067}00067         \textcolor{comment}{// This actually runs the script as a coroutine, so it can be yielded, etc.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00068}00068         \textcolor{keywordtype}{int} errorCode = lua\_resume(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}}, \textcolor{keyword}{nullptr}, nargs);}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00070}00070         \textcolor{comment}{// Check if there were any errors}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00071}00071         \textcolor{keywordflow}{if}(errorCode != LUA\_OK \&\& errorCode != LUA\_YIELD) \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00072}00072             \textcolor{comment}{// There is some error. Throw, and use lua\_tostring to get the error string.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00073}00073             \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba}{BAREError::LUA\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00074}00074                        \textcolor{stringliteral}{"{}Failed to run Lua script: Lua reports: Error code "{}} + std::to\_string(errorCode) + \textcolor{stringliteral}{"{} -\/ \(\backslash\)'"{}} +}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00075}00075                            lua\_tostring(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}}, -\/1));}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00076}00076             \textcolor{keywordflow}{return}; \textcolor{comment}{// we're done here.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00077}00077         \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00078}00078     \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00080}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ab7621231b56bdf66af3ebd1472fca721}{00080}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ab7621231b56bdf66af3ebd1472fca721}{LuaScriptContextWrapper::update}}() \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00081}00081         \textcolor{comment}{// Check if the function is already being delayed}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00082}00082         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ae3fe1bea17dbc1d92540d0c73daac702}{m\_yielded}}) \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00083}00083             \textcolor{comment}{// Check if there's still a delay left or if we should resume.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00084}00084             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a52e40f918a04dcb189d8f2b81a2ef534}{m\_remainingDelay}} <= 0) \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00085}00085                 \textcolor{comment}{// No delay left, set flags to false and resume}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00086}00086                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ae3fe1bea17dbc1d92540d0c73daac702}{m\_yielded}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00087}00087                 \textcolor{comment}{// Because there was no true "{}coroutine,"{} it is okay to pass nullptr as the "{}from"{} parameter.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00088}00088                 \textcolor{comment}{// Otherwise, resumes the script and replaces exactly 0 things on the stack.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00089}00089                 lua\_resume(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}}, \textcolor{keyword}{nullptr}, 0);}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00090}00090             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00091}00091                 \textcolor{comment}{// If we still have delay left, just decrement.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00092}00092                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a52e40f918a04dcb189d8f2b81a2ef534}{m\_remainingDelay}}-\/-\/;}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00093}00093             \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00094}00094         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00095}00095             \textcolor{comment}{// The function is not yielded (!)as far as we know(!)}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00096}00096             \textcolor{comment}{// Check to make sure of this}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00097}00097             \textcolor{keywordtype}{int} status = lua\_status(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}});}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00099}00099             \textcolor{comment}{// May as well check for errors}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00100}00100             \textcolor{keywordflow}{if}(status != LUA\_OK \&\& status != LUA\_YIELD) \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00101}00101                 \textcolor{comment}{// Error occurred!}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00102}00102                 \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba}{BAREError::LUA\_FAILURE}}, \textcolor{stringliteral}{"{}Lua script crashed partway through!"{}});}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00103}00103                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a9707c51bc4e1d9b3f5b827c79f3678a4}{destroy}}();}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00104}00104                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00105}00105             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(status == LUA\_YIELD) \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00106}00106                 \textcolor{comment}{// If the status is LUA\_YIELD, then its obviously yielded. Obviously the C-\/side of things doesn't know this yet}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00107}00107                 \textcolor{comment}{// So set the stuff we needed to.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00108}00108                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_ae3fe1bea17dbc1d92540d0c73daac702}{m\_yielded}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00109}00109                 \textcolor{comment}{// Get the first thing on the stack -\/ the delay() variable.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00110}00110                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a52e40f918a04dcb189d8f2b81a2ef534}{m\_remainingDelay}} = lua\_tointeger(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}}, -\/1);}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00111}00111                 \textcolor{comment}{// And remove from the stack.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00112}00112                 lua\_pop(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}}, 1);}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00113}00113             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(status == LUA\_OK) \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00114}00114                 \textcolor{comment}{// This means that the thread is completed}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00115}00115                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_adbedabb1bef4b251dfea089d2da0edf4}{m\_completed}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00116}00116             \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00117}00117         \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00118}00118     \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00120}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_abf423ac350b4eadd0dbb2679f2b09683}{00120}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_abf423ac350b4eadd0dbb2679f2b09683}{LuaScriptContextWrapper::loadLua}}(std::string\& luaStr) \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00121}00121         \textcolor{comment}{// Load the string and collect any error code. Note that this loads the script and pushes it to the stack.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00122}00122         \textcolor{keywordtype}{int} errorCode = luaL\_loadstring(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}}, (\textcolor{keywordtype}{char}*)luaStr.c\_str());}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00124}00124         \textcolor{comment}{// Check the error.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00125}00125         \textcolor{keywordflow}{if}(errorCode != LUA\_OK) \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00126}00126             \textcolor{comment}{// There is some error. Throw, and use lua\_tostring to get the error string.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00127}00127             \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba}{BAREError::LUA\_FAILURE}},}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00128}00128                        \textcolor{stringliteral}{"{}Failed to compile Lua string: Lua reports: Error code "{}} + std::to\_string(errorCode) + \textcolor{stringliteral}{"{} -\/ \(\backslash\)'"{}} +}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00129}00129                            lua\_tostring(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}}, -\/1) + \textcolor{stringliteral}{"{}\(\backslash\)'\(\backslash\)n\(\backslash\)n"{}} + luaStr + \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00130}00130             \textcolor{comment}{// At this point it makes no sense to set the script reference, as the script... doesn't exist.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00131}00131             \textcolor{keywordflow}{return}; \textcolor{comment}{// we're done here.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00132}00132         \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00133}00133 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00134}00134         \textcolor{comment}{// Now that we've loaded and compiled the script, we need to push it to the registry.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00135}00135         \textcolor{comment}{// This is a short form of popping from the stack, storing it in the registry, and returning the key.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00136}00136         \textcolor{keywordtype}{int} reference = luaL\_ref(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a78351a99305b579c07feae8a088fbc91}{m\_state}}, LUA\_REGISTRYINDEX);}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00137}00137         \textcolor{comment}{// Set the reference to the index in the registry.}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00138}00138         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a685f7bdce2eaa0e532b3b669350654d9}{m\_scriptReference}} = reference;}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00139}00139     \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00141}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a2e8c9291b16d4be7866251ea60282720}{00141}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_a2e8c9291b16d4be7866251ea60282720}{LuaScriptContextWrapper::isCompleted}}() \{}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00142}00142         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper_adbedabb1bef4b251dfea089d2da0edf4}{m\_completed}};}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00143}00143     \}}
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{_lua_script_8cpp_source_l00145}00145 \} \textcolor{comment}{// namespace BARE2D}}
+
+\end{DoxyCode}

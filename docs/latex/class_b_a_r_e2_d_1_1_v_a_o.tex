@@ -1,0 +1,312 @@
+\hypertarget{class_b_a_r_e2_d_1_1_v_a_o}{}\doxysection{BARE2D\+::VAO Class Reference}
+\label{class_b_a_r_e2_d_1_1_v_a_o}\index{BARE2D::VAO@{BARE2D::VAO}}
+
+
+A wrapper class for Open\+GL\textquotesingle{}s \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}, as well as its associated VBO and attributes.  
+
+
+
+
+{\ttfamily \#include $<$VAO.\+hpp$>$}
+
+
+
+Collaboration diagram for BARE2D\+::VAO\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_ac45b220eb9ba688dfabd47d09f6f1d57}{VAO}} ()
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a2b7969dc6793136b2e8a62b514b4ac25}{$\sim$\+VAO}} ()
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a95e6c292d64ff927870783e464ad49cd}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the necessary components, combining the VBO and \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a1932f8495f96a00b61f300b6220357da}{destroy}} ()
+\begin{DoxyCompactList}\small\item\em Releases necessary memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}{bind}} ()
+\begin{DoxyCompactList}\small\item\em Binds this vertex array object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{bind\+VBO}} ()
+\begin{DoxyCompactList}\small\item\em Binds the \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}\textquotesingle{}s VBO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{unbind}} ()
+\begin{DoxyCompactList}\small\item\em Unbinds the vao. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}{unbind\+VBO}} ()
+\begin{DoxyCompactList}\small\item\em Unbinds this \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}\textquotesingle{}s VBO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{add\+Vertex\+Attribute}} (GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Wrapper for gl\+Vertex\+Attrib\+Pointer -\/ Adds an attribute to the VBO -\/ each vertex data slot will gain some attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a77436d8b9b995f2d47e72320b65641d0}{m\+\_\+num\+Attributes}}
+\item 
+GLuint \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_ae59d724f3a57d369415c859fe9d489a2}{m\+\_\+vao\+Handle}}
+\item 
+GLuint \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaf5b31995250a7652b2003cf93338add}{m\+\_\+vbo\+Handle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A wrapper class for Open\+GL\textquotesingle{}s \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}, as well as its associated VBO and attributes. 
+
+Definition at line \mbox{\hyperlink{_v_a_o_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{_v_a_o_8hpp_source}{VAO.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_v_a_o_ac45b220eb9ba688dfabd47d09f6f1d57}\label{class_b_a_r_e2_d_1_1_v_a_o_ac45b220eb9ba688dfabd47d09f6f1d57}} 
+\index{BARE2D::VAO@{BARE2D::VAO}!VAO@{VAO}}
+\index{VAO@{VAO}!BARE2D::VAO@{BARE2D::VAO}}
+\doxysubsubsection{\texorpdfstring{VAO()}{VAO()}}
+{\footnotesize\ttfamily BARE2\+D\+::\+VAO\+::\+VAO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_a_o_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_v_a_o_8cpp_source}{VAO.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_v_a_o_8hpp_source_l00058}{m\+\_\+num\+Attributes}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_v_a_o_a2b7969dc6793136b2e8a62b514b4ac25}\label{class_b_a_r_e2_d_1_1_v_a_o_a2b7969dc6793136b2e8a62b514b4ac25}} 
+\index{BARE2D::VAO@{BARE2D::VAO}!````~VAO@{$\sim$VAO}}
+\index{````~VAO@{$\sim$VAO}!BARE2D::VAO@{BARE2D::VAO}}
+\doxysubsubsection{\texorpdfstring{$\sim$VAO()}{~VAO()}}
+{\footnotesize\ttfamily BARE2\+D\+::\+VAO\+::$\sim$\+VAO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_a_o_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_v_a_o_8cpp_source}{VAO.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}\label{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}} 
+\index{BARE2D::VAO@{BARE2D::VAO}!addVertexAttribute@{addVertexAttribute}}
+\index{addVertexAttribute@{addVertexAttribute}!BARE2D::VAO@{BARE2D::VAO}}
+\doxysubsubsection{\texorpdfstring{addVertexAttribute()}{addVertexAttribute()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+VAO\+::add\+Vertex\+Attribute (\begin{DoxyParamCaption}\item[{GLint}]{size,  }\item[{GLenum}]{type,  }\item[{GLboolean}]{normalized,  }\item[{GLsizei}]{stride,  }\item[{const void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Wrapper for gl\+Vertex\+Attrib\+Pointer -\/ Adds an attribute to the VBO -\/ each vertex data slot will gain some attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Number of components per attribute (1-\/4) \\
+\hline
+{\em type} & Type of data -\/ GL\+\_\+\+BYTE, GL\+\_\+\+UNSIGNED\+\_\+\+BYTE, GL\+\_\+\+SHORT, etc. See docs \\
+\hline
+{\em normalized} & Should the data be normalized or converted directly? (GL\+\_\+\+TRUE/\+GL\+\_\+\+FALSE) \\
+\hline
+{\em stride} & Specifies the byte offset between consecutive generic vertex attributes. If stride is 0, the generic vertex attributes are understood to be tightly packed in the array. The initial value is 0. \\
+\hline
+{\em data} & Specifies a offset of the first component of the first generic vertex attribute in the array in the data store of the buffer currently bound to the GL\+\_\+\+ARRAY\+\_\+\+BUFFER target. The initial value is 0. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_v_a_o_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{_v_a_o_8cpp_source}{VAO.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_v_a_o_8cpp_source_l00048}{bind()}}, \mbox{\hyperlink{_v_a_o_8cpp_source_l00057}{bind\+VBO()}}, \mbox{\hyperlink{_v_a_o_8hpp_source_l00058}{m\+\_\+num\+Attributes}}, and \mbox{\hyperlink{_v_a_o_8cpp_source_l00053}{unbind()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00018}{BARE2\+D\+::\+Basic\+Renderer\+::init()}}, \mbox{\hyperlink{_debug_renderer_8cpp_source_l00074}{BARE2\+D\+::\+Debug\+Renderer\+::init()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00062}{BARE2\+D\+::\+FBORenderer\+::init()}}, and \mbox{\hyperlink{_textureless_renderer_8cpp_source_l00020}{BARE2\+D\+::\+Textureless\+Renderer\+::init()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}\label{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}} 
+\index{BARE2D::VAO@{BARE2D::VAO}!bind@{bind}}
+\index{bind@{bind}!BARE2D::VAO@{BARE2D::VAO}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+VAO\+::bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Binds this vertex array object. 
+
+
+
+Definition at line \mbox{\hyperlink{_v_a_o_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{_v_a_o_8cpp_source}{VAO.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_v_a_o_8hpp_source_l00060}{m\+\_\+vao\+Handle}}.
+
+
+
+Referenced by \mbox{\hyperlink{_v_a_o_8cpp_source_l00066}{add\+Vertex\+Attribute()}}, \mbox{\hyperlink{_v_a_o_8cpp_source_l00014}{init()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00048}{BARE2\+D\+::\+Renderer\+::render()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00035}{BARE2\+D\+::\+Bumpy\+Renderer\+::render()}}, \mbox{\hyperlink{_debug_renderer_8cpp_source_l00196}{BARE2\+D\+::\+Debug\+Renderer\+::render()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00232}{BARE2\+D\+::\+FBORenderer\+::render()}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}\label{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}} 
+\index{BARE2D::VAO@{BARE2D::VAO}!bindVBO@{bindVBO}}
+\index{bindVBO@{bindVBO}!BARE2D::VAO@{BARE2D::VAO}}
+\doxysubsubsection{\texorpdfstring{bindVBO()}{bindVBO()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+VAO\+::bind\+VBO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Binds the \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}\textquotesingle{}s VBO. 
+
+
+
+Definition at line \mbox{\hyperlink{_v_a_o_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{_v_a_o_8cpp_source}{VAO.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_v_a_o_8hpp_source_l00061}{m\+\_\+vbo\+Handle}}.
+
+
+
+Referenced by \mbox{\hyperlink{_v_a_o_8cpp_source_l00066}{add\+Vertex\+Attribute()}}, \mbox{\hyperlink{_basic_renderer_8cpp_source_l00070}{BARE2\+D\+::\+Basic\+Renderer\+::create\+Render\+Batches()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00086}{BARE2\+D\+::\+Bumpy\+Renderer\+::create\+Render\+Batches()}}, \mbox{\hyperlink{_debug_renderer_8cpp_source_l00113}{BARE2\+D\+::\+Debug\+Renderer\+::create\+Render\+Batches()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00192}{BARE2\+D\+::\+FBORenderer\+::create\+Render\+Batches()}}, and \mbox{\hyperlink{_textureless_renderer_8cpp_source_l00105}{BARE2\+D\+::\+Textureless\+Renderer\+::create\+Render\+Batches()}}.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_v_a_o_a1932f8495f96a00b61f300b6220357da}\label{class_b_a_r_e2_d_1_1_v_a_o_a1932f8495f96a00b61f300b6220357da}} 
+\index{BARE2D::VAO@{BARE2D::VAO}!destroy@{destroy}}
+\index{destroy@{destroy}!BARE2D::VAO@{BARE2D::VAO}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+VAO\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Releases necessary memory. 
+
+
+
+Definition at line \mbox{\hyperlink{_v_a_o_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{_v_a_o_8cpp_source}{VAO.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_v_a_o_8hpp_source_l00058}{m\+\_\+num\+Attributes}}, \mbox{\hyperlink{_v_a_o_8hpp_source_l00060}{m\+\_\+vao\+Handle}}, \mbox{\hyperlink{_v_a_o_8hpp_source_l00061}{m\+\_\+vbo\+Handle}}, and \mbox{\hyperlink{_v_a_o_8cpp_source_l00053}{unbind()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_renderer_8cpp_source_l00043}{BARE2\+D\+::\+Renderer\+::destroy()}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_v_a_o_a95e6c292d64ff927870783e464ad49cd}\label{class_b_a_r_e2_d_1_1_v_a_o_a95e6c292d64ff927870783e464ad49cd}} 
+\index{BARE2D::VAO@{BARE2D::VAO}!init@{init}}
+\index{init@{init}!BARE2D::VAO@{BARE2D::VAO}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+VAO\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the necessary components, combining the VBO and \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_v_a_o_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{_v_a_o_8cpp_source}{VAO.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_v_a_o_8cpp_source_l00048}{bind()}}, \mbox{\hyperlink{_v_a_o_8hpp_source_l00060}{m\+\_\+vao\+Handle}}, \mbox{\hyperlink{_v_a_o_8hpp_source_l00061}{m\+\_\+vbo\+Handle}}, and \mbox{\hyperlink{_v_a_o_8cpp_source_l00053}{unbind()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_renderer_8cpp_source_l00025}{BARE2\+D\+::\+Renderer\+::init()}}.
+
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}\label{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}} 
+\index{BARE2D::VAO@{BARE2D::VAO}!unbind@{unbind}}
+\index{unbind@{unbind}!BARE2D::VAO@{BARE2D::VAO}}
+\doxysubsubsection{\texorpdfstring{unbind()}{unbind()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+VAO\+::unbind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unbinds the vao. 
+
+
+
+Definition at line \mbox{\hyperlink{_v_a_o_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{_v_a_o_8cpp_source}{VAO.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_v_a_o_8cpp_source_l00066}{add\+Vertex\+Attribute()}}, \mbox{\hyperlink{_v_a_o_8cpp_source_l00033}{destroy()}}, \mbox{\hyperlink{_v_a_o_8cpp_source_l00014}{init()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00048}{BARE2\+D\+::\+Renderer\+::render()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00035}{BARE2\+D\+::\+Bumpy\+Renderer\+::render()}}, \mbox{\hyperlink{_debug_renderer_8cpp_source_l00196}{BARE2\+D\+::\+Debug\+Renderer\+::render()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00232}{BARE2\+D\+::\+FBORenderer\+::render()}}.
+
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}\label{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}} 
+\index{BARE2D::VAO@{BARE2D::VAO}!unbindVBO@{unbindVBO}}
+\index{unbindVBO@{unbindVBO}!BARE2D::VAO@{BARE2D::VAO}}
+\doxysubsubsection{\texorpdfstring{unbindVBO()}{unbindVBO()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+VAO\+::unbind\+VBO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unbinds this \mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o}{VAO}}\textquotesingle{}s VBO. 
+
+
+
+Definition at line \mbox{\hyperlink{_v_a_o_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{_v_a_o_8cpp_source}{VAO.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00070}{BARE2\+D\+::\+Basic\+Renderer\+::create\+Render\+Batches()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00086}{BARE2\+D\+::\+Bumpy\+Renderer\+::create\+Render\+Batches()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00192}{BARE2\+D\+::\+FBORenderer\+::create\+Render\+Batches()}}, and \mbox{\hyperlink{_textureless_renderer_8cpp_source_l00105}{BARE2\+D\+::\+Textureless\+Renderer\+::create\+Render\+Batches()}}.
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_v_a_o_a77436d8b9b995f2d47e72320b65641d0}\label{class_b_a_r_e2_d_1_1_v_a_o_a77436d8b9b995f2d47e72320b65641d0}} 
+\index{BARE2D::VAO@{BARE2D::VAO}!m\_numAttributes@{m\_numAttributes}}
+\index{m\_numAttributes@{m\_numAttributes}!BARE2D::VAO@{BARE2D::VAO}}
+\doxysubsubsection{\texorpdfstring{m\_numAttributes}{m\_numAttributes}}
+{\footnotesize\ttfamily unsigned int BARE2\+D\+::\+VAO\+::m\+\_\+num\+Attributes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_v_a_o_8hpp_source_l00058}{58}} of file \mbox{\hyperlink{_v_a_o_8hpp_source}{VAO.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_v_a_o_8cpp_source_l00066}{add\+Vertex\+Attribute()}}, \mbox{\hyperlink{_v_a_o_8cpp_source_l00033}{destroy()}}, and \mbox{\hyperlink{_v_a_o_8cpp_source_l00005}{VAO()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_v_a_o_ae59d724f3a57d369415c859fe9d489a2}\label{class_b_a_r_e2_d_1_1_v_a_o_ae59d724f3a57d369415c859fe9d489a2}} 
+\index{BARE2D::VAO@{BARE2D::VAO}!m\_vaoHandle@{m\_vaoHandle}}
+\index{m\_vaoHandle@{m\_vaoHandle}!BARE2D::VAO@{BARE2D::VAO}}
+\doxysubsubsection{\texorpdfstring{m\_vaoHandle}{m\_vaoHandle}}
+{\footnotesize\ttfamily GLuint BARE2\+D\+::\+VAO\+::m\+\_\+vao\+Handle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_v_a_o_8hpp_source_l00060}{60}} of file \mbox{\hyperlink{_v_a_o_8hpp_source}{VAO.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_v_a_o_8cpp_source_l00048}{bind()}}, \mbox{\hyperlink{_v_a_o_8cpp_source_l00033}{destroy()}}, and \mbox{\hyperlink{_v_a_o_8cpp_source_l00014}{init()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_v_a_o_aaf5b31995250a7652b2003cf93338add}\label{class_b_a_r_e2_d_1_1_v_a_o_aaf5b31995250a7652b2003cf93338add}} 
+\index{BARE2D::VAO@{BARE2D::VAO}!m\_vboHandle@{m\_vboHandle}}
+\index{m\_vboHandle@{m\_vboHandle}!BARE2D::VAO@{BARE2D::VAO}}
+\doxysubsubsection{\texorpdfstring{m\_vboHandle}{m\_vboHandle}}
+{\footnotesize\ttfamily GLuint BARE2\+D\+::\+VAO\+::m\+\_\+vbo\+Handle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_v_a_o_8hpp_source_l00061}{61}} of file \mbox{\hyperlink{_v_a_o_8hpp_source}{VAO.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_v_a_o_8cpp_source_l00057}{bind\+VBO()}}, \mbox{\hyperlink{_v_a_o_8cpp_source_l00033}{destroy()}}, and \mbox{\hyperlink{_v_a_o_8cpp_source_l00014}{init()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\mbox{\hyperlink{_v_a_o_8hpp}{VAO.\+hpp}}\item 
+Source/\mbox{\hyperlink{_v_a_o_8cpp}{VAO.\+cpp}}\end{DoxyCompactItemize}

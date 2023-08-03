@@ -1,0 +1,63 @@
+\hypertarget{_lua_context_manager_8hpp_source}{}\doxysection{Lua\+Context\+Manager.\+hpp}
+\label{_lua_context_manager_8hpp_source}\index{Source/LuaContextManager.hpp@{Source/LuaContextManager.hpp}}
+\mbox{\hyperlink{_lua_context_manager_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00003}00003 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00005}00005 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00007}00007     \textcolor{keyword}{class }LuaScriptContextWrapper;}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00008}00008     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00009}00009 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00010}00010 \textcolor{comment}{     * @class LuaContextManager}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00011}00011 \textcolor{comment}{     * @file LuaContextManager.hpp}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00012}00012 \textcolor{comment}{     * @brief NOTE: This is a singleton class. The LuaContextManager, well, manages the Lua Contexts which the ScriptEngine has created. These, generally, are scripts which are running. This class simply updates them and handles delay functions and the like.}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00013}00013 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00014}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager}{00014}}     \textcolor{keyword}{class }\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager}{LuaContextManager}}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00015}00015     \{}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00016}00016     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00017}00017         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager}{LuaContextManager}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager_a0352be9754f64024631091f1e2b73c15}{getInstance}}();}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00018}00018         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager_a79277eeed613561fe36bf614da5854c2}{destroyInstance}}();}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00019}00019 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00020}00020 \textcolor{comment}{        /**}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00021}00021 \textcolor{comment}{         * @brief Updates all of the context wrappers, pausing, removing (if finished), or resuming them as is correct.}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00022}00022 \textcolor{comment}{         */}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00023}00023         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager_a5d5afd3c292c652399de872b7d2781da}{update}}();}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00024}00024         \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00025}00025 \textcolor{comment}{        /**}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00026}00026 \textcolor{comment}{         * @brief Adds a context wrapper to the map.}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00027}00027 \textcolor{comment}{         * @param id The ID that the ScriptQueue gave the script all those cycles ago}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00028}00028 \textcolor{comment}{         * @param context The context to insert in the map.}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00029}00029 \textcolor{comment}{         */}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00030}00030         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager_ae5cd0d9c17a813a06fb0f5e8b702f06d}{addContext}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper}{LuaScriptContextWrapper}}* context);}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00031}00031         \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00032}00032 \textcolor{comment}{        /**}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00033}00033 \textcolor{comment}{         * @brief Gets a context wrapper from the map}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00034}00034 \textcolor{comment}{         * @param id The ID of the context, given by the LuaScriptQueue::addScript() call.}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00035}00035 \textcolor{comment}{         * @return A pointer to the wrapper, and a nullptr if it doesn't exist.}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00036}00036 \textcolor{comment}{         */}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00037}00037         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper}{LuaScriptContextWrapper}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager_acebd036b54fb1ce96a3d65fbe5ba03f3}{getContext}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00039}00039     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00040}00040         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager_a6ef7c994b12b8637f33c9cfe875c101d}{LuaContextManager}}();}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00041}00041         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager_abc0020486b657d9fe562a912ed49b360}{\string~LuaContextManager}}();}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00042}00042         }
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00043}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager_a16d3c3ad3e54bb72284e982bfdcbab3a}{00043}}         \textcolor{keyword}{static} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager}{LuaContextManager}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager_a16d3c3ad3e54bb72284e982bfdcbab3a}{m\_instance}};}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00044}00044 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00045}00045 \textcolor{comment}{        /**}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00046}00046 \textcolor{comment}{         * @brief Removes a context wrapper from the map}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00047}00047 \textcolor{comment}{         * @param id The ID of the context to remove from the map.}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00048}00048 \textcolor{comment}{         */}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00049}00049         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager_a6e82021ee77b8f7b0ad91209db8058c1}{removeContext}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00051}00051         \textcolor{comment}{// All of the scripts}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00052}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager_a78d44984a684e20f1ef986914023b8ba}{00052}}         std::map<unsigned int, LuaScriptContextWrapper*> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_context_manager_a78d44984a684e20f1ef986914023b8ba}{m\_contexts}};}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00054}00054     \};}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00056}00056 \}}
+\DoxyCodeLine{\Hypertarget{_lua_context_manager_8hpp_source_l00057}00057 }
+
+\end{DoxyCode}

@@ -1,0 +1,16 @@
+digraph "utf8::unchecked::utf16to8"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="utf8::unchecked::utf16to8",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="utf8::unchecked::append",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceutf8_1_1unchecked.html#acab3a56b1772ed871f36757883d63788",tooltip=" "];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="utf8::internal::is\l_lead_surrogate",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceutf8_1_1internal.html#a1a4095fb207096e04f94f21eb23d2723",tooltip=" "];
+  Node1 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="utf8::internal::mask16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceutf8_1_1internal.html#ab1e3c2fe2296ac185993a183d1bd0678",tooltip=" "];
+}

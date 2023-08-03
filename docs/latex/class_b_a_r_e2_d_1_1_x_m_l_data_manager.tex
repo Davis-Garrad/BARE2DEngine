@@ -1,0 +1,552 @@
+\hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager}{}\doxysection{BARE2D\+::XMLData\+Manager Class Reference}
+\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager}\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+
+
+A singleton class that statically manages all XML data, including read and write operations.  
+
+
+
+
+{\ttfamily \#include $<$XMLData\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for BARE2D\+::XMLData\+Manager\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+template$<$$>$ bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a55e5ab64ecc21da971e5ab21295ab32b}{read\+Value}} (rapidxml\+::xml\+\_\+node$<$$>$ $\ast$parent, std\+::string value\+Name, std\+::string \&variable)
+\item 
+template$<$$>$ bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_afd322778b8321b5e030784fa8d4168cc}{read\+Value}} (rapidxml\+::xml\+\_\+node$<$$>$ $\ast$parent, std\+::string value\+Name, unsigned int \&variable)
+\item 
+template$<$$>$ bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a9869067f3dd378d45365f33492d0494d}{read\+Value}} (rapidxml\+::xml\+\_\+node$<$$>$ $\ast$parent, std\+::string value\+Name, std\+::vector$<$ unsigned int $>$ \&variable)
+\item 
+template$<$$>$ bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a11c18a72f2100c1406fe203979b1c333}{read\+Value}} (rapidxml\+::xml\+\_\+node$<$$>$ $\ast$parent, std\+::string value\+Name, int \&variable)
+\item 
+template$<$$>$ bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_aaefe53ce8b0f8cc23ee3b53c2fb41bf4}{read\+Value}} (rapidxml\+::xml\+\_\+node$<$$>$ $\ast$parent, std\+::string value\+Name, float \&variable)
+\item 
+template$<$$>$ bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ad8a9cfa09a7a5901d79b50b7ab92a863}{read\+Value}} (rapidxml\+::xml\+\_\+node$<$$>$ $\ast$parent, std\+::string value\+Name, std\+::vector$<$ float $>$ \&variable)
+\item 
+template$<$$>$ bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_afe95eafa0657855d0cb0ec302a192f5c}{read\+Value}} (rapidxml\+::xml\+\_\+node$<$$>$ $\ast$parent, std\+::string value\+Name, bool \&variable)
+\item 
+template$<$$>$ bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a3362fd42cbb0523099cf50618f2fbbb1}{read\+Value}} (rapidxml\+::xml\+\_\+node$<$$>$ $\ast$parent, std\+::string value\+Name, std\+::vector$<$ bool $>$ \&variable)
+\item 
+template$<$$>$ bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_aeafe7c60f29aba730eabb472e34dc65f}{read\+Value}} (rapidxml\+::xml\+\_\+node$<$$>$ $\ast$parent, std\+::string value\+Name, glm\+::vec2 \&variable)
+\item 
+template$<$$>$ bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a5b5f29dbc39d46b6241cfd58514c30a3}{read\+Value}} (rapidxml\+::xml\+\_\+node$<$$>$ $\ast$parent, std\+::string value\+Name, std\+::vector$<$ glm\+::vec2 $>$ \&variable)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ac4a9f3f5c2a496e2df493a10df0003d3}{load\+XML}} (std\+::string filepath)
+\begin{DoxyCompactList}\small\item\em Loads all of the files from the filepath that end in .xml to the caches. Does not clear caches. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_af9f6c07f0c2cecffd0ffde59174d4621}{save\+XML}} (std\+::string filepath)
+\begin{DoxyCompactList}\small\item\em Writes all of the currently cached data to the data\textquotesingle{}s respective files in a folder at filepath. Does not clear caches. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ae5088e0d5978b1acfc8264cf26c974c0}{add\+Data\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Adds a type of data that can be read. Make sure that the custom data type\textquotesingle{}s node\+Name is set. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ab2c2021b2cb121395139f81735a82d35}{add\+Data}} (\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Adds a piece of data to the cache, in the appropriate sub-\/cache. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ad0e4ce4a07362864f4493ff0a0c5929f}{get\+Data}} (std\+::string data\+Type, unsigned int key)
+\begin{DoxyCompactList}\small\item\em Finds some data in the subcache. \end{DoxyCompactList}\item 
+static unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ad1eda009d1ee739e4795d954a9fba092}{get\+Data\+Count}} (std\+::string data\+Type)
+\item 
+static void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a4471f2cadfa727e9a3ef81b937ab8687}{clear\+Cache}} ()
+\begin{DoxyCompactList}\small\item\em Clears the various caches and subcaches that the class uses. Useful for refreshes. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a6cdad1dd229afdea64a81e9bb591e547}{get\+Data\+Type}} (std\+::string data\+Type)
+\begin{DoxyCompactList}\small\item\em Provides a copy of some data type added by the add\+Data\+Type function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a64420cd9463430e186035296d982c553}{write\+XMLData}} (std\+::ofstream \&file, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ unsigned int, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}} $>$ $\ast$data)
+\begin{DoxyCompactList}\small\item\em Writes a single subcache of data to a single file. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a85100a24e685d21a8f2af8f87def391a}{read\+XMLData}} (std\+::ifstream \&file, std\+::string data\+Type)
+\begin{DoxyCompactList}\small\item\em Reads a single subcache from a single file. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}{read\+Value}} (rapidxml\+::xml\+\_\+node$<$$>$ $\ast$parent, std\+::string value\+Name, T \&variable)
+\begin{DoxyCompactList}\small\item\em Reads a value from a node. Templated for almost any primitive. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ unsigned int, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}} $>$ $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_aac1a58615a6a568a2f7d0e0f1e8f170c}{get\+Data\+Cache}} (std\+::string data\+Type)
+\begin{DoxyCompactList}\small\item\em Returns a cache for a certain type of data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ std\+::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ unsigned int, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}} $>$ $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a2de577045a9016c8f7fd538919d6e664}{m\+\_\+stored\+Data}}
+\item 
+static std\+::unordered\+\_\+map$<$ std\+::string, std\+::function$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}} $\ast$()$>$ $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a3e05e9442cc78303a489fb87ce201abc}{m\+\_\+data\+Typing\+Functions}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a5f37fe695198fde75eef3c1593991789}{XMLData}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A singleton class that statically manages all XML data, including read and write operations. 
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8hpp_source_l00017}{17}} of file \mbox{\hyperlink{_x_m_l_data_manager_8hpp_source}{XMLData\+Manager.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ab2c2021b2cb121395139f81735a82d35}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ab2c2021b2cb121395139f81735a82d35}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!addData@{addData}}
+\index{addData@{addData}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{addData()}{addData()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+XMLData\+Manager\+::add\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}} $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Adds a piece of data to the cache, in the appropriate sub-\/cache. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A pointer to the data to be added. data-\/\texorpdfstring{$>$}{>}node\+Name must be set for appropriate sub-\/caching. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00158}{158}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a941ca4d438d928c350542ca14eff7060}{BARE2\+D\+::\+Cache$<$ S, T $>$\+::add\+Item()}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache_a9b565e37194850c038b5bb3c3a784567}{BARE2\+D\+::\+Cache$<$ S, T $>$\+::find\+Item()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00475}{get\+Data\+Cache()}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00141}{BARE2\+D\+::\+XMLData\+::id}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00140}{BARE2\+D\+::\+XMLData\+::name}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00142}{BARE2\+D\+::\+XMLData\+::node\+Name}}, \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00190}{BARE2\+D\+::throw\+Error()}}, and \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{BARE2\+D\+::\+XML\+\_\+\+FAILURE}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00057}{read\+XMLData()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ae5088e0d5978b1acfc8264cf26c974c0}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ae5088e0d5978b1acfc8264cf26c974c0}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!addDataType@{addDataType}}
+\index{addDataType@{addDataType}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{addDataType()}{addDataType()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void BARE2\+D\+::\+XMLData\+Manager\+::add\+Data\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Adds a type of data that can be read. Make sure that the custom data type\textquotesingle{}s node\+Name is set. 
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a4471f2cadfa727e9a3ef81b937ab8687}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a4471f2cadfa727e9a3ef81b937ab8687}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!clearCache@{clearCache}}
+\index{clearCache@{clearCache}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{clearCache()}{clearCache()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+XMLData\+Manager\+::clear\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Clears the various caches and subcaches that the class uses. Useful for refreshes. 
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00487}{487}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_x_m_l_data_manager_8hpp_source_l00105}{m\+\_\+data\+Typing\+Functions}}, and \mbox{\hyperlink{_x_m_l_data_manager_8hpp_source_l00104}{m\+\_\+stored\+Data}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ad0e4ce4a07362864f4493ff0a0c5929f}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ad0e4ce4a07362864f4493ff0a0c5929f}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!getData@{getData}}
+\index{getData@{getData}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T BARE2\+D\+::\+XMLData\+Manager\+::get\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{data\+Type,  }\item[{unsigned int}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Finds some data in the subcache. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Type} & The string type of the data to get. \\
+\hline
+{\em key} & The ID of the data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A copy of the data, as nobody should be modifying the cached data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_aac1a58615a6a568a2f7d0e0f1e8f170c}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_aac1a58615a6a568a2f7d0e0f1e8f170c}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!getDataCache@{getDataCache}}
+\index{getDataCache@{getDataCache}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{getDataCache()}{getDataCache()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ unsigned int, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}} $>$ $\ast$ BARE2\+D\+::\+XMLData\+Manager\+::get\+Data\+Cache (\begin{DoxyParamCaption}\item[{std\+::string}]{data\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Returns a cache for a certain type of data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Type} & The string type of the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the subcache. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00475}{475}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_logger_8cpp_source_l00034}{BARE2\+D\+::\+Logger\+::get\+Instance()}}, \mbox{\hyperlink{_logger_8cpp_source_l00042}{BARE2\+D\+::\+Logger\+::log()}}, and \mbox{\hyperlink{_x_m_l_data_manager_8hpp_source_l00104}{m\+\_\+stored\+Data}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00158}{add\+Data()}}, and \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00153}{get\+Data\+Count()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ad1eda009d1ee739e4795d954a9fba092}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ad1eda009d1ee739e4795d954a9fba092}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!getDataCount@{getDataCount}}
+\index{getDataCount@{getDataCount}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{getDataCount()}{getDataCount()}}
+{\footnotesize\ttfamily unsigned int BARE2\+D\+::\+XMLData\+Manager\+::get\+Data\+Count (\begin{DoxyParamCaption}\item[{std\+::string}]{data\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Type} & The string type of the data to get info on. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of elements of the type of data. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00153}{153}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00475}{get\+Data\+Cache()}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a6cdad1dd229afdea64a81e9bb591e547}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a6cdad1dd229afdea64a81e9bb591e547}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!getDataType@{getDataType}}
+\index{getDataType@{getDataType}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{getDataType()}{getDataType()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}} BARE2\+D\+::\+XMLData\+Manager\+::get\+Data\+Type (\begin{DoxyParamCaption}\item[{std\+::string}]{data\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Provides a copy of some data type added by the add\+Data\+Type function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Type} & The string identifier for the type of data. In other words, node\+Name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A copy of some type of data, complete with node\+Name and attributes set. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ac4a9f3f5c2a496e2df493a10df0003d3}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ac4a9f3f5c2a496e2df493a10df0003d3}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!loadXML@{loadXML}}
+\index{loadXML@{loadXML}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{loadXML()}{loadXML()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+XMLData\+Manager\+::load\+XML (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Loads all of the files from the filepath that end in .xml to the caches. Does not clear caches. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & The path of the folder of files to load, or the path of an actual singular file to load. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_filesystem_8cpp_source_l00029}{BARE2\+D\+::\+Filesystem\+::get\+Files\+In()}}, \mbox{\hyperlink{_logger_8cpp_source_l00034}{BARE2\+D\+::\+Logger\+::get\+Instance()}}, \mbox{\hyperlink{_logger_8cpp_source_l00042}{BARE2\+D\+::\+Logger\+::log()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00057}{read\+XMLData()}}, \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00178}{BARE2\+D\+::throw\+Fatal\+Error()}}, and \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{BARE2\+D\+::\+XML\+\_\+\+FAILURE}}.
+
+Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_afe95eafa0657855d0cb0ec302a192f5c}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_afe95eafa0657855d0cb0ec302a192f5c}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!readValue@{readValue}}
+\index{readValue@{readValue}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{readValue()}{readValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/11]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+bool BARE2\+D\+::\+XMLData\+Manager\+::read\+Value (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{parent,  }\item[{std\+::string}]{value\+Name,  }\item[{bool \&}]{variable }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00339}{339}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_aaefe53ce8b0f8cc23ee3b53c2fb41bf4}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_aaefe53ce8b0f8cc23ee3b53c2fb41bf4}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!readValue@{readValue}}
+\index{readValue@{readValue}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{readValue()}{readValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/11]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+bool BARE2\+D\+::\+XMLData\+Manager\+::read\+Value (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{parent,  }\item[{std\+::string}]{value\+Name,  }\item[{float \&}]{variable }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00276}{276}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_aeafe7c60f29aba730eabb472e34dc65f}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_aeafe7c60f29aba730eabb472e34dc65f}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!readValue@{readValue}}
+\index{readValue@{readValue}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{readValue()}{readValue()}\hspace{0.1cm}{\footnotesize\ttfamily [3/11]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+bool BARE2\+D\+::\+XMLData\+Manager\+::read\+Value (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{parent,  }\item[{std\+::string}]{value\+Name,  }\item[{glm\+::vec2 \&}]{variable }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00402}{402}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a11c18a72f2100c1406fe203979b1c333}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a11c18a72f2100c1406fe203979b1c333}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!readValue@{readValue}}
+\index{readValue@{readValue}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{readValue()}{readValue()}\hspace{0.1cm}{\footnotesize\ttfamily [4/11]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+bool BARE2\+D\+::\+XMLData\+Manager\+::read\+Value (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{parent,  }\item[{std\+::string}]{value\+Name,  }\item[{int \&}]{variable }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00256}{256}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a55e5ab64ecc21da971e5ab21295ab32b}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a55e5ab64ecc21da971e5ab21295ab32b}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!readValue@{readValue}}
+\index{readValue@{readValue}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{readValue()}{readValue()}\hspace{0.1cm}{\footnotesize\ttfamily [5/11]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+bool BARE2\+D\+::\+XMLData\+Manager\+::read\+Value (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{parent,  }\item[{std\+::string}]{value\+Name,  }\item[{std\+::string \&}]{variable }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00173}{173}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a3362fd42cbb0523099cf50618f2fbbb1}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a3362fd42cbb0523099cf50618f2fbbb1}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!readValue@{readValue}}
+\index{readValue@{readValue}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{readValue()}{readValue()}\hspace{0.1cm}{\footnotesize\ttfamily [6/11]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+bool BARE2\+D\+::\+XMLData\+Manager\+::read\+Value (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{parent,  }\item[{std\+::string}]{value\+Name,  }\item[{std\+::vector$<$ bool $>$ \&}]{variable }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00360}{360}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ad8a9cfa09a7a5901d79b50b7ab92a863}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_ad8a9cfa09a7a5901d79b50b7ab92a863}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!readValue@{readValue}}
+\index{readValue@{readValue}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{readValue()}{readValue()}\hspace{0.1cm}{\footnotesize\ttfamily [7/11]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+bool BARE2\+D\+::\+XMLData\+Manager\+::read\+Value (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{parent,  }\item[{std\+::string}]{value\+Name,  }\item[{std\+::vector$<$ float $>$ \&}]{variable }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00297}{297}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a5b5f29dbc39d46b6241cfd58514c30a3}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a5b5f29dbc39d46b6241cfd58514c30a3}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!readValue@{readValue}}
+\index{readValue@{readValue}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{readValue()}{readValue()}\hspace{0.1cm}{\footnotesize\ttfamily [8/11]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+bool BARE2\+D\+::\+XMLData\+Manager\+::read\+Value (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{parent,  }\item[{std\+::string}]{value\+Name,  }\item[{std\+::vector$<$ glm\+::vec2 $>$ \&}]{variable }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00430}{430}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a9869067f3dd378d45365f33492d0494d}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a9869067f3dd378d45365f33492d0494d}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!readValue@{readValue}}
+\index{readValue@{readValue}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{readValue()}{readValue()}\hspace{0.1cm}{\footnotesize\ttfamily [9/11]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+bool BARE2\+D\+::\+XMLData\+Manager\+::read\+Value (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{parent,  }\item[{std\+::string}]{value\+Name,  }\item[{std\+::vector$<$ unsigned int $>$ \&}]{variable }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00214}{214}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a52c2b1c0d544d8a1314f09ec413df34b}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!readValue@{readValue}}
+\index{readValue@{readValue}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{readValue()}{readValue()}\hspace{0.1cm}{\footnotesize\ttfamily [10/11]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static bool BARE2\+D\+::\+XMLData\+Manager\+::read\+Value (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{parent,  }\item[{std\+::string}]{value\+Name,  }\item[{T \&}]{variable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Reads a value from a node. Templated for almost any primitive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & A pointer to the node of the parent data. \\
+\hline
+{\em value\+Name} & The \char`\"{}node\+Name\char`\"{} of the value to be read. \\
+\hline
+{\em variable} & The return variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, false on failure. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00218}{BARE2\+D\+::\+XMLData\+::read()}}.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_afd322778b8321b5e030784fa8d4168cc}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_afd322778b8321b5e030784fa8d4168cc}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!readValue@{readValue}}
+\index{readValue@{readValue}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{readValue()}{readValue()}\hspace{0.1cm}{\footnotesize\ttfamily [11/11]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+bool BARE2\+D\+::\+XMLData\+Manager\+::read\+Value (\begin{DoxyParamCaption}\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{parent,  }\item[{std\+::string}]{value\+Name,  }\item[{unsigned int \&}]{variable }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00193}{193}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a85100a24e685d21a8f2af8f87def391a}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a85100a24e685d21a8f2af8f87def391a}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!readXMLData@{readXMLData}}
+\index{readXMLData@{readXMLData}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{readXMLData()}{readXMLData()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+XMLData\+Manager\+::read\+XMLData (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file,  }\item[{std\+::string}]{data\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Reads a single subcache from a single file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file to read from. \\
+\hline
+{\em data\+Type} & The node\+Name of the data to read. This will be the key for the cache. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00158}{add\+Data()}}, \mbox{\hyperlink{_logger_8cpp_source_l00034}{BARE2\+D\+::\+Logger\+::get\+Instance()}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00141}{BARE2\+D\+::\+XMLData\+::id}}, \mbox{\hyperlink{_logger_8cpp_source_l00042}{BARE2\+D\+::\+Logger\+::log()}}, \mbox{\hyperlink{_x_m_l_data_manager_8hpp_source_l00105}{m\+\_\+data\+Typing\+Functions}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00140}{BARE2\+D\+::\+XMLData\+::name}}, \mbox{\hyperlink{_x_m_l_data_types_8hpp_source_l00142}{BARE2\+D\+::\+XMLData\+::node\+Name}}, \mbox{\hyperlink{_x_m_l_data_types_8cpp_source_l00218}{BARE2\+D\+::\+XMLData\+::read()}}, \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00178}{BARE2\+D\+::throw\+Fatal\+Error()}}, and \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{BARE2\+D\+::\+XML\+\_\+\+FAILURE}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00018}{load\+XML()}}.
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_af9f6c07f0c2cecffd0ffde59174d4621}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_af9f6c07f0c2cecffd0ffde59174d4621}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!saveXML@{saveXML}}
+\index{saveXML@{saveXML}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{saveXML()}{saveXML()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+XMLData\+Manager\+::save\+XML (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Writes all of the currently cached data to the data\textquotesingle{}s respective files in a folder at filepath. Does not clear caches. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & The path of the folder of files to save. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00103}{103}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_logger_8cpp_source_l00034}{BARE2\+D\+::\+Logger\+::get\+Instance()}}, \mbox{\hyperlink{_logger_8cpp_source_l00042}{BARE2\+D\+::\+Logger\+::log()}}, \mbox{\hyperlink{_x_m_l_data_manager_8hpp_source_l00104}{m\+\_\+stored\+Data}}, \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00178}{BARE2\+D\+::throw\+Fatal\+Error()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00130}{write\+XMLData()}}, and \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{BARE2\+D\+::\+XML\+\_\+\+FAILURE}}.
+
+Here is the call graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a64420cd9463430e186035296d982c553}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a64420cd9463430e186035296d982c553}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!writeXMLData@{writeXMLData}}
+\index{writeXMLData@{writeXMLData}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{writeXMLData()}{writeXMLData()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+XMLData\+Manager\+::write\+XMLData (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{file,  }\item[{\mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ unsigned int, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}} $>$ $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Writes a single subcache of data to a single file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file to write the data to \\
+\hline
+{\em data} & A pointer to the subcache to write \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00130}{130}} of file \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source}{XMLData\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_logger_8cpp_source_l00034}{BARE2\+D\+::\+Logger\+::get\+Instance()}}, and \mbox{\hyperlink{_logger_8cpp_source_l00042}{BARE2\+D\+::\+Logger\+::log()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00103}{save\+XML()}}.
+
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a5f37fe695198fde75eef3c1593991789}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a5f37fe695198fde75eef3c1593991789}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!XMLData@{XMLData}}
+\index{XMLData@{XMLData}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{XMLData}{XMLData}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{_x_m_l_data_manager_8hpp_source}{XMLData\+Manager.\+hpp}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a3e05e9442cc78303a489fb87ce201abc}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a3e05e9442cc78303a489fb87ce201abc}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!m\_dataTypingFunctions@{m\_dataTypingFunctions}}
+\index{m\_dataTypingFunctions@{m\_dataTypingFunctions}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{m\_dataTypingFunctions}{m\_dataTypingFunctions}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, std\+::function$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}} $\ast$()$>$ $>$ BARE2\+D\+::\+XMLData\+Manager\+::m\+\_\+data\+Typing\+Functions\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8hpp_source_l00105}{105}} of file \mbox{\hyperlink{_x_m_l_data_manager_8hpp_source}{XMLData\+Manager.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00487}{clear\+Cache()}}, and \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00057}{read\+XMLData()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a2de577045a9016c8f7fd538919d6e664}\label{class_b_a_r_e2_d_1_1_x_m_l_data_manager_a2de577045a9016c8f7fd538919d6e664}} 
+\index{BARE2D::XMLDataManager@{BARE2D::XMLDataManager}!m\_storedData@{m\_storedData}}
+\index{m\_storedData@{m\_storedData}!BARE2D::XMLDataManager@{BARE2D::XMLDataManager}}
+\doxysubsubsection{\texorpdfstring{m\_storedData}{m\_storedData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ std\+::string, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_cache}{Cache}}$<$ unsigned int, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}} $>$ $>$ BARE2\+D\+::\+XMLData\+Manager\+::m\+\_\+stored\+Data\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_m_l_data_manager_8hpp_source_l00104}{104}} of file \mbox{\hyperlink{_x_m_l_data_manager_8hpp_source}{XMLData\+Manager.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00487}{clear\+Cache()}}, \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00475}{get\+Data\+Cache()}}, and \mbox{\hyperlink{_x_m_l_data_manager_8cpp_source_l00103}{save\+XML()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\mbox{\hyperlink{_x_m_l_data_manager_8hpp}{XMLData\+Manager.\+hpp}}\item 
+Source/\mbox{\hyperlink{_x_m_l_data_manager_8cpp}{XMLData\+Manager.\+cpp}}\end{DoxyCompactItemize}

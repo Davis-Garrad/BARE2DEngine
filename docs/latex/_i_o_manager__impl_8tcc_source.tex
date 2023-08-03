@@ -1,0 +1,40 @@
+\hypertarget{_i_o_manager__impl_8tcc_source}{}\doxysection{IOManager\+\_\+impl.\+tcc}
+\label{_i_o_manager__impl_8tcc_source}\index{Source/IOManager\_impl.tcc@{Source/IOManager\_impl.tcc}}
+\mbox{\hyperlink{_i_o_manager__impl_8tcc}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00001}00001 \#pragma once}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00003}00003 \#include "{}Logger.hpp"{}}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00005}00005 namespace BARE2D \{}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00007}00007     template<typename T>}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00008}00008     bool IOManager::readFileToBuffer(std::string\& filepath, std::vector<T>\& buf, std::ios\_base::openmode mode/** = std::ios::binary*/) \{}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00009}00009         std::ifstream file(filepath, mode);}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00010}00010         }
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00011}00011         if(file.fail()) \{}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00012}00012             Logger::getInstance()-\/>log("{}Failed to load file to buffer: "{} + filepath);}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00013}00013             return false;}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00014}00014         \}}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00015}00015         }
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00016}00016         // Seek to the end to get the file size}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00017}00017         file.seekg(0, std::ios::end);}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00018}00018         unsigned int fileSize = (unsigned int)file.tellg();}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00019}00019         }
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00020}00020         // Go back to the start}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00021}00021         file.seekg(0, std::ios::beg);}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00022}00022         fileSize -\/= file.tellg();}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00023}00023         }
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00024}00024         // Now read fileSize bytes}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00025}00025         buf.resize(fileSize);}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00026}00026         file.read((char*)\&(buf[0]), fileSize);}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00027}00027         }
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00028}00028         // Close it up and return! Job done.}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00029}00029         file.close();}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00030}00030         }
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00031}00031         return true;}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00032}00032     \}}
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00033}00033     }
+\DoxyCodeLine{\Hypertarget{_i_o_manager__impl_8tcc_source_l00034}00034 \}}
+
+\end{DoxyCode}

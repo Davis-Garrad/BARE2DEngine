@@ -1,0 +1,620 @@
+\hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer}{}\doxysection{BARE2D\+::FBORenderer Class Reference}
+\label{class_b_a_r_e2_d_1_1_f_b_o_renderer}\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+
+
+The \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer}{FBORenderer}} represents and manages an entire Frame\+Buffer\+Object. This allows one to draw entire scenes first to a texture, then perform some operations on that texture, then draw that texture to the screen. Shaders have uniforms projection\+Matrix (mat4), colour\+Texture (sampler2D), and depth\+Texture (sampler2D)  
+
+
+
+
+{\ttfamily \#include $<$FBORenderer.\+hpp$>$}
+
+
+
+Inheritance diagram for BARE2D\+::FBORenderer\+:
+% FIG 0
+
+
+Collaboration diagram for BARE2D\+::FBORenderer\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aa89d9713a2c8a8ca10a71a2ac9380172}{FBORenderer}} (std\+::string \&frag\+Shader, std\+::string \&vert\+Shader, unsigned int window\+Width, unsigned int window\+Height, unsigned int num\+Colour\+Attachments=1)
+\item 
+virtual \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aeb5ab1b6abc77d9ec3943d1966574d1b}{$\sim$\+FBORenderer}} ()
+\item 
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ac1902310c37a001b0f6d53b7d6066867}{init}} () override
+\begin{DoxyCompactList}\small\item\em Initializes all necessary bits of the renderer. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ad27e4c76b6f82a74b967464560254a87}{init\+Uniforms}} () override
+\begin{DoxyCompactList}\small\item\em Initializes all uniforms, such as colour attachments, depth attachments, etc. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ae64dbdf46c5bf05c7c976303a072f08c}{set\+Camera}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $>$ \&cam)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_abcccb35e9cdf13c41ba6b11edf1a286e}{get\+Camera}} ()
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a7a4adab89d1e38a44e1886ccd073e81f}{disable\+Attachment}} (unsigned int index)
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a7ca81f68ae89ed82d845d01c39eb6803}{enable\+Attachment}} (unsigned int index)
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a1e6d54c56e4dfefcc024d003ff1e09c0}{disable\+Attachments}} ()
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ae537bdebb48a800bd3169b5ebed18f3b}{enable\+Attachments}} ()
+\item 
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aaccc7bddd25f99cca5b734d097383c6e}{render}} () override
+\begin{DoxyCompactList}\small\item\em Actually renders the contents to the screen! \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5e94ee6c2c34dcdcbd65c9b05f3a465a}{begin}} () override
+\begin{DoxyCompactList}\small\item\em Clears the necessary vectors, etc. to prepare for draw() calls, etc. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a4dde75642694aa34aa463bb298cb34cd}{end}} () override
+\begin{DoxyCompactList}\small\item\em Creates the renderbatches, does necessary stuff before \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aaccc7bddd25f99cca5b734d097383c6e}{render()}} call. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a0e3cc5707a16360dbaf0832058f28b1a}{destroy}} () override
+\begin{DoxyCompactList}\small\item\em Frees all necessary memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a6a0113b8f8806828e460e41bd7697b6c}{pre\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Does stuff inside of the render function, within the shader\textquotesingle{}s use. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aa6da4902046ce59bb009570f12f0aaaa}{create\+Render\+Batches}} () override
+\begin{DoxyCompactList}\small\item\em Constructs all of the render batches from data given by, say, draw() calls. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5765d077d8aff3402f717863169a0176}{bind}} ()
+\begin{DoxyCompactList}\small\item\em Binds the FBO and appropriate texture attachments. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a01768136e2e36b131a23d422ded3bd5b}{unbind}} ()
+\begin{DoxyCompactList}\small\item\em Unbinds the FBO + textures. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aff19a68622b2fdf7033ffee1ab32a7c6}{create\+Textures}} ()
+\begin{DoxyCompactList}\small\item\em Creates all of the Open\+GL textures, and takes their handles into m\+\_\+colour\+Texture\+ID, and m\+\_\+depth\+Texture\+ID. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_af0312bfcb60be2285bb443a79ae9678f}{create\+FBO}} ()
+\begin{DoxyCompactList}\small\item\em Creates the Open\+GL FBO instance and holds its handle in m\+\_\+fbo\+ID;. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+GLuint \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b1ec62a3954d7be5b309ac4a52337d2}{m\+\_\+fbo\+ID}}
+\item 
+GLuint $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}{m\+\_\+texture\+IDs}} = nullptr
+\item 
+unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\+\_\+num\+Textures}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}{m\+\_\+camera}}
+\item 
+std\+::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a3ca9f890aa6cd904a6ba201a219ccb5e}{m\+\_\+fragment\+Shader\+Path}}
+\item 
+std\+::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ac4b73ba3b179c0cf854d36b77d535b8a}{m\+\_\+vertex\+Shader\+Path}}
+\item 
+bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a8cb0768b5c42501e8e3299d45e917114}{m\+\_\+shader\+Has\+Depth}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer}{FBORenderer}} represents and manages an entire Frame\+Buffer\+Object. This allows one to draw entire scenes first to a texture, then perform some operations on that texture, then draw that texture to the screen. Shaders have uniforms projection\+Matrix (mat4), colour\+Texture (sampler2D), and depth\+Texture (sampler2D) 
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00017}{17}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{FBORenderer.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_aa89d9713a2c8a8ca10a71a2ac9380172}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_aa89d9713a2c8a8ca10a71a2ac9380172}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!FBORenderer@{FBORenderer}}
+\index{FBORenderer@{FBORenderer}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{FBORenderer()}{FBORenderer()}}
+{\footnotesize\ttfamily BARE2\+D\+::\+FBORenderer\+::\+FBORenderer (\begin{DoxyParamCaption}\item[{std\+::string \&}]{frag\+Shader,  }\item[{std\+::string \&}]{vert\+Shader,  }\item[{unsigned int}]{window\+Width,  }\item[{unsigned int}]{window\+Height,  }\item[{unsigned int}]{num\+Colour\+Attachments = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00078}{m\+\_\+camera}}, and \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00074}{m\+\_\+num\+Textures}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_aeb5ab1b6abc77d9ec3943d1966574d1b}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_aeb5ab1b6abc77d9ec3943d1966574d1b}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!````~FBORenderer@{$\sim$FBORenderer}}
+\index{````~FBORenderer@{$\sim$FBORenderer}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{$\sim$FBORenderer()}{~FBORenderer()}}
+{\footnotesize\ttfamily BARE2\+D\+::\+FBORenderer\+::$\sim$\+FBORenderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00071}{m\+\_\+texture\+IDs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5e94ee6c2c34dcdcbd65c9b05f3a465a}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5e94ee6c2c34dcdcbd65c9b05f3a465a}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!begin@{begin}}
+\index{begin@{begin}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clears the necessary vectors, etc. to prepare for draw() calls, etc. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a}{BARE2\+D\+::\+Renderer}}.
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00134}{134}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_renderer_8cpp_source_l00013}{BARE2\+D\+::\+Renderer\+::begin()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00363}{bind()}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{BARE2\+D\+::\+Renderer\+::m\+\_\+shader}}, and \mbox{\hyperlink{_shader_program_8cpp_source_l00147}{BARE2\+D\+::\+Shader\+Program\+::use()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5765d077d8aff3402f717863169a0176}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5765d077d8aff3402f717863169a0176}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!bind@{bind}}
+\index{bind@{bind}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Binds the FBO and appropriate texture attachments. 
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00363}{363}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{BARE2\+D\+::\+GLContext\+::bind\+Texture()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{BARE2\+D\+::\+GLContext\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00069}{m\+\_\+fbo\+ID}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00074}{m\+\_\+num\+Textures}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00071}{m\+\_\+texture\+IDs}}, and \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{BARE2\+D\+::\+GLContext\+::set\+Active\+Texture()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00134}{begin()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00062}{init()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_af0312bfcb60be2285bb443a79ae9678f}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_af0312bfcb60be2285bb443a79ae9678f}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!createFBO@{createFBO}}
+\index{createFBO@{createFBO}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{createFBO()}{createFBO()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::create\+FBO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates the Open\+GL FBO instance and holds its handle in m\+\_\+fbo\+ID;. 
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00341}{341}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00267}{create\+Textures()}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a56134db1e8559ae4b32bf967c15fc4df}{BARE2\+D\+::\+FBO\+\_\+\+FAILURE}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00069}{m\+\_\+fbo\+ID}}, and \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00178}{BARE2\+D\+::throw\+Fatal\+Error()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00062}{init()}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_aa6da4902046ce59bb009570f12f0aaaa}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_aa6da4902046ce59bb009570f12f0aaaa}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!createRenderBatches@{createRenderBatches}}
+\index{createRenderBatches@{createRenderBatches}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{createRenderBatches()}{createRenderBatches()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::create\+Render\+Batches (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Constructs all of the render batches from data given by, say, draw() calls. 
+
+
+
+Implements \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_abf344beacb334d74a7c5c2d15815fe4f}{BARE2\+D\+::\+Renderer}}.
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00192}{192}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_v_a_o_8cpp_source_l00057}{BARE2\+D\+::\+VAO\+::bind\+VBO()}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{BARE2\+D\+::\+Glyph\+::bottom\+Left}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{BARE2\+D\+::\+Glyph\+::bottom\+Right}}, \mbox{\hyperlink{_renderer_8hpp_source_l00067}{BARE2\+D\+::\+Renderer\+::m\+\_\+batches}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00071}{m\+\_\+texture\+IDs}}, \mbox{\hyperlink{_renderer_8hpp_source_l00066}{BARE2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, \mbox{\hyperlink{_vertex_8hpp_source_l00094}{BARE2\+D\+::\+Glyph\+::texture}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{BARE2\+D\+::\+Glyph\+::top\+Left}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{BARE2\+D\+::\+Glyph\+::top\+Right}}, and \mbox{\hyperlink{_v_a_o_8cpp_source_l00062}{BARE2\+D\+::\+VAO\+::unbind\+VBO()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00232}{render()}}.
+
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_aff19a68622b2fdf7033ffee1ab32a7c6}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_aff19a68622b2fdf7033ffee1ab32a7c6}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!createTextures@{createTextures}}
+\index{createTextures@{createTextures}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{createTextures()}{createTextures()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::create\+Textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates all of the Open\+GL textures, and takes their handles into m\+\_\+colour\+Texture\+ID, and m\+\_\+depth\+Texture\+ID. 
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00267}{267}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{BARE2\+D\+::\+GLContext\+::bind\+Texture()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{BARE2\+D\+::\+GLContext\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00078}{m\+\_\+camera}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00074}{m\+\_\+num\+Textures}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00084}{m\+\_\+shader\+Has\+Depth}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00071}{m\+\_\+texture\+IDs}}, and \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{BARE2\+D\+::\+GLContext\+::set\+Active\+Texture()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00341}{create\+FBO()}}.
+
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a0e3cc5707a16360dbaf0832058f28b1a}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a0e3cc5707a16360dbaf0832058f28b1a}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!destroy@{destroy}}
+\index{destroy@{destroy}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Frees all necessary memory. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a62d8bb52afdd8a38f96fe89677e03f53}{BARE2\+D\+::\+Renderer}}.
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00124}{124}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_renderer_8cpp_source_l00043}{BARE2\+D\+::\+Renderer\+::destroy()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00069}{m\+\_\+fbo\+ID}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00074}{m\+\_\+num\+Textures}}, and \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00071}{m\+\_\+texture\+IDs}}.
+
+Here is the call graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a7a4adab89d1e38a44e1886ccd073e81f}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a7a4adab89d1e38a44e1886ccd073e81f}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!disableAttachment@{disableAttachment}}
+\index{disableAttachment@{disableAttachment}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{disableAttachment()}{disableAttachment()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::disable\+Attachment (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a1e6d54c56e4dfefcc024d003ff1e09c0}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a1e6d54c56e4dfefcc024d003ff1e09c0}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!disableAttachments@{disableAttachments}}
+\index{disableAttachments@{disableAttachments}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{disableAttachments()}{disableAttachments()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::disable\+Attachments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00074}{m\+\_\+num\+Textures}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a7ca81f68ae89ed82d845d01c39eb6803}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a7ca81f68ae89ed82d845d01c39eb6803}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!enableAttachment@{enableAttachment}}
+\index{enableAttachment@{enableAttachment}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{enableAttachment()}{enableAttachment()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::enable\+Attachment (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_ae537bdebb48a800bd3169b5ebed18f3b}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_ae537bdebb48a800bd3169b5ebed18f3b}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!enableAttachments@{enableAttachments}}
+\index{enableAttachments@{enableAttachments}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{enableAttachments()}{enableAttachments()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::enable\+Attachments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00074}{m\+\_\+num\+Textures}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a4dde75642694aa34aa463bb298cb34cd}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a4dde75642694aa34aa463bb298cb34cd}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!end@{end}}
+\index{end@{end}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates the renderbatches, does necessary stuff before \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aaccc7bddd25f99cca5b734d097383c6e}{render()}} call. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a8a07d633d12883604201fd032fbd2cdd}{BARE2\+D\+::\+Renderer}}.
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00165}{165}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_renderer_8hpp_source_l00065}{BARE2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00375}{unbind()}}, and \mbox{\hyperlink{_shader_program_8cpp_source_l00160}{BARE2\+D\+::\+Shader\+Program\+::unuse()}}.
+
+Here is the call graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_abcccb35e9cdf13c41ba6b11edf1a286e}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_abcccb35e9cdf13c41ba6b11edf1a286e}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!getCamera@{getCamera}}
+\index{getCamera@{getCamera}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{getCamera()}{getCamera()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $>$ BARE2\+D\+::\+FBORenderer\+::get\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00078}{m\+\_\+camera}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_ac1902310c37a001b0f6d53b7d6066867}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_ac1902310c37a001b0f6d53b7d6066867}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!init@{init}}
+\index{init@{init}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes all necessary bits of the renderer. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{BARE2\+D\+::\+Renderer}}.
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_v_a_o_8cpp_source_l00066}{BARE2\+D\+::\+VAO\+::add\+Vertex\+Attribute()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00363}{bind()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00023}{BARE2\+D\+::\+Shader\+Program\+::compile\+Shaders()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00341}{create\+FBO()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00025}{BARE2\+D\+::\+Renderer\+::init()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00110}{init\+Uniforms()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00085}{BARE2\+D\+::\+Renderer\+::link()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00069}{m\+\_\+fbo\+ID}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00081}{m\+\_\+fragment\+Shader\+Path}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00074}{m\+\_\+num\+Textures}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{BARE2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_renderer_8hpp_source_l00066}{BARE2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00081}{m\+\_\+vertex\+Shader\+Path}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00375}{unbind()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00160}{BARE2\+D\+::\+Shader\+Program\+::unuse()}}, and \mbox{\hyperlink{_shader_program_8cpp_source_l00147}{BARE2\+D\+::\+Shader\+Program\+::use()}}.
+
+Here is the call graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_ad27e4c76b6f82a74b967464560254a87}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_ad27e4c76b6f82a74b967464560254a87}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!initUniforms@{initUniforms}}
+\index{initUniforms@{initUniforms}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{initUniforms()}{initUniforms()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::init\+Uniforms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes all uniforms, such as colour attachments, depth attachments, etc. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a371f0d8b66a1fecb592b6d8b2b3cb1a0}{BARE2\+D\+::\+Renderer}}.
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00110}{110}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_shader_program_8cpp_source_l00213}{BARE2\+D\+::\+Shader\+Program\+::does\+Uniform\+Exist()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00074}{m\+\_\+num\+Textures}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{BARE2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00084}{m\+\_\+shader\+Has\+Depth}}, and \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{BARE2\+D\+::\+Shader\+Program\+::set\+Uniform()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00062}{init()}}.
+
+Here is the call graph for this function\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a6a0113b8f8806828e460e41bd7697b6c}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a6a0113b8f8806828e460e41bd7697b6c}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!preRender@{preRender}}
+\index{preRender@{preRender}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{preRender()}{preRender()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::pre\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Does stuff inside of the render function, within the shader\textquotesingle{}s use. 
+
+The camera should only be used to actually draw the FBO.
+
+Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a9aab9d938c89c6d3d9c4ff6de02d3c4d}{BARE2\+D\+::\+Renderer}}.
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00172}{172}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{BARE2\+D\+::\+GLContext\+::bind\+Texture()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{BARE2\+D\+::\+GLContext\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00078}{m\+\_\+camera}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00074}{m\+\_\+num\+Textures}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{BARE2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00071}{m\+\_\+texture\+IDs}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{BARE2\+D\+::\+GLContext\+::set\+Active\+Texture()}}, and \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{BARE2\+D\+::\+Shader\+Program\+::set\+Uniform\+Matrix()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00232}{render()}}.
+
+Here is the call graph for this function\+:
+% FIG 16
+Here is the caller graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_aaccc7bddd25f99cca5b734d097383c6e}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_aaccc7bddd25f99cca5b734d097383c6e}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!render@{render}}
+\index{render@{render}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Actually renders the contents to the screen! 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_af6c7b543d54be3ce30224e21d5606be3}{BARE2\+D\+::\+Renderer}}.
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00232}{232}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_v_a_o_8cpp_source_l00048}{BARE2\+D\+::\+VAO\+::bind()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00192}{create\+Render\+Batches()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{BARE2\+D\+::\+GLContext\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_renderer_8hpp_source_l00067}{BARE2\+D\+::\+Renderer\+::m\+\_\+batches}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{BARE2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_renderer_8hpp_source_l00066}{BARE2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00172}{pre\+Render()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{BARE2\+D\+::\+GLContext\+::set\+Active\+Texture()}}, \mbox{\hyperlink{_v_a_o_8cpp_source_l00053}{BARE2\+D\+::\+VAO\+::unbind()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00160}{BARE2\+D\+::\+Shader\+Program\+::unuse()}}, and \mbox{\hyperlink{_shader_program_8cpp_source_l00147}{BARE2\+D\+::\+Shader\+Program\+::use()}}.
+
+Here is the call graph for this function\+:
+% FIG 18
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_ae64dbdf46c5bf05c7c976303a072f08c}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_ae64dbdf46c5bf05c7c976303a072f08c}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!setCamera@{setCamera}}
+\index{setCamera@{setCamera}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{setCamera()}{setCamera()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::set\+Camera (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $>$ \&}]{cam }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00078}{m\+\_\+camera}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a01768136e2e36b131a23d422ded3bd5b}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a01768136e2e36b131a23d422ded3bd5b}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!unbind@{unbind}}
+\index{unbind@{unbind}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{unbind()}{unbind()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+FBORenderer\+::unbind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Unbinds the FBO + textures. 
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00375}{375}} of file \mbox{\hyperlink{_f_b_o_renderer_8cpp_source}{FBORenderer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{BARE2\+D\+::\+GLContext\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00074}{m\+\_\+num\+Textures}}, and \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00032}{BARE2\+D\+::\+GLContext\+::unbind\+Texture()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00165}{end()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00062}{init()}}.
+
+Here is the call graph for this function\+:
+% FIG 19
+Here is the caller graph for this function\+:
+% FIG 20
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!m\_camera@{m\_camera}}
+\index{m\_camera@{m\_camera}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{m\_camera}{m\_camera}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}}$>$ BARE2\+D\+::\+FBORenderer\+::m\+\_\+camera\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00078}{78}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{FBORenderer.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00267}{create\+Textures()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00015}{FBORenderer()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00038}{get\+Camera()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00172}{pre\+Render()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00034}{set\+Camera()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b1ec62a3954d7be5b309ac4a52337d2}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b1ec62a3954d7be5b309ac4a52337d2}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!m\_fboID@{m\_fboID}}
+\index{m\_fboID@{m\_fboID}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{m\_fboID}{m\_fboID}}
+{\footnotesize\ttfamily GLuint BARE2\+D\+::\+FBORenderer\+::m\+\_\+fbo\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00069}{69}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{FBORenderer.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00363}{bind()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00341}{create\+FBO()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00124}{destroy()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00062}{init()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a3ca9f890aa6cd904a6ba201a219ccb5e}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a3ca9f890aa6cd904a6ba201a219ccb5e}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!m\_fragmentShaderPath@{m\_fragmentShaderPath}}
+\index{m\_fragmentShaderPath@{m\_fragmentShaderPath}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{m\_fragmentShaderPath}{m\_fragmentShaderPath}}
+{\footnotesize\ttfamily std\+::string BARE2\+D\+::\+FBORenderer\+::m\+\_\+fragment\+Shader\+Path\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00081}{81}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{FBORenderer.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00062}{init()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!m\_numTextures@{m\_numTextures}}
+\index{m\_numTextures@{m\_numTextures}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{m\_numTextures}{m\_numTextures}}
+{\footnotesize\ttfamily unsigned int BARE2\+D\+::\+FBORenderer\+::m\+\_\+num\+Textures\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00074}{74}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{FBORenderer.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00363}{bind()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00267}{create\+Textures()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00124}{destroy()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00050}{disable\+Attachments()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00056}{enable\+Attachments()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00015}{FBORenderer()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00062}{init()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00110}{init\+Uniforms()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00172}{pre\+Render()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00375}{unbind()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a8cb0768b5c42501e8e3299d45e917114}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a8cb0768b5c42501e8e3299d45e917114}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!m\_shaderHasDepth@{m\_shaderHasDepth}}
+\index{m\_shaderHasDepth@{m\_shaderHasDepth}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{m\_shaderHasDepth}{m\_shaderHasDepth}}
+{\footnotesize\ttfamily bool BARE2\+D\+::\+FBORenderer\+::m\+\_\+shader\+Has\+Depth = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00084}{84}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{FBORenderer.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00267}{create\+Textures()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00110}{init\+Uniforms()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!m\_textureIDs@{m\_textureIDs}}
+\index{m\_textureIDs@{m\_textureIDs}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{m\_textureIDs}{m\_textureIDs}}
+{\footnotesize\ttfamily GLuint$\ast$ BARE2\+D\+::\+FBORenderer\+::m\+\_\+texture\+IDs = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00071}{71}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{FBORenderer.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00363}{bind()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00192}{create\+Render\+Batches()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00267}{create\+Textures()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00124}{destroy()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00172}{pre\+Render()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00030}{$\sim$\+FBORenderer()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_f_b_o_renderer_ac4b73ba3b179c0cf854d36b77d535b8a}\label{class_b_a_r_e2_d_1_1_f_b_o_renderer_ac4b73ba3b179c0cf854d36b77d535b8a}} 
+\index{BARE2D::FBORenderer@{BARE2D::FBORenderer}!m\_vertexShaderPath@{m\_vertexShaderPath}}
+\index{m\_vertexShaderPath@{m\_vertexShaderPath}!BARE2D::FBORenderer@{BARE2D::FBORenderer}}
+\doxysubsubsection{\texorpdfstring{m\_vertexShaderPath}{m\_vertexShaderPath}}
+{\footnotesize\ttfamily std\+::string BARE2\+D\+::\+FBORenderer\+::m\+\_\+vertex\+Shader\+Path\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_f_b_o_renderer_8hpp_source_l00081}{81}} of file \mbox{\hyperlink{_f_b_o_renderer_8hpp_source}{FBORenderer.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00062}{init()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\mbox{\hyperlink{_f_b_o_renderer_8hpp}{FBORenderer.\+hpp}}\item 
+Source/\mbox{\hyperlink{_f_b_o_renderer_8cpp}{FBORenderer.\+cpp}}\end{DoxyCompactItemize}

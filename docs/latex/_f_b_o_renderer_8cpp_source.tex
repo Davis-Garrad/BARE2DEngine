@@ -1,0 +1,390 @@
+\hypertarget{_f_b_o_renderer_8cpp_source}{}\doxysection{FBORenderer.\+cpp}
+\label{_f_b_o_renderer_8cpp_source}\index{Source/FBORenderer.cpp@{Source/FBORenderer.cpp}}
+\mbox{\hyperlink{_f_b_o_renderer_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_f_b_o_renderer_8hpp}{FBORenderer.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <GL/glew.h>}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <glm/gtc/type\_ptr.hpp>}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_g_l_context_manager_8hpp}{GLContextManager.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_b_a_r_e_errors_8hpp}{BAREErrors.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_vertex_8hpp}{Vertex.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_logger_8hpp}{Logger.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00013}00013 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00015}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aa89d9713a2c8a8ca10a71a2ac9380172}{00015}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aa89d9713a2c8a8ca10a71a2ac9380172}{FBORenderer::FBORenderer}}(std::string\& fragShader,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00016}00016                              std::string\& vertShader,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00017}00017                              \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} windowWidth,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00018}00018                              \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} windowHeight,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00019}00019                              \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} numColourAttachments) :}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00020}00020         m\_fragmentShaderPath(fragShader),}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00021}00021         m\_vertexShaderPath(vertShader) \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00022}00022         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}{m\_camera}} = std::make\_unique<Camera2D>();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00023}00023         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}{m\_camera}}-\/>init(windowWidth, windowHeight);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00024}00024         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}{m\_camera}}-\/>setFocus(glm::vec2(0.0f));}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00025}00025         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}{m\_camera}}-\/>setScale(windowWidth / 2.0f, windowHeight / 2.0f);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00027}00027         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\_numTextures}} = numColourAttachments + 1; \textcolor{comment}{// n colour attachments, one depth attachment}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00028}00028     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00030}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aeb5ab1b6abc77d9ec3943d1966574d1b}{00030}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aeb5ab1b6abc77d9ec3943d1966574d1b}{FBORenderer::\string~FBORenderer}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00031}00031         \textcolor{keyword}{delete}[] \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}{m\_textureIDs}};}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00032}00032     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00034}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ae64dbdf46c5bf05c7c976303a072f08c}{00034}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ae64dbdf46c5bf05c7c976303a072f08c}{FBORenderer::setCamera}}(std::shared\_ptr<Camera2D>\& cam) \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00035}00035         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}{m\_camera}} = cam;}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00038}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_abcccb35e9cdf13c41ba6b11edf1a286e}{00038}}     std::shared\_ptr<Camera2D> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_abcccb35e9cdf13c41ba6b11edf1a286e}{FBORenderer::getCamera}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00039}00039         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}{m\_camera}};}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00040}00040     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00042}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a7a4adab89d1e38a44e1886ccd073e81f}{00042}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a7a4adab89d1e38a44e1886ccd073e81f}{FBORenderer::disableAttachment}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} index) \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00043}00043         glColorMaski(index, GL\_FALSE, GL\_FALSE, GL\_FALSE, GL\_FALSE);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00044}00044     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00046}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a7ca81f68ae89ed82d845d01c39eb6803}{00046}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a7ca81f68ae89ed82d845d01c39eb6803}{FBORenderer::enableAttachment}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} index) \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00047}00047         glColorMaski(index, GL\_TRUE, GL\_TRUE, GL\_TRUE, GL\_TRUE);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00048}00048     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00050}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a1e6d54c56e4dfefcc024d003ff1e09c0}{00050}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a1e6d54c56e4dfefcc024d003ff1e09c0}{FBORenderer::disableAttachments}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00051}00051         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\_numTextures}} -\/ 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00052}00052             glColorMaski(i, GL\_FALSE, GL\_FALSE, GL\_FALSE, GL\_FALSE);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00053}00053         \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00054}00054     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00056}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ae537bdebb48a800bd3169b5ebed18f3b}{00056}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ae537bdebb48a800bd3169b5ebed18f3b}{FBORenderer::enableAttachments}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00057}00057         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\_numTextures}} -\/ 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00058}00058             glColorMaski(i, GL\_TRUE, GL\_TRUE, GL\_TRUE, GL\_TRUE);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00059}00059         \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00060}00060     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00062}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ac1902310c37a001b0f6d53b7d6066867}{00062}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ac1902310c37a001b0f6d53b7d6066867}{FBORenderer::init}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00063}00063         \textcolor{comment}{// Actually initialize our shader}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00064}00064         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{compileShaders}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ac4b73ba3b179c0cf854d36b77d535b8a}{m\_vertexShaderPath}}.c\_str(), \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a3ca9f890aa6cd904a6ba201a219ccb5e}{m\_fragmentShaderPath}}.c\_str());}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00066}00066         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a5ff18e853da7784b3085181c5e52e8ac}{link}}(\{\textcolor{stringliteral}{"{}vertexPosition"{}}, \textcolor{stringliteral}{"{}vertexColour"{}}, \textcolor{stringliteral}{"{}vertexUV"{}}\});}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00068}00068         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{Renderer::init}}(); \textcolor{comment}{// Initializes the VAO, so we can add attributes}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00070}00070         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}(3, GL\_FLOAT, GL\_FALSE, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, position));}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00071}00071         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}(4,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00072}00072                                                GL\_UNSIGNED\_BYTE,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00073}00073                                                GL\_TRUE,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00074}00074                                                \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}),}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00075}00075                                                (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, colour));}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00076}00076         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}(2, GL\_FLOAT, GL\_FALSE, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, uv));}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00078}00078         \textcolor{comment}{// Create the actual textures and FBO}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00079}00079         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_af0312bfcb60be2285bb443a79ae9678f}{createFBO}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00081}00081         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a8687213986c6f5633887609e8169b24e}{use}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00083}00083         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ad27e4c76b6f82a74b967464560254a87}{initUniforms}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00085}00085         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7847844b8a2e5ab0677340b47d180841}{unuse}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00087}00087         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5765d077d8aff3402f717863169a0176}{bind}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00089}00089         \textcolor{comment}{// This call specifies which buffers should be drawn to -\/ in our case, it's just the colour attachment for the FBO}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00090}00090         \textcolor{comment}{// This essentially means that the output from the fragment shader goes directly into the FBO's attached colour}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00091}00091         \textcolor{comment}{// texture! Please note that the Framebuffer object actually stores a lot of state information, such as draw}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00092}00092         \textcolor{comment}{// buffers. That's why this is in the init. Here we just generate all the colour attachments from 0 to}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00093}00093         \textcolor{comment}{// (m\_numColourAttachments-\/1).}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00094}00094         \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} attachments = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\_numTextures}} -\/ 1;}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00095}00095         GLenum             m\_colourAttachments[attachments];}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00097}00097         \textcolor{keywordtype}{int} max = 0;}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00098}00098         glGetIntegerv(GL\_MAX\_DRAW\_BUFFERS, \&max);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00100}00100         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < attachments;}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00101}00101             i++) \{ \textcolor{comment}{// Remember that the number of colour attachments will always be number of textures -\/ 1}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00102}00102             m\_colourAttachments[i] = (GL\_COLOR\_ATTACHMENT0 + i);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00103}00103         \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00105}00105         glNamedFramebufferDrawBuffers(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b1ec62a3954d7be5b309ac4a52337d2}{m\_fboID}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\_numTextures}} -\/ 1, \&(m\_colourAttachments[0]));}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00107}00107         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a01768136e2e36b131a23d422ded3bd5b}{unbind}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00108}00108     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00110}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ad27e4c76b6f82a74b967464560254a87}{00110}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_ad27e4c76b6f82a74b967464560254a87}{FBORenderer::initUniforms}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00111}00111         \textcolor{comment}{// Now, for convenience, set the uniforms of the FBO shader program}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00112}00112         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\_numTextures}} -\/ 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00113}00113             GLint colourTexture = i;}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00114}00114             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{setUniform}}(\textcolor{stringliteral}{"{}colourTexture"{}} + std::to\_string(i), \&colourTexture);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00115}00115         \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00117}00117         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a8cb0768b5c42501e8e3299d45e917114}{m\_shaderHasDepth}} = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_af711102689d9552b2b54c1c9da8f8589}{doesUniformExist}}(\textcolor{stringliteral}{"{}depthTexture"{}});}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00118}00118         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a8cb0768b5c42501e8e3299d45e917114}{m\_shaderHasDepth}}) \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00119}00119             GLint depthTexture = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\_numTextures}} -\/ 1;}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00120}00120             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{setUniform}}(\textcolor{stringliteral}{"{}depthTexture"{}}, \&depthTexture);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00121}00121         \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00122}00122     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00124}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a0e3cc5707a16360dbaf0832058f28b1a}{00124}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a0e3cc5707a16360dbaf0832058f28b1a}{FBORenderer::destroy}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00125}00125         glDeleteFramebuffers(1, \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b1ec62a3954d7be5b309ac4a52337d2}{m\_fboID}});}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00126}00126         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b1ec62a3954d7be5b309ac4a52337d2}{m\_fboID}} = 0;}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00127}00127         glDeleteTextures(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\_numTextures}}, \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}{m\_textureIDs}}[0]);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00128}00128         \textcolor{keyword}{delete}[] \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}{m\_textureIDs}};}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00129}00129         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}{m\_textureIDs}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00131}00131         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a62d8bb52afdd8a38f96fe89677e03f53}{Renderer::destroy}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00132}00132     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00133}00133 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00134}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5e94ee6c2c34dcdcbd65c9b05f3a465a}{00134}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5e94ee6c2c34dcdcbd65c9b05f3a465a}{FBORenderer::begin}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00135}00135         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a}{Renderer::begin}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00136}00136 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00137}00137         \textcolor{comment}{// This begin function actually should bind the FBO and set the necessary settings}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00139}00139         \textcolor{comment}{// First, obviously bind the FBO \& attached textures.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00140}00140         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5765d077d8aff3402f717863169a0176}{bind}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00142}00142         \textcolor{comment}{// Make sure that we clear the actual buffer objects}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00143}00143         glClearDepth(1.0f);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00144}00144         glClear(GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT | GL\_STENCIL\_BUFFER\_BIT);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00146}00146         \textcolor{comment}{// Enable writing to the depth attachment}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00147}00147         glEnable(GL\_DEPTH\_TEST);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00148}00148         \textcolor{comment}{// Set a normalized depth variable}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00149}00149         glDepthMask(GL\_TRUE);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00150}00150         \textcolor{comment}{// Set it so that closer depths are smaller numbers (0.0 appears in front of 0.5 which appears in front of 1.0, etc)}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00151}00151         glDepthFunc(GL\_ALWAYS);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00153}00153         \textcolor{comment}{// Make sure that we blend the alpha channels on each texture}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00154}00154         glEnable(GL\_BLEND);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00155}00155         \textcolor{comment}{// Blend pretty normally for transparency stuff (according to the docs for glBlendFunc, this is the best}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00156}00156         \textcolor{comment}{// transparency blending config)}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00157}00157         glBlendFunc(GL\_SRC\_ALPHA, GL\_ONE\_MINUS\_SRC\_ALPHA);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00158}00158 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00159}00159         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a8687213986c6f5633887609e8169b24e}{use}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00161}00161         \textcolor{comment}{// Now we will not unbind until the end() call, after all the draw calls that actually populate the FBO's textures'}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00162}00162         \textcolor{comment}{// data.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00163}00163     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00164}00164 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00165}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a4dde75642694aa34aa463bb298cb34cd}{00165}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a4dde75642694aa34aa463bb298cb34cd}{FBORenderer::end}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00166}00166         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7847844b8a2e5ab0677340b47d180841}{unuse}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00168}00168         \textcolor{comment}{// All we need to do is unbind the FBO and associated textures.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00169}00169         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a01768136e2e36b131a23d422ded3bd5b}{unbind}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00170}00170     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00171}00171 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00172}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a6a0113b8f8806828e460e41bd7697b6c}{00172}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a6a0113b8f8806828e460e41bd7697b6c}{FBORenderer::preRender}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00173}00173         \textcolor{comment}{// Make sure that the FBO is written as a single texture, essentially -\/ not depth-\/tested by parts.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00174}00174         glDisable(GL\_DEPTH\_TEST);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00175}00175 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00176}00176         \textcolor{comment}{// Pre-\/render is going to be pretty bare, as our shader just needs to be called for the uploading of texture data}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00177}00177         \textcolor{comment}{// (in createRenderBatches()), and the only uniforms used are constants.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00178}00178         glm::mat4 matrix = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}{m\_camera}}-\/>getCameraMatrix();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00179}00179         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{setUniformMatrix}}(\textcolor{stringliteral}{"{}projectionMatrix"{}}, GL\_FALSE, \&matrix);\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00180}00180 \textcolor{comment}{        /// The camera should only be used to actually draw the FBO.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00181}00181 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00182}00182         \textcolor{comment}{// Set GL\_TEXTUREs}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00183}00183         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context}{GLContext}}* context = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{GLContextManager::getContext}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00184}00184         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\_numTextures}} -\/ 1; i >= 0; i-\/-\/) \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00185}00185             context-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a529bb80b0bd7bbf86f10be7c30be514c}{setActiveTexture}}(GL\_TEXTURE0 + i);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00186}00186             context-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{bindTexture}}(GL\_TEXTURE\_2D, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}{m\_textureIDs}}[i]);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00187}00187         \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00188}00188 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00189}00189         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}{m\_camera}}-\/>update();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00190}00190     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00191}00191 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00192}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aa6da4902046ce59bb009570f12f0aaaa}{00192}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aa6da4902046ce59bb009570f12f0aaaa}{FBORenderer::createRenderBatches}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00193}00193         \textcolor{comment}{// We need to now create the "{}renderbatches"{}, which in our case are just going to be two triangles (for a}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00194}00194         \textcolor{comment}{// full-\/screen quad) Easiest way to do this is just to create a glyph, then follow how BasicRenderer did it! Why}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00195}00195         \textcolor{comment}{// re-\/invent the wheel?}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00196}00196 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00197}00197         \textcolor{comment}{// Just render the full "{}screen"{} (secondary renderer will render the FBO to a smaller section)}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00198}00198         glm::vec2 position = glm::vec2(-\/1.0f); \textcolor{comment}{// m\_camera-\/>getWorldspacePosition(glm::vec2(0.0f));}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00199}00199         glm::vec2 size     = glm::vec2(2.0f);  \textcolor{comment}{// m\_camera-\/>getWorldspaceSize(m\_size);}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00200}00200 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00201}00201         glm::vec4 destRect(position.x, position.y, size.x, size.y);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00202}00202         glm::vec4 uvRect(0.0f, 1.0f, 1.0f, -\/1.0f); \textcolor{comment}{// We need to flip the FBO.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00203}00203         \textcolor{keywordtype}{float}     depth = 0.0f;}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00204}00204         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}      col   = \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}(255, 255, 255, 255);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00205}00205         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph}{Glyph}}    fullscreen(destRect, uvRect, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}{m\_textureIDs}}[0], depth, col);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00206}00206 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00207}00207         \textcolor{comment}{// Our collection of 6 vertices (for a square)}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00208}00208         std::vector<Vertex> vertices;}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00209}00209         vertices.resize(6);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00210}00210 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00211}00211         \textcolor{comment}{// Actually add the texture to the render batches}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00212}00212         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a4a5d71addd82c34de80ab86704a4f847}{m\_batches}}.emplace\_back(0, 6, fullscreen.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a388878cd1c1726240f23ef913ad53635}{texture}});}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00213}00213 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00214}00214         \textcolor{comment}{// Set up the vertices}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00215}00215         vertices[0] = fullscreen.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}};}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00216}00216         vertices[1] = fullscreen.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{bottomLeft}};}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00217}00217         vertices[2] = fullscreen.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}};}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00218}00218         vertices[3] = fullscreen.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}};}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00219}00219         vertices[4] = fullscreen.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{topRight}};}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00220}00220         vertices[5] = fullscreen.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}};}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00221}00221 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00222}00222         \textcolor{comment}{// Bind the VBO}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00223}00223         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{bindVBO}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00224}00224 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00225}00225         \textcolor{comment}{// Upload the data to the VBO}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00226}00226         glBufferData(GL\_ARRAY\_BUFFER, vertices.size() * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), vertices.data(), GL\_DYNAMIC\_DRAW);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00227}00227 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00228}00228         \textcolor{comment}{// Unbind the VBO once again}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00229}00229         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}{unbindVBO}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00230}00230     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00231}00231 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00232}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aaccc7bddd25f99cca5b734d097383c6e}{00232}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aaccc7bddd25f99cca5b734d097383c6e}{FBORenderer::render}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00233}00233         \textcolor{comment}{// Ensure that we're actually using the shader for the glDrawArrays call!}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00234}00234         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a8687213986c6f5633887609e8169b24e}{use}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00235}00235 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00236}00236         \textcolor{comment}{// Make sure we're in the regular rendering texture (arbitrarily set to texture0, just for consistency)}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00237}00237         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context}{GLContext}}* glContext = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{GLContextManager::getContext}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00238}00238         glContext-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a529bb80b0bd7bbf86f10be7c30be514c}{setActiveTexture}}(GL\_TEXTURE0);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00239}00239 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00240}00240         \textcolor{comment}{// First we must bind the vertex array object and vertex buffer object}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00241}00241         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}{bind}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00242}00242 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00243}00243         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a6a0113b8f8806828e460e41bd7697b6c}{preRender}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00245}00245         \textcolor{comment}{// Create RenderBatches (uploading the vertex data to the bound texture, so that we can actually draw the textures}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00246}00246         \textcolor{comment}{// next.)}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00247}00247         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aa6da4902046ce59bb009570f12f0aaaa}{createRenderBatches}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00248}00248 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00249}00249         \textcolor{comment}{// Now we can render each renderbatch, uploading their texture data respectively.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00250}00250         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a4a5d71addd82c34de80ab86704a4f847}{m\_batches}}.size();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00251}00251             i++) \{ \textcolor{comment}{// regularly, there will only be one -\/ to the full screen... but you never know!}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00252}00252             \textcolor{comment}{// Bind the texture information to the texture "{}slot"{}}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00253}00253             \textcolor{comment}{// This method of binding the textures decreases speed slightly for completely random textures, but if we are}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00254}00254             \textcolor{comment}{// rendering a lot of the same texture, this is similar (if not identical) to instance rendering}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00255}00255 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00256}00256             \textcolor{comment}{// Upload the data}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00257}00257             glDrawArrays(GL\_TRIANGLES, (GLint)\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a4a5d71addd82c34de80ab86704a4f847}{m\_batches}}[i].offset, (GLsizei)\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a4a5d71addd82c34de80ab86704a4f847}{m\_batches}}[i].numVertices);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00258}00258         \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00259}00259 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00260}00260         \textcolor{comment}{// Unbind for safety!}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00261}00261         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{unbind}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00262}00262 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00263}00263         \textcolor{comment}{// Release the shader}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00264}00264         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7847844b8a2e5ab0677340b47d180841}{unuse}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00265}00265     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00266}00266 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00267}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aff19a68622b2fdf7033ffee1ab32a7c6}{00267}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aff19a68622b2fdf7033ffee1ab32a7c6}{FBORenderer::createTextures}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00268}00268         \textcolor{comment}{// Time to actually create the textures for the colour and depth to be stored into.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00269}00269         \textcolor{comment}{// Create array for handles}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00270}00270         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}{m\_textureIDs}} = \textcolor{keyword}{new} GLuint[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\_numTextures}}];}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00271}00271 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00272}00272         \textcolor{comment}{// Create the texture instances and get the handles}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00273}00273         glGenTextures(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\_numTextures}}, \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}{m\_textureIDs}}[0]);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00274}00274 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00275}00275         \textcolor{comment}{// Now, for each texture we need to bind it, define it, then attach it to the FBO}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00276}00276         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\_numTextures}}; i++) \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00277}00277             \textcolor{comment}{// first, set the active texture to that of GL\_TEXTURE0 + i, so each attachment gets its own "{}spot"{}}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00278}00278             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{GLContextManager::getContext}}()-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a529bb80b0bd7bbf86f10be7c30be514c}{setActiveTexture}}(GL\_TEXTURE0 + i);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00279}00279 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00280}00280             \textcolor{comment}{// Now bind the texture to its slot}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00281}00281             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{GLContextManager::getContext}}()-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{bindTexture}}(GL\_TEXTURE\_2D, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}{m\_textureIDs}}[i]);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00282}00282 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00283}00283             \textcolor{comment}{// Just define the texture's basic properties -\/ how it stores data, its size, etc. No data is added here.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00284}00284             GLenum attachmentType =}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00285}00285                 ((i == \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\_numTextures}} -\/ 1) \&\& \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a8cb0768b5c42501e8e3299d45e917114}{m\_shaderHasDepth}}) ? GL\_DEPTH\_ATTACHMENT : (GL\_COLOR\_ATTACHMENT0 + i);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00286}00286             \textcolor{keywordflow}{switch}(attachmentType) \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00287}00287                 \textcolor{keywordflow}{case} GL\_DEPTH\_ATTACHMENT:}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00288}00288                     \textcolor{comment}{/*// Set the texture's type to 32 total bits, with 8 reserved for the stencil.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00289}00289 \textcolor{comment}{                    glTexImage2D(GL\_TEXTURE\_2D,}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00290}00290 \textcolor{comment}{                                 0,}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00291}00291 \textcolor{comment}{                                 GL\_DEPTH24\_STENCIL8,}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00292}00292 \textcolor{comment}{                                 m\_camera-\/>getViewspaceResolution().x,}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00293}00293 \textcolor{comment}{                                 m\_camera-\/>getViewspaceResolution().y,}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00294}00294 \textcolor{comment}{                                 0,}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00295}00295 \textcolor{comment}{                                 GL\_DEPTH\_STENCIL,}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00296}00296 \textcolor{comment}{                                 GL\_UNSIGNED\_INT\_24\_8,}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00297}00297 \textcolor{comment}{                                 nullptr);}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00298}00298 \textcolor{comment}{                    break;*/}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00299}00299                     \textcolor{comment}{// Just add a depth component}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00300}00300                     glTexImage2D(GL\_TEXTURE\_2D,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00301}00301                                  0,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00302}00302                                  GL\_DEPTH\_COMPONENT,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00303}00303                                  \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}{m\_camera}}-\/>getViewspaceResolution().x,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00304}00304                                  \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}{m\_camera}}-\/>getViewspaceResolution().y,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00305}00305                                  0,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00306}00306                                  GL\_DEPTH\_COMPONENT,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00307}00307                                  GL\_FLOAT,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00308}00308                                  \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00309}00309                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00310}00310                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00311}00311                     \textcolor{comment}{// Just a regular texture.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00312}00312                     glTexImage2D(GL\_TEXTURE\_2D,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00313}00313                                  0,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00314}00314                                  GL\_RGBA,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00315}00315                                  \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}{m\_camera}}-\/>getViewspaceResolution().x,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00316}00316                                  \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b85155ebfa175cdabaaf477a854ee54}{m\_camera}}-\/>getViewspaceResolution().y,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00317}00317                                  0,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00318}00318                                  GL\_RGBA,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00319}00319                                  GL\_UNSIGNED\_BYTE,}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00320}00320                                  \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00321}00321                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00322}00322             \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00323}00323 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00324}00324             \textcolor{comment}{// Give the texture some more basic settings.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00325}00325             glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_WRAP\_S, GL\_CLAMP\_TO\_BORDER);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00326}00326             glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_WRAP\_T, GL\_CLAMP\_TO\_BORDER);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00327}00327             \textcolor{keywordtype}{float} backColour[] = \{0.0f, 0.0f, 0.0f, 0.0f\}; \textcolor{comment}{// Fully transparent}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00328}00328             glTexParameterfv(GL\_TEXTURE\_2D, GL\_TEXTURE\_BORDER\_COLOR, backColour);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00329}00329             glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_MAG\_FILTER, GL\_NEAREST);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00330}00330             glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_MIN\_FILTER, GL\_NEAREST);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00331}00331 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00332}00332             \textcolor{comment}{// Now that we've defined the texture, we need to attach it to the FBO!}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00333}00333             \textcolor{comment}{// Attaches either a color or depth attachment of type texture2D with 0 mipmapping levels.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00334}00334             glFramebufferTexture2D(GL\_FRAMEBUFFER, attachmentType, GL\_TEXTURE\_2D, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}{m\_textureIDs}}[i], 0);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00335}00335 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00336}00336             \textcolor{comment}{// Now that its attached, we can unbind the texture}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00337}00337             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{GLContextManager::getContext}}()-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{bindTexture}}(GL\_TEXTURE\_2D, 0);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00338}00338         \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00339}00339     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00340}00340 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00341}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_af0312bfcb60be2285bb443a79ae9678f}{00341}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_af0312bfcb60be2285bb443a79ae9678f}{FBORenderer::createFBO}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00342}00342         \textcolor{comment}{// Tell OpenGL we want to create an FBO, and store its handle}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00343}00343         glGenFramebuffers(1, \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b1ec62a3954d7be5b309ac4a52337d2}{m\_fboID}});}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00344}00344 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00345}00345         \textcolor{comment}{// Bind it}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00346}00346         glBindFramebuffer(GL\_FRAMEBUFFER, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b1ec62a3954d7be5b309ac4a52337d2}{m\_fboID}});}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00347}00347 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00348}00348         \textcolor{comment}{// Create all of its "{}child"{} textures}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00349}00349         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aff19a68622b2fdf7033ffee1ab32a7c6}{createTextures}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00350}00350 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00351}00351         \textcolor{comment}{// Check to make sure it worked.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00352}00352         GLint status = glCheckFramebufferStatus(GL\_FRAMEBUFFER);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00353}00353         \textcolor{keywordflow}{if}(status != GL\_FRAMEBUFFER\_COMPLETE) \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00354}00354             \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a56134db1e8559ae4b32bf967c15fc4df}{BAREError::FBO\_FAILURE}});}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00355}00355             \textcolor{comment}{// Set the fbo handle to 0 to make sure we show its borked}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00356}00356             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b1ec62a3954d7be5b309ac4a52337d2}{m\_fboID}} = 0;}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00357}00357         \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00358}00358 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00359}00359         \textcolor{comment}{// Finally, unbind it}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00360}00360         glBindFramebuffer(GL\_FRAMEBUFFER, 0);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00361}00361     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00362}00362 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00363}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5765d077d8aff3402f717863169a0176}{00363}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5765d077d8aff3402f717863169a0176}{FBORenderer::bind}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00364}00364         \textcolor{comment}{// First, the FBO}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00365}00365         glBindFramebuffer(GL\_FRAMEBUFFER, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5b1ec62a3954d7be5b309ac4a52337d2}{m\_fboID}});}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00366}00366 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00367}00367         \textcolor{comment}{// Now the textures.}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00368}00368         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context}{GLContext}}* context = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{GLContextManager::getContext}}();}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00369}00369         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\_numTextures}} -\/ 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00370}00370             context-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a529bb80b0bd7bbf86f10be7c30be514c}{setActiveTexture}}(GL\_TEXTURE0 + i);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00371}00371             context-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{bindTexture}}(GL\_TEXTURE\_2D, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a636af190f493550d7ce629e7ffaf157b}{m\_textureIDs}}[i]);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00372}00372         \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00373}00373     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00374}00374 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00375}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a01768136e2e36b131a23d422ded3bd5b}{00375}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a01768136e2e36b131a23d422ded3bd5b}{FBORenderer::unbind}}() \{}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00376}00376         \textcolor{comment}{// First, unbind the textures}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00377}00377         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aef32219b7769258d2e2af288d0e71e5d}{m\_numTextures}} -\/ 1; i++)}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00378}00378             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{GLContextManager::getContext}}()-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a99f228aa049e960dace1970e09b24246}{unbindTexture}}(GL\_TEXTURE\_2D, GL\_TEXTURE0 + i);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00379}00379 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00380}00380         \textcolor{comment}{// Now, unbind the FBO}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00381}00381         glBindFramebuffer(GL\_FRAMEBUFFER, 0);}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00382}00382     \}}
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00383}00383 }
+\DoxyCodeLine{\Hypertarget{_f_b_o_renderer_8cpp_source_l00384}00384 \} \textcolor{comment}{// namespace BARE2D}}
+
+\end{DoxyCode}

@@ -1,0 +1,55 @@
+\hypertarget{_timer_8cpp_source}{}\doxysection{Timer.\+cpp}
+\label{_timer_8cpp_source}\index{Source/Timer.cpp@{Source/Timer.cpp}}
+\mbox{\hyperlink{_timer_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_timer_8hpp}{Timer.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_logger_8hpp}{Logger.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00007}00007 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00009}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_af894f9cc637fc1df639d6493347200cc}{00009}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_af894f9cc637fc1df639d6493347200cc}{Timer::Timer}}()}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00010}00010     \{}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00011}00011         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a9dcb6c420631db0b6e91c6eefea12b02}{m\_frameTime}} = 0.0;}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00012}00012     \}}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00014}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a20ecce866aa0f272c630def64298cee9}{00014}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a20ecce866aa0f272c630def64298cee9}{Timer::integrateFrame}}()}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00015}00015     \{}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00016}00016         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a9dcb6c420631db0b6e91c6eefea12b02}{m\_frameTime}} > \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_aa9510818ec5a3d8ca7e83f6277ca0dc3}{m\_minDeltaTime}}) \{}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00017}00017             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a9dcb6c420631db0b6e91c6eefea12b02}{m\_frameTime}} -\/= std::min(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a9dcb6c420631db0b6e91c6eefea12b02}{m\_frameTime}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_aa9510818ec5a3d8ca7e83f6277ca0dc3}{m\_minDeltaTime}});}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00018}00018             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00019}00019         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00020}00020             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00021}00021         \}}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00022}00022     \}}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00024}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a4a2cfd6c8f2b4147f574f7c22247e9e8}{00024}}     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a4a2cfd6c8f2b4147f574f7c22247e9e8}{Timer::getDeltaTime}}()}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00025}00025     \{}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00026}00026         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_aa9510818ec5a3d8ca7e83f6277ca0dc3}{m\_minDeltaTime}} > 1.0/100000.0 ? std::min(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a9dcb6c420631db0b6e91c6eefea12b02}{m\_frameTime}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_aa9510818ec5a3d8ca7e83f6277ca0dc3}{m\_minDeltaTime}}) : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a9dcb6c420631db0b6e91c6eefea12b02}{m\_frameTime}};}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00029}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a7cc8c03901700b14cfec0c336645ae13}{00029}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a7cc8c03901700b14cfec0c336645ae13}{Timer::startTimer}}()}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00030}00030     \{}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00031}00031         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a66348a0a0c38584cf2fb0ec6e1af2760}{m\_startTime}} = std::chrono::steady\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00032}00032     \}}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00034}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a034a2b3086567486abbbcaaf667266f9}{00034}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a034a2b3086567486abbbcaaf667266f9}{Timer::endTimer}}()}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00035}00035     \{}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00036}00036         std::chrono::steady\_clock::time\_point newTime = std::chrono::steady\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00037}00037         }
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00038}00038         \textcolor{keywordtype}{double} deltaMicroseconds = std::chrono::duration\_cast<std::chrono::microseconds>(newTime -\/ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a66348a0a0c38584cf2fb0ec6e1af2760}{m\_startTime}}).count();}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00039}00039         }
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00040}00040         \textcolor{comment}{// Convert from microseconds to fractional seconds.}}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00041}00041         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_a9dcb6c420631db0b6e91c6eefea12b02}{m\_frameTime}} += deltaMicroseconds / 1000000.0;}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00044}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_ae9153aaa0e1a26a32be36dbee2c1d395}{00044}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_ae9153aaa0e1a26a32be36dbee2c1d395}{Timer::setDeltaTimeLimit}}(\textcolor{keywordtype}{double} minDt)}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00045}00045     \{}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00046}00046         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_timer_aa9510818ec5a3d8ca7e83f6277ca0dc3}{m\_minDeltaTime}} = minDt;}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00047}00047     \}}
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_timer_8cpp_source_l00049}00049 \}}
+
+\end{DoxyCode}

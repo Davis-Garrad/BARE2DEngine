@@ -1,0 +1,133 @@
+\hypertarget{_x_m_l_data_types_8tcc_source}{}\doxysection{XMLData\+Types.\+tcc}
+\label{_x_m_l_data_types_8tcc_source}\index{Source/XMLDataTypes.tcc@{Source/XMLDataTypes.tcc}}
+\mbox{\hyperlink{_x_m_l_data_types_8tcc}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00001}00001 \#pragma once}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00003}00003 \#include <glm/glm.hpp>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00005}00005 \#include "{}Cache.hpp"{}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00006}00006 \#include "{}Texture.hpp"{}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00007}00007 \#include "{}LuaScript.hpp"{}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00008}00008 \#include "{}BAREErrors.hpp"{}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00010}00010 namespace BARE2D \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00011}00011     // AttributeBase is completely abstract. We don't need to actually define its methods}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00012}00012     // First, the Attribute methods}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00013}00013     // These ones will work for any T}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00014}00014     template<typename T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00015}00015     Attribute<T>::Attribute(std::string Name, AttributeType Type, T* data) \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00016}00016         name = Name;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00017}00017         type = Type;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00018}00018         }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00019}00019         m\_data = data;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00020}00020     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00021}00021     }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00022}00022     template<typename T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00023}00023     void Attribute<T>::setData(T data) \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00024}00024         if(!m\_data) throwFatalError(BAREError::XML\_FAILURE, "{}Failed to set data value -\/ pointer not allocated"{});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00025}00025         *m\_data = data;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00026}00026     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00027}00027     }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00028}00028     template<typename T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00029}00029     void Attribute<T>::swapDataPointer(T* newPtr) \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00030}00030         *newPtr = *m\_data;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00031}00031         m\_data = newPtr;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00032}00032     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00033}00033     }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00034}00034     template<typename T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00035}00035     T Attribute<T>::getData() \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00036}00036         return *static\_cast<T*>(m\_data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00038}00038     }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00039}00039     template<typename T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00040}00040     T* Attribute<T>::getDataPointer() \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00041}00041         return m\_data;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00043}00043     }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00044}00044     // The following Attribute methods must be specialized, as they differ for each type of T}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00045}00045     // getDataString}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00046}00046     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00047}00047     std::string Attribute<std::string>::getDataString();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00048}00048     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00049}00049     std::string Attribute<unsigned int>::getDataString();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00050}00050     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00051}00051     std::string Attribute<int>::getDataString();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00052}00052     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00053}00053     std::string Attribute<float>::getDataString();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00054}00054     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00055}00055     std::string Attribute<bool>::getDataString();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00056}00056     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00057}00057     std::string Attribute<glm::vec2>::getDataString();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00058}00058     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00059}00059     std::string Attribute<std::vector<std::string>>::getDataString();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00060}00060     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00061}00061     std::string Attribute<std::vector<unsigned int>>::getDataString();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00062}00062     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00063}00063     std::string Attribute<std::vector<int>>::getDataString();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00064}00064     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00065}00065     std::string Attribute<std::vector<float>>::getDataString();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00066}00066     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00067}00067     std::string Attribute<std::vector<bool>>::getDataString();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00068}00068     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00069}00069     std::string Attribute<std::vector<glm::vec2>>::getDataString();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00070}00070     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00071}00071     std::string Attribute<LuaScript>::getDataString();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00072}00072     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00073}00073     std::string Attribute<Texture>::getDataString();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00074}00074     }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00075}00075     // SetDefaultData}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00076}00076     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00077}00077     void Attribute<std::string>::setDefaultData();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00078}00078     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00079}00079     void Attribute<unsigned int>::setDefaultData();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00080}00080     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00081}00081     void Attribute<int>::setDefaultData();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00082}00082     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00083}00083     void Attribute<float>::setDefaultData();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00084}00084     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00085}00085     void Attribute<bool>::setDefaultData();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00086}00086     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00087}00087     void Attribute<glm::vec2>::setDefaultData();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00088}00088     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00089}00089     void Attribute<std::vector<std::string>>::setDefaultData();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00090}00090     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00091}00091     void Attribute<std::vector<unsigned int>>::setDefaultData();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00092}00092     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00093}00093     void Attribute<std::vector<int>>::setDefaultData();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00094}00094     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00095}00095     void Attribute<std::vector<float>>::setDefaultData();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00096}00096     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00097}00097     void Attribute<std::vector<bool>>::setDefaultData();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00098}00098     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00099}00099     void Attribute<std::vector<glm::vec2>>::setDefaultData();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00100}00100     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00101}00101     void Attribute<LuaScript>::setDefaultData();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00102}00102     template<>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00103}00103     void Attribute<Texture>::setDefaultData();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00104}00104     }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00105}00105     template<typename T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00106}00106     T XMLData::getAttributeByName(std::string name) \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00107}00107         // Make sure the attribute exists:}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00108}00108         auto searchVariable = m\_attributes.find(name);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00109}00109         if(searchVariable == m\_attributes.end()) \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00110}00110             // Attribute was not found, send an error and return 0.}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00111}00111             throwError(BAREError::XML\_FAILURE, "{}Warning: Attribute "{} + name + "{} does not exist."{});}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00112}00112             return (T)0;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00113}00113         \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00114}00114         }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00115}00115         // If we make it here, the searchVaraible iterator has found our T -\/ return the data in the attribute}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00116}00116         return static\_cast<Attribute<T>*>(searchVariable-\/>second)-\/>getData();}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00117}00117     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00118}00118     }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00119}00119     template<typename T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00120}00120     void XMLData::addAttribute(std::string name, AttributeType type, T* data) \{}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00121}00121         Attribute<T>* attr = new Attribute<T>(name, type, data);}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00122}00122         }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00123}00123         m\_attributes[name] = attr;}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00124}00124     \}}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00125}00125     // I believe that is all that needs to be specialized.}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00126}00126     }
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00127}00127 \}}
+
+\end{DoxyCode}

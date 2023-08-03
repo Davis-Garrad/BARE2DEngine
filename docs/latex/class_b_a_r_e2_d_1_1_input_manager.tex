@@ -1,0 +1,455 @@
+\hypertarget{class_b_a_r_e2_d_1_1_input_manager}{}\doxysection{BARE2D\+::Input\+Manager Class Reference}
+\label{class_b_a_r_e2_d_1_1_input_manager}\index{BARE2D::InputManager@{BARE2D::InputManager}}
+
+
+This is the input manager. It does what you expect! Nearly completely copied from GLEngine, the ol\textquotesingle{} gal.  
+
+
+
+
+{\ttfamily \#include $<$Input\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for BARE2D\+::Input\+Manager\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5156e6237e45ec8372579fa015751f89}{Input\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab0797f47aa7a7f5fbbb427e0cef57196}{$\sim$\+Input\+Manager}} ()
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the inputmanager. Should be called every frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{press\+Key}} (unsigned int key\+ID)
+\begin{DoxyCompactList}\small\item\em Sets a key as \textquotesingle{}pressed\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{release\+Key}} (unsigned int key\+ID)
+\begin{DoxyCompactList}\small\item\em Sets a key as \textquotesingle{}released\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{set\+Mouse\+Position}} (float x, float y)
+\begin{DoxyCompactList}\small\item\em Sets the mouse position to (x,y) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a8b091efcd10cffa4040602f083006acb}{set\+Mouse\+Position}} (glm\+::vec2 position)
+\begin{DoxyCompactList}\small\item\em Sets the mouse position to \textquotesingle{}position\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{set\+Mouse\+Scrollwheel\+Position}} (int position)
+\begin{DoxyCompactList}\small\item\em Sets the \char`\"{}position\char`\"{} of the scrollwheel -\/ essentially, how much it has moved since the last frame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{is\+Key\+Down}} (unsigned int key\+ID) const
+\begin{DoxyCompactList}\small\item\em Checks if the key is down at all. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{is\+Key\+Pressed}} (unsigned int key\+ID) const
+\begin{DoxyCompactList}\small\item\em Checks if the key has just been pressed. \end{DoxyCompactList}\item 
+glm\+::vec2 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a492c88230777ab626d6d1778b4ee0e02}{get\+Mouse\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the position of the mouse in the window. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a62da30eaa80d5d4f8d9fe32690026a94}{get\+Mouse\+Scrollwheel\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the position of the mousewheel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d}{was\+Key\+Down}} (unsigned int key\+ID) const
+\begin{DoxyCompactList}\small\item\em Checks if the key was down last frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ unsigned int, bool $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}{m\+\_\+key\+Map}}
+\item 
+std\+::unordered\+\_\+map$<$ unsigned int, bool $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a44955d49cb077bc8fa663b6f37d81f}{m\+\_\+previous\+Key\+Map}}
+\item 
+glm\+::vec2 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a50b1fa5a5611fcbca0438e3b67429acc}{m\+\_\+mouse\+Position}}
+\item 
+int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a030b08344dbac5337e6d094f39b815ce}{m\+\_\+mouse\+Scrollwheel\+Position}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the input manager. It does what you expect! Nearly completely copied from GLEngine, the ol\textquotesingle{} gal. 
+
+Definition at line \mbox{\hyperlink{_input_manager_8hpp_source_l00012}{12}} of file \mbox{\hyperlink{_input_manager_8hpp_source}{Input\+Manager.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_a5156e6237e45ec8372579fa015751f89}\label{class_b_a_r_e2_d_1_1_input_manager_a5156e6237e45ec8372579fa015751f89}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!InputManager@{InputManager}}
+\index{InputManager@{InputManager}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{InputManager()}{InputManager()}}
+{\footnotesize\ttfamily BARE2\+D\+::\+Input\+Manager\+::\+Input\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_input_manager_8cpp_source}{Input\+Manager.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_ab0797f47aa7a7f5fbbb427e0cef57196}\label{class_b_a_r_e2_d_1_1_input_manager_ab0797f47aa7a7f5fbbb427e0cef57196}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!````~InputManager@{$\sim$InputManager}}
+\index{````~InputManager@{$\sim$InputManager}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$InputManager()}{~InputManager()}}
+{\footnotesize\ttfamily BARE2\+D\+::\+Input\+Manager\+::$\sim$\+Input\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_input_manager_8cpp_source}{Input\+Manager.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_a492c88230777ab626d6d1778b4ee0e02}\label{class_b_a_r_e2_d_1_1_input_manager_a492c88230777ab626d6d1778b4ee0e02}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!getMousePosition@{getMousePosition}}
+\index{getMousePosition@{getMousePosition}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{getMousePosition()}{getMousePosition()}}
+{\footnotesize\ttfamily glm\+::vec2 BARE2\+D\+::\+Input\+Manager\+::get\+Mouse\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the position of the mouse in the window. 
+
+\begin{DoxyReturn}{Returns}
+The position of the mouse in a glm\+::vec2 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{_input_manager_8cpp_source}{Input\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_input_manager_8hpp_source_l00090}{m\+\_\+mouse\+Position}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_a62da30eaa80d5d4f8d9fe32690026a94}\label{class_b_a_r_e2_d_1_1_input_manager_a62da30eaa80d5d4f8d9fe32690026a94}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!getMouseScrollwheelPosition@{getMouseScrollwheelPosition}}
+\index{getMouseScrollwheelPosition@{getMouseScrollwheelPosition}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{getMouseScrollwheelPosition()}{getMouseScrollwheelPosition()}}
+{\footnotesize\ttfamily int BARE2\+D\+::\+Input\+Manager\+::get\+Mouse\+Scrollwheel\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the position of the mousewheel. 
+
+\begin{DoxyReturn}{Returns}
+How much the mousewheel has moved since last update. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cpp_source_l00080}{80}} of file \mbox{\hyperlink{_input_manager_8cpp_source}{Input\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_input_manager_8hpp_source_l00091}{m\+\_\+mouse\+Scrollwheel\+Position}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}\label{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!isKeyDown@{isKeyDown}}
+\index{isKeyDown@{isKeyDown}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{isKeyDown()}{isKeyDown()}}
+{\footnotesize\ttfamily bool BARE2\+D\+::\+Input\+Manager\+::is\+Key\+Down (\begin{DoxyParamCaption}\item[{unsigned int}]{key\+ID }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the key is down at all. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+ID} & The SDL-\/given ID to check against \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key is down 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cpp_source_l00054}{54}} of file \mbox{\hyperlink{_input_manager_8cpp_source}{Input\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_input_manager_8hpp_source_l00088}{m\+\_\+key\+Map}}.
+
+
+
+Referenced by \mbox{\hyperlink{_input_manager_8cpp_source_l00069}{is\+Key\+Pressed()}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}\label{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}}
+{\footnotesize\ttfamily bool BARE2\+D\+::\+Input\+Manager\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{unsigned int}]{key\+ID }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the key has just been pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+ID} & The SDL-\/given ID to check against \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key wasn\textquotesingle{}t down last frame and is this frame. false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{_input_manager_8cpp_source}{Input\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_input_manager_8cpp_source_l00054}{is\+Key\+Down()}}, and \mbox{\hyperlink{_input_manager_8cpp_source_l00085}{was\+Key\+Down()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}\label{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!pressKey@{pressKey}}
+\index{pressKey@{pressKey}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{pressKey()}{pressKey()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+Input\+Manager\+::press\+Key (\begin{DoxyParamCaption}\item[{unsigned int}]{key\+ID }\end{DoxyParamCaption})}
+
+
+
+Sets a key as \textquotesingle{}pressed\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+ID} & The id given for a key by SDL \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{_input_manager_8cpp_source}{Input\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_input_manager_8hpp_source_l00088}{m\+\_\+key\+Map}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00145}{BARE2\+D\+::\+App\+::poll\+SDLInput()}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}\label{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!releaseKey@{releaseKey}}
+\index{releaseKey@{releaseKey}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{releaseKey()}{releaseKey()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+Input\+Manager\+::release\+Key (\begin{DoxyParamCaption}\item[{unsigned int}]{key\+ID }\end{DoxyParamCaption})}
+
+
+
+Sets a key as \textquotesingle{}released\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+ID} & The id given for a key by SDL \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_input_manager_8cpp_source}{Input\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_input_manager_8hpp_source_l00088}{m\+\_\+key\+Map}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00145}{BARE2\+D\+::\+App\+::poll\+SDLInput()}}.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}\label{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!setMousePosition@{setMousePosition}}
+\index{setMousePosition@{setMousePosition}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{setMousePosition()}{setMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+Input\+Manager\+::set\+Mouse\+Position (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+Sets the mouse position to (x,y) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A float to represent x position \\
+\hline
+{\em y} & A float to represent y position \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{_input_manager_8cpp_source}{Input\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_input_manager_8hpp_source_l00090}{m\+\_\+mouse\+Position}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00145}{BARE2\+D\+::\+App\+::poll\+SDLInput()}}.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_a8b091efcd10cffa4040602f083006acb}\label{class_b_a_r_e2_d_1_1_input_manager_a8b091efcd10cffa4040602f083006acb}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!setMousePosition@{setMousePosition}}
+\index{setMousePosition@{setMousePosition}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{setMousePosition()}{setMousePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+Input\+Manager\+::set\+Mouse\+Position (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{position }\end{DoxyParamCaption})}
+
+
+
+Sets the mouse position to \textquotesingle{}position\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position to set it to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{_input_manager_8cpp_source}{Input\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_input_manager_8hpp_source_l00090}{m\+\_\+mouse\+Position}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}\label{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!setMouseScrollwheelPosition@{setMouseScrollwheelPosition}}
+\index{setMouseScrollwheelPosition@{setMouseScrollwheelPosition}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{setMouseScrollwheelPosition()}{setMouseScrollwheelPosition()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+Input\+Manager\+::set\+Mouse\+Scrollwheel\+Position (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Sets the \char`\"{}position\char`\"{} of the scrollwheel -\/ essentially, how much it has moved since the last frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The distance it has moved since last update. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{_input_manager_8cpp_source}{Input\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_input_manager_8hpp_source_l00091}{m\+\_\+mouse\+Scrollwheel\+Position}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00145}{BARE2\+D\+::\+App\+::poll\+SDLInput()}}.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}\label{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!update@{update}}
+\index{update@{update}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+Input\+Manager\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the inputmanager. Should be called every frame. 
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{_input_manager_8cpp_source}{Input\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_input_manager_8hpp_source_l00088}{m\+\_\+key\+Map}}, \mbox{\hyperlink{_input_manager_8hpp_source_l00091}{m\+\_\+mouse\+Scrollwheel\+Position}}, and \mbox{\hyperlink{_input_manager_8hpp_source_l00089}{m\+\_\+previous\+Key\+Map}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00139}{BARE2\+D\+::\+App\+::update\+Input()}}.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d}\label{class_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!wasKeyDown@{wasKeyDown}}
+\index{wasKeyDown@{wasKeyDown}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{wasKeyDown()}{wasKeyDown()}}
+{\footnotesize\ttfamily bool BARE2\+D\+::\+Input\+Manager\+::was\+Key\+Down (\begin{DoxyParamCaption}\item[{unsigned int}]{key\+ID }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks if the key was down last frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+ID} & The SDL-\/given ID to check against \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key was down last frame, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{_input_manager_8cpp_source}{Input\+Manager.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_input_manager_8hpp_source_l00089}{m\+\_\+previous\+Key\+Map}}.
+
+
+
+Referenced by \mbox{\hyperlink{_input_manager_8cpp_source_l00069}{is\+Key\+Pressed()}}.
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}\label{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!m\_keyMap@{m\_keyMap}}
+\index{m\_keyMap@{m\_keyMap}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{m\_keyMap}{m\_keyMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$unsigned int, bool$>$ BARE2\+D\+::\+Input\+Manager\+::m\+\_\+key\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8hpp_source_l00088}{88}} of file \mbox{\hyperlink{_input_manager_8hpp_source}{Input\+Manager.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_input_manager_8cpp_source_l00054}{is\+Key\+Down()}}, \mbox{\hyperlink{_input_manager_8cpp_source_l00026}{press\+Key()}}, \mbox{\hyperlink{_input_manager_8cpp_source_l00032}{release\+Key()}}, and \mbox{\hyperlink{_input_manager_8cpp_source_l00015}{update()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_a50b1fa5a5611fcbca0438e3b67429acc}\label{class_b_a_r_e2_d_1_1_input_manager_a50b1fa5a5611fcbca0438e3b67429acc}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!m\_mousePosition@{m\_mousePosition}}
+\index{m\_mousePosition@{m\_mousePosition}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{m\_mousePosition}{m\_mousePosition}}
+{\footnotesize\ttfamily glm\+::vec2 BARE2\+D\+::\+Input\+Manager\+::m\+\_\+mouse\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8hpp_source_l00090}{90}} of file \mbox{\hyperlink{_input_manager_8hpp_source}{Input\+Manager.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_input_manager_8cpp_source_l00075}{get\+Mouse\+Position()}}, and \mbox{\hyperlink{_input_manager_8cpp_source_l00038}{set\+Mouse\+Position()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_a030b08344dbac5337e6d094f39b815ce}\label{class_b_a_r_e2_d_1_1_input_manager_a030b08344dbac5337e6d094f39b815ce}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!m\_mouseScrollwheelPosition@{m\_mouseScrollwheelPosition}}
+\index{m\_mouseScrollwheelPosition@{m\_mouseScrollwheelPosition}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{m\_mouseScrollwheelPosition}{m\_mouseScrollwheelPosition}}
+{\footnotesize\ttfamily int BARE2\+D\+::\+Input\+Manager\+::m\+\_\+mouse\+Scrollwheel\+Position = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8hpp_source_l00091}{91}} of file \mbox{\hyperlink{_input_manager_8hpp_source}{Input\+Manager.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_input_manager_8cpp_source_l00080}{get\+Mouse\+Scrollwheel\+Position()}}, \mbox{\hyperlink{_input_manager_8cpp_source_l00049}{set\+Mouse\+Scrollwheel\+Position()}}, and \mbox{\hyperlink{_input_manager_8cpp_source_l00015}{update()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_input_manager_a5a44955d49cb077bc8fa663b6f37d81f}\label{class_b_a_r_e2_d_1_1_input_manager_a5a44955d49cb077bc8fa663b6f37d81f}} 
+\index{BARE2D::InputManager@{BARE2D::InputManager}!m\_previousKeyMap@{m\_previousKeyMap}}
+\index{m\_previousKeyMap@{m\_previousKeyMap}!BARE2D::InputManager@{BARE2D::InputManager}}
+\doxysubsubsection{\texorpdfstring{m\_previousKeyMap}{m\_previousKeyMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$unsigned int, bool$>$ BARE2\+D\+::\+Input\+Manager\+::m\+\_\+previous\+Key\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8hpp_source_l00089}{89}} of file \mbox{\hyperlink{_input_manager_8hpp_source}{Input\+Manager.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_input_manager_8cpp_source_l00015}{update()}}, and \mbox{\hyperlink{_input_manager_8cpp_source_l00085}{was\+Key\+Down()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\mbox{\hyperlink{_input_manager_8hpp}{Input\+Manager.\+hpp}}\item 
+Source/\mbox{\hyperlink{_input_manager_8cpp}{Input\+Manager.\+cpp}}\end{DoxyCompactItemize}

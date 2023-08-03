@@ -1,0 +1,32 @@
+\hypertarget{index_intro_sec}{}\doxysection{Introduction}\label{index_intro_sec}
+This is \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}, a game engine written over a bit, by Davis Garrad. This documentation exists purely because Davis Garrad forgets what the fuck he wrote.\hypertarget{index_install_sec}{}\doxysection{Linking}\label{index_install_sec}
+\hypertarget{index_step1}{}\doxysubsection{Step 1\+: Linker flags}\label{index_step1}
+There are no required flags, doofus.\hypertarget{index_step2}{}\doxysubsection{Step 2\+: Linked libraries}\label{index_step2}
+You will require a series of other libraries\+:
+
+
+\begin{DoxyItemize}
+\item libboost\+\_\+thread.\+a 
+\item libboost\+\_\+filesystem.\+a 
+\item libboost\+\_\+system.\+a 
+\item lua5.\+3 
+\item lib\+BARE2\+DEngine.\+a 
+\item CEGUIBase-\/0 
+\item CEGUIOpen\+GLRenderer-\/0 
+\item SDL2 
+\item SDL2\+\_\+mixer 
+\item SDL2\+\_\+ttf 
+\item GL 
+\item GLU 
+\item GLEW 
+\item pthread 
+\end{DoxyItemize}
+
+You should (obviously, but I\textquotesingle{}m including this so you don\textquotesingle{}t forget) have the aforementioned libraries (including \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}) in one or more of the search directories for libraries.\hypertarget{index_step3}{}\doxysubsection{Step 3\+: Included Source Files}\label{index_step3}
+Make sure to include source files from the {\ttfamily source} directory\hypertarget{index_getting_started}{}\doxysection{Using the Engine}\label{index_getting_started}
+\hypertarget{index_basics}{}\doxysubsection{The Basics\+:}\label{index_basics}
+The first things that you\textquotesingle{}ll need are some derivations of the \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen}{BARE2\+D\+::\+Screen}} class, filled with the appropriate virtual overrides of its pure functions. You can think of each \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen}{BARE2\+D\+::\+Screen}} as a stage of your application -\/ there should be one for menus, one for main game, (maybe) one for some map functionality, etc.
+
+Once you\textquotesingle{}ve got some \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen}{BARE2\+D\+::\+Screen}}\textquotesingle{}s made, you\textquotesingle{}re going to want to create a \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{BARE2\+D\+::\+App}} object in your {\ttfamily main} function. This is going to store all the screenstates, as well as the application\textquotesingle{}s state (of course!). Then, just call {\ttfamily run()}. This will set everything in motion.\hypertarget{index_rendering}{}\doxysubsection{Rendering\+:}\label{index_rendering}
+Rendering is a fickle thing. Luckily, \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} makes it easy-\/peasy! It\textquotesingle{}s genuinely really simple. First, create a vertex and fragment shader (just .vert and .frag files respectively) using GLSL, outside of your program. Then, back in the program, create a \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer}{BARE2\+D\+::\+Renderer}} (or one of its derived classes, like a \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{BARE2\+D\+::\+Basic\+Renderer}} for example) and initialize it. After that, you\textquotesingle{}ll (probably) need a texture to render, so use the \mbox{\hyperlink{class_b_a_r_e2_d_1_1_resource_manager}{BARE2\+D\+::\+Resource\+Manager}} to grab one of those. Finally, you can call \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a}{BARE2\+D\+::\+Renderer\+::begin()}} to begin the render batch, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a2070760479d95e099eab580d6f5b66e4}{BARE2\+D\+::\+Basic\+Renderer\+::draw()}} (for example again, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer}{BARE2\+D\+::\+Renderer}} is a very basic class) for each glyph in the batch, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a8a07d633d12883604201fd032fbd2cdd}{BARE2\+D\+::\+Renderer\+::end()}} to close off the batch, and finally \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_af6c7b543d54be3ce30224e21d5606be3}{BARE2\+D\+::\+Renderer\+::render()}} to render the entire batch to the \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{BARE2\+D\+::\+Window}} managed by the \mbox{\hyperlink{class_b_a_r_e2_d_1_1_app}{BARE2\+D\+::\+App}} object we created before. We can very well layer these renderers\textquotesingle{} begin() and end() calls, and in fact that\textquotesingle{}s how FBOs work.\hypertarget{index_fbos}{}\doxysubsection{FBOs\+:}\label{index_fbos}
+FBOs make me really happy. I spent a while making these clean. We can use FBOs just by wrapping other \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_af6c7b543d54be3ce30224e21d5606be3}{BARE2\+D\+::\+Renderer\+::render()}}s with some \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer}{BARE2\+D\+::\+FBORenderer}} object (after initializing it and its uniforms) and its calls to \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a5e94ee6c2c34dcdcbd65c9b05f3a465a}{BARE2\+D\+::\+FBORenderer\+::begin()}} and \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_a4dde75642694aa34aa463bb298cb34cd}{BARE2\+D\+::\+FBORenderer\+::end()}}, as well as a final \mbox{\hyperlink{class_b_a_r_e2_d_1_1_f_b_o_renderer_aaccc7bddd25f99cca5b734d097383c6e}{BARE2\+D\+::\+FBORenderer\+::render()}} to render the entire FBO to the screen. 

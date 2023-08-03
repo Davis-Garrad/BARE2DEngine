@@ -1,0 +1,524 @@
+\hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{}\doxysection{BARE2D\+::BARECEGUI Class Reference}
+\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+
+
+{\ttfamily \#include $<$BARECEGUI.\+hpp$>$}
+
+
+
+Collaboration diagram for BARE2D\+::BARECEGUI\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a5efde9a21fff6c7e43ebc7c2c69ffe78}{init}} (std\+::string \&resource\+Directory, unsigned int num\+Contexts)
+\begin{DoxyCompactList}\small\item\em Initializes all of the necessary stuff to use CEGUI! \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a1129545c46dc260d9ef466ca402a99a3}{draw}} ()
+\begin{DoxyCompactList}\small\item\em Draws the GUI to the screen over top of what\textquotesingle{}s already there. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a0650f87bb7a1e8f6f8dddef1faf67da6}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the amount of time passed in CEGUI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_abda90814bb22fe7f7b64dc8922f29b58}{set\+Active\+Context}} (unsigned int context\+Index)
+\begin{DoxyCompactList}\small\item\em Sets the active context. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a69778a5ba2537399cc419de8cd55f4bf}{set\+Mouse\+Cursor}} (std\+::string image\+File)
+\begin{DoxyCompactList}\small\item\em Sets the image of the mouse cursor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a40870938bcb2207329998b68bb11c70e}{set\+Mouse\+Cursor\+Shown}} (bool shown)
+\begin{DoxyCompactList}\small\item\em Shows/hides the mouse cursor. Useful for cutscenes! \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7}{handle\+SDLEvent}} (SDL\+\_\+\+Event \&evnt)
+\begin{DoxyCompactList}\small\item\em Handles and propagates input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a3737b344e427bd5b2f92fa08f1e44885}{load\+Scheme}} (std\+::string scheme\+File)
+\begin{DoxyCompactList}\small\item\em Loads a scheme file from resource\+Directory/schemes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ac931fcf21bb8ae2289c31ab0370772bd}{set\+Font}} (std\+::string font\+File)
+\begin{DoxyCompactList}\small\item\em Sets the current font to some font. \end{DoxyCompactList}\item 
+CEGUI\+::\+Window $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a4887d95ac1f2dc8becc75cf11d6cf9dd}{create\+Widget}} (std\+::string type, glm\+::vec4 dest\+Rect\+Percent, glm\+::vec4 dest\+Rect\+Pixels, CEGUI\+::\+Window $\ast$parent=nullptr, std\+::string name=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Creates a widget of some type. \end{DoxyCompactList}\item 
+CEGUI\+::\+Open\+GL3\+Renderer $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa3c3feb09e2c328426f057336e6ad2ae}{get\+Renderer}} ()
+\item 
+CEGUI\+::\+GUIContext $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea}{get\+Context}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}} $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca}{get\+Instance}} ()
+\item 
+static void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ad1850903003bf2b3b10608e6d3aa1f20}{release}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ade528b2e05e0562fd5ecda850a49ec14}{BARECEGUI}} ()
+\item 
+\mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a44960ac3a16b7b657636483f24d625ec}{$\sim$\+BARECEGUI}} ()
+\item 
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a6b69baba42d43ae2761bda9ace328bc4}{destroy}} ()
+\begin{DoxyCompactList}\small\item\em Frees all necessary memory and unloads resources. Destroys root + children windows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper}{CEGUIContext\+Wrapper}} $\ast$ $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}{m\+\_\+contexts}}
+\item 
+unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa32fb1c941f5296b050622675a1361d4}{m\+\_\+last\+Time}} = 0
+\item 
+unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}{m\+\_\+active\+Context}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}} $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a15472ee784e1eaf1d97876cc3565f477}{m\+\_\+instance}} = nullptr
+\item 
+static bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a497b5ecd274895ea0a74d6603cd0ffb9}{m\+\_\+initialized}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00017}{17}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source}{BARECEGUI.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ade528b2e05e0562fd5ecda850a49ec14}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ade528b2e05e0562fd5ecda850a49ec14}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!BARECEGUI@{BARECEGUI}}
+\index{BARECEGUI@{BARECEGUI}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{BARECEGUI()}{BARECEGUI()}}
+{\footnotesize\ttfamily BARE2\+D\+::\+BARECEGUI\+::\+BARECEGUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00014}{get\+Instance()}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a44960ac3a16b7b657636483f24d625ec}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a44960ac3a16b7b657636483f24d625ec}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!````~BARECEGUI@{$\sim$BARECEGUI}}
+\index{````~BARECEGUI@{$\sim$BARECEGUI}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{$\sim$BARECEGUI()}{~BARECEGUI()}}
+{\footnotesize\ttfamily BARE2\+D\+::\+BARECEGUI\+::$\sim$\+BARECEGUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00109}{m\+\_\+contexts}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a4887d95ac1f2dc8becc75cf11d6cf9dd}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a4887d95ac1f2dc8becc75cf11d6cf9dd}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!createWidget@{createWidget}}
+\index{createWidget@{createWidget}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{createWidget()}{createWidget()}}
+{\footnotesize\ttfamily CEGUI\+::\+Window $\ast$ BARE2\+D\+::\+BARECEGUI\+::create\+Widget (\begin{DoxyParamCaption}\item[{std\+::string}]{type,  }\item[{glm\+::vec4}]{dest\+Rect\+Percent,  }\item[{glm\+::vec4}]{dest\+Rect\+Pixels,  }\item[{CEGUI\+::\+Window $\ast$}]{parent = {\ttfamily nullptr},  }\item[{std\+::string}]{name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Creates a widget of some type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of window -\/ should generally be \char`\"{}\mbox{[}\+Your\+Scheme\mbox{]}/\mbox{[}\+Label,\+Button,\+Frame\+Window,etc.\mbox{]}\char`\"{}. These strings are available in the scheme files. \\
+\hline
+{\em dest\+Rect\+Percent} & The destination+rectangle of the widget, in terms of percentages of the screen. \\
+\hline
+{\em dest\+Rect\+Pixels} & The destination+rectangle of the widget, in terms of pixels. \\
+\hline
+{\em parent} & The parent window -\/ defaults to nullptr. \\
+\hline
+{\em name} & The name of the window -\/ defaults to a unique identifier. Only set this if a pointer of the window cannot be retained/propagated as a handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the new CEGUI\+::\+Window -\/ can be casted to some child type generally. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00255}{255}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00111}{m\+\_\+active\+Context}}, and \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00109}{m\+\_\+contexts}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a6b69baba42d43ae2761bda9ace328bc4}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a6b69baba42d43ae2761bda9ace328bc4}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!destroy@{destroy}}
+\index{destroy@{destroy}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+BARECEGUI\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Frees all necessary memory and unloads resources. Destroys root + children windows. 
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00114}{114}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00109}{m\+\_\+contexts}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a1129545c46dc260d9ef466ca402a99a3}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a1129545c46dc260d9ef466ca402a99a3}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!draw@{draw}}
+\index{draw@{draw}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+BARECEGUI\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the GUI to the screen over top of what\textquotesingle{}s already there. 
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00125}{125}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00111}{m\+\_\+active\+Context}}, and \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00109}{m\+\_\+contexts}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aecad6d159917b2821f9fcb4429adccea}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!getContext@{getContext}}
+\index{getContext@{getContext}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{getContext()}{getContext()}}
+{\footnotesize\ttfamily CEGUI\+::\+GUIContext $\ast$ BARE2\+D\+::\+BARECEGUI\+::get\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+The GUIContext that the context \char`\"{}owns\char`\"{} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00277}{277}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00111}{m\+\_\+active\+Context}}, and \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00109}{m\+\_\+contexts}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00145}{BARE2\+D\+::\+App\+::poll\+SDLInput()}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ab3f339793671b90bb449bf17a9d953ca}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}} $\ast$ BARE2\+D\+::\+BARECEGUI\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00026}{BARECEGUI()}}, and \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00100}{m\+\_\+instance}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00145}{BARE2\+D\+::\+App\+::poll\+SDLInput()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa3c3feb09e2c328426f057336e6ad2ae}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa3c3feb09e2c328426f057336e6ad2ae}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!getRenderer@{getRenderer}}
+\index{getRenderer@{getRenderer}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{getRenderer()}{getRenderer()}}
+{\footnotesize\ttfamily CEGUI\+::\+Open\+GL3\+Renderer $\ast$ BARE2\+D\+::\+BARECEGUI\+::get\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+The Open\+GL3\+Renderer that the context \char`\"{}owns\char`\"{} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00273}{273}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00111}{m\+\_\+active\+Context}}, and \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00109}{m\+\_\+contexts}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a770264d8c510bbfe0585abe493011ed7}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!handleSDLEvent@{handleSDLEvent}}
+\index{handleSDLEvent@{handleSDLEvent}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{handleSDLEvent()}{handleSDLEvent()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+BARECEGUI\+::handle\+SDLEvent (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event \&}]{evnt }\end{DoxyParamCaption})}
+
+
+
+Handles and propagates input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em evnt} & The SDL\+\_\+\+Event to add. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00193}{193}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00111}{m\+\_\+active\+Context}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00109}{m\+\_\+contexts}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00477}{BARE2\+D\+::\+SDLButton\+To\+CEGUIButton()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00283}{BARE2\+D\+::\+SDLKey\+To\+CEGUIKey()}}, and \mbox{\hyperlink{checked_8h_source_l00258}{utf8\+::utf8to32()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00145}{BARE2\+D\+::\+App\+::poll\+SDLInput()}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a5efde9a21fff6c7e43ebc7c2c69ffe78}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a5efde9a21fff6c7e43ebc7c2c69ffe78}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!init@{init}}
+\index{init@{init}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+BARECEGUI\+::init (\begin{DoxyParamCaption}\item[{std\+::string \&}]{resource\+Directory,  }\item[{unsigned int}]{num\+Contexts }\end{DoxyParamCaption})}
+
+
+
+Initializes all of the necessary stuff to use CEGUI! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource\+Directory} & The directory that all of the resources lie in. Should follow CEGUI\textquotesingle{}s specs. \\
+\hline
+{\em num\+Contexts} & The number of different contexts to create. Each context has the ability to handle input differently. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00013}{BARE2\+D\+::\+CEGUIContext\+Wrapper\+::context}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00109}{m\+\_\+contexts}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00102}{m\+\_\+initialized}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00012}{BARE2\+D\+::\+CEGUIContext\+Wrapper\+::renderer}}, and \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00014}{BARE2\+D\+::\+CEGUIContext\+Wrapper\+::root\+Window}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a3737b344e427bd5b2f92fa08f1e44885}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a3737b344e427bd5b2f92fa08f1e44885}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!loadScheme@{loadScheme}}
+\index{loadScheme@{loadScheme}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{loadScheme()}{loadScheme()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+BARECEGUI\+::load\+Scheme (\begin{DoxyParamCaption}\item[{std\+::string}]{scheme\+File }\end{DoxyParamCaption})}
+
+
+
+Loads a scheme file from resource\+Directory/schemes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scheme\+File} & The file to load from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00241}{241}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ad1850903003bf2b3b10608e6d3aa1f20}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ad1850903003bf2b3b10608e6d3aa1f20}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!release@{release}}
+\index{release@{release}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+BARECEGUI\+::release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00100}{m\+\_\+instance}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_abda90814bb22fe7f7b64dc8922f29b58}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_abda90814bb22fe7f7b64dc8922f29b58}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!setActiveContext@{setActiveContext}}
+\index{setActiveContext@{setActiveContext}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{setActiveContext()}{setActiveContext()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+BARECEGUI\+::set\+Active\+Context (\begin{DoxyParamCaption}\item[{unsigned int}]{context\+Index }\end{DoxyParamCaption})}
+
+
+
+Sets the active context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context\+Index} & The index of the context to activate. Must be less than num\+Contexts from \mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{init()}}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00173}{173}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_logger_8cpp_source_l00034}{BARE2\+D\+::\+Logger\+::get\+Instance()}}, \mbox{\hyperlink{_logger_8cpp_source_l00042}{BARE2\+D\+::\+Logger\+::log()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00111}{m\+\_\+active\+Context}}, and \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00109}{m\+\_\+contexts}}.
+
+Here is the call graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ac931fcf21bb8ae2289c31ab0370772bd}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_ac931fcf21bb8ae2289c31ab0370772bd}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!setFont@{setFont}}
+\index{setFont@{setFont}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{setFont()}{setFont()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+BARECEGUI\+::set\+Font (\begin{DoxyParamCaption}\item[{std\+::string}]{font\+File }\end{DoxyParamCaption})}
+
+
+
+Sets the current font to some font. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em font\+File} & The file of the font to be loaded. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00246}{246}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00109}{m\+\_\+contexts}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a69778a5ba2537399cc419de8cd55f4bf}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a69778a5ba2537399cc419de8cd55f4bf}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!setMouseCursor@{setMouseCursor}}
+\index{setMouseCursor@{setMouseCursor}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{setMouseCursor()}{setMouseCursor()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+BARECEGUI\+::set\+Mouse\+Cursor (\begin{DoxyParamCaption}\item[{std\+::string}]{image\+File }\end{DoxyParamCaption})}
+
+
+
+Sets the image of the mouse cursor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+File} & The file to set the mouse cursor\textquotesingle{}s image from. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00181}{181}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00111}{m\+\_\+active\+Context}}, and \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00109}{m\+\_\+contexts}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a40870938bcb2207329998b68bb11c70e}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a40870938bcb2207329998b68bb11c70e}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!setMouseCursorShown@{setMouseCursorShown}}
+\index{setMouseCursorShown@{setMouseCursorShown}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{setMouseCursorShown()}{setMouseCursorShown()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+BARECEGUI\+::set\+Mouse\+Cursor\+Shown (\begin{DoxyParamCaption}\item[{bool}]{shown }\end{DoxyParamCaption})}
+
+
+
+Shows/hides the mouse cursor. Useful for cutscenes! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shown} & True = shows the cursor, false = hides it. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00185}{185}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00111}{m\+\_\+active\+Context}}, and \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00109}{m\+\_\+contexts}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a0650f87bb7a1e8f6f8dddef1faf67da6}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a0650f87bb7a1e8f6f8dddef1faf67da6}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!update@{update}}
+\index{update@{update}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void BARE2\+D\+::\+BARECEGUI\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the amount of time passed in CEGUI. 
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00152}{152}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source}{BARECEGUI.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00109}{m\+\_\+contexts}}, and \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00110}{m\+\_\+last\+Time}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a731fc238d7e53bda90c7658b84893051}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!m\_activeContext@{m\_activeContext}}
+\index{m\_activeContext@{m\_activeContext}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{m\_activeContext}{m\_activeContext}}
+{\footnotesize\ttfamily unsigned int BARE2\+D\+::\+BARECEGUI\+::m\+\_\+active\+Context = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00111}{111}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source}{BARECEGUI.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00255}{create\+Widget()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00125}{draw()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00277}{get\+Context()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00273}{get\+Renderer()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00193}{handle\+SDLEvent()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00173}{set\+Active\+Context()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00181}{set\+Mouse\+Cursor()}}, and \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00185}{set\+Mouse\+Cursor\+Shown()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa250b89b06d146fb95c65bf94e618da9}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!m\_contexts@{m\_contexts}}
+\index{m\_contexts@{m\_contexts}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{m\_contexts}{m\_contexts}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper}{CEGUIContext\+Wrapper}}$\ast$$>$ BARE2\+D\+::\+BARECEGUI\+::m\+\_\+contexts\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00109}{109}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source}{BARECEGUI.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00255}{create\+Widget()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00114}{destroy()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00125}{draw()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00277}{get\+Context()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00273}{get\+Renderer()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00193}{handle\+SDLEvent()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00039}{init()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00173}{set\+Active\+Context()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00246}{set\+Font()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00181}{set\+Mouse\+Cursor()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00185}{set\+Mouse\+Cursor\+Shown()}}, \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00152}{update()}}, and \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00030}{$\sim$\+BARECEGUI()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a497b5ecd274895ea0a74d6603cd0ffb9}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a497b5ecd274895ea0a74d6603cd0ffb9}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!m\_initialized@{m\_initialized}}
+\index{m\_initialized@{m\_initialized}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{m\_initialized}{m\_initialized}}
+{\footnotesize\ttfamily bool BARE2\+D\+::\+BARECEGUI\+::m\+\_\+initialized = false\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00102}{102}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source}{BARECEGUI.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00039}{init()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a15472ee784e1eaf1d97876cc3565f477}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_a15472ee784e1eaf1d97876cc3565f477}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!m\_instance@{m\_instance}}
+\index{m\_instance@{m\_instance}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{m\_instance}{m\_instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i}{BARECEGUI}} $\ast$ BARE2\+D\+::\+BARECEGUI\+::m\+\_\+instance = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00100}{100}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source}{BARECEGUI.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00014}{get\+Instance()}}, and \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00021}{release()}}.
+
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa32fb1c941f5296b050622675a1361d4}\label{class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_aa32fb1c941f5296b050622675a1361d4}} 
+\index{BARE2D::BARECEGUI@{BARE2D::BARECEGUI}!m\_lastTime@{m\_lastTime}}
+\index{m\_lastTime@{m\_lastTime}!BARE2D::BARECEGUI@{BARE2D::BARECEGUI}}
+\doxysubsubsection{\texorpdfstring{m\_lastTime}{m\_lastTime}}
+{\footnotesize\ttfamily unsigned int BARE2\+D\+::\+BARECEGUI\+::m\+\_\+last\+Time = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source_l00110}{110}} of file \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp_source}{BARECEGUI.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp_source_l00152}{update()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8hpp}{BARECEGUI.\+hpp}}\item 
+Source/\mbox{\hyperlink{_b_a_r_e_c_e_g_u_i_8cpp}{BARECEGUI.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,102 @@
+\hypertarget{_b_a_r_e_errors_8hpp}{}\doxysection{Source/\+BAREErrors.hpp File Reference}
+\label{_b_a_r_e_errors_8hpp}\index{Source/BAREErrors.hpp@{Source/BAREErrors.hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for BAREErrors.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BARE2\+D\+::\+BAREError}} \{ \newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a2eea2c536f4e062c3b1832f9cea1356d}{BARE2\+D\+::\+SDL\+\_\+\+FAILURE}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aac184187fe6248f102d81fc64e36c57d}{BARE2\+D\+::\+GL\+\_\+\+FAILURE\+\_\+\+VERSION}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aed6ff68f5f52346f2c0754edb81b83ed}{BARE2\+D\+::\+DOUBLE\+\_\+\+INIT}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aa4c46509c81b14752ae8ff94452ff486}{BARE2\+D\+::\+GLEW\+\_\+\+FAILURE}}
+, \newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a804b6ec52f621f93ab2f5026201f0d76}{BARE2\+D\+::\+FILE\+\_\+\+FAILURE}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a875ae376eb2fbd99c364b0c2ed42fedc}{BARE2\+D\+::\+TEXTURE\+\_\+\+FAILURE}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a1f208845587ac9c0c53c388d4d385b1a}{BARE2\+D\+::\+VERTEX\+\_\+\+SHADER\+\_\+\+FAILURE}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad860107dd407ff9736d6208998d710f6}{BARE2\+D\+::\+FRAGMENT\+\_\+\+SHADER\+\_\+\+FAILURE}}
+, \newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ad6e29903fb0c6eb8c57d20d9ad478d9e}{BARE2\+D\+::\+UNIFORM\+\_\+\+NOT\+\_\+\+FOUND}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abaa8fdfa9df78eba172c4aaa8b8046a2}{BARE2\+D\+::\+SHADER\+\_\+\+COMPILE\+\_\+\+FAILURE}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15af2f6cbcd601921a638724130311f22cd}{BARE2\+D\+::\+SHADER\+\_\+\+LINK\+\_\+\+FAILURE}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8bc03ea7709e07920eab3b6c56df1fd8}{BARE2\+D\+::\+GLSL\+\_\+\+PROGRAM\+\_\+\+FAILURE}}
+, \newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a59e2044a4165c83216dbbca34417462b}{BARE2\+D\+::\+FONT\+\_\+\+FAILURE}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a56134db1e8559ae4b32bf967c15fc4df}{BARE2\+D\+::\+FBO\+\_\+\+FAILURE}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a396430326452fe792ad9891baac4e76b}{BARE2\+D\+::\+LOGGER\+\_\+\+FAILURE}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{BARE2\+D\+::\+XML\+\_\+\+FAILURE}}
+, \newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abcb313a5c9f8965d7b75833af33d16be}{BARE2\+D\+::\+UNINITIALIZED\+\_\+\+FUNCTION}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba}{BARE2\+D\+::\+LUA\+\_\+\+FAILURE}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a532a71eb42f790768ea7b8a0fc21c7f7}{BARE2\+D\+::\+SDL\+\_\+\+MIXER\+\_\+\+FLAC\+\_\+\+FAILURE}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a270d890766f0830b9a49e81e737e9646}{BARE2\+D\+::\+SDL\+\_\+\+MIXER\+\_\+\+OGG\+\_\+\+FAILURE}}
+, \newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a3279ee465d768abc31baf3fa4a04a939}{BARE2\+D\+::\+SDL\+\_\+\+MIXER\+\_\+\+MP3\+\_\+\+FAILURE}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a558725ad5285e00d8e0ecc6659151af6}{BARE2\+D\+::\+SDL\+\_\+\+MIXER\+\_\+\+MOD\+\_\+\+FAILURE}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a302c7e07e257bacc806bef6f25576f3d}{BARE2\+D\+::\+SDL\+\_\+\+MIXER\+\_\+\+CLOSE\+\_\+\+FAILURE}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a8c106f4878dae2d0ad02cd72ef80dc0b}{BARE2\+D\+::\+SDL\+\_\+\+MIXER\+\_\+\+LOAD\+\_\+\+FAILURE}}
+, \newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a55a6fde42c31348fccbcaad7ead6de1f}{BARE2\+D\+::\+SDL\+\_\+\+MIXER\+\_\+\+SOUND\+\_\+\+FAILURE}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a914ca2cceda5a54e946a4212cab3b05d}{BARE2\+D\+::\+NULL\+\_\+\+PTR\+\_\+\+ACCESS}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a5c0de8157fd24b5627deda20298b5c2d}{BARE2\+D\+::\+OTHER\+\_\+\+ERROR}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a66dc4c888c801d815b8f5f1f1038393c}{BARE2\+D\+::\+CACHE\+\_\+\+FAILURE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents a specific type of error that has occured. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3}{BARE2\+D\+::\+GLError\+Severity}} \{ \newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da}{BARE2\+D\+::\+NOTIF}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88}{BARE2\+D\+::\+LOW}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c}{BARE2\+D\+::\+MED}}
+, \mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c}{BARE2\+D\+::\+HIGH}}
+, \newline
+\mbox{\hyperlink{namespace_b_a_r_e2_d_a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3}{BARE2\+D\+::\+UNKNOWN}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{_b_a_r_e_errors_8hpp_ad6c3fb278e5310c3250bab181be717d6}{demangle}} (const char $\ast$mangled)
+\begin{DoxyCompactList}\small\item\em PLEASE NOTE THAT IF MINGW BREAKS, THIS IS PROBABLY WHY. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespace_b_a_r_e2_d_a7951c5decc1f7edc3c4f78ed2f579c85}{BARE2\+D\+::get\+Err\+String}} (BAREError err)
+\begin{DoxyCompactList}\small\item\em Returns the string representing/explaining the error that occurred. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{BARE2\+D\+::throw\+Fatal\+Error}} (BAREError err, std\+::string message=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Throws an error (fatal). Also calls display\+Errors and exits the program. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{BARE2\+D\+::throw\+Error}} (BAREError err, std\+::string message=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Throws an error silently. Adds it to the pile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_b_a_r_e2_d_a8d6a0fa02837ab9ebba5b67cc21f9e35}{BARE2\+D\+::display\+Errors}} ()
+\begin{DoxyCompactList}\small\item\em Displays the latest thrown errors (really just all the thrown errors) in the console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_b_a_r_e2_d_a2e37a4d16611398b81332bb834395984}{BARE2\+D\+::init\+GLError\+Callback}} (GLError\+Severity min\+Severity=GLError\+Severity\+::\+NOTIF)
+\begin{DoxyCompactList}\small\item\em Initializes the GL Debug Message Callback function, and enables debug output straight from Open\+GL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_b_a_r_e_errors_8hpp_ad6c3fb278e5310c3250bab181be717d6}\label{_b_a_r_e_errors_8hpp_ad6c3fb278e5310c3250bab181be717d6}} 
+\index{BAREErrors.hpp@{BAREErrors.hpp}!demangle@{demangle}}
+\index{demangle@{demangle}!BAREErrors.hpp@{BAREErrors.hpp}}
+\doxysubsubsection{\texorpdfstring{demangle()}{demangle()}}
+{\footnotesize\ttfamily std\+::string demangle (\begin{DoxyParamCaption}\item[{const char $\ast$}]{mangled }\end{DoxyParamCaption})}
+
+
+
+PLEASE NOTE THAT IF MINGW BREAKS, THIS IS PROBABLY WHY. 
+
+De-\/mangles a typeid.\+name() return value 
+\begin{DoxyParams}{Parameters}
+{\em mangled} & The mangled typeid.\+name() return value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A demangled version of mangled. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source}{BAREErrors.\+cpp}}.
+
