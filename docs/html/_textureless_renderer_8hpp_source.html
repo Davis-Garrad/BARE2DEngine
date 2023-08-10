@@ -16,6 +16,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -36,6 +41,21 @@
    <div id="projectname">BARE2D
    </div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,16 +67,6 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -104,69 +114,76 @@ $(document).ready(function(){initNavTree('_textureless_renderer_8hpp_source.html
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace</span> <a class="code" href="namespace_b_a_r_e2_d.html">BARE2D</a> {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_textureless_renderer.html">   12</a></span>&#160;    <span class="keyword">class</span> <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html">TexturelessRenderer</a> : <span class="keyword">public</span> <a class="code" href="class_b_a_r_e2_d_1_1_renderer.html">Renderer</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#ab9bf3bb241c1a2dfc4400523f16f6355">TexturelessRenderer</a>(std::string&amp; fragShader,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                            std::string&amp; vertShader,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> perspectiveWidth  = 2,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> perspectiveHeight = 2);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a0f48f54eb93441cce056c5aaa82b262e">TexturelessRenderer</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a01951b878023daee5eef45428e8e858e">init</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a5140d700b40e5809693d7b45e16d773f">preRender</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">/**</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">         * @brief Sets the camera to a given pointer. This means that the renderer takes ownership</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">         * @param camera The pointer to the camera.</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">         */</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a8045f62494e678ecb7351ab04256bb70">setCamera</a>(std::shared_ptr&lt;<a class="code" href="class_b_a_r_e2_d_1_1_camera2_d.html">Camera2D</a>&gt; camera);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">/**</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">         * @return Returns the Camera pointer. To be used only to link multiple renderers&#39; cameras.</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">         */</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::shared_ptr&lt;<a class="code" href="class_b_a_r_e2_d_1_1_camera2_d.html">Camera2D</a>&gt; <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a528a7f584fa05db7943acb871804f5f0">getCamera</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#abe0f74a2a7009c4e08fceaa131c5df41">draw</a>(glm::vec4 destRect,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                          <span class="keywordtype">float</span>     depth,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                          <a class="code" href="struct_b_a_r_e2_d_1_1_colour.html">Colour</a>    colour = <a class="code" href="struct_b_a_r_e2_d_1_1_colour.html">Colour</a><a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">(</a>255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">)</a>,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                          <span class="keywordtype">float</span>     angle  = 0.0f,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                          glm::vec2 COR    = glm::vec2(0.5f));</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#abfcb83d1e3424c08083bb9ea97df23fa">createRenderBatches</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a8395a8a56da14fc6308b0dbe13de4b87">   43</a></span>&#160;        std::string <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a25d28a212c09b2ebfad817691854c202">m_fragShader</a>, <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a8395a8a56da14fc6308b0dbe13de4b87">m_vertShader</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#ae9cd46c62a0feae4bc6eb7a2f2656d4c">   45</a></span>&#160;        std::vector&lt;<a class="code" href="class_b_a_r_e2_d_1_1_glyph.html">Glyph</a>*&gt; <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#ae9cd46c62a0feae4bc6eb7a2f2656d4c">m_glyphs</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">     * @class TexturelessRenderer</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">     * @author Davis-Dev</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">     * @date 10/08/23</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">     * @file TexturelessRenderer.hpp</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">     * @brief A renderer made to simply run a shader with some passed glyphs. VAOs vertexPosition (vec3), vertexColour (vec4), and vertexUV (vec4). Only uniform is projectionMatrix (mat4)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_textureless_renderer.html">   19</a></span>&#160;    <span class="keyword">class</span> <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html">TexturelessRenderer</a> : <span class="keyword">public</span> <a class="code" href="class_b_a_r_e2_d_1_1_renderer.html">Renderer</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#ab9bf3bb241c1a2dfc4400523f16f6355">TexturelessRenderer</a>(std::string&amp; fragShader,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                                std::string&amp; vertShader,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> perspectiveWidth  = 2,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> perspectiveHeight = 2);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">virtual</span> ~<a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a0f48f54eb93441cce056c5aaa82b262e">TexturelessRenderer</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a01951b878023daee5eef45428e8e858e">init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a5140d700b40e5809693d7b45e16d773f">preRender</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="comment">/**</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">             * @brief Sets the camera to a given pointer. This means that the renderer takes ownership</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">             * @param camera The pointer to the camera.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">             */</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a8045f62494e678ecb7351ab04256bb70">setCamera</a>(std::shared_ptr&lt;<a class="code" href="class_b_a_r_e2_d_1_1_camera2_d.html">Camera2D</a>&gt; camera);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="comment">/**</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">             * @return Returns the Camera pointer. To be used only to link multiple renderers&#39; cameras.</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">             */</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            std::shared_ptr&lt;<a class="code" href="class_b_a_r_e2_d_1_1_camera2_d.html">Camera2D</a>&gt; <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a528a7f584fa05db7943acb871804f5f0">getCamera</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#abe0f74a2a7009c4e08fceaa131c5df41">draw</a>(glm::vec4 destRect,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                              <span class="keywordtype">float</span>     depth,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                              <a class="code" href="struct_b_a_r_e2_d_1_1_colour.html">Colour</a>    colour = <a class="code" href="struct_b_a_r_e2_d_1_1_colour.html">Colour</a><a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">(</a>255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">)</a>,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                              <span class="keywordtype">float</span>     angle  = 0.0f,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                              glm::vec2 COR    = glm::vec2(0.5f));</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a4e27e9a992c60934cbf65b3a755a521a">   47</a></span>&#160;        GLuint <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a4e27e9a992c60934cbf65b3a755a521a">m_texture</a> = 0;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a685151d65caf080131f943ce03129a5d">   49</a></span>&#160;        std::shared_ptr&lt;<a class="code" href="class_b_a_r_e2_d_1_1_camera2_d.html">Camera2D</a>&gt; <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a685151d65caf080131f943ce03129a5d">m_camera</a>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    };</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#abfcb83d1e3424c08083bb9ea97df23fa">createRenderBatches</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a8395a8a56da14fc6308b0dbe13de4b87">   50</a></span>&#160;            std::string <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a25d28a212c09b2ebfad817691854c202">m_fragShader</a>, <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a8395a8a56da14fc6308b0dbe13de4b87">m_vertShader</a>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;} <span class="comment">// namespace BARE2D</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#ae9cd46c62a0feae4bc6eb7a2f2656d4c">   52</a></span>&#160;            std::vector&lt;<a class="code" href="class_b_a_r_e2_d_1_1_glyph.html">Glyph</a>*&gt; <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#ae9cd46c62a0feae4bc6eb7a2f2656d4c">m_glyphs</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a4e27e9a992c60934cbf65b3a755a521a">   54</a></span>&#160;            GLuint <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a4e27e9a992c60934cbf65b3a755a521a">m_texture</a> = 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a685151d65caf080131f943ce03129a5d">   56</a></span>&#160;            std::shared_ptr&lt;<a class="code" href="class_b_a_r_e2_d_1_1_camera2_d.html">Camera2D</a>&gt; <a class="code" href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a685151d65caf080131f943ce03129a5d">m_camera</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    };</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;} <span class="comment">// namespace BARE2D</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_renderer_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_renderer.html">BARE2D::Renderer</a></div><div class="ttdoc">The renderer class holds some shader program, manages some VBO, some render batch(es),...</div><div class="ttdef"><b>Definition:</b> <a href="_renderer_8hpp_source.html#l00015">Renderer.hpp:15</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_a4e27e9a992c60934cbf65b3a755a521a"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a4e27e9a992c60934cbf65b3a755a521a">BARE2D::TexturelessRenderer::m_texture</a></div><div class="ttdeci">GLuint m_texture</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8hpp_source.html#l00047">TexturelessRenderer.hpp:47</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_a4e27e9a992c60934cbf65b3a755a521a"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a4e27e9a992c60934cbf65b3a755a521a">BARE2D::TexturelessRenderer::m_texture</a></div><div class="ttdeci">GLuint m_texture</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8hpp_source.html#l00054">TexturelessRenderer.hpp:54</a></div></div>
 <div class="ttc" id="anamespace_b_a_r_e2_d_html"><div class="ttname"><a href="namespace_b_a_r_e2_d.html">BARE2D</a></div><div class="ttdef"><b>Definition:</b> <a href="_app_8cpp_source.html#l00013">App.cpp:13</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_a01951b878023daee5eef45428e8e858e"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a01951b878023daee5eef45428e8e858e">BARE2D::TexturelessRenderer::init</a></div><div class="ttdeci">virtual void init() override</div><div class="ttdoc">Initializes all necessary bits of the renderer.</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8cpp_source.html#l00020">TexturelessRenderer.cpp:20</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_a25d28a212c09b2ebfad817691854c202"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a25d28a212c09b2ebfad817691854c202">BARE2D::TexturelessRenderer::m_fragShader</a></div><div class="ttdeci">std::string m_fragShader</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8hpp_source.html#l00043">TexturelessRenderer.hpp:43</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_ae9cd46c62a0feae4bc6eb7a2f2656d4c"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#ae9cd46c62a0feae4bc6eb7a2f2656d4c">BARE2D::TexturelessRenderer::m_glyphs</a></div><div class="ttdeci">std::vector&lt; Glyph * &gt; m_glyphs</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8hpp_source.html#l00045">TexturelessRenderer.hpp:45</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_a25d28a212c09b2ebfad817691854c202"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a25d28a212c09b2ebfad817691854c202">BARE2D::TexturelessRenderer::m_fragShader</a></div><div class="ttdeci">std::string m_fragShader</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8hpp_source.html#l00050">TexturelessRenderer.hpp:50</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_ae9cd46c62a0feae4bc6eb7a2f2656d4c"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#ae9cd46c62a0feae4bc6eb7a2f2656d4c">BARE2D::TexturelessRenderer::m_glyphs</a></div><div class="ttdeci">std::vector&lt; Glyph * &gt; m_glyphs</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8hpp_source.html#l00052">TexturelessRenderer.hpp:52</a></div></div>
 <div class="ttc" id="astruct_b_a_r_e2_d_1_1_colour_html_a6d871c5c62b8e189b8ea4f918ae07ef6"><div class="ttname"><a href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">BARE2D::Colour::Colour</a></div><div class="ttdeci">Colour(GLubyte R, GLubyte G, GLubyte B, GLubyte A)</div><div class="ttdef"><b>Definition:</b> <a href="_vertex_8hpp_source.html#l00022">Vertex.hpp:22</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_a0f48f54eb93441cce056c5aaa82b262e"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a0f48f54eb93441cce056c5aaa82b262e">BARE2D::TexturelessRenderer::~TexturelessRenderer</a></div><div class="ttdeci">virtual ~TexturelessRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8cpp_source.html#l00017">TexturelessRenderer.cpp:17</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_a528a7f584fa05db7943acb871804f5f0"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a528a7f584fa05db7943acb871804f5f0">BARE2D::TexturelessRenderer::getCamera</a></div><div class="ttdeci">std::shared_ptr&lt; Camera2D &gt; getCamera()</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8cpp_source.html#l00077">TexturelessRenderer.cpp:77</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_abfcb83d1e3424c08083bb9ea97df23fa"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#abfcb83d1e3424c08083bb9ea97df23fa">BARE2D::TexturelessRenderer::createRenderBatches</a></div><div class="ttdeci">virtual void createRenderBatches() override</div><div class="ttdoc">Constructs all of the render batches from data given by, say, draw() calls.</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8cpp_source.html#l00105">TexturelessRenderer.cpp:105</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_a8045f62494e678ecb7351ab04256bb70"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a8045f62494e678ecb7351ab04256bb70">BARE2D::TexturelessRenderer::setCamera</a></div><div class="ttdeci">virtual void setCamera(std::shared_ptr&lt; Camera2D &gt; camera)</div><div class="ttdoc">Sets the camera to a given pointer. This means that the renderer takes ownership.</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8cpp_source.html#l00073">TexturelessRenderer.cpp:73</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_abe0f74a2a7009c4e08fceaa131c5df41"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#abe0f74a2a7009c4e08fceaa131c5df41">BARE2D::TexturelessRenderer::draw</a></div><div class="ttdeci">virtual void draw(glm::vec4 destRect, float depth, Colour colour=Colour(255, 255, 255, 255), float angle=0.0f, glm::vec2 COR=glm::vec2(0.5f))</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8cpp_source.html#l00088">TexturelessRenderer.cpp:88</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_a8395a8a56da14fc6308b0dbe13de4b87"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a8395a8a56da14fc6308b0dbe13de4b87">BARE2D::TexturelessRenderer::m_vertShader</a></div><div class="ttdeci">std::string m_vertShader</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8hpp_source.html#l00043">TexturelessRenderer.hpp:43</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_a685151d65caf080131f943ce03129a5d"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a685151d65caf080131f943ce03129a5d">BARE2D::TexturelessRenderer::m_camera</a></div><div class="ttdeci">std::shared_ptr&lt; Camera2D &gt; m_camera</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8hpp_source.html#l00049">TexturelessRenderer.hpp:49</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_a8395a8a56da14fc6308b0dbe13de4b87"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a8395a8a56da14fc6308b0dbe13de4b87">BARE2D::TexturelessRenderer::m_vertShader</a></div><div class="ttdeci">std::string m_vertShader</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8hpp_source.html#l00050">TexturelessRenderer.hpp:50</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_a685151d65caf080131f943ce03129a5d"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a685151d65caf080131f943ce03129a5d">BARE2D::TexturelessRenderer::m_camera</a></div><div class="ttdeci">std::shared_ptr&lt; Camera2D &gt; m_camera</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8hpp_source.html#l00056">TexturelessRenderer.hpp:56</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_glyph_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_glyph.html">BARE2D::Glyph</a></div><div class="ttdoc">The glyph represents a renderbatch's primitive data, which is created from each draw call in the basi...</div><div class="ttdef"><b>Definition:</b> <a href="_vertex_8hpp_source.html#l00087">Vertex.hpp:87</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_a5140d700b40e5809693d7b45e16d773f"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#a5140d700b40e5809693d7b45e16d773f">BARE2D::TexturelessRenderer::preRender</a></div><div class="ttdeci">virtual void preRender() override</div><div class="ttdoc">Does stuff inside of the render function, within the shader's use.</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8cpp_source.html#l00081">TexturelessRenderer.cpp:81</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html_ab9bf3bb241c1a2dfc4400523f16f6355"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html#ab9bf3bb241c1a2dfc4400523f16f6355">BARE2D::TexturelessRenderer::TexturelessRenderer</a></div><div class="ttdeci">TexturelessRenderer(std::string &amp;fragShader, std::string &amp;vertShader, unsigned int perspectiveWidth=2, unsigned int perspectiveHeight=2)</div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8cpp_source.html#l00007">TexturelessRenderer.cpp:7</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_camera2_d_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_camera2_d.html">BARE2D::Camera2D</a></div><div class="ttdoc">The basic camera for a 2D world. There are two spaces - the Worldspace and the Viewspace....</div><div class="ttdef"><b>Definition:</b> <a href="_camera2_d_8hpp_source.html#l00023">Camera2D.hpp:23</a></div></div>
 <div class="ttc" id="astruct_b_a_r_e2_d_1_1_colour_html"><div class="ttname"><a href="struct_b_a_r_e2_d_1_1_colour.html">BARE2D::Colour</a></div><div class="ttdoc">An RGBA 8-bit colour value.</div><div class="ttdef"><b>Definition:</b> <a href="_vertex_8hpp_source.html#l00020">Vertex.hpp:20</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html">BARE2D::TexturelessRenderer</a></div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8hpp_source.html#l00012">TexturelessRenderer.hpp:12</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_textureless_renderer_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_textureless_renderer.html">BARE2D::TexturelessRenderer</a></div><div class="ttdef"><b>Definition:</b> <a href="_textureless_renderer_8hpp_source.html#l00019">TexturelessRenderer.hpp:19</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

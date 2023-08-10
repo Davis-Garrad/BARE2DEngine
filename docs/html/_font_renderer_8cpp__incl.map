@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title=" " alt="" coords="370,5,541,32"/>
 <area shape="rect" id="node2" href="$_font_renderer_8hpp.html" title=" " alt="" coords="393,80,518,107"/>
 <area shape="rect" id="node3" href="$_font_8hpp.html" title=" " alt="" coords="631,304,704,331"/>
-<area shape="rect" id="node7" href="$_basic_renderer_8hpp.html" title=" " alt="" coords="221,155,353,181"/>
+<area shape="rect" id="node7" href="$_basic_renderer_8hpp.html" title="A simple renderer. Has the GLSL VAOs vertexPosition (vec3), vertexColour (vec4), and vertexUV (vec2)...." alt="" coords="221,155,353,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="524,379,603,405"/>
 <area shape="rect" id="node5" title=" " alt="" coords="273,453,366,480"/>
 <area shape="rect" id="node6" title=" " alt="" coords="713,528,771,555"/>

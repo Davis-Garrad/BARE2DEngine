@@ -2,7 +2,7 @@
 \label{class_b_a_r_e2_d_1_1_bumpy_renderer}\index{BARE2D::BumpyRenderer@{BARE2D::BumpyRenderer}}
 
 
-This is a \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{Basic\+Renderer}}, but it includes the usage of bumpmaps. This can be useful for lighting.  
+This is a \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{Basic\+Renderer}}, but it includes the usage of bumpmaps. This can be useful for lighting. Has an additional uniform bumpmap\+Sampler (sampler2D).  
 
 
 
@@ -11,7 +11,8 @@ This is a \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{Basic\+Renderer}
 
 
 
-Inheritance diagram for B\+A\+R\+E2D\+::Bumpy\+Renderer\+:\nopagebreak
+Inheritance diagram for B\+A\+R\+E2D\+::Bumpy\+Renderer\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -58,7 +59,7 @@ std\+::vector$<$ G\+Luint $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_bumpy_render
 
 
 \doxysubsection{Detailed Description}
-This is a \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{Basic\+Renderer}}, but it includes the usage of bumpmaps. This can be useful for lighting. 
+This is a \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{Basic\+Renderer}}, but it includes the usage of bumpmaps. This can be useful for lighting. Has an additional uniform bumpmap\+Sampler (sampler2D). 
 
 Definition at line \mbox{\hyperlink{_bumpy_renderer_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{_bumpy_renderer_8hpp_source}{Bumpy\+Renderer.\+hpp}}.
 
@@ -119,7 +120,7 @@ Definition at line \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00086}{86}} of 
 
 
 
-References \mbox{\hyperlink{_v_a_o_8cpp_source_l00057}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::bind\+V\+B\+O()}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::bottom\+Left}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::bottom\+Right}}, \mbox{\hyperlink{_bumpy_renderer_8hpp_source_l00016}{B\+A\+R\+E2\+D\+::\+Bumpy\+Glyph\+::bumpmap}}, \mbox{\hyperlink{_bumpy_renderer_8hpp_source_l00043}{m\+\_\+batch\+Bumpmaps}}, \mbox{\hyperlink{_renderer_8hpp_source_l00067}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+batches}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00038}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::m\+\_\+glyphs}}, \mbox{\hyperlink{_renderer_8hpp_source_l00066}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, \mbox{\hyperlink{_render_batch_8hpp_source_l00016}{Render\+Batch\+::num\+Vertices}}, \mbox{\hyperlink{_vertex_8hpp_source_l00094}{B\+A\+R\+E2\+D\+::\+Glyph\+::texture}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::top\+Left}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::top\+Right}}, and \mbox{\hyperlink{_v_a_o_8cpp_source_l00062}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::unbind\+V\+B\+O()}}.
+References \mbox{\hyperlink{_v_a_o_8cpp_source_l00057}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::bind\+V\+B\+O()}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::bottom\+Left}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::bottom\+Right}}, \mbox{\hyperlink{_bumpy_renderer_8hpp_source_l00016}{B\+A\+R\+E2\+D\+::\+Bumpy\+Glyph\+::bumpmap}}, \mbox{\hyperlink{_bumpy_renderer_8hpp_source_l00042}{m\+\_\+batch\+Bumpmaps}}, \mbox{\hyperlink{_renderer_8hpp_source_l00067}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+batches}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00044}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::m\+\_\+glyphs}}, \mbox{\hyperlink{_renderer_8hpp_source_l00066}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, \mbox{\hyperlink{_render_batch_8hpp_source_l00016}{Render\+Batch\+::num\+Vertices}}, \mbox{\hyperlink{_vertex_8hpp_source_l00094}{B\+A\+R\+E2\+D\+::\+Glyph\+::texture}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::top\+Left}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::top\+Right}}, and \mbox{\hyperlink{_v_a_o_8cpp_source_l00062}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::unbind\+V\+B\+O()}}.
 
 
 
@@ -176,7 +177,7 @@ Definition at line \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00077}{77}} of 
 
 
 
-References \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00007}{B\+A\+R\+E2\+D\+::\+Bumpy\+Glyph\+::\+Bumpy\+Glyph()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00173}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::is\+Rect\+In\+Viewspace()}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00040}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::m\+\_\+camera}}, and \mbox{\hyperlink{_basic_renderer_8hpp_source_l00038}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::m\+\_\+glyphs}}.
+References \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00007}{B\+A\+R\+E2\+D\+::\+Bumpy\+Glyph\+::\+Bumpy\+Glyph()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00173}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::is\+Rect\+In\+Viewspace()}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00046}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::m\+\_\+camera}}, and \mbox{\hyperlink{_basic_renderer_8hpp_source_l00044}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::m\+\_\+glyphs}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -234,7 +235,7 @@ Definition at line \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00027}{27}} of 
 
 
 
-References \mbox{\hyperlink{_camera2_d_8cpp_source_l00169}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Camera\+Matrix()}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00040}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::m\+\_\+camera}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_shader_program_8tcc_source_l00017}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform\+Matrix()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00035}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::update()}}.
+References \mbox{\hyperlink{_camera2_d_8cpp_source_l00169}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Camera\+Matrix()}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00046}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::m\+\_\+camera}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_shader_program_8tcc_source_l00017}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform\+Matrix()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00035}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::update()}}.
 
 
 
@@ -274,7 +275,7 @@ Definition at line \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00035}{35}} of 
 
 
 
-References \mbox{\hyperlink{_v_a_o_8cpp_source_l00048}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::bind()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::bind\+Texture()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00086}{create\+Render\+Batches()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_bumpy_renderer_8hpp_source_l00043}{m\+\_\+batch\+Bumpmaps}}, \mbox{\hyperlink{_renderer_8hpp_source_l00067}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+batches}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_renderer_8hpp_source_l00066}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, \mbox{\hyperlink{_render_batch_8hpp_source_l00016}{Render\+Batch\+::num\+Vertices}}, \mbox{\hyperlink{_render_batch_8hpp_source_l00015}{Render\+Batch\+::offset}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00027}{pre\+Render()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::set\+Active\+Texture()}}, \mbox{\hyperlink{_render_batch_8hpp_source_l00017}{Render\+Batch\+::texture\+ID}}, \mbox{\hyperlink{_v_a_o_8cpp_source_l00053}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::unbind()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00160}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::unuse()}}, and \mbox{\hyperlink{_shader_program_8cpp_source_l00147}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::use()}}.
+References \mbox{\hyperlink{_v_a_o_8cpp_source_l00048}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::bind()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00022}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::bind\+Texture()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00086}{create\+Render\+Batches()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00044}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+Manager\+::get\+Context()}}, \mbox{\hyperlink{_bumpy_renderer_8hpp_source_l00042}{m\+\_\+batch\+Bumpmaps}}, \mbox{\hyperlink{_renderer_8hpp_source_l00067}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+batches}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_renderer_8hpp_source_l00066}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, \mbox{\hyperlink{_render_batch_8hpp_source_l00016}{Render\+Batch\+::num\+Vertices}}, \mbox{\hyperlink{_render_batch_8hpp_source_l00015}{Render\+Batch\+::offset}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00027}{pre\+Render()}}, \mbox{\hyperlink{_g_l_context_manager_8cpp_source_l00013}{B\+A\+R\+E2\+D\+::\+G\+L\+Context\+::set\+Active\+Texture()}}, \mbox{\hyperlink{_render_batch_8hpp_source_l00017}{Render\+Batch\+::texture\+ID}}, \mbox{\hyperlink{_v_a_o_8cpp_source_l00053}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::unbind()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00160}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::unuse()}}, and \mbox{\hyperlink{_shader_program_8cpp_source_l00147}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::use()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -294,7 +295,7 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Definition at line \mbox{\hyperlink{_bumpy_renderer_8hpp_source_l00043}{43}} of file \mbox{\hyperlink{_bumpy_renderer_8hpp_source}{Bumpy\+Renderer.\+hpp}}.
+Definition at line \mbox{\hyperlink{_bumpy_renderer_8hpp_source_l00042}{42}} of file \mbox{\hyperlink{_bumpy_renderer_8hpp_source}{Bumpy\+Renderer.\+hpp}}.
 
 
 

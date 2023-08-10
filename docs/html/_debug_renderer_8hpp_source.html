@@ -16,6 +16,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -36,6 +41,21 @@
    <div id="projectname">BARE2D
    </div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,16 +67,6 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -127,58 +137,64 @@ $(document).ready(function(){initNavTree('_debug_renderer_8hpp_source.html','');
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_b_a_r_e2_d_1_1_rectangle.html#a8e2d81842434dbfff17a9e35c16aec44">   32</a></span>&#160;        <a class="code" href="struct_b_a_r_e2_d_1_1_line.html">Line</a> <a class="code" href="struct_b_a_r_e2_d_1_1_rectangle.html#a8e2d81842434dbfff17a9e35c16aec44">lines</a>[2];</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    };</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_debug_renderer.html">   35</a></span>&#160;    <span class="keyword">class</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html">DebugRenderer</a> : <span class="keyword">public</span> <a class="code" href="class_b_a_r_e2_d_1_1_renderer.html">Renderer</a></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a9a86a15ade585d5f698f6d0295fb5eef">DebugRenderer</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#abf00ee6409eb162bfbbf1f5fa7d07a04">DebugRenderer</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">/**</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">         * @brief Initializes with very rudimentary shaders (hardcoded), adds vertex attributes</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">         */</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#adfa84d84a1525f62c888ecdcdc3e874a">init</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#afbab4275b06e9a2bc5f52342a9f2f219">begin</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a52b8a86d9eb1e621b49dcf17b88b4cd4">render</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">/**</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">         * @brief Draws a line</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">         * @param point0 The origin</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">         * @param point1 Where the line goes to </span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">         * @param thickness The thickness of the line</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">         * @param colour The colour of the line</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">         */</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a6d21704f5a666d2b2e2095b53a3c0850">drawLine</a>(glm::vec2 point0, glm::vec2 point1, <span class="keywordtype">float</span> thickness, <a class="code" href="struct_b_a_r_e2_d_1_1_colour.html">Colour</a> colour);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">/**</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">         * @brief Draws a circle</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">         * @param centre The centre point of the circle</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">         * @param lineThickness The thickness of the lines creating the circle</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">         * @param radius The radius of the circle</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">         * @param lineColour The colour of the lines</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">         * @param fillColour The fill of the circle</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">         */</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a53387c43bc4270cee538f3969a8e1c67">drawCircle</a>(glm::vec2 centre, <span class="keywordtype">float</span> lineThickness, <span class="keywordtype">float</span> radius, <a class="code" href="struct_b_a_r_e2_d_1_1_colour.html">Colour</a> fillColour = <a class="code" href="struct_b_a_r_e2_d_1_1_colour.html">Colour</a><a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">(</a>255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">)</a>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">/**</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">         * @brief Draws a rectangle</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">         * @param destRect The destination rectangle of the rectangle (position, then size)</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">         * @param lineColour The colour of the lines that make up the rectangle</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">         * @param fillColour The colour of the fill.</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">         */</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a4ca37cab4b67c5d523293fb49753ab6d">drawRectangle</a>(glm::vec4 destRect, <span class="keywordtype">float</span> lineThickness, <a class="code" href="struct_b_a_r_e2_d_1_1_colour.html">Colour</a> fillColour = <a class="code" href="struct_b_a_r_e2_d_1_1_colour.html">Colour</a><a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">(</a>255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">)</a>);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a9594be61040e25fc07f914c005d719ed">createRenderBatches</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a98ff0fa88d890daa8daa781b84b6edcc">   80</a></span>&#160;        std::vector&lt;<a class="code" href="struct_b_a_r_e2_d_1_1_line.html">Line</a>&gt; <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a98ff0fa88d890daa8daa781b84b6edcc">m_lines</a>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_debug_renderer.html#aeeaadb087efdaf838e445502adf18911">   81</a></span>&#160;        std::vector&lt;<a class="code" href="struct_b_a_r_e2_d_1_1_circle.html">Circle</a>&gt; <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#aeeaadb087efdaf838e445502adf18911">m_circles</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_debug_renderer.html#afeb0590597ba4527285d8860787d6c2f">   82</a></span>&#160;        std::vector&lt;<a class="code" href="struct_b_a_r_e2_d_1_1_rectangle.html">Rectangle</a>&gt; <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#afeb0590597ba4527285d8860787d6c2f">m_rectangles</a>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    };</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">     * @class DebugRenderer</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">     * @author Davis-Dev</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">     * @date 10/08/23</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">     * @file DebugRenderer.hpp</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">     * @brief A renderer specifically made for debugging purposes. Contains its own shaders.</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_debug_renderer.html">   42</a></span>&#160;    <span class="keyword">class</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html">DebugRenderer</a> : <span class="keyword">public</span> <a class="code" href="class_b_a_r_e2_d_1_1_renderer.html">Renderer</a> {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a9a86a15ade585d5f698f6d0295fb5eef">DebugRenderer</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keyword">virtual</span> ~<a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#abf00ee6409eb162bfbbf1f5fa7d07a04">DebugRenderer</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="comment">/**</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">             * @brief Initializes with very rudimentary shaders (hardcoded), adds vertex attributes</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">             */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#adfa84d84a1525f62c888ecdcdc3e874a">init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#afbab4275b06e9a2bc5f52342a9f2f219">begin</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a52b8a86d9eb1e621b49dcf17b88b4cd4">render</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="comment">/**</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">             * @brief Draws a line</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">             * @param point0 The origin</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">             * @param point1 Where the line goes to</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">             * @param thickness The thickness of the line</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">             * @param colour The colour of the line</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">             */</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a6d21704f5a666d2b2e2095b53a3c0850">drawLine</a>(glm::vec2 point0, glm::vec2 point1, <span class="keywordtype">float</span> thickness, <a class="code" href="struct_b_a_r_e2_d_1_1_colour.html">Colour</a> colour);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="comment">/**</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">             * @brief Draws a circle</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">             * @param centre The centre point of the circle</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">             * @param lineThickness The thickness of the lines creating the circle</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">             * @param radius The radius of the circle</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">             * @param lineColour The colour of the lines</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">             * @param fillColour The fill of the circle</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">             */</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a53387c43bc4270cee538f3969a8e1c67">drawCircle</a>(glm::vec2 centre, <span class="keywordtype">float</span> lineThickness, <span class="keywordtype">float</span> radius, <a class="code" href="struct_b_a_r_e2_d_1_1_colour.html">Colour</a> fillColour = <a class="code" href="struct_b_a_r_e2_d_1_1_colour.html">Colour</a><a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">(</a>255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">)</a>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="comment">/**</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">             * @brief Draws a rectangle</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">             * @param destRect The destination rectangle of the rectangle (position, then size)</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">             * @param lineColour The colour of the lines that make up the rectangle</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">             * @param fillColour The colour of the fill.</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">             */</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a4ca37cab4b67c5d523293fb49753ab6d">drawRectangle</a>(glm::vec4 destRect, <span class="keywordtype">float</span> lineThickness, <a class="code" href="struct_b_a_r_e2_d_1_1_colour.html">Colour</a> fillColour = <a class="code" href="struct_b_a_r_e2_d_1_1_colour.html">Colour</a><a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">(</a>255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">,</a> 255<a class="code" href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">)</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a9594be61040e25fc07f914c005d719ed">createRenderBatches</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a98ff0fa88d890daa8daa781b84b6edcc">   86</a></span>&#160;            std::vector&lt;<a class="code" href="struct_b_a_r_e2_d_1_1_line.html">Line</a>&gt; <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#a98ff0fa88d890daa8daa781b84b6edcc">m_lines</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_debug_renderer.html#aeeaadb087efdaf838e445502adf18911">   87</a></span>&#160;            std::vector&lt;<a class="code" href="struct_b_a_r_e2_d_1_1_circle.html">Circle</a>&gt; <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#aeeaadb087efdaf838e445502adf18911">m_circles</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_debug_renderer.html#afeb0590597ba4527285d8860787d6c2f">   88</a></span>&#160;            std::vector&lt;<a class="code" href="struct_b_a_r_e2_d_1_1_rectangle.html">Rectangle</a>&gt; <a class="code" href="class_b_a_r_e2_d_1_1_debug_renderer.html#afeb0590597ba4527285d8860787d6c2f">m_rectangles</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    };</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_debug_renderer_html_a4ca37cab4b67c5d523293fb49753ab6d"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_debug_renderer.html#a4ca37cab4b67c5d523293fb49753ab6d">BARE2D::DebugRenderer::drawRectangle</a></div><div class="ttdeci">virtual void drawRectangle(glm::vec4 destRect, float lineThickness, Colour fillColour=Colour(255, 255, 255, 255))</div><div class="ttdoc">Draws a rectangle.</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8cpp_source.html#l00108">DebugRenderer.cpp:108</a></div></div>
@@ -191,11 +207,11 @@ $(document).ready(function(){initNavTree('_debug_renderer_8hpp_source.html','');
 <div class="ttc" id="astruct_b_a_r_e2_d_1_1_colour_html_a6d871c5c62b8e189b8ea4f918ae07ef6"><div class="ttname"><a href="struct_b_a_r_e2_d_1_1_colour.html#a6d871c5c62b8e189b8ea4f918ae07ef6">BARE2D::Colour::Colour</a></div><div class="ttdeci">Colour(GLubyte R, GLubyte G, GLubyte B, GLubyte A)</div><div class="ttdef"><b>Definition:</b> <a href="_vertex_8hpp_source.html#l00022">Vertex.hpp:22</a></div></div>
 <div class="ttc" id="astruct_b_a_r_e2_d_1_1_line_html_a166fcac248b6cd23eebbc93d936c1318"><div class="ttname"><a href="struct_b_a_r_e2_d_1_1_line.html#a166fcac248b6cd23eebbc93d936c1318">BARE2D::Line::point1</a></div><div class="ttdeci">glm::vec2 point1</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00016">DebugRenderer.hpp:16</a></div></div>
 <div class="ttc" id="astruct_b_a_r_e2_d_1_1_line_html_a1a8742ef5d6d849f02e24863441558b3"><div class="ttname"><a href="struct_b_a_r_e2_d_1_1_line.html#a1a8742ef5d6d849f02e24863441558b3">BARE2D::Line::point0</a></div><div class="ttdeci">glm::vec2 point0</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00015">DebugRenderer.hpp:15</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_debug_renderer_html_a98ff0fa88d890daa8daa781b84b6edcc"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_debug_renderer.html#a98ff0fa88d890daa8daa781b84b6edcc">BARE2D::DebugRenderer::m_lines</a></div><div class="ttdeci">std::vector&lt; Line &gt; m_lines</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00080">DebugRenderer.hpp:80</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_debug_renderer_html_a98ff0fa88d890daa8daa781b84b6edcc"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_debug_renderer.html#a98ff0fa88d890daa8daa781b84b6edcc">BARE2D::DebugRenderer::m_lines</a></div><div class="ttdeci">std::vector&lt; Line &gt; m_lines</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00086">DebugRenderer.hpp:86</a></div></div>
 <div class="ttc" id="astruct_b_a_r_e2_d_1_1_rectangle_html"><div class="ttname"><a href="struct_b_a_r_e2_d_1_1_rectangle.html">BARE2D::Rectangle</a></div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00028">DebugRenderer.hpp:28</a></div></div>
 <div class="ttc" id="astruct_b_a_r_e2_d_1_1_rectangle_html_a8e2d81842434dbfff17a9e35c16aec44"><div class="ttname"><a href="struct_b_a_r_e2_d_1_1_rectangle.html#a8e2d81842434dbfff17a9e35c16aec44">BARE2D::Rectangle::lines</a></div><div class="ttdeci">Line lines[2]</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00032">DebugRenderer.hpp:32</a></div></div>
 <div class="ttc" id="astruct_b_a_r_e2_d_1_1_circle_html_a9b16ba07258cf092cef0ebdcb690b5c9"><div class="ttname"><a href="struct_b_a_r_e2_d_1_1_circle.html#a9b16ba07258cf092cef0ebdcb690b5c9">BARE2D::Circle::construct</a></div><div class="ttdeci">void construct(glm::vec2 &amp;p0, float &amp;lineThick, float &amp;radius, Colour &amp;fillCol)</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8cpp_source.html#l00037">DebugRenderer.cpp:37</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_debug_renderer_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_debug_renderer.html">BARE2D::DebugRenderer</a></div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00035">DebugRenderer.hpp:35</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_debug_renderer_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_debug_renderer.html">BARE2D::DebugRenderer</a></div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00042">DebugRenderer.hpp:42</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_debug_renderer_html_a53387c43bc4270cee538f3969a8e1c67"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_debug_renderer.html#a53387c43bc4270cee538f3969a8e1c67">BARE2D::DebugRenderer::drawCircle</a></div><div class="ttdeci">virtual void drawCircle(glm::vec2 centre, float lineThickness, float radius, Colour fillColour=Colour(255, 255, 255, 255))</div><div class="ttdoc">Draws a circle.</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8cpp_source.html#l00103">DebugRenderer.cpp:103</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_debug_renderer_html_a6d21704f5a666d2b2e2095b53a3c0850"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_debug_renderer.html#a6d21704f5a666d2b2e2095b53a3c0850">BARE2D::DebugRenderer::drawLine</a></div><div class="ttdeci">virtual void drawLine(glm::vec2 point0, glm::vec2 point1, float thickness, Colour colour)</div><div class="ttdoc">Draws a line.</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8cpp_source.html#l00098">DebugRenderer.cpp:98</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_debug_renderer_html_adfa84d84a1525f62c888ecdcdc3e874a"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_debug_renderer.html#adfa84d84a1525f62c888ecdcdc3e874a">BARE2D::DebugRenderer::init</a></div><div class="ttdeci">virtual void init() override</div><div class="ttdoc">Initializes with very rudimentary shaders (hardcoded), adds vertex attributes.</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8cpp_source.html#l00074">DebugRenderer.cpp:74</a></div></div>
@@ -203,7 +219,7 @@ $(document).ready(function(){initNavTree('_debug_renderer_8hpp_source.html','');
 <div class="ttc" id="astruct_b_a_r_e2_d_1_1_line_html_ae0423bf5489488f0f1b2e9d69805d862"><div class="ttname"><a href="struct_b_a_r_e2_d_1_1_line.html#ae0423bf5489488f0f1b2e9d69805d862">BARE2D::Line::thickness</a></div><div class="ttdeci">float thickness</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00017">DebugRenderer.hpp:17</a></div></div>
 <div class="ttc" id="astruct_b_a_r_e2_d_1_1_line_html_ace2c7d8eaddf3ab67ad64bb99dc99bcc"><div class="ttname"><a href="struct_b_a_r_e2_d_1_1_line.html#ace2c7d8eaddf3ab67ad64bb99dc99bcc">BARE2D::Line::colour</a></div><div class="ttdeci">Colour colour</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00018">DebugRenderer.hpp:18</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_debug_renderer_html_a52b8a86d9eb1e621b49dcf17b88b4cd4"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_debug_renderer.html#a52b8a86d9eb1e621b49dcf17b88b4cd4">BARE2D::DebugRenderer::render</a></div><div class="ttdeci">virtual void render() override</div><div class="ttdoc">Actually renders the contents to the screen!</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8cpp_source.html#l00196">DebugRenderer.cpp:196</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_debug_renderer_html_afeb0590597ba4527285d8860787d6c2f"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_debug_renderer.html#afeb0590597ba4527285d8860787d6c2f">BARE2D::DebugRenderer::m_rectangles</a></div><div class="ttdeci">std::vector&lt; Rectangle &gt; m_rectangles</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00082">DebugRenderer.hpp:82</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_debug_renderer_html_afeb0590597ba4527285d8860787d6c2f"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_debug_renderer.html#afeb0590597ba4527285d8860787d6c2f">BARE2D::DebugRenderer::m_rectangles</a></div><div class="ttdeci">std::vector&lt; Rectangle &gt; m_rectangles</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00088">DebugRenderer.hpp:88</a></div></div>
 <div class="ttc" id="astruct_b_a_r_e2_d_1_1_circle_html"><div class="ttname"><a href="struct_b_a_r_e2_d_1_1_circle.html">BARE2D::Circle</a></div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00021">DebugRenderer.hpp:21</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_debug_renderer_html_afbab4275b06e9a2bc5f52342a9f2f219"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_debug_renderer.html#afbab4275b06e9a2bc5f52342a9f2f219">BARE2D::DebugRenderer::begin</a></div><div class="ttdeci">virtual void begin() override</div><div class="ttdoc">Clears the necessary vectors, etc. to prepare for draw() calls, etc.</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8cpp_source.html#l00090">DebugRenderer.cpp:90</a></div></div>
 <div class="ttc" id="astruct_b_a_r_e2_d_1_1_colour_html"><div class="ttname"><a href="struct_b_a_r_e2_d_1_1_colour.html">BARE2D::Colour</a></div><div class="ttdoc">An RGBA 8-bit colour value.</div><div class="ttdef"><b>Definition:</b> <a href="_vertex_8hpp_source.html#l00020">Vertex.hpp:20</a></div></div>
@@ -211,7 +227,7 @@ $(document).ready(function(){initNavTree('_debug_renderer_8hpp_source.html','');
 <div class="ttc" id="astruct_b_a_r_e2_d_1_1_line_html_adec7795f4c307ea1bf78d4e87fd7bc79"><div class="ttname"><a href="struct_b_a_r_e2_d_1_1_line.html#adec7795f4c307ea1bf78d4e87fd7bc79">BARE2D::Line::construct</a></div><div class="ttdeci">void construct(glm::vec2 p0, glm::vec2 p1, float &amp;thick, Colour &amp;col)</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8cpp_source.html#l00030">DebugRenderer.cpp:30</a></div></div>
 <div class="ttc" id="astruct_b_a_r_e2_d_1_1_circle_html_af752c5b361be8e2673fd464f53d5a567"><div class="ttname"><a href="struct_b_a_r_e2_d_1_1_circle.html#af752c5b361be8e2673fd464f53d5a567">BARE2D::Circle::lines</a></div><div class="ttdeci">std::vector&lt; Line &gt; lines</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00025">DebugRenderer.hpp:25</a></div></div>
 <div class="ttc" id="astruct_b_a_r_e2_d_1_1_line_html"><div class="ttname"><a href="struct_b_a_r_e2_d_1_1_line.html">BARE2D::Line</a></div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00012">DebugRenderer.hpp:12</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_debug_renderer_html_aeeaadb087efdaf838e445502adf18911"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_debug_renderer.html#aeeaadb087efdaf838e445502adf18911">BARE2D::DebugRenderer::m_circles</a></div><div class="ttdeci">std::vector&lt; Circle &gt; m_circles</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00081">DebugRenderer.hpp:81</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_debug_renderer_html_aeeaadb087efdaf838e445502adf18911"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_debug_renderer.html#aeeaadb087efdaf838e445502adf18911">BARE2D::DebugRenderer::m_circles</a></div><div class="ttdeci">std::vector&lt; Circle &gt; m_circles</div><div class="ttdef"><b>Definition:</b> <a href="_debug_renderer_8hpp_source.html#l00087">DebugRenderer.hpp:87</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

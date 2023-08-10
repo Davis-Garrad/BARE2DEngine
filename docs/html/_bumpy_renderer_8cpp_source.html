@@ -16,6 +16,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -36,6 +41,21 @@
    <div id="projectname">BARE2D
    </div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,16 +67,6 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -273,18 +283,18 @@ $(document).ready(function(){initNavTree('_bumpy_renderer_8cpp_source.html','');
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_bumpy_renderer_html_a33dd21c340b2ea4cdfda0c4306883275"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#a33dd21c340b2ea4cdfda0c4306883275">BARE2D::BumpyRenderer::preRender</a></div><div class="ttdeci">virtual void preRender() override</div><div class="ttdoc">Does stuff inside of the render function, within the shader's use.</div><div class="ttdef"><b>Definition:</b> <a href="_bumpy_renderer_8cpp_source.html#l00027">BumpyRenderer.cpp:27</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_bumpy_renderer_html_a6480bb55821d44b19fcd964a21c7dc5d"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#a6480bb55821d44b19fcd964a21c7dc5d">BARE2D::BumpyRenderer::draw</a></div><div class="ttdeci">virtual void draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, float depth, Colour colour=Colour(255, 255, 255, 255), float angle=0.0f, glm::vec2 COR=glm::vec2(0.5f))</div><div class="ttdef"><b>Definition:</b> <a href="_bumpy_renderer_8cpp_source.html#l00073">BumpyRenderer.cpp:73</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_glyph_html_a56fcbbb338feba45291f14dbdd8c5468"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_glyph.html#a56fcbbb338feba45291f14dbdd8c5468">BARE2D::Glyph::topRight</a></div><div class="ttdeci">Vertex topRight</div><div class="ttdef"><b>Definition:</b> <a href="_vertex_8hpp_source.html#l00100">Vertex.hpp:100</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_basic_renderer_html_a6e87400292d586ff1a8d4634856161db"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_basic_renderer.html#a6e87400292d586ff1a8d4634856161db">BARE2D::BasicRenderer::m_glyphs</a></div><div class="ttdeci">std::vector&lt; Glyph * &gt; m_glyphs</div><div class="ttdef"><b>Definition:</b> <a href="_basic_renderer_8hpp_source.html#l00038">BasicRenderer.hpp:38</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_basic_renderer_html_a6e87400292d586ff1a8d4634856161db"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_basic_renderer.html#a6e87400292d586ff1a8d4634856161db">BARE2D::BasicRenderer::m_glyphs</a></div><div class="ttdeci">std::vector&lt; Glyph * &gt; m_glyphs</div><div class="ttdef"><b>Definition:</b> <a href="_basic_renderer_8hpp_source.html#l00044">BasicRenderer.hpp:44</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_camera2_d_html_a9cefaaedae2a62e92590b9c8b4da35a7"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_camera2_d.html#a9cefaaedae2a62e92590b9c8b4da35a7">BARE2D::Camera2D::getCameraMatrix</a></div><div class="ttdeci">const glm::mat4 &amp; getCameraMatrix() const</div><div class="ttdef"><b>Definition:</b> <a href="_camera2_d_8cpp_source.html#l00169">Camera2D.cpp:169</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_bumpy_renderer_html_a75f6fb8242a8b04fe90421ad0c0f442e"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#a75f6fb8242a8b04fe90421ad0c0f442e">BARE2D::BumpyRenderer::draw</a></div><div class="ttdeci">virtual void draw(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, GLuint bumpmap, float depth, Colour colour=Colour(255, 255, 255, 255), float angle=0.0f, glm::vec2 COR=glm::vec2(0.5f))</div><div class="ttdef"><b>Definition:</b> <a href="_bumpy_renderer_8cpp_source.html#l00077">BumpyRenderer.cpp:77</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_glyph_html_a7eb374c9033171c455be7e13e135943e"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_glyph.html#a7eb374c9033171c455be7e13e135943e">BARE2D::Glyph::bottomRight</a></div><div class="ttdeci">Vertex bottomRight</div><div class="ttdef"><b>Definition:</b> <a href="_vertex_8hpp_source.html#l00100">Vertex.hpp:100</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_bumpy_renderer_html_a34c6156003e155272b59ea39413ecda2"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#a34c6156003e155272b59ea39413ecda2">BARE2D::BumpyRenderer::m_batchBumpmaps</a></div><div class="ttdeci">std::vector&lt; GLuint &gt; m_batchBumpmaps</div><div class="ttdef"><b>Definition:</b> <a href="_bumpy_renderer_8hpp_source.html#l00043">BumpyRenderer.hpp:43</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_bumpy_renderer_html_a34c6156003e155272b59ea39413ecda2"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#a34c6156003e155272b59ea39413ecda2">BARE2D::BumpyRenderer::m_batchBumpmaps</a></div><div class="ttdeci">std::vector&lt; GLuint &gt; m_batchBumpmaps</div><div class="ttdef"><b>Definition:</b> <a href="_bumpy_renderer_8hpp_source.html#l00042">BumpyRenderer.hpp:42</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_glyph_html_a5e7961252c16c09e88bee4943845b2e8"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_glyph.html#a5e7961252c16c09e88bee4943845b2e8">BARE2D::Glyph::bottomLeft</a></div><div class="ttdeci">Vertex bottomLeft</div><div class="ttdef"><b>Definition:</b> <a href="_vertex_8hpp_source.html#l00100">Vertex.hpp:100</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_basic_renderer_html_a741e3e451e464391ae3c549ec34866db"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_basic_renderer.html#a741e3e451e464391ae3c549ec34866db">BARE2D::BasicRenderer::m_camera</a></div><div class="ttdeci">std::shared_ptr&lt; Camera2D &gt; m_camera</div><div class="ttdef"><b>Definition:</b> <a href="_basic_renderer_8hpp_source.html#l00040">BasicRenderer.hpp:40</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_basic_renderer_html_a741e3e451e464391ae3c549ec34866db"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_basic_renderer.html#a741e3e451e464391ae3c549ec34866db">BARE2D::BasicRenderer::m_camera</a></div><div class="ttdeci">std::shared_ptr&lt; Camera2D &gt; m_camera</div><div class="ttdef"><b>Definition:</b> <a href="_basic_renderer_8hpp_source.html#l00046">BasicRenderer.hpp:46</a></div></div>
 <div class="ttc" id="anamespace_b_a_r_e2_d_html_a598d6ee5637b8d61de038646a6674f15abcb313a5c9f8965d7b75833af33d16be"><div class="ttname"><a href="namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15abcb313a5c9f8965d7b75833af33d16be">BARE2D::BAREError::UNINITIALIZED_FUNCTION</a></div><div class="ttdeci">@ UNINITIALIZED_FUNCTION</div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_basic_renderer_html_aad096d241734d1b4e1ea1a2a777ba1a8"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_basic_renderer.html#aad096d241734d1b4e1ea1a2a777ba1a8">BARE2D::BasicRenderer::BasicRenderer</a></div><div class="ttdeci">BasicRenderer(std::string &amp;fragShader, std::string &amp;vertShader, unsigned int perspectiveWidth=2, unsigned int perspectiveHeight=2)</div><div class="ttdef"><b>Definition:</b> <a href="_basic_renderer_8cpp_source.html#l00005">BasicRenderer.cpp:5</a></div></div>
 <div class="ttc" id="anamespace_b_a_r_e2_d_html_a598d6ee5637b8d61de038646a6674f15"><div class="ttname"><a href="namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15">BARE2D::BAREError</a></div><div class="ttdeci">BAREError</div><div class="ttdoc">Represents a specific type of error that has occured.</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_r_e_errors_8hpp_source.html#l00018">BAREErrors.hpp:18</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_v_a_o_html_a61c99f69bf5feb2ac95189381a48e638"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_v_a_o.html#a61c99f69bf5feb2ac95189381a48e638">BARE2D::VAO::bind</a></div><div class="ttdeci">void bind()</div><div class="ttdoc">Binds this vertex array object.</div><div class="ttdef"><b>Definition:</b> <a href="_v_a_o_8cpp_source.html#l00048">VAO.cpp:48</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_bumpy_renderer_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_bumpy_renderer.html">BARE2D::BumpyRenderer</a></div><div class="ttdoc">This is a BasicRenderer, but it includes the usage of bumpmaps. This can be useful for lighting.</div><div class="ttdef"><b>Definition:</b> <a href="_bumpy_renderer_8hpp_source.html#l00023">BumpyRenderer.hpp:23</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_bumpy_renderer_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_bumpy_renderer.html">BARE2D::BumpyRenderer</a></div><div class="ttdoc">This is a BasicRenderer, but it includes the usage of bumpmaps. This can be useful for lighting....</div><div class="ttdef"><b>Definition:</b> <a href="_bumpy_renderer_8hpp_source.html#l00023">BumpyRenderer.hpp:23</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_v_a_o_html_a10dd3e06e3929147edb6b249c94fdcee"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_v_a_o.html#a10dd3e06e3929147edb6b249c94fdcee">BARE2D::VAO::unbindVBO</a></div><div class="ttdeci">void unbindVBO()</div><div class="ttdoc">Unbinds this VAO's VBO.</div><div class="ttdef"><b>Definition:</b> <a href="_v_a_o_8cpp_source.html#l00062">VAO.cpp:62</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_g_l_context_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_g_l_context.html">BARE2D::GLContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_g_l_context_manager_8hpp_source.html#l00007">GLContextManager.hpp:7</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_renderer_html_a6cca43c8d777b64314256241af1df295"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_renderer.html#a6cca43c8d777b64314256241af1df295">BARE2D::Renderer::m_shader</a></div><div class="ttdeci">ShaderProgram m_shader</div><div class="ttdef"><b>Definition:</b> <a href="_renderer_8hpp_source.html#l00065">Renderer.hpp:65</a></div></div>
@@ -296,13 +306,13 @@ $(document).ready(function(){initNavTree('_bumpy_renderer_8cpp_source.html','');
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_bumpy_renderer_html_a87e27c42fb9f184113799f7711a79961"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#a87e27c42fb9f184113799f7711a79961">BARE2D::BumpyRenderer::BumpyRenderer</a></div><div class="ttdeci">BumpyRenderer(std::string &amp;fragShader, std::string &amp;vertShader, unsigned int perspectiveWidth=2, unsigned int perspectiveHeight=2)</div><div class="ttdef"><b>Definition:</b> <a href="_bumpy_renderer_8cpp_source.html#l00012">BumpyRenderer.cpp:12</a></div></div>
 <div class="ttc" id="aclass_render_batch_html_ac80bf0479536f10923a8bdb50598217a"><div class="ttname"><a href="class_render_batch.html#ac80bf0479536f10923a8bdb50598217a">RenderBatch::numVertices</a></div><div class="ttdeci">GLuint numVertices</div><div class="ttdef"><b>Definition:</b> <a href="_render_batch_8hpp_source.html#l00016">RenderBatch.hpp:16</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_glyph_html_a86de27460d73ab28f95ac60fe1535e09"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_glyph.html#a86de27460d73ab28f95ac60fe1535e09">BARE2D::Glyph::topLeft</a></div><div class="ttdeci">Vertex topLeft</div><div class="ttdef"><b>Definition:</b> <a href="_vertex_8hpp_source.html#l00100">Vertex.hpp:100</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_basic_renderer_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_basic_renderer.html">BARE2D::BasicRenderer</a></div><div class="ttdef"><b>Definition:</b> <a href="_basic_renderer_8hpp_source.html#l00011">BasicRenderer.hpp:11</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_basic_renderer_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_basic_renderer.html">BARE2D::BasicRenderer</a></div><div class="ttdef"><b>Definition:</b> <a href="_basic_renderer_8hpp_source.html#l00018">BasicRenderer.hpp:18</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_bumpy_renderer_html_adf8f29d89f859671a39cde7fb94cc7e7"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_bumpy_renderer.html#adf8f29d89f859671a39cde7fb94cc7e7">BARE2D::BumpyRenderer::render</a></div><div class="ttdeci">virtual void render() override</div><div class="ttdoc">Actually renders the contents to the screen!</div><div class="ttdef"><b>Definition:</b> <a href="_bumpy_renderer_8cpp_source.html#l00035">BumpyRenderer.cpp:35</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_bumpy_glyph_html_a3f4fd927de2b4a77d5ed920c69f687fd"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_bumpy_glyph.html#a3f4fd927de2b4a77d5ed920c69f687fd">BARE2D::BumpyGlyph::bumpmap</a></div><div class="ttdeci">GLuint bumpmap</div><div class="ttdef"><b>Definition:</b> <a href="_bumpy_renderer_8hpp_source.html#l00016">BumpyRenderer.hpp:16</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_glyph_html_a388878cd1c1726240f23ef913ad53635"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_glyph.html#a388878cd1c1726240f23ef913ad53635">BARE2D::Glyph::texture</a></div><div class="ttdeci">GLuint texture</div><div class="ttdef"><b>Definition:</b> <a href="_vertex_8hpp_source.html#l00094">Vertex.hpp:94</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_v_a_o_html_aaaec16d98be94aa5cfed015df40dda70"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_v_a_o.html#aaaec16d98be94aa5cfed015df40dda70">BARE2D::VAO::bindVBO</a></div><div class="ttdeci">void bindVBO()</div><div class="ttdoc">Binds the VAO's VBO.</div><div class="ttdef"><b>Definition:</b> <a href="_v_a_o_8cpp_source.html#l00057">VAO.cpp:57</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_bumpy_glyph_html_afe7eb427ad2e80ed7f5795a70affe529"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_bumpy_glyph.html#afe7eb427ad2e80ed7f5795a70affe529">BARE2D::BumpyGlyph::BumpyGlyph</a></div><div class="ttdeci">BumpyGlyph(glm::vec4 &amp;destRect, glm::vec4 &amp;uvRect, GLuint &amp;Texture, GLuint &amp;Bumpmap, float &amp;Depth, Colour &amp;colour, float &amp;angle, glm::vec2 &amp;COR)</div><div class="ttdef"><b>Definition:</b> <a href="_bumpy_renderer_8cpp_source.html#l00007">BumpyRenderer.cpp:7</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_bumpy_glyph_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_bumpy_glyph.html">BARE2D::BumpyGlyph</a></div><div class="ttdoc">This is a glyph, but with bumpmap (for lighting etc.)</div><div class="ttdef"><b>Definition:</b> <a href="_bumpy_renderer_8hpp_source.html#l00011">BumpyRenderer.hpp:11</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_bumpy_glyph_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_bumpy_glyph.html">BARE2D::BumpyGlyph</a></div><div class="ttdoc">This is a glyph, but with bumpmap (for lighting etc.).</div><div class="ttdef"><b>Definition:</b> <a href="_bumpy_renderer_8hpp_source.html#l00011">BumpyRenderer.hpp:11</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_g_l_context_manager_html_a733646522bf07c33576f9a1e0bb76c28"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_g_l_context_manager.html#a733646522bf07c33576f9a1e0bb76c28">BARE2D::GLContextManager::getContext</a></div><div class="ttdeci">static GLContext * getContext()</div><div class="ttdef"><b>Definition:</b> <a href="_g_l_context_manager_8cpp_source.html#l00044">GLContextManager.cpp:44</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_renderer_html_a4a5d71addd82c34de80ab86704a4f847"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_renderer.html#a4a5d71addd82c34de80ab86704a4f847">BARE2D::Renderer::m_batches</a></div><div class="ttdeci">std::vector&lt; RenderBatch &gt; m_batches</div><div class="ttdef"><b>Definition:</b> <a href="_renderer_8hpp_source.html#l00067">Renderer.hpp:67</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_g_l_context_manager_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_g_l_context_manager.html">BARE2D::GLContextManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_g_l_context_manager_8hpp_source.html#l00042">GLContextManager.hpp:42</a></div></div>

@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title=" " alt="" coords="228,5,413,32"/>
 <area shape="rect" id="node2" href="$_bumpy_renderer_8hpp.html" title=" " alt="" coords="164,80,304,107"/>
 <area shape="rect" id="node20" href="$_g_l_context_manager_8hpp.html" title=" " alt="" coords="328,80,487,107"/>
-<area shape="rect" id="node3" href="$_basic_renderer_8hpp.html" title=" " alt="" coords="168,155,300,181"/>
+<area shape="rect" id="node3" href="$_basic_renderer_8hpp.html" title="A simple renderer. Has the GLSL VAOs vertexPosition (vec3), vertexColour (vec4), and vertexUV (vec2)...." alt="" coords="168,155,300,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="146,453,239,480"/>
 <area shape="rect" id="node5" title=" " alt="" coords="427,229,497,256"/>
 <area shape="rect" id="node6" href="$_renderer_8hpp.html" title=" " alt="" coords="305,229,403,256"/>

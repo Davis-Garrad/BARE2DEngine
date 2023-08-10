@@ -16,6 +16,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -36,6 +41,21 @@
    <div id="projectname">BARE2D
    </div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,16 +67,6 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -132,6 +142,7 @@ Files</h2></td></tr>
 <tr class="memitem:_basic_renderer_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_basic_renderer_8cpp.html">BasicRenderer.cpp</a> <a href="_basic_renderer_8cpp_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:_basic_renderer_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_basic_renderer_8hpp.html">BasicRenderer.hpp</a> <a href="_basic_renderer_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:_basic_renderer_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple renderer. Has the GLSL VAOs vertexPosition (vec3), vertexColour (vec4), and vertexUV (vec2). Uniforms textureSampler (sampler2D), projectionMatrix (mat4) <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:_bumpy_renderer_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bumpy_renderer_8cpp.html">BumpyRenderer.cpp</a> <a href="_bumpy_renderer_8cpp_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,6 +161,7 @@ Files</h2></td></tr>
 <tr class="memitem:_debug_renderer_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_renderer_8cpp.html">DebugRenderer.cpp</a> <a href="_debug_renderer_8cpp_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:_debug_renderer_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_renderer_8hpp.html">DebugRenderer.hpp</a> <a href="_debug_renderer_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:_debug_renderer_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">A renderer specifically made for debugging purposes. Contains its own shaders. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:_f_b_o_renderer_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_f_b_o_renderer_8cpp.html">FBORenderer.cpp</a> <a href="_f_b_o_renderer_8cpp_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,6 +266,7 @@ Files</h2></td></tr>
 <tr class="memitem:_textureless_renderer_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_textureless_renderer_8cpp.html">TexturelessRenderer.cpp</a> <a href="_textureless_renderer_8cpp_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:_textureless_renderer_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_textureless_renderer_8hpp.html">TexturelessRenderer.hpp</a> <a href="_textureless_renderer_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:_textureless_renderer_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">A renderer made to simply run a shader with some passed glyphs. VAOs vertexPosition (vec3), vertexColour (vec4), and vertexUV (vec4). Only uniform is projectionMatrix (mat4) <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:_timer_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_timer_8cpp.html">Timer.cpp</a> <a href="_timer_8cpp_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>

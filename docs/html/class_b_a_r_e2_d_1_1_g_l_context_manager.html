@@ -16,6 +16,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -36,6 +41,21 @@
    <div id="projectname">BARE2D
    </div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -47,16 +67,6 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -153,7 +163,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_g_l_context_manager_8cpp_source.html#l00005">BARE2D::GLContext::GLContext()</a>, and <a class="el" href="_g_l_context_manager_8hpp_source.html#l00048">m_context</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00363">BARE2D::FBORenderer::bind()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00267">BARE2D::FBORenderer::createTextures()</a>, <a class="el" href="_textureless_renderer_8cpp_source.html#l00020">BARE2D::TexturelessRenderer::init()</a>, <a class="el" href="_font_8cpp_source.html#l00030">BARE2D::Font::init()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00172">BARE2D::FBORenderer::preRender()</a>, <a class="el" href="_bumpy_renderer_8cpp_source.html#l00035">BARE2D::BumpyRenderer::render()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00232">BARE2D::FBORenderer::render()</a>, <a class="el" href="_debug_renderer_8cpp_source.html#l00196">BARE2D::DebugRenderer::render()</a>, <a class="el" href="_renderer_8cpp_source.html#l00048">BARE2D::Renderer::render()</a>, <a class="el" href="_mutable_texture_8cpp_source.html#l00013">BARE2D::MutableTexture::setData()</a>, and <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00375">BARE2D::FBORenderer::unbind()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00363">BARE2D::FBORenderer::bind()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00267">BARE2D::FBORenderer::createTextures()</a>, <a class="el" href="_textureless_renderer_8cpp_source.html#l00020">BARE2D::TexturelessRenderer::init()</a>, <a class="el" href="_font_8cpp_source.html#l00030">BARE2D::Font::init()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00172">BARE2D::FBORenderer::preRender()</a>, <a class="el" href="_bumpy_renderer_8cpp_source.html#l00035">BARE2D::BumpyRenderer::render()</a>, <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00232">BARE2D::FBORenderer::render()</a>, <a class="el" href="_renderer_8cpp_source.html#l00048">BARE2D::Renderer::render()</a>, <a class="el" href="_debug_renderer_8cpp_source.html#l00196">BARE2D::DebugRenderer::render()</a>, <a class="el" href="_mutable_texture_8cpp_source.html#l00013">BARE2D::MutableTexture::setData()</a>, and <a class="el" href="_f_b_o_renderer_8cpp_source.html#l00375">BARE2D::FBORenderer::unbind()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">

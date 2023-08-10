@@ -1,5 +1,5 @@
 <map id="Source/TexturelessRenderer.hpp" name="Source/TexturelessRenderer.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="129,5,339,32"/>
+<area shape="rect" id="node1" title="A renderer made to simply run a shader with some passed glyphs. VAOs vertexPosition (vec3),..." alt="" coords="129,5,339,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="146,304,239,331"/>
 <area shape="rect" id="node3" title=" " alt="" coords="427,80,497,107"/>
 <area shape="rect" id="node4" href="$_renderer_8hpp.html" title=" " alt="" coords="305,80,403,107"/>

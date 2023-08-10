@@ -1,6 +1,6 @@
 <map id="Source/TexturelessRenderer.cpp" name="Source/TexturelessRenderer.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="175,5,385,32"/>
-<area shape="rect" id="node2" href="$_textureless_renderer_8hpp.html" title=" " alt="" coords="103,80,270,107"/>
+<area shape="rect" id="node2" href="$_textureless_renderer_8hpp.html" title="A renderer made to simply run a shader with some passed glyphs. VAOs vertexPosition (vec3),..." alt="" coords="103,80,270,107"/>
 <area shape="rect" id="node19" href="$_g_l_context_manager_8hpp.html" title=" " alt="" coords="325,80,483,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="77,379,171,405"/>
 <area shape="rect" id="node4" title=" " alt="" coords="188,155,257,181"/>
