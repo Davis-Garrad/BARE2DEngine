@@ -1,144 +1,154 @@
 \hypertarget{_basic_renderer_8cpp_source}{}\doxysection{Basic\+Renderer.\+cpp}
 \label{_basic_renderer_8cpp_source}\index{Source/BasicRenderer.cpp@{Source/BasicRenderer.cpp}}
-\mbox{\hyperlink{_basic_renderer_8cpp}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_basic_renderer_8hpp}{BasicRenderer.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00004}00004 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00005}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aad096d241734d1b4e1ea1a2a777ba1a8}{00005}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aad096d241734d1b4e1ea1a2a777ba1a8}{BasicRenderer::BasicRenderer}}(std::string\& fragShader,}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00006}00006                                  std::string\& vertShader,}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00007}00007                                  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} perspectiveWidth,}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00008}00008                                  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} perspectiveHeight) :}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00009}00009         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer}{Renderer}}(),}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00010}00010         m\_fragShader(fragShader), m\_vertShader(vertShader) \{}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00011}00011         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}} = std::make\_shared<Camera2D>();}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00012}00012         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}}-\/>init(perspectiveWidth, perspectiveHeight);}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00013}00013     \}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00014}00014 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00015}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a21b4eba61a2a80b5014aa26eae031ac5}{00015}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a21b4eba61a2a80b5014aa26eae031ac5}{BasicRenderer::\string~BasicRenderer}}() \{}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00016}00016     \}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00017}00017 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00018}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aa228c647d7fe74772a4736d51fdb7796}{00018}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aa228c647d7fe74772a4736d51fdb7796}{BasicRenderer::init}}() \{}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00019}00019         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{compileShaders}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_abf614f4d57f348e103d2197fe6262c7b}{m\_vertShader}}.c\_str(), \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a09092e5ec68ed95fb8a40d72df296979}{m\_fragShader}}.c\_str());}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00020}00020 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00021}00021         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a5ff18e853da7784b3085181c5e52e8ac}{link}}(\{\textcolor{stringliteral}{"{}vertexPosition"{}}, \textcolor{stringliteral}{"{}vertexColour"{}}, \textcolor{stringliteral}{"{}vertexUV"{}}\});}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00022}00022 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00023}00023         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{Renderer::init}}(); \textcolor{comment}{// Initializes the VAO, so we can add attributes.}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00024}00024 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00025}00025         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}(3, GL\_FLOAT, GL\_FALSE, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, position));}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00026}00026         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}(4,}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00027}00027                                                GL\_UNSIGNED\_BYTE,}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00028}00028                                                GL\_TRUE,}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00029}00029                                                \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}),}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00030}00030                                                (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, colour));}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00031}00031         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}(2, GL\_FLOAT, GL\_FALSE, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, uv));}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00032}00032     \}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00033}00033 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00034}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_adfd638eb976b59c52ded5930035721ec}{00034}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_adfd638eb976b59c52ded5930035721ec}{BasicRenderer::setCamera}}(std::shared\_ptr<Camera2D> camera) \{}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00035}00035         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}} = camera;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00036}00036     \}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00037}00037 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00038}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aed0e10a9a6a2ac938600e68c7c8a4e53}{00038}}     std::shared\_ptr<Camera2D> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aed0e10a9a6a2ac938600e68c7c8a4e53}{BasicRenderer::getCamera}}() \{}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00039}00039         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}};}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00040}00040     \}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00041}00041 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00042}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aaf24fe92216128173a92b9c23dc4dd56}{00042}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aaf24fe92216128173a92b9c23dc4dd56}{BasicRenderer::preRender}}() \{}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00043}00043         \textcolor{comment}{// We also need to define a texture sampler for textures!}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00044}00044 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00045}00045         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}}-\/>update();}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00046}00046 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00047}00047         GLint textureUniform = 0;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00048}00048         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{setUniform}}(\textcolor{stringliteral}{"{}textureSampler"{}}, \&textureUniform);}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00049}00049         glm::mat4 projectionMatrix = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}}-\/>getCameraMatrix();}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00050}00050         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{setUniformMatrix}}<glm::mat4>(\textcolor{stringliteral}{"{}projectionMatrix"{}}, GL\_FALSE, \&projectionMatrix);}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00051}00051     \}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00052}00052 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00053}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a2070760479d95e099eab580d6f5b66e4}{00053}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a2070760479d95e099eab580d6f5b66e4}{BasicRenderer::draw}}(glm::vec4 destRect,}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00054}00054                              glm::vec4 uvRect,}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00055}00055                              GLuint    texture,}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00056}00056                              \textcolor{keywordtype}{float}     depth,}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00057}00057                              \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}      colour \textcolor{comment}{/*255, 255, 255, 255*/},}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00058}00058                              \textcolor{keywordtype}{float}     angle \textcolor{comment}{/* = 0.0f*/},}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00059}00059                              glm::vec2 COR \textcolor{comment}{/*=glm::vec2(0.5f)*/}) \{}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00060}00060         \textcolor{comment}{// Make sure it's actually in the scene.}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00061}00061         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}}-\/>isRectInViewspace(destRect))}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00062}00062             \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00063}00063 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00064}00064         \textcolor{comment}{// At this point we can just scale the size (the position should be translated in the shader) and draw it}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00065}00065 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00066}00066         \textcolor{comment}{// Just add the glyph}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00067}00067         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph}{Glyph}}(destRect, uvRect, texture, depth, colour, angle, COR));}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00068}00068     \}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00069}00069 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00070}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a5e1c6ae78270e23c7c8eec7e85fd3d41}{00070}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a5e1c6ae78270e23c7c8eec7e85fd3d41}{BasicRenderer::createRenderBatches}}() \{}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00071}00071         \textcolor{comment}{// Create all the render batches (based on the draw()'n glyphs) for rendering}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00072}00072         \textcolor{comment}{// THey're going to end up as vertices}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00073}00073         std::vector<Vertex> vertices;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00074}00074 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00075}00075         \textcolor{comment}{// We already know that the glyphs represent 6 vertices by design.}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00076}00076         vertices.resize(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}.size() * 6);}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00077}00077 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00078}00078         \textcolor{comment}{// Check if we even have anything to draw}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00079}00079         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}.size() == 0) \{}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00080}00080             \textcolor{keywordflow}{return}; \textcolor{comment}{// Don't need to do much.}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00081}00081         \}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00082}00082 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00083}00083         \textcolor{keywordtype}{int} offset = 0;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00084}00084         \textcolor{keywordtype}{int} vertex = 0;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00085}00085 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00086}00086         \textcolor{comment}{// 'Draw' two triangles from the 6 vertices.}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00087}00087         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a4a5d71addd82c34de80ab86704a4f847}{m\_batches}}.emplace\_back(offset, 6, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[0]-\/>texture);}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00088}00088         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[0]-\/>topLeft;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00089}00089         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[0]-\/>bottomLeft;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00090}00090         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[0]-\/>bottomRight;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00091}00091         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[0]-\/>bottomRight;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00092}00092         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[0]-\/>topRight;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00093}00093         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[0]-\/>topLeft;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00094}00094 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00095}00095         \textcolor{comment}{// Set the offset appropriately for 6 vertices of data.}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00096}00096         offset += 6;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00097}00097 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00098}00098         \textcolor{comment}{// Add the rest of the glyphs}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00099}00099         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} glyph = 1; glyph < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}.size(); glyph++) \{}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00100}00100             \textcolor{comment}{// Check if this can just be part of the current batch (instancing essentially)}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00101}00101             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]-\/>texture != \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph -\/ 1]-\/>texture) \{}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00102}00102                 \textcolor{comment}{// It can't be part of the same batch, so create a new one}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00103}00103                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a4a5d71addd82c34de80ab86704a4f847}{m\_batches}}.emplace\_back(offset, 6, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]-\/>texture);}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00104}00104             \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00105}00105                 \textcolor{comment}{// If its part of the current batch, just increase numVertices. It'll reuse the texture, but nothing more.}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00106}00106                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a4a5d71addd82c34de80ab86704a4f847}{m\_batches}}.back().numVertices += 6;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00107}00107             \}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00108}00108             \textcolor{comment}{// 'Draw' two triangles.}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00109}00109             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]-\/>topLeft;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00110}00110             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]-\/>bottomLeft;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00111}00111             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]-\/>bottomRight;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00112}00112             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]-\/>bottomRight;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00113}00113             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]-\/>topRight;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00114}00114             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]-\/>topLeft;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00115}00115 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00116}00116             \textcolor{comment}{// Push data offset forward 6 vertices.}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00117}00117             offset += 6;}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00118}00118         \}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00119}00119 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00120}00120         \textcolor{comment}{// Done with the glyphs, we can clear em}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00121}00121         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}.clear();}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00122}00122 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00123}00123         \textcolor{comment}{// Now that render batches are created, we can upload the information to OpenGL}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00124}00124 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00125}00125         \textcolor{comment}{// Bind the VBO}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00126}00126         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{bindVBO}}();}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00127}00127 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00128}00128         \textcolor{comment}{// Orphan the buffer}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00129}00129         glBufferData(GL\_ARRAY\_BUFFER, vertices.size() * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), \textcolor{keyword}{nullptr}, GL\_DYNAMIC\_DRAW);}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00130}00130 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00131}00131         \textcolor{comment}{// Actually upload the data to the buffer.}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00132}00132         glBufferSubData(GL\_ARRAY\_BUFFER, 0, vertices.size() * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), vertices.data());}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00133}00133 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00134}00134         \textcolor{comment}{// Unbind the VBO again for safety}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00135}00135         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}{unbindVBO}}();}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00136}00136     \}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00137}00137 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00138}00138 \} \textcolor{comment}{// namespace BARE2D}}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_basic_renderer_8hpp}{"BasicRenderer.hpp"}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00005}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aad096d241734d1b4e1ea1a2a777ba1a8}{00005}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{BasicRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aad096d241734d1b4e1ea1a2a777ba1a8}{BasicRenderer}}(std::string\& fragShader,}
+\DoxyCodeLine{00006                              std::string\& vertShader,}
+\DoxyCodeLine{00007                              \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} perspectiveWidth,}
+\DoxyCodeLine{00008                              \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} perspectiveHeight)}
+\DoxyCodeLine{00009     : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer}{Renderer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_abc605847b99b92971a385206dc75e044}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_abc605847b99b92971a385206dc75e044}{)}}}
+\DoxyCodeLine{00010     , \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a09092e5ec68ed95fb8a40d72df296979}{m\_fragShader}}(fragShader)}
+\DoxyCodeLine{00011     , \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_abf614f4d57f348e103d2197fe6262c7b}{m\_vertShader}}(vertShader)}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}} = std::make\_shared<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}}>();}
+\DoxyCodeLine{00014     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a7dc4acd9d8d0cc2e7b7d956528fd488f}{init}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a7dc4acd9d8d0cc2e7b7d956528fd488f}{(}}perspectiveWidth\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a7dc4acd9d8d0cc2e7b7d956528fd488f}{,}} perspectiveHeight\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a7dc4acd9d8d0cc2e7b7d956528fd488f}{)}};}
+\DoxyCodeLine{00015 \}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00017}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a21b4eba61a2a80b5014aa26eae031ac5}{00017}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{BasicRenderer}}::\string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a21b4eba61a2a80b5014aa26eae031ac5}{BasicRenderer}}()}
+\DoxyCodeLine{00018 \{\}}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00020}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aa228c647d7fe74772a4736d51fdb7796}{00020}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{BasicRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aa228c647d7fe74772a4736d51fdb7796}{init}}()}
+\DoxyCodeLine{00021 \{}
+\DoxyCodeLine{00022     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{compileShaders}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_abf614f4d57f348e103d2197fe6262c7b}{m\_vertShader}}.c\_str()\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{,}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a09092e5ec68ed95fb8a40d72df296979}{m\_fragShader}}.c\_str()\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{)}};}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a5ff18e853da7784b3085181c5e52e8ac}{link}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a5ff18e853da7784b3085181c5e52e8ac}{(}}\{\textcolor{stringliteral}{"vertexPosition"}, \textcolor{stringliteral}{"vertexColour"}, \textcolor{stringliteral}{"vertexUV"}\}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a5ff18e853da7784b3085181c5e52e8ac}{)}};}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer}{Renderer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{init}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{)}}; \textcolor{comment}{// Initializes the VAO, so we can add attributes.}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{(}}3\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} GL\_FLOAT\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} GL\_FALSE\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}})\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a46e6fc6c1a765771603aa8be0d595987}{position}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}};}
+\DoxyCodeLine{00029     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{(}}4\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} GL\_UNSIGNED\_BYTE\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} GL\_TRUE\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}})\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}}}
+\DoxyCodeLine{00030                                            (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}};}
+\DoxyCodeLine{00031     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{(}}2\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} GL\_FLOAT\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} GL\_FALSE\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}})\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a1b1d6f4db74e0287a41e64029f6ff5d9}{uv}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}};}
+\DoxyCodeLine{00032 \}}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00034}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_adfd638eb976b59c52ded5930035721ec}{00034}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{BasicRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_adfd638eb976b59c52ded5930035721ec}{setCamera}}(std::shared\_ptr<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}}> camera)}
+\DoxyCodeLine{00035 \{}
+\DoxyCodeLine{00036     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}} = camera;}
+\DoxyCodeLine{00037 \}}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00039}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aed0e10a9a6a2ac938600e68c7c8a4e53}{00039}} std::shared\_ptr<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}}> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{BasicRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aed0e10a9a6a2ac938600e68c7c8a4e53}{getCamera}}()}
+\DoxyCodeLine{00040 \{}
+\DoxyCodeLine{00041     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}};}
+\DoxyCodeLine{00042 \}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00044}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aaf24fe92216128173a92b9c23dc4dd56}{00044}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{BasicRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aaf24fe92216128173a92b9c23dc4dd56}{preRender}}()}
+\DoxyCodeLine{00045 \{}
+\DoxyCodeLine{00046     \textcolor{comment}{// We also need to define a texture sampler for textures!}}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_aad8e6c5c18c85f5dc4d0ccd31d356d13}{update}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_aad8e6c5c18c85f5dc4d0ccd31d356d13}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_aad8e6c5c18c85f5dc4d0ccd31d356d13}{)}};}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050     GLint textureUniform = 0;}
+\DoxyCodeLine{00051     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{setUniform}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{(}}\textcolor{stringliteral}{"textureSampler"}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{,}} \&textureUniform\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{)}};}
+\DoxyCodeLine{00052     glm::mat4 projectionMatrix = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a9cefaaedae2a62e92590b9c8b4da35a7}{getCameraMatrix}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a9cefaaedae2a62e92590b9c8b4da35a7}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a9cefaaedae2a62e92590b9c8b4da35a7}{)}};}
+\DoxyCodeLine{00053     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{setUniformMatrix}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{<}}glm\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{::}}mat4\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{(}}\textcolor{stringliteral}{"projectionMatrix"}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{,}} GL\_FALSE\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{,}} \&projectionMatrix\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{)}};}
+\DoxyCodeLine{00054 \}}
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00056}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a2070760479d95e099eab580d6f5b66e4}{00056}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{BasicRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a2070760479d95e099eab580d6f5b66e4}{draw}}(glm::vec4 destRect,}
+\DoxyCodeLine{00057                          glm::vec4 uvRect,}
+\DoxyCodeLine{00058                          GLuint texture,}
+\DoxyCodeLine{00059                          \textcolor{keywordtype}{float} depth,}
+\DoxyCodeLine{00060                          \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}} colour \textcolor{comment}{/*255, 255, 255, 255*/},}
+\DoxyCodeLine{00061                          \textcolor{keywordtype}{float} angle \textcolor{comment}{/* = 0.0f*/},}
+\DoxyCodeLine{00062                          glm::vec2 COR \textcolor{comment}{/*=glm::vec2(0.5f)*/})}
+\DoxyCodeLine{00063 \{}
+\DoxyCodeLine{00064     \textcolor{comment}{// Make sure it's actually in the scene.}}
+\DoxyCodeLine{00065     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a040ee7936ee18e8654e258e4013b46dd}{isRectInViewspace}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a040ee7936ee18e8654e258e4013b46dd}{(}}destRect\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a040ee7936ee18e8654e258e4013b46dd}{)}})}
+\DoxyCodeLine{00066     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068     \textcolor{comment}{// At this point we can just scale the size (the position should be translated in the shader) and draw it}}
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00070     \textcolor{comment}{// Just add the glyph}}
+\DoxyCodeLine{00071     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph}{Glyph}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{(}}destRect\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{,}} uvRect\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{,}} texture\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{,}} depth\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{,}} colour\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{,}} angle\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{,}} COR\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{)}});}
+\DoxyCodeLine{00072 \}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{\Hypertarget{_basic_renderer_8cpp_source_l00074}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a5e1c6ae78270e23c7c8eec7e85fd3d41}{00074}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{BasicRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a5e1c6ae78270e23c7c8eec7e85fd3d41}{createRenderBatches}}()}
+\DoxyCodeLine{00075 \{}
+\DoxyCodeLine{00076     \textcolor{comment}{// Create all the render batches (based on the draw()'n glyphs) for rendering}}
+\DoxyCodeLine{00077     \textcolor{comment}{// THey're going to end up as vertices}}
+\DoxyCodeLine{00078     std::vector<\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}> vertices;}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080     \textcolor{comment}{// We already know that the glyphs represent 6 vertices by design.}}
+\DoxyCodeLine{00081     vertices.resize(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}.size() * 6);}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083     \textcolor{comment}{// Check if we even have anything to draw}}
+\DoxyCodeLine{00084     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}.size() == 0)}
+\DoxyCodeLine{00085     \{}
+\DoxyCodeLine{00086         \textcolor{keywordflow}{return}; \textcolor{comment}{// Don't need to do much.}}
+\DoxyCodeLine{00087     \}}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089     \textcolor{keywordtype}{int} offset = 0;}
+\DoxyCodeLine{00090     \textcolor{keywordtype}{int} vertex = 0;}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092     \textcolor{comment}{// 'Draw' two triangles from the 6 vertices.}}
+\DoxyCodeLine{00093     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a4a5d71addd82c34de80ab86704a4f847}{m\_batches}}.emplace\_back(offset, 6, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[0]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a388878cd1c1726240f23ef913ad53635}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a388878cd1c1726240f23ef913ad53635}{texture}});}
+\DoxyCodeLine{00094     vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[0]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}};}
+\DoxyCodeLine{00095     vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[0]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{bottomLeft}};}
+\DoxyCodeLine{00096     vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[0]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}};}
+\DoxyCodeLine{00097     vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[0]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}};}
+\DoxyCodeLine{00098     vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[0]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{topRight}};}
+\DoxyCodeLine{00099     vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[0]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}};}
+\DoxyCodeLine{00100 }
+\DoxyCodeLine{00101     \textcolor{comment}{// Set the offset appropriately for 6 vertices of data.}}
+\DoxyCodeLine{00102     offset += 6;}
+\DoxyCodeLine{00103 }
+\DoxyCodeLine{00104     \textcolor{comment}{// Add the rest of the glyphs}}
+\DoxyCodeLine{00105     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} glyph = 1; glyph < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}.size(); glyph++)}
+\DoxyCodeLine{00106     \{}
+\DoxyCodeLine{00107         \textcolor{comment}{// Check if this can just be part of the current batch (instancing essentially)}}
+\DoxyCodeLine{00108         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a388878cd1c1726240f23ef913ad53635}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a388878cd1c1726240f23ef913ad53635}{texture}} != \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph -\/ 1]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a388878cd1c1726240f23ef913ad53635}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a388878cd1c1726240f23ef913ad53635}{texture}})}
+\DoxyCodeLine{00109         \{}
+\DoxyCodeLine{00110             \textcolor{comment}{// It can't be part of the same batch, so create a new one}}
+\DoxyCodeLine{00111             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a4a5d71addd82c34de80ab86704a4f847}{m\_batches}}.emplace\_back(offset, 6, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a388878cd1c1726240f23ef913ad53635}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a388878cd1c1726240f23ef913ad53635}{texture}});}
+\DoxyCodeLine{00112         \} \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00113         \{}
+\DoxyCodeLine{00114             \textcolor{comment}{// If its part of the current batch, just increase numVertices. It'll reuse the texture, but nothing}}
+\DoxyCodeLine{00115             \textcolor{comment}{// more.}}
+\DoxyCodeLine{00116             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a4a5d71addd82c34de80ab86704a4f847}{m\_batches}}.back()\mbox{\hyperlink{class_render_batch_ac80bf0479536f10923a8bdb50598217a}{.}}\mbox{\hyperlink{class_render_batch_ac80bf0479536f10923a8bdb50598217a}{numVertices}} += 6;}
+\DoxyCodeLine{00117         \}}
+\DoxyCodeLine{00118         \textcolor{comment}{// 'Draw' two triangles.}}
+\DoxyCodeLine{00119         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}};}
+\DoxyCodeLine{00120         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{bottomLeft}};}
+\DoxyCodeLine{00121         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}};}
+\DoxyCodeLine{00122         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}};}
+\DoxyCodeLine{00123         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{topRight}};}
+\DoxyCodeLine{00124         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}[glyph]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}};}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{00126         \textcolor{comment}{// Push data offset forward 6 vertices.}}
+\DoxyCodeLine{00127         offset += 6;}
+\DoxyCodeLine{00128     \}}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130     \textcolor{comment}{// Done with the glyphs, we can clear em}}
+\DoxyCodeLine{00131     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}}.clear();}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133     \textcolor{comment}{// Now that render batches are created, we can upload the information to OpenGL}}
+\DoxyCodeLine{00134 }
+\DoxyCodeLine{00135     \textcolor{comment}{// Bind the VBO}}
+\DoxyCodeLine{00136     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{bindVBO}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{)}};}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00138     \textcolor{comment}{// Orphan the buffer}}
+\DoxyCodeLine{00139     glBufferData(GL\_ARRAY\_BUFFER, vertices.size() * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), \textcolor{keywordtype}{nullptr}, GL\_DYNAMIC\_DRAW);}
+\DoxyCodeLine{00140 }
+\DoxyCodeLine{00141     \textcolor{comment}{// Actually upload the data to the buffer.}}
+\DoxyCodeLine{00142     glBufferSubData(GL\_ARRAY\_BUFFER, 0, vertices.size() * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), vertices.data());}
+\DoxyCodeLine{00143 }
+\DoxyCodeLine{00144     \textcolor{comment}{// Unbind the VBO again for safety}}
+\DoxyCodeLine{00145     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}{unbindVBO}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}{)}};}
+\DoxyCodeLine{00146 \}}
+\DoxyCodeLine{00147 }
+\DoxyCodeLine{00148 \} \textcolor{comment}{// namespace BARE2D}}
 
 \end{DoxyCode}

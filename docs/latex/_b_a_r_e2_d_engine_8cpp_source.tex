@@ -1,29 +1,29 @@
-\hypertarget{_b_a_r_e2_d_engine_8cpp_source}{}\doxysection{BARE2\+DEngine.\+cpp}
+\hypertarget{_b_a_r_e2_d_engine_8cpp_source}{}\doxysection{B\+A\+R\+E2\+D\+Engine.\+cpp}
 \label{_b_a_r_e2_d_engine_8cpp_source}\index{Source/BARE2DEngine.cpp@{Source/BARE2DEngine.cpp}}
-\mbox{\hyperlink{_b_a_r_e2_d_engine_8cpp}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_b_a_r_e2_d_engine_8hpp}{BARE2DEngine.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <SDL2/SDL.h>}}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <GL/glew.h>}}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00005}00005 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_b_a_r_e_errors_8hpp}{BAREErrors.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00007}00007 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00008}00008 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00009}00009 }
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_b_a_r_e2_d_engine_8hpp}{"BARE2DEngine.hpp"}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{SDL2}\textcolor{preprocessor}{/}\textcolor{preprocessor}{SDL}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{GL}\textcolor{preprocessor}{/}\textcolor{preprocessor}{glew}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_b_a_r_e_errors_8hpp}{"BAREErrors.hpp"}}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00009 }
 \DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00010}\mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{00010}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{init}}() \{}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00011}00011         }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00012}00012         \textcolor{comment}{// Initialize all of SDL}}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00013}00013         \textcolor{keywordtype}{int} err = SDL\_Init(SDL\_INIT\_EVERYTHING);}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00014}00014         \textcolor{comment}{// Get error from SDL}}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00015}00015         \textcolor{keywordflow}{if}(err != 0) \{}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00016}00016             \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}(\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a2eea2c536f4e062c3b1832f9cea1356d}{BAREError::SDL\_FAILURE}});}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00017}00017         \}}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00018}00018         }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00019}00019         \textcolor{comment}{// Tell SDL to create a double buffered window, to avoid flickering.}}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00020}00020         SDL\_GL\_SetAttribute(SDL\_GL\_DOUBLEBUFFER, \textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00021}00021     \}}
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00022}00022 }
-\DoxyCodeLine{\Hypertarget{_b_a_r_e2_d_engine_8cpp_source_l00023}00023 \}}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012         \textcolor{comment}{// Initialize all of SDL}}
+\DoxyCodeLine{00013         \textcolor{keywordtype}{int} err = SDL\_Init(SDL\_INIT\_EVERYTHING);}
+\DoxyCodeLine{00014         \textcolor{comment}{// Get error from SDL}}
+\DoxyCodeLine{00015         \textcolor{keywordflow}{if}(err != 0) \{}
+\DoxyCodeLine{00016             throwFatalError(BAREError::SDL\_FAILURE);}
+\DoxyCodeLine{00017         \}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019         \textcolor{comment}{// Tell SDL to create a double buffered window, to avoid flickering.}}
+\DoxyCodeLine{00020         SDL\_GL\_SetAttribute(SDL\_GL\_DOUBLEBUFFER, \textcolor{keyword}{true});}
+\DoxyCodeLine{00021     \}}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023 \}}
 
 \end{DoxyCode}

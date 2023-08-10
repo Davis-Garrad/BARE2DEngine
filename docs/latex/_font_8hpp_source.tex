@@ -1,112 +1,112 @@
 \hypertarget{_font_8hpp_source}{}\doxysection{Font.\+hpp}
 \label{_font_8hpp_source}\index{Source/Font.hpp@{Source/Font.hpp}}
-\mbox{\hyperlink{_font_8hpp}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00003}00003 \textcolor{preprocessor}{\#include <GL/glew.h>}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00004}00004 \textcolor{preprocessor}{\#include <glm/glm.hpp>}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00005}00005 }
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00006}00006 \textcolor{preprocessor}{\#include <vector>}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00007}00007 }
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00008}\mbox{\hyperlink{_font_8hpp_a7471366f513e5a004a20044135e22912}{00008}} \textcolor{preprocessor}{\#define FIRST\_PRINTABLE\_CHAR ((char)32)}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00009}\mbox{\hyperlink{_font_8hpp_a8afd0c1d1b85426d666cc89d506c4b46}{00009}} \textcolor{preprocessor}{\#define LAST\_PRINTABLE\_CHAR ((char)126)}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00010}\mbox{\hyperlink{_font_8hpp_a0452c495abe98070258839b95ccbb83b}{00010}} \textcolor{preprocessor}{\#define MAX\_TEXTURE\_RES 4096}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00011}00011 }
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00012}00012 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00013}00013 \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00014}00014 \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00015}00015 \textcolor{comment}{ * @class CharacterGlyph}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00016}00016 \textcolor{comment}{ * @brief Represents a render glyph, modified for fonts!}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00017}00017 \textcolor{comment}{ */}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00018}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph}{00018}} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph}{CharacterGlyph}}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00019}00019 \{}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{GL}\textcolor{preprocessor}{/}\textcolor{preprocessor}{glew}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{/}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{vector}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00008}\mbox{\hyperlink{_font_8hpp_a7471366f513e5a004a20044135e22912}{00008}} \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define} \textcolor{preprocessor}{FIRST\_PRINTABLE\_CHAR} \textcolor{preprocessor}{(}\textcolor{preprocessor}{(}\textcolor{keywordtype}{char}\textcolor{preprocessor}{)}32\textcolor{preprocessor}{)}}
+\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00009}\mbox{\hyperlink{_font_8hpp_a8afd0c1d1b85426d666cc89d506c4b46}{00009}} \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define} \textcolor{preprocessor}{LAST\_PRINTABLE\_CHAR} \textcolor{preprocessor}{(}\textcolor{preprocessor}{(}\textcolor{keywordtype}{char}\textcolor{preprocessor}{)}126\textcolor{preprocessor}{)}}
+\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00010}\mbox{\hyperlink{_font_8hpp_a0452c495abe98070258839b95ccbb83b}{00010}} \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define} \textcolor{preprocessor}{MAX\_TEXTURE\_RES} 4096}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014 \textcolor{comment}{/**}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * @class CharacterGlyph}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * @brief Represents a render glyph, modified for fonts!}}
+\DoxyCodeLine{00017 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00018}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph}{00018}} \textcolor{keyword}{struct} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph}{CharacterGlyph}}}
+\DoxyCodeLine{00019 \{}
 \DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00020}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_ab82f2c1d291752b4dbee77543af996dc}{00020}}     \textcolor{keywordtype}{char} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_ab82f2c1d291752b4dbee77543af996dc}{character}};}
 \DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00021}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_a94a590488ed2d9a4bc73f2e7e101b9be}{00021}}     glm::vec4 \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_a94a590488ed2d9a4bc73f2e7e101b9be}{uvRect}};}
 \DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00022}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_a3244f4ef797c68136c204efe7623183d}{00022}}     glm::vec2 \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph_a3244f4ef797c68136c204efe7623183d}{size}};}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00023}00023 \};}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00024}00024 \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00025}00025 \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00026}00026 \textcolor{comment}{ * @class Font}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00027}00027 \textcolor{comment}{ * @brief Essentially just a wrapper for the SDL TTF\_Font type.}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00028}00028 \textcolor{comment}{ */}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00029}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{00029}} \textcolor{keyword}{class }\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00030}00030 \{}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00031}00031    \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00032}00032     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a083b5e436d09ef44d39b3a2e61206487}{Font}}();}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00033}00033     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a77ae8fbb5d1840a7bc8bb967a687fe36}{\string~Font}}();}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00034}00034 \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00035}00035 \textcolor{comment}{    /**}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00036}00036 \textcolor{comment}{     * @brief Creates font resources}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00037}00037 \textcolor{comment}{     * @param fontFile The file to load the font from. Should be .ttf}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00038}00038 \textcolor{comment}{     * @param size The size of the font (in points). This is basically just the quality of the font loaded. Has nothing}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00039}00039 \textcolor{comment}{     * to do with rendered size.}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00040}00040 \textcolor{comment}{     */}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00041}00041     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_b_a_r_e2_d_ad4169a65409a67e2c146011c0003479f}{init}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fontFile, \textcolor{keywordtype}{int} size);}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00042}00042 \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00043}00043 \textcolor{comment}{    /**}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00044}00044 \textcolor{comment}{     * @brief Destroys font resources}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00045}00045 \textcolor{comment}{     */}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00046}00046     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a5ebec1e6c68aba76a79e7b30ea11631e}{dispose}}();}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00047}00047 }
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00048}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac8135640334f87ff80701fc1cddb1038}{00048}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac8135640334f87ff80701fc1cddb1038}{getHeight}}()\textcolor{keyword}{ const}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00049}00049 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00050}00050     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a7f3cdd798f24430fca6259d97414c3a9}{m\_height}};}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00051}00051     \}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00052}00052 \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00053}00053 \textcolor{comment}{    /**}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00054}00054 \textcolor{comment}{     * @brief Gets a character glyph. Does no checking to make sure it exists!}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00055}00055 \textcolor{comment}{     * @param index The index of the glyph}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00056}00056 \textcolor{comment}{     * @return A pointer to the glyph.}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00057}00057 \textcolor{comment}{     */}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00058}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_af1cf352bba1b54f7024f6dc370144dbb}{00058}}     \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph}{CharacterGlyph}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_af1cf352bba1b54f7024f6dc370144dbb}{getGlyph}}(\textcolor{keywordtype}{int}\& index)}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00059}00059     \{}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00060}00060     \textcolor{keywordflow}{return} \&(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{m\_characterGlyphs}}[index]);}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00061}00061     \}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00062}00062 \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00063}00063 \textcolor{comment}{    /**}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00064}00064 \textcolor{comment}{     * @return The GL-\/provided texture ID}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00065}00065 \textcolor{comment}{     */}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00066}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_af0da9fe90a82372d03e6dac9adaac893}{00066}}     GLuint \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_af0da9fe90a82372d03e6dac9adaac893}{getTextureID}}()\textcolor{keyword}{ const}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00067}00067 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00068}00068     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a711c64bbd38dba2c18c0c4f31d3b5a84}{m\_textureID}};}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00069}00069     \}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00070}00070 \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00071}00071 \textcolor{comment}{    /**}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00072}00072 \textcolor{comment}{     * @return The number of characters in the font. Generally LAST\_PRINTABLE\_CHAR -\/ FIRST\_PRINTABLE\_CHAR}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00073}00073 \textcolor{comment}{     */}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00074}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a1a1a0a4a564c29ab4c30be03812ea356}{00074}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a1a1a0a4a564c29ab4c30be03812ea356}{getCharacters}}()\textcolor{keyword}{ const}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00075}00075 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00076}00076     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a0773a0f7d2124cd0d979dc1ac1c4aebb}{m\_regLength}};}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00077}00077     \}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00078}00078 \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00079}00079 \textcolor{comment}{    /**}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00080}00080 \textcolor{comment}{     * @brief Measures the dimensions of some given text}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00081}00081 \textcolor{comment}{     * @param s The text to be measured}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00082}00082 \textcolor{comment}{     * @return The dimensions of the text}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00083}00083 \textcolor{comment}{     */}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00084}00084     glm::vec2 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a5c5c74ff08240dbe995e68497d832968}{measure}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* s);}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00085}00085 }
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00086}00086    \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00087}00087     \textcolor{keyword}{static} std::vector<int>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_aada53b87a23f58cd9947a2697c819193}{createRows}}(glm::ivec4* rectangles,}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00088}00088                                         \textcolor{keywordtype}{int} rectanglesLength,}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00089}00089                                         \textcolor{keywordtype}{int} rows,}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00090}00090                                         \textcolor{keywordtype}{int} padding,}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00091}00091                                         \textcolor{keywordtype}{int}\& width);}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00092}00092 }
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00093}00093     \textcolor{comment}{// The texture which holds the font graphics}}
+\DoxyCodeLine{00023 \};}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025 \textcolor{comment}{/**}}
+\DoxyCodeLine{00026 \textcolor{comment}{ * @class Font}}
+\DoxyCodeLine{00027 \textcolor{comment}{ * @brief Essentially just a wrapper for the SDL TTF\_Font type.}}
+\DoxyCodeLine{00028 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00029}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{00029}} \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font}{Font}}}
+\DoxyCodeLine{00030 \{}
+\DoxyCodeLine{00031    \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a083b5e436d09ef44d39b3a2e61206487}{Font}}();}
+\DoxyCodeLine{00033     \string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a77ae8fbb5d1840a7bc8bb967a687fe36}{Font}}();}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035     \textcolor{comment}{/**}}
+\DoxyCodeLine{00036 \textcolor{comment}{     * @brief Creates font resources}}
+\DoxyCodeLine{00037 \textcolor{comment}{     * @param fontFile The file to load the font from. Should be .ttf}}
+\DoxyCodeLine{00038 \textcolor{comment}{     * @param size The size of the font (in points). This is basically just the quality of the font loaded. Has nothing}}
+\DoxyCodeLine{00039 \textcolor{comment}{     * to do with rendered size.}}
+\DoxyCodeLine{00040 \textcolor{comment}{     */}}
+\DoxyCodeLine{00041     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a4448baad55264df37021c5e24a033b29}{init}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fontFile, \textcolor{keywordtype}{int} size);}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043     \textcolor{comment}{/**}}
+\DoxyCodeLine{00044 \textcolor{comment}{     * @brief Destroys font resources}}
+\DoxyCodeLine{00045 \textcolor{comment}{     */}}
+\DoxyCodeLine{00046     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a5ebec1e6c68aba76a79e7b30ea11631e}{dispose}}();}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00048}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac8135640334f87ff80701fc1cddb1038}{00048}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac8135640334f87ff80701fc1cddb1038}{getHeight}}() \textcolor{keyword}{const}}
+\DoxyCodeLine{00049     \{}
+\DoxyCodeLine{00050     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a7f3cdd798f24430fca6259d97414c3a9}{m\_height}};}
+\DoxyCodeLine{00051     \}}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053     \textcolor{comment}{/**}}
+\DoxyCodeLine{00054 \textcolor{comment}{     * @brief Gets a character glyph. Does no checking to make sure it exists!}}
+\DoxyCodeLine{00055 \textcolor{comment}{     * @param index The index of the glyph}}
+\DoxyCodeLine{00056 \textcolor{comment}{     * @return A pointer to the glyph.}}
+\DoxyCodeLine{00057 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00058}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a8eb602b098bc184ae28a16cb53e7b6cb}{00058}}     \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph}{CharacterGlyph}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a8eb602b098bc184ae28a16cb53e7b6cb}{getGlyph}}(\textcolor{keywordtype}{int}\& index)}
+\DoxyCodeLine{00059     \{}
+\DoxyCodeLine{00060     \textcolor{keywordflow}{return} \&(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{m\_characterGlyphs}}[index]);}
+\DoxyCodeLine{00061     \}}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063     \textcolor{comment}{/**}}
+\DoxyCodeLine{00064 \textcolor{comment}{     * @return The GL-\/provided texture ID}}
+\DoxyCodeLine{00065 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00066}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_af0da9fe90a82372d03e6dac9adaac893}{00066}}     GLuint \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_af0da9fe90a82372d03e6dac9adaac893}{getTextureID}}() \textcolor{keyword}{const}}
+\DoxyCodeLine{00067     \{}
+\DoxyCodeLine{00068     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a711c64bbd38dba2c18c0c4f31d3b5a84}{m\_textureID}};}
+\DoxyCodeLine{00069     \}}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{00071     \textcolor{comment}{/**}}
+\DoxyCodeLine{00072 \textcolor{comment}{     * @return The number of characters in the font. Generally LAST\_PRINTABLE\_CHAR -\/ FIRST\_PRINTABLE\_CHAR}}
+\DoxyCodeLine{00073 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00074}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a1a1a0a4a564c29ab4c30be03812ea356}{00074}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a1a1a0a4a564c29ab4c30be03812ea356}{getCharacters}}() \textcolor{keyword}{const}}
+\DoxyCodeLine{00075     \{}
+\DoxyCodeLine{00076     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a0773a0f7d2124cd0d979dc1ac1c4aebb}{m\_regLength}};}
+\DoxyCodeLine{00077     \}}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079     \textcolor{comment}{/**}}
+\DoxyCodeLine{00080 \textcolor{comment}{     * @brief Measures the dimensions of some given text}}
+\DoxyCodeLine{00081 \textcolor{comment}{     * @param s The text to be measured}}
+\DoxyCodeLine{00082 \textcolor{comment}{     * @return The dimensions of the text}}
+\DoxyCodeLine{00083 \textcolor{comment}{     */}}
+\DoxyCodeLine{00084     glm::vec2 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a5c5c74ff08240dbe995e68497d832968}{measure}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* s);}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086    \textcolor{keyword}{private}:}
+\DoxyCodeLine{00087     \textcolor{keyword}{static} std::vector<\textcolor{keywordtype}{int}>* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_aada53b87a23f58cd9947a2697c819193}{createRows}}(glm::ivec4* rectangles,}
+\DoxyCodeLine{00088                                         \textcolor{keywordtype}{int} rectanglesLength,}
+\DoxyCodeLine{00089                                         \textcolor{keywordtype}{int} rows,}
+\DoxyCodeLine{00090                                         \textcolor{keywordtype}{int} padding,}
+\DoxyCodeLine{00091                                         \textcolor{keywordtype}{int}\& width);}
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00093     \textcolor{comment}{// The texture which holds the font graphics}}
 \DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00094}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a711c64bbd38dba2c18c0c4f31d3b5a84}{00094}}     GLuint \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a711c64bbd38dba2c18c0c4f31d3b5a84}{m\_textureID}} = 0;}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00095}00095 }
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00096}00096     \textcolor{comment}{// The height of the font}}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096     \textcolor{comment}{// The height of the font}}
 \DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00097}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a7f3cdd798f24430fca6259d97414c3a9}{00097}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a7f3cdd798f24430fca6259d97414c3a9}{m\_height}};}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00098}00098 }
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00099}00099     \textcolor{comment}{// The start and length values of the possible characters displayed}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00100}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a0773a0f7d2124cd0d979dc1ac1c4aebb}{00100}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a237b44961f4f490d49c1e0ad0e58f7ab}{m\_regStart}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a0773a0f7d2124cd0d979dc1ac1c4aebb}{m\_regLength}};}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00101}00101 }
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00102}00102     \textcolor{comment}{// The rendering glyphs (for ease of use in the FontRenderer)}}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00103}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{00103}}     \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph}{CharacterGlyph}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{m\_characterGlyphs}} = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00104}00104 \};}
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00105}00105 }
-\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00106}00106 \}  \textcolor{comment}{// namespace BARE2D}}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099     \textcolor{comment}{// The start and length values of the possible characters displayed}}
+\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00100}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a237b44961f4f490d49c1e0ad0e58f7ab}{00100}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a237b44961f4f490d49c1e0ad0e58f7ab}{m\_regStart}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_a0773a0f7d2124cd0d979dc1ac1c4aebb}{m\_regLength}};}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{00102     \textcolor{comment}{// The rendering glyphs (for ease of use in the FontRenderer)}}
+\DoxyCodeLine{\Hypertarget{_font_8hpp_source_l00103}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{00103}}     \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_character_glyph}{CharacterGlyph}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_font_ac5e0cff3a6181664186389ed99ac7663}{m\_characterGlyphs}} = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00104 \};}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106 \}  \textcolor{comment}{// namespace BARE2D}}
 
 \end{DoxyCode}

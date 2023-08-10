@@ -1,12 +1,12 @@
 <map id="BARE2D::DebugRenderer" name="BARE2D::DebugRenderer">
-<area shape="rect" id="node1" title=" " alt="" coords="927,162,1101,187"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_renderer.html" title="The renderer class holds some shader program, manages some VBO, some render batch(es),..." alt="" coords="626,87,763,113"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_shader_program.html" title="The ShaderProgram is a GLSL program which combines two shaders &#45; the vertex shader and the fragment s..." alt="" coords="243,87,417,113"/>
-<area shape="rect" id="node4" title=" " alt="" coords="16,7,55,33"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_v_a_o.html" title="A wrapper class for OpenGL&#39;s VAO, as well as its associated VBO and attributes." alt="" coords="275,38,385,63"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,127,65,153"/>
-<area shape="rect" id="node7" title=" " alt="" coords="251,137,409,162"/>
-<area shape="rect" id="node8" title=" " alt="" coords="611,137,779,162"/>
-<area shape="rect" id="node9" title=" " alt="" coords="605,186,784,211"/>
-<area shape="rect" id="node10" title=" " alt="" coords="593,235,796,261"/>
+<area shape="rect" id="node1" title=" " alt="" coords="955,132,1129,159"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_renderer.html" title="The renderer class holds some shader program, manages some VBO, some render batch(es),..." alt="" coords="654,56,791,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="279,5,437,32"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_v_a_o.html" title="A wrapper class for OpenGL&#39;s VAO, as well as its associated VBO and attributes." alt="" coords="303,107,413,133"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,19,97,45"/>
+<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_shader_program.html" title="The ShaderProgram is a GLSL program which combines two shaders &#45; the vertex shader and the fragment s..." alt="" coords="271,56,445,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="21,145,81,172"/>
+<area shape="rect" id="node8" title=" " alt="" coords="621,107,824,133"/>
+<area shape="rect" id="node9" title=" " alt="" coords="639,157,807,184"/>
+<area shape="rect" id="node10" title=" " alt="" coords="633,208,812,235"/>
 </map>

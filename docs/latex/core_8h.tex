@@ -1,21 +1,31 @@
 \hypertarget{core_8h}{}\doxysection{Other\+\_\+\+Libraries/utf8/core.h File Reference}
 \label{core_8h}\index{Other\_Libraries/utf8/core.h@{Other\_Libraries/utf8/core.h}}
 {\ttfamily \#include $<$iterator$>$}\newline
-Include dependency graph for core.\+h\+:
-% FIG 0
-This graph shows which files directly or indirectly include this file\+:
-% FIG 1
+Include dependency graph for core.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{core_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{core_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-namespace \mbox{\hyperlink{namespaceutf8}{utf8}}
+ \mbox{\hyperlink{namespaceutf8}{utf8}}
 \item 
-namespace \mbox{\hyperlink{namespaceutf8_1_1internal}{utf8\+::internal}}
+ \mbox{\hyperlink{namespaceutf8_1_1internal}{utf8\+::internal}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{core_8h_aabde294c732cbacefd7c3ad1c0bd3f8b}{UTF8\+\_\+\+CPP\+\_\+\+INCREASE\+\_\+\+AND\+\_\+\+RETURN\+\_\+\+ON\+\_\+\+ERROR}}(IT,  END)~\{utf\+\_\+error ret = increase\+\_\+safely(IT, END); if (ret != UTF8\+\_\+\+OK) return ret;\}
+\#define \mbox{\hyperlink{core_8h_aabde294c732cbacefd7c3ad1c0bd3f8b}{U\+T\+F8\+\_\+\+C\+P\+P\+\_\+\+I\+N\+C\+R\+E\+A\+S\+E\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+O\+N\+\_\+\+E\+R\+R\+OR}}(IT,  E\+ND)~\{utf\+\_\+error ret = increase\+\_\+safely(IT, E\+ND); if (ret != U\+T\+F8\+\_\+\+OK) return ret;\}
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -30,13 +40,13 @@ typedef unsigned int \mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d8
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392c}{utf8\+::internal\+::utf\+\_\+error}} \{ \newline
-\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392cac4d854b29be6992e66c957cf4b957cca}{utf8\+::internal\+::\+UTF8\+\_\+\+OK}}
-, \mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca86ebad67eed937cd0edbd5a9e5867476}{utf8\+::internal\+::\+NOT\+\_\+\+ENOUGH\+\_\+\+ROOM}}
-, \mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca316f29394dbc76011590cfe20e8ebc21}{utf8\+::internal\+::\+INVALID\+\_\+\+LEAD}}
-, \mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca0a7c549a77d50c327e177fafc3a8f537}{utf8\+::internal\+::\+INCOMPLETE\+\_\+\+SEQUENCE}}
-, \newline
-\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca74987a94eef8d6936f8d6475e6605373}{utf8\+::internal\+::\+OVERLONG\+\_\+\+SEQUENCE}}
-, \mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca8591209ee2d80f2d3728ffb82928c3fa}{utf8\+::internal\+::\+INVALID\+\_\+\+CODE\+\_\+\+POINT}}
+\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392cac4d854b29be6992e66c957cf4b957cca}{utf8\+::internal\+::\+U\+T\+F8\+\_\+\+OK}}, 
+\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca86ebad67eed937cd0edbd5a9e5867476}{utf8\+::internal\+::\+N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+R\+O\+OM}}, 
+\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca316f29394dbc76011590cfe20e8ebc21}{utf8\+::internal\+::\+I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+E\+AD}}, 
+\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca0a7c549a77d50c327e177fafc3a8f537}{utf8\+::internal\+::\+I\+N\+C\+O\+M\+P\+L\+E\+T\+E\+\_\+\+S\+E\+Q\+U\+E\+N\+CE}}, 
+\newline
+\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca74987a94eef8d6936f8d6475e6605373}{utf8\+::internal\+::\+O\+V\+E\+R\+L\+O\+N\+G\+\_\+\+S\+E\+Q\+U\+E\+N\+CE}}, 
+\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca8591209ee2d80f2d3728ffb82928c3fa}{utf8\+::internal\+::\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+D\+E\+\_\+\+P\+O\+I\+NT}}
  \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
@@ -56,7 +66,7 @@ enum \mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392
 \item 
 {\footnotesize template$<$typename u32 $>$ }\\bool \mbox{\hyperlink{namespaceutf8_1_1internal_a97b553137aaeda6e8ca6f8d46f78fd79}{utf8\+::internal\+::is\+\_\+code\+\_\+point\+\_\+valid}} (u32 cp)
 \item 
-{\footnotesize template$<$typename octet\+\_\+iterator $>$ }\\std\+::iterator\+\_\+traits$<$ octet\+\_\+iterator $>$\+::difference\+\_\+type \mbox{\hyperlink{namespaceutf8_1_1internal_adb347cc81d32ebb0fd22d849f7bff5ea}{utf8\+::internal\+::sequence\+\_\+length}} (octet\+\_\+iterator lead\+\_\+it)
+{\footnotesize template$<$typename octet\+\_\+iterator $>$ }\\std\+::iterator\+\_\+traits$<$ octet\+\_\+iterator $>$\+::difference\+\_\+type \mbox{\hyperlink{namespaceutf8_1_1internal_aadbe437cba7bfcc4df2638f633e9787c}{utf8\+::internal\+::sequence\+\_\+length}} (octet\+\_\+iterator lead\+\_\+it)
 \item 
 {\footnotesize template$<$typename octet\+\_\+difference\+\_\+type $>$ }\\bool \mbox{\hyperlink{namespaceutf8_1_1internal_a3160f6f24dff465f64f83cb0e66995c6}{utf8\+::internal\+::is\+\_\+overlong\+\_\+sequence}} (uint32\+\_\+t cp, octet\+\_\+difference\+\_\+type length)
 \item 
@@ -85,22 +95,22 @@ enum \mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-const uint16\+\_\+t \mbox{\hyperlink{namespaceutf8_1_1internal_aca9d84aa3b40e635b086c9ce843cc4a4}{utf8\+::internal\+::\+LEAD\+\_\+\+SURROGATE\+\_\+\+MIN}} = 0xd800u
+const uint16\+\_\+t \mbox{\hyperlink{namespaceutf8_1_1internal_aca9d84aa3b40e635b086c9ce843cc4a4}{utf8\+::internal\+::\+L\+E\+A\+D\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN}} = 0xd800u
 \item 
-const uint16\+\_\+t \mbox{\hyperlink{namespaceutf8_1_1internal_af6038b4ebd9b71391eba050cc29720b8}{utf8\+::internal\+::\+LEAD\+\_\+\+SURROGATE\+\_\+\+MAX}} = 0xdbffu
+const uint16\+\_\+t \mbox{\hyperlink{namespaceutf8_1_1internal_af6038b4ebd9b71391eba050cc29720b8}{utf8\+::internal\+::\+L\+E\+A\+D\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+AX}} = 0xdbffu
 \item 
-const uint16\+\_\+t \mbox{\hyperlink{namespaceutf8_1_1internal_a836088cf3e5e29ac9a89b2ffbd91623e}{utf8\+::internal\+::\+TRAIL\+\_\+\+SURROGATE\+\_\+\+MIN}} = 0xdc00u
+const uint16\+\_\+t \mbox{\hyperlink{namespaceutf8_1_1internal_a836088cf3e5e29ac9a89b2ffbd91623e}{utf8\+::internal\+::\+T\+R\+A\+I\+L\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN}} = 0xdc00u
 \item 
-const uint16\+\_\+t \mbox{\hyperlink{namespaceutf8_1_1internal_a37212482f99986fc6aeaa95a9079c972}{utf8\+::internal\+::\+TRAIL\+\_\+\+SURROGATE\+\_\+\+MAX}} = 0xdfffu
+const uint16\+\_\+t \mbox{\hyperlink{namespaceutf8_1_1internal_a37212482f99986fc6aeaa95a9079c972}{utf8\+::internal\+::\+T\+R\+A\+I\+L\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+AX}} = 0xdfffu
 \item 
-const uint16\+\_\+t \mbox{\hyperlink{namespaceutf8_1_1internal_a47b04bad75525ea9b01ff095c70fa081}{utf8\+::internal\+::\+LEAD\+\_\+\+OFFSET}} = LEAD\+\_\+\+SURROGATE\+\_\+\+MIN -\/ (0x10000 $>$$>$ 10)
+const uint16\+\_\+t \mbox{\hyperlink{namespaceutf8_1_1internal_a47b04bad75525ea9b01ff095c70fa081}{utf8\+::internal\+::\+L\+E\+A\+D\+\_\+\+O\+F\+F\+S\+ET}} = L\+E\+A\+D\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN -\/ (0x10000 $>$$>$ 10)
 \item 
-const uint32\+\_\+t \mbox{\hyperlink{namespaceutf8_1_1internal_a31ff17e602e8e7e15db5ebfb5e93a3fb}{utf8\+::internal\+::\+SURROGATE\+\_\+\+OFFSET}} = 0x10000u -\/ (LEAD\+\_\+\+SURROGATE\+\_\+\+MIN $<$$<$ 10) -\/ TRAIL\+\_\+\+SURROGATE\+\_\+\+MIN
+const uint32\+\_\+t \mbox{\hyperlink{namespaceutf8_1_1internal_a31ff17e602e8e7e15db5ebfb5e93a3fb}{utf8\+::internal\+::\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+O\+F\+F\+S\+ET}} = 0x10000u -\/ (L\+E\+A\+D\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN $<$$<$ 10) -\/ T\+R\+A\+I\+L\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN
 \item 
-const uint32\+\_\+t \mbox{\hyperlink{namespaceutf8_1_1internal_a0a30055cabb6e5cefb5dafc8812cb123}{utf8\+::internal\+::\+CODE\+\_\+\+POINT\+\_\+\+MAX}} = 0x0010ffffu
+const uint32\+\_\+t \mbox{\hyperlink{namespaceutf8_1_1internal_a0a30055cabb6e5cefb5dafc8812cb123}{utf8\+::internal\+::\+C\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+\_\+\+M\+AX}} = 0x0010ffffu
 \item 
 const uint8\+\_\+t \mbox{\hyperlink{namespaceutf8_ac7efcab62f51d362fc741657e60b9b1d}{utf8\+::bom}} \mbox{[}$\,$\mbox{]} = \{0xef, 0xbb, 0xbf\}
-\begin{DoxyCompactList}\small\item\em The library API -\/ functions intended to be called by the users. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The library A\+PI -\/ functions intended to be called by the users. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -108,7 +118,7 @@ const uint8\+\_\+t \mbox{\hyperlink{namespaceutf8_ac7efcab62f51d362fc741657e60b9
 \index{core.h@{core.h}!UTF8\_CPP\_INCREASE\_AND\_RETURN\_ON\_ERROR@{UTF8\_CPP\_INCREASE\_AND\_RETURN\_ON\_ERROR}}
 \index{UTF8\_CPP\_INCREASE\_AND\_RETURN\_ON\_ERROR@{UTF8\_CPP\_INCREASE\_AND\_RETURN\_ON\_ERROR}!core.h@{core.h}}
 \doxysubsubsection{\texorpdfstring{UTF8\_CPP\_INCREASE\_AND\_RETURN\_ON\_ERROR}{UTF8\_CPP\_INCREASE\_AND\_RETURN\_ON\_ERROR}}
-{\footnotesize\ttfamily \#define UTF8\+\_\+\+CPP\+\_\+\+INCREASE\+\_\+\+AND\+\_\+\+RETURN\+\_\+\+ON\+\_\+\+ERROR(\begin{DoxyParamCaption}\item[{}]{IT,  }\item[{}]{END }\end{DoxyParamCaption})~\{utf\+\_\+error ret = increase\+\_\+safely(IT, END); if (ret != UTF8\+\_\+\+OK) return ret;\}}
+{\footnotesize\ttfamily \#define U\+T\+F8\+\_\+\+C\+P\+P\+\_\+\+I\+N\+C\+R\+E\+A\+S\+E\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+O\+N\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{IT,  }\item[{}]{E\+ND }\end{DoxyParamCaption})~\{utf\+\_\+error ret = increase\+\_\+safely(IT, E\+ND); if (ret != U\+T\+F8\+\_\+\+OK) return ret;\}}
 
 
 

@@ -1,51 +1,48 @@
 <map id="BARE2D::App::run" name="BARE2D::App::run">
-<area shape="rect" id="node1" title="Runs the program! Starts the update&#45;draw loop." alt="" coords="5,229,139,255"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_app.html#aa36b0982974fd0ea0854d2c7a02ed455" title="Draws the current screen, based on that screen&#39;s drawing protocol." alt="" coords="218,29,361,55"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_timer.html#a034a2b3086567486abbbcaaf667266f9" title="To be called at the end of a frame." alt="" coords="200,79,379,104"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_timer.html#a4a2cfd6c8f2b4147f574f7c22247e9e8" title=" " alt="" coords="188,128,391,153"/>
-<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_app.html#a545e74578c9321aa800aa1673b8dc80e" title="Initializes the applet and engine. Creates a window, held within this App. Only for internal use." alt="" coords="716,169,848,195"/>
-<area shape="rect" id="node15" href="$namespace_b_a_r_e2_d.html#a2e37a4d16611398b81332bb834395984" title="Initializes the GL Debug Message Callback function, and enables debug output straight from OpenGL." alt="" coords="191,229,388,255"/>
-<area shape="rect" id="node20" href="$class_b_a_r_e2_d_1_1_timer.html#a20ecce866aa0f272c630def64298cee9" title="IntegrateFrame gives an indication of whether we should be updatign again with dt or if we should exi..." alt="" coords="202,279,377,319"/>
-<area shape="rect" id="node21" href="$class_b_a_r_e2_d_1_1_timer.html#a7cc8c03901700b14cfec0c336645ae13" title="To be called at the start of a frame." alt="" coords="197,344,381,369"/>
-<area shape="rect" id="node22" href="$class_b_a_r_e2_d_1_1_window.html#ad291c1daf4c2c0a550daecb7821f5084" title="Swaps the buffer of the SDL window &#45; used to draw to one while the other displays,..." alt="" coords="187,393,392,419"/>
-<area shape="rect" id="node23" href="$class_b_a_r_e2_d_1_1_app.html#ae0fb15b02f63b3b737041135b968ac55" title="Updates input, output, etc. Only for internal use." alt="" coords="212,443,367,468"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_window.html#adce1ecfb27ebd91fd455d1e04f855496" title="Returns the height of the window." alt="" coords="440,5,635,31"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_window.html#ae0055549c7e1f9b1e16e71b1cb17ac54" title="Returns the width of the window." alt="" coords="442,55,633,80"/>
-<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_window.html#a02b16c4a920ed63e5bbd4e219f5d1155" title="This is a graphical window. It holds information about the GL context, as well as the SDL window cont..." alt="" coords="943,119,1118,144"/>
-<area shape="rect" id="node9" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="1215,195,1388,220"/>
-<area shape="rect" id="node13" href="$namespace_b_a_r_e2_d.html#ad4169a65409a67e2c146011c0003479f" title="Inits the required systems used by BARE2D." alt="" coords="980,220,1081,245"/>
-<area shape="rect" id="node14" href="$class_b_a_r_e2_d_1_1_timer.html#ae9153aaa0e1a26a32be36dbee2c1d395" title="Sets the maximum value of dt. Naturally, there is no minimum. This doesn&#39;t take away from accuracy...." alt="" coords="929,54,1132,94"/>
-<area shape="rect" id="node10" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="1471,171,1631,196"/>
-<area shape="rect" id="node12" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="1479,220,1623,245"/>
-<area shape="rect" id="node11" href="$namespace_b_a_r_e2_d.html#a7951c5decc1f7edc3c4f78ed2f579c85" title="Returns the string representing/explaining the error that occurred." alt="" coords="1691,196,1845,221"/>
-<area shape="rect" id="node16" href="$_b_a_r_e_errors_8cpp.html#a76259e93488aa188c59d8b8a80517f74" title=" " alt="" coords="474,249,601,275"/>
-<area shape="rect" id="node17" href="$class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec" title=" " alt="" coords="683,249,881,275"/>
-<area shape="rect" id="node19" href="$class_b_a_r_e2_d_1_1_logger.html#a76c97e021ee75d17defbc794f68a965b" title="Logs a message to a file and the terminal." alt="" coords="708,299,856,324"/>
-<area shape="rect" id="node18" href="$class_b_a_r_e2_d_1_1_logger.html#a731b4fafcc2878fe66360b1c9c0febdc" title=" " alt="" coords="945,269,1116,295"/>
-<area shape="rect" id="node24" href="$class_b_a_r_e2_d_1_1_app.html#a1e4549ad082fd4afee1503611fb65ad1" title="Calls the screen&#39;s exit function, and then cleans this class up for destruction." alt="" coords="951,380,1110,405"/>
-<area shape="rect" id="node25" href="$class_b_a_r_e2_d_1_1_app.html#a88670d45389ef8ac5211227debf322e2" title="Updates any input, and throws it down the pipeline!" alt="" coords="446,565,629,591"/>
-<area shape="rect" id="node26" href="$class_b_a_r_e2_d_1_1_app.html#af9894f9e43d2620a21db76752fdb7fc4" title="Polls inputs from SDL and updates the inputmanager as appropriate." alt="" coords="687,565,877,591"/>
-<area shape="rect" id="node49" href="$class_b_a_r_e2_d_1_1_input_manager.html#aeb65fb759f479815950177c2fcdd7433" title="Updates the inputmanager. Should be called every frame." alt="" coords="701,615,863,655"/>
-<area shape="rect" id="node27" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aecad6d159917b2821f9fcb4429adccea" title=" " alt="" coords="945,814,1117,854"/>
-<area shape="rect" id="node28" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ab3f339793671b90bb449bf17a9d953ca" title=" " alt="" coords="945,430,1117,470"/>
-<area shape="rect" id="node30" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a770264d8c510bbfe0585abe493011ed7" title="Handles and propagates input." alt="" coords="945,494,1117,534"/>
-<area shape="rect" id="node45" href="$class_b_a_r_e2_d_1_1_input_manager.html#a3a1cea0b15ba38865bbf446e2ef3fc1d" title="Sets a key as &#39;pressed&#39;." alt="" coords="949,558,1112,598"/>
-<area shape="rect" id="node46" href="$class_b_a_r_e2_d_1_1_input_manager.html#a235d3c2a87ddf27e8544a0bafc3000a0" title="Sets a key as &#39;released&#39;." alt="" coords="949,622,1112,662"/>
-<area shape="rect" id="node47" href="$class_b_a_r_e2_d_1_1_input_manager.html#a3d72db48544d6a6d347af02889e7e1d6" title="Sets the mouse position to (x,y)" alt="" coords="949,686,1112,726"/>
-<area shape="rect" id="node48" href="$class_b_a_r_e2_d_1_1_input_manager.html#ab8ca096f8108649a0e5b9be5e370e36c" title="Sets the &quot;position&quot; of the scrollwheel &#45; essentially, how much it has moved since the last frame." alt="" coords="930,750,1131,790"/>
-<area shape="rect" id="node29" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ade528b2e05e0562fd5ecda850a49ec14" title=" " alt="" coords="1215,409,1387,449"/>
-<area shape="rect" id="node31" href="$namespace_b_a_r_e2_d.html#add368291490f34b060048b5cbb5245f9" title=" " alt="" coords="1180,572,1423,597"/>
-<area shape="rect" id="node32" href="$namespace_b_a_r_e2_d.html#a4308f8684a05ffbf8ef36cd49541765b" title=" " alt="" coords="1195,473,1408,499"/>
-<area shape="rect" id="node33" href="$namespaceutf8.html#a8020ed399788dca779663adf061ed718" title=" " alt="" coords="1252,523,1351,548"/>
-<area shape="rect" id="node34" href="$namespaceutf8.html#afc093dfde66a6f52cb4a5caefe0e580d" title=" " alt="" coords="1512,523,1589,548"/>
-<area shape="rect" id="node35" href="$namespaceutf8_1_1internal.html#abe95547575fcc81911e381df03f8ebfe" title=" " alt="" coords="1679,523,1857,548"/>
-<area shape="rect" id="node36" href="$namespaceutf8_1_1internal.html#a6e5df73716136aec55e8fcf3309038b6" title="get_sequence_x functions decode utf&#45;8 sequences of the length x" alt="" coords="1925,451,2045,491"/>
-<area shape="rect" id="node38" href="$namespaceutf8_1_1internal.html#a9d641b9546be985f9f0fd4955ac42a24" title=" " alt="" coords="1925,515,2045,555"/>
-<area shape="rect" id="node39" href="$namespaceutf8_1_1internal.html#ac1809a1fb3fa6983d64a0d3a39646008" title=" " alt="" coords="1925,579,2045,619"/>
-<area shape="rect" id="node40" href="$namespaceutf8_1_1internal.html#ad1958e7c6746ba6b1fbb0d81b88b346c" title=" " alt="" coords="1925,323,2045,363"/>
-<area shape="rect" id="node41" href="$namespaceutf8_1_1internal.html#a97b553137aaeda6e8ca6f8d46f78fd79" title=" " alt="" coords="1921,707,2048,747"/>
-<area shape="rect" id="node43" href="$namespaceutf8_1_1internal.html#a3160f6f24dff465f64f83cb0e66995c6" title=" " alt="" coords="1914,643,2055,683"/>
-<area shape="rect" id="node44" href="$namespaceutf8_1_1internal.html#adb347cc81d32ebb0fd22d849f7bff5ea" title=" " alt="" coords="1905,387,2064,427"/>
-<area shape="rect" id="node37" href="$namespaceutf8_1_1internal.html#adf6e0469e279b9562aa461b4c3c1e7e4" title=" " alt="" coords="2112,459,2253,484"/>
-<area shape="rect" id="node42" href="$namespaceutf8_1_1internal.html#a31a185a6bc8b9bf454191a8a95a93595" title=" " alt="" coords="2127,707,2239,747"/>
+<area shape="rect" id="node1" title="Runs the program! Starts the update&#45;draw loop." alt="" coords="5,687,139,713"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_app.html#aa36b0982974fd0ea0854d2c7a02ed455" title="Draws the current screen, based on that screen&#39;s drawing protocol." alt="" coords="218,132,361,159"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_screen_list.html#a9fec8c53fa5b6d1bd38fc928ac27aea4" title=" " alt="" coords="468,209,615,250"/>
+<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_timer.html#a034a2b3086567486abbbcaaf667266f9" title="To be called at the end of a frame." alt="" coords="200,661,379,688"/>
+<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_timer.html#a4a2cfd6c8f2b4147f574f7c22247e9e8" title=" " alt="" coords="188,712,391,739"/>
+<area shape="rect" id="node10" href="$class_b_a_r_e2_d_1_1_app.html#a545e74578c9321aa800aa1673b8dc80e" title="Initializes the applet and engine. Creates a window, held within this App. Only for internal use." alt="" coords="223,763,355,789"/>
+<area shape="rect" id="node20" href="$namespace_b_a_r_e2_d.html#a2e37a4d16611398b81332bb834395984" title="Initializes the GL Debug Message Callback function, and enables debug output straight from OpenGL." alt="" coords="191,813,388,840"/>
+<area shape="rect" id="node25" href="$class_b_a_r_e2_d_1_1_timer.html#a20ecce866aa0f272c630def64298cee9" title="IntegrateFrame gives an indication of whether we should be updatign again with dt or if we should exi..." alt="" coords="202,865,377,906"/>
+<area shape="rect" id="node26" href="$class_b_a_r_e2_d_1_1_screen.html#a4c427b38cca9a1fc2cad147e9e2a1a5e" title="This is pretty close to the init function. It is called every time the screen is entered." alt="" coords="711,501,890,528"/>
+<area shape="rect" id="node27" href="$class_b_a_r_e2_d_1_1_screen.html#a34a82dc673746b5feca4debd4d22478b" title="This is close to the destroy function, but is only called when the screen is exited,..." alt="" coords="715,552,886,579"/>
+<area shape="rect" id="node28" href="$class_b_a_r_e2_d_1_1_timer.html#a7cc8c03901700b14cfec0c336645ae13" title="To be called at the start of a frame." alt="" coords="197,931,381,957"/>
+<area shape="rect" id="node29" href="$class_b_a_r_e2_d_1_1_window.html#ad291c1daf4c2c0a550daecb7821f5084" title="Swaps the buffer of the SDL window &#45; used to draw to one while the other displays,..." alt="" coords="187,981,392,1008"/>
+<area shape="rect" id="node30" href="$class_b_a_r_e2_d_1_1_app.html#ae0fb15b02f63b3b737041135b968ac55" title="Updates input, output, etc. Only for internal use." alt="" coords="212,355,367,381"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_screen.html#abd0a8557f5ad544a0cf657b242197ad2" title="Draws anything and everything to the screen!" alt="" coords="461,56,622,83"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_window.html#adce1ecfb27ebd91fd455d1e04f855496" title="Returns the height of the window." alt="" coords="444,107,639,133"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_screen.html#aece272b6c2301f4cbe8a20cff0474c4d" title=" " alt="" coords="450,157,633,184"/>
+<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_window.html#ae0055549c7e1f9b1e16e71b1cb17ac54" title="Returns the width of the window." alt="" coords="446,5,637,32"/>
+<area shape="rect" id="node11" href="$class_b_a_r_e2_d_1_1_window.html#a02b16c4a920ed63e5bbd4e219f5d1155" title="This is a graphical window. It holds information about the GL context, as well as the SDL window cont..." alt="" coords="454,880,629,907"/>
+<area shape="rect" id="node12" href="$namespace_b_a_r_e2_d.html#ad4169a65409a67e2c146011c0003479f" title="Inits the required systems used by BARE2D." alt="" coords="491,931,592,957"/>
+<area shape="rect" id="node13" href="$class_b_a_r_e2_d_1_1_input_manager.html#a5156e6237e45ec8372579fa015751f89" title=" " alt="" coords="460,982,623,1023"/>
+<area shape="rect" id="node14" href="$class_b_a_r_e2_d_1_1_timer.html#ae9153aaa0e1a26a32be36dbee2c1d395" title="Sets the maximum value of dt. Naturally, there is no minimum. This doesn&#39;t take away from accuracy...." alt="" coords="440,662,643,703"/>
+<area shape="rect" id="node15" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="1208,753,1381,780"/>
+<area shape="rect" id="node18" href="$class_b_a_r_e2_d_1_1_timer.html#af894f9cc637fc1df639d6493347200cc" title=" " alt="" coords="462,779,621,805"/>
+<area shape="rect" id="node19" href="$class_b_a_r_e2_d_1_1_window.html#a63f88fdf838aa8bd6cf258b8d2d44018" title=" " alt="" coords="448,829,635,856"/>
+<area shape="rect" id="node16" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="1429,728,1589,755"/>
+<area shape="rect" id="node17" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="1437,779,1581,805"/>
+<area shape="rect" id="node21" href="$_b_a_r_e_errors_8cpp.html#a76259e93488aa188c59d8b8a80517f74" title=" " alt="" coords="478,1048,605,1075"/>
+<area shape="rect" id="node22" href="$class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec" title=" " alt="" coords="701,1048,900,1075"/>
+<area shape="rect" id="node24" href="$class_b_a_r_e2_d_1_1_logger.html#a76c97e021ee75d17defbc794f68a965b" title="Logs a message to a file and the terminal." alt="" coords="727,997,875,1024"/>
+<area shape="rect" id="node23" href="$class_b_a_r_e2_d_1_1_logger.html#a731b4fafcc2878fe66360b1c9c0febdc" title=" " alt="" coords="974,913,1145,940"/>
+<area shape="rect" id="node31" href="$class_b_a_r_e2_d_1_1_app.html#a1e4549ad082fd4afee1503611fb65ad1" title="Calls the screen&#39;s exit function, and then cleans this class up for destruction." alt="" coords="980,195,1139,221"/>
+<area shape="rect" id="node32" href="$class_b_a_r_e2_d_1_1_screen_list.html#ae8047deac7849ebd02b92d8c347715fb" title="Moves to the next screen, updates needed variables. Also, exits old screen and enters new one." alt="" coords="468,377,615,418"/>
+<area shape="rect" id="node34" href="$class_b_a_r_e2_d_1_1_screen_list.html#a3456f5ed539fa4b6d50a38600635e878" title="Moves to the previous screen. Similar to moveToNextScreen, in that it makes sure everything&#39;s good!" alt="" coords="457,494,625,535"/>
+<area shape="rect" id="node35" href="$class_b_a_r_e2_d_1_1_screen.html#aa5bbb3a5fe737eb50d2dc2d27776f53e" title="Updates all necessary things!" alt="" coords="455,443,627,469"/>
+<area shape="rect" id="node36" href="$class_b_a_r_e2_d_1_1_app.html#a88670d45389ef8ac5211227debf322e2" title="Updates any input, and throws it down the pipeline!" alt="" coords="450,325,633,352"/>
+<area shape="rect" id="node33" href="$class_b_a_r_e2_d_1_1_screen.html#a106d7066baf13bedb8e6280839719661" title="Returns the index of the next screen. It is recommended to keep a file, say, ScreenIndices...." alt="" coords="691,435,911,477"/>
+<area shape="rect" id="node37" href="$class_b_a_r_e2_d_1_1_app.html#af9894f9e43d2620a21db76752fdb7fc4" title="Polls inputs from SDL and updates the inputmanager as appropriate." alt="" coords="705,384,896,411"/>
+<area shape="rect" id="node46" href="$class_b_a_r_e2_d_1_1_input_manager.html#aeb65fb759f479815950177c2fcdd7433" title="Updates the inputmanager. Should be called every frame." alt="" coords="719,318,882,359"/>
+<area shape="rect" id="node38" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aecad6d159917b2821f9fcb4429adccea" title=" " alt="" coords="973,377,1145,418"/>
+<area shape="rect" id="node39" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ab3f339793671b90bb449bf17a9d953ca" title=" " alt="" coords="973,442,1145,483"/>
+<area shape="rect" id="node41" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a770264d8c510bbfe0585abe493011ed7" title="Handles and propagates input." alt="" coords="973,507,1145,549"/>
+<area shape="rect" id="node42" href="$class_b_a_r_e2_d_1_1_input_manager.html#a3a1cea0b15ba38865bbf446e2ef3fc1d" title="Sets a key as &#39;pressed&#39;." alt="" coords="978,573,1141,614"/>
+<area shape="rect" id="node43" href="$class_b_a_r_e2_d_1_1_input_manager.html#a235d3c2a87ddf27e8544a0bafc3000a0" title="Sets a key as &#39;released&#39;." alt="" coords="978,638,1141,679"/>
+<area shape="rect" id="node44" href="$class_b_a_r_e2_d_1_1_input_manager.html#a3d72db48544d6a6d347af02889e7e1d6" title="Sets the mouse position to (x,y)" alt="" coords="978,246,1141,287"/>
+<area shape="rect" id="node45" href="$class_b_a_r_e2_d_1_1_input_manager.html#ab8ca096f8108649a0e5b9be5e370e36c" title="Sets the &quot;position&quot; of the scrollwheel &#45; essentially, how much it has moved since the last frame." alt="" coords="959,311,1160,353"/>
+<area shape="rect" id="node40" href="$class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ade528b2e05e0562fd5ecda850a49ec14" title=" " alt="" coords="1209,442,1381,483"/>
 </map>

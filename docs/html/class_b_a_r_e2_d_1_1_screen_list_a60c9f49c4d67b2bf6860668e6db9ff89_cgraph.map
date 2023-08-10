@@ -1,5 +1,5 @@
 <map id="BARE2D::ScreenList::addEntryScreen" name="BARE2D::ScreenList::addEntryScreen">
-<area shape="rect" id="node1" title="Adds a screen, and sets the current screen to this one." alt="" coords="5,5,152,45"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_screen_list.html#a808947b93ae388e0cd66f9b077ae459e" title="Adds a screen to the list of screens, AKA the screen list. Requires non&#45;nullptr. Also,..." alt="" coords="200,5,347,45"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_screen.html#a0d3e860e94de16f6200272b71390272d" title="This is called once, at the start of the program, when the screen is added to the screen list." alt="" coords="395,13,585,38"/>
+<area shape="rect" id="node1" title="Adds a screen, and sets the current screen to this one." alt="" coords="5,5,152,47"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_screen_list.html#a808947b93ae388e0cd66f9b077ae459e" title="Adds a screen to the list of screens, AKA the screen list. Requires non&#45;nullptr. Also,..." alt="" coords="200,5,347,47"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_screen.html#a0d3e860e94de16f6200272b71390272d" title="This is called once, at the start of the program, when the screen is added to the screen list." alt="" coords="395,13,585,39"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="BARE2D::Camera2D" name="BARE2D::Camera2D">
-<area shape="rect" id="node1" title="The basic camera for a 2D world. There are two spaces &#45; the Worldspace and the Viewspace...." alt="" coords="185,211,332,236"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,56,31"/>
-<area shape="rect" id="node3" href="$struct_b_a_r_e2_d_1_1_camera_state.html" title="Holds some basic information that the camera holds in a state." alt="" coords="113,108,274,133"/>
-<area shape="rect" id="node4" title=" " alt="" coords="299,108,349,133"/>
-<area shape="rect" id="node5" title=" " alt="" coords="450,108,497,133"/>
+<area shape="rect" id="node1" title="The basic camera for a 2D world. There are two spaces &#45; the Worldspace and the Viewspace...." alt="" coords="179,213,325,240"/>
+<area shape="rect" id="node2" href="$struct_b_a_r_e2_d_1_1_camera_state.html" title="Holds some basic information that the camera holds in a state." alt="" coords="113,109,274,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="299,109,349,136"/>
+<area shape="rect" id="node5" title=" " alt="" coords="454,109,501,136"/>
 </map>

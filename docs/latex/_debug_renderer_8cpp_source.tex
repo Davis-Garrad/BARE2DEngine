@@ -1,237 +1,237 @@
 \hypertarget{_debug_renderer_8cpp_source}{}\doxysection{Debug\+Renderer.\+cpp}
 \label{_debug_renderer_8cpp_source}\index{Source/DebugRenderer.cpp@{Source/DebugRenderer.cpp}}
-\mbox{\hyperlink{_debug_renderer_8cpp}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_debug_renderer_8hpp}{DebugRenderer.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_g_l_context_manager_8hpp}{GLContextManager.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00004}00004 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00005}\mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{00005}} \textcolor{preprocessor}{\#define CIRCLE\_LINES 90}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00006}00006 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00007}\mbox{\hyperlink{_debug_renderer_8cpp_acd081826074d389a71e56bb22617403f}{00007}} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{_debug_renderer_8cpp_acd081826074d389a71e56bb22617403f}{fragShaderSource}} = \textcolor{stringliteral}{"{}\#version 130\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00008}00008                                \textcolor{stringliteral}{"{}in vec3 fragmentPosition;\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00009}00009                                \textcolor{stringliteral}{"{}in vec4 fragmentColour;\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00010}00010                                \textcolor{stringliteral}{"{}out vec4 colour;\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00011}00011                                \textcolor{stringliteral}{"{}void main() \{\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00012}00012                                \textcolor{stringliteral}{"{}    colour = fragmentColour;\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00013}00013                                \textcolor{stringliteral}{"{}\}\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00014}00014                                \textcolor{stringliteral}{"{}\(\backslash\)0"{}};}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00015}00015 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00016}\mbox{\hyperlink{_debug_renderer_8cpp_a37f0ddb78fae32d986af3d36f519b8a0}{00016}} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{_debug_renderer_8cpp_a37f0ddb78fae32d986af3d36f519b8a0}{vertShaderSource}} = \textcolor{stringliteral}{"{}\#version 130\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00017}00017                                \textcolor{stringliteral}{"{}in vec3 vertexPosition;\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00018}00018                                \textcolor{stringliteral}{"{}in vec4 vertexColour;\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00019}00019                                \textcolor{stringliteral}{"{}out vec3 fragmentPosition;\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00020}00020                                \textcolor{stringliteral}{"{}out vec4 fragmentColour;\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00021}00021                                \textcolor{stringliteral}{"{}void main() \{\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00022}00022                                \textcolor{stringliteral}{"{}    gl\_Position = vec4(vertexPosition.xyz, 1.0);\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00023}00023                                \textcolor{stringliteral}{"{}    fragmentPosition = vertexPosition;\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00024}00024                                \textcolor{stringliteral}{"{}    fragmentColour = vertexColour;\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00025}00025                                \textcolor{stringliteral}{"{}\}\(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00026}00026                                \textcolor{stringliteral}{"{}\(\backslash\)0"{}};}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00027}00027 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00028}00028 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00029}00029 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00030}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{00030}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{Line::construct}}(glm::vec2 p0, glm::vec2 p1, \textcolor{keywordtype}{float}\& thick, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}\& col) \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00031}00031         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{point0}}      = p0;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00032}00032         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a166fcac248b6cd23eebbc93d936c1318}{point1}}      = p1;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00033}00033         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ae0423bf5489488f0f1b2e9d69805d862}{thickness}} = thick;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00034}00034         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{colour}}      = col;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00035}00035     \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00036}00036 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00037}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a9b16ba07258cf092cef0ebdcb690b5c9}{00037}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a9b16ba07258cf092cef0ebdcb690b5c9}{Circle::construct}}(glm::vec2\& p0, \textcolor{keywordtype}{float}\& lineThick, \textcolor{keywordtype}{float}\& radius, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}\& fillCol) \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00038}00038         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a77dac1254ff94f01d771d8c5fea6f6f5}{origin}} = p0;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00039}00039 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00040}00040         \textcolor{keywordtype}{float} lastX = 0;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00041}00041         \textcolor{keywordtype}{float} lastY = radius;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00042}00042 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00043}00043         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 1; i < \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}} + 1.0f; i++) \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00044}00044             \textcolor{keywordtype}{float} radians = 2.0f * M\_PI * ((float)i / ((\textcolor{keywordtype}{float})\mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}} -\/ 2.0f));}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00045}00045             \textcolor{keywordtype}{float} x0      = std::sin(radians) * radius;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00046}00046             \textcolor{keywordtype}{float} y0      = std::cos(radians) * radius;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00047}00047 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00048}00048             \textcolor{comment}{// Construct a new line from last to here}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00049}00049             \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line}{Line}}      l;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00050}00050             glm::vec2 newPoint0 = glm::vec2(lastX, lastY) + p0, newPoint1 = glm::vec2(x0, y0) + p0;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00051}00051             l.\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{construct}}(newPoint0, newPoint1, lineThick, fillCol);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00052}00052             \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_af752c5b361be8e2673fd464f53d5a567}{lines}}.push\_back(l);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00053}00053 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00054}00054             lastX = x0;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00055}00055             lastY = y0;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00056}00056         \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00057}00057     \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00058}00058 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00059}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_aa773e44c74598c24c065aa05a768a141}{00059}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_aa773e44c74598c24c065aa05a768a141}{Rectangle::construct}}(glm::vec4\& posSize, \textcolor{keywordtype}{float}\& lineThick, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}\& fillCol) \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00060}00060         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_ab66ba9f8cb45fce5790a5580a095c5fa}{destRect}} = posSize;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00061}00061 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00062}00062         glm::vec2 pos(posSize.x, posSize.y), size(posSize.z, posSize.w);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00063}00063 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00064}00064         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[0].\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{construct}}(pos, pos + size * glm::vec2(0.0f, 1.0f), lineThick, fillCol);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00065}00065         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[1].\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{construct}}(pos + size * glm::vec2(1.0f, 0.0f), pos + size * glm::vec2(1.0f, 1.0f), lineThick, fillCol);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00066}00066     \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00067}00067 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00068}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a9a86a15ade585d5f698f6d0295fb5eef}{00068}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a9a86a15ade585d5f698f6d0295fb5eef}{DebugRenderer::DebugRenderer}}() \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00069}00069     \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00070}00070 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00071}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_abf00ee6409eb162bfbbf1f5fa7d07a04}{00071}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_abf00ee6409eb162bfbbf1f5fa7d07a04}{DebugRenderer::\string~DebugRenderer}}() \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00072}00072     \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00073}00073 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00074}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_adfa84d84a1525f62c888ecdcdc3e874a}{00074}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_adfa84d84a1525f62c888ecdcdc3e874a}{DebugRenderer::init}}() \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00075}00075         \textcolor{comment}{// Make shaders lol}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00076}00076         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}{compileShadersFromSource}}(\mbox{\hyperlink{_debug_renderer_8cpp_a37f0ddb78fae32d986af3d36f519b8a0}{vertShaderSource}}, \mbox{\hyperlink{_debug_renderer_8cpp_acd081826074d389a71e56bb22617403f}{fragShaderSource}});}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00077}00077 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00078}00078         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a5ff18e853da7784b3085181c5e52e8ac}{link}}(\{\textcolor{stringliteral}{"{}vertexPosition"{}}, \textcolor{stringliteral}{"{}vertexColour"{}}\});}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00079}00079 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00080}00080         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{Renderer::init}}();}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00081}00081 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00082}00082         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}(3, GL\_FLOAT, GL\_FALSE, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, position));}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00083}00083         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}(4,}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00084}00084                                                GL\_UNSIGNED\_BYTE,}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00085}00085                                                GL\_TRUE,}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00086}00086                                                \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}),}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00087}00087                                                (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, colour));}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00088}00088     \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00089}00089 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00090}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afbab4275b06e9a2bc5f52342a9f2f219}{00090}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afbab4275b06e9a2bc5f52342a9f2f219}{DebugRenderer::begin}}() \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00091}00091         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a}{Renderer::begin}}();}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00092}00092 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00093}00093         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}.clear();}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00094}00094         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}.clear();}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00095}00095         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}.clear();}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00096}00096     \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00097}00097 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00098}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a6d21704f5a666d2b2e2095b53a3c0850}{00098}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a6d21704f5a666d2b2e2095b53a3c0850}{DebugRenderer::drawLine}}(glm::vec2 point0, glm::vec2 point1, \textcolor{keywordtype}{float} thickness, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}} colour) \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00099}00099         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}.emplace\_back();}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00100}00100         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}.back().construct(point0, point1, thickness, colour);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00101}00101     \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00102}00102 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00103}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a53387c43bc4270cee538f3969a8e1c67}{00103}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a53387c43bc4270cee538f3969a8e1c67}{DebugRenderer::drawCircle}}(glm::vec2 centre, \textcolor{keywordtype}{float} lineThickness, \textcolor{keywordtype}{float} radius, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}} fillColour) \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00104}00104         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}.emplace\_back();}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00105}00105         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}.back().construct(centre, lineThickness, radius, fillColour);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00106}00106     \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00107}00107 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00108}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a4ca37cab4b67c5d523293fb49753ab6d}{00108}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a4ca37cab4b67c5d523293fb49753ab6d}{DebugRenderer::drawRectangle}}(glm::vec4 destRect, \textcolor{keywordtype}{float} lineThickness, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}} fillColour) \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00109}00109         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}.emplace\_back();}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00110}00110         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}.back().construct(destRect, lineThickness, fillColour);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00111}00111     \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00112}00112 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00113}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a9594be61040e25fc07f914c005d719ed}{00113}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a9594be61040e25fc07f914c005d719ed}{DebugRenderer::createRenderBatches}}() \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00114}00114         \textcolor{comment}{// Create all vertices for each line, circle, and rectangle}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00115}00115         std::vector<Vertex> lineVertices;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00116}00116         lineVertices.resize(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}.size() * 2); \textcolor{comment}{// 2 vertices/line}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00117}00117 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00118}00118         std::vector<Vertex> circleVertices;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00119}00119         circleVertices.resize(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}.size() *}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00120}00120                               \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}}); \textcolor{comment}{// we only actually use one vertex per line, as OpenGL fills in the rest.}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00121}00121 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00122}00122         std::vector<Vertex> rectangleVertices;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00123}00123         rectangleVertices.resize(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}.size() *}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00124}00124                                  4); \textcolor{comment}{// OpenGL uses 4 vertices for a polygon, so that's what we'll do.}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00125}00125 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00126}00126         \textcolor{comment}{// Set up line vertices}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00127}00127         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}.size(); i++) \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00128}00128             \textcolor{comment}{// Set the positions}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00129}00129             lineVertices[2 * i].setPosition(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}[i].point0.x, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}[i].point0.y, 0.0f);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00130}00130             lineVertices[2 * i + 1].setPosition(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}[i].point1.x, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}[i].point1.y, 0.0f);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00131}00131 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00132}00132             \textcolor{comment}{// Set the colours}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00133}00133             lineVertices[2 * i].colour     = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}[i].colour;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00134}00134             lineVertices[2 * i + 1].colour = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}[i].colour;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00135}00135 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00136}00136             \textcolor{comment}{// No UV.}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00137}00137         \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00138}00138 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00139}00139         \textcolor{comment}{// Set up circle vertices}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00140}00140         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}.size(); i++) \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00141}00141             circleVertices[i * \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}}].setPosition(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}[i].origin.x, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}[i].origin.y, 0.0f);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00142}00142             circleVertices[i * \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}}].colour = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}[i].lines[0].colour;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00143}00143             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} vertex = 1; vertex < \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}}; vertex++) \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00144}00144                 \textcolor{comment}{// Set the position}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00145}00145                 circleVertices[vertex + \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}} * i].setPosition(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}[i].lines[vertex].point0.x,}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00146}00146                                                                       \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}[i].lines[vertex].point0.y,}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00147}00147                                                                       0.0f);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00148}00148 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00149}00149                 \textcolor{comment}{// Set the colours}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00150}00150                 circleVertices[vertex + \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}} * i].colour = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}[i].lines[0].colour;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00151}00151 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00152}00152                 \textcolor{comment}{// No UV.}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00153}00153             \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00154}00154         \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00155}00155 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00156}00156         \textcolor{comment}{// Set up the rectangle vertices}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00157}00157         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}.size(); i++) \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00158}00158             \textcolor{comment}{// Set the positions}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00159}00159             rectangleVertices[4 * i].setPosition(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i].lines[0].point0.x,}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00160}00160                                                  \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i].lines[0].point0.y,}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00161}00161                                                  0.0f);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00162}00162             rectangleVertices[4 * i + 1].setPosition(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i].lines[0].point1.x,}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00163}00163                                                      \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i].lines[0].point1.y,}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00164}00164                                                      0.0f);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00165}00165             rectangleVertices[4 * i + 2].setPosition(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i].lines[1].point0.x,}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00166}00166                                                      \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i].lines[1].point0.y,}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00167}00167                                                      0.0f);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00168}00168             rectangleVertices[4 * i + 3].setPosition(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i].lines[1].point1.x,}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00169}00169                                                      \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i].lines[1].point1.y,}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00170}00170                                                      0.0f);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00171}00171 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00172}00172             \textcolor{comment}{// Set the colours}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00173}00173             rectangleVertices[4 * i].colour     = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i].lines[0].colour;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00174}00174             rectangleVertices[4 * i + 1].colour = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i].lines[0].colour;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00175}00175             rectangleVertices[4 * i + 2].colour = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i].lines[0].colour;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00176}00176             rectangleVertices[4 * i + 3].colour = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i].lines[0].colour;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00177}00177 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00178}00178             \textcolor{comment}{// No UV.}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00179}00179         \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00180}00180 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00181}00181         \textcolor{comment}{// Now actually upload the data!}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00182}00182         \textcolor{comment}{// Bind the VBO}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00183}00183         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{bindVBO}}();}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00184}00184 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00185}00185         \textcolor{comment}{// Combine vectors}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00186}00186         std::vector<Vertex> verticesTotal;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00187}00187         verticesTotal.reserve(lineVertices.size() + circleVertices.size() + rectangleVertices.size());}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00188}00188         verticesTotal.insert(verticesTotal.end(), lineVertices.begin(), lineVertices.end());}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00189}00189         verticesTotal.insert(verticesTotal.end(), circleVertices.begin(), circleVertices.end());}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00190}00190         verticesTotal.insert(verticesTotal.end(), rectangleVertices.begin(), rectangleVertices.end());}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00191}00191 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00192}00192         \textcolor{comment}{// upload data}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00193}00193         glBufferData(GL\_ARRAY\_BUFFER, verticesTotal.size() * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), verticesTotal.data(), GL\_DYNAMIC\_DRAW);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00194}00194     \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00195}00195 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00196}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a52b8a86d9eb1e621b49dcf17b88b4cd4}{00196}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a52b8a86d9eb1e621b49dcf17b88b4cd4}{DebugRenderer::render}}() \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00197}00197         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a8687213986c6f5633887609e8169b24e}{use}}();}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00198}00198 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00199}00199         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{GLContextManager::getContext}}()-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a529bb80b0bd7bbf86f10be7c30be514c}{setActiveTexture}}(GL\_TEXTURE0);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00200}00200 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00201}00201         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}{bind}}();}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00202}00202 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00203}00203         GLint offset = 0;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00204}00204 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00205}00205         \textcolor{comment}{// Draw lines}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00206}00206         \textcolor{comment}{// Draw two vertices, then step the data forward two vertices for each line.}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00207}00207         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}.size(); i++) \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00208}00208             glLineWidth(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}[i].thickness);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00209}00209             glDrawArrays(GL\_LINES, offset, (GLsizei)2);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00210}00210             offset += 2;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00211}00211         \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00212}00212 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00213}00213         \textcolor{comment}{// Draw circles}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00214}00214         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}.size(); i++) \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00215}00215             glDrawArrays(GL\_TRIANGLE\_FAN, offset, (GLsizei)\mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}});}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00216}00216             offset += \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}};}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00217}00217         \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00218}00218 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00219}00219         \textcolor{comment}{// Draw rectangles}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00220}00220         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}.size(); i++) \{}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00221}00221             glDrawArrays(GL\_TRIANGLE\_STRIP, offset, (GLsizei)4);}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00222}00222             offset += 4;}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00223}00223         \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00224}00224 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00225}00225         \textcolor{comment}{// Unbind and exit!}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00226}00226         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{unbind}}();}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00227}00227 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00228}00228         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7847844b8a2e5ab0677340b47d180841}{unuse}}();}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00229}00229     \}}
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00230}00230 }
-\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00231}00231 \} \textcolor{comment}{// namespace BARE2D}}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_debug_renderer_8hpp}{"DebugRenderer.hpp"}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_g_l_context_manager_8hpp}{"GLContextManager.hpp"}}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00005}\mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{00005}} \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define} \textcolor{preprocessor}{CIRCLE\_LINES} 90}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00007}\mbox{\hyperlink{_debug_renderer_8cpp_acd081826074d389a71e56bb22617403f}{00007}} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{_debug_renderer_8cpp_acd081826074d389a71e56bb22617403f}{fragShaderSource}} = \textcolor{stringliteral}{"\#version 130\(\backslash\)n"}}
+\DoxyCodeLine{00008                                \textcolor{stringliteral}{"in vec3 fragmentPosition;\(\backslash\)n"}}
+\DoxyCodeLine{00009                                \textcolor{stringliteral}{"in vec4 fragmentColour;\(\backslash\)n"}}
+\DoxyCodeLine{00010                                \textcolor{stringliteral}{"out vec4 colour;\(\backslash\)n"}}
+\DoxyCodeLine{00011                                \textcolor{stringliteral}{"void main() \{\(\backslash\)n"}}
+\DoxyCodeLine{00012                                \textcolor{stringliteral}{"    colour = fragmentColour;\(\backslash\)n"}}
+\DoxyCodeLine{00013                                \textcolor{stringliteral}{"\}\(\backslash\)n"}}
+\DoxyCodeLine{00014                                \textcolor{stringliteral}{"\(\backslash\)0"};}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00016}\mbox{\hyperlink{_debug_renderer_8cpp_a37f0ddb78fae32d986af3d36f519b8a0}{00016}} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{_debug_renderer_8cpp_a37f0ddb78fae32d986af3d36f519b8a0}{vertShaderSource}} = \textcolor{stringliteral}{"\#version 130\(\backslash\)n"}}
+\DoxyCodeLine{00017                                \textcolor{stringliteral}{"in vec3 vertexPosition;\(\backslash\)n"}}
+\DoxyCodeLine{00018                                \textcolor{stringliteral}{"in vec4 vertexColour;\(\backslash\)n"}}
+\DoxyCodeLine{00019                                \textcolor{stringliteral}{"out vec3 fragmentPosition;\(\backslash\)n"}}
+\DoxyCodeLine{00020                                \textcolor{stringliteral}{"out vec4 fragmentColour;\(\backslash\)n"}}
+\DoxyCodeLine{00021                                \textcolor{stringliteral}{"void main() \{\(\backslash\)n"}}
+\DoxyCodeLine{00022                                \textcolor{stringliteral}{"    gl\_Position = vec4(vertexPosition.xyz, 1.0);\(\backslash\)n"}}
+\DoxyCodeLine{00023                                \textcolor{stringliteral}{"    fragmentPosition = vertexPosition;\(\backslash\)n"}}
+\DoxyCodeLine{00024                                \textcolor{stringliteral}{"    fragmentColour = vertexColour;\(\backslash\)n"}}
+\DoxyCodeLine{00025                                \textcolor{stringliteral}{"\}\(\backslash\)n"}}
+\DoxyCodeLine{00026                                \textcolor{stringliteral}{"\(\backslash\)0"};}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00030}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{00030}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line}{Line}}::\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{construct}}(glm::vec2 p0, glm::vec2 p1, \textcolor{keywordtype}{float}\& thick, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}\& col) \{}
+\DoxyCodeLine{00031         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{point0}}    = p0;}
+\DoxyCodeLine{00032         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a166fcac248b6cd23eebbc93d936c1318}{point1}}    = p1;}
+\DoxyCodeLine{00033         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ae0423bf5489488f0f1b2e9d69805d862}{thickness}} = thick;}
+\DoxyCodeLine{00034         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{colour}}    = col;}
+\DoxyCodeLine{00035     \}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00037}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a9b16ba07258cf092cef0ebdcb690b5c9}{00037}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle}{Circle}}::\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a9b16ba07258cf092cef0ebdcb690b5c9}{construct}}(glm::vec2\& p0, \textcolor{keywordtype}{float}\& lineThick, \textcolor{keywordtype}{float}\& radius, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}\& fillCol) \{}
+\DoxyCodeLine{00038         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a77dac1254ff94f01d771d8c5fea6f6f5}{origin}} = p0;}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040         \textcolor{keywordtype}{float} lastX = 0;}
+\DoxyCodeLine{00041         \textcolor{keywordtype}{float} lastY = radius;}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 1; i < \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}} + 1.0f; i++) \{}
+\DoxyCodeLine{00044             \textcolor{keywordtype}{float} radians = 2.0f * M\_PI * ((\textcolor{keywordtype}{float})i / ((\textcolor{keywordtype}{float})\mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}} -\/ 2.0f));}
+\DoxyCodeLine{00045             \textcolor{keywordtype}{float} x0      = std::sin(radians) * radius;}
+\DoxyCodeLine{00046             \textcolor{keywordtype}{float} y0      = std::cos(radians) * radius;}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048             \textcolor{comment}{// Construct a new line from last to here}}
+\DoxyCodeLine{00049             \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line}{Line}}      l;}
+\DoxyCodeLine{00050             glm::vec2 newPoint0 = glm::vec2(lastX, lastY) + p0, newPoint1 = glm::vec2(x0, y0) + p0;}
+\DoxyCodeLine{00051             l\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{construct}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{(}}newPoint0\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{,}} newPoint1\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{,}} lineThick\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{,}} fillCol\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{)}};}
+\DoxyCodeLine{00052             \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_af752c5b361be8e2673fd464f53d5a567}{lines}}.push\_back(l);}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054             lastX = x0;}
+\DoxyCodeLine{00055             lastY = y0;}
+\DoxyCodeLine{00056         \}}
+\DoxyCodeLine{00057     \}}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00059}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_aa773e44c74598c24c065aa05a768a141}{00059}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle}{Rectangle}}::\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_aa773e44c74598c24c065aa05a768a141}{construct}}(glm::vec4\& posSize, \textcolor{keywordtype}{float}\& lineThick, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}\& fillCol) \{}
+\DoxyCodeLine{00060         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_ab66ba9f8cb45fce5790a5580a095c5fa}{destRect}} = posSize;}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062         glm::vec2 pos(posSize.x, posSize.y), size(posSize.z, posSize.w);}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[0]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{construct}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{(}}pos\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{,}} pos + size * glm::vec2(0.0f, 1.0f)\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{,}} lineThick\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{,}} fillCol\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{)}};}
+\DoxyCodeLine{00065         \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[1]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{construct}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{(}}pos + size * glm::vec2(1.0f, 0.0f)\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{,}} pos + size * glm::vec2(1.0f, 1.0f)\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{,}} lineThick\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{,}} fillCol\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{)}};}
+\DoxyCodeLine{00066     \}}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00068}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a9a86a15ade585d5f698f6d0295fb5eef}{00068}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer}{DebugRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a9a86a15ade585d5f698f6d0295fb5eef}{DebugRenderer}}() \{}
+\DoxyCodeLine{00069     \}}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00071}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_abf00ee6409eb162bfbbf1f5fa7d07a04}{00071}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer}{DebugRenderer}}::\string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_abf00ee6409eb162bfbbf1f5fa7d07a04}{DebugRenderer}}() \{}
+\DoxyCodeLine{00072     \}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00074}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_adfa84d84a1525f62c888ecdcdc3e874a}{00074}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer}{DebugRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_adfa84d84a1525f62c888ecdcdc3e874a}{init}}() \{}
+\DoxyCodeLine{00075         \textcolor{comment}{// Make shaders lol}}
+\DoxyCodeLine{00076         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}{compileShadersFromSource}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}{(}}\mbox{\hyperlink{_debug_renderer_8cpp_a37f0ddb78fae32d986af3d36f519b8a0}{vertShaderSource}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}{,}} \mbox{\hyperlink{_debug_renderer_8cpp_acd081826074d389a71e56bb22617403f}{fragShaderSource}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a805e1e0c2b0ecd5d9625deed62d45c1c}{)}};}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a5ff18e853da7784b3085181c5e52e8ac}{link}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a5ff18e853da7784b3085181c5e52e8ac}{(}}\{\textcolor{stringliteral}{"vertexPosition"}, \textcolor{stringliteral}{"vertexColour"}\}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a5ff18e853da7784b3085181c5e52e8ac}{)}};}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer}{Renderer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{init}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{)}};}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{(}}3\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} GL\_FLOAT\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} GL\_FALSE\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}})\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a46e6fc6c1a765771603aa8be0d595987}{position}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}};}
+\DoxyCodeLine{00083         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{(}}4\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}}}
+\DoxyCodeLine{00084                                                GL\_UNSIGNED\_BYTE\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}}}
+\DoxyCodeLine{00085                                                GL\_TRUE\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}}}
+\DoxyCodeLine{00086                                                \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}})\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}}}
+\DoxyCodeLine{00087                                                (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}};}
+\DoxyCodeLine{00088     \}}
+\DoxyCodeLine{00089 }
+\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00090}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afbab4275b06e9a2bc5f52342a9f2f219}{00090}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer}{DebugRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afbab4275b06e9a2bc5f52342a9f2f219}{begin}}() \{}
+\DoxyCodeLine{00091         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer}{Renderer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a}{begin}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a7b894142f30465231e74903f366cd70a}{)}};}
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00093         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}.clear();}
+\DoxyCodeLine{00094         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}.clear();}
+\DoxyCodeLine{00095         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}.clear();}
+\DoxyCodeLine{00096     \}}
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00098}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a6d21704f5a666d2b2e2095b53a3c0850}{00098}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer}{DebugRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a6d21704f5a666d2b2e2095b53a3c0850}{drawLine}}(glm::vec2 point0, glm::vec2 point1, \textcolor{keywordtype}{float} thickness, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}} colour) \{}
+\DoxyCodeLine{00099         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}.emplace\_back();}
+\DoxyCodeLine{00100         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}.back()\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{construct}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{(}}point0\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{,}} point1\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{,}} thickness\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{,}} colour\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_adec7795f4c307ea1bf78d4e87fd7bc79}{)}};}
+\DoxyCodeLine{00101     \}}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00103}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a53387c43bc4270cee538f3969a8e1c67}{00103}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer}{DebugRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a53387c43bc4270cee538f3969a8e1c67}{drawCircle}}(glm::vec2 centre, \textcolor{keywordtype}{float} lineThickness, \textcolor{keywordtype}{float} radius, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}} fillColour) \{}
+\DoxyCodeLine{00104         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}.emplace\_back();}
+\DoxyCodeLine{00105         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}.back()\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a9b16ba07258cf092cef0ebdcb690b5c9}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a9b16ba07258cf092cef0ebdcb690b5c9}{construct}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a9b16ba07258cf092cef0ebdcb690b5c9}{(}}centre\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a9b16ba07258cf092cef0ebdcb690b5c9}{,}} lineThickness\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a9b16ba07258cf092cef0ebdcb690b5c9}{,}} radius\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a9b16ba07258cf092cef0ebdcb690b5c9}{,}} fillColour\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a9b16ba07258cf092cef0ebdcb690b5c9}{)}};}
+\DoxyCodeLine{00106     \}}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00108}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a4ca37cab4b67c5d523293fb49753ab6d}{00108}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer}{DebugRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a4ca37cab4b67c5d523293fb49753ab6d}{drawRectangle}}(glm::vec4 destRect, \textcolor{keywordtype}{float} lineThickness, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}} fillColour) \{}
+\DoxyCodeLine{00109         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}.emplace\_back();}
+\DoxyCodeLine{00110         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}.back()\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_aa773e44c74598c24c065aa05a768a141}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_aa773e44c74598c24c065aa05a768a141}{construct}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_aa773e44c74598c24c065aa05a768a141}{(}}destRect\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_aa773e44c74598c24c065aa05a768a141}{,}} lineThickness\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_aa773e44c74598c24c065aa05a768a141}{,}} fillColour\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_aa773e44c74598c24c065aa05a768a141}{)}};}
+\DoxyCodeLine{00111     \}}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00113}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a9594be61040e25fc07f914c005d719ed}{00113}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer}{DebugRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a9594be61040e25fc07f914c005d719ed}{createRenderBatches}}() \{}
+\DoxyCodeLine{00114         \textcolor{comment}{// Create all vertices for each line, circle, and rectangle}}
+\DoxyCodeLine{00115         std::vector<\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}> lineVertices;}
+\DoxyCodeLine{00116         lineVertices.resize(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}.size() * 2); \textcolor{comment}{// 2 vertices/line}}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118         std::vector<\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}> circleVertices;}
+\DoxyCodeLine{00119         circleVertices.resize(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}.size() *}
+\DoxyCodeLine{00120                               \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}}); \textcolor{comment}{// we only actually use one vertex per line, as OpenGL fills in the rest.}}
+\DoxyCodeLine{00121 }
+\DoxyCodeLine{00122         std::vector<\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}> rectangleVertices;}
+\DoxyCodeLine{00123         rectangleVertices.resize(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}.size() *}
+\DoxyCodeLine{00124                                  4); \textcolor{comment}{// OpenGL uses 4 vertices for a polygon, so that's what we'll do.}}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{00126         \textcolor{comment}{// Set up line vertices}}
+\DoxyCodeLine{00127         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}.size(); i++) \{}
+\DoxyCodeLine{00128             \textcolor{comment}{// Set the positions}}
+\DoxyCodeLine{00129             lineVertices[2 * i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{point0}}.x\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{point0}}.y\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}} 0.0f\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{)}};}
+\DoxyCodeLine{00130             lineVertices[2 * i + 1]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a166fcac248b6cd23eebbc93d936c1318}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a166fcac248b6cd23eebbc93d936c1318}{point1}}.x\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a166fcac248b6cd23eebbc93d936c1318}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a166fcac248b6cd23eebbc93d936c1318}{point1}}.y\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}} 0.0f\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{)}};}
+\DoxyCodeLine{00131 }
+\DoxyCodeLine{00132             \textcolor{comment}{// Set the colours}}
+\DoxyCodeLine{00133             lineVertices[2 * i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}}     = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{colour}};}
+\DoxyCodeLine{00134             lineVertices[2 * i + 1]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{colour}};}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136             \textcolor{comment}{// No UV.}}
+\DoxyCodeLine{00137         \}}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139         \textcolor{comment}{// Set up circle vertices}}
+\DoxyCodeLine{00140         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}.size(); i++) \{}
+\DoxyCodeLine{00141             circleVertices[i * \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}}]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a77dac1254ff94f01d771d8c5fea6f6f5}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a77dac1254ff94f01d771d8c5fea6f6f5}{origin}}.x\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a77dac1254ff94f01d771d8c5fea6f6f5}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_a77dac1254ff94f01d771d8c5fea6f6f5}{origin}}.y\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}} 0.0f\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{)}};}
+\DoxyCodeLine{00142             circleVertices[i * \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}}]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_af752c5b361be8e2673fd464f53d5a567}{.}}lines[0]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{colour}};}
+\DoxyCodeLine{00143             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} vertex = 1; vertex < \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}}; vertex++) \{}
+\DoxyCodeLine{00144                 \textcolor{comment}{// Set the position}}
+\DoxyCodeLine{00145                 circleVertices[vertex + \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}} * i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_af752c5b361be8e2673fd464f53d5a567}{.}}lines[vertex]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{point0}}.x\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}}}
+\DoxyCodeLine{00146                                                                       \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_af752c5b361be8e2673fd464f53d5a567}{.}}lines[vertex]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{point0}}.y\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}}}
+\DoxyCodeLine{00147                                                                       0.0f\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{)}};}
+\DoxyCodeLine{00148 }
+\DoxyCodeLine{00149                 \textcolor{comment}{// Set the colours}}
+\DoxyCodeLine{00150                 circleVertices[vertex + \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}} * i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_circle_af752c5b361be8e2673fd464f53d5a567}{.}}lines[0]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{colour}};}
+\DoxyCodeLine{00151 }
+\DoxyCodeLine{00152                 \textcolor{comment}{// No UV.}}
+\DoxyCodeLine{00153             \}}
+\DoxyCodeLine{00154         \}}
+\DoxyCodeLine{00155 }
+\DoxyCodeLine{00156         \textcolor{comment}{// Set up the rectangle vertices}}
+\DoxyCodeLine{00157         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}.size(); i++) \{}
+\DoxyCodeLine{00158             \textcolor{comment}{// Set the positions}}
+\DoxyCodeLine{00159             rectangleVertices[4 * i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[0]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{point0}}.x\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}}}
+\DoxyCodeLine{00160                                                  \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[0]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{point0}}.y\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}}}
+\DoxyCodeLine{00161                                                  0.0f\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{)}};}
+\DoxyCodeLine{00162             rectangleVertices[4 * i + 1]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[0]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a166fcac248b6cd23eebbc93d936c1318}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a166fcac248b6cd23eebbc93d936c1318}{point1}}.x\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}}}
+\DoxyCodeLine{00163                                                      \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[0]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a166fcac248b6cd23eebbc93d936c1318}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a166fcac248b6cd23eebbc93d936c1318}{point1}}.y\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}}}
+\DoxyCodeLine{00164                                                      0.0f\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{)}};}
+\DoxyCodeLine{00165             rectangleVertices[4 * i + 2]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[1]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{point0}}.x\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}}}
+\DoxyCodeLine{00166                                                      \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[1]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a1a8742ef5d6d849f02e24863441558b3}{point0}}.y\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}}}
+\DoxyCodeLine{00167                                                      0.0f\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{)}};}
+\DoxyCodeLine{00168             rectangleVertices[4 * i + 3]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{setPosition}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[1]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a166fcac248b6cd23eebbc93d936c1318}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a166fcac248b6cd23eebbc93d936c1318}{point1}}.x\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}}}
+\DoxyCodeLine{00169                                                      \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[1]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a166fcac248b6cd23eebbc93d936c1318}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_a166fcac248b6cd23eebbc93d936c1318}{point1}}.y\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{,}}}
+\DoxyCodeLine{00170                                                      0.0f\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_abc02c06e4c046c1db77747592534a8a2}{)}};}
+\DoxyCodeLine{00171 }
+\DoxyCodeLine{00172             \textcolor{comment}{// Set the colours}}
+\DoxyCodeLine{00173             rectangleVertices[4 * i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}}     = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[0]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{colour}};}
+\DoxyCodeLine{00174             rectangleVertices[4 * i + 1]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[0]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{colour}};}
+\DoxyCodeLine{00175             rectangleVertices[4 * i + 2]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[0]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{colour}};}
+\DoxyCodeLine{00176             rectangleVertices[4 * i + 3]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}} = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_rectangle_a8e2d81842434dbfff17a9e35c16aec44}{lines}}[0]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ace2c7d8eaddf3ab67ad64bb99dc99bcc}{colour}};}
+\DoxyCodeLine{00177 }
+\DoxyCodeLine{00178             \textcolor{comment}{// No UV.}}
+\DoxyCodeLine{00179         \}}
+\DoxyCodeLine{00180 }
+\DoxyCodeLine{00181         \textcolor{comment}{// Now actually upload the data!}}
+\DoxyCodeLine{00182         \textcolor{comment}{// Bind the VBO}}
+\DoxyCodeLine{00183         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{bindVBO}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{)}};}
+\DoxyCodeLine{00184 }
+\DoxyCodeLine{00185         \textcolor{comment}{// Combine vectors}}
+\DoxyCodeLine{00186         std::vector<\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}> verticesTotal;}
+\DoxyCodeLine{00187         verticesTotal.reserve(lineVertices.size() + circleVertices.size() + rectangleVertices.size());}
+\DoxyCodeLine{00188         verticesTotal.insert(verticesTotal.end(), lineVertices.begin(), lineVertices.end());}
+\DoxyCodeLine{00189         verticesTotal.insert(verticesTotal.end(), circleVertices.begin(), circleVertices.end());}
+\DoxyCodeLine{00190         verticesTotal.insert(verticesTotal.end(), rectangleVertices.begin(), rectangleVertices.end());}
+\DoxyCodeLine{00191 }
+\DoxyCodeLine{00192         \textcolor{comment}{// upload data}}
+\DoxyCodeLine{00193         glBufferData(GL\_ARRAY\_BUFFER, verticesTotal.size() * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), verticesTotal.data(), GL\_DYNAMIC\_DRAW);}
+\DoxyCodeLine{00194     \}}
+\DoxyCodeLine{00195 }
+\DoxyCodeLine{\Hypertarget{_debug_renderer_8cpp_source_l00196}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a52b8a86d9eb1e621b49dcf17b88b4cd4}{00196}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer}{DebugRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a52b8a86d9eb1e621b49dcf17b88b4cd4}{render}}() \{}
+\DoxyCodeLine{00197         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a8687213986c6f5633887609e8169b24e}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a8687213986c6f5633887609e8169b24e}{use}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a8687213986c6f5633887609e8169b24e}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a8687213986c6f5633887609e8169b24e}{)}};}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{00199         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager}{GLContextManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{getContext}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a529bb80b0bd7bbf86f10be7c30be514c}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a529bb80b0bd7bbf86f10be7c30be514c}{setActiveTexture}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a529bb80b0bd7bbf86f10be7c30be514c}{(}}GL\_TEXTURE0\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a529bb80b0bd7bbf86f10be7c30be514c}{)}};}
+\DoxyCodeLine{00200 }
+\DoxyCodeLine{00201         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}{bind}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a61c99f69bf5feb2ac95189381a48e638}{)}};}
+\DoxyCodeLine{00202 }
+\DoxyCodeLine{00203         GLint offset = 0;}
+\DoxyCodeLine{00204 }
+\DoxyCodeLine{00205         \textcolor{comment}{// Draw lines}}
+\DoxyCodeLine{00206         \textcolor{comment}{// Draw two vertices, then step the data forward two vertices for each line.}}
+\DoxyCodeLine{00207         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}.size(); i++) \{}
+\DoxyCodeLine{00208             glLineWidth(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_a98ff0fa88d890daa8daa781b84b6edcc}{m\_lines}}[i]\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ae0423bf5489488f0f1b2e9d69805d862}{.}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_line_ae0423bf5489488f0f1b2e9d69805d862}{thickness}});}
+\DoxyCodeLine{00209             glDrawArrays(GL\_LINES, offset, (GLsizei)2);}
+\DoxyCodeLine{00210             offset += 2;}
+\DoxyCodeLine{00211         \}}
+\DoxyCodeLine{00212 }
+\DoxyCodeLine{00213         \textcolor{comment}{// Draw circles}}
+\DoxyCodeLine{00214         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_aeeaadb087efdaf838e445502adf18911}{m\_circles}}.size(); i++) \{}
+\DoxyCodeLine{00215             glDrawArrays(GL\_TRIANGLE\_FAN, offset, (GLsizei)\mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}});}
+\DoxyCodeLine{00216             offset += \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\_LINES}};}
+\DoxyCodeLine{00217         \}}
+\DoxyCodeLine{00218 }
+\DoxyCodeLine{00219         \textcolor{comment}{// Draw rectangles}}
+\DoxyCodeLine{00220         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_debug_renderer_afeb0590597ba4527285d8860787d6c2f}{m\_rectangles}}.size(); i++) \{}
+\DoxyCodeLine{00221             glDrawArrays(GL\_TRIANGLE\_STRIP, offset, (GLsizei)4);}
+\DoxyCodeLine{00222             offset += 4;}
+\DoxyCodeLine{00223         \}}
+\DoxyCodeLine{00224 }
+\DoxyCodeLine{00225         \textcolor{comment}{// Unbind and exit!}}
+\DoxyCodeLine{00226         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{unbind}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a6c224737a43f43dbe7c9e25ecd47d1da}{)}};}
+\DoxyCodeLine{00227 }
+\DoxyCodeLine{00228         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7847844b8a2e5ab0677340b47d180841}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7847844b8a2e5ab0677340b47d180841}{unuse}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7847844b8a2e5ab0677340b47d180841}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a7847844b8a2e5ab0677340b47d180841}{)}};}
+\DoxyCodeLine{00229     \}}
+\DoxyCodeLine{00230 }
+\DoxyCodeLine{00231 \} \textcolor{comment}{// namespace BARE2D}}
 
 \end{DoxyCode}

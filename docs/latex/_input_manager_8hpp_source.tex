@@ -1,102 +1,109 @@
 \hypertarget{_input_manager_8hpp_source}{}\doxysection{Input\+Manager.\+hpp}
 \label{_input_manager_8hpp_source}\index{Source/InputManager.hpp@{Source/InputManager.hpp}}
-\mbox{\hyperlink{_input_manager_8hpp}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00003}00003 \textcolor{preprocessor}{\#include <glm/glm.hpp>}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00004}00004 \textcolor{preprocessor}{\#include <unordered\_map>}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00005}00005 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00006}00006 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00007}00007     \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00008}00008 \textcolor{comment}{    /**}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00009}00009 \textcolor{comment}{     * @class InputManager}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00010}00010 \textcolor{comment}{     * @brief This is the input manager. It does what you expect! Nearly completely copied from GLEngine, the ol' gal.}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00011}00011 \textcolor{comment}{     */}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00012}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{00012}}     \textcolor{keyword}{class }\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00013}00013     \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00014}00014     \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00015}00015         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5156e6237e45ec8372579fa015751f89}{InputManager}}();}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00016}00016         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab0797f47aa7a7f5fbbb427e0cef57196}{\string~InputManager}}();}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00017}00017         \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00018}00018 \textcolor{comment}{        /**}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00019}00019 \textcolor{comment}{         * @brief Updates the inputmanager. Should be called every frame.}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00020}00020 \textcolor{comment}{         */}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00021}00021         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{update}}();}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00022}00022         \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00023}00023 \textcolor{comment}{        /**}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00024}00024 \textcolor{comment}{         * @brief Sets a key as 'pressed'}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00025}00025 \textcolor{comment}{         * @param keyID The id given for a key by SDL}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00026}00026 \textcolor{comment}{         */}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00027}00027         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{pressKey}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID);}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00028}00028         \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00029}00029 \textcolor{comment}{        /**}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00030}00030 \textcolor{comment}{         * @brief Sets a key as 'released'}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00031}00031 \textcolor{comment}{         * @param keyID The id given for a key by SDL}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00032}00032 \textcolor{comment}{         */}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00033}00033         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{releaseKey}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID);}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00034}00034         \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00035}00035 \textcolor{comment}{        /**}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00036}00036 \textcolor{comment}{         * @brief Sets the mouse position to (x,y)}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00037}00037 \textcolor{comment}{         * @param x A float to represent x position}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00038}00038 \textcolor{comment}{         * @param y A float to represent y position}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00039}00039 \textcolor{comment}{         */}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00040}00040         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{setMousePosition}}(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y);}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00041}00041         \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00042}00042 \textcolor{comment}{        /**}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00043}00043 \textcolor{comment}{         * @brief Sets the mouse position to 'position'}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00044}00044 \textcolor{comment}{         * @param position The position to set it to.}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00045}00045 \textcolor{comment}{         */}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00046}00046         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{setMousePosition}}(glm::vec2 position);}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00047}00047         \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00048}00048 \textcolor{comment}{        /**}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00049}00049 \textcolor{comment}{         * @brief Sets the "{}position"{} of the scrollwheel -\/ essentially, how much it has moved since the last frame}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00050}00050 \textcolor{comment}{         * @param position The distance it has moved since last update.}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00051}00051 \textcolor{comment}{         */}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00052}00052         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{setMouseScrollwheelPosition}}(\textcolor{keywordtype}{int} position);}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00053}00053         \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00054}00054 \textcolor{comment}{        /**}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00055}00055 \textcolor{comment}{         * @brief Checks if the key is down at all}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00056}00056 \textcolor{comment}{         * @param keyID The SDL-\/given ID to check against}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00057}00057 \textcolor{comment}{         * @return true if the key is down}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00058}00058 \textcolor{comment}{         */}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00059}00059         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{isKeyDown}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID) \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00060}00060         \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00061}00061 \textcolor{comment}{        /**}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00062}00062 \textcolor{comment}{         * @brief Checks if the key has just been pressed}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00063}00063 \textcolor{comment}{         * @param keyID The SDL-\/given ID to check against}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00064}00064 \textcolor{comment}{         * @return true if the key wasn't down last frame and is this frame. false otherwise}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00065}00065 \textcolor{comment}{         */}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00066}00066         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{isKeyPressed}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID) \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00067}00067         \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00068}00068 \textcolor{comment}{        /**}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00069}00069 \textcolor{comment}{         * @brief Gets the position of the mouse in the window}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00070}00070 \textcolor{comment}{         * @return The position of the mouse in a glm::vec2}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00071}00071 \textcolor{comment}{         */}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00072}00072         glm::vec2 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a492c88230777ab626d6d1778b4ee0e02}{getMousePosition}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00073}00073         \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00074}00074 \textcolor{comment}{        /**}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00075}00075 \textcolor{comment}{         * @brief Gets the position of the mousewheel}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00076}00076 \textcolor{comment}{         * @return How much the mousewheel has moved since last update.}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00077}00077 \textcolor{comment}{         */}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00078}00078         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a62da30eaa80d5d4f8d9fe32690026a94}{getMouseScrollwheelPosition}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00079}00079         }
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00080}00080     \textcolor{keyword}{private}:\textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00081}00081 \textcolor{comment}{        /**}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00082}00082 \textcolor{comment}{         * @brief Checks if the key was down last frame}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00083}00083 \textcolor{comment}{         * @param keyID The SDL-\/given ID to check against}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00084}00084 \textcolor{comment}{         * @return true if the key was down last frame, false otherwise.}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00085}00085 \textcolor{comment}{         */}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00086}00086         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d}{wasKeyDown}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID) \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00087}00087         }
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00088}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}{00088}}         std::unordered\_map<unsigned int, bool> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}{m\_keyMap}};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00089}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a44955d49cb077bc8fa663b6f37d81f}{00089}}         std::unordered\_map<unsigned int, bool> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a44955d49cb077bc8fa663b6f37d81f}{m\_previousKeyMap}};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00090}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a50b1fa5a5611fcbca0438e3b67429acc}{00090}}         glm::vec2 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a50b1fa5a5611fcbca0438e3b67429acc}{m\_mousePosition}};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00091}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a030b08344dbac5337e6d094f39b815ce}{00091}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a030b08344dbac5337e6d094f39b815ce}{m\_mouseScrollwheelPosition}} = 0;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00092}00092         }
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00093}00093     \};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00094}00094 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00095}00095 \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00096}00096 }
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{/}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{unordered\_map}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{comment}{/**}}
+\DoxyCodeLine{00009 \textcolor{comment}{ * @class InputManager}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * @brief This is the input manager. It does what you expect! Nearly completely copied from GLEngine, the ol' gal.}}
+\DoxyCodeLine{00011 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00012}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{00012}} \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}}
+\DoxyCodeLine{00013 \{}
+\DoxyCodeLine{00014   \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5156e6237e45ec8372579fa015751f89}{InputManager}}();}
+\DoxyCodeLine{00016     \string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab0797f47aa7a7f5fbbb427e0cef57196}{InputManager}}();}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018     \textcolor{comment}{/**}}
+\DoxyCodeLine{00019 \textcolor{comment}{     * @brief Updates the inputmanager. Should be called every frame.}}
+\DoxyCodeLine{00020 \textcolor{comment}{     */}}
+\DoxyCodeLine{00021     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{update}}();}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023     \textcolor{comment}{/**}}
+\DoxyCodeLine{00024 \textcolor{comment}{     * @brief Sets a key as 'pressed'}}
+\DoxyCodeLine{00025 \textcolor{comment}{     * @param keyID The id given for a key by SDL}}
+\DoxyCodeLine{00026 \textcolor{comment}{     */}}
+\DoxyCodeLine{00027     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{pressKey}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID);}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029     \textcolor{comment}{/**}}
+\DoxyCodeLine{00030 \textcolor{comment}{     * @brief Sets a key as 'released'}}
+\DoxyCodeLine{00031 \textcolor{comment}{     * @param keyID The id given for a key by SDL}}
+\DoxyCodeLine{00032 \textcolor{comment}{     */}}
+\DoxyCodeLine{00033     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{releaseKey}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID);}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035     \textcolor{comment}{/**}}
+\DoxyCodeLine{00036 \textcolor{comment}{     * @brief Sets the mouse position to (x,y)}}
+\DoxyCodeLine{00037 \textcolor{comment}{     * @param x A float to represent x position}}
+\DoxyCodeLine{00038 \textcolor{comment}{     * @param y A float to represent y position}}
+\DoxyCodeLine{00039 \textcolor{comment}{     */}}
+\DoxyCodeLine{00040     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{setMousePosition}}(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y);}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{00042     \textcolor{comment}{/**}}
+\DoxyCodeLine{00043 \textcolor{comment}{     * @brief Sets the mouse position to 'position'}}
+\DoxyCodeLine{00044 \textcolor{comment}{     * @param position The position to set it to.}}
+\DoxyCodeLine{00045 \textcolor{comment}{     */}}
+\DoxyCodeLine{00046     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a8b091efcd10cffa4040602f083006acb}{setMousePosition}}(glm::vec2 position);}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048     \textcolor{comment}{/**}}
+\DoxyCodeLine{00049 \textcolor{comment}{     * @brief Sets the "position" of the scrollwheel -\/ essentially, how much it has moved since the last frame}}
+\DoxyCodeLine{00050 \textcolor{comment}{     * @param position The distance it has moved since last update.}}
+\DoxyCodeLine{00051 \textcolor{comment}{     */}}
+\DoxyCodeLine{00052     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{setMouseScrollwheelPosition}}(\textcolor{keywordtype}{int} position);}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054     \textcolor{comment}{/**}}
+\DoxyCodeLine{00055 \textcolor{comment}{     * @brief Checks if the key is down at all}}
+\DoxyCodeLine{00056 \textcolor{comment}{     * @param keyID The SDL-\/given ID to check against}}
+\DoxyCodeLine{00057 \textcolor{comment}{     * @return true if the key is down}}
+\DoxyCodeLine{00058 \textcolor{comment}{     */}}
+\DoxyCodeLine{00059     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{isKeyDown}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID) \textcolor{keyword}{const};}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061     \textcolor{comment}{/**}}
+\DoxyCodeLine{00062 \textcolor{comment}{     * @brief Checks if the key has just been pressed}}
+\DoxyCodeLine{00063 \textcolor{comment}{     * @param keyID The SDL-\/given ID to check against}}
+\DoxyCodeLine{00064 \textcolor{comment}{     * @return true if the key wasn't down last frame and is this frame. false otherwise}}
+\DoxyCodeLine{00065 \textcolor{comment}{     */}}
+\DoxyCodeLine{00066     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{isKeyPressed}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID) \textcolor{keyword}{const};}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068     \textcolor{comment}{/**}}
+\DoxyCodeLine{00069 \textcolor{comment}{     * @brief Gets entered character (This just follows the first character that has been pressed this update)}}
+\DoxyCodeLine{00070 \textcolor{comment}{     * @param alpha If true, checks alphabetical characters}}
+\DoxyCodeLine{00071 \textcolor{comment}{     * @param nums If true, checks numbers}}
+\DoxyCodeLine{00072 \textcolor{comment}{     * @param symbols If true, checks all other (readable) symbols}}
+\DoxyCodeLine{00073 \textcolor{comment}{     * @return The character pressed.}}
+\DoxyCodeLine{00074 \textcolor{comment}{     */}}
+\DoxyCodeLine{00075     \textcolor{keywordtype}{char} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aba3e9c456823b83de41816d9c7b7ab30}{getPressedCharacter}}(\textcolor{keywordtype}{bool} alpha = \textcolor{keyword}{true}, \textcolor{keywordtype}{bool} nums = \textcolor{keyword}{true}, \textcolor{keywordtype}{bool} all = \textcolor{keyword}{true}) \textcolor{keyword}{const};}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077     \textcolor{comment}{/**}}
+\DoxyCodeLine{00078 \textcolor{comment}{     * @brief Gets the position of the mouse in the window}}
+\DoxyCodeLine{00079 \textcolor{comment}{     * @return The position of the mouse in a glm::vec2}}
+\DoxyCodeLine{00080 \textcolor{comment}{     */}}
+\DoxyCodeLine{00081     glm::vec2 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a492c88230777ab626d6d1778b4ee0e02}{getMousePosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083     \textcolor{comment}{/**}}
+\DoxyCodeLine{00084 \textcolor{comment}{     * @brief Gets the position of the mousewheel}}
+\DoxyCodeLine{00085 \textcolor{comment}{     * @return How much the mousewheel has moved since last update.}}
+\DoxyCodeLine{00086 \textcolor{comment}{     */}}
+\DoxyCodeLine{00087     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a62da30eaa80d5d4f8d9fe32690026a94}{getMouseScrollwheelPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089   \textcolor{keyword}{private}:}
+\DoxyCodeLine{00090     \textcolor{comment}{/**}}
+\DoxyCodeLine{00091 \textcolor{comment}{     * @brief Checks if the key was down last frame}}
+\DoxyCodeLine{00092 \textcolor{comment}{     * @param keyID The SDL-\/given ID to check against}}
+\DoxyCodeLine{00093 \textcolor{comment}{     * @return true if the key was down last frame, false otherwise.}}
+\DoxyCodeLine{00094 \textcolor{comment}{     */}}
+\DoxyCodeLine{00095     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d}{wasKeyDown}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID) \textcolor{keyword}{const};}
+\DoxyCodeLine{00096 }
+\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00097}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}{00097}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}{unordered\_map}}<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}, \textcolor{keywordtype}{bool}> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}{m\_keyMap}};}
+\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00098}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a44955d49cb077bc8fa663b6f37d81f}{00098}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a44955d49cb077bc8fa663b6f37d81f}{std}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a44955d49cb077bc8fa663b6f37d81f}{unordered\_map}}<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}, \textcolor{keywordtype}{bool}> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a44955d49cb077bc8fa663b6f37d81f}{m\_previousKeyMap}};}
+\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00099}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a50b1fa5a5611fcbca0438e3b67429acc}{00099}}     glm::vec2 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a50b1fa5a5611fcbca0438e3b67429acc}{m\_mousePosition}};}
+\DoxyCodeLine{\Hypertarget{_input_manager_8hpp_source_l00100}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a030b08344dbac5337e6d094f39b815ce}{00100}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a030b08344dbac5337e6d094f39b815ce}{m\_mouseScrollwheelPosition}} = 0;}
+\DoxyCodeLine{00101 \};}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103 \} \textcolor{comment}{// namespace BARE2D}}
 
 \end{DoxyCode}

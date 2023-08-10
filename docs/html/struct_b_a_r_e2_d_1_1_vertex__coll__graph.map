@@ -1,8 +1,8 @@
 <map id="BARE2D::Vertex" name="BARE2D::Vertex">
-<area shape="rect" id="node1" title="Just holds vertex data for convenience." alt="" coords="151,225,273,251"/>
-<area shape="rect" id="node2" href="$struct_b_a_r_e2_d_1_1_position.html" title="Positional data." alt="" coords="5,137,136,163"/>
-<area shape="rect" id="node3" title=" " alt="" coords="106,5,153,31"/>
-<area shape="rect" id="node6" href="$struct_b_a_r_e2_d_1_1_u_v.html" title="Holds two floats which can act as UV sizes or positions." alt="" coords="161,137,263,163"/>
-<area shape="rect" id="node4" href="$struct_b_a_r_e2_d_1_1_colour.html" title="An RGBA 8&#45;bit colour value." alt="" coords="288,137,411,163"/>
-<area shape="rect" id="node5" title=" " alt="" coords="314,5,385,31"/>
+<area shape="rect" id="node1" title="Just holds vertex data for convenience." alt="" coords="151,228,273,255"/>
+<area shape="rect" id="node2" href="$struct_b_a_r_e2_d_1_1_position.html" title="Positional data." alt="" coords="5,139,136,165"/>
+<area shape="rect" id="node3" title=" " alt="" coords="106,5,153,32"/>
+<area shape="rect" id="node6" href="$struct_b_a_r_e2_d_1_1_u_v.html" title="Holds two floats which can act as UV sizes or positions." alt="" coords="161,139,263,165"/>
+<area shape="rect" id="node4" href="$struct_b_a_r_e2_d_1_1_colour.html" title="An RGBA 8&#45;bit colour value." alt="" coords="288,139,411,165"/>
+<area shape="rect" id="node5" title=" " alt="" coords="314,5,385,32"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="BARE2D::BumpyGlyph" name="BARE2D::BumpyGlyph">
-<area shape="rect" id="node1" title="This is a glyph, but with bumpmap (for lighting etc.)" alt="" coords="5,79,164,104"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_glyph.html" title="The glyph represents a renderbatch&#39;s primitive data, which is created from each draw call in the basi..." alt="" coords="25,5,144,31"/>
+<area shape="rect" id="node1" title="This is a glyph, but with bumpmap (for lighting etc.)" alt="" coords="5,80,164,107"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_glyph.html" title="The glyph represents a renderbatch&#39;s primitive data, which is created from each draw call in the basi..." alt="" coords="25,5,144,32"/>
 </map>

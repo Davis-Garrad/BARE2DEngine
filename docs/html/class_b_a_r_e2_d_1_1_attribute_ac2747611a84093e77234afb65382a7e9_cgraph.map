@@ -1,0 +1,6 @@
+<map id="BARE2D::Attribute::setData" name="BARE2D::Attribute::setData">
+<area shape="rect" id="node1" title="Sets the actual value of the data pointer, not the address." alt="" coords="5,23,147,65"/>
+<area shape="rect" id="node2" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="195,31,368,57"/>
+<area shape="rect" id="node3" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="416,5,576,32"/>
+<area shape="rect" id="node4" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="424,56,568,83"/>
+</map>

@@ -1,49 +1,49 @@
 \hypertarget{_basic_renderer_8hpp_source}{}\doxysection{Basic\+Renderer.\+hpp}
 \label{_basic_renderer_8hpp_source}\index{Source/BasicRenderer.hpp@{Source/BasicRenderer.hpp}}
-\mbox{\hyperlink{_basic_renderer_8hpp}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00003}00003 \textcolor{preprocessor}{\#include <glm/glm.hpp>}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00004}00004 \textcolor{preprocessor}{\#include <memory>}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00005}00005 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_renderer_8hpp}{Renderer.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_vertex_8hpp}{Vertex.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_camera2_d_8hpp}{Camera2D.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00009}00009 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00010}00010 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00011}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{00011}}     \textcolor{keyword}{class }\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{BasicRenderer}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer}{Renderer}}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00012}00012     \{}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00013}00013     \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00014}00014         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{BasicRenderer}}(std::string\& fragShader, std::string\& vertShader, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} perspectiveWidth = 2, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} perspectiveHeight = 2);}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00015}00015         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a21b4eba61a2a80b5014aa26eae031ac5}{\string~BasicRenderer}}();}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00016}00016         }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00017}00017         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aa228c647d7fe74772a4736d51fdb7796}{init}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00018}00018         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aaf24fe92216128173a92b9c23dc4dd56}{preRender}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00019}00019         \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00020}00020 \textcolor{comment}{        /**}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00021}00021 \textcolor{comment}{         * @brief Sets the camera to a given pointer. This means that the renderer takes ownership}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00022}00022 \textcolor{comment}{         * @param camera The pointer to the camera.}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00023}00023 \textcolor{comment}{         */}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00024}00024         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_adfd638eb976b59c52ded5930035721ec}{setCamera}}(std::shared\_ptr<Camera2D> camera);}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00025}00025         \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00026}00026 \textcolor{comment}{        /**}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00027}00027 \textcolor{comment}{         * @return Returns the Camera pointer. To be used only to link multiple renderers' cameras.}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00028}00028 \textcolor{comment}{         */}}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00029}00029         std::shared\_ptr<Camera2D> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aed0e10a9a6a2ac938600e68c7c8a4e53}{getCamera}}();}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00030}00030         }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00031}00031         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a2070760479d95e099eab580d6f5b66e4}{draw}}(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, \textcolor{keywordtype}{float} depth, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}} colour = \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}(255, 255, 255, 255), \textcolor{keywordtype}{float} angle = 0.0f, glm::vec2 COR = glm::vec2(0.5f));}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00032}00032     }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00033}00033     \textcolor{keyword}{protected}:}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00034}00034         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a5e1c6ae78270e23c7c8eec7e85fd3d41}{createRenderBatches}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00035}00035         }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00036}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a09092e5ec68ed95fb8a40d72df296979}{00036}}         std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a09092e5ec68ed95fb8a40d72df296979}{m\_fragShader}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_abf614f4d57f348e103d2197fe6262c7b}{m\_vertShader}};}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00037}00037         }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00038}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{00038}}         std::vector<Glyph*> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}};}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00039}00039         }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00040}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{00040}}         std::shared\_ptr<Camera2D> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}};}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00041}00041     \};}
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00042}00042 }
-\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00043}00043 \}}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{/}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{memory}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_renderer_8hpp}{"Renderer.hpp"}}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_vertex_8hpp}{"Vertex.hpp"}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_camera2_d_8hpp}{"Camera2D.hpp"}}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00011}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{00011}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer}{BasicRenderer}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer}{Renderer}}}
+\DoxyCodeLine{00012     \{}
+\DoxyCodeLine{00013     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aad096d241734d1b4e1ea1a2a777ba1a8}{BasicRenderer}}(std::string\& fragShader, std::string\& vertShader, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} perspectiveWidth = 2, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} perspectiveHeight = 2);}
+\DoxyCodeLine{00015         \textcolor{keyword}{virtual} \string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a21b4eba61a2a80b5014aa26eae031ac5}{BasicRenderer}}();}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aa228c647d7fe74772a4736d51fdb7796}{init}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{00018         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aaf24fe92216128173a92b9c23dc4dd56}{preRender}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020         \textcolor{comment}{/**}}
+\DoxyCodeLine{00021 \textcolor{comment}{         * @brief Sets the camera to a given pointer. This means that the renderer takes ownership}}
+\DoxyCodeLine{00022 \textcolor{comment}{         * @param camera The pointer to the camera.}}
+\DoxyCodeLine{00023 \textcolor{comment}{         */}}
+\DoxyCodeLine{00024         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_adfd638eb976b59c52ded5930035721ec}{setCamera}}(std::shared\_ptr<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}}> camera);}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026         \textcolor{comment}{/**}}
+\DoxyCodeLine{00027 \textcolor{comment}{         * @return Returns the Camera pointer. To be used only to link multiple renderers' cameras.}}
+\DoxyCodeLine{00028 \textcolor{comment}{         */}}
+\DoxyCodeLine{00029         std::shared\_ptr<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}}> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aed0e10a9a6a2ac938600e68c7c8a4e53}{getCamera}}();}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a2070760479d95e099eab580d6f5b66e4}{draw}}(glm::vec4 destRect, glm::vec4 uvRect, GLuint texture, \textcolor{keywordtype}{float} depth, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}} colour = \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour_a6d871c5c62b8e189b8ea4f918ae07ef6}{(}}255\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour_a6d871c5c62b8e189b8ea4f918ae07ef6}{,}} 255\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour_a6d871c5c62b8e189b8ea4f918ae07ef6}{,}} 255\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour_a6d871c5c62b8e189b8ea4f918ae07ef6}{,}} 255\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour_a6d871c5c62b8e189b8ea4f918ae07ef6}{)}}, \textcolor{keywordtype}{float} angle = 0.0f, glm::vec2 COR = glm::vec2(0.5f));}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00034         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a5e1c6ae78270e23c7c8eec7e85fd3d41}{createRenderBatches}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00036}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_abf614f4d57f348e103d2197fe6262c7b}{00036}}         std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a09092e5ec68ed95fb8a40d72df296979}{m\_fragShader}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_abf614f4d57f348e103d2197fe6262c7b}{m\_vertShader}};}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00038}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{00038}}         std::vector<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph}{Glyph}}*> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}{m\_glyphs}};}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{\Hypertarget{_basic_renderer_8hpp_source_l00040}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{00040}}         std::shared\_ptr<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}}> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a741e3e451e464391ae3c549ec34866db}{m\_camera}};}
+\DoxyCodeLine{00041     \};}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043 \}}
 
 \end{DoxyCode}

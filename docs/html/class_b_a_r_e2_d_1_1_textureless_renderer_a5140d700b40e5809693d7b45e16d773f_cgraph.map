@@ -1,4 +1,10 @@
 <map id="BARE2D::TexturelessRenderer::preRender" name="BARE2D::TexturelessRenderer::preRender">
-<area shape="rect" id="node1" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="5,5,209,45"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_shader_program.html#adfa74453d9bc2f1100e5d19bb45a5512" title="Similar to setUniform." alt="" coords="257,5,432,45"/>
+<area shape="rect" id="node1" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="5,71,209,112"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_camera2_d.html#a9cefaaedae2a62e92590b9c8b4da35a7" title=" " alt="" coords="257,5,476,47"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_shader_program.html#adfa74453d9bc2f1100e5d19bb45a5512" title="Similar to setUniform." alt="" coords="279,71,454,112"/>
+<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_camera2_d.html#aad8e6c5c18c85f5dc4d0ccd31d356d13" title="Updates the matrix if necessary." alt="" coords="269,137,464,163"/>
+<area shape="rect" id="node4" href="$_b_a_r_e_errors_8cpp.html#ad6c3fb278e5310c3250bab181be717d6" title="PLEASE NOTE THAT IF MINGW BREAKS, THIS IS PROBABLY WHY." alt="" coords="571,53,650,79"/>
+<area shape="rect" id="node5" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="524,103,697,130"/>
+<area shape="rect" id="node6" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="745,78,905,105"/>
+<area shape="rect" id="node7" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="753,129,897,155"/>
 </map>

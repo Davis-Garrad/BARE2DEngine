@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace>
+  <WorkspaceParserPaths/>
+  <BuildMatrix SelectedConfiguration="Release"/>
+  <WorkspaceParserFlags flags="8"/>
   <VirtualFoldersColours/>
+  <WorkspaceParserMacros/>
 </Workspace>

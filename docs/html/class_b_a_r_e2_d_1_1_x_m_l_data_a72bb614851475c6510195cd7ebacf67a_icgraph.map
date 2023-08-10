@@ -1,0 +1,5 @@
+<map id="BARE2D::XMLData::write" name="BARE2D::XMLData::write">
+<area shape="rect" id="node1" title="Writes the entire piece of data to a new node in the XML document." alt="" coords="480,13,655,39"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a64420cd9463430e186035296d982c553" title="Writes a single subcache of data to a single file." alt="" coords="243,5,432,47"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#af9f6c07f0c2cecffd0ffde59174d4621" title="Writes all of the currently cached data to the data&#39;s respective files in a folder at filepath...." alt="" coords="5,5,195,47"/>
+</map>

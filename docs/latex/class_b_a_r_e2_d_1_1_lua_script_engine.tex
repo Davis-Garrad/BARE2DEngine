@@ -1,4 +1,4 @@
-\hypertarget{class_b_a_r_e2_d_1_1_lua_script_engine}{}\doxysection{BARE2D\+::Lua\+Script\+Engine Class Reference}
+\hypertarget{class_b_a_r_e2_d_1_1_lua_script_engine}{}\doxysection{B\+A\+R\+E2D\+::Lua\+Script\+Engine Class Reference}
 \label{class_b_a_r_e2_d_1_1_lua_script_engine}\index{BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}}
 
 
@@ -6,8 +6,13 @@
 
 
 
-Collaboration diagram for BARE2D\+::Lua\+Script\+Engine\+:
-% FIG 0
+Collaboration diagram for B\+A\+R\+E2D\+::Lua\+Script\+Engine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{class_b_a_r_e2_d_1_1_lua_script_engine__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,7 +24,7 @@ void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_afc202ede3bcd76cf0d
 \begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine}{Lua\+Script\+Engine}} -\/ loads basic modules etc. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_ae9539fd6e864b66bcb00299f24f0c8bc}{register\+Module}} (std\+::string filename)
 \begin{DoxyCompactList}\small\item\em Loads and registers (read\+: runs) the module located at the given file. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_ae207fae3de0b49158c4eeede0e41b070}{register\+CFunction}} (lua\+\_\+\+CFunction function, std\+::string name)
+void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_ae207fae3de0b49158c4eeede0e41b070}{register\+C\+Function}} (lua\+\_\+\+C\+Function function, std\+::string name)
 \begin{DoxyCompactList}\small\item\em Adds a Lua C Function. This is a function which can be called from inside a Lua script, and executes C/\+C++ code. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_a428a4f2b3f87f8b90db2880a67ffee31}{update}} ()
 \begin{DoxyCompactList}\small\item\em Processes all scripts from the \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_queue}{Lua\+Script\+Queue}} and updates all running scripts. That\textquotesingle{}s pretty much it! \end{DoxyCompactList}\item 
@@ -28,9 +33,9 @@ lua\+\_\+\+State $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$class T $>$ }\\static void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_abc198447d0b9b0f8bdaf46be9f17a368}{add\+Value\+To\+Registry}} (lua\+\_\+\+State $\ast$L, T $\ast$value, std\+::string key)
+{\footnotesize template$<$class T $>$ }\\static void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_aef31946bb9843c75229281cdcc8a2031}{add\+Value\+To\+Registry}} (lua\+\_\+\+State $\ast$L, T $\ast$value, std\+::string key)
 \begin{DoxyCompactList}\small\item\em Adds a value to the Lua registry -\/ this lets any C/\+C++ code use the value stored in the state (it is stored in the state) \end{DoxyCompactList}\item 
-{\footnotesize template$<$class T $>$ }\\static T $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_a45ecc0f8bd377837728c22f1dca3a1a5}{get\+Value\+From\+Registry}} (lua\+\_\+\+State $\ast$L, std\+::string key)
+{\footnotesize template$<$class T $>$ }\\static T $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_a7c0707d445e3a0e6068593ddff6e1f4c}{get\+Value\+From\+Registry}} (lua\+\_\+\+State $\ast$L, std\+::string key)
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -56,7 +61,7 @@ Definition at line \mbox{\hyperlink{_lua_script_engine_8hpp_source_l00020}{20}} 
 \index{BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}!LuaScriptEngine@{LuaScriptEngine}}
 \index{LuaScriptEngine@{LuaScriptEngine}!BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}}
 \doxysubsubsection{\texorpdfstring{LuaScriptEngine()}{LuaScriptEngine()}}
-{\footnotesize\ttfamily BARE2\+D\+::\+Lua\+Script\+Engine\+::\+Lua\+Script\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+Lua\+Script\+Engine\+::\+Lua\+Script\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -66,7 +71,7 @@ Definition at line \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00012}{12}} 
 \index{BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}!````~LuaScriptEngine@{$\sim$LuaScriptEngine}}
 \index{````~LuaScriptEngine@{$\sim$LuaScriptEngine}!BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}}
 \doxysubsubsection{\texorpdfstring{$\sim$LuaScriptEngine()}{~LuaScriptEngine()}}
-{\footnotesize\ttfamily BARE2\+D\+::\+Lua\+Script\+Engine\+::$\sim$\+Lua\+Script\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+Lua\+Script\+Engine\+::$\sim$\+Lua\+Script\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -75,12 +80,12 @@ Definition at line \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00016}{16}} 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_script_engine_abc198447d0b9b0f8bdaf46be9f17a368}\label{class_b_a_r_e2_d_1_1_lua_script_engine_abc198447d0b9b0f8bdaf46be9f17a368}} 
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_script_engine_aef31946bb9843c75229281cdcc8a2031}\label{class_b_a_r_e2_d_1_1_lua_script_engine_aef31946bb9843c75229281cdcc8a2031}} 
 \index{BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}!addValueToRegistry@{addValueToRegistry}}
 \index{addValueToRegistry@{addValueToRegistry}!BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}}
 \doxysubsubsection{\texorpdfstring{addValueToRegistry()}{addValueToRegistry()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-static void BARE2\+D\+::\+Lua\+Script\+Engine\+::add\+Value\+To\+Registry (\begin{DoxyParamCaption}\item[{lua\+\_\+\+State $\ast$}]{L,  }\item[{T $\ast$}]{value,  }\item[{std\+::string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+void B\+A\+R\+E2\+D\+::\+Lua\+Script\+Engine\+::add\+Value\+To\+Registry (\begin{DoxyParamCaption}\item[{lua\+\_\+\+State $\ast$}]{L,  }\item[{T $\ast$}]{value,  }\item[{std\+::string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -93,11 +98,15 @@ Adds a value to the Lua registry -\/ this lets any C/\+C++ code use the value st
 {\em key} & The key to be used to access the value in the registry. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_lua_script_engine__impl_8tcc_source_l00010}{10}} of file \mbox{\hyperlink{_lua_script_engine__impl_8tcc_source}{Lua\+Script\+Engine\+\_\+impl.\+tcc}}.
+
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_script_engine_a81e4604bf36c490f713d00cd68d4a874}\label{class_b_a_r_e2_d_1_1_lua_script_engine_a81e4604bf36c490f713d00cd68d4a874}} 
 \index{BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}!createLuaContext@{createLuaContext}}
 \index{createLuaContext@{createLuaContext}!BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}}
 \doxysubsubsection{\texorpdfstring{createLuaContext()}{createLuaContext()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper}{Lua\+Script\+Context\+Wrapper}} $\ast$ BARE2\+D\+::\+Lua\+Script\+Engine\+::create\+Lua\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{Lua\+Script}} $\ast$}]{script }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_context_wrapper}{Lua\+Script\+Context\+Wrapper}} $\ast$ B\+A\+R\+E2\+D\+::\+Lua\+Script\+Engine\+::create\+Lua\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{Lua\+Script}} $\ast$}]{script }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -117,21 +126,31 @@ Definition at line \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00082}{82}} 
 
 
 
-References \mbox{\hyperlink{_lua_script_8cpp_source_l00021}{BARE2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::init()}}, and \mbox{\hyperlink{_lua_script_engine_8hpp_source_l00077}{m\+\_\+master\+State}}.
+References \mbox{\hyperlink{_lua_script_8cpp_source_l00021}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::init()}}, \mbox{\hyperlink{_lua_script_8cpp_source_l00015}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::\+Lua\+Script\+Context\+Wrapper()}}, and \mbox{\hyperlink{_lua_script_engine_8hpp_source_l00077}{m\+\_\+master\+State}}.
 
 
 
 Referenced by \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00061}{update()}}.
 
-Here is the call graph for this function\+:
-% FIG 1
-Here is the caller graph for this function\+:
-% FIG 2
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_lua_script_engine_a81e4604bf36c490f713d00cd68d4a874_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_lua_script_engine_a81e4604bf36c490f713d00cd68d4a874_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_script_engine_a3f35a7b4086aa2c2587c133edd0d05c2}\label{class_b_a_r_e2_d_1_1_lua_script_engine_a3f35a7b4086aa2c2587c133edd0d05c2}} 
 \index{BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}!getMasterState@{getMasterState}}
 \index{getMasterState@{getMasterState}!BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}}
 \doxysubsubsection{\texorpdfstring{getMasterState()}{getMasterState()}}
-{\footnotesize\ttfamily lua\+\_\+\+State $\ast$ BARE2\+D\+::\+Lua\+Script\+Engine\+::get\+Master\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily lua\+\_\+\+State $\ast$ B\+A\+R\+E2\+D\+::\+Lua\+Script\+Engine\+::get\+Master\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -145,18 +164,22 @@ Definition at line \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00092}{92}} 
 
 References \mbox{\hyperlink{_lua_script_engine_8hpp_source_l00077}{m\+\_\+master\+State}}.
 
-\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_script_engine_a45ecc0f8bd377837728c22f1dca3a1a5}\label{class_b_a_r_e2_d_1_1_lua_script_engine_a45ecc0f8bd377837728c22f1dca3a1a5}} 
+\mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_script_engine_a7c0707d445e3a0e6068593ddff6e1f4c}\label{class_b_a_r_e2_d_1_1_lua_script_engine_a7c0707d445e3a0e6068593ddff6e1f4c}} 
 \index{BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}!getValueFromRegistry@{getValueFromRegistry}}
 \index{getValueFromRegistry@{getValueFromRegistry}!BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}}
 \doxysubsubsection{\texorpdfstring{getValueFromRegistry()}{getValueFromRegistry()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-static T $\ast$ BARE2\+D\+::\+Lua\+Script\+Engine\+::get\+Value\+From\+Registry (\begin{DoxyParamCaption}\item[{lua\+\_\+\+State $\ast$}]{L,  }\item[{std\+::string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+T $\ast$ B\+A\+R\+E2\+D\+::\+Lua\+Script\+Engine\+::get\+Value\+From\+Registry (\begin{DoxyParamCaption}\item[{lua\+\_\+\+State $\ast$}]{L,  }\item[{std\+::string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_lua_script_engine__impl_8tcc_source_l00020}{20}} of file \mbox{\hyperlink{_lua_script_engine__impl_8tcc_source}{Lua\+Script\+Engine\+\_\+impl.\+tcc}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_script_engine_afc202ede3bcd76cf0d38a5cfa6da2e86}\label{class_b_a_r_e2_d_1_1_lua_script_engine_afc202ede3bcd76cf0d38a5cfa6da2e86}} 
 \index{BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}!init@{init}}
 \index{init@{init}!BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}}
 \doxysubsubsection{\texorpdfstring{init()}{init()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Lua\+Script\+Engine\+::init (\begin{DoxyParamCaption}\item[{std\+::string}]{lua\+Modules\+Path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Lua\+Script\+Engine\+::init (\begin{DoxyParamCaption}\item[{std\+::string}]{lua\+Modules\+Path }\end{DoxyParamCaption})}
 
 
 
@@ -173,15 +196,20 @@ Definition at line \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00021}{21}} 
 
 
 
-References \mbox{\hyperlink{_lua_functions_8cpp_source_l00009}{BARE2\+D\+::\+Lua\+Functions\+::delay()}}, \mbox{\hyperlink{_lua_script_engine_8hpp_source_l00077}{m\+\_\+master\+State}}, \mbox{\hyperlink{_lua_functions_8cpp_source_l00016}{BARE2\+D\+::\+Lua\+Functions\+::print()}}, and \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00050}{register\+CFunction()}}.
+References \mbox{\hyperlink{_lua_functions_8cpp_source_l00009}{B\+A\+R\+E2\+D\+::\+Lua\+Functions\+::delay()}}, \mbox{\hyperlink{_lua_script_engine_8hpp_source_l00077}{m\+\_\+master\+State}}, \mbox{\hyperlink{_lua_functions_8cpp_source_l00016}{B\+A\+R\+E2\+D\+::\+Lua\+Functions\+::print()}}, and \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00050}{register\+C\+Function()}}.
 
-Here is the call graph for this function\+:
-% FIG 3
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_lua_script_engine_afc202ede3bcd76cf0d38a5cfa6da2e86_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_script_engine_ae207fae3de0b49158c4eeede0e41b070}\label{class_b_a_r_e2_d_1_1_lua_script_engine_ae207fae3de0b49158c4eeede0e41b070}} 
 \index{BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}!registerCFunction@{registerCFunction}}
 \index{registerCFunction@{registerCFunction}!BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}}
 \doxysubsubsection{\texorpdfstring{registerCFunction()}{registerCFunction()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Lua\+Script\+Engine\+::register\+CFunction (\begin{DoxyParamCaption}\item[{lua\+\_\+\+CFunction}]{function,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Lua\+Script\+Engine\+::register\+C\+Function (\begin{DoxyParamCaption}\item[{lua\+\_\+\+C\+Function}]{function,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
 
 
 
@@ -189,7 +217,7 @@ Adds a Lua C Function. This is a function which can be called from inside a Lua 
 
 
 \begin{DoxyParams}{Parameters}
-{\em function} & The function which will be called when the Lua script calls the closure. Follows the form of a std\+::function$<$int(lua\+\_\+\+State$\ast$)$>$. The lua\+\_\+\+State pointer provides a handle to the Lua stack (really, the whole state, but the stack is the most important) which allows the C/\+C++ program to recieve parameters and add return values. Must return the number of values the function gives back to Lua. See \href{https://www.lua.org/manual/5.1/manual.html\#lua_CFunction}{\texttt{ https\+://www.\+lua.\+org/manual/5.\+1/manual.\+html\#lua\+\_\+\+CFunction}} \\
+{\em function} & The function which will be called when the Lua script calls the closure. Follows the form of a std\+::function$<$int(lua\+\_\+\+State$\ast$)$>$. The lua\+\_\+\+State pointer provides a handle to the Lua stack (really, the whole state, but the stack is the most important) which allows the C/\+C++ program to recieve parameters and add return values. Must return the number of values the function gives back to Lua. See \href{https://www.lua.org/manual/5.1/manual.html\#lua_CFunction}{\texttt{ https\+://www.\+lua.\+org/manual/5.\+1/manual.\+html\#lua\+\_\+\+C\+Function}} \\
 \hline
 {\em name} & The name by which the Lua code can call the function. \\
 \hline
@@ -206,13 +234,18 @@ References \mbox{\hyperlink{_lua_script_engine_8hpp_source_l00077}{m\+\_\+master
 
 Referenced by \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00021}{init()}}.
 
-Here is the caller graph for this function\+:
-% FIG 4
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_lua_script_engine_ae207fae3de0b49158c4eeede0e41b070_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_script_engine_ae9539fd6e864b66bcb00299f24f0c8bc}\label{class_b_a_r_e2_d_1_1_lua_script_engine_ae9539fd6e864b66bcb00299f24f0c8bc}} 
 \index{BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}!registerModule@{registerModule}}
 \index{registerModule@{registerModule}!BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}}
 \doxysubsubsection{\texorpdfstring{registerModule()}{registerModule()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Lua\+Script\+Engine\+::register\+Module (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Lua\+Script\+Engine\+::register\+Module (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
 
 
 
@@ -229,15 +262,20 @@ Definition at line \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00045}{45}} 
 
 
 
-References \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00190}{BARE2\+D\+::throw\+Error()}}, and \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abcb313a5c9f8965d7b75833af33d16be}{BARE2\+D\+::\+UNINITIALIZED\+\_\+\+FUNCTION}}.
+References \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00190}{B\+A\+R\+E2\+D\+::throw\+Error()}}, and \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15abcb313a5c9f8965d7b75833af33d16be}{B\+A\+R\+E2\+D\+::\+U\+N\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}.
 
-Here is the call graph for this function\+:
-% FIG 5
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_lua_script_engine_ae9539fd6e864b66bcb00299f24f0c8bc_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_lua_script_engine_a428a4f2b3f87f8b90db2880a67ffee31}\label{class_b_a_r_e2_d_1_1_lua_script_engine_a428a4f2b3f87f8b90db2880a67ffee31}} 
 \index{BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}!update@{update}}
 \index{update@{update}!BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Lua\+Script\+Engine\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Lua\+Script\+Engine\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -249,10 +287,15 @@ Definition at line \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00061}{61}} 
 
 
 
-References \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00054}{BARE2\+D\+::\+Lua\+Context\+Manager\+::add\+Context()}}, \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00056}{BARE2\+D\+::\+Lua\+Script\+Queue\+::clear\+Queue()}}, \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00082}{create\+Lua\+Context()}}, \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00021}{BARE2\+D\+::\+Lua\+Context\+Manager\+::get\+Instance()}}, \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00019}{BARE2\+D\+::\+Lua\+Script\+Queue\+::get\+Instance()}}, \mbox{\hyperlink{_lua_script_8cpp_source_l00056}{BARE2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::start()}}, and \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00033}{BARE2\+D\+::\+Lua\+Context\+Manager\+::update()}}.
+References \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00054}{B\+A\+R\+E2\+D\+::\+Lua\+Context\+Manager\+::add\+Context()}}, \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00056}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Queue\+::clear\+Queue()}}, \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00082}{create\+Lua\+Context()}}, \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00021}{B\+A\+R\+E2\+D\+::\+Lua\+Context\+Manager\+::get\+Instance()}}, \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00019}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Queue\+::get\+Instance()}}, \mbox{\hyperlink{_lua_script_queue_8cpp_source_l00051}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Queue\+::get\+Queue()}}, \mbox{\hyperlink{_lua_script_8cpp_source_l00056}{B\+A\+R\+E2\+D\+::\+Lua\+Script\+Context\+Wrapper\+::start()}}, and \mbox{\hyperlink{_lua_context_manager_8cpp_source_l00033}{B\+A\+R\+E2\+D\+::\+Lua\+Context\+Manager\+::update()}}.
 
-Here is the call graph for this function\+:
-% FIG 6
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_lua_script_engine_a428a4f2b3f87f8b90db2880a67ffee31_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Field Documentation}
@@ -260,7 +303,7 @@ Here is the call graph for this function\+:
 \index{BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}!m\_masterState@{m\_masterState}}
 \index{m\_masterState@{m\_masterState}!BARE2D::LuaScriptEngine@{BARE2D::LuaScriptEngine}}
 \doxysubsubsection{\texorpdfstring{m\_masterState}{m\_masterState}}
-{\footnotesize\ttfamily lua\+\_\+\+State$\ast$ BARE2\+D\+::\+Lua\+Script\+Engine\+::m\+\_\+master\+State = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily lua\+\_\+\+State$\ast$ B\+A\+R\+E2\+D\+::\+Lua\+Script\+Engine\+::m\+\_\+master\+State = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -268,11 +311,12 @@ Definition at line \mbox{\hyperlink{_lua_script_engine_8hpp_source_l00077}{77}} 
 
 
 
-Referenced by \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00082}{create\+Lua\+Context()}}, \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00092}{get\+Master\+State()}}, \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00021}{init()}}, and \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00050}{register\+CFunction()}}.
+Referenced by \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00082}{create\+Lua\+Context()}}, \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00092}{get\+Master\+State()}}, \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00021}{init()}}, and \mbox{\hyperlink{_lua_script_engine_8cpp_source_l00050}{register\+C\+Function()}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Source/\mbox{\hyperlink{_lua_script_engine_8hpp}{Lua\+Script\+Engine.\+hpp}}\item 
-Source/\mbox{\hyperlink{_lua_script_engine_8cpp}{Lua\+Script\+Engine.\+cpp}}\end{DoxyCompactItemize}
+Source/\mbox{\hyperlink{_lua_script_engine_8cpp}{Lua\+Script\+Engine.\+cpp}}\item 
+Source/\mbox{\hyperlink{_lua_script_engine__impl_8tcc}{Lua\+Script\+Engine\+\_\+impl.\+tcc}}\end{DoxyCompactItemize}

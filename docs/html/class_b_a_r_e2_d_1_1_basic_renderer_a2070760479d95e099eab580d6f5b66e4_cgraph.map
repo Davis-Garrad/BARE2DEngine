@@ -1,0 +1,8 @@
+<map id="BARE2D::BasicRenderer::draw" name="BARE2D::BasicRenderer::draw">
+<area shape="rect" id="node1" title=" " alt="" coords="5,78,176,119"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_glyph.html#a6f185a8114aa0e31269e28b06fe38d14" title=" " alt="" coords="241,56,401,83"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_camera2_d.html#a040ee7936ee18e8654e258e4013b46dd" title=" " alt="" coords="224,107,417,149"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_glyph.html#a25c195b87f163cad61d36798a164297c" title=" " alt="" coords="468,5,657,32"/>
+<area shape="rect" id="node4" href="$struct_b_a_r_e2_d_1_1_vertex.html#abc02c06e4c046c1db77747592534a8a2" title="Literally just sets the position. Convenient." alt="" coords="465,56,660,83"/>
+<area shape="rect" id="node5" href="$struct_b_a_r_e2_d_1_1_vertex.html#a028b850fa99d561233130a0f227c9036" title="Sets the UV coords/dimensions." alt="" coords="479,107,646,133"/>
+</map>

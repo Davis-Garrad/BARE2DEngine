@@ -1,18 +1,23 @@
 \hypertarget{_debug_renderer_8cpp}{}\doxysection{Source/\+Debug\+Renderer.cpp File Reference}
 \label{_debug_renderer_8cpp}\index{Source/DebugRenderer.cpp@{Source/DebugRenderer.cpp}}
 {\ttfamily \#include \char`\"{}Debug\+Renderer.\+hpp\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}GLContext\+Manager.\+hpp\char`\"{}}\newline
-Include dependency graph for Debug\+Renderer.\+cpp\+:
-% FIG 0
+{\ttfamily \#include \char`\"{}G\+L\+Context\+Manager.\+hpp\char`\"{}}\newline
+Include dependency graph for Debug\+Renderer.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_debug_renderer_8cpp__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-namespace \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}
+ \mbox{\hyperlink{namespace_b_a_r_e2_d}{B\+A\+R\+E2D}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{CIRCLE\+\_\+\+LINES}}~90
+\#define \mbox{\hyperlink{_debug_renderer_8cpp_aeddc7367fe3e758f114390167ee4ee12}{C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+N\+ES}}~90
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -28,7 +33,7 @@ const char $\ast$ \mbox{\hyperlink{_debug_renderer_8cpp_a37f0ddb78fae32d986af3d3
 \index{DebugRenderer.cpp@{DebugRenderer.cpp}!CIRCLE\_LINES@{CIRCLE\_LINES}}
 \index{CIRCLE\_LINES@{CIRCLE\_LINES}!DebugRenderer.cpp@{DebugRenderer.cpp}}
 \doxysubsubsection{\texorpdfstring{CIRCLE\_LINES}{CIRCLE\_LINES}}
-{\footnotesize\ttfamily \#define CIRCLE\+\_\+\+LINES~90}
+{\footnotesize\ttfamily \#define C\+I\+R\+C\+L\+E\+\_\+\+L\+I\+N\+ES~90}
 
 
 
@@ -45,14 +50,14 @@ Definition at line \mbox{\hyperlink{_debug_renderer_8cpp_source_l00005}{5}} of f
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{= \textcolor{stringliteral}{"{}\#version 130\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}in vec3 fragmentPosition;\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}in vec4 fragmentColour;\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}out vec4 colour;\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}void main() \{\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}    colour = fragmentColour;\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}\}\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}\(\backslash\)0"{}}}
+\DoxyCodeLine{= \textcolor{stringliteral}{"\#version 130\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"in vec3 fragmentPosition;\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"in vec4 fragmentColour;\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"out vec4 colour;\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"void main() \{\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"    colour = fragmentColour;\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"\}\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"\(\backslash\)0"}}
 
 \end{DoxyCode}
 
@@ -61,7 +66,7 @@ Definition at line \mbox{\hyperlink{_debug_renderer_8cpp_source_l00007}{7}} of f
 
 
 
-Referenced by \mbox{\hyperlink{_debug_renderer_8cpp_source_l00074}{BARE2\+D\+::\+Debug\+Renderer\+::init()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00022}{BARE2\+D\+::\+Resource\+Manager\+::load\+Shaders()}}, and \mbox{\hyperlink{_resource_manager_8cpp_source_l00031}{BARE2\+D\+::\+Resource\+Manager\+::load\+Shaders\+From\+Source()}}.
+Referenced by \mbox{\hyperlink{_debug_renderer_8cpp_source_l00074}{B\+A\+R\+E2\+D\+::\+Debug\+Renderer\+::init()}}.
 
 \mbox{\Hypertarget{_debug_renderer_8cpp_a37f0ddb78fae32d986af3d36f519b8a0}\label{_debug_renderer_8cpp_a37f0ddb78fae32d986af3d36f519b8a0}} 
 \index{DebugRenderer.cpp@{DebugRenderer.cpp}!vertShaderSource@{vertShaderSource}}
@@ -71,17 +76,17 @@ Referenced by \mbox{\hyperlink{_debug_renderer_8cpp_source_l00074}{BARE2\+D\+::\
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{= \textcolor{stringliteral}{"{}\#version 130\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}in vec3 vertexPosition;\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}in vec4 vertexColour;\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}out vec3 fragmentPosition;\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}out vec4 fragmentColour;\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}void main() \{\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}    gl\_Position = vec4(vertexPosition.xyz, 1.0);\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}    fragmentPosition = vertexPosition;\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}    fragmentColour = vertexColour;\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}\}\(\backslash\)n"{}}}
-\DoxyCodeLine{                               \textcolor{stringliteral}{"{}\(\backslash\)0"{}}}
+\DoxyCodeLine{= \textcolor{stringliteral}{"\#version 130\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"in vec3 vertexPosition;\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"in vec4 vertexColour;\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"out vec3 fragmentPosition;\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"out vec4 fragmentColour;\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"void main() \{\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"    gl\_Position = vec4(vertexPosition.xyz, 1.0);\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"    fragmentPosition = vertexPosition;\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"    fragmentColour = vertexColour;\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"\}\(\backslash\)n"}}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"\(\backslash\)0"}}
 
 \end{DoxyCode}
 
@@ -90,5 +95,5 @@ Definition at line \mbox{\hyperlink{_debug_renderer_8cpp_source_l00016}{16}} of 
 
 
 
-Referenced by \mbox{\hyperlink{_debug_renderer_8cpp_source_l00074}{BARE2\+D\+::\+Debug\+Renderer\+::init()}}, \mbox{\hyperlink{_resource_manager_8cpp_source_l00022}{BARE2\+D\+::\+Resource\+Manager\+::load\+Shaders()}}, and \mbox{\hyperlink{_resource_manager_8cpp_source_l00031}{BARE2\+D\+::\+Resource\+Manager\+::load\+Shaders\+From\+Source()}}.
+Referenced by \mbox{\hyperlink{_debug_renderer_8cpp_source_l00074}{B\+A\+R\+E2\+D\+::\+Debug\+Renderer\+::init()}}.
 

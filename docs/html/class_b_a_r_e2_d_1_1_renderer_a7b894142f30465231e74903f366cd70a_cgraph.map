@@ -1,4 +1,4 @@
 <map id="BARE2D::Renderer::begin" name="BARE2D::Renderer::begin">
-<area shape="rect" id="node1" title="Clears the necessary vectors, etc. to prepare for draw() calls, etc." alt="" coords="5,5,181,31"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_shader_program.html#a8687213986c6f5633887609e8169b24e" title="Activates this shader program for the renderer to use." alt="" coords="229,5,432,31"/>
+<area shape="rect" id="node1" title="Clears the necessary vectors, etc. to prepare for draw() calls, etc." alt="" coords="5,5,181,32"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_shader_program.html#a8687213986c6f5633887609e8169b24e" title="Activates this shader program for the renderer to use." alt="" coords="229,5,432,32"/>
 </map>

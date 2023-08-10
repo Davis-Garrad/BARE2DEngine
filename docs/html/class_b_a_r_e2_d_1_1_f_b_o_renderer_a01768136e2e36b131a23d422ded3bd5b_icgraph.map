@@ -1,5 +1,5 @@
 <map id="BARE2D::FBORenderer::unbind" name="BARE2D::FBORenderer::unbind">
-<area shape="rect" id="node1" title="Unbinds the FBO + textures." alt="" coords="247,27,411,67"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a4dde75642694aa34aa463bb298cb34cd" title="Creates the renderbatches, does necessary stuff before render() call." alt="" coords="5,5,199,31"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="20,55,184,95"/>
+<area shape="rect" id="node1" title="Unbinds the FBO + textures." alt="" coords="247,27,411,69"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#a4dde75642694aa34aa463bb298cb34cd" title="Creates the renderbatches, does necessary stuff before render() call." alt="" coords="5,5,199,32"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="20,57,184,98"/>
 </map>

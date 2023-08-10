@@ -1,6 +1,6 @@
 <map id="BARE2D::Camera2D::getViewspaceRect" name="BARE2D::Camera2D::getViewspaceRect">
-<area shape="rect" id="node1" title=" " alt="" coords="5,42,271,67"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_camera2_d.html#ad804fb1a2a1e6266d7e6143a8c426ee3" title="Converts a coordinate from Worldspace to Viewspace." alt="" coords="331,5,569,45"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_camera2_d.html#a15f5aa21ca6788f07c3827cf9ed5b169" title=" " alt="" coords="319,70,581,95"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_camera2_d.html#a44b2c60fa94157c9766475bb2798ef50" title=" " alt="" coords="629,5,833,45"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,42,271,69"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_camera2_d.html#ad804fb1a2a1e6266d7e6143a8c426ee3" title="Converts a coordinate from Worldspace to Viewspace." alt="" coords="331,5,569,47"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_camera2_d.html#a15f5aa21ca6788f07c3827cf9ed5b169" title=" " alt="" coords="319,71,581,98"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_camera2_d.html#a44b2c60fa94157c9766475bb2798ef50" title=" " alt="" coords="629,5,833,47"/>
 </map>

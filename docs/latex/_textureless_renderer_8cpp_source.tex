@@ -1,174 +1,174 @@
 \hypertarget{_textureless_renderer_8cpp_source}{}\doxysection{Textureless\+Renderer.\+cpp}
 \label{_textureless_renderer_8cpp_source}\index{Source/TexturelessRenderer.cpp@{Source/TexturelessRenderer.cpp}}
-\mbox{\hyperlink{_textureless_renderer_8cpp}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_textureless_renderer_8hpp}{TexturelessRenderer.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_g_l_context_manager_8hpp}{GLContextManager.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00004}00004 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00005}00005 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00006}00006 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00007}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ab9bf3bb241c1a2dfc4400523f16f6355}{00007}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ab9bf3bb241c1a2dfc4400523f16f6355}{TexturelessRenderer::TexturelessRenderer}}(std::string\& fragShader,}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00008}00008                                              std::string\& vertShader,}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00009}00009                                              \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} perspectiveWidth,}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00010}00010                                              \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} perspectiveHeight) :}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00011}00011         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer}{Renderer}}(),}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00012}00012         m\_fragShader(fragShader), m\_vertShader(vertShader) \{}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00013}00013         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a685151d65caf080131f943ce03129a5d}{m\_camera}} = std::make\_shared<Camera2D>();}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00014}00014         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a685151d65caf080131f943ce03129a5d}{m\_camera}}-\/>init(perspectiveWidth, perspectiveHeight);}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00015}00015     \}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00016}00016 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00017}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a0f48f54eb93441cce056c5aaa82b262e}{00017}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a0f48f54eb93441cce056c5aaa82b262e}{TexturelessRenderer::\string~TexturelessRenderer}}() \{}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00018}00018     \}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00019}00019 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00020}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a01951b878023daee5eef45428e8e858e}{00020}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a01951b878023daee5eef45428e8e858e}{TexturelessRenderer::init}}() \{}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00021}00021         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{compileShaders}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a8395a8a56da14fc6308b0dbe13de4b87}{m\_vertShader}}.c\_str(), \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a25d28a212c09b2ebfad817691854c202}{m\_fragShader}}.c\_str());}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00022}00022 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00023}00023         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a5ff18e853da7784b3085181c5e52e8ac}{link}}(\{\textcolor{stringliteral}{"{}vertexPosition"{}}, \textcolor{stringliteral}{"{}vertexColour"{}}, \textcolor{stringliteral}{"{}vertexUV"{}}\});}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00024}00024 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00025}00025         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{Renderer::init}}(); \textcolor{comment}{// Initializes the VAO, so we can add attributes.}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00026}00026 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00027}00027         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}(3, GL\_FLOAT, GL\_FALSE, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, position));}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00028}00028         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}(4,}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00029}00029                                                GL\_UNSIGNED\_BYTE,}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00030}00030                                                GL\_TRUE,}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00031}00031                                                \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}),}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00032}00032                                                (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, colour));}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00033}00033         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}(2, GL\_FLOAT, GL\_FALSE, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, uv));}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00034}00034 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00035}00035         \textcolor{comment}{// Create our blank texture}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00036}00036         glGenTextures(1, \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a4e27e9a992c60934cbf65b3a755a521a}{m\_texture}});}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00037}00037         \textcolor{comment}{// Now bind the texture to its slot}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00038}00038         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{GLContextManager::getContext}}()-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{bindTexture}}(GL\_TEXTURE\_2D, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a4e27e9a992c60934cbf65b3a755a521a}{m\_texture}});}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00039}00039 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00040}00040         \textcolor{comment}{// all white}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00041}00041         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* data = \textcolor{keyword}{new} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}[4];}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00042}00042         data[0]             = 255;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00043}00043         data[1]             = 255;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00044}00044         data[2]             = 255;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00045}00045         data[3]             = 255;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00046}00046 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00047}00047         glTexImage2D(GL\_TEXTURE\_2D,}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00048}00048                      0,}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00049}00049                      GL\_RGBA,}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00050}00050                      1, \textcolor{comment}{// x size}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00051}00051                      1, \textcolor{comment}{// y size}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00052}00052                      0,}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00053}00053                      GL\_RGBA,}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00054}00054                      GL\_UNSIGNED\_BYTE,}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00055}00055                      \&data[0]);}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00056}00056 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00057}00057         \textcolor{comment}{// OpenGL copies data, we can delete}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00058}00058         \textcolor{keyword}{delete}[] data;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00059}00059 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00060}00060         \textcolor{comment}{// Give the texture some more basic settings.}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00061}00061         glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_WRAP\_S, GL\_CLAMP\_TO\_BORDER);}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00062}00062         glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_WRAP\_T, GL\_CLAMP\_TO\_BORDER);}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00063}00063         \textcolor{keywordtype}{float} backColour[] = \{0.0f, 0.0f, 0.0f, 0.0f\}; \textcolor{comment}{// Fully transparent}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00064}00064         glTexParameterfv(GL\_TEXTURE\_2D, GL\_TEXTURE\_BORDER\_COLOR, backColour);}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00065}00065         \textcolor{comment}{// So we don't get any real interpolation to the corners.}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00066}00066         glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_MAG\_FILTER, GL\_NEAREST);}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00067}00067         glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_MIN\_FILTER, GL\_NEAREST);}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00068}00068 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00069}00069         \textcolor{comment}{// Now that its attached, we can unbind the texture}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00070}00070         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{GLContextManager::getContext}}()-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{bindTexture}}(GL\_TEXTURE\_2D, 0);}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00071}00071     \}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00072}00072 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00073}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a8045f62494e678ecb7351ab04256bb70}{00073}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a8045f62494e678ecb7351ab04256bb70}{TexturelessRenderer::setCamera}}(std::shared\_ptr<Camera2D> camera) \{}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00074}00074         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a685151d65caf080131f943ce03129a5d}{m\_camera}} = camera;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00075}00075     \}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00076}00076 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00077}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a528a7f584fa05db7943acb871804f5f0}{00077}}     std::shared\_ptr<Camera2D> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a528a7f584fa05db7943acb871804f5f0}{TexturelessRenderer::getCamera}}() \{}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00078}00078         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a685151d65caf080131f943ce03129a5d}{m\_camera}};}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00079}00079     \}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00080}00080 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00081}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a5140d700b40e5809693d7b45e16d773f}{00081}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a5140d700b40e5809693d7b45e16d773f}{TexturelessRenderer::preRender}}() \{}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00082}00082         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a685151d65caf080131f943ce03129a5d}{m\_camera}}-\/>update();}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00083}00083 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00084}00084         glm::mat4 projectionMatrix = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a685151d65caf080131f943ce03129a5d}{m\_camera}}-\/>getCameraMatrix();}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00085}00085         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{setUniformMatrix}}<glm::mat4>(\textcolor{stringliteral}{"{}projectionMatrix"{}}, GL\_FALSE, \&projectionMatrix);}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00086}00086     \}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00087}00087 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00088}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_abe0f74a2a7009c4e08fceaa131c5df41}{00088}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_abe0f74a2a7009c4e08fceaa131c5df41}{TexturelessRenderer::draw}}(glm::vec4 destRect,}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00089}00089                                    \textcolor{keywordtype}{float}     depth,}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00090}00090                                    \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}  colour \textcolor{comment}{/*255, 255, 255, 255*/},}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00091}00091                                    \textcolor{keywordtype}{float}     angle \textcolor{comment}{/* = 0.0f*/},}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00092}00092                                    glm::vec2 COR \textcolor{comment}{/*=glm::vec2(0.5f)*/}) \{}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00093}00093         \textcolor{comment}{// Make sure it's actually in the scene.}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00094}00094         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a685151d65caf080131f943ce03129a5d}{m\_camera}}-\/>isRectInViewspace(destRect))}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00095}00095             \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00096}00096 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00097}00097         \textcolor{comment}{// At this point we can just scale the size (the position should be translated in the shader) and draw it}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00098}00098 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00099}00099         glm::vec4 uv(0.0f, 0.0f, 1.0f, 1.0f);}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00100}00100 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00101}00101         \textcolor{comment}{// Just add the glyph}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00102}00102         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph}{Glyph}}(destRect, uv, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a4e27e9a992c60934cbf65b3a755a521a}{m\_texture}}, depth, colour, angle, COR));}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00103}00103     \}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00104}00104 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00105}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_abfcb83d1e3424c08083bb9ea97df23fa}{00105}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_abfcb83d1e3424c08083bb9ea97df23fa}{TexturelessRenderer::createRenderBatches}}() \{}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00106}00106         \textcolor{comment}{// Create all the render batches (based on the draw()'n glyphs) for rendering}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00107}00107         \textcolor{comment}{// THey're going to end up as vertices}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00108}00108         std::vector<Vertex> vertices;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00109}00109 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00110}00110         \textcolor{comment}{// We already know that the glyphs represent 6 vertices by design.}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00111}00111         vertices.resize(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}.size() * 6);}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00112}00112 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00113}00113         \textcolor{comment}{// Check if we even have anything to draw}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00114}00114         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}.size() == 0) \{}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00115}00115             \textcolor{keywordflow}{return}; \textcolor{comment}{// Don't need to do much.}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00116}00116         \}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00117}00117 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00118}00118         \textcolor{keywordtype}{int} offset = 0;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00119}00119         \textcolor{keywordtype}{int} vertex = 0;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00120}00120 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00121}00121         \textcolor{comment}{// 'Draw' two triangles from the 6 vertices.}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00122}00122         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a4a5d71addd82c34de80ab86704a4f847}{m\_batches}}.emplace\_back(offset, 6, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a4e27e9a992c60934cbf65b3a755a521a}{m\_texture}});}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00123}00123         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[0]-\/>topLeft;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00124}00124         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[0]-\/>bottomLeft;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00125}00125         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[0]-\/>bottomRight;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00126}00126         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[0]-\/>bottomRight;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00127}00127         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[0]-\/>topRight;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00128}00128         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[0]-\/>topLeft;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00129}00129 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00130}00130         \textcolor{comment}{// Set the offset appropriately for 6 vertices of data.}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00131}00131         offset += 6;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00132}00132 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00133}00133         \textcolor{comment}{// Add the rest of the glyphs}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00134}00134         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} glyph = 1; glyph < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}.size(); glyph++) \{}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00135}00135             \textcolor{comment}{// We have no different textures, as we are rendering just blank empty squares.}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00136}00136             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a4a5d71addd82c34de80ab86704a4f847}{m\_batches}}.back().numVertices += 6;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00137}00137 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00138}00138             \textcolor{comment}{// 'Draw' two triangles.}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00139}00139             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[glyph]-\/>topLeft;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00140}00140             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[glyph]-\/>bottomLeft;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00141}00141             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[glyph]-\/>bottomRight;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00142}00142             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[glyph]-\/>bottomRight;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00143}00143             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[glyph]-\/>topRight;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00144}00144             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[glyph]-\/>topLeft;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00145}00145 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00146}00146             \textcolor{comment}{// Push data offset forward 6 vertices.}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00147}00147             offset += 6;}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00148}00148         \}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00149}00149 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00150}00150         \textcolor{comment}{// Done with the glyphs, we can clear em}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00151}00151         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}.clear();}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00152}00152 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00153}00153         \textcolor{comment}{// Now that render batches are created, we can upload the information to OpenGL}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00154}00154 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00155}00155         \textcolor{comment}{// Bind the VBO}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00156}00156         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{bindVBO}}();}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00157}00157 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00158}00158         \textcolor{comment}{// Orphan the buffer}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00159}00159         glBufferData(GL\_ARRAY\_BUFFER, vertices.size() * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), \textcolor{keyword}{nullptr}, GL\_DYNAMIC\_DRAW);}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00160}00160 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00161}00161         \textcolor{comment}{// Actually upload the data to the buffer.}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00162}00162         glBufferSubData(GL\_ARRAY\_BUFFER, 0, vertices.size() * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), vertices.data());}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00163}00163 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00164}00164         \textcolor{comment}{// Unbind the VBO again for safety}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00165}00165         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}.\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}{unbindVBO}}();}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00166}00166     \}}
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00167}00167 }
-\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00168}00168 \} \textcolor{comment}{// namespace BARE2D}}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_textureless_renderer_8hpp}{"TexturelessRenderer.hpp"}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_g_l_context_manager_8hpp}{"GLContextManager.hpp"}}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00007}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ab9bf3bb241c1a2dfc4400523f16f6355}{00007}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer}{TexturelessRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ab9bf3bb241c1a2dfc4400523f16f6355}{TexturelessRenderer}}(std::string\& fragShader,}
+\DoxyCodeLine{00008                                              std::string\& vertShader,}
+\DoxyCodeLine{00009                                              \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} perspectiveWidth,}
+\DoxyCodeLine{00010                                              \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} perspectiveHeight) :}
+\DoxyCodeLine{00011         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer}{Renderer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_abc605847b99b92971a385206dc75e044}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_abc605847b99b92971a385206dc75e044}{)}},}
+\DoxyCodeLine{00012         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a25d28a212c09b2ebfad817691854c202}{m\_fragShader}}(fragShader), \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a8395a8a56da14fc6308b0dbe13de4b87}{m\_vertShader}}(vertShader) \{}
+\DoxyCodeLine{00013         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a685151d65caf080131f943ce03129a5d}{m\_camera}} = std::make\_shared<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}}>();}
+\DoxyCodeLine{00014         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a685151d65caf080131f943ce03129a5d}{m\_camera}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a7dc4acd9d8d0cc2e7b7d956528fd488f}{init}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a7dc4acd9d8d0cc2e7b7d956528fd488f}{(}}perspectiveWidth\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a7dc4acd9d8d0cc2e7b7d956528fd488f}{,}} perspectiveHeight\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a7dc4acd9d8d0cc2e7b7d956528fd488f}{)}};}
+\DoxyCodeLine{00015     \}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00017}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a0f48f54eb93441cce056c5aaa82b262e}{00017}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer}{TexturelessRenderer}}::\string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a0f48f54eb93441cce056c5aaa82b262e}{TexturelessRenderer}}() \{}
+\DoxyCodeLine{00018     \}}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00020}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a01951b878023daee5eef45428e8e858e}{00020}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer}{TexturelessRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a01951b878023daee5eef45428e8e858e}{init}}() \{}
+\DoxyCodeLine{00021         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{compileShaders}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a8395a8a56da14fc6308b0dbe13de4b87}{m\_vertShader}}.c\_str()\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{,}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a25d28a212c09b2ebfad817691854c202}{m\_fragShader}}.c\_str()\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_acf78cf9b4988abf40d62d67471a168a3}{)}};}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a5ff18e853da7784b3085181c5e52e8ac}{link}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a5ff18e853da7784b3085181c5e52e8ac}{(}}\{\textcolor{stringliteral}{"vertexPosition"}, \textcolor{stringliteral}{"vertexColour"}, \textcolor{stringliteral}{"vertexUV"}\}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a5ff18e853da7784b3085181c5e52e8ac}{)}};}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer}{Renderer}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{init}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{)}}; \textcolor{comment}{// Initializes the VAO, so we can add attributes.}}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{(}}3\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} GL\_FLOAT\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} GL\_FALSE\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}})\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a46e6fc6c1a765771603aa8be0d595987}{position}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}};}
+\DoxyCodeLine{00028         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{(}}4\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}}}
+\DoxyCodeLine{00029                                                GL\_UNSIGNED\_BYTE\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}}}
+\DoxyCodeLine{00030                                                GL\_TRUE\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}}}
+\DoxyCodeLine{00031                                                \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}})\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}}}
+\DoxyCodeLine{00032                                                (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_aa128db672c15a3c94fc04b01ab0b1397}{colour}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}};}
+\DoxyCodeLine{00033         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{addVertexAttribute}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{(}}2\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} GL\_FLOAT\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} GL\_FALSE\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}})\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{,}} (\textcolor{keywordtype}{void}*)offsetof(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex_a1b1d6f4db74e0287a41e64029f6ff5d9}{uv}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a96ee05539c58614ee273b7df85143804}{)}};}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035         \textcolor{comment}{// Create our blank texture}}
+\DoxyCodeLine{00036         glGenTextures(1, \&\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a4e27e9a992c60934cbf65b3a755a521a}{m\_texture}});}
+\DoxyCodeLine{00037         \textcolor{comment}{// Now bind the texture to its slot}}
+\DoxyCodeLine{00038         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager}{GLContextManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{getContext}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{bindTexture}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{(}}GL\_TEXTURE\_2D\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{,}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a4e27e9a992c60934cbf65b3a755a521a}{m\_texture}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{)}};}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040         \textcolor{comment}{// all white}}
+\DoxyCodeLine{00041         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* data = \textcolor{keyword}{new} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}[4];}
+\DoxyCodeLine{00042         data[0]             = 255;}
+\DoxyCodeLine{00043         data[1]             = 255;}
+\DoxyCodeLine{00044         data[2]             = 255;}
+\DoxyCodeLine{00045         data[3]             = 255;}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047         glTexImage2D(GL\_TEXTURE\_2D,}
+\DoxyCodeLine{00048                      0,}
+\DoxyCodeLine{00049                      GL\_RGBA,}
+\DoxyCodeLine{00050                      1, \textcolor{comment}{// x size}}
+\DoxyCodeLine{00051                      1, \textcolor{comment}{// y size}}
+\DoxyCodeLine{00052                      0,}
+\DoxyCodeLine{00053                      GL\_RGBA,}
+\DoxyCodeLine{00054                      GL\_UNSIGNED\_BYTE,}
+\DoxyCodeLine{00055                      \&data[0]);}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057         \textcolor{comment}{// OpenGL copies data, we can delete}}
+\DoxyCodeLine{00058         \textcolor{keyword}{delete}[] data;}
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00060         \textcolor{comment}{// Give the texture some more basic settings.}}
+\DoxyCodeLine{00061         glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_WRAP\_S, GL\_CLAMP\_TO\_BORDER);}
+\DoxyCodeLine{00062         glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_WRAP\_T, GL\_CLAMP\_TO\_BORDER);}
+\DoxyCodeLine{00063         \textcolor{keywordtype}{float} backColour[] = \{0.0f, 0.0f, 0.0f, 0.0f\}; \textcolor{comment}{// Fully transparent}}
+\DoxyCodeLine{00064         glTexParameterfv(GL\_TEXTURE\_2D, GL\_TEXTURE\_BORDER\_COLOR, backColour);}
+\DoxyCodeLine{00065         \textcolor{comment}{// So we don't get any real interpolation to the corners.}}
+\DoxyCodeLine{00066         glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_MAG\_FILTER, GL\_NEAREST);}
+\DoxyCodeLine{00067         glTexParameteri(GL\_TEXTURE\_2D, GL\_TEXTURE\_MIN\_FILTER, GL\_NEAREST);}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069         \textcolor{comment}{// Now that its attached, we can unbind the texture}}
+\DoxyCodeLine{00070         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager}{GLContextManager}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{::}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{getContext}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_manager_a733646522bf07c33576f9a1e0bb76c28}{)}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{bindTexture}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{(}}GL\_TEXTURE\_2D\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{,}} 0\mbox{\hyperlink{class_b_a_r_e2_d_1_1_g_l_context_a1815cdbe70cc6fdbc66ec69a7131b5be}{)}};}
+\DoxyCodeLine{00071     \}}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00073}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a8045f62494e678ecb7351ab04256bb70}{00073}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer}{TexturelessRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a8045f62494e678ecb7351ab04256bb70}{setCamera}}(std::shared\_ptr<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}}> camera) \{}
+\DoxyCodeLine{00074         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a685151d65caf080131f943ce03129a5d}{m\_camera}} = camera;}
+\DoxyCodeLine{00075     \}}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00077}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a528a7f584fa05db7943acb871804f5f0}{00077}}     std::shared\_ptr<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}}> \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer}{TexturelessRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a528a7f584fa05db7943acb871804f5f0}{getCamera}}() \{}
+\DoxyCodeLine{00078         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a685151d65caf080131f943ce03129a5d}{m\_camera}};}
+\DoxyCodeLine{00079     \}}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00081}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a5140d700b40e5809693d7b45e16d773f}{00081}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer}{TexturelessRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a5140d700b40e5809693d7b45e16d773f}{preRender}}() \{}
+\DoxyCodeLine{00082         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a685151d65caf080131f943ce03129a5d}{m\_camera}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_aad8e6c5c18c85f5dc4d0ccd31d356d13}{update}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_aad8e6c5c18c85f5dc4d0ccd31d356d13}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_aad8e6c5c18c85f5dc4d0ccd31d356d13}{)}};}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084         glm::mat4 projectionMatrix = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a685151d65caf080131f943ce03129a5d}{m\_camera}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a9cefaaedae2a62e92590b9c8b4da35a7}{getCameraMatrix}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a9cefaaedae2a62e92590b9c8b4da35a7}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a9cefaaedae2a62e92590b9c8b4da35a7}{)}};}
+\DoxyCodeLine{00085         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a6cca43c8d777b64314256241af1df295}{m\_shader}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{setUniformMatrix}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{<}}glm\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{::}}mat4\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{(}}\textcolor{stringliteral}{"projectionMatrix"}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{,}} GL\_FALSE\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{,}} \&projectionMatrix\mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{)}};}
+\DoxyCodeLine{00086     \}}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00088}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_abe0f74a2a7009c4e08fceaa131c5df41}{00088}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer}{TexturelessRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_abe0f74a2a7009c4e08fceaa131c5df41}{draw}}(glm::vec4 destRect,}
+\DoxyCodeLine{00089                                    \textcolor{keywordtype}{float}     depth,}
+\DoxyCodeLine{00090                                    \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}    colour \textcolor{comment}{/*255, 255, 255, 255*/},}
+\DoxyCodeLine{00091                                    \textcolor{keywordtype}{float}     angle \textcolor{comment}{/* = 0.0f*/},}
+\DoxyCodeLine{00092                                    glm::vec2 COR \textcolor{comment}{/*=glm::vec2(0.5f)*/}) \{}
+\DoxyCodeLine{00093         \textcolor{comment}{// Make sure it's actually in the scene.}}
+\DoxyCodeLine{00094         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a685151d65caf080131f943ce03129a5d}{m\_camera}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a040ee7936ee18e8654e258e4013b46dd}{isRectInViewspace}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a040ee7936ee18e8654e258e4013b46dd}{(}}destRect\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a040ee7936ee18e8654e258e4013b46dd}{)}})}
+\DoxyCodeLine{00095             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00096 }
+\DoxyCodeLine{00097         \textcolor{comment}{// At this point we can just scale the size (the position should be translated in the shader) and draw it}}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099         glm::vec4 uv(0.0f, 0.0f, 1.0f, 1.0f);}
+\DoxyCodeLine{00100 }
+\DoxyCodeLine{00101         \textcolor{comment}{// Just add the glyph}}
+\DoxyCodeLine{00102         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph}{Glyph}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{(}}destRect\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{,}} uv\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{,}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a4e27e9a992c60934cbf65b3a755a521a}{m\_texture}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{,}} depth\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{,}} colour\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{,}} angle\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{,}} COR\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a6f185a8114aa0e31269e28b06fe38d14}{)}});}
+\DoxyCodeLine{00103     \}}
+\DoxyCodeLine{00104 }
+\DoxyCodeLine{\Hypertarget{_textureless_renderer_8cpp_source_l00105}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_abfcb83d1e3424c08083bb9ea97df23fa}{00105}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer}{TexturelessRenderer}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_abfcb83d1e3424c08083bb9ea97df23fa}{createRenderBatches}}() \{}
+\DoxyCodeLine{00106         \textcolor{comment}{// Create all the render batches (based on the draw()'n glyphs) for rendering}}
+\DoxyCodeLine{00107         \textcolor{comment}{// THey're going to end up as vertices}}
+\DoxyCodeLine{00108         std::vector<\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}> vertices;}
+\DoxyCodeLine{00109 }
+\DoxyCodeLine{00110         \textcolor{comment}{// We already know that the glyphs represent 6 vertices by design.}}
+\DoxyCodeLine{00111         vertices.resize(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}.size() * 6);}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113         \textcolor{comment}{// Check if we even have anything to draw}}
+\DoxyCodeLine{00114         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}.size() == 0) \{}
+\DoxyCodeLine{00115             \textcolor{keywordflow}{return}; \textcolor{comment}{// Don't need to do much.}}
+\DoxyCodeLine{00116         \}}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118         \textcolor{keywordtype}{int} offset = 0;}
+\DoxyCodeLine{00119         \textcolor{keywordtype}{int} vertex = 0;}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121         \textcolor{comment}{// 'Draw' two triangles from the 6 vertices.}}
+\DoxyCodeLine{00122         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a4a5d71addd82c34de80ab86704a4f847}{m\_batches}}.emplace\_back(offset, 6, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_a4e27e9a992c60934cbf65b3a755a521a}{m\_texture}});}
+\DoxyCodeLine{00123         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[0]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}};}
+\DoxyCodeLine{00124         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[0]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{bottomLeft}};}
+\DoxyCodeLine{00125         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[0]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}};}
+\DoxyCodeLine{00126         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[0]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}};}
+\DoxyCodeLine{00127         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[0]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{topRight}};}
+\DoxyCodeLine{00128         vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[0]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}};}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130         \textcolor{comment}{// Set the offset appropriately for 6 vertices of data.}}
+\DoxyCodeLine{00131         offset += 6;}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133         \textcolor{comment}{// Add the rest of the glyphs}}
+\DoxyCodeLine{00134         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} glyph = 1; glyph < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}.size(); glyph++) \{}
+\DoxyCodeLine{00135             \textcolor{comment}{// We have no different textures, as we are rendering just blank empty squares.}}
+\DoxyCodeLine{00136             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a4a5d71addd82c34de80ab86704a4f847}{m\_batches}}.back()\mbox{\hyperlink{class_render_batch_ac80bf0479536f10923a8bdb50598217a}{.}}\mbox{\hyperlink{class_render_batch_ac80bf0479536f10923a8bdb50598217a}{numVertices}} += 6;}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00138             \textcolor{comment}{// 'Draw' two triangles.}}
+\DoxyCodeLine{00139             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[glyph]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}};}
+\DoxyCodeLine{00140             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[glyph]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a5e7961252c16c09e88bee4943845b2e8}{bottomLeft}};}
+\DoxyCodeLine{00141             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[glyph]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}};}
+\DoxyCodeLine{00142             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[glyph]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a7eb374c9033171c455be7e13e135943e}{bottomRight}};}
+\DoxyCodeLine{00143             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[glyph]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a56fcbbb338feba45291f14dbdd8c5468}{topRight}};}
+\DoxyCodeLine{00144             vertices[vertex++] = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}[glyph]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph_a86de27460d73ab28f95ac60fe1535e09}{topLeft}};}
+\DoxyCodeLine{00145 }
+\DoxyCodeLine{00146             \textcolor{comment}{// Push data offset forward 6 vertices.}}
+\DoxyCodeLine{00147             offset += 6;}
+\DoxyCodeLine{00148         \}}
+\DoxyCodeLine{00149 }
+\DoxyCodeLine{00150         \textcolor{comment}{// Done with the glyphs, we can clear em}}
+\DoxyCodeLine{00151         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_textureless_renderer_ae9cd46c62a0feae4bc6eb7a2f2656d4c}{m\_glyphs}}.clear();}
+\DoxyCodeLine{00152 }
+\DoxyCodeLine{00153         \textcolor{comment}{// Now that render batches are created, we can upload the information to OpenGL}}
+\DoxyCodeLine{00154 }
+\DoxyCodeLine{00155         \textcolor{comment}{// Bind the VBO}}
+\DoxyCodeLine{00156         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{bindVBO}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_aaaec16d98be94aa5cfed015df40dda70}{)}};}
+\DoxyCodeLine{00157 }
+\DoxyCodeLine{00158         \textcolor{comment}{// Orphan the buffer}}
+\DoxyCodeLine{00159         glBufferData(GL\_ARRAY\_BUFFER, vertices.size() * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), \textcolor{keywordtype}{nullptr}, GL\_DYNAMIC\_DRAW);}
+\DoxyCodeLine{00160 }
+\DoxyCodeLine{00161         \textcolor{comment}{// Actually upload the data to the buffer.}}
+\DoxyCodeLine{00162         glBufferSubData(GL\_ARRAY\_BUFFER, 0, vertices.size() * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_vertex}{Vertex}}), vertices.data());}
+\DoxyCodeLine{00163 }
+\DoxyCodeLine{00164         \textcolor{comment}{// Unbind the VBO again for safety}}
+\DoxyCodeLine{00165         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_ad9672b3d262d65d40589a6cfec480e4c}{m\_vertexArrayObject}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}{.}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}{unbindVBO}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_v_a_o_a10dd3e06e3929147edb6b249c94fdcee}{)}};}
+\DoxyCodeLine{00166     \}}
+\DoxyCodeLine{00167 }
+\DoxyCodeLine{00168 \} \textcolor{comment}{// namespace BARE2D}}
 
 \end{DoxyCode}

@@ -1,4 +1,4 @@
-\hypertarget{class_b_a_r_e2_d_1_1_basic_renderer}{}\doxysection{BARE2D\+::Basic\+Renderer Class Reference}
+\hypertarget{class_b_a_r_e2_d_1_1_basic_renderer}{}\doxysection{B\+A\+R\+E2D\+::Basic\+Renderer Class Reference}
 \label{class_b_a_r_e2_d_1_1_basic_renderer}\index{BARE2D::BasicRenderer@{BARE2D::BasicRenderer}}
 
 
@@ -6,12 +6,22 @@
 
 
 
-Inheritance diagram for BARE2D\+::Basic\+Renderer\+:
-% FIG 0
+Inheritance diagram for B\+A\+R\+E2D\+::Basic\+Renderer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_basic_renderer__inherit__graph}
+\end{center}
+\end{figure}
 
 
-Collaboration diagram for BARE2D\+::Basic\+Renderer\+:
-% FIG 1
+Collaboration diagram for B\+A\+R\+E2D\+::Basic\+Renderer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_basic_renderer__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,7 +37,7 @@ virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_adfd638eb976b5
 \begin{DoxyCompactList}\small\item\em Sets the camera to a given pointer. This means that the renderer takes ownership. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $>$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_aed0e10a9a6a2ac938600e68c7c8a4e53}{get\+Camera}} ()
 \item 
-virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a2070760479d95e099eab580d6f5b66e4}{draw}} (glm\+::vec4 dest\+Rect, glm\+::vec4 uv\+Rect, GLuint texture, float depth, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}} colour=\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}(255, 255, 255, 255), float angle=0.\+0f, glm\+::vec2 COR=glm\+::vec2(0.\+5f))
+virtual void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_basic_renderer_a2070760479d95e099eab580d6f5b66e4}{draw}} (glm\+::vec4 dest\+Rect, glm\+::vec4 uv\+Rect, G\+Luint texture, float depth, \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}} colour=\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}(255, 255, 255, 255), float angle=0.\+0f, glm\+::vec2 C\+OR=glm\+::vec2(0.\+5f))
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -59,7 +69,7 @@ Definition at line \mbox{\hyperlink{_basic_renderer_8hpp_source_l00011}{11}} of 
 \index{BARE2D::BasicRenderer@{BARE2D::BasicRenderer}!BasicRenderer@{BasicRenderer}}
 \index{BasicRenderer@{BasicRenderer}!BARE2D::BasicRenderer@{BARE2D::BasicRenderer}}
 \doxysubsubsection{\texorpdfstring{BasicRenderer()}{BasicRenderer()}}
-{\footnotesize\ttfamily BARE2\+D\+::\+Basic\+Renderer\+::\+Basic\+Renderer (\begin{DoxyParamCaption}\item[{std\+::string \&}]{frag\+Shader,  }\item[{std\+::string \&}]{vert\+Shader,  }\item[{unsigned int}]{perspective\+Width = {\ttfamily 2},  }\item[{unsigned int}]{perspective\+Height = {\ttfamily 2} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::\+Basic\+Renderer (\begin{DoxyParamCaption}\item[{std\+::string \&}]{frag\+Shader,  }\item[{std\+::string \&}]{vert\+Shader,  }\item[{unsigned int}]{perspective\+Width = {\ttfamily 2},  }\item[{unsigned int}]{perspective\+Height = {\ttfamily 2} }\end{DoxyParamCaption})}
 
 
 
@@ -67,17 +77,35 @@ Definition at line \mbox{\hyperlink{_basic_renderer_8cpp_source_l00005}{5}} of f
 
 
 
-References \mbox{\hyperlink{_basic_renderer_8hpp_source_l00040}{m\+\_\+camera}}.
+References \mbox{\hyperlink{_camera2_d_8cpp_source_l00017}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::init()}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00040}{m\+\_\+camera}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00036}{m\+\_\+frag\+Shader}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00036}{m\+\_\+vert\+Shader}}, and \mbox{\hyperlink{_renderer_8cpp_source_l00007}{B\+A\+R\+E2\+D\+::\+Renderer\+::\+Renderer()}}.
 
+
+
+Referenced by \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00012}{B\+A\+R\+E2\+D\+::\+Bumpy\+Renderer\+::\+Bumpy\+Renderer()}}, and \mbox{\hyperlink{_font_renderer_8cpp_source_l00005}{B\+A\+R\+E2\+D\+::\+Font\+Renderer\+::\+Font\+Renderer()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_basic_renderer_aad096d241734d1b4e1ea1a2a777ba1a8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_basic_renderer_aad096d241734d1b4e1ea1a2a777ba1a8_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_basic_renderer_a21b4eba61a2a80b5014aa26eae031ac5}\label{class_b_a_r_e2_d_1_1_basic_renderer_a21b4eba61a2a80b5014aa26eae031ac5}} 
 \index{BARE2D::BasicRenderer@{BARE2D::BasicRenderer}!````~BasicRenderer@{$\sim$BasicRenderer}}
 \index{````~BasicRenderer@{$\sim$BasicRenderer}!BARE2D::BasicRenderer@{BARE2D::BasicRenderer}}
 \doxysubsubsection{\texorpdfstring{$\sim$BasicRenderer()}{~BasicRenderer()}}
-{\footnotesize\ttfamily BARE2\+D\+::\+Basic\+Renderer\+::$\sim$\+Basic\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::$\sim$\+Basic\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Definition at line \mbox{\hyperlink{_basic_renderer_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{_basic_renderer_8cpp_source}{Basic\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_basic_renderer_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_basic_renderer_8cpp_source}{Basic\+Renderer.\+cpp}}.
 
 
 
@@ -86,7 +114,7 @@ Definition at line \mbox{\hyperlink{_basic_renderer_8cpp_source_l00015}{15}} of 
 \index{BARE2D::BasicRenderer@{BARE2D::BasicRenderer}!createRenderBatches@{createRenderBatches}}
 \index{createRenderBatches@{createRenderBatches}!BARE2D::BasicRenderer@{BARE2D::BasicRenderer}}
 \doxysubsubsection{\texorpdfstring{createRenderBatches()}{createRenderBatches()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Basic\+Renderer\+::create\+Render\+Batches (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::create\+Render\+Batches (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
 
 
@@ -94,58 +122,75 @@ Constructs all of the render batches from data given by, say, \mbox{\hyperlink{c
 
 
 
-Implements \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_abf344beacb334d74a7c5c2d15815fe4f}{BARE2\+D\+::\+Renderer}}.
+Implements \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_abf344beacb334d74a7c5c2d15815fe4f}{B\+A\+R\+E2\+D\+::\+Renderer}}.
 
 
 
-Reimplemented in \mbox{\hyperlink{class_b_a_r_e2_d_1_1_bumpy_renderer_a0a92a001f43456e84a72c579901311f7}{BARE2\+D\+::\+Bumpy\+Renderer}}.
+Reimplemented in \mbox{\hyperlink{class_b_a_r_e2_d_1_1_bumpy_renderer_a0a92a001f43456e84a72c579901311f7}{B\+A\+R\+E2\+D\+::\+Bumpy\+Renderer}}.
 
 
 
-Definition at line \mbox{\hyperlink{_basic_renderer_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{_basic_renderer_8cpp_source}{Basic\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_basic_renderer_8cpp_source_l00074}{74}} of file \mbox{\hyperlink{_basic_renderer_8cpp_source}{Basic\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_v_a_o_8cpp_source_l00057}{BARE2\+D\+::\+VAO\+::bind\+VBO()}}, \mbox{\hyperlink{_renderer_8hpp_source_l00067}{BARE2\+D\+::\+Renderer\+::m\+\_\+batches}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00038}{m\+\_\+glyphs}}, \mbox{\hyperlink{_renderer_8hpp_source_l00066}{BARE2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, and \mbox{\hyperlink{_v_a_o_8cpp_source_l00062}{BARE2\+D\+::\+VAO\+::unbind\+VBO()}}.
+References \mbox{\hyperlink{_v_a_o_8cpp_source_l00057}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::bind\+V\+B\+O()}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::bottom\+Left}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::bottom\+Right}}, \mbox{\hyperlink{_renderer_8hpp_source_l00067}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+batches}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00038}{m\+\_\+glyphs}}, \mbox{\hyperlink{_renderer_8hpp_source_l00066}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, \mbox{\hyperlink{_render_batch_8hpp_source_l00016}{Render\+Batch\+::num\+Vertices}}, \mbox{\hyperlink{_vertex_8hpp_source_l00094}{B\+A\+R\+E2\+D\+::\+Glyph\+::texture}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::top\+Left}}, \mbox{\hyperlink{_vertex_8hpp_source_l00100}{B\+A\+R\+E2\+D\+::\+Glyph\+::top\+Right}}, and \mbox{\hyperlink{_v_a_o_8cpp_source_l00062}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::unbind\+V\+B\+O()}}.
 
-Here is the call graph for this function\+:
-% FIG 2
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_basic_renderer_a5e1c6ae78270e23c7c8eec7e85fd3d41_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_basic_renderer_a2070760479d95e099eab580d6f5b66e4}\label{class_b_a_r_e2_d_1_1_basic_renderer_a2070760479d95e099eab580d6f5b66e4}} 
 \index{BARE2D::BasicRenderer@{BARE2D::BasicRenderer}!draw@{draw}}
 \index{draw@{draw}!BARE2D::BasicRenderer@{BARE2D::BasicRenderer}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Basic\+Renderer\+::draw (\begin{DoxyParamCaption}\item[{glm\+::vec4}]{dest\+Rect,  }\item[{glm\+::vec4}]{uv\+Rect,  }\item[{GLuint}]{texture,  }\item[{float}]{depth,  }\item[{\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}}]{colour = {\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}(255,~255,~255,~255)},  }\item[{float}]{angle = {\ttfamily 0.0f},  }\item[{glm\+::vec2}]{COR = {\ttfamily glm\+:\+:vec2(0.5f)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::draw (\begin{DoxyParamCaption}\item[{glm\+::vec4}]{dest\+Rect,  }\item[{glm\+::vec4}]{uv\+Rect,  }\item[{G\+Luint}]{texture,  }\item[{float}]{depth,  }\item[{\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}}]{colour = {\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_colour}{Colour}}(255,~255,~255,~255)},  }\item[{float}]{angle = {\ttfamily 0.0f},  }\item[{glm\+::vec2}]{C\+OR = {\ttfamily glm\+:\+:vec2(0.5f)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Reimplemented in \mbox{\hyperlink{class_b_a_r_e2_d_1_1_bumpy_renderer_a6480bb55821d44b19fcd964a21c7dc5d}{BARE2\+D\+::\+Bumpy\+Renderer}}.
+Reimplemented in \mbox{\hyperlink{class_b_a_r_e2_d_1_1_bumpy_renderer_a6480bb55821d44b19fcd964a21c7dc5d}{B\+A\+R\+E2\+D\+::\+Bumpy\+Renderer}}.
 
 
 
-Definition at line \mbox{\hyperlink{_basic_renderer_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{_basic_renderer_8cpp_source}{Basic\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_basic_renderer_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{_basic_renderer_8cpp_source}{Basic\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_basic_renderer_8hpp_source_l00040}{m\+\_\+camera}}, and \mbox{\hyperlink{_basic_renderer_8hpp_source_l00038}{m\+\_\+glyphs}}.
+References \mbox{\hyperlink{_vertex_8cpp_source_l00054}{B\+A\+R\+E2\+D\+::\+Glyph\+::\+Glyph()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00173}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::is\+Rect\+In\+Viewspace()}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00040}{m\+\_\+camera}}, and \mbox{\hyperlink{_basic_renderer_8hpp_source_l00038}{m\+\_\+glyphs}}.
 
 
 
-Referenced by \mbox{\hyperlink{_font_renderer_8cpp_source_l00015}{BARE2\+D\+::\+Font\+Renderer\+::draw()}}.
+Referenced by \mbox{\hyperlink{_font_renderer_8cpp_source_l00015}{B\+A\+R\+E2\+D\+::\+Font\+Renderer\+::draw()}}.
 
-Here is the caller graph for this function\+:
-% FIG 3
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_basic_renderer_a2070760479d95e099eab580d6f5b66e4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_basic_renderer_a2070760479d95e099eab580d6f5b66e4_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_basic_renderer_aed0e10a9a6a2ac938600e68c7c8a4e53}\label{class_b_a_r_e2_d_1_1_basic_renderer_aed0e10a9a6a2ac938600e68c7c8a4e53}} 
 \index{BARE2D::BasicRenderer@{BARE2D::BasicRenderer}!getCamera@{getCamera}}
 \index{getCamera@{getCamera}!BARE2D::BasicRenderer@{BARE2D::BasicRenderer}}
 \doxysubsubsection{\texorpdfstring{getCamera()}{getCamera()}}
-{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $>$ BARE2\+D\+::\+Basic\+Renderer\+::get\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $>$ B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::get\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \begin{DoxyReturn}{Returns}
 Returns the Camera pointer. To be used only to link multiple renderers\textquotesingle{} cameras. 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_basic_renderer_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{_basic_renderer_8cpp_source}{Basic\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_basic_renderer_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{_basic_renderer_8cpp_source}{Basic\+Renderer.\+cpp}}.
 
 
 
@@ -155,7 +200,7 @@ References \mbox{\hyperlink{_basic_renderer_8hpp_source_l00040}{m\+\_\+camera}}.
 \index{BARE2D::BasicRenderer@{BARE2D::BasicRenderer}!init@{init}}
 \index{init@{init}!BARE2D::BasicRenderer@{BARE2D::BasicRenderer}}
 \doxysubsubsection{\texorpdfstring{init()}{init()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Basic\+Renderer\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -163,23 +208,28 @@ Initializes all necessary bits of the renderer.
 
 
 
-Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{BARE2\+D\+::\+Renderer}}.
+Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_addafa95f7a6f451e359d1300031bdde1}{B\+A\+R\+E2\+D\+::\+Renderer}}.
 
 
 
-Definition at line \mbox{\hyperlink{_basic_renderer_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{_basic_renderer_8cpp_source}{Basic\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_basic_renderer_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_basic_renderer_8cpp_source}{Basic\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_v_a_o_8cpp_source_l00066}{BARE2\+D\+::\+VAO\+::add\+Vertex\+Attribute()}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00023}{BARE2\+D\+::\+Shader\+Program\+::compile\+Shaders()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00025}{BARE2\+D\+::\+Renderer\+::init()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00085}{BARE2\+D\+::\+Renderer\+::link()}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00036}{m\+\_\+frag\+Shader}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{BARE2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_renderer_8hpp_source_l00066}{BARE2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, and \mbox{\hyperlink{_basic_renderer_8hpp_source_l00036}{m\+\_\+vert\+Shader}}.
+References \mbox{\hyperlink{_v_a_o_8cpp_source_l00066}{B\+A\+R\+E2\+D\+::\+V\+A\+O\+::add\+Vertex\+Attribute()}}, \mbox{\hyperlink{_vertex_8hpp_source_l00042}{B\+A\+R\+E2\+D\+::\+Vertex\+::colour}}, \mbox{\hyperlink{_shader_program_8cpp_source_l00023}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::compile\+Shaders()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00025}{B\+A\+R\+E2\+D\+::\+Renderer\+::init()}}, \mbox{\hyperlink{_renderer_8cpp_source_l00085}{B\+A\+R\+E2\+D\+::\+Renderer\+::link()}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00036}{m\+\_\+frag\+Shader}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_renderer_8hpp_source_l00066}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+vertex\+Array\+Object}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00036}{m\+\_\+vert\+Shader}}, \mbox{\hyperlink{_vertex_8hpp_source_l00040}{B\+A\+R\+E2\+D\+::\+Vertex\+::position}}, and \mbox{\hyperlink{_vertex_8hpp_source_l00044}{B\+A\+R\+E2\+D\+::\+Vertex\+::uv}}.
 
-Here is the call graph for this function\+:
-% FIG 4
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_basic_renderer_aa228c647d7fe74772a4736d51fdb7796_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_basic_renderer_aaf24fe92216128173a92b9c23dc4dd56}\label{class_b_a_r_e2_d_1_1_basic_renderer_aaf24fe92216128173a92b9c23dc4dd56}} 
 \index{BARE2D::BasicRenderer@{BARE2D::BasicRenderer}!preRender@{preRender}}
 \index{preRender@{preRender}!BARE2D::BasicRenderer@{BARE2D::BasicRenderer}}
 \doxysubsubsection{\texorpdfstring{preRender()}{preRender()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Basic\+Renderer\+::pre\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::pre\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -187,27 +237,32 @@ Does stuff inside of the render function, within the shader\textquotesingle{}s u
 
 
 
-Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a9aab9d938c89c6d3d9c4ff6de02d3c4d}{BARE2\+D\+::\+Renderer}}.
+Reimplemented from \mbox{\hyperlink{class_b_a_r_e2_d_1_1_renderer_a9aab9d938c89c6d3d9c4ff6de02d3c4d}{B\+A\+R\+E2\+D\+::\+Renderer}}.
 
 
 
-Reimplemented in \mbox{\hyperlink{class_b_a_r_e2_d_1_1_bumpy_renderer_a33dd21c340b2ea4cdfda0c4306883275}{BARE2\+D\+::\+Bumpy\+Renderer}}.
+Reimplemented in \mbox{\hyperlink{class_b_a_r_e2_d_1_1_bumpy_renderer_a33dd21c340b2ea4cdfda0c4306883275}{B\+A\+R\+E2\+D\+::\+Bumpy\+Renderer}}.
 
 
 
-Definition at line \mbox{\hyperlink{_basic_renderer_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{_basic_renderer_8cpp_source}{Basic\+Renderer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_basic_renderer_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{_basic_renderer_8cpp_source}{Basic\+Renderer.\+cpp}}.
 
 
 
-References \mbox{\hyperlink{_basic_renderer_8hpp_source_l00040}{m\+\_\+camera}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{BARE2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_a70aa79c9886b261f8380985ca20a487d}{BARE2\+D\+::\+Shader\+Program\+::set\+Uniform()}}, and \mbox{\hyperlink{class_b_a_r_e2_d_1_1_shader_program_adfa74453d9bc2f1100e5d19bb45a5512}{BARE2\+D\+::\+Shader\+Program\+::set\+Uniform\+Matrix()}}.
+References \mbox{\hyperlink{_camera2_d_8cpp_source_l00169}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Camera\+Matrix()}}, \mbox{\hyperlink{_basic_renderer_8hpp_source_l00040}{m\+\_\+camera}}, \mbox{\hyperlink{_renderer_8hpp_source_l00065}{B\+A\+R\+E2\+D\+::\+Renderer\+::m\+\_\+shader}}, \mbox{\hyperlink{_shader_program_8tcc_source_l00012}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform()}}, \mbox{\hyperlink{_shader_program_8tcc_source_l00017}{B\+A\+R\+E2\+D\+::\+Shader\+Program\+::set\+Uniform\+Matrix()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00035}{B\+A\+R\+E2\+D\+::\+Camera2\+D\+::update()}}.
 
-Here is the call graph for this function\+:
-% FIG 5
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_basic_renderer_aaf24fe92216128173a92b9c23dc4dd56_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_basic_renderer_adfd638eb976b59c52ded5930035721ec}\label{class_b_a_r_e2_d_1_1_basic_renderer_adfd638eb976b59c52ded5930035721ec}} 
 \index{BARE2D::BasicRenderer@{BARE2D::BasicRenderer}!setCamera@{setCamera}}
 \index{setCamera@{setCamera}!BARE2D::BasicRenderer@{BARE2D::BasicRenderer}}
 \doxysubsubsection{\texorpdfstring{setCamera()}{setCamera()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Basic\+Renderer\+::set\+Camera (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $>$}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::set\+Camera (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}} $>$}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -233,7 +288,7 @@ References \mbox{\hyperlink{_basic_renderer_8hpp_source_l00040}{m\+\_\+camera}}.
 \index{BARE2D::BasicRenderer@{BARE2D::BasicRenderer}!m\_camera@{m\_camera}}
 \index{m\_camera@{m\_camera}!BARE2D::BasicRenderer@{BARE2D::BasicRenderer}}
 \doxysubsubsection{\texorpdfstring{m\_camera}{m\_camera}}
-{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}}$>$ BARE2\+D\+::\+Basic\+Renderer\+::m\+\_\+camera\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d}{Camera2D}}$>$ B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::m\+\_\+camera\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -241,13 +296,13 @@ Definition at line \mbox{\hyperlink{_basic_renderer_8hpp_source_l00040}{40}} of 
 
 
 
-Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00005}{Basic\+Renderer()}}, \mbox{\hyperlink{_basic_renderer_8cpp_source_l00053}{draw()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00077}{BARE2\+D\+::\+Bumpy\+Renderer\+::draw()}}, \mbox{\hyperlink{_basic_renderer_8cpp_source_l00038}{get\+Camera()}}, \mbox{\hyperlink{_basic_renderer_8cpp_source_l00042}{pre\+Render()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00027}{BARE2\+D\+::\+Bumpy\+Renderer\+::pre\+Render()}}, and \mbox{\hyperlink{_basic_renderer_8cpp_source_l00034}{set\+Camera()}}.
+Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00005}{Basic\+Renderer()}}, \mbox{\hyperlink{_basic_renderer_8cpp_source_l00056}{draw()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00077}{B\+A\+R\+E2\+D\+::\+Bumpy\+Renderer\+::draw()}}, \mbox{\hyperlink{_basic_renderer_8cpp_source_l00039}{get\+Camera()}}, \mbox{\hyperlink{_basic_renderer_8cpp_source_l00044}{pre\+Render()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00027}{B\+A\+R\+E2\+D\+::\+Bumpy\+Renderer\+::pre\+Render()}}, and \mbox{\hyperlink{_basic_renderer_8cpp_source_l00034}{set\+Camera()}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_basic_renderer_a09092e5ec68ed95fb8a40d72df296979}\label{class_b_a_r_e2_d_1_1_basic_renderer_a09092e5ec68ed95fb8a40d72df296979}} 
 \index{BARE2D::BasicRenderer@{BARE2D::BasicRenderer}!m\_fragShader@{m\_fragShader}}
 \index{m\_fragShader@{m\_fragShader}!BARE2D::BasicRenderer@{BARE2D::BasicRenderer}}
 \doxysubsubsection{\texorpdfstring{m\_fragShader}{m\_fragShader}}
-{\footnotesize\ttfamily std\+::string BARE2\+D\+::\+Basic\+Renderer\+::m\+\_\+frag\+Shader\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily std\+::string B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::m\+\_\+frag\+Shader\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -255,13 +310,13 @@ Definition at line \mbox{\hyperlink{_basic_renderer_8hpp_source_l00036}{36}} of 
 
 
 
-Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00018}{init()}}.
+Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00005}{Basic\+Renderer()}}, and \mbox{\hyperlink{_basic_renderer_8cpp_source_l00020}{init()}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}\label{class_b_a_r_e2_d_1_1_basic_renderer_a6e87400292d586ff1a8d4634856161db}} 
 \index{BARE2D::BasicRenderer@{BARE2D::BasicRenderer}!m\_glyphs@{m\_glyphs}}
 \index{m\_glyphs@{m\_glyphs}!BARE2D::BasicRenderer@{BARE2D::BasicRenderer}}
 \doxysubsubsection{\texorpdfstring{m\_glyphs}{m\_glyphs}}
-{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph}{Glyph}}$\ast$$>$ BARE2\+D\+::\+Basic\+Renderer\+::m\+\_\+glyphs\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_b_a_r_e2_d_1_1_glyph}{Glyph}}$\ast$$>$ B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::m\+\_\+glyphs\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -269,13 +324,13 @@ Definition at line \mbox{\hyperlink{_basic_renderer_8hpp_source_l00038}{38}} of 
 
 
 
-Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00070}{create\+Render\+Batches()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00086}{BARE2\+D\+::\+Bumpy\+Renderer\+::create\+Render\+Batches()}}, \mbox{\hyperlink{_basic_renderer_8cpp_source_l00053}{draw()}}, and \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00077}{BARE2\+D\+::\+Bumpy\+Renderer\+::draw()}}.
+Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00074}{create\+Render\+Batches()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00086}{B\+A\+R\+E2\+D\+::\+Bumpy\+Renderer\+::create\+Render\+Batches()}}, \mbox{\hyperlink{_basic_renderer_8cpp_source_l00056}{draw()}}, and \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00077}{B\+A\+R\+E2\+D\+::\+Bumpy\+Renderer\+::draw()}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_basic_renderer_abf614f4d57f348e103d2197fe6262c7b}\label{class_b_a_r_e2_d_1_1_basic_renderer_abf614f4d57f348e103d2197fe6262c7b}} 
 \index{BARE2D::BasicRenderer@{BARE2D::BasicRenderer}!m\_vertShader@{m\_vertShader}}
 \index{m\_vertShader@{m\_vertShader}!BARE2D::BasicRenderer@{BARE2D::BasicRenderer}}
 \doxysubsubsection{\texorpdfstring{m\_vertShader}{m\_vertShader}}
-{\footnotesize\ttfamily std\+::string BARE2\+D\+::\+Basic\+Renderer\+::m\+\_\+vert\+Shader\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily std\+::string B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::m\+\_\+vert\+Shader\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -283,7 +338,7 @@ Definition at line \mbox{\hyperlink{_basic_renderer_8hpp_source_l00036}{36}} of 
 
 
 
-Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00018}{init()}}.
+Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00005}{Basic\+Renderer()}}, and \mbox{\hyperlink{_basic_renderer_8cpp_source_l00020}{init()}}.
 
 
 

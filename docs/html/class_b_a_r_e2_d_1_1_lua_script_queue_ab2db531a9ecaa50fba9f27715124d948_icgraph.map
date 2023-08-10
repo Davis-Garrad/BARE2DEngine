@@ -1,4 +1,4 @@
 <map id="BARE2D::LuaScriptQueue::getInstance" name="BARE2D::LuaScriptQueue::getInstance">
-<area shape="rect" id="node1" title="Returns a pointer to the singleton object &#45; creates the object if one doesn&#39;t already exist." alt="" coords="232,5,409,45"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_lua_script_engine.html#a428a4f2b3f87f8b90db2880a67ffee31" title="Processes all scripts from the LuaScriptQueue and updates all running scripts. That&#39;s pretty much it!" alt="" coords="5,5,184,45"/>
+<area shape="rect" id="node1" title="Returns a pointer to the singleton object &#45; creates the object if one doesn&#39;t already exist." alt="" coords="232,5,409,47"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_lua_script_engine.html#a428a4f2b3f87f8b90db2880a67ffee31" title="Processes all scripts from the LuaScriptQueue and updates all running scripts. That&#39;s pretty much it!" alt="" coords="5,5,184,47"/>
 </map>

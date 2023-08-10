@@ -1,26 +1,26 @@
 \hypertarget{_texture_8hpp_source}{}\doxysection{Texture.\+hpp}
 \label{_texture_8hpp_source}\index{Source/Texture.hpp@{Source/Texture.hpp}}
-\mbox{\hyperlink{_texture_8hpp}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00003}00003 \textcolor{preprocessor}{\#include <GL/glew.h>}}
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00004}00004 \textcolor{preprocessor}{\#include <string>}}
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00005}00005 }
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00006}00006 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}}
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00007}00007 \{}
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00008}00008 \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00009}00009 \textcolor{comment}{    /**}}
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00010}00010 \textcolor{comment}{     * @struct Texture}}
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00011}00011 \textcolor{comment}{     * @brief The texture struct holds very basic stuff -\/ the filepath, width, height, and ID,}}
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00012}00012 \textcolor{comment}{     */}}
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00013}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{00013}}     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}} \{}
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00014}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a5180877b8d9b7ccc44a50418fc925511}{00014}}         std::string \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a5180877b8d9b7ccc44a50418fc925511}{filepath}} = \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00015}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a99d41bfc04d894d81e10c5b4d7aed1ab}{00015}}         GLuint \textcolor{keywordtype}{id} = 0;}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{GL}\textcolor{preprocessor}{/}\textcolor{preprocessor}{glew}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{string}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}}}
+\DoxyCodeLine{00007 \{}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009     \textcolor{comment}{/**}}
+\DoxyCodeLine{00010 \textcolor{comment}{     * @struct Texture}}
+\DoxyCodeLine{00011 \textcolor{comment}{     * @brief The texture struct holds very basic stuff -\/ the filepath, width, height, and ID,}}
+\DoxyCodeLine{00012 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00013}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{00013}}     \textcolor{keyword}{struct} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}} \{}
+\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00014}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a5180877b8d9b7ccc44a50418fc925511}{00014}}         std::string \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a5180877b8d9b7ccc44a50418fc925511}{filepath}} = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00015}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a99d41bfc04d894d81e10c5b4d7aed1ab}{00015}}         GLuint \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a99d41bfc04d894d81e10c5b4d7aed1ab}{id}} = 0;}
 \DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00016}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a4ce2075c242a0865cf7d47ef6c385c0a}{00016}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a4ce2075c242a0865cf7d47ef6c385c0a}{width}} = 0; \textcolor{comment}{// width in pixels}}
 \DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00017}\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a4092f55b99d2293162311edfe786adb0}{00017}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture_a4092f55b99d2293162311edfe786adb0}{height}} = 0; \textcolor{comment}{// height in pixels}}
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00018}00018     \};}
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00019}00019 }
-\DoxyCodeLine{\Hypertarget{_texture_8hpp_source_l00020}00020 \}}
+\DoxyCodeLine{00018     \};}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020 \}}
 
 \end{DoxyCode}

@@ -1,0 +1,8 @@
+<map id="BARE2D::Camera2D::init" name="BARE2D::Camera2D::init">
+<area shape="rect" id="node1" title="Initializes the camera." alt="" coords="484,110,656,137"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_basic_renderer.html#aad096d241734d1b4e1ea1a2a777ba1a8" title=" " alt="" coords="249,37,419,79"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#aa89d9713a2c8a8ca10a71a2ac9380172" title=" " alt="" coords="252,103,416,144"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_textureless_renderer.html#ab9bf3bb241c1a2dfc4400523f16f6355" title=" " alt="" coords="232,168,436,209"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_bumpy_renderer.html#a87e27c42fb9f184113799f7711a79961" title=" " alt="" coords="5,5,184,47"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_font_renderer.html#af949d6b7c070b1b57374109b30c5bf47" title=" " alt="" coords="13,71,176,112"/>
+</map>

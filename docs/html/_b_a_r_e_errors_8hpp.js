@@ -42,5 +42,7 @@ var _b_a_r_e_errors_8hpp =
     [ "getErrString", "_b_a_r_e_errors_8hpp.html#a7951c5decc1f7edc3c4f78ed2f579c85", null ],
     [ "initGLErrorCallback", "_b_a_r_e_errors_8hpp.html#a2e37a4d16611398b81332bb834395984", null ],
     [ "throwError", "_b_a_r_e_errors_8hpp.html#a0d8f8a98bf559e6d2eda28ae744f486c", null ],
-    [ "throwFatalError", "_b_a_r_e_errors_8hpp.html#aed4332e42208fed2905a8b0845dad4d1", null ]
+    [ "throwFatalError", "_b_a_r_e_errors_8hpp.html#aed4332e42208fed2905a8b0845dad4d1", null ],
+    [ "GLErrorMinSeverity", "_b_a_r_e_errors_8hpp.html#a7ebdadee6e21138680eb929277d0da7b", null ],
+    [ "thrownErrors", "_b_a_r_e_errors_8hpp.html#a78e4606c66dcc65416419cade7db0255", null ]
 ];

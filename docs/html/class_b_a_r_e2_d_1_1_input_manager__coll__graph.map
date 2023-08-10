@@ -1,6 +1,6 @@
 <map id="BARE2D::InputManager" name="BARE2D::InputManager">
-<area shape="rect" id="node1" title="This is the input manager. It does what you expect! Nearly completely copied from GLEngine,..." alt="" coords="158,123,321,148"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,180,45"/>
-<area shape="rect" id="node3" title=" " alt="" coords="214,13,265,38"/>
-<area shape="rect" id="node4" title=" " alt="" coords="360,13,399,38"/>
+<area shape="rect" id="node1" title="This is the input manager. It does what you expect! Nearly completely copied from GLEngine,..." alt="" coords="150,124,313,151"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,13,44,39"/>
+<area shape="rect" id="node3" title=" " alt="" coords="206,13,257,39"/>
+<area shape="rect" id="node4" title=" " alt="" coords="284,5,459,47"/>
 </map>

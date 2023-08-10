@@ -1,7 +1,7 @@
 <map id="BARE2D::ShaderProgram::setUniform" name="BARE2D::ShaderProgram::setUniform">
-<area shape="rect" id="node1" title="A generalized wrapper to find and set a uniform for this shader." alt="" coords="444,69,619,109"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_bumpy_renderer.html#a6700a581c23f6874f4547ea80d4f4535" title="Initializes all uniforms, such as colour attachments, depth attachments, etc." alt="" coords="217,5,396,45"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ad27e4c76b6f82a74b967464560254a87" title="Initializes all uniforms, such as colour attachments, depth attachments, etc." alt="" coords="225,69,389,109"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_basic_renderer.html#aaf24fe92216128173a92b9c23dc4dd56" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="221,133,392,173"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="5,69,169,109"/>
+<area shape="rect" id="node1" title="A generalized wrapper to find and set a uniform for this shader." alt="" coords="444,71,619,112"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ad27e4c76b6f82a74b967464560254a87" title="Initializes all uniforms, such as colour attachments, depth attachments, etc." alt="" coords="225,5,389,47"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_bumpy_renderer.html#a6700a581c23f6874f4547ea80d4f4535" title="Initializes all uniforms, such as colour attachments, depth attachments, etc." alt="" coords="217,71,396,112"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_basic_renderer.html#aaf24fe92216128173a92b9c23dc4dd56" title="Does stuff inside of the render function, within the shader&#39;s use." alt="" coords="221,136,392,177"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="5,5,169,47"/>
 </map>

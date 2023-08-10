@@ -1,106 +1,148 @@
 \hypertarget{_input_manager_8cpp_source}{}\doxysection{Input\+Manager.\+cpp}
 \label{_input_manager_8cpp_source}\index{Source/InputManager.cpp@{Source/InputManager.cpp}}
-\mbox{\hyperlink{_input_manager_8cpp}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_input_manager_8hpp}{InputManager.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00004}00004 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00005}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5156e6237e45ec8372579fa015751f89}{00005}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5156e6237e45ec8372579fa015751f89}{InputManager::InputManager}}()}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00006}00006     \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00007}00007         }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00008}00008     \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00009}00009 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00010}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab0797f47aa7a7f5fbbb427e0cef57196}{00010}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab0797f47aa7a7f5fbbb427e0cef57196}{InputManager::\string~InputManager}}()}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00011}00011     \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00012}00012         }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00013}00013     \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00014}00014 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00015}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{00015}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{InputManager::update}}()}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00016}00016     \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00017}00017         \textcolor{comment}{// Update the previous keymap}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00018}00018         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& iterator : \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}{m\_keyMap}}) \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00019}00019             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a44955d49cb077bc8fa663b6f37d81f}{m\_previousKeyMap}}[iterator.first] = iterator.second;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00020}00020         \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00021}00021         }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00022}00022         \textcolor{comment}{// As this is essentially the \(\backslash\)delta mouseScrollWheel variable, it needs to be set to zero each update}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00023}00023         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a030b08344dbac5337e6d094f39b815ce}{m\_mouseScrollwheelPosition}} = 0;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00024}00024     \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00025}00025 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00026}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{00026}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{InputManager::pressKey}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID)}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00027}00027     \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00028}00028         \textcolor{comment}{// True represents pressed}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00029}00029         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}{m\_keyMap}}[keyID] = \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00030}00030     \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00031}00031 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00032}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{00032}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{InputManager::releaseKey}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID)}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00033}00033     \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00034}00034         \textcolor{comment}{// False represents released}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00035}00035         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}{m\_keyMap}}[keyID] = \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00036}00036     \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00037}00037 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00038}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{00038}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{InputManager::setMousePosition}}(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y)}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00039}00039     \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00040}00040         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a50b1fa5a5611fcbca0438e3b67429acc}{m\_mousePosition}}.x = x;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00041}00041         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a50b1fa5a5611fcbca0438e3b67429acc}{m\_mousePosition}}.y = y;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00042}00042     \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00043}00043 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00044}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a8b091efcd10cffa4040602f083006acb}{00044}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{InputManager::setMousePosition}}(glm::vec2 position)}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00045}00045     \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00046}00046         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a50b1fa5a5611fcbca0438e3b67429acc}{m\_mousePosition}} = position;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00047}00047     \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00048}00048 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00049}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{00049}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{InputManager::setMouseScrollwheelPosition}}(\textcolor{keywordtype}{int} position)}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00050}00050     \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00051}00051         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a030b08344dbac5337e6d094f39b815ce}{m\_mouseScrollwheelPosition}} = position;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00052}00052     \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00053}00053 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00054}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{00054}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{InputManager::isKeyDown}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID)\textcolor{keyword}{ const}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00055}00055 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00056}00056         \textcolor{comment}{// We dont want to use the associative array approach here}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00057}00057         \textcolor{comment}{// because we don't want to create a key if it doesnt exist.}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00058}00058         \textcolor{comment}{// So we do it manually}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00059}00059         \textcolor{keyword}{auto} it = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}{m\_keyMap}}.find(keyID);}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00060}00060         \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}{m\_keyMap}}.end()) \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00061}00061             \textcolor{comment}{// Found the key}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00062}00062             \textcolor{keywordflow}{return} it-\/>second;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00063}00063         \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00064}00064             \textcolor{comment}{// Didn't find the key}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00065}00065             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00066}00066         \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00067}00067     \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00068}00068 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00069}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{00069}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{InputManager::isKeyPressed}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID)\textcolor{keyword}{ const}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00070}00070 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00071}00071         \textcolor{comment}{// Should return true if it is pressed now and wasn't before.}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00072}00072         \textcolor{keywordflow}{return} (\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{isKeyDown}}(keyID) \&\& !\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d}{wasKeyDown}}(keyID));}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00073}00073     \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00074}00074 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00075}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a492c88230777ab626d6d1778b4ee0e02}{00075}}     glm::vec2 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a492c88230777ab626d6d1778b4ee0e02}{InputManager::getMousePosition}}()\textcolor{keyword}{ const}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00076}00076 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00077}00077         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a50b1fa5a5611fcbca0438e3b67429acc}{m\_mousePosition}};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00078}00078     \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00079}00079 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00080}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a62da30eaa80d5d4f8d9fe32690026a94}{00080}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a62da30eaa80d5d4f8d9fe32690026a94}{InputManager::getMouseScrollwheelPosition}}()\textcolor{keyword}{ const}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00081}00081 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00082}00082         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a030b08344dbac5337e6d094f39b815ce}{m\_mouseScrollwheelPosition}};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00083}00083     \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00084}00084 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00085}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d}{00085}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d}{InputManager::wasKeyDown}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID)\textcolor{keyword}{ const}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00086}00086 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00087}00087         \textcolor{comment}{// We dont want to use the associative array approach here}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00088}00088         \textcolor{comment}{// because we don't want to create a key if it doesnt exist.}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00089}00089         \textcolor{comment}{// So we do it manually}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00090}00090         \textcolor{keyword}{auto} it = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a44955d49cb077bc8fa663b6f37d81f}{m\_previousKeyMap}}.find(keyID);}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00091}00091         \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a44955d49cb077bc8fa663b6f37d81f}{m\_previousKeyMap}}.end()) \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00092}00092             \textcolor{comment}{// Found the key}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00093}00093             \textcolor{keywordflow}{return} it-\/>second;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00094}00094         \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00095}00095             \textcolor{comment}{// Didn't find the key}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00096}00096             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00097}00097         \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00098}00098     \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00099}00099 }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00100}00100 \}}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_input_manager_8hpp}{"InputManager.hpp"}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{SDL2}\textcolor{preprocessor}{/}\textcolor{preprocessor}{SDL\_keycode}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00007}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5156e6237e45ec8372579fa015751f89}{00007}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5156e6237e45ec8372579fa015751f89}{InputManager}}()}
+\DoxyCodeLine{00008 \{\}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00010}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab0797f47aa7a7f5fbbb427e0cef57196}{00010}} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}::\string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab0797f47aa7a7f5fbbb427e0cef57196}{InputManager}}()}
+\DoxyCodeLine{00011 \{\}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00013}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{00013}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aeb65fb759f479815950177c2fcdd7433}{update}}()}
+\DoxyCodeLine{00014 \{}
+\DoxyCodeLine{00015     \textcolor{comment}{// Update the previous keymap}}
+\DoxyCodeLine{00016     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& iterator : m\_keyMap)}
+\DoxyCodeLine{00017     \{}
+\DoxyCodeLine{00018         m\_previousKeyMap[iterator.first] = iterator.second;}
+\DoxyCodeLine{00019     \}}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021     \textcolor{comment}{// As this is essentially the \(\backslash\)delta mouseScrollWheel variable, it needs to be set to zero each update}}
+\DoxyCodeLine{00022     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a030b08344dbac5337e6d094f39b815ce}{m\_mouseScrollwheelPosition}} = 0;}
+\DoxyCodeLine{00023 \}}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00025}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{00025}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3a1cea0b15ba38865bbf446e2ef3fc1d}{pressKey}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID)}
+\DoxyCodeLine{00026 \{}
+\DoxyCodeLine{00027     \textcolor{comment}{// True represents pressed}}
+\DoxyCodeLine{00028     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}{m\_keyMap}}[keyID] = \textcolor{keyword}{true};}
+\DoxyCodeLine{00029 \}}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00031}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{00031}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a235d3c2a87ddf27e8544a0bafc3000a0}{releaseKey}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID)}
+\DoxyCodeLine{00032 \{}
+\DoxyCodeLine{00033     \textcolor{comment}{// False represents released}}
+\DoxyCodeLine{00034     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_af0e100d3cdbc27cb0a621404c2e276df}{m\_keyMap}}[keyID] = \textcolor{keyword}{false};}
+\DoxyCodeLine{00035 \}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00037}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{00037}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a3d72db48544d6a6d347af02889e7e1d6}{setMousePosition}}(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y)}
+\DoxyCodeLine{00038 \{}
+\DoxyCodeLine{00039     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a50b1fa5a5611fcbca0438e3b67429acc}{m\_mousePosition}}.x = x;}
+\DoxyCodeLine{00040     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a50b1fa5a5611fcbca0438e3b67429acc}{m\_mousePosition}}.y = y;}
+\DoxyCodeLine{00041 \}}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00043}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a8b091efcd10cffa4040602f083006acb}{00043}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a8b091efcd10cffa4040602f083006acb}{setMousePosition}}(glm::vec2 position)}
+\DoxyCodeLine{00044 \{}
+\DoxyCodeLine{00045     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a50b1fa5a5611fcbca0438e3b67429acc}{m\_mousePosition}} = position;}
+\DoxyCodeLine{00046 \}}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00048}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{00048}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_ab8ca096f8108649a0e5b9be5e370e36c}{setMouseScrollwheelPosition}}(\textcolor{keywordtype}{int} position)}
+\DoxyCodeLine{00049 \{}
+\DoxyCodeLine{00050     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a030b08344dbac5337e6d094f39b815ce}{m\_mouseScrollwheelPosition}} = position;}
+\DoxyCodeLine{00051 \}}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00053}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{00053}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{isKeyDown}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID) \textcolor{keyword}{const}}
+\DoxyCodeLine{00054 \{}
+\DoxyCodeLine{00055     \textcolor{comment}{// We dont want to use the associative array approach here}}
+\DoxyCodeLine{00056     \textcolor{comment}{// because we don't want to create a key if it doesnt exist.}}
+\DoxyCodeLine{00057     \textcolor{comment}{// So we do it manually}}
+\DoxyCodeLine{00058     \textcolor{keyword}{auto} it = m\_keyMap.find(keyID);}
+\DoxyCodeLine{00059     \textcolor{keywordflow}{if}(it != m\_keyMap.end())}
+\DoxyCodeLine{00060     \{}
+\DoxyCodeLine{00061         \textcolor{comment}{// Found the key}}
+\DoxyCodeLine{00062         \textcolor{keywordflow}{return} it-\/>second;}
+\DoxyCodeLine{00063     \} \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00064     \{}
+\DoxyCodeLine{00065         \textcolor{comment}{// Didn't find the key}}
+\DoxyCodeLine{00066         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00067     \}}
+\DoxyCodeLine{00068 \}}
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00070}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{00070}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{isKeyPressed}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID) \textcolor{keyword}{const}}
+\DoxyCodeLine{00071 \{}
+\DoxyCodeLine{00072     \textcolor{comment}{// Should return true if it is pressed now and wasn't before.}}
+\DoxyCodeLine{00073     \textcolor{keywordflow}{return} (\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{isKeyDown}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{(}}keyID\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{)}} \&\& !\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d}{wasKeyDown}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d}{(}}keyID\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d}{)}});}
+\DoxyCodeLine{00074 \}}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00076}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aba3e9c456823b83de41816d9c7b7ab30}{00076}} \textcolor{keywordtype}{char} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aba3e9c456823b83de41816d9c7b7ab30}{getPressedCharacter}}(\textcolor{keywordtype}{bool} alpha, \textcolor{keywordtype}{bool} nums, \textcolor{keywordtype}{bool} all) \textcolor{keyword}{const}}
+\DoxyCodeLine{00077 \{}
+\DoxyCodeLine{00078     \textcolor{keywordflow}{if}(all)}
+\DoxyCodeLine{00079     \{}
+\DoxyCodeLine{00080         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 33; i <= 126; i++)}
+\DoxyCodeLine{00081         \{}
+\DoxyCodeLine{00082             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{isKeyPressed}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{(}}SDLK\_EXCLAIM + i\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{)}})}
+\DoxyCodeLine{00083             \{}
+\DoxyCodeLine{00084                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{'!'} + i;}
+\DoxyCodeLine{00085             \}}
+\DoxyCodeLine{00086         \}}
+\DoxyCodeLine{00087     \}}
+\DoxyCodeLine{00088     \textcolor{keywordflow}{return} \textcolor{stringliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00089     \textcolor{keywordflow}{if}(alpha)}
+\DoxyCodeLine{00090     \{}
+\DoxyCodeLine{00091         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i <= 26; i++)}
+\DoxyCodeLine{00092         \{}
+\DoxyCodeLine{00093             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{isKeyPressed}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{(}}SDLK\_a + i\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{)}})}
+\DoxyCodeLine{00094             \{}
+\DoxyCodeLine{00095                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{isKeyDown}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{(}}SDLK\_LSHIFT\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{)}} || \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{isKeyDown}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{(}}SDLK\_RSHIFT\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_aa0cae9c2bef867659510a5873d58f2ad}{)}})}
+\DoxyCodeLine{00096                 \{}
+\DoxyCodeLine{00097                     \textcolor{keywordflow}{return} \textcolor{stringliteral}{'A'} + i;}
+\DoxyCodeLine{00098                 \}}
+\DoxyCodeLine{00099                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{'a'} + i;}
+\DoxyCodeLine{00100             \}}
+\DoxyCodeLine{00101         \}}
+\DoxyCodeLine{00102     \}}
+\DoxyCodeLine{00103     \textcolor{keywordflow}{if}(nums)}
+\DoxyCodeLine{00104     \{}
+\DoxyCodeLine{00105         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i <= 9; i++)}
+\DoxyCodeLine{00106         \{}
+\DoxyCodeLine{00107             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{isKeyPressed}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{(}}SDLK\_0 + i\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_abe9f1c4106ef768213f17f974f35c3b9}{)}})}
+\DoxyCodeLine{00108             \{}
+\DoxyCodeLine{00109                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{'0'} + i;}
+\DoxyCodeLine{00110             \}}
+\DoxyCodeLine{00111         \}}
+\DoxyCodeLine{00112     \}}
+\DoxyCodeLine{00113 \}}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00115}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a492c88230777ab626d6d1778b4ee0e02}{00115}} glm::vec2 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a492c88230777ab626d6d1778b4ee0e02}{getMousePosition}}() \textcolor{keyword}{const}}
+\DoxyCodeLine{00116 \{}
+\DoxyCodeLine{00117     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a50b1fa5a5611fcbca0438e3b67429acc}{m\_mousePosition}};}
+\DoxyCodeLine{00118 \}}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00120}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a62da30eaa80d5d4f8d9fe32690026a94}{00120}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a62da30eaa80d5d4f8d9fe32690026a94}{getMouseScrollwheelPosition}}() \textcolor{keyword}{const}}
+\DoxyCodeLine{00121 \{}
+\DoxyCodeLine{00122     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a030b08344dbac5337e6d094f39b815ce}{m\_mouseScrollwheelPosition}};}
+\DoxyCodeLine{00123 \}}
+\DoxyCodeLine{00124 }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cpp_source_l00125}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d}{00125}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager}{InputManager}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_input_manager_a5a574a794a5f14be2ec97c62d1fa127d}{wasKeyDown}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keyID) \textcolor{keyword}{const}}
+\DoxyCodeLine{00126 \{}
+\DoxyCodeLine{00127     \textcolor{comment}{// We dont want to use the associative array approach here}}
+\DoxyCodeLine{00128     \textcolor{comment}{// because we don't want to create a key if it doesnt exist.}}
+\DoxyCodeLine{00129     \textcolor{comment}{// So we do it manually}}
+\DoxyCodeLine{00130     \textcolor{keyword}{auto} it = m\_previousKeyMap.find(keyID);}
+\DoxyCodeLine{00131     \textcolor{keywordflow}{if}(it != m\_previousKeyMap.end())}
+\DoxyCodeLine{00132     \{}
+\DoxyCodeLine{00133         \textcolor{comment}{// Found the key}}
+\DoxyCodeLine{00134         \textcolor{keywordflow}{return} it-\/>second;}
+\DoxyCodeLine{00135     \} \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00136     \{}
+\DoxyCodeLine{00137         \textcolor{comment}{// Didn't find the key}}
+\DoxyCodeLine{00138         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00139     \}}
+\DoxyCodeLine{00140 \}}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142 \} \textcolor{comment}{// namespace BARE2D}}
 
 \end{DoxyCode}

@@ -1,9 +1,9 @@
 <map id="BARE2D::Font" name="BARE2D::Font">
-<area shape="rect" id="node1" title="Essentially just a wrapper for the SDL TTF_Font type." alt="" coords="88,211,199,236"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,93,65,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="97,93,189,119"/>
-<area shape="rect" id="node4" href="$struct_b_a_r_e2_d_1_1_character_glyph.html" title="Represents a render glyph, modified for fonts!" alt="" coords="213,93,388,119"/>
-<area shape="rect" id="node5" title=" " alt="" coords="188,5,235,31"/>
-<area shape="rect" id="node6" title=" " alt="" coords="275,5,326,31"/>
-<area shape="rect" id="node7" title=" " alt="" coords="353,5,403,31"/>
+<area shape="rect" id="node1" title="Essentially just a wrapper for the SDL TTF_Font type." alt="" coords="211,213,321,240"/>
+<area shape="rect" id="node2" href="$struct_b_a_r_e2_d_1_1_character_glyph.html" title="Represents a render glyph, modified for fonts!" alt="" coords="31,95,205,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,52,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="93,5,143,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="167,5,218,32"/>
+<area shape="rect" id="node6" title=" " alt="" coords="247,95,285,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="343,95,403,121"/>
 </map>

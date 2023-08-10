@@ -5,7 +5,7 @@ var class_b_a_r_e2_d_1_1_font =
     [ "createRows", "class_b_a_r_e2_d_1_1_font.html#aada53b87a23f58cd9947a2697c819193", null ],
     [ "dispose", "class_b_a_r_e2_d_1_1_font.html#a5ebec1e6c68aba76a79e7b30ea11631e", null ],
     [ "getCharacters", "class_b_a_r_e2_d_1_1_font.html#a1a1a0a4a564c29ab4c30be03812ea356", null ],
-    [ "getGlyph", "class_b_a_r_e2_d_1_1_font.html#af1cf352bba1b54f7024f6dc370144dbb", null ],
+    [ "getGlyph", "class_b_a_r_e2_d_1_1_font.html#a8eb602b098bc184ae28a16cb53e7b6cb", null ],
     [ "getHeight", "class_b_a_r_e2_d_1_1_font.html#ac8135640334f87ff80701fc1cddb1038", null ],
     [ "getTextureID", "class_b_a_r_e2_d_1_1_font.html#af0da9fe90a82372d03e6dac9adaac893", null ],
     [ "init", "class_b_a_r_e2_d_1_1_font.html#a4448baad55264df37021c5e24a033b29", null ],

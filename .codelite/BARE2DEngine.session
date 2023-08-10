@@ -1,24 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session Name="/home/davis-dev/Documents/BARE2DEngine/BARE2DEngine.workspace">
-  <int Value="0" Name="m_selectedTab"/>
-  <wxString Value="/home/davis-dev/Documents/BARE2DEngine/BARE2DEngine.workspace" Name="m_workspaceName"/>
+<Session Name="/home/davis-dev/Documents/Programming/C++/BARE2DEngine/BARE2DEngine.workspace">
+  <int Value="8" Name="m_selectedTab"/>
+  <wxString Value="/home/davis-dev/Documents/Programming/C++/BARE2DEngine/BARE2DEngine.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="/home/davis-dev/Documents/BARE2DEngine/BARETests/BasicTest/TestScreen.cpp" Name="FileName"/>
-      <int Value="18" Name="FirstVisibleLine"/>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/BARE2DEngine/Other_Libraries/PicoPNG.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="/home/davis-dev/Documents/BARE2DEngine/BARETests/BAREXML/main.cpp" Name="FileName"/>
-      <int Value="75" Name="FirstVisibleLine"/>
+      <wxString Value="/usr/include/boost/filesystem/operations.hpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="14" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/BARE2DEngine/Source/Filesystem.hpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="/home/davis-dev/Documents/BARE2DEngine/Source/XMLDataTypes.hpp" Name="FileName"/>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/BARE2DEngine/Source/Filesystem.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/BARE2DEngine/Source/LuaScript.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/BARE2DEngine/Source/BasicRenderer.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/BARE2DEngine/BARETests/BasicTest/TestScreen.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/BARE2DEngine/BARETests/Boids/Boid.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/davis-dev/Documents/Programming/C++/BARE2DEngine/BARETests/Boids/Boid.hpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>

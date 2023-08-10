@@ -33,23 +33,8 @@
         <IncludePath Value="."/>
       </Compiler>
       <Linker Options="">
-        <LibraryPath Value="."/>
-      </Linker>
-      <ResourceCompiler Options=""/>
-    </GlobalSettings>
-    <Configuration Name="Debug" CompilerType="GCC" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
-        <IncludePath Value="."/>
-        <IncludePath Value="../../Source/"/>
-        <IncludePath Value="/usr/include/x86_64-linux-gnu/cegui-0.8.7"/>
-      </Compiler>
-      <Linker Options="" Required="yes">
-        <LibraryPath Value="../../Debug/"/>
+        <LibraryPath Value="../../Release/"/>
         <LibraryPath Value="/usr/lib/x86_64-linux-gnu/"/>
-        <Library Value="libboost_thread"/>
-        <Library Value="libboost_filesystem"/>
-        <Library Value="libboost_system"/>
-        <Library Value="lua5.3"/>
         <Library Value="libBARE2DEngine.a"/>
         <Library Value="CEGUIBase-0"/>
         <Library Value="CEGUIOpenGLRenderer-0"/>
@@ -60,7 +45,19 @@
         <Library Value="GLU"/>
         <Library Value="GLEW"/>
         <Library Value="pthread"/>
+        <Library Value="boost_filesystem"/>
+        <Library Value="boost_system"/>
+        <Library Value="lua5.3"/>
       </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="GCC" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="."/>
+        <IncludePath Value="../../Source/"/>
+        <IncludePath Value="/usr/include/x86_64-linux-gnu/cegui-0.8.7"/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="$(ConfigurationName)" Command="$(OutputFile)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>
@@ -100,24 +97,7 @@
         <IncludePath Value="."/>
         <IncludePath Value="../../Source/"/>
       </Compiler>
-      <Linker Options="" Required="yes">
-        <LibraryPath Value="../../Release/"/>
-        <LibraryPath Value="/usr/lib/x86_64-linux-gnu/"/>
-        <Library Value="libboost_thread"/>
-        <Library Value="libboost_filesystem"/>
-        <Library Value="libboost_system"/>
-        <Library Value="lua5.3"/>
-        <Library Value="libBARE2DEngine.a"/>
-        <Library Value="CEGUIBase-0"/>
-        <Library Value="CEGUIOpenGLRenderer-0"/>
-        <Library Value="SDL2"/>
-        <Library Value="SDL2_mixer"/>
-        <Library Value="SDL2_ttf"/>
-        <Library Value="GL"/>
-        <Library Value="GLU"/>
-        <Library Value="GLEW"/>
-        <Library Value="pthread"/>
-      </Linker>
+      <Linker Options="" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="$(ConfigurationName)" Command="$(OutputFile)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>

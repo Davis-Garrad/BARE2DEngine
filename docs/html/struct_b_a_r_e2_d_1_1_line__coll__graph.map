@@ -1,7 +1,7 @@
 <map id="BARE2D::Line" name="BARE2D::Line">
-<area shape="rect" id="node1" title=" " alt="" coords="50,240,158,265"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,137,56,163"/>
-<area shape="rect" id="node3" title=" " alt="" coords="81,137,127,163"/>
-<area shape="rect" id="node4" href="$struct_b_a_r_e2_d_1_1_colour.html" title="An RGBA 8&#45;bit colour value." alt="" coords="152,137,275,163"/>
-<area shape="rect" id="node5" title=" " alt="" coords="178,5,249,31"/>
+<area shape="rect" id="node1" title=" " alt="" coords="122,243,230,269"/>
+<area shape="rect" id="node2" href="$struct_b_a_r_e2_d_1_1_colour.html" title="An RGBA 8&#45;bit colour value." alt="" coords="5,139,128,165"/>
+<area shape="rect" id="node3" title=" " alt="" coords="31,5,102,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="153,139,199,165"/>
+<area shape="rect" id="node5" title=" " alt="" coords="243,139,293,165"/>
 </map>

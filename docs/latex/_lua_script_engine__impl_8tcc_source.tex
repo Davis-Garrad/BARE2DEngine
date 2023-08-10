@@ -1,38 +1,38 @@
 \hypertarget{_lua_script_engine__impl_8tcc_source}{}\doxysection{Lua\+Script\+Engine\+\_\+impl.\+tcc}
 \label{_lua_script_engine__impl_8tcc_source}\index{Source/LuaScriptEngine\_impl.tcc@{Source/LuaScriptEngine\_impl.tcc}}
-\mbox{\hyperlink{_lua_script_engine__impl_8tcc}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00001}00001 \#pragma once}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00003}00003 \#include <string>}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00004}00004 }
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00005}00005 \#include "{}BAREErrors.hpp"{}}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00006}00006 }
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00007}00007 namespace BARE2D \{}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00008}00008     }
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00009}00009     template<class T>}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00010}00010     void LuaScriptEngine::addValueToRegistry(lua\_State* L, T* value, std::string key) \{}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00011}00011         // Push the key}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00012}00012         lua\_pushstring(L, key.c\_str());}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00013}00013         // Push the data (as a void*)}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00014}00014         lua\_pushlightuserdata(L, static\_cast<void*>(value));}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00015}00015         // Combine name and key in the registry.}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00016}00016         lua\_settable(L, LUA\_REGISTRYINDEX);}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00017}00017     \}}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00018}00018     }
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00019}00019     template<class T>}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00020}00020     T* LuaScriptEngine::getValueFromRegistry(lua\_State* L, std::string key) \{}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00021}00021         // Put the key on the stack}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00022}00022         lua\_pushstring(L, key.c\_str());}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00023}00023         // Get the element at key in tge registry table}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00024}00024         lua\_gettable(L, LUA\_REGISTRYINDEX);}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00025}00025         // Turn the element into a void*}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00026}00026         void* ret = lua\_touserdata(L, -\/1);}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00027}00027         lua\_pop(L, 1);}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00028}00028         // convert to whatever type}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00029}00029         return static\_cast<T*>(ret);}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00030}00030     \}}
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00031}00031     }
-\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00032}00032 \}}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{string}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_b_a_r_e_errors_8hpp}{"BAREErrors.hpp"}}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009     \textcolor{keyword}{template}<\textcolor{keyword}{class} T>}
+\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00010}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_aef31946bb9843c75229281cdcc8a2031}{00010}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine}{LuaScriptEngine}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_aef31946bb9843c75229281cdcc8a2031}{addValueToRegistry}}(lua\_State* L, T* value, std::string key) \{}
+\DoxyCodeLine{00011         \textcolor{comment}{// Push the key}}
+\DoxyCodeLine{00012         lua\_pushstring(L, key.c\_str());}
+\DoxyCodeLine{00013         \textcolor{comment}{// Push the data (as a void*)}}
+\DoxyCodeLine{00014         lua\_pushlightuserdata(L, \textcolor{keyword}{static\_cast}<\textcolor{keywordtype}{void}*>(value));}
+\DoxyCodeLine{00015         \textcolor{comment}{// Combine name and key in the registry.}}
+\DoxyCodeLine{00016         lua\_settable(L, LUA\_REGISTRYINDEX);}
+\DoxyCodeLine{00017     \}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019     \textcolor{keyword}{template}<\textcolor{keyword}{class} T>}
+\DoxyCodeLine{\Hypertarget{_lua_script_engine__impl_8tcc_source_l00020}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_a7c0707d445e3a0e6068593ddff6e1f4c}{00020}}     T* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine}{LuaScriptEngine}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script_engine_a7c0707d445e3a0e6068593ddff6e1f4c}{getValueFromRegistry}}(lua\_State* L, std::string key) \{}
+\DoxyCodeLine{00021         \textcolor{comment}{// Put the key on the stack}}
+\DoxyCodeLine{00022         lua\_pushstring(L, key.c\_str());}
+\DoxyCodeLine{00023         \textcolor{comment}{// Get the element at key in tge registry table}}
+\DoxyCodeLine{00024         lua\_gettable(L, LUA\_REGISTRYINDEX);}
+\DoxyCodeLine{00025         \textcolor{comment}{// Turn the element into a void*}}
+\DoxyCodeLine{00026         \textcolor{keywordtype}{void}* ret = lua\_touserdata(L, -\/1);}
+\DoxyCodeLine{00027         lua\_pop(L, 1);}
+\DoxyCodeLine{00028         \textcolor{comment}{// convert to whatever type}}
+\DoxyCodeLine{00029         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast}<T*>(ret);}
+\DoxyCodeLine{00030     \}}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032 \}}
 
 \end{DoxyCode}

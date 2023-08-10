@@ -1,7 +1,7 @@
 <map id="BARE2D::Window" name="BARE2D::Window">
-<area shape="rect" id="node1" title="It&#39;s a graphical window, holds the contexts for GL and SDL." alt="" coords="191,108,322,133"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,116,31"/>
-<area shape="rect" id="node3" title=" " alt="" coords="140,5,259,31"/>
-<area shape="rect" id="node4" title=" " alt="" coords="296,5,335,31"/>
-<area shape="rect" id="node5" title=" " alt="" coords="376,5,431,31"/>
+<area shape="rect" id="node1" title="It&#39;s a graphical window, holds the contexts for GL and SDL." alt="" coords="91,109,222,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,44,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="75,5,129,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="153,5,272,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="296,5,407,32"/>
 </map>

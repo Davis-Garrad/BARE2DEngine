@@ -1,8 +1,8 @@
-\hypertarget{class_b_a_r_e2_d_1_1_camera2_d}{}\doxysection{BARE2D\+::Camera2D Class Reference}
+\hypertarget{class_b_a_r_e2_d_1_1_camera2_d}{}\doxysection{B\+A\+R\+E2D\+::Camera2D Class Reference}
 \label{class_b_a_r_e2_d_1_1_camera2_d}\index{BARE2D::Camera2D@{BARE2D::Camera2D}}
 
 
-The basic camera for a 2D world. There are two spaces -\/ the Worldspace and the Viewspace. The Worldspace is standard for all cameras, it is the \textquotesingle{}gameworld\textquotesingle{} space. The Viewspace is the subspace of the worldspace. It is what the camera captures. Scale is zoom factor. NOT resolution scalar.  
+The basic camera for a 2D world. There are two spaces -\/ the Worldspace and the Viewspace. The Worldspace is standard for all cameras, it is the \textquotesingle{}gameworld\textquotesingle{} space. The Viewspace is the subspace of the worldspace. It is what the camera captures. Scale is zoom factor. N\+OT resolution scalar.  
 
 
 
@@ -11,8 +11,13 @@ The basic camera for a 2D world. There are two spaces -\/ the Worldspace and the
 
 
 
-Collaboration diagram for BARE2D\+::Camera2D\+:
-% FIG 0
+Collaboration diagram for B\+A\+R\+E2D\+::Camera2D\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -78,7 +83,7 @@ bool \mbox{\hyperlink{class_b_a_r_e2_d_1_1_camera2_d_a5fd96de660f005ed4c509e49be
 
 
 \doxysubsection{Detailed Description}
-The basic camera for a 2D world. There are two spaces -\/ the Worldspace and the Viewspace. The Worldspace is standard for all cameras, it is the \textquotesingle{}gameworld\textquotesingle{} space. The Viewspace is the subspace of the worldspace. It is what the camera captures. Scale is zoom factor. NOT resolution scalar. 
+The basic camera for a 2D world. There are two spaces -\/ the Worldspace and the Viewspace. The Worldspace is standard for all cameras, it is the \textquotesingle{}gameworld\textquotesingle{} space. The Viewspace is the subspace of the worldspace. It is what the camera captures. Scale is zoom factor. N\+OT resolution scalar. 
 
 Definition at line \mbox{\hyperlink{_camera2_d_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{_camera2_d_8hpp_source}{Camera2\+D.\+hpp}}.
 
@@ -89,17 +94,21 @@ Definition at line \mbox{\hyperlink{_camera2_d_8hpp_source_l00023}{23}} of file 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!Camera2D@{Camera2D}}
 \index{Camera2D@{Camera2D}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{Camera2D()}{Camera2D()}}
-{\footnotesize\ttfamily BARE2\+D\+::\+Camera2\+D\+::\+Camera2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+Camera2\+D\+::\+Camera2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_camera2_d_8cpp_source}{Camera2\+D.\+cpp}}.
 
+
+
+References \mbox{\hyperlink{_camera2_d_8hpp_source_l00145}{m\+\_\+camera\+Matrix}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00147}{m\+\_\+matrix\+Needs\+Update}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00145}{m\+\_\+orthographic\+Matrix}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00138}{m\+\_\+resolution}}.
+
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_afcc581190860037c9d9f95376aeb60ec}\label{class_b_a_r_e2_d_1_1_camera2_d_afcc581190860037c9d9f95376aeb60ec}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!````~Camera2D@{$\sim$Camera2D}}
 \index{````~Camera2D@{$\sim$Camera2D}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{$\sim$Camera2D()}{~Camera2D()}}
-{\footnotesize\ttfamily BARE2\+D\+::\+Camera2\+D\+::$\sim$\+Camera2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+Camera2\+D\+::$\sim$\+Camera2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -112,7 +121,7 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00014}{14}} of file 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!getCameraMatrix@{getCameraMatrix}}
 \index{getCameraMatrix@{getCameraMatrix}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{getCameraMatrix()}{getCameraMatrix()}}
-{\footnotesize\ttfamily const glm\+::mat4 \& BARE2\+D\+::\+Camera2\+D\+::get\+Camera\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const glm\+::mat4 \& B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Camera\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \begin{DoxyReturn}{Returns}
 The camera matrix. 
@@ -125,11 +134,22 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00169}{169}} of file
 
 References \mbox{\hyperlink{_camera2_d_8hpp_source_l00145}{m\+\_\+camera\+Matrix}}.
 
+
+
+Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00044}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::pre\+Render()}}, \mbox{\hyperlink{_textureless_renderer_8cpp_source_l00081}{B\+A\+R\+E2\+D\+::\+Textureless\+Renderer\+::pre\+Render()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00027}{B\+A\+R\+E2\+D\+::\+Bumpy\+Renderer\+::pre\+Render()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00172}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::pre\+Render()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_a9cefaaedae2a62e92590b9c8b4da35a7_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a6da5252ea3103c5e6912fe836cfa3655}\label{class_b_a_r_e2_d_1_1_camera2_d_a6da5252ea3103c5e6912fe836cfa3655}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!getFocus@{getFocus}}
 \index{getFocus@{getFocus}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{getFocus()}{getFocus()}}
-{\footnotesize\ttfamily glm\+::vec2 BARE2\+D\+::\+Camera2\+D\+::get\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily glm\+::vec2 B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \begin{DoxyReturn}{Returns}
 The camera focus 
@@ -140,13 +160,13 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00161}{161}} of file
 
 
 
-References \mbox{\hyperlink{_camera2_d_8hpp_source_l00012}{BARE2\+D\+::\+Camera\+State\+::focus}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}.
+References \mbox{\hyperlink{_camera2_d_8hpp_source_l00012}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::focus}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_abdfac8eaadfc27196f49bab4a7c51934}\label{class_b_a_r_e2_d_1_1_camera2_d_abdfac8eaadfc27196f49bab4a7c51934}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!getLastState@{getLastState}}
 \index{getLastState@{getLastState}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{getLastState()}{getLastState()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_camera_state}{Camera\+State}} BARE2\+D\+::\+Camera2\+D\+::get\+Last\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_camera_state}{Camera\+State}} B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Last\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \begin{DoxyReturn}{Returns}
 The camera\textquotesingle{}s last state before modification of the current state. 
@@ -163,7 +183,7 @@ References \mbox{\hyperlink{_camera2_d_8hpp_source_l00142}{m\+\_\+last\+State}}.
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!getScale@{getScale}}
 \index{getScale@{getScale}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{getScale()}{getScale()}}
-{\footnotesize\ttfamily glm\+::vec2 BARE2\+D\+::\+Camera2\+D\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily glm\+::vec2 B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \begin{DoxyReturn}{Returns}
 The zoom levels 
@@ -174,13 +194,13 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00165}{165}} of file
 
 
 
-References \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{BARE2\+D\+::\+Camera\+State\+::scale}}.
+References \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::scale}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a2caeb8117d62d75bce38848a0af4ac5a}\label{class_b_a_r_e2_d_1_1_camera2_d_a2caeb8117d62d75bce38848a0af4ac5a}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!getState@{getState}}
 \index{getState@{getState}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{getState()}{getState()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_camera_state}{Camera\+State}} BARE2\+D\+::\+Camera2\+D\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_camera_state}{Camera\+State}} B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \begin{DoxyReturn}{Returns}
 The camera\textquotesingle{}s current state. 
@@ -197,7 +217,7 @@ References \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}.
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!getStatePosition@{getStatePosition}}
 \index{getStatePosition@{getStatePosition}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{getStatePosition()}{getStatePosition()}}
-{\footnotesize\ttfamily glm\+::vec2 BARE2\+D\+::\+Camera2\+D\+::get\+State\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily glm\+::vec2 B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+State\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \begin{DoxyReturn}{Returns}
 The camera\textquotesingle{}s bottom-\/left position. 
@@ -208,19 +228,24 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00185}{185}} of file
 
 
 
-References \mbox{\hyperlink{_camera2_d_8hpp_source_l00012}{BARE2\+D\+::\+Camera\+State\+::focus}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00138}{m\+\_\+resolution}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{BARE2\+D\+::\+Camera\+State\+::scale}}.
+References \mbox{\hyperlink{_camera2_d_8hpp_source_l00012}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::focus}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00138}{m\+\_\+resolution}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::scale}}.
 
 
 
 Referenced by \mbox{\hyperlink{_camera2_d_8cpp_source_l00074}{get\+Viewspace\+Coord()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00062}{get\+Worldspace\+Coord()}}.
 
-Here is the caller graph for this function\+:
-% FIG 1
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_a44b2c60fa94157c9766475bb2798ef50_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_ad804fb1a2a1e6266d7e6143a8c426ee3}\label{class_b_a_r_e2_d_1_1_camera2_d_ad804fb1a2a1e6266d7e6143a8c426ee3}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!getViewspaceCoord@{getViewspaceCoord}}
 \index{getViewspaceCoord@{getViewspaceCoord}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{getViewspaceCoord()}{getViewspaceCoord()}}
-{\footnotesize\ttfamily glm\+::vec2 BARE2\+D\+::\+Camera2\+D\+::get\+Viewspace\+Coord (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{pos }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily glm\+::vec2 B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Viewspace\+Coord (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{pos }\end{DoxyParamCaption}) const}
 
 
 
@@ -240,21 +265,31 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00074}{74}} of file 
 
 
 
-References \mbox{\hyperlink{_camera2_d_8cpp_source_l00185}{get\+State\+Position()}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{BARE2\+D\+::\+Camera\+State\+::scale}}.
+References \mbox{\hyperlink{_camera2_d_8cpp_source_l00185}{get\+State\+Position()}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::scale}}.
 
 
 
 Referenced by \mbox{\hyperlink{_camera2_d_8cpp_source_l00113}{get\+Viewspace\+Rect()}}.
 
-Here is the call graph for this function\+:
-% FIG 2
-Here is the caller graph for this function\+:
-% FIG 3
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_ad804fb1a2a1e6266d7e6143a8c426ee3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_ad804fb1a2a1e6266d7e6143a8c426ee3_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a358584512c00006b032c81c669b88bf4}\label{class_b_a_r_e2_d_1_1_camera2_d_a358584512c00006b032c81c669b88bf4}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!getViewspaceRect@{getViewspaceRect}}
 \index{getViewspaceRect@{getViewspaceRect}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{getViewspaceRect()}{getViewspaceRect()}}
-{\footnotesize\ttfamily glm\+::vec4 BARE2\+D\+::\+Camera2\+D\+::get\+Viewspace\+Rect (\begin{DoxyParamCaption}\item[{glm\+::vec4}]{dest\+Rect }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily glm\+::vec4 B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Viewspace\+Rect (\begin{DoxyParamCaption}\item[{glm\+::vec4}]{dest\+Rect }\end{DoxyParamCaption}) const}
 
 \begin{DoxyReturn}{Returns}
 The Viewspace rectangle (dest/rect) from a Worldspace rectangle (dest/rect) 
@@ -267,16 +302,21 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00113}{113}} of file
 
 References \mbox{\hyperlink{_camera2_d_8cpp_source_l00074}{get\+Viewspace\+Coord()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00095}{get\+Viewspace\+Size()}}.
 
-Here is the call graph for this function\+:
-% FIG 4
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_a358584512c00006b032c81c669b88bf4_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a291b2e322eb097c35708ac3a921a8d54}\label{class_b_a_r_e2_d_1_1_camera2_d_a291b2e322eb097c35708ac3a921a8d54}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!getViewspaceResolution@{getViewspaceResolution}}
 \index{getViewspaceResolution@{getViewspaceResolution}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{getViewspaceResolution()}{getViewspaceResolution()}}
-{\footnotesize\ttfamily glm\+::vec2 BARE2\+D\+::\+Camera2\+D\+::get\+Viewspace\+Resolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily glm\+::vec2 B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Viewspace\+Resolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \begin{DoxyReturn}{Returns}
-The POV size 
+The P\+OV size 
 \end{DoxyReturn}
 
 
@@ -286,11 +326,22 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00157}{157}} of file
 
 References \mbox{\hyperlink{_camera2_d_8hpp_source_l00138}{m\+\_\+resolution}}.
 
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00267}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::create\+Textures()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_a291b2e322eb097c35708ac3a921a8d54_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a15f5aa21ca6788f07c3827cf9ed5b169}\label{class_b_a_r_e2_d_1_1_camera2_d_a15f5aa21ca6788f07c3827cf9ed5b169}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!getViewspaceSize@{getViewspaceSize}}
 \index{getViewspaceSize@{getViewspaceSize}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{getViewspaceSize()}{getViewspaceSize()}}
-{\footnotesize\ttfamily glm\+::vec2 BARE2\+D\+::\+Camera2\+D\+::get\+Viewspace\+Size (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{size }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily glm\+::vec2 B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Viewspace\+Size (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{size }\end{DoxyParamCaption}) const}
 
 \begin{DoxyReturn}{Returns}
 The Viewspace size from a Worldspace size 
@@ -301,19 +352,24 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00095}{95}} of file 
 
 
 
-References \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{BARE2\+D\+::\+Camera\+State\+::scale}}.
+References \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::scale}}.
 
 
 
 Referenced by \mbox{\hyperlink{_camera2_d_8cpp_source_l00113}{get\+Viewspace\+Rect()}}.
 
-Here is the caller graph for this function\+:
-% FIG 5
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_a15f5aa21ca6788f07c3827cf9ed5b169_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a05e5822ce1e602fccb1ebf8ff569e0d3}\label{class_b_a_r_e2_d_1_1_camera2_d_a05e5822ce1e602fccb1ebf8ff569e0d3}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!getWorldspaceCoord@{getWorldspaceCoord}}
 \index{getWorldspaceCoord@{getWorldspaceCoord}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{getWorldspaceCoord()}{getWorldspaceCoord()}}
-{\footnotesize\ttfamily glm\+::vec2 BARE2\+D\+::\+Camera2\+D\+::get\+Worldspace\+Coord (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{pos }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily glm\+::vec2 B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Worldspace\+Coord (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{pos }\end{DoxyParamCaption}) const}
 
 
 
@@ -333,21 +389,31 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00062}{62}} of file 
 
 
 
-References \mbox{\hyperlink{_camera2_d_8cpp_source_l00185}{get\+State\+Position()}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{BARE2\+D\+::\+Camera\+State\+::scale}}.
+References \mbox{\hyperlink{_camera2_d_8cpp_source_l00185}{get\+State\+Position()}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::scale}}.
 
 
 
 Referenced by \mbox{\hyperlink{_camera2_d_8cpp_source_l00103}{get\+Worldspace\+Rect()}}.
 
-Here is the call graph for this function\+:
-% FIG 6
-Here is the caller graph for this function\+:
-% FIG 7
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_a05e5822ce1e602fccb1ebf8ff569e0d3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_a05e5822ce1e602fccb1ebf8ff569e0d3_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a9101871c433a6d0b289b7972270b19df}\label{class_b_a_r_e2_d_1_1_camera2_d_a9101871c433a6d0b289b7972270b19df}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!getWorldspaceRect@{getWorldspaceRect}}
 \index{getWorldspaceRect@{getWorldspaceRect}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{getWorldspaceRect()}{getWorldspaceRect()}}
-{\footnotesize\ttfamily glm\+::vec4 BARE2\+D\+::\+Camera2\+D\+::get\+Worldspace\+Rect (\begin{DoxyParamCaption}\item[{glm\+::vec4}]{dest\+Rect }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily glm\+::vec4 B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Worldspace\+Rect (\begin{DoxyParamCaption}\item[{glm\+::vec4}]{dest\+Rect }\end{DoxyParamCaption}) const}
 
 \begin{DoxyReturn}{Returns}
 The Worldspace rectangle (dest/rect) from a Viewspace rectangle (dest/rect) 
@@ -360,13 +426,18 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00103}{103}} of file
 
 References \mbox{\hyperlink{_camera2_d_8cpp_source_l00062}{get\+Worldspace\+Coord()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00087}{get\+Worldspace\+Size()}}.
 
-Here is the call graph for this function\+:
-% FIG 8
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_a9101871c433a6d0b289b7972270b19df_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a51f101faa7a4e7f5f7ec77ffdf68bd2d}\label{class_b_a_r_e2_d_1_1_camera2_d_a51f101faa7a4e7f5f7ec77ffdf68bd2d}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!getWorldspaceSize@{getWorldspaceSize}}
 \index{getWorldspaceSize@{getWorldspaceSize}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{getWorldspaceSize()}{getWorldspaceSize()}}
-{\footnotesize\ttfamily glm\+::vec2 BARE2\+D\+::\+Camera2\+D\+::get\+Worldspace\+Size (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{size }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily glm\+::vec2 B\+A\+R\+E2\+D\+::\+Camera2\+D\+::get\+Worldspace\+Size (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{size }\end{DoxyParamCaption}) const}
 
 \begin{DoxyReturn}{Returns}
 The Worldspace size from a Viewspace size 
@@ -377,19 +448,24 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00087}{87}} of file 
 
 
 
-References \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{BARE2\+D\+::\+Camera\+State\+::scale}}.
+References \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::scale}}.
 
 
 
 Referenced by \mbox{\hyperlink{_camera2_d_8cpp_source_l00103}{get\+Worldspace\+Rect()}}.
 
-Here is the caller graph for this function\+:
-% FIG 9
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_a51f101faa7a4e7f5f7ec77ffdf68bd2d_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a7dc4acd9d8d0cc2e7b7d956528fd488f}\label{class_b_a_r_e2_d_1_1_camera2_d_a7dc4acd9d8d0cc2e7b7d956528fd488f}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!init@{init}}
 \index{init@{init}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{init()}{init()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Camera2\+D\+::init (\begin{DoxyParamCaption}\item[{float}]{screen\+Width,  }\item[{float}]{screen\+Height }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Camera2\+D\+::init (\begin{DoxyParamCaption}\item[{float}]{screen\+Width,  }\item[{float}]{screen\+Height }\end{DoxyParamCaption})}
 
 
 
@@ -397,9 +473,9 @@ Initializes the camera.
 
 
 \begin{DoxyParams}{Parameters}
-{\em screen\+Width} & The width of the screen or FBO the camera needs to transform things within. The \textquotesingle{}visual field\textquotesingle{} \\
+{\em screen\+Width} & The width of the screen or F\+BO the camera needs to transform things within. The \textquotesingle{}visual field\textquotesingle{} \\
 \hline
-{\em screen\+Height} & The height of the screen or FBO the camera needs to transform things within. The \textquotesingle{}visual field\textquotesingle{} \\
+{\em screen\+Height} & The height of the screen or F\+BO the camera needs to transform things within. The \textquotesingle{}visual field\textquotesingle{} \\
 \hline
 \end{DoxyParams}
 
@@ -408,23 +484,45 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00017}{17}} of file 
 
 
 
-References \mbox{\hyperlink{_camera2_d_8hpp_source_l00012}{BARE2\+D\+::\+Camera\+State\+::focus}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00145}{m\+\_\+camera\+Matrix}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00142}{m\+\_\+last\+State}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00147}{m\+\_\+matrix\+Needs\+Update}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00145}{m\+\_\+orthographic\+Matrix}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00138}{m\+\_\+resolution}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{BARE2\+D\+::\+Camera\+State\+::scale}}.
+References \mbox{\hyperlink{_camera2_d_8hpp_source_l00012}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::focus}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00145}{m\+\_\+camera\+Matrix}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00142}{m\+\_\+last\+State}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00147}{m\+\_\+matrix\+Needs\+Update}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00145}{m\+\_\+orthographic\+Matrix}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00138}{m\+\_\+resolution}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::scale}}.
 
+
+
+Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00005}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::\+Basic\+Renderer()}}, \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00015}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::\+F\+B\+O\+Renderer()}}, and \mbox{\hyperlink{_textureless_renderer_8cpp_source_l00007}{B\+A\+R\+E2\+D\+::\+Textureless\+Renderer\+::\+Textureless\+Renderer()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_a7dc4acd9d8d0cc2e7b7d956528fd488f_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a040ee7936ee18e8654e258e4013b46dd}\label{class_b_a_r_e2_d_1_1_camera2_d_a040ee7936ee18e8654e258e4013b46dd}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!isRectInViewspace@{isRectInViewspace}}
 \index{isRectInViewspace@{isRectInViewspace}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{isRectInViewspace()}{isRectInViewspace()}}
-{\footnotesize\ttfamily bool BARE2\+D\+::\+Camera2\+D\+::is\+Rect\+In\+Viewspace (\begin{DoxyParamCaption}\item[{glm\+::vec4 \&}]{dest\+Rect }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily bool B\+A\+R\+E2\+D\+::\+Camera2\+D\+::is\+Rect\+In\+Viewspace (\begin{DoxyParamCaption}\item[{glm\+::vec4 \&}]{dest\+Rect }\end{DoxyParamCaption}) const}
 
 
 
 Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00173}{173}} of file \mbox{\hyperlink{_camera2_d_8cpp_source}{Camera2\+D.\+cpp}}.
 
+
+
+Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00056}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::draw()}}, \mbox{\hyperlink{_textureless_renderer_8cpp_source_l00088}{B\+A\+R\+E2\+D\+::\+Textureless\+Renderer\+::draw()}}, and \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00077}{B\+A\+R\+E2\+D\+::\+Bumpy\+Renderer\+::draw()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_a040ee7936ee18e8654e258e4013b46dd_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_ace5aa9374909b4a2f8ec9aa706424c2d}\label{class_b_a_r_e2_d_1_1_camera2_d_ace5aa9374909b4a2f8ec9aa706424c2d}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!offsetFocus@{offsetFocus}}
 \index{offsetFocus@{offsetFocus}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{offsetFocus()}{offsetFocus()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Camera2\+D\+::offset\+Focus (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{delta\+Pos }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Camera2\+D\+::offset\+Focus (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{delta\+Pos }\end{DoxyParamCaption})}
 
 
 
@@ -441,13 +539,13 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00131}{131}} of file
 
 
 
-References \mbox{\hyperlink{_camera2_d_8hpp_source_l00012}{BARE2\+D\+::\+Camera\+State\+::focus}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00142}{m\+\_\+last\+State}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00147}{m\+\_\+matrix\+Needs\+Update}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}.
+References \mbox{\hyperlink{_camera2_d_8hpp_source_l00012}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::focus}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00142}{m\+\_\+last\+State}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00147}{m\+\_\+matrix\+Needs\+Update}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a8752bc5d52f0c89d0ea3af811cae97da}\label{class_b_a_r_e2_d_1_1_camera2_d_a8752bc5d52f0c89d0ea3af811cae97da}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!offsetScale@{offsetScale}}
 \index{offsetScale@{offsetScale}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{offsetScale()}{offsetScale()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Camera2\+D\+::offset\+Scale (\begin{DoxyParamCaption}\item[{float}]{delta\+ScaleX,  }\item[{float}]{delta\+ScaleY }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Camera2\+D\+::offset\+Scale (\begin{DoxyParamCaption}\item[{float}]{delta\+ScaleX,  }\item[{float}]{delta\+ScaleY }\end{DoxyParamCaption})}
 
 
 
@@ -466,13 +564,13 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00148}{148}} of file
 
 
 
-References \mbox{\hyperlink{_camera2_d_8hpp_source_l00142}{m\+\_\+last\+State}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00147}{m\+\_\+matrix\+Needs\+Update}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{BARE2\+D\+::\+Camera\+State\+::scale}}.
+References \mbox{\hyperlink{_camera2_d_8hpp_source_l00142}{m\+\_\+last\+State}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00147}{m\+\_\+matrix\+Needs\+Update}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::scale}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a77f380117fa77203aa78f7c1a85ba9c5}\label{class_b_a_r_e2_d_1_1_camera2_d_a77f380117fa77203aa78f7c1a85ba9c5}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!setFocus@{setFocus}}
 \index{setFocus@{setFocus}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{setFocus()}{setFocus()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Camera2\+D\+::set\+Focus (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{new\+Focus }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Camera2\+D\+::set\+Focus (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{new\+Focus }\end{DoxyParamCaption})}
 
 
 
@@ -489,13 +587,24 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00123}{123}} of file
 
 
 
-References \mbox{\hyperlink{_camera2_d_8hpp_source_l00012}{BARE2\+D\+::\+Camera\+State\+::focus}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00142}{m\+\_\+last\+State}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00147}{m\+\_\+matrix\+Needs\+Update}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}.
+References \mbox{\hyperlink{_camera2_d_8hpp_source_l00012}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::focus}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00142}{m\+\_\+last\+State}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00147}{m\+\_\+matrix\+Needs\+Update}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}.
 
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00015}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::\+F\+B\+O\+Renderer()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_a77f380117fa77203aa78f7c1a85ba9c5_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a061c94d6ebc84e61e5f4c4289a5102c6}\label{class_b_a_r_e2_d_1_1_camera2_d_a061c94d6ebc84e61e5f4c4289a5102c6}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!setScale@{setScale}}
 \index{setScale@{setScale}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{setScale()}{setScale()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Camera2\+D\+::set\+Scale (\begin{DoxyParamCaption}\item[{float}]{new\+ScaleX,  }\item[{float}]{new\+ScaleY }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Camera2\+D\+::set\+Scale (\begin{DoxyParamCaption}\item[{float}]{new\+ScaleX,  }\item[{float}]{new\+ScaleY }\end{DoxyParamCaption})}
 
 
 
@@ -514,13 +623,24 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00139}{139}} of file
 
 
 
-References \mbox{\hyperlink{_camera2_d_8hpp_source_l00142}{m\+\_\+last\+State}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00147}{m\+\_\+matrix\+Needs\+Update}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{BARE2\+D\+::\+Camera\+State\+::scale}}.
+References \mbox{\hyperlink{_camera2_d_8hpp_source_l00142}{m\+\_\+last\+State}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00147}{m\+\_\+matrix\+Needs\+Update}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::scale}}.
 
+
+
+Referenced by \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00015}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::\+F\+B\+O\+Renderer()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_a061c94d6ebc84e61e5f4c4289a5102c6_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_aad8e6c5c18c85f5dc4d0ccd31d356d13}\label{class_b_a_r_e2_d_1_1_camera2_d_aad8e6c5c18c85f5dc4d0ccd31d356d13}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!update@{update}}
 \index{update@{update}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Camera2\+D\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Camera2\+D\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -532,8 +652,19 @@ Definition at line \mbox{\hyperlink{_camera2_d_8cpp_source_l00035}{35}} of file 
 
 
 
-References \mbox{\hyperlink{_camera2_d_8hpp_source_l00012}{BARE2\+D\+::\+Camera\+State\+::focus}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00145}{m\+\_\+camera\+Matrix}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00147}{m\+\_\+matrix\+Needs\+Update}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00145}{m\+\_\+orthographic\+Matrix}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00138}{m\+\_\+resolution}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{BARE2\+D\+::\+Camera\+State\+::scale}}.
+References \mbox{\hyperlink{_camera2_d_8hpp_source_l00012}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::focus}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00145}{m\+\_\+camera\+Matrix}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00147}{m\+\_\+matrix\+Needs\+Update}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00145}{m\+\_\+orthographic\+Matrix}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00138}{m\+\_\+resolution}}, \mbox{\hyperlink{_camera2_d_8hpp_source_l00140}{m\+\_\+state}}, and \mbox{\hyperlink{_camera2_d_8hpp_source_l00013}{B\+A\+R\+E2\+D\+::\+Camera\+State\+::scale}}.
 
+
+
+Referenced by \mbox{\hyperlink{_basic_renderer_8cpp_source_l00044}{B\+A\+R\+E2\+D\+::\+Basic\+Renderer\+::pre\+Render()}}, \mbox{\hyperlink{_textureless_renderer_8cpp_source_l00081}{B\+A\+R\+E2\+D\+::\+Textureless\+Renderer\+::pre\+Render()}}, \mbox{\hyperlink{_bumpy_renderer_8cpp_source_l00027}{B\+A\+R\+E2\+D\+::\+Bumpy\+Renderer\+::pre\+Render()}}, and \mbox{\hyperlink{_f_b_o_renderer_8cpp_source_l00172}{B\+A\+R\+E2\+D\+::\+F\+B\+O\+Renderer\+::pre\+Render()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_camera2_d_aad8e6c5c18c85f5dc4d0ccd31d356d13_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Field Documentation}
@@ -541,7 +672,7 @@ References \mbox{\hyperlink{_camera2_d_8hpp_source_l00012}{BARE2\+D\+::\+Camera\
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!m\_cameraMatrix@{m\_cameraMatrix}}
 \index{m\_cameraMatrix@{m\_cameraMatrix}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{m\_cameraMatrix}{m\_cameraMatrix}}
-{\footnotesize\ttfamily glm\+::mat4 BARE2\+D\+::\+Camera2\+D\+::m\+\_\+camera\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily glm\+::mat4 B\+A\+R\+E2\+D\+::\+Camera2\+D\+::m\+\_\+camera\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -549,13 +680,13 @@ Definition at line \mbox{\hyperlink{_camera2_d_8hpp_source_l00145}{145}} of file
 
 
 
-Referenced by \mbox{\hyperlink{_camera2_d_8cpp_source_l00169}{get\+Camera\+Matrix()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00017}{init()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00035}{update()}}.
+Referenced by \mbox{\hyperlink{_camera2_d_8cpp_source_l00009}{Camera2\+D()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00169}{get\+Camera\+Matrix()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00017}{init()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00035}{update()}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_ae00469b82dba0583ce9d30a787b53c6a}\label{class_b_a_r_e2_d_1_1_camera2_d_ae00469b82dba0583ce9d30a787b53c6a}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!m\_lastState@{m\_lastState}}
 \index{m\_lastState@{m\_lastState}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{m\_lastState}{m\_lastState}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_camera_state}{Camera\+State}} BARE2\+D\+::\+Camera2\+D\+::m\+\_\+last\+State\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_camera_state}{Camera\+State}} B\+A\+R\+E2\+D\+::\+Camera2\+D\+::m\+\_\+last\+State\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -569,7 +700,7 @@ Referenced by \mbox{\hyperlink{_camera2_d_8cpp_source_l00181}{get\+Last\+State()
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!m\_matrixNeedsUpdate@{m\_matrixNeedsUpdate}}
 \index{m\_matrixNeedsUpdate@{m\_matrixNeedsUpdate}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{m\_matrixNeedsUpdate}{m\_matrixNeedsUpdate}}
-{\footnotesize\ttfamily bool BARE2\+D\+::\+Camera2\+D\+::m\+\_\+matrix\+Needs\+Update = false\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily bool B\+A\+R\+E2\+D\+::\+Camera2\+D\+::m\+\_\+matrix\+Needs\+Update = false\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -577,13 +708,13 @@ Definition at line \mbox{\hyperlink{_camera2_d_8hpp_source_l00147}{147}} of file
 
 
 
-Referenced by \mbox{\hyperlink{_camera2_d_8cpp_source_l00017}{init()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00131}{offset\+Focus()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00148}{offset\+Scale()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00123}{set\+Focus()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00139}{set\+Scale()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00035}{update()}}.
+Referenced by \mbox{\hyperlink{_camera2_d_8cpp_source_l00009}{Camera2\+D()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00017}{init()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00131}{offset\+Focus()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00148}{offset\+Scale()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00123}{set\+Focus()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00139}{set\+Scale()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00035}{update()}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a0c62bc85857ebd1ae9c5cd6e03263191}\label{class_b_a_r_e2_d_1_1_camera2_d_a0c62bc85857ebd1ae9c5cd6e03263191}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!m\_orthographicMatrix@{m\_orthographicMatrix}}
 \index{m\_orthographicMatrix@{m\_orthographicMatrix}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{m\_orthographicMatrix}{m\_orthographicMatrix}}
-{\footnotesize\ttfamily glm\+::mat4 BARE2\+D\+::\+Camera2\+D\+::m\+\_\+orthographic\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily glm\+::mat4 B\+A\+R\+E2\+D\+::\+Camera2\+D\+::m\+\_\+orthographic\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -591,13 +722,13 @@ Definition at line \mbox{\hyperlink{_camera2_d_8hpp_source_l00145}{145}} of file
 
 
 
-Referenced by \mbox{\hyperlink{_camera2_d_8cpp_source_l00017}{init()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00035}{update()}}.
+Referenced by \mbox{\hyperlink{_camera2_d_8cpp_source_l00009}{Camera2\+D()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00017}{init()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00035}{update()}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a910698036622712551ca749f701573db}\label{class_b_a_r_e2_d_1_1_camera2_d_a910698036622712551ca749f701573db}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!m\_resolution@{m\_resolution}}
 \index{m\_resolution@{m\_resolution}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{m\_resolution}{m\_resolution}}
-{\footnotesize\ttfamily glm\+::vec2 BARE2\+D\+::\+Camera2\+D\+::m\+\_\+resolution\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily glm\+::vec2 B\+A\+R\+E2\+D\+::\+Camera2\+D\+::m\+\_\+resolution\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -605,13 +736,13 @@ Definition at line \mbox{\hyperlink{_camera2_d_8hpp_source_l00138}{138}} of file
 
 
 
-Referenced by \mbox{\hyperlink{_camera2_d_8cpp_source_l00185}{get\+State\+Position()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00157}{get\+Viewspace\+Resolution()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00017}{init()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00035}{update()}}.
+Referenced by \mbox{\hyperlink{_camera2_d_8cpp_source_l00009}{Camera2\+D()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00185}{get\+State\+Position()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00157}{get\+Viewspace\+Resolution()}}, \mbox{\hyperlink{_camera2_d_8cpp_source_l00017}{init()}}, and \mbox{\hyperlink{_camera2_d_8cpp_source_l00035}{update()}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_camera2_d_a85c9c0f8da363196b1500219de33c0f4}\label{class_b_a_r_e2_d_1_1_camera2_d_a85c9c0f8da363196b1500219de33c0f4}} 
 \index{BARE2D::Camera2D@{BARE2D::Camera2D}!m\_state@{m\_state}}
 \index{m\_state@{m\_state}!BARE2D::Camera2D@{BARE2D::Camera2D}}
 \doxysubsubsection{\texorpdfstring{m\_state}{m\_state}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_camera_state}{Camera\+State}} BARE2\+D\+::\+Camera2\+D\+::m\+\_\+state\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_a_r_e2_d_1_1_camera_state}{Camera\+State}} B\+A\+R\+E2\+D\+::\+Camera2\+D\+::m\+\_\+state\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

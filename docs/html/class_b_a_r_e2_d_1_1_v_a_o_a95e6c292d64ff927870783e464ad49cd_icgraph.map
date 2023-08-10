@@ -1,8 +1,8 @@
 <map id="BARE2D::VAO::init" name="BARE2D::VAO::init">
-<area shape="rect" id="node1" title="Initializes the necessary components, combining the VBO and VAO." alt="" coords="468,109,603,134"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_renderer.html#addafa95f7a6f451e359d1300031bdde1" title="Initializes all necessary bits of the renderer." alt="" coords="257,109,420,134"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_basic_renderer.html#aa228c647d7fe74772a4736d51fdb7796" title="Initializes all necessary bits of the renderer." alt="" coords="22,5,193,45"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_debug_renderer.html#adfa84d84a1525f62c888ecdcdc3e874a" title="Initializes with very rudimentary shaders (hardcoded), adds vertex attributes." alt="" coords="20,69,195,109"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="25,133,189,173"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_textureless_renderer.html#a01951b878023daee5eef45428e8e858e" title="Initializes all necessary bits of the renderer." alt="" coords="5,197,209,237"/>
+<area shape="rect" id="node1" title="Initializes the necessary components, combining the VBO and VAO." alt="" coords="468,111,603,138"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_renderer.html#addafa95f7a6f451e359d1300031bdde1" title="Initializes all necessary bits of the renderer." alt="" coords="257,111,420,138"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_basic_renderer.html#aa228c647d7fe74772a4736d51fdb7796" title="Initializes all necessary bits of the renderer." alt="" coords="22,5,193,47"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_textureless_renderer.html#a01951b878023daee5eef45428e8e858e" title="Initializes all necessary bits of the renderer." alt="" coords="5,71,209,112"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="25,136,189,177"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_debug_renderer.html#adfa84d84a1525f62c888ecdcdc3e874a" title="Initializes with very rudimentary shaders (hardcoded), adds vertex attributes." alt="" coords="20,201,195,243"/>
 </map>

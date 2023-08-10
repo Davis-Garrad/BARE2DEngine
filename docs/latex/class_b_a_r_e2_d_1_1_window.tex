@@ -1,8 +1,8 @@
-\hypertarget{class_b_a_r_e2_d_1_1_window}{}\doxysection{BARE2D\+::Window Class Reference}
+\hypertarget{class_b_a_r_e2_d_1_1_window}{}\doxysection{B\+A\+R\+E2D\+::Window Class Reference}
 \label{class_b_a_r_e2_d_1_1_window}\index{BARE2D::Window@{BARE2D::Window}}
 
 
-It\textquotesingle{}s a graphical window, holds the contexts for GL and SDL.  
+It\textquotesingle{}s a graphical window, holds the contexts for GL and S\+DL.  
 
 
 
@@ -11,8 +11,13 @@ It\textquotesingle{}s a graphical window, holds the contexts for GL and SDL.
 
 
 
-Collaboration diagram for BARE2D\+::Window\+:
-% FIG 0
+Collaboration diagram for B\+A\+R\+E2D\+::Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_window__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -21,13 +26,13 @@ Collaboration diagram for BARE2D\+::Window\+:
 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_afbf0b8730d9d8d9e4c37d0549e503462}{$\sim$\+Window}} ()
 \item 
 void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a02b16c4a920ed63e5bbd4e219f5d1155}{create}} (unsigned int flags)
-\begin{DoxyCompactList}\small\item\em This is a graphical window. It holds information about the GL context, as well as the SDL window context. Takes some flags on creation (SDL\+\_\+\+Window\+Flags)\+: \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This is a graphical window. It holds information about the GL context, as well as the S\+DL window context. Takes some flags on creation (S\+D\+L\+\_\+\+Window\+Flags)\+: \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ad044d5b91867e6731a8844f15fe7ac2b}{set\+Title}} (std\+::string new\+Title)
 \begin{DoxyCompactList}\small\item\em Sets the title of the window. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a78b581a55daca6e1f7fef2ffb2946a89}{set\+Size}} (unsigned int width, unsigned int height)
 \begin{DoxyCompactList}\small\item\em Sets the size of the window (defaults to 600x400) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ad291c1daf4c2c0a550daecb7821f5084}{swap\+Buffer}} ()
-\begin{DoxyCompactList}\small\item\em Swaps the buffer of the SDL window -\/ used to draw to one while the other displays, so no flickering is seen. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Swaps the buffer of the S\+DL window -\/ used to draw to one while the other displays, so no flickering is seen. \end{DoxyCompactList}\item 
 unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_ae0055549c7e1f9b1e16e71b1cb17ac54}{get\+Width}} () const
 \begin{DoxyCompactList}\small\item\em Returns the width of the window. \end{DoxyCompactList}\item 
 unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_adce1ecfb27ebd91fd455d1e04f855496}{get\+Height}} () const
@@ -35,20 +40,20 @@ unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_adce1ecfb27ebd91fd455d
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-SDL\+\_\+\+Window $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a5e37b74f97cf8c79e5db812771a628d7}{m\+\_\+\+SDLWindow}} = nullptr
+S\+D\+L\+\_\+\+Window $\ast$ \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a5e37b74f97cf8c79e5db812771a628d7}{m\+\_\+\+S\+D\+L\+Window}} = nullptr
 \item 
-SDL\+\_\+\+GLContext \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a3a83201dca2b95ea8dc8aa99376e4cd7}{m\+\_\+\+GLContext}} = nullptr
+S\+D\+L\+\_\+\+G\+L\+Context \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a3a83201dca2b95ea8dc8aa99376e4cd7}{m\+\_\+\+G\+L\+Context}} = nullptr
 \item 
 unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a44121b9e2b266093f5de3d81604e1106}{m\+\_\+width}} = 600
 \item 
 unsigned int \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_a9f4ae8b420d1f5924017a64ef261f397}{m\+\_\+height}} = 400
 \item 
-std\+::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_aebddd6af36c0bce1c4bbc1e33709dd7f}{m\+\_\+title}} = \char`\"{}BARE2D Window\char`\"{}
+std\+::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window_aebddd6af36c0bce1c4bbc1e33709dd7f}{m\+\_\+title}} = \char`\"{}B\+A\+R\+E2D \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}}\char`\"{}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-It\textquotesingle{}s a graphical window, holds the contexts for GL and SDL. 
+It\textquotesingle{}s a graphical window, holds the contexts for GL and S\+DL. 
 
 Definition at line \mbox{\hyperlink{_window_8hpp_source_l00013}{13}} of file \mbox{\hyperlink{_window_8hpp_source}{Window.\+hpp}}.
 
@@ -59,25 +64,32 @@ Definition at line \mbox{\hyperlink{_window_8hpp_source_l00013}{13}} of file \mb
 \index{BARE2D::Window@{BARE2D::Window}!Window@{Window}}
 \index{Window@{Window}!BARE2D::Window@{BARE2D::Window}}
 \doxysubsubsection{\texorpdfstring{Window()}{Window()}}
-{\footnotesize\ttfamily BARE2\+D\+::\+Window\+::\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+Window\+::\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Definition at line \mbox{\hyperlink{_window_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_window_8cpp_source}{Window.\+cpp}}.
 
+
+
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00080}{B\+A\+R\+E2\+D\+::\+App\+::init()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_window_a63f88fdf838aa8bd6cf258b8d2d44018_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_window_afbf0b8730d9d8d9e4c37d0549e503462}\label{class_b_a_r_e2_d_1_1_window_afbf0b8730d9d8d9e4c37d0549e503462}} 
 \index{BARE2D::Window@{BARE2D::Window}!````~Window@{$\sim$Window}}
 \index{````~Window@{$\sim$Window}!BARE2D::Window@{BARE2D::Window}}
 \doxysubsubsection{\texorpdfstring{$\sim$Window()}{~Window()}}
-{\footnotesize\ttfamily BARE2\+D\+::\+Window\+::$\sim$\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily B\+A\+R\+E2\+D\+::\+Window\+::$\sim$\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Definition at line \mbox{\hyperlink{_window_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_window_8cpp_source}{Window.\+cpp}}.
-
-
-
-References \mbox{\hyperlink{_window_8hpp_source_l00076}{m\+\_\+\+GLContext}}, and \mbox{\hyperlink{_window_8hpp_source_l00075}{m\+\_\+\+SDLWindow}}.
 
 
 
@@ -86,34 +98,34 @@ References \mbox{\hyperlink{_window_8hpp_source_l00076}{m\+\_\+\+GLContext}}, an
 \index{BARE2D::Window@{BARE2D::Window}!create@{create}}
 \index{create@{create}!BARE2D::Window@{BARE2D::Window}}
 \doxysubsubsection{\texorpdfstring{create()}{create()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Window\+::create (\begin{DoxyParamCaption}\item[{unsigned int}]{flags }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Window\+::create (\begin{DoxyParamCaption}\item[{unsigned int}]{flags }\end{DoxyParamCaption})}
 
 
 
-This is a graphical window. It holds information about the GL context, as well as the SDL window context. Takes some flags on creation (SDL\+\_\+\+Window\+Flags)\+: 
+This is a graphical window. It holds information about the GL context, as well as the S\+DL window context. Takes some flags on creation (S\+D\+L\+\_\+\+Window\+Flags)\+: 
 
 
 \begin{DoxyItemize}
-\item SDL\+\_\+\+WINDOW\+\_\+\+FULLSCREEN
-\item FULLSCREN\+\_\+\+DESKTOP
-\item OPENGL
-\item VULKAN
-\item SHOWN
-\item HIDDEN
-\item BORDERLESS
-\item RESIZABLE
-\item MIN/\+MAXIMIZED
-\item INPUT\+\_\+\+GRABBED
-\item INPUT\+\_\+\+FOCUS
-\item MOUSE\+\_\+\+FOCUS
-\item FOREIGN
-\item ALLOW\+\_\+\+HIGHDPI
-\item MOUSE\+\_\+\+CAPTURE
-\item ALWAYS\+\_\+\+ON\+\_\+\+TOP
-\item SKIP\+\_\+\+TASKBAR
-\item UTILITY
-\item TOOLTIP
-\item POPUP\+\_\+\+MENU These can be ORed together to transfer them to this function \begin{DoxyReturn}{Returns}
+\item S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+EN
+\item F\+U\+L\+L\+S\+C\+R\+E\+N\+\_\+\+D\+E\+S\+K\+T\+OP
+\item O\+P\+E\+N\+GL
+\item V\+U\+L\+K\+AN
+\item S\+H\+O\+WN
+\item H\+I\+D\+D\+EN
+\item B\+O\+R\+D\+E\+R\+L\+E\+SS
+\item R\+E\+S\+I\+Z\+A\+B\+LE
+\item M\+I\+N/\+M\+A\+X\+I\+M\+I\+Z\+ED
+\item I\+N\+P\+U\+T\+\_\+\+G\+R\+A\+B\+B\+ED
+\item I\+N\+P\+U\+T\+\_\+\+F\+O\+C\+US
+\item M\+O\+U\+S\+E\+\_\+\+F\+O\+C\+US
+\item F\+O\+R\+E\+I\+GN
+\item A\+L\+L\+O\+W\+\_\+\+H\+I\+G\+H\+D\+PI
+\item M\+O\+U\+S\+E\+\_\+\+C\+A\+P\+T\+U\+RE
+\item A\+L\+W\+A\+Y\+S\+\_\+\+O\+N\+\_\+\+T\+OP
+\item S\+K\+I\+P\+\_\+\+T\+A\+S\+K\+B\+AR
+\item U\+T\+I\+L\+I\+TY
+\item T\+O\+O\+L\+T\+IP
+\item P\+O\+P\+U\+P\+\_\+\+M\+E\+NU These can be O\+Red together to transfer them to this function \begin{DoxyReturn}{Returns}
 Returns an error (if one is created) 
 \end{DoxyReturn}
 
@@ -123,21 +135,20 @@ Definition at line \mbox{\hyperlink{_window_8cpp_source_l00020}{20}} of file \mb
 
 
 
-References \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15aa4c46509c81b14752ae8ff94452ff486}{BARE2\+D\+::\+GLEW\+\_\+\+FAILURE}}, \mbox{\hyperlink{_window_8hpp_source_l00076}{m\+\_\+\+GLContext}}, \mbox{\hyperlink{_window_8hpp_source_l00078}{m\+\_\+height}}, \mbox{\hyperlink{_window_8hpp_source_l00075}{m\+\_\+\+SDLWindow}}, \mbox{\hyperlink{_window_8hpp_source_l00079}{m\+\_\+title}}, \mbox{\hyperlink{_window_8hpp_source_l00078}{m\+\_\+width}}, \mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15a2eea2c536f4e062c3b1832f9cea1356d}{BARE2\+D\+::\+SDL\+\_\+\+FAILURE}}, and \mbox{\hyperlink{_b_a_r_e_errors_8cpp_source_l00178}{BARE2\+D\+::throw\+Fatal\+Error()}}.
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00080}{B\+A\+R\+E2\+D\+::\+App\+::init()}}.
 
-
-
-Referenced by \mbox{\hyperlink{_app_8cpp_source_l00080}{BARE2\+D\+::\+App\+::init()}}.
-
-Here is the call graph for this function\+:
-% FIG 1
-Here is the caller graph for this function\+:
-% FIG 2
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_window_a02b16c4a920ed63e5bbd4e219f5d1155_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_window_adce1ecfb27ebd91fd455d1e04f855496}\label{class_b_a_r_e2_d_1_1_window_adce1ecfb27ebd91fd455d1e04f855496}} 
 \index{BARE2D::Window@{BARE2D::Window}!getHeight@{getHeight}}
 \index{getHeight@{getHeight}!BARE2D::Window@{BARE2D::Window}}
 \doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
-{\footnotesize\ttfamily unsigned int BARE2\+D\+::\+Window\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily unsigned int B\+A\+R\+E2\+D\+::\+Window\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -149,19 +160,20 @@ Definition at line \mbox{\hyperlink{_window_8cpp_source_l00097}{97}} of file \mb
 
 
 
-References \mbox{\hyperlink{_window_8hpp_source_l00078}{m\+\_\+height}}.
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00130}{B\+A\+R\+E2\+D\+::\+App\+::draw()}}.
 
-
-
-Referenced by \mbox{\hyperlink{_app_8cpp_source_l00130}{BARE2\+D\+::\+App\+::draw()}}.
-
-Here is the caller graph for this function\+:
-% FIG 3
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_window_adce1ecfb27ebd91fd455d1e04f855496_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_window_ae0055549c7e1f9b1e16e71b1cb17ac54}\label{class_b_a_r_e2_d_1_1_window_ae0055549c7e1f9b1e16e71b1cb17ac54}} 
 \index{BARE2D::Window@{BARE2D::Window}!getWidth@{getWidth}}
 \index{getWidth@{getWidth}!BARE2D::Window@{BARE2D::Window}}
 \doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
-{\footnotesize\ttfamily unsigned int BARE2\+D\+::\+Window\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily unsigned int B\+A\+R\+E2\+D\+::\+Window\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -173,19 +185,20 @@ Definition at line \mbox{\hyperlink{_window_8cpp_source_l00093}{93}} of file \mb
 
 
 
-References \mbox{\hyperlink{_window_8hpp_source_l00078}{m\+\_\+width}}.
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00130}{B\+A\+R\+E2\+D\+::\+App\+::draw()}}.
 
-
-
-Referenced by \mbox{\hyperlink{_app_8cpp_source_l00130}{BARE2\+D\+::\+App\+::draw()}}.
-
-Here is the caller graph for this function\+:
-% FIG 4
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_window_ae0055549c7e1f9b1e16e71b1cb17ac54_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_window_a78b581a55daca6e1f7fef2ffb2946a89}\label{class_b_a_r_e2_d_1_1_window_a78b581a55daca6e1f7fef2ffb2946a89}} 
 \index{BARE2D::Window@{BARE2D::Window}!setSize@{setSize}}
 \index{setSize@{setSize}!BARE2D::Window@{BARE2D::Window}}
 \doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Window\+::set\+Size (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Window\+::set\+Size (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height }\end{DoxyParamCaption})}
 
 
 
@@ -202,15 +215,11 @@ Sets the size of the window (defaults to 600x400)
 
 Definition at line \mbox{\hyperlink{_window_8cpp_source_l00077}{77}} of file \mbox{\hyperlink{_window_8cpp_source}{Window.\+cpp}}.
 
-
-
-References \mbox{\hyperlink{_window_8hpp_source_l00078}{m\+\_\+height}}, \mbox{\hyperlink{_window_8hpp_source_l00075}{m\+\_\+\+SDLWindow}}, and \mbox{\hyperlink{_window_8hpp_source_l00078}{m\+\_\+width}}.
-
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_window_ad044d5b91867e6731a8844f15fe7ac2b}\label{class_b_a_r_e2_d_1_1_window_ad044d5b91867e6731a8844f15fe7ac2b}} 
 \index{BARE2D::Window@{BARE2D::Window}!setTitle@{setTitle}}
 \index{setTitle@{setTitle}!BARE2D::Window@{BARE2D::Window}}
 \doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Window\+::set\+Title (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Title }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Window\+::set\+Title (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Title }\end{DoxyParamCaption})}
 
 
 
@@ -225,19 +234,15 @@ Sets the title of the window.
 
 Definition at line \mbox{\hyperlink{_window_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{_window_8cpp_source}{Window.\+cpp}}.
 
-
-
-References \mbox{\hyperlink{_window_8hpp_source_l00075}{m\+\_\+\+SDLWindow}}, and \mbox{\hyperlink{_window_8hpp_source_l00079}{m\+\_\+title}}.
-
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_window_ad291c1daf4c2c0a550daecb7821f5084}\label{class_b_a_r_e2_d_1_1_window_ad291c1daf4c2c0a550daecb7821f5084}} 
 \index{BARE2D::Window@{BARE2D::Window}!swapBuffer@{swapBuffer}}
 \index{swapBuffer@{swapBuffer}!BARE2D::Window@{BARE2D::Window}}
 \doxysubsubsection{\texorpdfstring{swapBuffer()}{swapBuffer()}}
-{\footnotesize\ttfamily void BARE2\+D\+::\+Window\+::swap\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void B\+A\+R\+E2\+D\+::\+Window\+::swap\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Swaps the buffer of the SDL window -\/ used to draw to one while the other displays, so no flickering is seen. 
+Swaps the buffer of the S\+DL window -\/ used to draw to one while the other displays, so no flickering is seen. 
 
 
 
@@ -245,14 +250,15 @@ Definition at line \mbox{\hyperlink{_window_8cpp_source_l00089}{89}} of file \mb
 
 
 
-References \mbox{\hyperlink{_window_8hpp_source_l00075}{m\+\_\+\+SDLWindow}}.
+Referenced by \mbox{\hyperlink{_app_8cpp_source_l00029}{B\+A\+R\+E2\+D\+::\+App\+::run()}}.
 
-
-
-Referenced by \mbox{\hyperlink{_app_8cpp_source_l00029}{BARE2\+D\+::\+App\+::run()}}.
-
-Here is the caller graph for this function\+:
-% FIG 5
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_a_r_e2_d_1_1_window_ad291c1daf4c2c0a550daecb7821f5084_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Field Documentation}
@@ -260,71 +266,51 @@ Here is the caller graph for this function\+:
 \index{BARE2D::Window@{BARE2D::Window}!m\_GLContext@{m\_GLContext}}
 \index{m\_GLContext@{m\_GLContext}!BARE2D::Window@{BARE2D::Window}}
 \doxysubsubsection{\texorpdfstring{m\_GLContext}{m\_GLContext}}
-{\footnotesize\ttfamily SDL\+\_\+\+GLContext BARE2\+D\+::\+Window\+::m\+\_\+\+GLContext = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+G\+L\+Context B\+A\+R\+E2\+D\+::\+Window\+::m\+\_\+\+G\+L\+Context = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Definition at line \mbox{\hyperlink{_window_8hpp_source_l00076}{76}} of file \mbox{\hyperlink{_window_8hpp_source}{Window.\+hpp}}.
 
-
-
-Referenced by \mbox{\hyperlink{_window_8cpp_source_l00020}{create()}}, and \mbox{\hyperlink{_window_8cpp_source_l00013}{$\sim$\+Window()}}.
-
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_window_a9f4ae8b420d1f5924017a64ef261f397}\label{class_b_a_r_e2_d_1_1_window_a9f4ae8b420d1f5924017a64ef261f397}} 
 \index{BARE2D::Window@{BARE2D::Window}!m\_height@{m\_height}}
 \index{m\_height@{m\_height}!BARE2D::Window@{BARE2D::Window}}
 \doxysubsubsection{\texorpdfstring{m\_height}{m\_height}}
-{\footnotesize\ttfamily unsigned int BARE2\+D\+::\+Window\+::m\+\_\+height = 400\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily unsigned int B\+A\+R\+E2\+D\+::\+Window\+::m\+\_\+height = 400\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Definition at line \mbox{\hyperlink{_window_8hpp_source_l00078}{78}} of file \mbox{\hyperlink{_window_8hpp_source}{Window.\+hpp}}.
-
-
-
-Referenced by \mbox{\hyperlink{_window_8cpp_source_l00020}{create()}}, \mbox{\hyperlink{_window_8cpp_source_l00097}{get\+Height()}}, and \mbox{\hyperlink{_window_8cpp_source_l00077}{set\+Size()}}.
 
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_window_a5e37b74f97cf8c79e5db812771a628d7}\label{class_b_a_r_e2_d_1_1_window_a5e37b74f97cf8c79e5db812771a628d7}} 
 \index{BARE2D::Window@{BARE2D::Window}!m\_SDLWindow@{m\_SDLWindow}}
 \index{m\_SDLWindow@{m\_SDLWindow}!BARE2D::Window@{BARE2D::Window}}
 \doxysubsubsection{\texorpdfstring{m\_SDLWindow}{m\_SDLWindow}}
-{\footnotesize\ttfamily SDL\+\_\+\+Window$\ast$ BARE2\+D\+::\+Window\+::m\+\_\+\+SDLWindow = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Window$\ast$ B\+A\+R\+E2\+D\+::\+Window\+::m\+\_\+\+S\+D\+L\+Window = nullptr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Definition at line \mbox{\hyperlink{_window_8hpp_source_l00075}{75}} of file \mbox{\hyperlink{_window_8hpp_source}{Window.\+hpp}}.
 
-
-
-Referenced by \mbox{\hyperlink{_window_8cpp_source_l00020}{create()}}, \mbox{\hyperlink{_window_8cpp_source_l00077}{set\+Size()}}, \mbox{\hyperlink{_window_8cpp_source_l00072}{set\+Title()}}, \mbox{\hyperlink{_window_8cpp_source_l00089}{swap\+Buffer()}}, and \mbox{\hyperlink{_window_8cpp_source_l00013}{$\sim$\+Window()}}.
-
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_window_aebddd6af36c0bce1c4bbc1e33709dd7f}\label{class_b_a_r_e2_d_1_1_window_aebddd6af36c0bce1c4bbc1e33709dd7f}} 
 \index{BARE2D::Window@{BARE2D::Window}!m\_title@{m\_title}}
 \index{m\_title@{m\_title}!BARE2D::Window@{BARE2D::Window}}
 \doxysubsubsection{\texorpdfstring{m\_title}{m\_title}}
-{\footnotesize\ttfamily std\+::string BARE2\+D\+::\+Window\+::m\+\_\+title = \char`\"{}BARE2D Window\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::string B\+A\+R\+E2\+D\+::\+Window\+::m\+\_\+title = \char`\"{}B\+A\+R\+E2D \mbox{\hyperlink{class_b_a_r_e2_d_1_1_window}{Window}}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Definition at line \mbox{\hyperlink{_window_8hpp_source_l00079}{79}} of file \mbox{\hyperlink{_window_8hpp_source}{Window.\+hpp}}.
 
-
-
-Referenced by \mbox{\hyperlink{_window_8cpp_source_l00020}{create()}}, and \mbox{\hyperlink{_window_8cpp_source_l00072}{set\+Title()}}.
-
 \mbox{\Hypertarget{class_b_a_r_e2_d_1_1_window_a44121b9e2b266093f5de3d81604e1106}\label{class_b_a_r_e2_d_1_1_window_a44121b9e2b266093f5de3d81604e1106}} 
 \index{BARE2D::Window@{BARE2D::Window}!m\_width@{m\_width}}
 \index{m\_width@{m\_width}!BARE2D::Window@{BARE2D::Window}}
 \doxysubsubsection{\texorpdfstring{m\_width}{m\_width}}
-{\footnotesize\ttfamily unsigned int BARE2\+D\+::\+Window\+::m\+\_\+width = 600\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily unsigned int B\+A\+R\+E2\+D\+::\+Window\+::m\+\_\+width = 600\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Definition at line \mbox{\hyperlink{_window_8hpp_source_l00078}{78}} of file \mbox{\hyperlink{_window_8hpp_source}{Window.\+hpp}}.
-
-
-
-Referenced by \mbox{\hyperlink{_window_8cpp_source_l00020}{create()}}, \mbox{\hyperlink{_window_8cpp_source_l00093}{get\+Width()}}, and \mbox{\hyperlink{_window_8cpp_source_l00077}{set\+Size()}}.
 
 
 

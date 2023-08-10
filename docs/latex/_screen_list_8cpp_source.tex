@@ -1,79 +1,79 @@
 \hypertarget{_screen_list_8cpp_source}{}\doxysection{Screen\+List.\+cpp}
 \label{_screen_list_8cpp_source}\index{Source/ScreenList.cpp@{Source/ScreenList.cpp}}
-\mbox{\hyperlink{_screen_list_8cpp}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_screen_list_8hpp}{ScreenList.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_screen_8hpp}{Screen.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00004}00004 }
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00005}00005 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00006}00006 }
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00007}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_afa2262796d0db9f1490c91d1f08c5323}{00007}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_afa2262796d0db9f1490c91d1f08c5323}{ScreenList::ScreenList}}()}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00008}00008     \{}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00009}00009     \}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00010}00010 }
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00011}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_ae60ca6c1a21901036ef810d4a0a93780}{00011}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_ae60ca6c1a21901036ef810d4a0a93780}{ScreenList::\string~ScreenList}}()}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00012}00012     \{}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00013}00013         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9122a125b0ba305f32400ba71171e48e}{m\_screens}}.size(); i++) \{}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00014}00014             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9122a125b0ba305f32400ba71171e48e}{m\_screens}}[i]-\/>destroyScreen();}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00015}00015             \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9122a125b0ba305f32400ba71171e48e}{m\_screens}}[i];}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00016}00016         \}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00017}00017         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}} = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00018}00018         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_aa62f0eae28eff0ca636c0f2eebe40f50}{m\_previousScreen}} = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00019}00019     \}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00020}00020 }
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00021}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a808947b93ae388e0cd66f9b077ae459e}{00021}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a808947b93ae388e0cd66f9b077ae459e}{ScreenList::addScreen}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen}{Screen}}* screen)}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00022}00022     \{}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00023}00023         screen-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a0d3e860e94de16f6200272b71390272d}{initScreen}}();}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00024}00024         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9122a125b0ba305f32400ba71171e48e}{m\_screens}}.push\_back(screen);}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00025}00025     \}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00026}00026 }
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00027}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a60c9f49c4d67b2bf6860668e6db9ff89}{00027}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a60c9f49c4d67b2bf6860668e6db9ff89}{ScreenList::addEntryScreen}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen}{Screen}}* screen)}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00028}00028     \{}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00029}00029         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}} = screen;}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00030}00030         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a808947b93ae388e0cd66f9b077ae459e}{addScreen}}(screen);}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00031}00031     \}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00032}00032 }
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00033}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_ae8047deac7849ebd02b92d8c347715fb}{00033}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_ae8047deac7849ebd02b92d8c347715fb}{ScreenList::moveToNextScreen}}()}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00034}00034     \{}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00035}00035         \textcolor{comment}{// Make sure we don't do something dumb.}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00036}00036         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}}) \{}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00037}00037             \textcolor{keywordflow}{if}((\textcolor{keywordtype}{long} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a106d7066baf13bedb8e6280839719661}{getNextScreenIndex}}() < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9122a125b0ba305f32400ba71171e48e}{m\_screens}}.size()) \{}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00038}00038                 \textcolor{comment}{// Exit the current screen}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00039}00039                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{onExit}}();}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00040}00040                 }
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00041}00041                 \textcolor{comment}{// Move to the next}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00042}00042                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}} = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9122a125b0ba305f32400ba71171e48e}{m\_screens}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a106d7066baf13bedb8e6280839719661}{getNextScreenIndex}}()];}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00043}00043                 }
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00044}00044                 \textcolor{comment}{// Enter the next}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00045}00045                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{onEntry}}();}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00046}00046             \}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00047}00047         \}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00048}00048     \}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00049}00049 }
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00050}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a3456f5ed539fa4b6d50a38600635e878}{00050}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a3456f5ed539fa4b6d50a38600635e878}{ScreenList::moveToPreviousScreen}}()}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00051}00051     \{}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00052}00052         \textcolor{comment}{// Make sure we don't do dumb stuff}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00053}00053         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_aa62f0eae28eff0ca636c0f2eebe40f50}{m\_previousScreen}}) \{}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00054}00054             \textcolor{comment}{// Take a temporary variable to swap this and the previous screen.}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00055}00055             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen}{Screen}}* prev = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}};}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00056}00056             }
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00057}00057             \textcolor{comment}{// Exit this one}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00058}00058             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{onExit}}();}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00059}00059             }
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00060}00060             \textcolor{comment}{// Move to previous, set the new previous}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00061}00061             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}} = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_aa62f0eae28eff0ca636c0f2eebe40f50}{m\_previousScreen}};}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00062}00062             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_aa62f0eae28eff0ca636c0f2eebe40f50}{m\_previousScreen}} = prev;}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00063}00063             }
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00064}00064             \textcolor{comment}{// Enter previous}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00065}00065             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}}-\/>\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{onEntry}}();}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00066}00066         \}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00067}00067     \}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00068}00068     }
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00069}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{00069}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen}{Screen}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{ScreenList::getCurrentScreen}}() \{}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00070}00070         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}};}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00071}00071     \}}
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00072}00072 }
-\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00073}00073 \}}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_screen_list_8hpp}{"ScreenList.hpp"}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_screen_8hpp}{"Screen.hpp"}}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00007}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_afa2262796d0db9f1490c91d1f08c5323}{00007}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{ScreenList}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_afa2262796d0db9f1490c91d1f08c5323}{ScreenList}}()}
+\DoxyCodeLine{00008     \{}
+\DoxyCodeLine{00009     \}}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00011}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_ae60ca6c1a21901036ef810d4a0a93780}{00011}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{ScreenList}}::\string~\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_ae60ca6c1a21901036ef810d4a0a93780}{ScreenList}}()}
+\DoxyCodeLine{00012     \{}
+\DoxyCodeLine{00013         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9122a125b0ba305f32400ba71171e48e}{m\_screens}}.size(); i++) \{}
+\DoxyCodeLine{00014             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9122a125b0ba305f32400ba71171e48e}{m\_screens}}[i]\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_addca78a8061f1ff428982fcd25b26a1d}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_addca78a8061f1ff428982fcd25b26a1d}{destroyScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_addca78a8061f1ff428982fcd25b26a1d}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_addca78a8061f1ff428982fcd25b26a1d}{)}};}
+\DoxyCodeLine{00015             \textcolor{keyword}{delete} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9122a125b0ba305f32400ba71171e48e}{m\_screens}}[i];}
+\DoxyCodeLine{00016         \}}
+\DoxyCodeLine{00017         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}} = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00018         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_aa62f0eae28eff0ca636c0f2eebe40f50}{m\_previousScreen}} = \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00019     \}}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00021}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a808947b93ae388e0cd66f9b077ae459e}{00021}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{ScreenList}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a808947b93ae388e0cd66f9b077ae459e}{addScreen}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen}{Screen}}* screen)}
+\DoxyCodeLine{00022     \{}
+\DoxyCodeLine{00023         screen\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a0d3e860e94de16f6200272b71390272d}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a0d3e860e94de16f6200272b71390272d}{initScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a0d3e860e94de16f6200272b71390272d}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a0d3e860e94de16f6200272b71390272d}{)}};}
+\DoxyCodeLine{00024         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9122a125b0ba305f32400ba71171e48e}{m\_screens}}.push\_back(screen);}
+\DoxyCodeLine{00025     \}}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00027}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a60c9f49c4d67b2bf6860668e6db9ff89}{00027}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{ScreenList}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a60c9f49c4d67b2bf6860668e6db9ff89}{addEntryScreen}}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen}{Screen}}* screen)}
+\DoxyCodeLine{00028     \{}
+\DoxyCodeLine{00029         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}} = screen;}
+\DoxyCodeLine{00030         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a808947b93ae388e0cd66f9b077ae459e}{addScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a808947b93ae388e0cd66f9b077ae459e}{(}}screen\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a808947b93ae388e0cd66f9b077ae459e}{)}};}
+\DoxyCodeLine{00031     \}}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00033}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_ae8047deac7849ebd02b92d8c347715fb}{00033}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{ScreenList}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_ae8047deac7849ebd02b92d8c347715fb}{moveToNextScreen}}()}
+\DoxyCodeLine{00034     \{}
+\DoxyCodeLine{00035         \textcolor{comment}{// Make sure we don't do something dumb.}}
+\DoxyCodeLine{00036         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}}) \{}
+\DoxyCodeLine{00037             \textcolor{keywordflow}{if}((\textcolor{keywordtype}{long} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a106d7066baf13bedb8e6280839719661}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a106d7066baf13bedb8e6280839719661}{getNextScreenIndex}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a106d7066baf13bedb8e6280839719661}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a106d7066baf13bedb8e6280839719661}{)}} < \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9122a125b0ba305f32400ba71171e48e}{m\_screens}}.size()) \{}
+\DoxyCodeLine{00038                 \textcolor{comment}{// Exit the current screen}}
+\DoxyCodeLine{00039                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{onExit}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{)}};}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041                 \textcolor{comment}{// Move to the next}}
+\DoxyCodeLine{00042                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}} = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9122a125b0ba305f32400ba71171e48e}{m\_screens}}[\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a106d7066baf13bedb8e6280839719661}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a106d7066baf13bedb8e6280839719661}{getNextScreenIndex}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a106d7066baf13bedb8e6280839719661}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a106d7066baf13bedb8e6280839719661}{)}}];}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00044                 \textcolor{comment}{// Enter the next}}
+\DoxyCodeLine{00045                 \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{onEntry}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{)}};}
+\DoxyCodeLine{00046             \}}
+\DoxyCodeLine{00047         \}}
+\DoxyCodeLine{00048     \}}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00050}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a3456f5ed539fa4b6d50a38600635e878}{00050}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{ScreenList}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a3456f5ed539fa4b6d50a38600635e878}{moveToPreviousScreen}}()}
+\DoxyCodeLine{00051     \{}
+\DoxyCodeLine{00052         \textcolor{comment}{// Make sure we don't do dumb stuff}}
+\DoxyCodeLine{00053         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_aa62f0eae28eff0ca636c0f2eebe40f50}{m\_previousScreen}}) \{}
+\DoxyCodeLine{00054             \textcolor{comment}{// Take a temporary variable to swap this and the previous screen.}}
+\DoxyCodeLine{00055             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen}{Screen}}* prev = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}};}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057             \textcolor{comment}{// Exit this one}}
+\DoxyCodeLine{00058             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{onExit}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a34a82dc673746b5feca4debd4d22478b}{)}};}
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00060             \textcolor{comment}{// Move to previous, set the new previous}}
+\DoxyCodeLine{00061             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}} = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_aa62f0eae28eff0ca636c0f2eebe40f50}{m\_previousScreen}};}
+\DoxyCodeLine{00062             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_aa62f0eae28eff0ca636c0f2eebe40f50}{m\_previousScreen}} = prev;}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064             \textcolor{comment}{// Enter previous}}
+\DoxyCodeLine{00065             \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{-\/>}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{onEntry}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{(}}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_a4c427b38cca9a1fc2cad147e9e2a1a5e}{)}};}
+\DoxyCodeLine{00066         \}}
+\DoxyCodeLine{00067     \}}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{\Hypertarget{_screen_list_8cpp_source_l00069}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{00069}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen}{Screen}}* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list}{ScreenList}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a9fec8c53fa5b6d1bd38fc928ac27aea4}{getCurrentScreen}}() \{}
+\DoxyCodeLine{00070         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_screen_list_a7022a37759f76a6b60209ff14ef59f3f}{m\_currentScreen}};}
+\DoxyCodeLine{00071     \}}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073 \}}
 
 \end{DoxyCode}

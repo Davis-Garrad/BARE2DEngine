@@ -1,133 +1,133 @@
-\hypertarget{_x_m_l_data_types_8tcc_source}{}\doxysection{XMLData\+Types.\+tcc}
+\hypertarget{_x_m_l_data_types_8tcc_source}{}\doxysection{X\+M\+L\+Data\+Types.\+tcc}
 \label{_x_m_l_data_types_8tcc_source}\index{Source/XMLDataTypes.tcc@{Source/XMLDataTypes.tcc}}
-\mbox{\hyperlink{_x_m_l_data_types_8tcc}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00001}00001 \#pragma once}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00003}00003 \#include <glm/glm.hpp>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00004}00004 }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00005}00005 \#include "{}Cache.hpp"{}}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00006}00006 \#include "{}Texture.hpp"{}}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00007}00007 \#include "{}LuaScript.hpp"{}}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00008}00008 \#include "{}BAREErrors.hpp"{}}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00009}00009 }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00010}00010 namespace BARE2D \{}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00011}00011     // AttributeBase is completely abstract. We don't need to actually define its methods}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00012}00012     // First, the Attribute methods}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00013}00013     // These ones will work for any T}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00014}00014     template<typename T>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00015}00015     Attribute<T>::Attribute(std::string Name, AttributeType Type, T* data) \{}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00016}00016         name = Name;}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00017}00017         type = Type;}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00018}00018         }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00019}00019         m\_data = data;}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00020}00020     \}}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00021}00021     }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00022}00022     template<typename T>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00023}00023     void Attribute<T>::setData(T data) \{}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00024}00024         if(!m\_data) throwFatalError(BAREError::XML\_FAILURE, "{}Failed to set data value -\/ pointer not allocated"{});}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00025}00025         *m\_data = data;}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00026}00026     \}}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00027}00027     }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00028}00028     template<typename T>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00029}00029     void Attribute<T>::swapDataPointer(T* newPtr) \{}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00030}00030         *newPtr = *m\_data;}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00031}00031         m\_data = newPtr;}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00032}00032     \}}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00033}00033     }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00034}00034     template<typename T>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00035}00035     T Attribute<T>::getData() \{}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00036}00036         return *static\_cast<T*>(m\_data);}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00037}00037     \}}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00038}00038     }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00039}00039     template<typename T>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00040}00040     T* Attribute<T>::getDataPointer() \{}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00041}00041         return m\_data;}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00042}00042     \}}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00043}00043     }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00044}00044     // The following Attribute methods must be specialized, as they differ for each type of T}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00045}00045     // getDataString}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00046}00046     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00047}00047     std::string Attribute<std::string>::getDataString();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00048}00048     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00049}00049     std::string Attribute<unsigned int>::getDataString();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00050}00050     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00051}00051     std::string Attribute<int>::getDataString();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00052}00052     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00053}00053     std::string Attribute<float>::getDataString();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00054}00054     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00055}00055     std::string Attribute<bool>::getDataString();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00056}00056     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00057}00057     std::string Attribute<glm::vec2>::getDataString();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00058}00058     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00059}00059     std::string Attribute<std::vector<std::string>>::getDataString();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00060}00060     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00061}00061     std::string Attribute<std::vector<unsigned int>>::getDataString();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00062}00062     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00063}00063     std::string Attribute<std::vector<int>>::getDataString();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00064}00064     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00065}00065     std::string Attribute<std::vector<float>>::getDataString();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00066}00066     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00067}00067     std::string Attribute<std::vector<bool>>::getDataString();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00068}00068     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00069}00069     std::string Attribute<std::vector<glm::vec2>>::getDataString();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00070}00070     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00071}00071     std::string Attribute<LuaScript>::getDataString();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00072}00072     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00073}00073     std::string Attribute<Texture>::getDataString();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00074}00074     }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00075}00075     // SetDefaultData}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00076}00076     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00077}00077     void Attribute<std::string>::setDefaultData();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00078}00078     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00079}00079     void Attribute<unsigned int>::setDefaultData();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00080}00080     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00081}00081     void Attribute<int>::setDefaultData();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00082}00082     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00083}00083     void Attribute<float>::setDefaultData();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00084}00084     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00085}00085     void Attribute<bool>::setDefaultData();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00086}00086     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00087}00087     void Attribute<glm::vec2>::setDefaultData();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00088}00088     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00089}00089     void Attribute<std::vector<std::string>>::setDefaultData();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00090}00090     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00091}00091     void Attribute<std::vector<unsigned int>>::setDefaultData();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00092}00092     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00093}00093     void Attribute<std::vector<int>>::setDefaultData();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00094}00094     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00095}00095     void Attribute<std::vector<float>>::setDefaultData();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00096}00096     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00097}00097     void Attribute<std::vector<bool>>::setDefaultData();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00098}00098     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00099}00099     void Attribute<std::vector<glm::vec2>>::setDefaultData();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00100}00100     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00101}00101     void Attribute<LuaScript>::setDefaultData();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00102}00102     template<>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00103}00103     void Attribute<Texture>::setDefaultData();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00104}00104     }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00105}00105     template<typename T>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00106}00106     T XMLData::getAttributeByName(std::string name) \{}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00107}00107         // Make sure the attribute exists:}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00108}00108         auto searchVariable = m\_attributes.find(name);}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00109}00109         if(searchVariable == m\_attributes.end()) \{}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00110}00110             // Attribute was not found, send an error and return 0.}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00111}00111             throwError(BAREError::XML\_FAILURE, "{}Warning: Attribute "{} + name + "{} does not exist."{});}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00112}00112             return (T)0;}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00113}00113         \}}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00114}00114         }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00115}00115         // If we make it here, the searchVaraible iterator has found our T -\/ return the data in the attribute}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00116}00116         return static\_cast<Attribute<T>*>(searchVariable-\/>second)-\/>getData();}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00117}00117     \}}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00118}00118     }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00119}00119     template<typename T>}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00120}00120     void XMLData::addAttribute(std::string name, AttributeType type, T* data) \{}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00121}00121         Attribute<T>* attr = new Attribute<T>(name, type, data);}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00122}00122         }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00123}00123         m\_attributes[name] = attr;}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00124}00124     \}}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00125}00125     // I believe that is all that needs to be specialized.}
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00126}00126     }
-\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00127}00127 \}}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{/}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_cache_8hpp}{"Cache.hpp"}}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_texture_8hpp}{"Texture.hpp"}}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_lua_script_8hpp}{"LuaScript.hpp"}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_b_a_r_e_errors_8hpp}{"BAREErrors.hpp"}}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_b_a_r_e2_d}{BARE2D}} \{}
+\DoxyCodeLine{00011     \textcolor{comment}{// AttributeBase is completely abstract. We don't need to actually define its methods}}
+\DoxyCodeLine{00012     \textcolor{comment}{// First, the Attribute methods}}
+\DoxyCodeLine{00013     \textcolor{comment}{// These ones will work for any T}}
+\DoxyCodeLine{00014     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00015}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a94be133efd820d80ee7db4b9fdfdff0c}{00015}}     \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a94be133efd820d80ee7db4b9fdfdff0c}{Attribute}}(std::string Name, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}} Type, T* data) \{}
+\DoxyCodeLine{00016         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_af991938222f7eb1facde0b371ece23ad}{name}} = Name;}
+\DoxyCodeLine{00017         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_base_ad0f728ccf154d324fa0353b0a6550896}{type}} = Type;}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a9bb8d5ea30d35ee697929cea85dd3c83}{m\_data}} = data;}
+\DoxyCodeLine{00020     \}}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{00022     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00023}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{00023}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac2747611a84093e77234afb65382a7e9}{setData}}(T data) \{}
+\DoxyCodeLine{00024         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a9bb8d5ea30d35ee697929cea85dd3c83}{m\_data}}) \mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{throwFatalError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{XML\_FAILURE}}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{,}} \textcolor{stringliteral}{"Failed to set data value -\/ pointer not allocated"}\mbox{\hyperlink{namespace_b_a_r_e2_d_aed4332e42208fed2905a8b0845dad4d1}{)}};}
+\DoxyCodeLine{00025         *\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a9bb8d5ea30d35ee697929cea85dd3c83}{m\_data}} = data;}
+\DoxyCodeLine{00026     \}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00029}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac6fcd55ffbb9cd794156de772870420c}{00029}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ac6fcd55ffbb9cd794156de772870420c}{swapDataPointer}}(T* newPtr) \{}
+\DoxyCodeLine{00030         *newPtr = *\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a9bb8d5ea30d35ee697929cea85dd3c83}{m\_data}};}
+\DoxyCodeLine{00031         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a9bb8d5ea30d35ee697929cea85dd3c83}{m\_data}} = newPtr;}
+\DoxyCodeLine{00032     \}}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00035}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a03d5bba88eb30e3b92c1f24247dffdac}{00035}}     T \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a03d5bba88eb30e3b92c1f24247dffdac}{getData}}() \{}
+\DoxyCodeLine{00036         \textcolor{keywordflow}{return} *\textcolor{keyword}{static\_cast}<T*>(\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a9bb8d5ea30d35ee697929cea85dd3c83}{m\_data}});}
+\DoxyCodeLine{00037     \}}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00040}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a2eb7e081b3c98be11eb6aee0e2b7328e}{00040}}     T* \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a2eb7e081b3c98be11eb6aee0e2b7328e}{getDataPointer}}() \{}
+\DoxyCodeLine{00041         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a9bb8d5ea30d35ee697929cea85dd3c83}{m\_data}};}
+\DoxyCodeLine{00042     \}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00044     \textcolor{comment}{// The following Attribute methods must be specialized, as they differ for each type of T}}
+\DoxyCodeLine{00045     \textcolor{comment}{// getDataString}}
+\DoxyCodeLine{00046     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00047     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::string>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}();}
+\DoxyCodeLine{00048     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00049     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}();}
+\DoxyCodeLine{00050     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00051     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{int}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}();}
+\DoxyCodeLine{00052     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00053     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{float}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}();}
+\DoxyCodeLine{00054     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00055     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{bool}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}();}
+\DoxyCodeLine{00056     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00057     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<glm::vec2>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}();}
+\DoxyCodeLine{00058     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00059     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<std::string>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}();}
+\DoxyCodeLine{00060     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00061     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}();}
+\DoxyCodeLine{00062     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00063     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{int}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}();}
+\DoxyCodeLine{00064     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00065     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{float}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}();}
+\DoxyCodeLine{00066     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00067     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{bool}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}();}
+\DoxyCodeLine{00068     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00069     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<glm::vec2>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}();}
+\DoxyCodeLine{00070     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00071     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}();}
+\DoxyCodeLine{00072     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00073     std::string \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_a62239c3a4dc7023314404e5e50ced16b}{getDataString}}();}
+\DoxyCodeLine{00074 }
+\DoxyCodeLine{00075     \textcolor{comment}{// SetDefaultData}}
+\DoxyCodeLine{00076     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00077     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::string>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}();}
+\DoxyCodeLine{00078     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00079     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}();}
+\DoxyCodeLine{00080     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00081     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{int}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}();}
+\DoxyCodeLine{00082     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00083     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{float}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}();}
+\DoxyCodeLine{00084     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00085     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\textcolor{keywordtype}{bool}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}();}
+\DoxyCodeLine{00086     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00087     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<glm::vec2>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}();}
+\DoxyCodeLine{00088     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00089     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<std::string>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}();}
+\DoxyCodeLine{00090     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00091     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}();}
+\DoxyCodeLine{00092     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00093     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{int}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}();}
+\DoxyCodeLine{00094     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00095     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{float}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}();}
+\DoxyCodeLine{00096     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00097     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<\textcolor{keywordtype}{bool}>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}();}
+\DoxyCodeLine{00098     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00099     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<std::vector<glm::vec2>>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}();}
+\DoxyCodeLine{00100     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00101     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_lua_script}{LuaScript}}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}();}
+\DoxyCodeLine{00102     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00103     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<\mbox{\hyperlink{struct_b_a_r_e2_d_1_1_texture}{Texture}}>::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute_ada803d515c9744d179b2fda1debef466}{setDefaultData}}();}
+\DoxyCodeLine{00104 }
+\DoxyCodeLine{00105     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00106}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a005915fa3e921266e6abb2ec862072b8}{00106}}     T \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a005915fa3e921266e6abb2ec862072b8}{getAttributeByName}}(std::string name) \{}
+\DoxyCodeLine{00107         \textcolor{comment}{// Make sure the attribute exists:}}
+\DoxyCodeLine{00108         \textcolor{keyword}{auto} searchVariable = \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}.find(name);}
+\DoxyCodeLine{00109         \textcolor{keywordflow}{if}(searchVariable == \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}.end()) \{}
+\DoxyCodeLine{00110             \textcolor{comment}{// Attribute was not found, send an error and return 0.}}
+\DoxyCodeLine{00111             \mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{throwError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{(}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15}{BAREError}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{::}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8}{XML\_FAILURE}}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{,}} \textcolor{stringliteral}{"Warning: Attribute "} + name + \textcolor{stringliteral}{" does not exist."}\mbox{\hyperlink{namespace_b_a_r_e2_d_a0d8f8a98bf559e6d2eda28ae744f486c}{)}};}
+\DoxyCodeLine{00112             \textcolor{keywordflow}{return} (T)0;}
+\DoxyCodeLine{00113         \}}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115         \textcolor{comment}{// If we make it here, the searchVaraible iterator has found our T -\/ return the data in the attribute}}
+\DoxyCodeLine{00116         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast}<\mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>*>(searchVariable-\/>second)-\/>getData();}
+\DoxyCodeLine{00117     \}}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_x_m_l_data_types_8tcc_source_l00120}\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{00120}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data}{XMLData}}::\mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a128262a998e45f6f321de4b12448d02a}{addAttribute}}(std::string name, \mbox{\hyperlink{namespace_b_a_r_e2_d_a0c44bfbd2820598bfcbf4986a6252b02}{AttributeType}} type, T* data) \{}
+\DoxyCodeLine{00121         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>* attr = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_a_r_e2_d_1_1_attribute}{Attribute}}<T>(name, type, data);}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123         \mbox{\hyperlink{class_b_a_r_e2_d_1_1_x_m_l_data_a7ddafc20abc75e8bd0cdd48a5c485052}{m\_attributes}}[name] = attr;}
+\DoxyCodeLine{00124     \}}
+\DoxyCodeLine{00125     \textcolor{comment}{// I believe that is all that needs to be specialized.}}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127 \}}
 
 \end{DoxyCode}

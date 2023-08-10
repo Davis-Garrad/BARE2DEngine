@@ -1,4 +1,4 @@
 <map id="BARE2D::initGLErrorCallback" name="BARE2D::initGLErrorCallback">
-<area shape="rect" id="node1" title="Initializes the GL Debug Message Callback function, and enables debug output straight from OpenGL." alt="" coords="187,5,384,31"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_app.html#a767c055c78bbf86b34bbd47e4b05ee01" title="Runs the program! Starts the update&#45;draw loop." alt="" coords="5,5,139,31"/>
+<area shape="rect" id="node1" title="Initializes the GL Debug Message Callback function, and enables debug output straight from OpenGL." alt="" coords="187,5,384,32"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_app.html#a767c055c78bbf86b34bbd47e4b05ee01" title="Runs the program! Starts the update&#45;draw loop." alt="" coords="5,5,139,32"/>
 </map>

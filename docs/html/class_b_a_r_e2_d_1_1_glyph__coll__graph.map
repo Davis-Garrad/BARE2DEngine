@@ -1,10 +1,10 @@
 <map id="BARE2D::Glyph" name="BARE2D::Glyph">
-<area shape="rect" id="node1" title="The glyph represents a renderbatch&#39;s primitive data, which is created from each draw call in the basi..." alt="" coords="44,357,163,383"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,225,65,251"/>
-<area shape="rect" id="node3" title=" " alt="" coords="183,5,229,31"/>
-<area shape="rect" id="node5" href="$struct_b_a_r_e2_d_1_1_position.html" title="Positional data." alt="" coords="141,137,271,163"/>
-<area shape="rect" id="node8" href="$struct_b_a_r_e2_d_1_1_u_v.html" title="Holds two floats which can act as UV sizes or positions." alt="" coords="296,137,399,163"/>
-<area shape="rect" id="node4" href="$struct_b_a_r_e2_d_1_1_vertex.html" title="Just holds vertex data for convenience." alt="" coords="199,225,322,251"/>
-<area shape="rect" id="node6" href="$struct_b_a_r_e2_d_1_1_colour.html" title="An RGBA 8&#45;bit colour value." alt="" coords="423,137,546,163"/>
-<area shape="rect" id="node7" title=" " alt="" coords="449,5,520,31"/>
+<area shape="rect" id="node1" title="The glyph represents a renderbatch&#39;s primitive data, which is created from each draw call in the basi..." alt="" coords="81,361,200,388"/>
+<area shape="rect" id="node2" title=" " alt="" coords="62,5,109,32"/>
+<area shape="rect" id="node4" href="$struct_b_a_r_e2_d_1_1_position.html" title="Positional data." alt="" coords="20,139,151,165"/>
+<area shape="rect" id="node7" href="$struct_b_a_r_e2_d_1_1_u_v.html" title="Holds two floats which can act as UV sizes or positions." alt="" coords="176,139,278,165"/>
+<area shape="rect" id="node3" href="$struct_b_a_r_e2_d_1_1_vertex.html" title="Just holds vertex data for convenience." alt="" coords="79,228,202,255"/>
+<area shape="rect" id="node5" href="$struct_b_a_r_e2_d_1_1_colour.html" title="An RGBA 8&#45;bit colour value." alt="" coords="303,139,426,165"/>
+<area shape="rect" id="node6" title=" " alt="" coords="329,5,400,32"/>
+<area shape="rect" id="node8" title=" " alt="" coords="226,228,286,255"/>
 </map>

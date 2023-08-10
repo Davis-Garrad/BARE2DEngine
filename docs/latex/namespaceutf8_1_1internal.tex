@@ -4,13 +4,13 @@
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392c}{utf\+\_\+error}} \{ \newline
-\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392cac4d854b29be6992e66c957cf4b957cca}{UTF8\+\_\+\+OK}}
-, \mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca86ebad67eed937cd0edbd5a9e5867476}{NOT\+\_\+\+ENOUGH\+\_\+\+ROOM}}
-, \mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca316f29394dbc76011590cfe20e8ebc21}{INVALID\+\_\+\+LEAD}}
-, \mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca0a7c549a77d50c327e177fafc3a8f537}{INCOMPLETE\+\_\+\+SEQUENCE}}
-, \newline
-\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca74987a94eef8d6936f8d6475e6605373}{OVERLONG\+\_\+\+SEQUENCE}}
-, \mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca8591209ee2d80f2d3728ffb82928c3fa}{INVALID\+\_\+\+CODE\+\_\+\+POINT}}
+\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392cac4d854b29be6992e66c957cf4b957cca}{U\+T\+F8\+\_\+\+OK}}, 
+\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca86ebad67eed937cd0edbd5a9e5867476}{N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+R\+O\+OM}}, 
+\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca316f29394dbc76011590cfe20e8ebc21}{I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+E\+AD}}, 
+\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca0a7c549a77d50c327e177fafc3a8f537}{I\+N\+C\+O\+M\+P\+L\+E\+T\+E\+\_\+\+S\+E\+Q\+U\+E\+N\+CE}}, 
+\newline
+\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca74987a94eef8d6936f8d6475e6605373}{O\+V\+E\+R\+L\+O\+N\+G\+\_\+\+S\+E\+Q\+U\+E\+N\+CE}}, 
+\mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca8591209ee2d80f2d3728ffb82928c3fa}{I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+D\+E\+\_\+\+P\+O\+I\+NT}}
  \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
@@ -30,7 +30,7 @@ enum \mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392
 \item 
 {\footnotesize template$<$typename u32 $>$ }\\bool \mbox{\hyperlink{namespaceutf8_1_1internal_a97b553137aaeda6e8ca6f8d46f78fd79}{is\+\_\+code\+\_\+point\+\_\+valid}} (u32 cp)
 \item 
-{\footnotesize template$<$typename octet\+\_\+iterator $>$ }\\std\+::iterator\+\_\+traits$<$ octet\+\_\+iterator $>$\+::difference\+\_\+type \mbox{\hyperlink{namespaceutf8_1_1internal_adb347cc81d32ebb0fd22d849f7bff5ea}{sequence\+\_\+length}} (octet\+\_\+iterator lead\+\_\+it)
+{\footnotesize template$<$typename octet\+\_\+iterator $>$ }\\std\+::iterator\+\_\+traits$<$ octet\+\_\+iterator $>$\+::difference\+\_\+type \mbox{\hyperlink{namespaceutf8_1_1internal_aadbe437cba7bfcc4df2638f633e9787c}{sequence\+\_\+length}} (octet\+\_\+iterator lead\+\_\+it)
 \item 
 {\footnotesize template$<$typename octet\+\_\+difference\+\_\+type $>$ }\\bool \mbox{\hyperlink{namespaceutf8_1_1internal_a3160f6f24dff465f64f83cb0e66995c6}{is\+\_\+overlong\+\_\+sequence}} (\mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{uint32\+\_\+t}} cp, octet\+\_\+difference\+\_\+type length)
 \item 
@@ -51,19 +51,19 @@ enum \mbox{\hyperlink{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} \mbox{\hyperlink{namespaceutf8_1_1internal_aca9d84aa3b40e635b086c9ce843cc4a4}{LEAD\+\_\+\+SURROGATE\+\_\+\+MIN}} = 0xd800u
+const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} \mbox{\hyperlink{namespaceutf8_1_1internal_aca9d84aa3b40e635b086c9ce843cc4a4}{L\+E\+A\+D\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN}} = 0xd800u
 \item 
-const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} \mbox{\hyperlink{namespaceutf8_1_1internal_af6038b4ebd9b71391eba050cc29720b8}{LEAD\+\_\+\+SURROGATE\+\_\+\+MAX}} = 0xdbffu
+const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} \mbox{\hyperlink{namespaceutf8_1_1internal_af6038b4ebd9b71391eba050cc29720b8}{L\+E\+A\+D\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+AX}} = 0xdbffu
 \item 
-const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} \mbox{\hyperlink{namespaceutf8_1_1internal_a836088cf3e5e29ac9a89b2ffbd91623e}{TRAIL\+\_\+\+SURROGATE\+\_\+\+MIN}} = 0xdc00u
+const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} \mbox{\hyperlink{namespaceutf8_1_1internal_a836088cf3e5e29ac9a89b2ffbd91623e}{T\+R\+A\+I\+L\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN}} = 0xdc00u
 \item 
-const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} \mbox{\hyperlink{namespaceutf8_1_1internal_a37212482f99986fc6aeaa95a9079c972}{TRAIL\+\_\+\+SURROGATE\+\_\+\+MAX}} = 0xdfffu
+const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} \mbox{\hyperlink{namespaceutf8_1_1internal_a37212482f99986fc6aeaa95a9079c972}{T\+R\+A\+I\+L\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+AX}} = 0xdfffu
 \item 
-const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} \mbox{\hyperlink{namespaceutf8_1_1internal_a47b04bad75525ea9b01ff095c70fa081}{LEAD\+\_\+\+OFFSET}} = \mbox{\hyperlink{namespaceutf8_1_1internal_aca9d84aa3b40e635b086c9ce843cc4a4}{LEAD\+\_\+\+SURROGATE\+\_\+\+MIN}} -\/ (0x10000 $>$$>$ 10)
+const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} \mbox{\hyperlink{namespaceutf8_1_1internal_a47b04bad75525ea9b01ff095c70fa081}{L\+E\+A\+D\+\_\+\+O\+F\+F\+S\+ET}} = \mbox{\hyperlink{namespaceutf8_1_1internal_aca9d84aa3b40e635b086c9ce843cc4a4}{L\+E\+A\+D\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN}} -\/ (0x10000 $>$$>$ 10)
 \item 
-const \mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{uint32\+\_\+t}} \mbox{\hyperlink{namespaceutf8_1_1internal_a31ff17e602e8e7e15db5ebfb5e93a3fb}{SURROGATE\+\_\+\+OFFSET}} = 0x10000u -\/ (\mbox{\hyperlink{namespaceutf8_1_1internal_aca9d84aa3b40e635b086c9ce843cc4a4}{LEAD\+\_\+\+SURROGATE\+\_\+\+MIN}} $<$$<$ 10) -\/ \mbox{\hyperlink{namespaceutf8_1_1internal_a836088cf3e5e29ac9a89b2ffbd91623e}{TRAIL\+\_\+\+SURROGATE\+\_\+\+MIN}}
+const \mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{uint32\+\_\+t}} \mbox{\hyperlink{namespaceutf8_1_1internal_a31ff17e602e8e7e15db5ebfb5e93a3fb}{S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+O\+F\+F\+S\+ET}} = 0x10000u -\/ (\mbox{\hyperlink{namespaceutf8_1_1internal_aca9d84aa3b40e635b086c9ce843cc4a4}{L\+E\+A\+D\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN}} $<$$<$ 10) -\/ \mbox{\hyperlink{namespaceutf8_1_1internal_a836088cf3e5e29ac9a89b2ffbd91623e}{T\+R\+A\+I\+L\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN}}
 \item 
-const \mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{uint32\+\_\+t}} \mbox{\hyperlink{namespaceutf8_1_1internal_a0a30055cabb6e5cefb5dafc8812cb123}{CODE\+\_\+\+POINT\+\_\+\+MAX}} = 0x0010ffffu
+const \mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{uint32\+\_\+t}} \mbox{\hyperlink{namespaceutf8_1_1internal_a0a30055cabb6e5cefb5dafc8812cb123}{C\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+\_\+\+M\+AX}} = 0x0010ffffu
 \end{DoxyCompactItemize}
 
 
@@ -76,27 +76,27 @@ const \mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{uint32\+
 
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{UTF8\_OK@{UTF8\_OK}!utf8::internal@{utf8::internal}}\index{utf8::internal@{utf8::internal}!UTF8\_OK@{UTF8\_OK}}}\mbox{\Hypertarget{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392cac4d854b29be6992e66c957cf4b957cca}\label{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392cac4d854b29be6992e66c957cf4b957cca}} 
-UTF8\+\_\+\+OK&\\
+U\+T\+F8\+\_\+\+OK&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{NOT\_ENOUGH\_ROOM@{NOT\_ENOUGH\_ROOM}!utf8::internal@{utf8::internal}}\index{utf8::internal@{utf8::internal}!NOT\_ENOUGH\_ROOM@{NOT\_ENOUGH\_ROOM}}}\mbox{\Hypertarget{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca86ebad67eed937cd0edbd5a9e5867476}\label{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca86ebad67eed937cd0edbd5a9e5867476}} 
-NOT\+\_\+\+ENOUGH\+\_\+\+ROOM&\\
+N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+R\+O\+OM&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{INVALID\_LEAD@{INVALID\_LEAD}!utf8::internal@{utf8::internal}}\index{utf8::internal@{utf8::internal}!INVALID\_LEAD@{INVALID\_LEAD}}}\mbox{\Hypertarget{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca316f29394dbc76011590cfe20e8ebc21}\label{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca316f29394dbc76011590cfe20e8ebc21}} 
-INVALID\+\_\+\+LEAD&\\
+I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+E\+AD&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{INCOMPLETE\_SEQUENCE@{INCOMPLETE\_SEQUENCE}!utf8::internal@{utf8::internal}}\index{utf8::internal@{utf8::internal}!INCOMPLETE\_SEQUENCE@{INCOMPLETE\_SEQUENCE}}}\mbox{\Hypertarget{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca0a7c549a77d50c327e177fafc3a8f537}\label{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca0a7c549a77d50c327e177fafc3a8f537}} 
-INCOMPLETE\+\_\+\+SEQUENCE&\\
+I\+N\+C\+O\+M\+P\+L\+E\+T\+E\+\_\+\+S\+E\+Q\+U\+E\+N\+CE&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{OVERLONG\_SEQUENCE@{OVERLONG\_SEQUENCE}!utf8::internal@{utf8::internal}}\index{utf8::internal@{utf8::internal}!OVERLONG\_SEQUENCE@{OVERLONG\_SEQUENCE}}}\mbox{\Hypertarget{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca74987a94eef8d6936f8d6475e6605373}\label{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca74987a94eef8d6936f8d6475e6605373}} 
-OVERLONG\+\_\+\+SEQUENCE&\\
+O\+V\+E\+R\+L\+O\+N\+G\+\_\+\+S\+E\+Q\+U\+E\+N\+CE&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{INVALID\_CODE\_POINT@{INVALID\_CODE\_POINT}!utf8::internal@{utf8::internal}}\index{utf8::internal@{utf8::internal}!INVALID\_CODE\_POINT@{INVALID\_CODE\_POINT}}}\mbox{\Hypertarget{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca8591209ee2d80f2d3728ffb82928c3fa}\label{namespaceutf8_1_1internal_a9e96c2bc98b37e336b787a281090392ca8591209ee2d80f2d3728ffb82928c3fa}} 
-INVALID\+\_\+\+CODE\+\_\+\+POINT&\\
+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+D\+E\+\_\+\+P\+O\+I\+NT&\\
 \hline
 
 \end{DoxyEnumFields}
@@ -124,16 +124,8 @@ Definition at line \mbox{\hyperlink{core_8h_source_l00153}{153}} of file \mbox{\
 
 
 
-References \mbox{\hyperlink{core_8h_source_l00059}{mask8()}}, \mbox{\hyperlink{core_8h_source_l00134}{NOT\+\_\+\+ENOUGH\+\_\+\+ROOM}}, and \mbox{\hyperlink{core_8h_source_l00134}{UTF8\+\_\+\+OK}}.
+References \mbox{\hyperlink{core_8h_source_l00134}{N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+R\+O\+OM}}, and \mbox{\hyperlink{core_8h_source_l00134}{U\+T\+F8\+\_\+\+OK}}.
 
-
-
-Referenced by \mbox{\hyperlink{core_8h_source_l00223}{validate\+\_\+next()}}.
-
-Here is the call graph for this function\+:
-% FIG 0
-Here is the caller graph for this function\+:
-% FIG 1
 \mbox{\Hypertarget{namespaceutf8_1_1internal_a9d641b9546be985f9f0fd4955ac42a24}\label{namespaceutf8_1_1internal_a9d641b9546be985f9f0fd4955ac42a24}} 
 \index{utf8::internal@{utf8::internal}!get\_sequence\_2@{get\_sequence\_2}}
 \index{get\_sequence\_2@{get\_sequence\_2}!utf8::internal@{utf8::internal}}
@@ -147,16 +139,8 @@ Definition at line \mbox{\hyperlink{core_8h_source_l00164}{164}} of file \mbox{\
 
 
 
-References \mbox{\hyperlink{core_8h_source_l00059}{mask8()}}, \mbox{\hyperlink{core_8h_source_l00134}{NOT\+\_\+\+ENOUGH\+\_\+\+ROOM}}, \mbox{\hyperlink{core_8h_source_l00149}{UTF8\+\_\+\+CPP\+\_\+\+INCREASE\+\_\+\+AND\+\_\+\+RETURN\+\_\+\+ON\+\_\+\+ERROR}}, and \mbox{\hyperlink{core_8h_source_l00134}{UTF8\+\_\+\+OK}}.
+References \mbox{\hyperlink{core_8h_source_l00134}{N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+R\+O\+OM}}, and \mbox{\hyperlink{core_8h_source_l00134}{U\+T\+F8\+\_\+\+OK}}.
 
-
-
-Referenced by \mbox{\hyperlink{core_8h_source_l00223}{validate\+\_\+next()}}.
-
-Here is the call graph for this function\+:
-% FIG 2
-Here is the caller graph for this function\+:
-% FIG 3
 \mbox{\Hypertarget{namespaceutf8_1_1internal_ac1809a1fb3fa6983d64a0d3a39646008}\label{namespaceutf8_1_1internal_ac1809a1fb3fa6983d64a0d3a39646008}} 
 \index{utf8::internal@{utf8::internal}!get\_sequence\_3@{get\_sequence\_3}}
 \index{get\_sequence\_3@{get\_sequence\_3}!utf8::internal@{utf8::internal}}
@@ -170,16 +154,8 @@ Definition at line \mbox{\hyperlink{core_8h_source_l00179}{179}} of file \mbox{\
 
 
 
-References \mbox{\hyperlink{core_8h_source_l00059}{mask8()}}, \mbox{\hyperlink{core_8h_source_l00134}{NOT\+\_\+\+ENOUGH\+\_\+\+ROOM}}, \mbox{\hyperlink{core_8h_source_l00149}{UTF8\+\_\+\+CPP\+\_\+\+INCREASE\+\_\+\+AND\+\_\+\+RETURN\+\_\+\+ON\+\_\+\+ERROR}}, and \mbox{\hyperlink{core_8h_source_l00134}{UTF8\+\_\+\+OK}}.
+References \mbox{\hyperlink{core_8h_source_l00134}{N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+R\+O\+OM}}, and \mbox{\hyperlink{core_8h_source_l00134}{U\+T\+F8\+\_\+\+OK}}.
 
-
-
-Referenced by \mbox{\hyperlink{core_8h_source_l00223}{validate\+\_\+next()}}.
-
-Here is the call graph for this function\+:
-% FIG 4
-Here is the caller graph for this function\+:
-% FIG 5
 \mbox{\Hypertarget{namespaceutf8_1_1internal_ad1958e7c6746ba6b1fbb0d81b88b346c}\label{namespaceutf8_1_1internal_ad1958e7c6746ba6b1fbb0d81b88b346c}} 
 \index{utf8::internal@{utf8::internal}!get\_sequence\_4@{get\_sequence\_4}}
 \index{get\_sequence\_4@{get\_sequence\_4}!utf8::internal@{utf8::internal}}
@@ -193,16 +169,8 @@ Definition at line \mbox{\hyperlink{core_8h_source_l00198}{198}} of file \mbox{\
 
 
 
-References \mbox{\hyperlink{core_8h_source_l00059}{mask8()}}, \mbox{\hyperlink{core_8h_source_l00134}{NOT\+\_\+\+ENOUGH\+\_\+\+ROOM}}, \mbox{\hyperlink{core_8h_source_l00149}{UTF8\+\_\+\+CPP\+\_\+\+INCREASE\+\_\+\+AND\+\_\+\+RETURN\+\_\+\+ON\+\_\+\+ERROR}}, and \mbox{\hyperlink{core_8h_source_l00134}{UTF8\+\_\+\+OK}}.
+References \mbox{\hyperlink{core_8h_source_l00134}{N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+R\+O\+OM}}, and \mbox{\hyperlink{core_8h_source_l00134}{U\+T\+F8\+\_\+\+OK}}.
 
-
-
-Referenced by \mbox{\hyperlink{core_8h_source_l00223}{validate\+\_\+next()}}.
-
-Here is the call graph for this function\+:
-% FIG 6
-Here is the caller graph for this function\+:
-% FIG 7
 \mbox{\Hypertarget{namespaceutf8_1_1internal_a369641e705a3d7c91eb160868a6705f7}\label{namespaceutf8_1_1internal_a369641e705a3d7c91eb160868a6705f7}} 
 \index{utf8::internal@{utf8::internal}!increase\_safely@{increase\_safely}}
 \index{increase\_safely@{increase\_safely}!utf8::internal@{utf8::internal}}
@@ -220,10 +188,8 @@ Definition at line \mbox{\hyperlink{core_8h_source_l00138}{138}} of file \mbox{\
 
 
 
-References \mbox{\hyperlink{core_8h_source_l00134}{INCOMPLETE\+\_\+\+SEQUENCE}}, \mbox{\hyperlink{core_8h_source_l00069}{is\+\_\+trail()}}, \mbox{\hyperlink{core_8h_source_l00134}{NOT\+\_\+\+ENOUGH\+\_\+\+ROOM}}, and \mbox{\hyperlink{core_8h_source_l00134}{UTF8\+\_\+\+OK}}.
+References \mbox{\hyperlink{core_8h_source_l00134}{I\+N\+C\+O\+M\+P\+L\+E\+T\+E\+\_\+\+S\+E\+Q\+U\+E\+N\+CE}}, \mbox{\hyperlink{core_8h_source_l00134}{N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+R\+O\+OM}}, and \mbox{\hyperlink{core_8h_source_l00134}{U\+T\+F8\+\_\+\+OK}}.
 
-Here is the call graph for this function\+:
-% FIG 8
 \mbox{\Hypertarget{namespaceutf8_1_1internal_a97b553137aaeda6e8ca6f8d46f78fd79}\label{namespaceutf8_1_1internal_a97b553137aaeda6e8ca6f8d46f78fd79}} 
 \index{utf8::internal@{utf8::internal}!is\_code\_point\_valid@{is\_code\_point\_valid}}
 \index{is\_code\_point\_valid@{is\_code\_point\_valid}!utf8::internal@{utf8::internal}}
@@ -237,16 +203,8 @@ Definition at line \mbox{\hyperlink{core_8h_source_l00093}{93}} of file \mbox{\h
 
 
 
-References \mbox{\hyperlink{core_8h_source_l00056}{CODE\+\_\+\+POINT\+\_\+\+MAX}}, and \mbox{\hyperlink{core_8h_source_l00087}{is\+\_\+surrogate()}}.
+References \mbox{\hyperlink{core_8h_source_l00056}{C\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+\_\+\+M\+AX}}.
 
-
-
-Referenced by \mbox{\hyperlink{checked_8h_source_l00073}{utf8\+::append()}}, and \mbox{\hyperlink{core_8h_source_l00223}{validate\+\_\+next()}}.
-
-Here is the call graph for this function\+:
-% FIG 9
-Here is the caller graph for this function\+:
-% FIG 10
 \mbox{\Hypertarget{namespaceutf8_1_1internal_a1a4095fb207096e04f94f21eb23d2723}\label{namespaceutf8_1_1internal_a1a4095fb207096e04f94f21eb23d2723}} 
 \index{utf8::internal@{utf8::internal}!is\_lead\_surrogate@{is\_lead\_surrogate}}
 \index{is\_lead\_surrogate@{is\_lead\_surrogate}!utf8::internal@{utf8::internal}}
@@ -260,14 +218,8 @@ Definition at line \mbox{\hyperlink{core_8h_source_l00075}{75}} of file \mbox{\h
 
 
 
-References \mbox{\hyperlink{core_8h_source_l00049}{LEAD\+\_\+\+SURROGATE\+\_\+\+MAX}}, and \mbox{\hyperlink{core_8h_source_l00048}{LEAD\+\_\+\+SURROGATE\+\_\+\+MIN}}.
+References \mbox{\hyperlink{core_8h_source_l00049}{L\+E\+A\+D\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+AX}}, and \mbox{\hyperlink{core_8h_source_l00048}{L\+E\+A\+D\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN}}.
 
-
-
-Referenced by \mbox{\hyperlink{checked_8h_source_l00207}{utf8\+::utf16to8()}}, and \mbox{\hyperlink{unchecked_8h_source_l00130}{utf8\+::unchecked\+::utf16to8()}}.
-
-Here is the caller graph for this function\+:
-% FIG 11
 \mbox{\Hypertarget{namespaceutf8_1_1internal_a3160f6f24dff465f64f83cb0e66995c6}\label{namespaceutf8_1_1internal_a3160f6f24dff465f64f83cb0e66995c6}} 
 \index{utf8::internal@{utf8::internal}!is\_overlong\_sequence@{is\_overlong\_sequence}}
 \index{is\_overlong\_sequence@{is\_overlong\_sequence}!utf8::internal@{utf8::internal}}
@@ -279,12 +231,6 @@ bool utf8\+::internal\+::is\+\_\+overlong\+\_\+sequence (\begin{DoxyParamCaption
 
 Definition at line \mbox{\hyperlink{core_8h_source_l00116}{116}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
 
-
-
-Referenced by \mbox{\hyperlink{core_8h_source_l00223}{validate\+\_\+next()}}.
-
-Here is the caller graph for this function\+:
-% FIG 12
 \mbox{\Hypertarget{namespaceutf8_1_1internal_a31a185a6bc8b9bf454191a8a95a93595}\label{namespaceutf8_1_1internal_a31a185a6bc8b9bf454191a8a95a93595}} 
 \index{utf8::internal@{utf8::internal}!is\_surrogate@{is\_surrogate}}
 \index{is\_surrogate@{is\_surrogate}!utf8::internal@{utf8::internal}}
@@ -298,14 +244,8 @@ Definition at line \mbox{\hyperlink{core_8h_source_l00087}{87}} of file \mbox{\h
 
 
 
-References \mbox{\hyperlink{core_8h_source_l00048}{LEAD\+\_\+\+SURROGATE\+\_\+\+MIN}}, and \mbox{\hyperlink{core_8h_source_l00051}{TRAIL\+\_\+\+SURROGATE\+\_\+\+MAX}}.
+References \mbox{\hyperlink{core_8h_source_l00048}{L\+E\+A\+D\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN}}, and \mbox{\hyperlink{core_8h_source_l00051}{T\+R\+A\+I\+L\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+AX}}.
 
-
-
-Referenced by \mbox{\hyperlink{core_8h_source_l00093}{is\+\_\+code\+\_\+point\+\_\+valid()}}.
-
-Here is the caller graph for this function\+:
-% FIG 13
 \mbox{\Hypertarget{namespaceutf8_1_1internal_ab4820484159ba613b4901476ceb24516}\label{namespaceutf8_1_1internal_ab4820484159ba613b4901476ceb24516}} 
 \index{utf8::internal@{utf8::internal}!is\_trail@{is\_trail}}
 \index{is\_trail@{is\_trail}!utf8::internal@{utf8::internal}}
@@ -317,18 +257,6 @@ bool utf8\+::internal\+::is\+\_\+trail (\begin{DoxyParamCaption}\item[{octet\+\_
 
 Definition at line \mbox{\hyperlink{core_8h_source_l00069}{69}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
 
-
-
-References \mbox{\hyperlink{core_8h_source_l00059}{mask8()}}.
-
-
-
-Referenced by \mbox{\hyperlink{core_8h_source_l00138}{increase\+\_\+safely()}}, \mbox{\hyperlink{checked_8h_source_l00179}{utf8\+::previous()}}, \mbox{\hyperlink{unchecked_8h_source_l00098}{utf8\+::unchecked\+::prior()}}, \mbox{\hyperlink{checked_8h_source_l00163}{utf8\+::prior()}}, and \mbox{\hyperlink{checked_8h_source_l00099}{utf8\+::replace\+\_\+invalid()}}.
-
-Here is the call graph for this function\+:
-% FIG 14
-Here is the caller graph for this function\+:
-% FIG 15
 \mbox{\Hypertarget{namespaceutf8_1_1internal_a295b2873fce985213937e5f1193fcb13}\label{namespaceutf8_1_1internal_a295b2873fce985213937e5f1193fcb13}} 
 \index{utf8::internal@{utf8::internal}!is\_trail\_surrogate@{is\_trail\_surrogate}}
 \index{is\_trail\_surrogate@{is\_trail\_surrogate}!utf8::internal@{utf8::internal}}
@@ -342,14 +270,8 @@ Definition at line \mbox{\hyperlink{core_8h_source_l00081}{81}} of file \mbox{\h
 
 
 
-References \mbox{\hyperlink{core_8h_source_l00051}{TRAIL\+\_\+\+SURROGATE\+\_\+\+MAX}}, and \mbox{\hyperlink{core_8h_source_l00050}{TRAIL\+\_\+\+SURROGATE\+\_\+\+MIN}}.
+References \mbox{\hyperlink{core_8h_source_l00051}{T\+R\+A\+I\+L\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+AX}}, and \mbox{\hyperlink{core_8h_source_l00050}{T\+R\+A\+I\+L\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN}}.
 
-
-
-Referenced by \mbox{\hyperlink{checked_8h_source_l00207}{utf8\+::utf16to8()}}.
-
-Here is the caller graph for this function\+:
-% FIG 16
 \mbox{\Hypertarget{namespaceutf8_1_1internal_ab1e3c2fe2296ac185993a183d1bd0678}\label{namespaceutf8_1_1internal_ab1e3c2fe2296ac185993a183d1bd0678}} 
 \index{utf8::internal@{utf8::internal}!mask16@{mask16}}
 \index{mask16@{mask16}!utf8::internal@{utf8::internal}}
@@ -361,12 +283,6 @@ Here is the caller graph for this function\+:
 
 Definition at line \mbox{\hyperlink{core_8h_source_l00064}{64}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
 
-
-
-Referenced by \mbox{\hyperlink{checked_8h_source_l00130}{utf8\+::replace\+\_\+invalid()}}, \mbox{\hyperlink{checked_8h_source_l00207}{utf8\+::utf16to8()}}, and \mbox{\hyperlink{unchecked_8h_source_l00130}{utf8\+::unchecked\+::utf16to8()}}.
-
-Here is the caller graph for this function\+:
-% FIG 17
 \mbox{\Hypertarget{namespaceutf8_1_1internal_adf6e0469e279b9562aa461b4c3c1e7e4}\label{namespaceutf8_1_1internal_adf6e0469e279b9562aa461b4c3c1e7e4}} 
 \index{utf8::internal@{utf8::internal}!mask8@{mask8}}
 \index{mask8@{mask8}!utf8::internal@{utf8::internal}}
@@ -378,35 +294,17 @@ Here is the caller graph for this function\+:
 
 Definition at line \mbox{\hyperlink{core_8h_source_l00059}{59}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
 
-
-
-Referenced by \mbox{\hyperlink{core_8h_source_l00153}{get\+\_\+sequence\+\_\+1()}}, \mbox{\hyperlink{core_8h_source_l00164}{get\+\_\+sequence\+\_\+2()}}, \mbox{\hyperlink{core_8h_source_l00179}{get\+\_\+sequence\+\_\+3()}}, \mbox{\hyperlink{core_8h_source_l00198}{get\+\_\+sequence\+\_\+4()}}, \mbox{\hyperlink{core_8h_source_l00317}{utf8\+::is\+\_\+bom()}}, \mbox{\hyperlink{core_8h_source_l00069}{is\+\_\+trail()}}, \mbox{\hyperlink{unchecked_8h_source_l00061}{utf8\+::unchecked\+::next()}}, \mbox{\hyperlink{core_8h_source_l00100}{sequence\+\_\+length()}}, and \mbox{\hyperlink{core_8h_source_l00306}{utf8\+::starts\+\_\+with\+\_\+bom()}}.
-
-Here is the caller graph for this function\+:
-% FIG 18
-\mbox{\Hypertarget{namespaceutf8_1_1internal_adb347cc81d32ebb0fd22d849f7bff5ea}\label{namespaceutf8_1_1internal_adb347cc81d32ebb0fd22d849f7bff5ea}} 
+\mbox{\Hypertarget{namespaceutf8_1_1internal_aadbe437cba7bfcc4df2638f633e9787c}\label{namespaceutf8_1_1internal_aadbe437cba7bfcc4df2638f633e9787c}} 
 \index{utf8::internal@{utf8::internal}!sequence\_length@{sequence\_length}}
 \index{sequence\_length@{sequence\_length}!utf8::internal@{utf8::internal}}
 \doxysubsubsection{\texorpdfstring{sequence\_length()}{sequence\_length()}}
 {\footnotesize\ttfamily template$<$typename octet\+\_\+iterator $>$ \\
-std\+::iterator\+\_\+traits$<$ octet\+\_\+iterator $>$\+::difference\+\_\+type utf8\+::internal\+::sequence\+\_\+length (\begin{DoxyParamCaption}\item[{octet\+\_\+iterator}]{lead\+\_\+it }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+std\+::iterator\+\_\+traits$<$octet\+\_\+iterator$>$\+::difference\+\_\+type utf8\+::internal\+::sequence\+\_\+length (\begin{DoxyParamCaption}\item[{octet\+\_\+iterator}]{lead\+\_\+it }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Definition at line \mbox{\hyperlink{core_8h_source_l00100}{100}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
 
-
-
-References \mbox{\hyperlink{core_8h_source_l00059}{mask8()}}.
-
-
-
-Referenced by \mbox{\hyperlink{unchecked_8h_source_l00061}{utf8\+::unchecked\+::next()}}, \mbox{\hyperlink{unchecked_8h_source_l00199}{utf8\+::unchecked\+::iterator$<$ octet\+\_\+iterator $>$\+::operator++()}}, and \mbox{\hyperlink{core_8h_source_l00223}{validate\+\_\+next()}}.
-
-Here is the call graph for this function\+:
-% FIG 19
-Here is the caller graph for this function\+:
-% FIG 20
 \mbox{\Hypertarget{namespaceutf8_1_1internal_afd41668f94ce9f60f8e314d05804cecc}\label{namespaceutf8_1_1internal_afd41668f94ce9f60f8e314d05804cecc}} 
 \index{utf8::internal@{utf8::internal}!validate\_next@{validate\_next}}
 \index{validate\_next@{validate\_next}!utf8::internal@{utf8::internal}}
@@ -418,12 +316,6 @@ Here is the caller graph for this function\+:
 
 Definition at line \mbox{\hyperlink{core_8h_source_l00275}{275}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
 
-
-
-References \mbox{\hyperlink{core_8h_source_l00223}{validate\+\_\+next()}}.
-
-Here is the call graph for this function\+:
-% FIG 21
 \mbox{\Hypertarget{namespaceutf8_1_1internal_abe95547575fcc81911e381df03f8ebfe}\label{namespaceutf8_1_1internal_abe95547575fcc81911e381df03f8ebfe}} 
 \index{utf8::internal@{utf8::internal}!validate\_next@{validate\_next}}
 \index{validate\_next@{validate\_next}!utf8::internal@{utf8::internal}}
@@ -437,16 +329,8 @@ Definition at line \mbox{\hyperlink{core_8h_source_l00223}{223}} of file \mbox{\
 
 
 
-References \mbox{\hyperlink{core_8h_source_l00153}{get\+\_\+sequence\+\_\+1()}}, \mbox{\hyperlink{core_8h_source_l00164}{get\+\_\+sequence\+\_\+2()}}, \mbox{\hyperlink{core_8h_source_l00179}{get\+\_\+sequence\+\_\+3()}}, \mbox{\hyperlink{core_8h_source_l00198}{get\+\_\+sequence\+\_\+4()}}, \mbox{\hyperlink{core_8h_source_l00134}{INVALID\+\_\+\+CODE\+\_\+\+POINT}}, \mbox{\hyperlink{core_8h_source_l00134}{INVALID\+\_\+\+LEAD}}, \mbox{\hyperlink{core_8h_source_l00093}{is\+\_\+code\+\_\+point\+\_\+valid()}}, \mbox{\hyperlink{core_8h_source_l00116}{is\+\_\+overlong\+\_\+sequence()}}, \mbox{\hyperlink{core_8h_source_l00134}{OVERLONG\+\_\+\+SEQUENCE}}, \mbox{\hyperlink{core_8h_source_l00100}{sequence\+\_\+length()}}, and \mbox{\hyperlink{core_8h_source_l00134}{UTF8\+\_\+\+OK}}.
+References \mbox{\hyperlink{core_8h_source_l00134}{I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+D\+E\+\_\+\+P\+O\+I\+NT}}, \mbox{\hyperlink{core_8h_source_l00134}{I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+E\+AD}}, \mbox{\hyperlink{core_8h_source_l00134}{O\+V\+E\+R\+L\+O\+N\+G\+\_\+\+S\+E\+Q\+U\+E\+N\+CE}}, and \mbox{\hyperlink{core_8h_source_l00134}{U\+T\+F8\+\_\+\+OK}}.
 
-
-
-Referenced by \mbox{\hyperlink{core_8h_source_l00288}{utf8\+::find\+\_\+invalid()}}, \mbox{\hyperlink{checked_8h_source_l00137}{utf8\+::next()}}, \mbox{\hyperlink{checked_8h_source_l00099}{utf8\+::replace\+\_\+invalid()}}, and \mbox{\hyperlink{core_8h_source_l00275}{validate\+\_\+next()}}.
-
-Here is the call graph for this function\+:
-% FIG 22
-Here is the caller graph for this function\+:
-% FIG 23
 
 
 \doxysubsection{Variable Documentation}
@@ -454,7 +338,7 @@ Here is the caller graph for this function\+:
 \index{utf8::internal@{utf8::internal}!CODE\_POINT\_MAX@{CODE\_POINT\_MAX}}
 \index{CODE\_POINT\_MAX@{CODE\_POINT\_MAX}!utf8::internal@{utf8::internal}}
 \doxysubsubsection{\texorpdfstring{CODE\_POINT\_MAX}{CODE\_POINT\_MAX}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{uint32\+\_\+t}} utf8\+::internal\+::\+CODE\+\_\+\+POINT\+\_\+\+MAX = 0x0010ffffu}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{uint32\+\_\+t}} utf8\+::internal\+::\+C\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+\_\+\+M\+AX = 0x0010ffffu}
 
 
 
@@ -468,7 +352,7 @@ Referenced by \mbox{\hyperlink{core_8h_source_l00093}{is\+\_\+code\+\_\+point\+\
 \index{utf8::internal@{utf8::internal}!LEAD\_OFFSET@{LEAD\_OFFSET}}
 \index{LEAD\_OFFSET@{LEAD\_OFFSET}!utf8::internal@{utf8::internal}}
 \doxysubsubsection{\texorpdfstring{LEAD\_OFFSET}{LEAD\_OFFSET}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} utf8\+::internal\+::\+LEAD\+\_\+\+OFFSET = \mbox{\hyperlink{namespaceutf8_1_1internal_aca9d84aa3b40e635b086c9ce843cc4a4}{LEAD\+\_\+\+SURROGATE\+\_\+\+MIN}} -\/ (0x10000 $>$$>$ 10)}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} utf8\+::internal\+::\+L\+E\+A\+D\+\_\+\+O\+F\+F\+S\+ET = \mbox{\hyperlink{namespaceutf8_1_1internal_aca9d84aa3b40e635b086c9ce843cc4a4}{L\+E\+A\+D\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN}} -\/ (0x10000 $>$$>$ 10)}
 
 
 
@@ -476,13 +360,13 @@ Definition at line \mbox{\hyperlink{core_8h_source_l00052}{52}} of file \mbox{\h
 
 
 
-Referenced by \mbox{\hyperlink{checked_8h_source_l00234}{utf8\+::utf8to16()}}, and \mbox{\hyperlink{unchecked_8h_source_l00145}{utf8\+::unchecked\+::utf8to16()}}.
+Referenced by \mbox{\hyperlink{unchecked_8h_source_l00145}{utf8\+::unchecked\+::utf8to16()}}, and \mbox{\hyperlink{checked_8h_source_l00234}{utf8\+::utf8to16()}}.
 
 \mbox{\Hypertarget{namespaceutf8_1_1internal_af6038b4ebd9b71391eba050cc29720b8}\label{namespaceutf8_1_1internal_af6038b4ebd9b71391eba050cc29720b8}} 
 \index{utf8::internal@{utf8::internal}!LEAD\_SURROGATE\_MAX@{LEAD\_SURROGATE\_MAX}}
 \index{LEAD\_SURROGATE\_MAX@{LEAD\_SURROGATE\_MAX}!utf8::internal@{utf8::internal}}
 \doxysubsubsection{\texorpdfstring{LEAD\_SURROGATE\_MAX}{LEAD\_SURROGATE\_MAX}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} utf8\+::internal\+::\+LEAD\+\_\+\+SURROGATE\+\_\+\+MAX = 0xdbffu}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} utf8\+::internal\+::\+L\+E\+A\+D\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+AX = 0xdbffu}
 
 
 
@@ -496,7 +380,7 @@ Referenced by \mbox{\hyperlink{core_8h_source_l00075}{is\+\_\+lead\+\_\+surrogat
 \index{utf8::internal@{utf8::internal}!LEAD\_SURROGATE\_MIN@{LEAD\_SURROGATE\_MIN}}
 \index{LEAD\_SURROGATE\_MIN@{LEAD\_SURROGATE\_MIN}!utf8::internal@{utf8::internal}}
 \doxysubsubsection{\texorpdfstring{LEAD\_SURROGATE\_MIN}{LEAD\_SURROGATE\_MIN}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} utf8\+::internal\+::\+LEAD\+\_\+\+SURROGATE\+\_\+\+MIN = 0xd800u}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} utf8\+::internal\+::\+L\+E\+A\+D\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN = 0xd800u}
 
 
 
@@ -510,7 +394,7 @@ Referenced by \mbox{\hyperlink{core_8h_source_l00075}{is\+\_\+lead\+\_\+surrogat
 \index{utf8::internal@{utf8::internal}!SURROGATE\_OFFSET@{SURROGATE\_OFFSET}}
 \index{SURROGATE\_OFFSET@{SURROGATE\_OFFSET}!utf8::internal@{utf8::internal}}
 \doxysubsubsection{\texorpdfstring{SURROGATE\_OFFSET}{SURROGATE\_OFFSET}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{uint32\+\_\+t}} utf8\+::internal\+::\+SURROGATE\+\_\+\+OFFSET = 0x10000u -\/ (\mbox{\hyperlink{namespaceutf8_1_1internal_aca9d84aa3b40e635b086c9ce843cc4a4}{LEAD\+\_\+\+SURROGATE\+\_\+\+MIN}} $<$$<$ 10) -\/ \mbox{\hyperlink{namespaceutf8_1_1internal_a836088cf3e5e29ac9a89b2ffbd91623e}{TRAIL\+\_\+\+SURROGATE\+\_\+\+MIN}}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{uint32\+\_\+t}} utf8\+::internal\+::\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+O\+F\+F\+S\+ET = 0x10000u -\/ (\mbox{\hyperlink{namespaceutf8_1_1internal_aca9d84aa3b40e635b086c9ce843cc4a4}{L\+E\+A\+D\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN}} $<$$<$ 10) -\/ \mbox{\hyperlink{namespaceutf8_1_1internal_a836088cf3e5e29ac9a89b2ffbd91623e}{T\+R\+A\+I\+L\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN}}}
 
 
 
@@ -518,13 +402,13 @@ Definition at line \mbox{\hyperlink{core_8h_source_l00053}{53}} of file \mbox{\h
 
 
 
-Referenced by \mbox{\hyperlink{checked_8h_source_l00207}{utf8\+::utf16to8()}}, and \mbox{\hyperlink{unchecked_8h_source_l00130}{utf8\+::unchecked\+::utf16to8()}}.
+Referenced by \mbox{\hyperlink{unchecked_8h_source_l00130}{utf8\+::unchecked\+::utf16to8()}}, and \mbox{\hyperlink{checked_8h_source_l00207}{utf8\+::utf16to8()}}.
 
 \mbox{\Hypertarget{namespaceutf8_1_1internal_a37212482f99986fc6aeaa95a9079c972}\label{namespaceutf8_1_1internal_a37212482f99986fc6aeaa95a9079c972}} 
 \index{utf8::internal@{utf8::internal}!TRAIL\_SURROGATE\_MAX@{TRAIL\_SURROGATE\_MAX}}
 \index{TRAIL\_SURROGATE\_MAX@{TRAIL\_SURROGATE\_MAX}!utf8::internal@{utf8::internal}}
 \doxysubsubsection{\texorpdfstring{TRAIL\_SURROGATE\_MAX}{TRAIL\_SURROGATE\_MAX}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} utf8\+::internal\+::\+TRAIL\+\_\+\+SURROGATE\+\_\+\+MAX = 0xdfffu}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} utf8\+::internal\+::\+T\+R\+A\+I\+L\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+AX = 0xdfffu}
 
 
 
@@ -538,7 +422,7 @@ Referenced by \mbox{\hyperlink{core_8h_source_l00087}{is\+\_\+surrogate()}}, and
 \index{utf8::internal@{utf8::internal}!TRAIL\_SURROGATE\_MIN@{TRAIL\_SURROGATE\_MIN}}
 \index{TRAIL\_SURROGATE\_MIN@{TRAIL\_SURROGATE\_MIN}!utf8::internal@{utf8::internal}}
 \doxysubsubsection{\texorpdfstring{TRAIL\_SURROGATE\_MIN}{TRAIL\_SURROGATE\_MIN}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} utf8\+::internal\+::\+TRAIL\+\_\+\+SURROGATE\+\_\+\+MIN = 0xdc00u}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceutf8_ac23066b92c5a1d9d9ef177201f750936}{uint16\+\_\+t}} utf8\+::internal\+::\+T\+R\+A\+I\+L\+\_\+\+S\+U\+R\+R\+O\+G\+A\+T\+E\+\_\+\+M\+IN = 0xdc00u}
 
 
 
@@ -546,5 +430,5 @@ Definition at line \mbox{\hyperlink{core_8h_source_l00050}{50}} of file \mbox{\h
 
 
 
-Referenced by \mbox{\hyperlink{core_8h_source_l00081}{is\+\_\+trail\+\_\+surrogate()}}, \mbox{\hyperlink{checked_8h_source_l00234}{utf8\+::utf8to16()}}, and \mbox{\hyperlink{unchecked_8h_source_l00145}{utf8\+::unchecked\+::utf8to16()}}.
+Referenced by \mbox{\hyperlink{core_8h_source_l00081}{is\+\_\+trail\+\_\+surrogate()}}, \mbox{\hyperlink{unchecked_8h_source_l00145}{utf8\+::unchecked\+::utf8to16()}}, and \mbox{\hyperlink{checked_8h_source_l00234}{utf8\+::utf8to16()}}.
 

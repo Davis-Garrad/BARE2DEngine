@@ -1,5 +1,5 @@
 <map id="BARE2D::TexturelessRenderer::createRenderBatches" name="BARE2D::TexturelessRenderer::createRenderBatches">
-<area shape="rect" id="node1" title="Constructs all of the render batches from data given by, say, draw() calls." alt="" coords="5,23,209,63"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_v_a_o.html#aaaec16d98be94aa5cfed015df40dda70" title="Binds the VAO&#39;s VBO." alt="" coords="264,5,435,31"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a10dd3e06e3929147edb6b249c94fdcee" title="Unbinds this VAO&#39;s VBO." alt="" coords="257,55,441,80"/>
+<area shape="rect" id="node1" title="Constructs all of the render batches from data given by, say, draw() calls." alt="" coords="5,23,209,65"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_v_a_o.html#aaaec16d98be94aa5cfed015df40dda70" title="Binds the VAO&#39;s VBO." alt="" coords="264,5,435,32"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a10dd3e06e3929147edb6b249c94fdcee" title="Unbinds this VAO&#39;s VBO." alt="" coords="257,56,441,83"/>
 </map>

@@ -1,9 +1,5 @@
 var namespace_b_a_r_e2_d =
 [
-    [ "LuaFunctions", "namespace_b_a_r_e2_d_1_1_lua_functions.html", [
-      [ "delay", "namespace_b_a_r_e2_d_1_1_lua_functions.html#af922bcf60ccf9143297286e148d6968f", null ],
-      [ "print", "namespace_b_a_r_e2_d_1_1_lua_functions.html#accb5722153e602b5cbb4082f1541c112", null ]
-    ] ],
     [ "App", "class_b_a_r_e2_d_1_1_app.html", "class_b_a_r_e2_d_1_1_app" ],
     [ "Attribute", "class_b_a_r_e2_d_1_1_attribute.html", "class_b_a_r_e2_d_1_1_attribute" ],
     [ "AttributeBase", "class_b_a_r_e2_d_1_1_attribute_base.html", "class_b_a_r_e2_d_1_1_attribute_base" ],
@@ -55,86 +51,5 @@ var namespace_b_a_r_e2_d =
     [ "Vertex", "struct_b_a_r_e2_d_1_1_vertex.html", "struct_b_a_r_e2_d_1_1_vertex" ],
     [ "Window", "class_b_a_r_e2_d_1_1_window.html", "class_b_a_r_e2_d_1_1_window" ],
     [ "XMLData", "class_b_a_r_e2_d_1_1_x_m_l_data.html", "class_b_a_r_e2_d_1_1_x_m_l_data" ],
-    [ "XMLDataManager", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html", "class_b_a_r_e2_d_1_1_x_m_l_data_manager" ],
-    [ "AttributeType", "namespace_b_a_r_e2_d.html#a0c44bfbd2820598bfcbf4986a6252b02", [
-      [ "STRING", "namespace_b_a_r_e2_d.html#a0c44bfbd2820598bfcbf4986a6252b02a63b588d5559f64f89a416e656880b949", null ],
-      [ "UNSIGNED_INT", "namespace_b_a_r_e2_d.html#a0c44bfbd2820598bfcbf4986a6252b02a9ba5b3da1d35e22e1680ddbe52d36ed5", null ],
-      [ "VECTOR_UNSIGNED_INT", "namespace_b_a_r_e2_d.html#a0c44bfbd2820598bfcbf4986a6252b02a358c00737f6938bb5efb0674c7521b54", null ],
-      [ "INT", "namespace_b_a_r_e2_d.html#a0c44bfbd2820598bfcbf4986a6252b02a53f93baa3057821107c750323892fa92", null ],
-      [ "FLOAT", "namespace_b_a_r_e2_d.html#a0c44bfbd2820598bfcbf4986a6252b02ae738c26bf4ce1037fa81b039a915cbf6", null ],
-      [ "VECTOR_FLOAT", "namespace_b_a_r_e2_d.html#a0c44bfbd2820598bfcbf4986a6252b02a38bbbd837be5914a8667d76948e1537b", null ],
-      [ "BOOL", "namespace_b_a_r_e2_d.html#a0c44bfbd2820598bfcbf4986a6252b02aa97b2c144243b2b9d2c593ec268b62f5", null ],
-      [ "VECTOR_BOOL", "namespace_b_a_r_e2_d.html#a0c44bfbd2820598bfcbf4986a6252b02ab916a458e01349ca08eb2a51f541e424", null ],
-      [ "VEC2", "namespace_b_a_r_e2_d.html#a0c44bfbd2820598bfcbf4986a6252b02a9bd71a29dd44a2e0252b56ce5c6d251a", null ],
-      [ "VECTOR_VEC2", "namespace_b_a_r_e2_d.html#a0c44bfbd2820598bfcbf4986a6252b02a885431a8d6e8227dbbbe0da37138b4e5", null ],
-      [ "SCRIPT", "namespace_b_a_r_e2_d.html#a0c44bfbd2820598bfcbf4986a6252b02abc283a640f11da0ce7f95dd103c0b38f", null ],
-      [ "TEXTURE", "namespace_b_a_r_e2_d.html#a0c44bfbd2820598bfcbf4986a6252b02a3f92f542bd9ec48f912b9350e22736ac", null ]
-    ] ],
-    [ "BAREError", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15", [
-      [ "SDL_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a2eea2c536f4e062c3b1832f9cea1356d", null ],
-      [ "GL_FAILURE_VERSION", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15aac184187fe6248f102d81fc64e36c57d", null ],
-      [ "DOUBLE_INIT", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15aed6ff68f5f52346f2c0754edb81b83ed", null ],
-      [ "GLEW_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15aa4c46509c81b14752ae8ff94452ff486", null ],
-      [ "FILE_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a804b6ec52f621f93ab2f5026201f0d76", null ],
-      [ "TEXTURE_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a875ae376eb2fbd99c364b0c2ed42fedc", null ],
-      [ "VERTEX_SHADER_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a1f208845587ac9c0c53c388d4d385b1a", null ],
-      [ "FRAGMENT_SHADER_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15ad860107dd407ff9736d6208998d710f6", null ],
-      [ "UNIFORM_NOT_FOUND", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15ad6e29903fb0c6eb8c57d20d9ad478d9e", null ],
-      [ "SHADER_COMPILE_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15abaa8fdfa9df78eba172c4aaa8b8046a2", null ],
-      [ "SHADER_LINK_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15af2f6cbcd601921a638724130311f22cd", null ],
-      [ "GLSL_PROGRAM_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a8bc03ea7709e07920eab3b6c56df1fd8", null ],
-      [ "FONT_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a59e2044a4165c83216dbbca34417462b", null ],
-      [ "FBO_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a56134db1e8559ae4b32bf967c15fc4df", null ],
-      [ "LOGGER_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a396430326452fe792ad9891baac4e76b", null ],
-      [ "XML_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15ac9cd7e5f174739bcd43d579f502980d8", null ],
-      [ "UNINITIALIZED_FUNCTION", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15abcb313a5c9f8965d7b75833af33d16be", null ],
-      [ "LUA_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15aad2cd518718daed8ec4f62c96c4100ba", null ],
-      [ "SDL_MIXER_FLAC_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a532a71eb42f790768ea7b8a0fc21c7f7", null ],
-      [ "SDL_MIXER_OGG_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a270d890766f0830b9a49e81e737e9646", null ],
-      [ "SDL_MIXER_MP3_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a3279ee465d768abc31baf3fa4a04a939", null ],
-      [ "SDL_MIXER_MOD_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a558725ad5285e00d8e0ecc6659151af6", null ],
-      [ "SDL_MIXER_CLOSE_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a302c7e07e257bacc806bef6f25576f3d", null ],
-      [ "SDL_MIXER_LOAD_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a8c106f4878dae2d0ad02cd72ef80dc0b", null ],
-      [ "SDL_MIXER_SOUND_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a55a6fde42c31348fccbcaad7ead6de1f", null ],
-      [ "NULL_PTR_ACCESS", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a914ca2cceda5a54e946a4212cab3b05d", null ],
-      [ "OTHER_ERROR", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a5c0de8157fd24b5627deda20298b5c2d", null ],
-      [ "CACHE_FAILURE", "namespace_b_a_r_e2_d.html#a598d6ee5637b8d61de038646a6674f15a66dc4c888c801d815b8f5f1f1038393c", null ]
-    ] ],
-    [ "GLErrorSeverity", "namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3", [
-      [ "NOTIF", "namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3a110f9c2244e0bd501176c92e7d1b62da", null ],
-      [ "LOW", "namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3a41bc94cbd8eebea13ce0491b2ac11b88", null ],
-      [ "MED", "namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3a2ad6d5975c45da2e711c796f3a1b029c", null ],
-      [ "HIGH", "namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3ab89de3b4b81c4facfac906edf29aec8c", null ],
-      [ "UNKNOWN", "namespace_b_a_r_e2_d.html#a2fa71018d57aea370eff28f6e1a50bc3a696b031073e74bf2cb98e5ef201d4aa3", null ]
-    ] ],
-    [ "Justification", "namespace_b_a_r_e2_d.html#a9897192c146240e3a38981a50a751369", [
-      [ "RIGHT", "namespace_b_a_r_e2_d.html#a9897192c146240e3a38981a50a751369a21507b40c80068eda19865706fdc2403", null ],
-      [ "MIDDLE", "namespace_b_a_r_e2_d.html#a9897192c146240e3a38981a50a751369a43eedd8685eb86592022f8da962e3474", null ],
-      [ "LEFT", "namespace_b_a_r_e2_d.html#a9897192c146240e3a38981a50a751369a684d325a7303f52e64011467ff5c5758", null ]
-    ] ],
-    [ "ScreenState", "namespace_b_a_r_e2_d.html#a2292ebaf1d08311bf95e068f2a1f8253", [
-      [ "RUNNING", "namespace_b_a_r_e2_d.html#a2292ebaf1d08311bf95e068f2a1f8253a43491564ebcfd38568918efbd6e840fd", null ],
-      [ "CHANGE_NEXT", "namespace_b_a_r_e2_d.html#a2292ebaf1d08311bf95e068f2a1f8253af1b095bb6b4fb743116b8e2910c87e2a", null ],
-      [ "CHANGE_PREV", "namespace_b_a_r_e2_d.html#a2292ebaf1d08311bf95e068f2a1f8253ad99b55eff583c9982c86312bdcfdb47c", null ],
-      [ "EXIT_APPLICATION", "namespace_b_a_r_e2_d.html#a2292ebaf1d08311bf95e068f2a1f8253ab8b26f3abe929349d415409c67b3b81e", null ]
-    ] ],
-    [ "decodePNG", "namespace_b_a_r_e2_d.html#a01aa10401587e82a7e7f4b19924d2f44", null ],
-    [ "decodePNG", "namespace_b_a_r_e2_d.html#a480b5f334854e31c2d7e026933129480", null ],
-    [ "displayErrors", "namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35", null ],
-    [ "getErrString", "namespace_b_a_r_e2_d.html#a7951c5decc1f7edc3c4f78ed2f579c85", null ],
-    [ "init", "namespace_b_a_r_e2_d.html#ad4169a65409a67e2c146011c0003479f", null ],
-    [ "initGLErrorCallback", "namespace_b_a_r_e2_d.html#a2e37a4d16611398b81332bb834395984", null ],
-    [ "SDLButtonToCEGUIButton", "namespace_b_a_r_e2_d.html#add368291490f34b060048b5cbb5245f9", null ],
-    [ "SDLKeyToCEGUIKey", "namespace_b_a_r_e2_d.html#a4308f8684a05ffbf8ef36cd49541765b", null ],
-    [ "ShaderProgram::setUniform< glm::ivec2 >", "namespace_b_a_r_e2_d.html#a2e090e14ff39e6b6b7739e7902c48023", null ],
-    [ "ShaderProgram::setUniform< glm::ivec3 >", "namespace_b_a_r_e2_d.html#af8b455c1e00b121342d74e0e778bef75", null ],
-    [ "ShaderProgram::setUniform< glm::ivec4 >", "namespace_b_a_r_e2_d.html#ab7db8ca430581d70a1b1a8d9450f3581", null ],
-    [ "ShaderProgram::setUniform< glm::vec2 >", "namespace_b_a_r_e2_d.html#a0f41cfc335436ad30c889e9fc36d489d", null ],
-    [ "ShaderProgram::setUniform< glm::vec3 >", "namespace_b_a_r_e2_d.html#a18f32d8a0a2a1287f6881211e926eb59", null ],
-    [ "ShaderProgram::setUniform< glm::vec4 >", "namespace_b_a_r_e2_d.html#a2186092617a84ef0b9e1ad955f422a33", null ],
-    [ "ShaderProgram::setUniformMatrix< glm::mat4 >", "namespace_b_a_r_e2_d.html#ac75bb26ffe66fb7ed5cfdb07be799714", null ],
-    [ "throwError", "namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c", null ],
-    [ "throwFatalError", "namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1", null ],
-    [ "GLErrorMinSeverity", "namespace_b_a_r_e2_d.html#a7ebdadee6e21138680eb929277d0da7b", null ],
-    [ "thrownErrors", "namespace_b_a_r_e2_d.html#a78e4606c66dcc65416419cade7db0255", null ]
+    [ "XMLDataManager", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html", "class_b_a_r_e2_d_1_1_x_m_l_data_manager" ]
 ];

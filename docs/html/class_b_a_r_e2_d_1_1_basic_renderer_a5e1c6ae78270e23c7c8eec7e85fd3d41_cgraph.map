@@ -1,5 +1,5 @@
 <map id="BARE2D::BasicRenderer::createRenderBatches" name="BARE2D::BasicRenderer::createRenderBatches">
-<area shape="rect" id="node1" title="Constructs all of the render batches from data given by, say, draw() calls." alt="" coords="5,23,176,63"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_v_a_o.html#aaaec16d98be94aa5cfed015df40dda70" title="Binds the VAO&#39;s VBO." alt="" coords="231,5,401,31"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a10dd3e06e3929147edb6b249c94fdcee" title="Unbinds this VAO&#39;s VBO." alt="" coords="224,55,408,80"/>
+<area shape="rect" id="node1" title="Constructs all of the render batches from data given by, say, draw() calls." alt="" coords="5,23,176,65"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_v_a_o.html#aaaec16d98be94aa5cfed015df40dda70" title="Binds the VAO&#39;s VBO." alt="" coords="231,5,401,32"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a10dd3e06e3929147edb6b249c94fdcee" title="Unbinds this VAO&#39;s VBO." alt="" coords="224,56,408,83"/>
 </map>

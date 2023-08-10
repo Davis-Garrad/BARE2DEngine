@@ -1,9 +1,9 @@
 var class_b_a_r_e2_d_1_1_x_m_l_data_manager =
 [
     [ "addData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#ab2c2021b2cb121395139f81735a82d35", null ],
-    [ "addDataType", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#ae5088e0d5978b1acfc8264cf26c974c0", null ],
+    [ "addDataType", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a4f7792c0a514c2f700cd1151d1eec238", null ],
     [ "clearCache", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a4471f2cadfa727e9a3ef81b937ab8687", null ],
-    [ "getData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#ad0e4ce4a07362864f4493ff0a0c5929f", null ],
+    [ "getData", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a8ca2d79250a0f9e24c013d593007a2c1", null ],
     [ "getDataCache", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#aac1a58615a6a568a2f7d0e0f1e8f170c", null ],
     [ "getDataCount", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#ad1eda009d1ee739e4795d954a9fba092", null ],
     [ "getDataType", "class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#a6cdad1dd229afdea64a81e9bb591e547", null ],

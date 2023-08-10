@@ -1,26 +1,24 @@
 /*
- @licstart  The following is the entire license notice for the JavaScript code in this file.
+@licstart  The following is the entire license notice for the
+JavaScript code in this file.
 
- The MIT License (MIT)
+Copyright (C) 1997-2019 by Dimitri van Heesch
 
- Copyright (C) 1997-2020 by Dimitri van Heesch
+This program is free software; you can redistribute it and/or modify
+it under the terms of version 2 of the GNU General Public License as published by
+the Free Software Foundation
 
- Permission is hereby granted, free of charge, to any person obtaining a copy of this software
- and associated documentation files (the "Software"), to deal in the Software without restriction,
- including without limitation the rights to use, copy, modify, merge, publish, distribute,
- sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
 
- The above copyright notice and this permission notice shall be included in all copies or
- substantial portions of the Software.
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
- BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
- @licend  The above is the entire license notice for the JavaScript code in this file
+@licend  The above is the entire license notice
+for the JavaScript code in this file
 */
 var NAVTREE =
 [
@@ -76,13 +74,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_app_8cpp.html",
-"_x_m_l_data_manager_8hpp.html",
-"class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a5efde9a21fff6c7e43ebc7c2c69ffe78",
-"class_b_a_r_e2_d_1_1_filesystem.html#a31a5f3c47231fd9490590f398ce3e4e5",
-"class_b_a_r_e2_d_1_1_lua_script_queue.html#aa62b9af9441e8b47fa2336c9aecb7abe",
-"class_b_a_r_e2_d_1_1_v_a_o.html#a77436d8b9b995f2d47e72320b65641d0",
-"core_8h.html#abe793b552fabe390d134b97ab81d2c7f",
-"struct_b_a_r_e2_d_1_1_camera_state.html#afd9cc7582150918a69aba72a37c05ae3"
+"_vertex_8hpp_source.html",
+"class_b_a_r_e2_d_1_1_camera2_d.html#a910698036622712551ca749f701573db",
+"class_b_a_r_e2_d_1_1_screen_list.html#ae8047deac7849ebd02b92d8c347715fb",
+"functions_func_v.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
