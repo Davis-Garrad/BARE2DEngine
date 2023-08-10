@@ -1,10 +1,11 @@
 <map id="BARE2D::Cache&lt; S, T &gt;" name="BARE2D::Cache&lt; S, T &gt;">
-<area shape="rect" id="node1" title="This is a skeleton cache class. This can only be used by the ResourceManager or other classes who act..." alt="" coords="5,247,176,273"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="401,14,571,55"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="401,79,571,150"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="393,174,579,215"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="397,239,575,281"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="369,305,603,346"/>
-<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="387,370,585,411"/>
-<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="395,435,577,477"/>
+<area shape="rect" id="node1" title="This is a skeleton cache class. This can only be used by the ResourceManager or other classes who act..." alt="" coords="5,288,176,315"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="405,22,575,63"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="397,87,583,129"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="405,153,575,223"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="397,247,583,289"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="401,313,579,354"/>
+<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="373,378,607,419"/>
+<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="391,443,589,485"/>
+<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_cache.html" title=" " alt="" coords="399,509,581,550"/>
 </map>

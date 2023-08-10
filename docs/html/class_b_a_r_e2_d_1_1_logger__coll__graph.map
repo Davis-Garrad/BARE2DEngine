@@ -1,4 +1,8 @@
 <map id="BARE2D::Logger" name="BARE2D::Logger">
-<area shape="rect" id="node1" title="For general purpose logging, this is the logger! It is a singleton class." alt="" coords="5,95,128,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="30,5,103,32"/>
+<area shape="rect" id="node1" title="For general purpose logging, this is the logger! It is a singleton class." alt="" coords="21,428,144,455"/>
+<area shape="rect" id="node2" title="STL class." alt="" coords="33,339,132,365"/>
+<area shape="rect" id="node3" title="STL class." alt="" coords="14,248,151,289"/>
+<area shape="rect" id="node4" title="STL class." alt="" coords="16,157,149,199"/>
+<area shape="rect" id="node5" title="STL class." alt="" coords="5,81,160,108"/>
+<area shape="rect" id="node6" title="STL class." alt="" coords="33,5,133,32"/>
 </map>

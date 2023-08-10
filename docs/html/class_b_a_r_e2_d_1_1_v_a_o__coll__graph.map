@@ -1,5 +1,5 @@
 <map id="BARE2D::VAO" name="BARE2D::VAO">
-<area shape="rect" id="node1" title="A wrapper class for OpenGL&#39;s VAO, as well as its associated VBO and attributes." alt="" coords="63,109,173,136"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,97,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="156,5,216,32"/>
+<area shape="rect" id="node1" title="A wrapper class for OpenGL&#39;s VAO, as well as its associated VBO and attributes." alt="" coords="36,109,147,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,44,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="129,5,189,32"/>
 </map>

@@ -1,6 +1,8 @@
 <map id="BARE2D::ScreenList" name="BARE2D::ScreenList">
-<area shape="rect" id="node1" title="Holds and connects all of the screens used in the program in a list. Keeps track of the previous scre..." alt="" coords="108,199,255,225"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_screen.html" title="This is meant to be a parent for other, app&#45;specific, screen classes, which is essentially where all ..." alt="" coords="5,95,131,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="21,5,115,32"/>
-<area shape="rect" id="node4" title=" " alt="" coords="155,95,349,121"/>
+<area shape="rect" id="node1" title="Holds and connects all of the screens used in the program in a list. Keeps track of the previous scre..." alt="" coords="177,288,323,315"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_screen.html" title="This is meant to be a parent for other, app&#45;specific, screen classes, which is essentially where all ..." alt="" coords="211,95,337,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="113,184,264,225"/>
+<area shape="rect" id="node3" title=" " alt="" coords="227,5,321,32"/>
+<area shape="rect" id="node5" title="STL class." alt="" coords="5,95,121,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="44,5,83,32"/>
 </map>

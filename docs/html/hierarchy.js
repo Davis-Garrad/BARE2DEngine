@@ -14,13 +14,14 @@ var hierarchy =
     [ "BARE2D::Cache< std::string, BARE2D::MutableTexture >", "class_b_a_r_e2_d_1_1_cache.html", null ],
     [ "BARE2D::Cache< std::string, BARE2D::Sound >", "class_b_a_r_e2_d_1_1_cache.html", null ],
     [ "BARE2D::Cache< std::string, BARE2D::Texture >", "class_b_a_r_e2_d_1_1_cache.html", null ],
+    [ "BARE2D::Cache< unsigned int, BARE2D::XMLData >", "class_b_a_r_e2_d_1_1_cache.html", null ],
     [ "BARE2D::Camera2D", "class_b_a_r_e2_d_1_1_camera2_d.html", null ],
     [ "BARE2D::CameraState", "struct_b_a_r_e2_d_1_1_camera_state.html", null ],
     [ "BARE2D::CEGUIContextWrapper", "struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html", null ],
     [ "BARE2D::CharacterGlyph", "struct_b_a_r_e2_d_1_1_character_glyph.html", null ],
     [ "BARE2D::Circle", "struct_b_a_r_e2_d_1_1_circle.html", null ],
     [ "BARE2D::Colour", "struct_b_a_r_e2_d_1_1_colour.html", null ],
-    [ "exception", null, [
+    [ "std::exception", null, [
       [ "utf8::exception", "classutf8_1_1exception.html", [
         [ "utf8::invalid_code_point", "classutf8_1_1invalid__code__point.html", null ],
         [ "utf8::invalid_utf16", "classutf8_1_1invalid__utf16.html", null ],

@@ -360,7 +360,7 @@ AUTOLINK_SUPPORT       = YES
 # diagrams that involve STL classes more complete and accurate.
 # The default value is: NO.
 
-BUILTIN_STL_SUPPORT    = NO
+BUILTIN_STL_SUPPORT    = YES
 
 # If you use Microsoft's C++/CLI language, you should set this option to YES to
 # enable parsing support.
@@ -737,7 +737,7 @@ FILE_VERSION_FILTER    =
 # optionally specify a file name after the option, if omitted DoxygenLayout.xml
 # will be used as the name of the layout file.
 #
-# Note that if you run doxygen from a directory containing a file called
+# Note that if you run doxygen from a  containing a file called
 # DoxygenLayout.xml, doxygen will parse it automatically even if the LAYOUT_FILE
 # tag is left empty.
 
