@@ -1,4 +1,0 @@
-<map id="BARE2D::InputManager::isKeyPressed" name="BARE2D::InputManager::isKeyPressed">
-<area shape="rect" id="node1" title="Checks if the key has just been pressed." alt="" coords="216,5,379,45"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_input_manager.html#aba3e9c456823b83de41816d9c7b7ab30" title="Gets entered character (This just follows the first character that has been pressed this update)" alt="" coords="5,5,168,45"/>
-</map>

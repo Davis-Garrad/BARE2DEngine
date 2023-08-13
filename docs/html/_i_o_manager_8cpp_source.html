@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BARE2D: Source/IOManager.cpp Source File</title>
+<title>BARE2D: IOManager.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,6 +29,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="dark_ss.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -103,39 +104,39 @@ $(document).ready(function(){initNavTree('_i_o_manager_8cpp_source.html',''); in
 <div class="title">IOManager.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_i_o_manager_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="_i_o_manager_8hpp.html">&quot;IOManager.hpp&quot;</a></div>
+<a href="_i_o_manager_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_o_manager_8hpp.html">IOManager.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="_logger_8hpp.html">&quot;Logger.hpp&quot;</a></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_logger_8hpp.html">Logger.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace</span> <a class="code" href="namespace_b_a_r_e2_d.html">BARE2D</a> {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_b_a_r_e2_d.html">BARE2D</a> {</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="comment">// Templated function defaults are in .tcc</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_i_o_manager.html#a22c857b612a97f087c27d5c0120acc43">    9</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_b_a_r_e2_d_1_1_i_o_manager.html">IOManager</a>::<a class="code" href="class_b_a_r_e2_d_1_1_i_o_manager.html#a22c857b612a97f087c27d5c0120acc43">readFileToBuffer</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filepath, std::string&amp; buf, std::ios_base::openmode mode<span class="comment">/** = std::ios::binary*/</span>) {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_i_o_manager.html#a22c857b612a97f087c27d5c0120acc43">    9</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_b_a_r_e2_d_1_1_i_o_manager.html#a41811805a88efeab7589a0e0c9015f90">IOManager::readFileToBuffer</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filepath, std::string&amp; buf, std::ios_base::openmode mode<span class="comment">/** = std::ios::binary*/</span>) {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        std::ifstream file(filepath, mode);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordflow">if</span>(file.fail()) {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <a class="code" href="class_b_a_r_e2_d_1_1_logger.html">Logger</a><a class="code" href="class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec">::</a><a class="code" href="class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec">getInstance</a><a class="code" href="class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec">(</a><a class="code" href="class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec">)</a><a class="code" href="class_b_a_r_e2_d_1_1_logger.html#a76c97e021ee75d17defbc794f68a965b">-&gt;</a><a class="code" href="class_b_a_r_e2_d_1_1_logger.html#a76c97e021ee75d17defbc794f68a965b">log</a><a class="code" href="class_b_a_r_e2_d_1_1_logger.html#a76c97e021ee75d17defbc794f68a965b">(</a><span class="stringliteral">&quot;Failed to load file to buffer: &quot;</span> + std::string(filepath)<a class="code" href="class_b_a_r_e2_d_1_1_logger.html#a76c97e021ee75d17defbc794f68a965b">)</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <a class="code" href="class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec">Logger::getInstance</a>()-&gt;<a class="code" href="class_b_a_r_e2_d_1_1_logger.html#a76c97e021ee75d17defbc794f68a965b">log</a>(<span class="stringliteral">&quot;Failed to load file to buffer: &quot;</span> + std::string(filepath));</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">// Seek to the end to get the file size</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        file.seekg(0, std::ios::end);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> fileSize = (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)file.tellg();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> fileSize = (<span class="keywordtype">unsigned</span> int)file.tellg();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">// Go back to the start</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        file.seekg(0, std::ios::beg);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        fileSize -= (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)file.tellg();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        fileSize -= (<span class="keywordtype">unsigned</span> int)file.tellg();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">// Resize for efficiency!</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        buf.resize(fileSize);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">// Now read fileSize bytes</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        file.read((<span class="keywordtype">char</span>*)&amp;(buf[0]), fileSize);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="comment">// Close it up and return! Job done.</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        file.close();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
@@ -144,10 +145,10 @@ $(document).ready(function(){initNavTree('_i_o_manager_8cpp_source.html',''); in
 </div><!-- doc-content -->
 <div class="ttc" id="anamespace_b_a_r_e2_d_html"><div class="ttname"><a href="namespace_b_a_r_e2_d.html">BARE2D</a></div><div class="ttdef"><b>Definition:</b> <a href="_app_8cpp_source.html#l00013">App.cpp:13</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_logger_html_af9e46266b594528fe87ce3e9264033ec"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec">BARE2D::Logger::getInstance</a></div><div class="ttdeci">static Logger * getInstance()</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00034">Logger.cpp:34</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_i_o_manager_html_a22c857b612a97f087c27d5c0120acc43"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_i_o_manager.html#a22c857b612a97f087c27d5c0120acc43">BARE2D::IOManager::readFileToBuffer</a></div><div class="ttdeci">static bool readFileToBuffer(const char *filepath, std::string &amp;buf, std::ios_base::openmode mode=std::ios::binary)</div><div class="ttdef"><b>Definition:</b> <a href="_i_o_manager_8cpp_source.html#l00009">IOManager.cpp:9</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_i_o_manager_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_i_o_manager.html">BARE2D::IOManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_o_manager_8hpp_source.html#l00009">IOManager.hpp:9</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_logger_html_a76c97e021ee75d17defbc794f68a965b"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_logger.html#a76c97e021ee75d17defbc794f68a965b">BARE2D::Logger::log</a></div><div class="ttdeci">void log(std::string message, bool important=false)</div><div class="ttdoc">Logs a message to a file and the terminal.</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00042">Logger.cpp:42</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_logger_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_logger.html">BARE2D::Logger</a></div><div class="ttdoc">For general purpose logging, this is the logger! It is a singleton class.</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8hpp_source.html#l00012">Logger.hpp:12</a></div></div>
+<div class="ttc" id="aclass_b_a_r_e2_d_1_1_i_o_manager_html_a41811805a88efeab7589a0e0c9015f90"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_i_o_manager.html#a41811805a88efeab7589a0e0c9015f90">BARE2D::IOManager::readFileToBuffer</a></div><div class="ttdeci">static bool readFileToBuffer(std::string &amp;filepath, std::vector&lt; T &gt; &amp;buf, std::ios_base::openmode mode=std::ios::binary)</div><div class="ttdoc">Loads a file into a buffer.</div></div>
+<div class="ttc" id="a_i_o_manager_8hpp_html"><div class="ttname"><a href="_i_o_manager_8hpp.html">IOManager.hpp</a></div></div>
+<div class="ttc" id="a_logger_8hpp_html"><div class="ttname"><a href="_logger_8hpp.html">Logger.hpp</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -1,6 +1,4 @@
 <map id="BARE2D::Screen::getNextScreenIndex" name="BARE2D::Screen::getNextScreenIndex">
-<area shape="rect" id="node1" title="Returns the index of the next screen. It is recommended to keep a file, say, ScreenIndices...." alt="" coords="584,5,804,47"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_screen_list.html#ae8047deac7849ebd02b92d8c347715fb" title="Moves to the next screen, updates needed variables. Also, exits old screen and enters new one." alt="" coords="389,5,536,47"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_app.html#ae0fb15b02f63b3b737041135b968ac55" title="Updates input, output, etc. Only for internal use." alt="" coords="187,13,341,39"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_app.html#a767c055c78bbf86b34bbd47e4b05ee01" title="Runs the program! Starts the update&#45;draw loop." alt="" coords="5,13,139,39"/>
+<area shape="rect" id="node1" title="Returns the index of the next screen. It is recommended to keep a file, say, ScreenIndices...." alt="" coords="200,5,420,47"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_screen_list.html#ae8047deac7849ebd02b92d8c347715fb" title="Moves to the next screen, updates needed variables. Also, exits old screen and enters new one." alt="" coords="5,5,152,47"/>
 </map>

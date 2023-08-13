@@ -29,6 +29,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="dark_ss.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -146,13 +147,13 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aef31946bb9843c75229281cdcc8a2031"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:aef31946bb9843c75229281cdcc8a2031"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_lua_script_engine.html#aef31946bb9843c75229281cdcc8a2031">addValueToRegistry</a> (lua_State *L, T *value, std::string key)</td></tr>
-<tr class="memdesc:aef31946bb9843c75229281cdcc8a2031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a value to the Lua registry - this lets any C/C++ code use the value stored in the state (it is stored in the state)  <a href="class_b_a_r_e2_d_1_1_lua_script_engine.html#aef31946bb9843c75229281cdcc8a2031">More...</a><br /></td></tr>
-<tr class="separator:aef31946bb9843c75229281cdcc8a2031"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c0707d445e3a0e6068593ddff6e1f4c"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a7c0707d445e3a0e6068593ddff6e1f4c"><td class="memTemplItemLeft" align="right" valign="top">static T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_lua_script_engine.html#a7c0707d445e3a0e6068593ddff6e1f4c">getValueFromRegistry</a> (lua_State *L, std::string key)</td></tr>
-<tr class="separator:a7c0707d445e3a0e6068593ddff6e1f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc198447d0b9b0f8bdaf46be9f17a368"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:abc198447d0b9b0f8bdaf46be9f17a368"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_lua_script_engine.html#abc198447d0b9b0f8bdaf46be9f17a368">addValueToRegistry</a> (lua_State *L, T *value, std::string key)</td></tr>
+<tr class="memdesc:abc198447d0b9b0f8bdaf46be9f17a368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a value to the Lua registry - this lets any C/C++ code use the value stored in the state (it is stored in the state)  <a href="class_b_a_r_e2_d_1_1_lua_script_engine.html#abc198447d0b9b0f8bdaf46be9f17a368">More...</a><br /></td></tr>
+<tr class="separator:abc198447d0b9b0f8bdaf46be9f17a368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae9a72b085b43d958a4f07d5f5c5c27"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a0ae9a72b085b43d958a4f07d5f5c5c27"><td class="memTemplItemLeft" align="right" valign="top">static T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_b_a_r_e2_d_1_1_lua_script_engine.html#a0ae9a72b085b43d958a4f07d5f5c5c27">getValueFromRegistry</a> (lua_State *L, std::string key)</td></tr>
+<tr class="separator:a0ae9a72b085b43d958a4f07d5f5c5c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -208,8 +209,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aef31946bb9843c75229281cdcc8a2031"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef31946bb9843c75229281cdcc8a2031">&#9670;&nbsp;</a></span>addValueToRegistry()</h2>
+<a id="abc198447d0b9b0f8bdaf46be9f17a368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc198447d0b9b0f8bdaf46be9f17a368">&#9670;&nbsp;</a></span>addValueToRegistry()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,7 +221,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void BARE2D::LuaScriptEngine::addValueToRegistry </td>
+          <td class="memname">static void BARE2D::LuaScriptEngine::addValueToRegistry </td>
           <td>(</td>
           <td class="paramtype">lua_State *&#160;</td>
           <td class="paramname"><em>L</em>, </td>
@@ -259,8 +260,6 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_lua_script_engine__impl_8tcc_source.html#l00010">10</a> of file <a class="el" href="_lua_script_engine__impl_8tcc_source.html">LuaScriptEngine_impl.tcc</a>.</p>
-
 </div>
 </div>
 <a id="a81e4604bf36c490f713d00cd68d4a874"></a>
@@ -298,7 +297,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_lua_script_engine_8cpp_source.html#l00082">82</a> of file <a class="el" href="_lua_script_engine_8cpp_source.html">LuaScriptEngine.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_lua_script_8cpp_source.html#l00021">BARE2D::LuaScriptContextWrapper::init()</a>, <a class="el" href="_lua_script_8cpp_source.html#l00015">BARE2D::LuaScriptContextWrapper::LuaScriptContextWrapper()</a>, and <a class="el" href="_lua_script_engine_8hpp_source.html#l00077">m_masterState</a>.</p>
+<p class="reference">References <a class="el" href="_lua_script_8cpp_source.html#l00021">BARE2D::LuaScriptContextWrapper::init()</a>, and <a class="el" href="_lua_script_engine_8hpp_source.html#l00077">m_masterState</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_lua_script_engine_8cpp_source.html#l00061">update()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -308,12 +307,12 @@ template&lt;class T &gt; </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_lua_script_engine_a81e4604bf36c490f713d00cd68d4a874_cgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_lua_script_engine_a81e4604bf36c490f713d00cd68d4a874_cgraph" alt=""/></div>
 <map name="class_b_a_r_e2_d_1_1_lua_script_engine_a81e4604bf36c490f713d00cd68d4a874_cgraph" id="class_b_a_r_e2_d_1_1_lua_script_engine_a81e4604bf36c490f713d00cd68d4a874_cgraph">
-<area shape="rect" title="Creates a LuaScriptContextWrapper using the data from script." alt="" coords="5,71,184,112"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ae928c82fc3a9d2b72e0b01caf02a5bbb" title="Creates and initializes all the necessary bits." alt="" coords="253,37,438,79"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ae0af32134c3684ef955f2143db707a22" title=" " alt="" coords="232,103,459,144"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ab373f9b638c401a70a31a599349d81b7" title="Creates the m_state variable as a thread, or subroutine of the parent." alt="" coords="507,5,692,47"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#abf423ac350b4eadd0dbb2679f2b09683" title="Loads and compiles the given Lua script. Also, sets m_scriptReference to the index of the compiled sc..." alt="" coords="507,71,692,112"/>
-<area shape="rect" href="namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="740,46,884,73"/>
+<area shape="rect" title="Creates a LuaScriptContextWrapper using the data from script." alt="" coords="5,39,184,80"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ae928c82fc3a9d2b72e0b01caf02a5bbb" title="Creates and initializes all the necessary bits." alt="" coords="232,39,417,80"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ab373f9b638c401a70a31a599349d81b7" title="Creates the m_state variable as a thread, or subroutine of the parent." alt="" coords="465,5,651,47"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#abf423ac350b4eadd0dbb2679f2b09683" title="Loads and compiles the given Lua script. Also, sets m_scriptReference to the index of the compiled sc..." alt="" coords="465,71,651,112"/>
+<area shape="rect" href="namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="699,46,843,73"/>
+<area shape="rect" href="namespace_b_a_r_e2_d.html#a7951c5decc1f7edc3c4f78ed2f579c85" title="Returns the string representing/explaining the error that occurred." alt="" coords="891,46,1044,73"/>
 </map>
 </div>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -353,8 +352,8 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="a7c0707d445e3a0e6068593ddff6e1f4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c0707d445e3a0e6068593ddff6e1f4c">&#9670;&nbsp;</a></span>getValueFromRegistry()</h2>
+<a id="a0ae9a72b085b43d958a4f07d5f5c5c27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ae9a72b085b43d958a4f07d5f5c5c27">&#9670;&nbsp;</a></span>getValueFromRegistry()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -365,7 +364,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T * BARE2D::LuaScriptEngine::getValueFromRegistry </td>
+          <td class="memname">static T* BARE2D::LuaScriptEngine::getValueFromRegistry </td>
           <td>(</td>
           <td class="paramtype">lua_State *&#160;</td>
           <td class="paramname"><em>L</em>, </td>
@@ -388,8 +387,6 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_lua_script_engine__impl_8tcc_source.html#l00020">20</a> of file <a class="el" href="_lua_script_engine__impl_8tcc_source.html">LuaScriptEngine_impl.tcc</a>.</p>
 
 </div>
 </div>
@@ -437,6 +434,7 @@ template&lt;class T &gt; </div>
 <area shape="rect" href="namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="924,53,1097,79"/>
 <area shape="rect" href="namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="1145,27,1305,54"/>
 <area shape="rect" href="namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="1153,78,1297,105"/>
+<area shape="rect" href="namespace_b_a_r_e2_d.html#a7951c5decc1f7edc3c4f78ed2f579c85" title="Returns the string representing/explaining the error that occurred." alt="" coords="1353,53,1507,79"/>
 </map>
 </div>
 
@@ -532,6 +530,7 @@ template&lt;class T &gt; </div>
 <map name="class_b_a_r_e2_d_1_1_lua_script_engine_ae9539fd6e864b66bcb00299f24f0c8bc_cgraph" id="class_b_a_r_e2_d_1_1_lua_script_engine_ae9539fd6e864b66bcb00299f24f0c8bc_cgraph">
 <area shape="rect" title="Loads and registers (read: runs) the module located at the given file." alt="" coords="5,5,184,47"/>
 <area shape="rect" href="namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="232,13,376,39"/>
+<area shape="rect" href="namespace_b_a_r_e2_d.html#a7951c5decc1f7edc3c4f78ed2f579c85" title="Returns the string representing/explaining the error that occurred." alt="" coords="424,13,577,39"/>
 </map>
 </div>
 
@@ -556,7 +555,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_lua_script_engine_8cpp_source.html#l00061">61</a> of file <a class="el" href="_lua_script_engine_8cpp_source.html">LuaScriptEngine.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_lua_context_manager_8cpp_source.html#l00054">BARE2D::LuaContextManager::addContext()</a>, <a class="el" href="_lua_script_queue_8cpp_source.html#l00056">BARE2D::LuaScriptQueue::clearQueue()</a>, <a class="el" href="_lua_script_engine_8cpp_source.html#l00082">createLuaContext()</a>, <a class="el" href="_lua_context_manager_8cpp_source.html#l00021">BARE2D::LuaContextManager::getInstance()</a>, <a class="el" href="_lua_script_queue_8cpp_source.html#l00019">BARE2D::LuaScriptQueue::getInstance()</a>, <a class="el" href="_lua_script_queue_8cpp_source.html#l00051">BARE2D::LuaScriptQueue::getQueue()</a>, <a class="el" href="_lua_script_8cpp_source.html#l00056">BARE2D::LuaScriptContextWrapper::start()</a>, and <a class="el" href="_lua_context_manager_8cpp_source.html#l00033">BARE2D::LuaContextManager::update()</a>.</p>
+<p class="reference">References <a class="el" href="_lua_context_manager_8cpp_source.html#l00054">BARE2D::LuaContextManager::addContext()</a>, <a class="el" href="_lua_script_queue_8cpp_source.html#l00056">BARE2D::LuaScriptQueue::clearQueue()</a>, <a class="el" href="_lua_script_engine_8cpp_source.html#l00082">createLuaContext()</a>, <a class="el" href="_lua_context_manager_8cpp_source.html#l00021">BARE2D::LuaContextManager::getInstance()</a>, <a class="el" href="_lua_script_queue_8cpp_source.html#l00019">BARE2D::LuaScriptQueue::getInstance()</a>, <a class="el" href="_lua_script_8cpp_source.html#l00056">BARE2D::LuaScriptContextWrapper::start()</a>, and <a class="el" href="_lua_context_manager_8cpp_source.html#l00033">BARE2D::LuaContextManager::update()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -564,25 +563,21 @@ template&lt;class T &gt; </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_b_a_r_e2_d_1_1_lua_script_engine_a428a4f2b3f87f8b90db2880a67ffee31_cgraph.png" border="0" usemap="#class_b_a_r_e2_d_1_1_lua_script_engine_a428a4f2b3f87f8b90db2880a67ffee31_cgraph" alt=""/></div>
 <map name="class_b_a_r_e2_d_1_1_lua_script_engine_a428a4f2b3f87f8b90db2880a67ffee31_cgraph" id="class_b_a_r_e2_d_1_1_lua_script_engine_a428a4f2b3f87f8b90db2880a67ffee31_cgraph">
-<area shape="rect" title="Processes all scripts from the LuaScriptQueue and updates all running scripts. That&#39;s pretty much it!" alt="" coords="5,235,184,276"/>
+<area shape="rect" title="Processes all scripts from the LuaScriptQueue and updates all running scripts. That&#39;s pretty much it!" alt="" coords="5,201,184,243"/>
 <area shape="rect" href="class_b_a_r_e2_d_1_1_lua_context_manager.html#ae5cd0d9c17a813a06fb0f5e8b702f06d" title="Adds a context wrapper to the map." alt="" coords="232,5,433,47"/>
 <area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_queue.html#a45b878abc0f5e6e91af7b88c7bae81c2" title="Clears the stored script queue &#45; for regular use by tbe Script Engine. Deallocates memory that was in..." alt="" coords="244,71,421,112"/>
 <area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_engine.html#a81e4604bf36c490f713d00cd68d4a874" title="Creates a LuaScriptContextWrapper using the data from script." alt="" coords="243,136,422,177"/>
 <area shape="rect" href="class_b_a_r_e2_d_1_1_lua_context_manager.html#a0352be9754f64024631091f1e2b73c15" title=" " alt="" coords="232,201,433,243"/>
 <area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_queue.html#ab2db531a9ecaa50fba9f27715124d948" title="Returns a pointer to the singleton object &#45; creates the object if one doesn&#39;t already exist." alt="" coords="244,267,421,308"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_queue.html#acddabdadd43bd97c17fb9688954a002d" title="Returns the queue of scripts to activate." alt="" coords="244,332,421,373"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#a9e06de29f55ec9014c21ae0c22b86297" title="Starts the script." alt="" coords="756,377,941,419"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_context_manager.html#a5d5afd3c292c652399de872b7d2781da" title="Updates all of the context wrappers, pausing, removing (if finished), or resuming them as is correct." alt="" coords="232,475,433,516"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ae928c82fc3a9d2b72e0b01caf02a5bbb" title="Creates and initializes all the necessary bits." alt="" coords="502,88,687,129"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ae0af32134c3684ef955f2143db707a22" title=" " alt="" coords="481,153,708,195"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ab373f9b638c401a70a31a599349d81b7" title="Creates the m_state variable as a thread, or subroutine of the parent." alt="" coords="756,105,941,147"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#abf423ac350b4eadd0dbb2679f2b09683" title="Loads and compiles the given Lua script. Also, sets m_scriptReference to the index of the compiled sc..." alt="" coords="756,217,941,259"/>
-<area shape="rect" href="namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="989,353,1133,379"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_context_manager.html#a6ef7c994b12b8637f33c9cfe875c101d" title=" " alt="" coords="494,219,695,260"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_queue.html#a09d55d72248748aff18167a4a5a309dd" title=" " alt="" coords="506,284,683,325"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#a9707c51bc4e1d9b3f5b827c79f3678a4" title="Cleans up." alt="" coords="756,455,941,496"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#a2e8c9291b16d4be7866251ea60282720" title="Returns m_completed." alt="" coords="502,500,687,541"/>
-<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ab7621231b56bdf66af3ebd1472fca721" title="Updates the script &#45; decreases delay counter, checks if it is finished, etc." alt="" coords="502,565,687,607"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#a9e06de29f55ec9014c21ae0c22b86297" title="Starts the script." alt="" coords="731,296,916,337"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_context_manager.html#a5d5afd3c292c652399de872b7d2781da" title="Updates all of the context wrappers, pausing, removing (if finished), or resuming them as is correct." alt="" coords="232,384,433,425"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ae928c82fc3a9d2b72e0b01caf02a5bbb" title="Creates and initializes all the necessary bits." alt="" coords="489,136,675,177"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#ab373f9b638c401a70a31a599349d81b7" title="Creates the m_state variable as a thread, or subroutine of the parent." alt="" coords="731,136,916,177"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_context_wrapper.html#abf423ac350b4eadd0dbb2679f2b09683" title="Loads and compiles the given Lua script. Also, sets m_scriptReference to the index of the compiled sc..." alt="" coords="731,201,916,243"/>
+<area shape="rect" href="namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="964,209,1108,235"/>
+<area shape="rect" href="namespace_b_a_r_e2_d.html#a7951c5decc1f7edc3c4f78ed2f579c85" title="Returns the string representing/explaining the error that occurred." alt="" coords="1156,209,1309,235"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_context_manager.html#a6ef7c994b12b8637f33c9cfe875c101d" title=" " alt="" coords="481,201,683,243"/>
+<area shape="rect" href="class_b_a_r_e2_d_1_1_lua_script_queue.html#a09d55d72248748aff18167a4a5a309dd" title=" " alt="" coords="493,267,671,308"/>
 </map>
 </div>
 
@@ -616,9 +611,8 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Source/<a class="el" href="_lua_script_engine_8hpp_source.html">LuaScriptEngine.hpp</a></li>
-<li>Source/<a class="el" href="_lua_script_engine_8cpp_source.html">LuaScriptEngine.cpp</a></li>
-<li>Source/<a class="el" href="_lua_script_engine__impl_8tcc_source.html">LuaScriptEngine_impl.tcc</a></li>
+<li><a class="el" href="_lua_script_engine_8hpp_source.html">LuaScriptEngine.hpp</a></li>
+<li><a class="el" href="_lua_script_engine_8cpp_source.html">LuaScriptEngine.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

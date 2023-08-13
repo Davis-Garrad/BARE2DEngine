@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BARE2D: Source/VAO.hpp Source File</title>
+<title>BARE2D: VAO.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,6 +29,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="dark_ss.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -103,53 +104,53 @@ $(document).ready(function(){initNavTree('_v_a_o_8hpp_source.html',''); initResi
 <div class="title">VAO.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_v_a_o_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">once</span></div>
+<a href="_v_a_o_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">GL</span><span class="preprocessor">/</span><span class="preprocessor">glew</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace</span> <a class="code" href="namespace_b_a_r_e2_d.html">BARE2D</a> {</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_b_a_r_e2_d.html">BARE2D</a> {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    /**</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">     * @class VAO</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">     * @brief A wrapper class for OpenGL&#39;s VAO, as well as its associated VBO and attributes</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_v_a_o.html">   11</a></span>&#160;    <span class="keyword">class</span> <a class="code" href="class_b_a_r_e2_d_1_1_v_a_o.html">VAO</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_v_a_o.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_b_a_r_e2_d_1_1_v_a_o.html">VAO</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="class_b_a_r_e2_d_1_1_v_a_o.html#ac45b220eb9ba688dfabd47d09f6f1d57">VAO</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        ~<a class="code" href="class_b_a_r_e2_d_1_1_v_a_o.html#a2b7969dc6793136b2e8a62b514b4ac25">VAO</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="class_b_a_r_e2_d_1_1_v_a_o.html#a2b7969dc6793136b2e8a62b514b4ac25">~VAO</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">         * @brief Initializes the necessary components, combining the VBO and VAO</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_v_a_o.html#a95e6c292d64ff927870783e464ad49cd">init</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">         * @brief Releases necessary memory.</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_v_a_o.html#a1932f8495f96a00b61f300b6220357da">destroy</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">         * @brief Binds this vertex array object.</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_v_a_o.html#a61c99f69bf5feb2ac95189381a48e638">bind</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">         * @brief Binds the VAO&#39;s VBO</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_v_a_o.html#aaaec16d98be94aa5cfed015df40dda70">bindVBO</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">         * @brief Unbinds the vao.</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_v_a_o.html#a6c224737a43f43dbe7c9e25ecd47d1da">unbind</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">         * @brief Unbinds this VAO&#39;s VBO</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_v_a_o.html#a10dd3e06e3929147edb6b249c94fdcee">unbindVBO</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">         * @brief Wrapper for glVertexAttribPointer - Adds an attribute to the VBO - each vertex data slot will gain some attribute.</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">         * @param size Number of components per attribute (1-4)</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">         * @param type Type of data - GL_BYTE, GL_UNSIGNED_BYTE, GL_SHORT, etc. See docs</span></div>
@@ -158,16 +159,17 @@ $(document).ready(function(){initNavTree('_v_a_o_8hpp_source.html',''); initResi
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">         * @param data Specifies a offset of the first component of the first generic vertex attribute in the array in the data store of the buffer currently bound to the GL_ARRAY_BUFFER target. The initial value is 0.</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_v_a_o.html#a96ee05539c58614ee273b7df85143804">addVertexAttribute</a>(GLint size, GLenum type, GLboolean normalized, GLsizei stride, <span class="keyword">const</span> <span class="keywordtype">void</span>* data);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_v_a_o.html#a77436d8b9b995f2d47e72320b65641d0">   58</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_b_a_r_e2_d_1_1_v_a_o.html#a77436d8b9b995f2d47e72320b65641d0">m_numAttributes</a>; <span class="comment">// How many attributes we&#39;ve added so far.</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        </div>
 <div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_v_a_o.html#ae59d724f3a57d369415c859fe9d489a2">   60</a></span>&#160;        GLuint <a class="code" href="class_b_a_r_e2_d_1_1_v_a_o.html#ae59d724f3a57d369415c859fe9d489a2">m_vaoHandle</a>; <span class="comment">// The GL-provided handle for the VAO</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_v_a_o.html#aaf5b31995250a7652b2003cf93338add">   61</a></span>&#160;        GLuint <a class="code" href="class_b_a_r_e2_d_1_1_v_a_o.html#aaf5b31995250a7652b2003cf93338add">m_vboHandle</a>; <span class="comment">// The GL-provided handle for the VBO (Yes, there&#39;s only one. Each &#39;vertex&#39; in the vertex buffer object combines all the data)</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    };</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_v_a_o_html_aaf5b31995250a7652b2003cf93338add"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_v_a_o.html#aaf5b31995250a7652b2003cf93338add">BARE2D::VAO::m_vboHandle</a></div><div class="ttdeci">GLuint m_vboHandle</div><div class="ttdef"><b>Definition:</b> <a href="_v_a_o_8hpp_source.html#l00061">VAO.hpp:61</a></div></div>

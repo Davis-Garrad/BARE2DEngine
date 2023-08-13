@@ -1,4 +1,4 @@
-<map id="Source/AudioManager.hpp" name="Source/AudioManager.hpp">
-<area shape="rect" id="node1" title="The AudioManager acts as a friendly wrapper for the SDL_Mixer library. It basically just plays sounds..." alt="" coords="5,5,180,32"/>
-<area shape="rect" id="node2" href="$_audio_manager_8cpp.html" title=" " alt="" coords="5,80,180,107"/>
+<map id="AudioManager.hpp" name="AudioManager.hpp">
+<area shape="rect" id="node1" title="The AudioManager acts as a friendly wrapper for the SDL_Mixer library. It basically just plays sounds..." alt="" coords="5,5,135,32"/>
+<area shape="rect" id="node2" href="$_audio_manager_8cpp.html" title=" " alt="" coords="5,80,135,107"/>
 </map>

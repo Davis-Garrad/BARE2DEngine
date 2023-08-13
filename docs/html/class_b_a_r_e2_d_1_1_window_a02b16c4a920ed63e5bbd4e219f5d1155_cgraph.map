@@ -1,7 +1,7 @@
 <map id="BARE2D::Window::create" name="BARE2D::Window::create">
-<area shape="rect" id="node1" title="This is a graphical window. It holds information about the GL context, as well as the SDL window cont..." alt="" coords="5,31,180,56"/>
-<area shape="rect" id="node2" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="228,31,401,56"/>
-<area shape="rect" id="node3" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="449,5,609,31"/>
-<area shape="rect" id="node5" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="457,55,601,80"/>
-<area shape="rect" id="node4" href="$namespace_b_a_r_e2_d.html#a7951c5decc1f7edc3c4f78ed2f579c85" title="Returns the string representing/explaining the error that occurred." alt="" coords="657,31,811,56"/>
+<area shape="rect" id="node1" title="This is a graphical window. It holds information about the GL context, as well as the SDL window cont..." alt="" coords="5,31,180,57"/>
+<area shape="rect" id="node2" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="228,31,401,57"/>
+<area shape="rect" id="node3" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="449,5,609,32"/>
+<area shape="rect" id="node5" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="457,56,601,83"/>
+<area shape="rect" id="node4" href="$namespace_b_a_r_e2_d.html#a7951c5decc1f7edc3c4f78ed2f579c85" title="Returns the string representing/explaining the error that occurred." alt="" coords="657,31,811,57"/>
 </map>

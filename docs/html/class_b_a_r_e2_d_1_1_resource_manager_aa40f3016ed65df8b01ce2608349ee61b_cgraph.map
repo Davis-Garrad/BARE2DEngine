@@ -1,4 +1,4 @@
 <map id="BARE2D::ResourceManager::loadScript" name="BARE2D::ResourceManager::loadScript">
-<area shape="rect" id="node1" title="Loads a script from the filepath given from the cache or from the file if it&#39;s not already in the cac..." alt="" coords="5,5,196,45"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_i_o_manager.html#a41811805a88efeab7589a0e0c9015f90" title="Loads a file into a buffer." alt="" coords="244,5,400,45"/>
+<area shape="rect" id="node1" title="Loads a script from the filepath given from the cache or from the file if it&#39;s not already in the cac..." alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_i_o_manager.html#a41811805a88efeab7589a0e0c9015f90" title="Loads a file into a buffer." alt="" coords="244,5,400,47"/>
 </map>

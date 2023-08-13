@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BARE2D: Other_Libraries/PicoPNG.hpp Source File</title>
+<title>BARE2D: PicoPNG.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,6 +29,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="dark_ss.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -103,11 +104,11 @@ $(document).ready(function(){initNavTree('_pico_p_n_g_8hpp_source.html',''); ini
 <div class="title">PicoPNG.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_pico_p_n_g_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">vector</span><span class="preprocessor">&gt;</span></div>
+<a href="_pico_p_n_g_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace</span> BARE2D {</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_b_a_r_e2_d.html">BARE2D</a> {</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    /**</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">     * @brief Loads a PNG from a file. That&#39;s... All I&#39;ve got</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">     * @param out_image output parameter, this will contain the raw pixels after decoding. By default the output is 32-bit RGBA color. The std::vector is automatically resized to the correct size.</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">     * @param image_width output_parameter, this will contain the width of the image in pixels.</span></div>
@@ -126,11 +127,13 @@ $(document).ready(function(){initNavTree('_pico_p_n_g_8hpp_source.html',''); ini
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    works for trusted PNG files. Use LodePNG instead of picoPNG if you need this information.</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">     * @return 0 if success, not 0 if some error occured.</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">extern</span> <span class="keywordtype">int</span> decodePNG(std::vector&lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>&gt;&amp; out_image, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>&amp; image_width, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>&amp; image_height, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* in_png, size_t in_size, <span class="keywordtype">bool</span> convert_to_rgba32 = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="namespace_b_a_r_e2_d.html#a480b5f334854e31c2d7e026933129480">decodePNG</a>(std::vector&lt;unsigned char&gt;&amp; out_image, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>&amp; image_width, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>&amp; image_height, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* in_png, <span class="keywordtype">size_t</span> in_size, <span class="keywordtype">bool</span> convert_to_rgba32 = <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anamespace_b_a_r_e2_d_html"><div class="ttname"><a href="namespace_b_a_r_e2_d.html">BARE2D</a></div><div class="ttdef"><b>Definition:</b> <a href="_app_8cpp_source.html#l00013">App.cpp:13</a></div></div>
+<div class="ttc" id="anamespace_b_a_r_e2_d_html_a480b5f334854e31c2d7e026933129480"><div class="ttname"><a href="namespace_b_a_r_e2_d.html#a480b5f334854e31c2d7e026933129480">BARE2D::decodePNG</a></div><div class="ttdeci">int decodePNG(std::vector&lt; unsigned char &gt; &amp;out_image, unsigned long &amp;image_width, unsigned long &amp;image_height, const unsigned char *in_png, std::size_t in_size, bool convert_to_rgba32)</div><div class="ttdef"><b>Definition:</b> <a href="_pico_p_n_g_8cpp_source.html#l00028">PicoPNG.cpp:28</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

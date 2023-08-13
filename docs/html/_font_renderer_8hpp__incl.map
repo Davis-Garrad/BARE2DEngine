@@ -1,5 +1,5 @@
-<map id="Source/FontRenderer.hpp" name="Source/FontRenderer.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="370,5,541,32"/>
+<map id="FontRenderer.hpp" name="FontRenderer.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="393,5,518,32"/>
 <area shape="rect" id="node2" href="$_font_8hpp.html" title=" " alt="" coords="631,229,704,256"/>
 <area shape="rect" id="node6" href="$_basic_renderer_8hpp.html" title="A simple renderer. Has the GLSL VAOs vertexPosition (vec3), vertexColour (vec4), and vertexUV (vec2)...." alt="" coords="221,80,353,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="524,304,603,331"/>

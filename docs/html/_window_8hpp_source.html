@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BARE2D: Source/Window.hpp Source File</title>
+<title>BARE2D: Window.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,6 +29,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="dark_ss.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -103,25 +104,25 @@ $(document).ready(function(){initNavTree('_window_8hpp_source.html',''); initRes
 <div class="title">Window.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_window_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">once</span></div>
+<a href="_window_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">SDL2</span><span class="preprocessor">/</span><span class="preprocessor">SDL</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="_b_a_r_e_errors_8hpp.html">&quot;BAREErrors.hpp&quot;</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_b_a_r_e_errors_8hpp.html">BAREErrors.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace</span> <a class="code" href="namespace_b_a_r_e2_d.html">BARE2D</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">/**</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_b_a_r_e2_d.html">BARE2D</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    /**</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">     * @class Window</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">     * @brief It&#39;s a graphical window, holds the contexts for GL and SDL.</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_window.html">   13</a></span>&#160;    <span class="keyword">class</span> <a class="code" href="class_b_a_r_e2_d_1_1_window.html">Window</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_window.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_b_a_r_e2_d_1_1_window.html">Window</a></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="class_b_a_r_e2_d_1_1_window.html#a63f88fdf838aa8bd6cf258b8d2d44018">Window</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        ~<a class="code" href="class_b_a_r_e2_d_1_1_window.html#afbf0b8730d9d8d9e4c37d0549e503462">Window</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="class_b_a_r_e2_d_1_1_window.html#afbf0b8730d9d8d9e4c37d0549e503462">~Window</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">         * @brief This is a graphical window. It holds information about the GL context, as well as the SDL window context. Takes some flags on creation (SDL_WindowFlags):</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">         * - SDL_WINDOW_FULLSCREEN</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">         * -            FULLSCREN_DESKTOP</span></div>
@@ -147,43 +148,44 @@ $(document).ready(function(){initNavTree('_window_8hpp_source.html',''); initRes
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">         * @return Returns an error (if one is created)</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_window.html#a02b16c4a920ed63e5bbd4e219f5d1155">create</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">         * @brief Sets the title of the window.</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">         * @param newTitle The new title to be set!</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_window.html#ad044d5b91867e6731a8844f15fe7ac2b">setTitle</a>(std::string newTitle);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">         * @brief Sets the size of the window (defaults to 600x400)</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">         * @param width</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">         * @param height</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_window.html#a78b581a55daca6e1f7fef2ffb2946a89">setSize</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> height);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">         * @brief Swaps the buffer of the SDL window - used to draw to one while the other displays, so no flickering is seen</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_window.html#ad291c1daf4c2c0a550daecb7821f5084">swapBuffer</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">         * @brief Returns the width of the window </span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_b_a_r_e2_d_1_1_window.html#ae0055549c7e1f9b1e16e71b1cb17ac54">getWidth</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">         * @brief Returns the height of the window. </span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_b_a_r_e2_d_1_1_window.html#adce1ecfb27ebd91fd455d1e04f855496">getHeight</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        </div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_window.html#a5e37b74f97cf8c79e5db812771a628d7">   75</a></span>&#160;        SDL_Window* <a class="code" href="class_b_a_r_e2_d_1_1_window.html#a5e37b74f97cf8c79e5db812771a628d7">m_SDLWindow</a> = <span class="keywordtype">nullptr</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_window.html#a3a83201dca2b95ea8dc8aa99376e4cd7">   76</a></span>&#160;        SDL_GLContext <a class="code" href="class_b_a_r_e2_d_1_1_window.html#a3a83201dca2b95ea8dc8aa99376e4cd7">m_GLContext</a> = <span class="keywordtype">nullptr</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_window.html#a5e37b74f97cf8c79e5db812771a628d7">   75</a></span>&#160;        SDL_Window* <a class="code" href="class_b_a_r_e2_d_1_1_window.html#a5e37b74f97cf8c79e5db812771a628d7">m_SDLWindow</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_window.html#a3a83201dca2b95ea8dc8aa99376e4cd7">   76</a></span>&#160;        SDL_GLContext <a class="code" href="class_b_a_r_e2_d_1_1_window.html#a3a83201dca2b95ea8dc8aa99376e4cd7">m_GLContext</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    </div>
 <div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_window.html#a44121b9e2b266093f5de3d81604e1106">   78</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_b_a_r_e2_d_1_1_window.html#a44121b9e2b266093f5de3d81604e1106">m_width</a> = 600, <a class="code" href="class_b_a_r_e2_d_1_1_window.html#a9f4ae8b420d1f5924017a64ef261f397">m_height</a> = 400;</div>
 <div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_window.html#aebddd6af36c0bce1c4bbc1e33709dd7f">   79</a></span>&#160;        std::string <a class="code" href="class_b_a_r_e2_d_1_1_window.html#aebddd6af36c0bce1c4bbc1e33709dd7f">m_title</a> = <span class="stringliteral">&quot;BARE2D Window&quot;</span>;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    };</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_window_html_a78b581a55daca6e1f7fef2ffb2946a89"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_window.html#a78b581a55daca6e1f7fef2ffb2946a89">BARE2D::Window::setSize</a></div><div class="ttdeci">void setSize(unsigned int width, unsigned int height)</div><div class="ttdoc">Sets the size of the window (defaults to 600x400)</div><div class="ttdef"><b>Definition:</b> <a href="_window_8cpp_source.html#l00077">Window.cpp:77</a></div></div>
@@ -195,6 +197,7 @@ $(document).ready(function(){initNavTree('_window_8hpp_source.html',''); initRes
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_window_html_a02b16c4a920ed63e5bbd4e219f5d1155"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_window.html#a02b16c4a920ed63e5bbd4e219f5d1155">BARE2D::Window::create</a></div><div class="ttdeci">void create(unsigned int flags)</div><div class="ttdoc">This is a graphical window. It holds information about the GL context, as well as the SDL window cont...</div><div class="ttdef"><b>Definition:</b> <a href="_window_8cpp_source.html#l00020">Window.cpp:20</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_window_html_a5e37b74f97cf8c79e5db812771a628d7"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_window.html#a5e37b74f97cf8c79e5db812771a628d7">BARE2D::Window::m_SDLWindow</a></div><div class="ttdeci">SDL_Window * m_SDLWindow</div><div class="ttdef"><b>Definition:</b> <a href="_window_8hpp_source.html#l00075">Window.hpp:75</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_window_html_afbf0b8730d9d8d9e4c37d0549e503462"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_window.html#afbf0b8730d9d8d9e4c37d0549e503462">BARE2D::Window::~Window</a></div><div class="ttdeci">~Window()</div><div class="ttdef"><b>Definition:</b> <a href="_window_8cpp_source.html#l00013">Window.cpp:13</a></div></div>
+<div class="ttc" id="a_b_a_r_e_errors_8hpp_html"><div class="ttname"><a href="_b_a_r_e_errors_8hpp.html">BAREErrors.hpp</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_window_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_window.html">BARE2D::Window</a></div><div class="ttdoc">It's a graphical window, holds the contexts for GL and SDL.</div><div class="ttdef"><b>Definition:</b> <a href="_window_8hpp_source.html#l00013">Window.hpp:13</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_window_html_a9f4ae8b420d1f5924017a64ef261f397"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_window.html#a9f4ae8b420d1f5924017a64ef261f397">BARE2D::Window::m_height</a></div><div class="ttdeci">unsigned int m_height</div><div class="ttdef"><b>Definition:</b> <a href="_window_8hpp_source.html#l00078">Window.hpp:78</a></div></div>
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_window_html_ad291c1daf4c2c0a550daecb7821f5084"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_window.html#ad291c1daf4c2c0a550daecb7821f5084">BARE2D::Window::swapBuffer</a></div><div class="ttdeci">void swapBuffer()</div><div class="ttdoc">Swaps the buffer of the SDL window - used to draw to one while the other displays,...</div><div class="ttdef"><b>Definition:</b> <a href="_window_8cpp_source.html#l00089">Window.cpp:89</a></div></div>

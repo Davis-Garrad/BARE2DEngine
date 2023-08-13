@@ -2,9 +2,8 @@
 <area shape="rect" id="node1" title="Actually renders the contents to the screen!" alt="" coords="5,151,180,193"/>
 <area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a61c99f69bf5feb2ac95189381a48e638" title="Binds this vertex array object." alt="" coords="258,5,401,32"/>
 <area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_g_l_context_manager.html#a733646522bf07c33576f9a1e0bb76c28" title=" " alt="" coords="231,57,428,98"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a529bb80b0bd7bbf86f10be7c30be514c" title="Sets the active texture &quot;slot&quot;. This can be GL_TEXTURE0 to GL_TEXTURE8 (I think. Check the literature..." alt="" coords="252,122,407,163"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a6c224737a43f43dbe7c9e25ecd47d1da" title="Unbinds the vao." alt="" coords="251,188,407,215"/>
-<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_shader_program.html#a7847844b8a2e5ab0677340b47d180841" title="Deactivates this shader program." alt="" coords="242,239,417,281"/>
-<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_shader_program.html#a8687213986c6f5633887609e8169b24e" title="Activates this shader program for the renderer to use." alt="" coords="228,305,431,332"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a62f46a348cc1f4e91fe3ab48c9a5cc1b" title=" " alt="" coords="479,57,633,98"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_g_l_context.html#a529bb80b0bd7bbf86f10be7c30be514c" title="Sets the active texture &quot;slot&quot;. This can be GL_TEXTURE0 to GL_TEXTURE8 (I think. Check the literature..." alt="" coords="252,122,407,163"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_v_a_o.html#a6c224737a43f43dbe7c9e25ecd47d1da" title="Unbinds the vao." alt="" coords="251,188,407,215"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_shader_program.html#a7847844b8a2e5ab0677340b47d180841" title="Deactivates this shader program." alt="" coords="242,239,417,281"/>
+<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_shader_program.html#a8687213986c6f5633887609e8169b24e" title="Activates this shader program for the renderer to use." alt="" coords="228,305,431,332"/>
 </map>

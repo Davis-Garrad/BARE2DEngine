@@ -1,5 +1,0 @@
-<map id="BARE2D::LuaScriptContextWrapper::isCompleted" name="BARE2D::LuaScriptContextWrapper::isCompleted">
-<area shape="rect" id="node1" title="Returns m_completed." alt="" coords="481,5,667,47"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_lua_context_manager.html#a5d5afd3c292c652399de872b7d2781da" title="Updates all of the context wrappers, pausing, removing (if finished), or resuming them as is correct." alt="" coords="232,5,433,47"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_lua_script_engine.html#a428a4f2b3f87f8b90db2880a67ffee31" title="Processes all scripts from the LuaScriptQueue and updates all running scripts. That&#39;s pretty much it!" alt="" coords="5,5,184,47"/>
-</map>

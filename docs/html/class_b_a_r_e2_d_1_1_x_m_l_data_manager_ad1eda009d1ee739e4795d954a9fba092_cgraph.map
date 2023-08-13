@@ -1,13 +1,11 @@
 <map id="BARE2D::XMLDataManager::getDataCount" name="BARE2D::XMLDataManager::getDataCount">
-<area shape="rect" id="node1" title=" " alt="" coords="5,45,195,86"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_cache.html#a10e71ebcdf2c43daa1c2d3a6e576d465" title="Returns the number of items in the cache." alt="" coords="246,23,429,49"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#aac1a58615a6a568a2f7d0e0f1e8f170c" title="Returns a cache for a certain type of data." alt="" coords="243,74,432,115"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_cache.html#a53efea053229e95e986fcf9d583a130a" title="Creates an item with a given key and uses the constructor to fill out the rest. If it already exists,..." alt="" coords="483,5,675,32"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec" title=" " alt="" coords="480,56,679,83"/>
-<area shape="rect" id="node10" href="$class_b_a_r_e2_d_1_1_logger.html#a76c97e021ee75d17defbc794f68a965b" title="Logs a message to a file and the terminal." alt="" coords="505,107,653,133"/>
-<area shape="rect" id="node11" href="$class_b_a_r_e2_d_1_1_cache.html#a2104c4e21130200025f41c7339168726" title="An operator overload that returns the object stored at key. Analagous to findItem();." alt="" coords="487,157,672,184"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_logger.html#a731b4fafcc2878fe66360b1c9c0febdc" title=" " alt="" coords="727,56,897,83"/>
-<area shape="rect" id="node7" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="945,56,1119,83"/>
-<area shape="rect" id="node8" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="1167,31,1327,57"/>
-<area shape="rect" id="node9" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="1175,81,1319,108"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,49,195,90"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_x_m_l_data_manager.html#aac1a58615a6a568a2f7d0e0f1e8f170c" title="Returns a cache for a certain type of data." alt="" coords="243,49,432,90"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_logger.html#af9e46266b594528fe87ce3e9264033ec" title=" " alt="" coords="480,31,679,57"/>
+<area shape="rect" id="node9" href="$class_b_a_r_e2_d_1_1_logger.html#a76c97e021ee75d17defbc794f68a965b" title="Logs a message to a file and the terminal." alt="" coords="505,81,653,108"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_logger.html#a731b4fafcc2878fe66360b1c9c0febdc" title=" " alt="" coords="727,31,897,57"/>
+<area shape="rect" id="node5" href="$namespace_b_a_r_e2_d.html#aed4332e42208fed2905a8b0845dad4d1" title="Throws an error (fatal). Also calls displayErrors and exits the program." alt="" coords="945,31,1119,57"/>
+<area shape="rect" id="node6" href="$namespace_b_a_r_e2_d.html#a8d6a0fa02837ab9ebba5b67cc21f9e35" title="Displays the latest thrown errors (really just all the thrown errors) in the console." alt="" coords="1167,5,1327,32"/>
+<area shape="rect" id="node8" href="$namespace_b_a_r_e2_d.html#a0d8f8a98bf559e6d2eda28ae744f486c" title="Throws an error silently. Adds it to the pile." alt="" coords="1175,56,1319,83"/>
+<area shape="rect" id="node7" href="$namespace_b_a_r_e2_d.html#a7951c5decc1f7edc3c4f78ed2f579c85" title="Returns the string representing/explaining the error that occurred." alt="" coords="1375,31,1528,57"/>
 </map>

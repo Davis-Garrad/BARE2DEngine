@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BARE2D: Source/ShaderProgram.tcc File Reference</title>
+<title>BARE2D: ShaderProgram.tcc File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,6 +29,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="dark_ss.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,9 +100,6 @@ $(document).ready(function(){initNavTree('_shader_program_8tcc.html',''); initRe
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ShaderProgram.tcc File Reference</div>  </div>
 </div><!--header-->
@@ -115,9 +113,9 @@ $(document).ready(function(){initNavTree('_shader_program_8tcc.html',''); initRe
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="_shader_program_8tcc__incl.png" border="0" usemap="#_source_2_shader_program_8tcc" alt=""/></div>
-<map name="_source_2_shader_program_8tcc" id="_source_2_shader_program_8tcc">
-<area shape="rect" title=" " alt="" coords="126,5,305,32"/>
+<div class="center"><img src="_shader_program_8tcc__incl.png" border="0" usemap="#_shader_program_8tcc" alt=""/></div>
+<map name="_shader_program_8tcc" id="_shader_program_8tcc">
+<area shape="rect" title=" " alt="" coords="148,5,283,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,73,107"/>
 <area shape="rect" title=" " alt="" coords="98,80,191,107"/>
 <area shape="rect" title=" " alt="" coords="216,80,356,107"/>
@@ -131,62 +129,32 @@ $(document).ready(function(){initNavTree('_shader_program_8tcc.html',''); initRe
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="_shader_program_8tcc__dep__incl.png" border="0" usemap="#_source_2_shader_program_8tccdep" alt=""/></div>
-<map name="_source_2_shader_program_8tccdep" id="_source_2_shader_program_8tccdep">
-<area shape="rect" title=" " alt="" coords="1641,5,1819,32"/>
-<area shape="rect" href="_shader_program_8hpp.html" title=" " alt="" coords="1639,80,1821,107"/>
-<area shape="rect" href="_renderer_8hpp.html" title=" " alt="" coords="923,155,1067,181"/>
-<area shape="rect" href="_resource_manager_8hpp.html" title=" " alt="" coords="1631,155,1829,181"/>
-<area shape="rect" href="_shader_program_8cpp.html" title=" " alt="" coords="1845,229,2028,256"/>
-<area shape="rect" href="_basic_renderer_8hpp.html" title="A simple renderer. Has the GLSL VAOs vertexPosition (vec3), vertexColour (vec4), and vertexUV (vec2)...." alt="" coords="311,229,488,256"/>
-<area shape="rect" href="_debug_renderer_8hpp.html" title="A renderer specifically made for debugging purposes. Contains its own shaders." alt="" coords="612,229,795,256"/>
-<area shape="rect" href="_f_b_o_renderer_8hpp.html" title=" " alt="" coords="819,229,990,256"/>
-<area shape="rect" href="_renderer_8cpp.html" title=" " alt="" coords="1014,229,1158,256"/>
-<area shape="rect" href="_textureless_renderer_8hpp.html" title="A renderer made to simply run a shader with some passed glyphs. VAOs vertexPosition (vec3),..." alt="" coords="1182,229,1393,256"/>
-<area shape="rect" href="_basic_renderer_8cpp.html" title=" " alt="" coords="5,304,183,331"/>
-<area shape="rect" href="_bumpy_renderer_8hpp.html" title=" " alt="" coords="207,304,392,331"/>
-<area shape="rect" href="_font_renderer_8hpp.html" title=" " alt="" coords="417,304,587,331"/>
-<area shape="rect" href="_bumpy_renderer_8cpp.html" title=" " alt="" coords="207,379,392,405"/>
-<area shape="rect" href="_font_renderer_8cpp.html" title=" " alt="" coords="417,379,587,405"/>
-<area shape="rect" href="_debug_renderer_8cpp.html" title=" " alt="" coords="612,304,795,331"/>
-<area shape="rect" href="_f_b_o_renderer_8cpp.html" title=" " alt="" coords="819,304,990,331"/>
-<area shape="rect" href="_textureless_renderer_8cpp.html" title=" " alt="" coords="1182,304,1393,331"/>
-<area shape="rect" href="_resource_manager_8cpp.html" title=" " alt="" coords="1417,229,1614,256"/>
-<area shape="rect" href="_x_m_l_data_types_8cpp.html" title=" " alt="" coords="1639,229,1821,256"/>
+<div class="center"><img src="_shader_program_8tcc__dep__incl.png" border="0" usemap="#_shader_program_8tccdep" alt=""/></div>
+<map name="_shader_program_8tccdep" id="_shader_program_8tccdep">
+<area shape="rect" title=" " alt="" coords="1281,5,1416,32"/>
+<area shape="rect" href="_shader_program_8hpp.html" title=" " alt="" coords="1280,80,1417,107"/>
+<area shape="rect" href="_renderer_8hpp.html" title=" " alt="" coords="721,155,819,181"/>
+<area shape="rect" href="_resource_manager_8hpp.html" title=" " alt="" coords="1273,155,1425,181"/>
+<area shape="rect" href="_shader_program_8cpp.html" title=" " alt="" coords="1441,229,1579,256"/>
+<area shape="rect" href="_basic_renderer_8hpp.html" title="A simple renderer. Has the GLSL VAOs vertexPosition (vec3), vertexColour (vec4), and vertexUV (vec2)...." alt="" coords="243,229,375,256"/>
+<area shape="rect" href="_debug_renderer_8hpp.html" title="A renderer specifically made for debugging purposes. Contains its own shaders." alt="" coords="476,229,613,256"/>
+<area shape="rect" href="_f_b_o_renderer_8hpp.html" title=" " alt="" coords="637,229,764,256"/>
+<area shape="rect" href="_renderer_8cpp.html" title=" " alt="" coords="789,229,887,256"/>
+<area shape="rect" href="_textureless_renderer_8hpp.html" title="A renderer made to simply run a shader with some passed glyphs. VAOs vertexPosition (vec3),..." alt="" coords="912,229,1079,256"/>
+<area shape="rect" href="_basic_renderer_8cpp.html" title=" " alt="" coords="5,304,137,331"/>
+<area shape="rect" href="_bumpy_renderer_8hpp.html" title=" " alt="" coords="161,304,301,331"/>
+<area shape="rect" href="_font_renderer_8hpp.html" title=" " alt="" coords="326,304,451,331"/>
+<area shape="rect" href="_bumpy_renderer_8cpp.html" title=" " alt="" coords="161,379,301,405"/>
+<area shape="rect" href="_font_renderer_8cpp.html" title=" " alt="" coords="326,379,451,405"/>
+<area shape="rect" href="_debug_renderer_8cpp.html" title=" " alt="" coords="476,304,613,331"/>
+<area shape="rect" href="_f_b_o_renderer_8cpp.html" title=" " alt="" coords="637,304,764,331"/>
+<area shape="rect" href="_textureless_renderer_8cpp.html" title=" " alt="" coords="912,304,1079,331"/>
+<area shape="rect" href="_resource_manager_8cpp.html" title=" " alt="" coords="1103,229,1255,256"/>
+<area shape="rect" href="_x_m_l_data_types_8cpp.html" title=" " alt="" coords="1280,229,1417,256"/>
 </map>
 </div>
 </div>
 <p><a href="_shader_program_8tcc_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespace_b_a_r_e2_d"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_b_a_r_e2_d.html">BARE2D</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a0f41cfc335436ad30c889e9fc36d489d"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:a0f41cfc335436ad30c889e9fc36d489d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_b_a_r_e2_d.html#a0f41cfc335436ad30c889e9fc36d489d">BARE2D::ShaderProgram::setUniform&lt; glm::vec2 &gt;</a> (const std::string uniform, glm::vec2 *data, unsigned int num)</td></tr>
-<tr class="separator:a0f41cfc335436ad30c889e9fc36d489d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18f32d8a0a2a1287f6881211e926eb59"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:a18f32d8a0a2a1287f6881211e926eb59"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_b_a_r_e2_d.html#a18f32d8a0a2a1287f6881211e926eb59">BARE2D::ShaderProgram::setUniform&lt; glm::vec3 &gt;</a> (const std::string uniform, glm::vec3 *data, unsigned int num)</td></tr>
-<tr class="separator:a18f32d8a0a2a1287f6881211e926eb59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2186092617a84ef0b9e1ad955f422a33"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:a2186092617a84ef0b9e1ad955f422a33"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_b_a_r_e2_d.html#a2186092617a84ef0b9e1ad955f422a33">BARE2D::ShaderProgram::setUniform&lt; glm::vec4 &gt;</a> (const std::string uniform, glm::vec4 *data, unsigned int num)</td></tr>
-<tr class="separator:a2186092617a84ef0b9e1ad955f422a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e090e14ff39e6b6b7739e7902c48023"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:a2e090e14ff39e6b6b7739e7902c48023"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_b_a_r_e2_d.html#a2e090e14ff39e6b6b7739e7902c48023">BARE2D::ShaderProgram::setUniform&lt; glm::ivec2 &gt;</a> (const std::string uniform, glm::ivec2 *data, unsigned int num)</td></tr>
-<tr class="separator:a2e090e14ff39e6b6b7739e7902c48023"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8b455c1e00b121342d74e0e778bef75"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:af8b455c1e00b121342d74e0e778bef75"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_b_a_r_e2_d.html#af8b455c1e00b121342d74e0e778bef75">BARE2D::ShaderProgram::setUniform&lt; glm::ivec3 &gt;</a> (const std::string uniform, glm::ivec3 *data, unsigned int num)</td></tr>
-<tr class="separator:af8b455c1e00b121342d74e0e778bef75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7db8ca430581d70a1b1a8d9450f3581"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:ab7db8ca430581d70a1b1a8d9450f3581"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_b_a_r_e2_d.html#ab7db8ca430581d70a1b1a8d9450f3581">BARE2D::ShaderProgram::setUniform&lt; glm::ivec4 &gt;</a> (const std::string uniform, glm::ivec4 *data, unsigned int num)</td></tr>
-<tr class="separator:ab7db8ca430581d70a1b1a8d9450f3581"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac75bb26ffe66fb7ed5cfdb07be799714"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:ac75bb26ffe66fb7ed5cfdb07be799714"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_b_a_r_e2_d.html#ac75bb26ffe66fb7ed5cfdb07be799714">BARE2D::ShaderProgram::setUniformMatrix&lt; glm::mat4 &gt;</a> (const std::string uniform, bool transpose, glm::mat4 *data, unsigned int num)</td></tr>
-<tr class="separator:ac75bb26ffe66fb7ed5cfdb07be799714"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

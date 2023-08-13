@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BARE2D: Source/BARECEGUI.hpp Source File</title>
+<title>BARE2D: BARECEGUI.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,6 +29,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="dark_ss.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -103,82 +104,82 @@ $(document).ready(function(){initNavTree('_b_a_r_e_c_e_g_u_i_8hpp_source.html','
 <div class="title">BARECEGUI.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_b_a_r_e_c_e_g_u_i_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">once</span></div>
+<a href="_b_a_r_e_c_e_g_u_i_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">GL</span><span class="preprocessor">/</span><span class="preprocessor">glew</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">CEGUI</span><span class="preprocessor">/</span><span class="preprocessor">CEGUI</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">CEGUI</span><span class="preprocessor">/</span><span class="preprocessor">RendererModules</span><span class="preprocessor">/</span><span class="preprocessor">OpenGL</span><span class="preprocessor">/</span><span class="preprocessor">GL3Renderer</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">glm</span><span class="preprocessor">/</span><span class="preprocessor">glm</span><span class="preprocessor">.</span><span class="preprocessor">hpp</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">SDL2</span><span class="preprocessor">/</span><span class="preprocessor">SDL_events</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;CEGUI/CEGUI.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;CEGUI/RendererModules/OpenGL/GL3Renderer.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL_events.h&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace</span> <a class="code" href="namespace_b_a_r_e2_d.html">BARE2D</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_b_a_r_e2_d.html">BARE2D</a> {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html">   11</a></span>&#160;    <span class="keyword">struct</span> <a class="code" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html">CEGUIContextWrapper</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html#ab371b920c909d36faf02e2af42e47a78">   12</a></span>&#160;        CEGUI::OpenGL3Renderer* <a class="code" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html#ab371b920c909d36faf02e2af42e47a78">renderer</a> = <span class="keywordtype">nullptr</span>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html#adc541f6c8de00ccbd95d702118ec93be">   13</a></span>&#160;        CEGUI::GUIContext* <a class="code" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html#adc541f6c8de00ccbd95d702118ec93be">context</a> = <span class="keywordtype">nullptr</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html#a22ab46acc40e7333232ad005cb8a25a7">   14</a></span>&#160;        CEGUI::Window* <a class="code" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html#a22ab46acc40e7333232ad005cb8a25a7">rootWindow</a> = <span class="keywordtype">nullptr</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html">   11</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html">CEGUIContextWrapper</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html#ab371b920c909d36faf02e2af42e47a78">   12</a></span>&#160;        CEGUI::OpenGL3Renderer* <a class="code" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html#ab371b920c909d36faf02e2af42e47a78">renderer</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html#adc541f6c8de00ccbd95d702118ec93be">   13</a></span>&#160;        CEGUI::GUIContext* <a class="code" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html#adc541f6c8de00ccbd95d702118ec93be">context</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html#a22ab46acc40e7333232ad005cb8a25a7">   14</a></span>&#160;        CEGUI::Window* <a class="code" href="struct_b_a_r_e2_d_1_1_c_e_g_u_i_context_wrapper.html#a22ab46acc40e7333232ad005cb8a25a7">rootWindow</a> = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    };</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html">   17</a></span>&#160;    <span class="keyword">class</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html">BARECEGUI</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html">   17</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html">BARECEGUI</a></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html">BARECEGUI</a>* <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ab3f339793671b90bb449bf17a9d953ca">getInstance</a>();</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ad1850903003bf2b3b10608e6d3aa1f20">release</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">         * @brief Initializes all of the necessary stuff to use CEGUI!</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">         * @param resourceDirectory The directory that all of the resources lie in. Should follow CEGUI&#39;s specs.</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">         * @param numContexts The number of different contexts to create. Each context has the ability to handle input differently.</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a5efde9a21fff6c7e43ebc7c2c69ffe78">init</a>(std::string&amp; resourceDirectory, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numContexts);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">         * @brief Draws the GUI to the screen over top of what&#39;s already there.</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a1129545c46dc260d9ef466ca402a99a3">draw</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">         * @brief Updates the amount of time passed in CEGUI.</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a0650f87bb7a1e8f6f8dddef1faf67da6">update</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">         * @brief Sets the active context</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">         * @param contextIndex The index of the context to activate. Must be less than numContexts from init().</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#abda90814bb22fe7f7b64dc8922f29b58">setActiveContext</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> contextIndex);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">         * @brief Sets the image of the mouse cursor.</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">         * @param imageFile The file to set the mouse cursor&#39;s image from.</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a69778a5ba2537399cc419de8cd55f4bf">setMouseCursor</a>(std::string imageFile);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">         * @brief Shows/hides the mouse cursor. Useful for cutscenes!</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">         * @param shown True = shows the cursor, false = hides it.</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a40870938bcb2207329998b68bb11c70e">setMouseCursorShown</a>(<span class="keywordtype">bool</span> shown);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">         * @brief Handles and propagates input.</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">         * @param evnt The SDL_Event to add.</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a770264d8c510bbfe0585abe493011ed7">handleSDLEvent</a>(SDL_Event&amp; evnt);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">         * @brief Loads a scheme file from resourceDirectory/schemes</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">         * @param schemeFile The file to load from</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a3737b344e427bd5b2f92fa08f1e44885">loadScheme</a>(std::string schemeFile);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">         * @brief Sets the current font to some font.</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">         * @param fontFile The file of the font to be loaded.</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ac931fcf21bb8ae2289c31ab0370772bd">setFont</a>(std::string fontFile);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">         * @brief Creates a widget of some type.</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">         * @param type The type of window - should generally be &quot;[YourScheme]/[Label,Button,FrameWindow,etc.]&quot;. These strings are available in the scheme files.</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">         * @param destRectPercent The destination+rectangle of the widget, in terms of percentages of the screen.</span></div>
@@ -187,38 +188,39 @@ $(document).ready(function(){initNavTree('_b_a_r_e_c_e_g_u_i_8hpp_source.html','
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">         * @param name The name of the window - defaults to a unique identifier. Only set this if a pointer of the window cannot be retained/propagated as a handle.</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">         * @return A pointer to the new CEGUI::Window - can be casted to some child type generally.</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">         */</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        CEGUI::Window* <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a4887d95ac1f2dc8becc75cf11d6cf9dd">createWidget</a>(std::string type, glm::vec4 destRectPercent, glm::vec4 destRectPixels, CEGUI::Window* parent = <span class="keywordtype">nullptr</span>, std::string name = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        CEGUI::Window* <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a4887d95ac1f2dc8becc75cf11d6cf9dd">createWidget</a>(std::string type, glm::vec4 destRectPercent, glm::vec4 destRectPixels, CEGUI::Window* parent = <span class="keyword">nullptr</span>, std::string name = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">         * @return The OpenGL3Renderer that the context &quot;owns&quot; </span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">         */</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        CEGUI::OpenGL3Renderer* <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aa3c3feb09e2c328426f057336e6ad2ae">getRenderer</a>();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        CEGUI::OpenGL3Renderer* <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aa3c3feb09e2c328426f057336e6ad2ae">getRenderer</a>();<span class="comment"></span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">         * @return The GUIContext that the context &quot;owns&quot; </span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        CEGUI::GUIContext* <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aecad6d159917b2821f9fcb4429adccea">getContext</a>();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#ade528b2e05e0562fd5ecda850a49ec14">BARECEGUI</a>();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        ~<a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a44960ac3a16b7b657636483f24d625ec">BARECEGUI</a>();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a44960ac3a16b7b657636483f24d625ec">~BARECEGUI</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        </div>
 <div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a15472ee784e1eaf1d97876cc3565f477">  100</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html">BARECEGUI</a>* <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a15472ee784e1eaf1d97876cc3565f477">m_instance</a>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    </div>
 <div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a497b5ecd274895ea0a74d6603cd0ffb9">  102</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a497b5ecd274895ea0a74d6603cd0ffb9">m_initialized</a>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="comment">/**</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment"></span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">        /**</span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">         * @brief Frees all necessary memory and unloads resources. Destroys root + children windows.</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a6b69baba42d43ae2761bda9ace328bc4">destroy</a>();</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aa250b89b06d146fb95c65bf94e618da9">  109</a></span>&#160;        <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aa250b89b06d146fb95c65bf94e618da9">std</a>::<a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aa250b89b06d146fb95c65bf94e618da9">vector</a>&lt;<a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aa250b89b06d146fb95c65bf94e618da9">CEGUIContextWrapper</a>*&gt; <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aa250b89b06d146fb95c65bf94e618da9">m_contexts</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aa250b89b06d146fb95c65bf94e618da9">  109</a></span>&#160;        std::vector&lt;CEGUIContextWrapper*&gt; <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aa250b89b06d146fb95c65bf94e618da9">m_contexts</a>;</div>
 <div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aa32fb1c941f5296b050622675a1361d4">  110</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#aa32fb1c941f5296b050622675a1361d4">m_lastTime</a> = 0;</div>
 <div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a731fc238d7e53bda90c7658b84893051">  111</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#a731fc238d7e53bda90c7658b84893051">m_activeContext</a> = 0;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    };</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    </div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    CEGUI::Key::Scan <a class="code" href="namespace_b_a_r_e2_d.html#a4308f8684a05ffbf8ef36cd49541765b">SDLKeyToCEGUIKey</a>(SDL_Keycode key);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    CEGUI::MouseButton <a class="code" href="namespace_b_a_r_e2_d.html#add368291490f34b060048b5cbb5245f9">SDLButtonToCEGUIButton</a>(Uint8 sdlButton);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i_html_abda90814bb22fe7f7b64dc8922f29b58"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_b_a_r_e_c_e_g_u_i.html#abda90814bb22fe7f7b64dc8922f29b58">BARE2D::BARECEGUI::setActiveContext</a></div><div class="ttdeci">void setActiveContext(unsigned int contextIndex)</div><div class="ttdoc">Sets the active context.</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_r_e_c_e_g_u_i_8cpp_source.html#l00173">BARECEGUI.cpp:173</a></div></div>

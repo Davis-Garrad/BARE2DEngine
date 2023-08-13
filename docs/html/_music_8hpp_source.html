@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BARE2D: Source/Music.hpp Source File</title>
+<title>BARE2D: Music.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,6 +29,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="dark_ss.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -103,17 +104,18 @@ $(document).ready(function(){initNavTree('_music_8hpp_source.html',''); initResi
 <div class="title">Music.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_music_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">once</span></div>
+<a href="_music_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">SDL2</span><span class="preprocessor">/</span><span class="preprocessor">SDL_mixer</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL_mixer.h&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace</span> <a class="code" href="namespace_b_a_r_e2_d.html">BARE2D</a> {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_b_a_r_e2_d.html">BARE2D</a> {</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="struct_b_a_r_e2_d_1_1_music.html">    7</a></span>&#160;    <span class="keyword">struct</span> <a class="code" href="struct_b_a_r_e2_d_1_1_music.html">Music</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="struct_b_a_r_e2_d_1_1_music.html#a5f2efbe8587e9f5e8a03492e868cf848">    8</a></span>&#160;        Mix_Music* <a class="code" href="struct_b_a_r_e2_d_1_1_music.html#a5f2efbe8587e9f5e8a03492e868cf848">music</a> = <span class="keywordtype">nullptr</span>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="struct_b_a_r_e2_d_1_1_music.html">    7</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_b_a_r_e2_d_1_1_music.html">Music</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="struct_b_a_r_e2_d_1_1_music.html#a5f2efbe8587e9f5e8a03492e868cf848">    8</a></span>&#160;        Mix_Music* <a class="code" href="struct_b_a_r_e2_d_1_1_music.html#a5f2efbe8587e9f5e8a03492e868cf848">music</a> = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    };</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespace_b_a_r_e2_d_html"><div class="ttname"><a href="namespace_b_a_r_e2_d.html">BARE2D</a></div><div class="ttdef"><b>Definition:</b> <a href="_app_8cpp_source.html#l00013">App.cpp:13</a></div></div>

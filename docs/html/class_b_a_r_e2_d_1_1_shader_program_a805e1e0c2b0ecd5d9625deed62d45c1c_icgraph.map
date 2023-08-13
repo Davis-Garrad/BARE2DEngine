@@ -1,4 +1,10 @@
 <map id="BARE2D::ShaderProgram::compileShadersFromSource" name="BARE2D::ShaderProgram::compileShadersFromSource">
-<area shape="rect" id="node1" title="Similar to compileShaders, this just compiles the shaders." alt="" coords="228,5,423,47"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_debug_renderer.html#adfa84d84a1525f62c888ecdcdc3e874a" title="Initializes with very rudimentary shaders (hardcoded), adds vertex attributes." alt="" coords="5,5,180,47"/>
+<area shape="rect" id="node1" title="Similar to compileShaders, this just compiles the shaders." alt="" coords="496,168,691,209"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_shader_program.html#acf78cf9b4988abf40d62d67471a168a3" title="Compiles the shaders. Does not link them." alt="" coords="265,103,440,144"/>
+<area shape="rect" id="node7" href="$class_b_a_r_e2_d_1_1_debug_renderer.html#adfa84d84a1525f62c888ecdcdc3e874a" title="Initializes with very rudimentary shaders (hardcoded), adds vertex attributes." alt="" coords="265,168,440,209"/>
+<area shape="rect" id="node8" href="$class_b_a_r_e2_d_1_1_resource_manager.html#a5dbae5c36f78ce4feb0ec3c0b8d1728a" title="Loads some shaders from their source. Does not cache." alt="" coords="257,233,448,275"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_basic_renderer.html#aa228c647d7fe74772a4736d51fdb7796" title="Initializes all necessary bits of the renderer." alt="" coords="22,5,193,47"/>
+<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_f_b_o_renderer.html#ac1902310c37a001b0f6d53b7d6066867" title="Initializes all necessary bits of the renderer." alt="" coords="25,71,189,112"/>
+<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_textureless_renderer.html#a01951b878023daee5eef45428e8e858e" title="Initializes all necessary bits of the renderer." alt="" coords="5,136,209,177"/>
+<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_resource_manager.html#a00ef658172786a81106218cc6035bc13" title="Loads some shaders. Combines both to give a full shader program. Does not cache." alt="" coords="12,201,203,243"/>
 </map>

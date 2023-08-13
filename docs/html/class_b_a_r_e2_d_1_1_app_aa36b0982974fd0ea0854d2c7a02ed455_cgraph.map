@@ -1,8 +1,5 @@
 <map id="BARE2D::App::draw" name="BARE2D::App::draw">
-<area shape="rect" id="node1" title="Draws the current screen, based on that screen&#39;s drawing protocol." alt="" coords="5,123,148,149"/>
-<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_screen.html#abd0a8557f5ad544a0cf657b242197ad2" title="Draws anything and everything to the screen!" alt="" coords="213,5,374,32"/>
-<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_screen_list.html#a9fec8c53fa5b6d1bd38fc928ac27aea4" title=" " alt="" coords="220,57,367,98"/>
-<area shape="rect" id="node4" href="$class_b_a_r_e2_d_1_1_window.html#adce1ecfb27ebd91fd455d1e04f855496" title="Returns the height of the window." alt="" coords="196,123,391,149"/>
-<area shape="rect" id="node5" href="$class_b_a_r_e2_d_1_1_screen.html#aece272b6c2301f4cbe8a20cff0474c4d" title=" " alt="" coords="202,173,385,200"/>
-<area shape="rect" id="node6" href="$class_b_a_r_e2_d_1_1_window.html#ae0055549c7e1f9b1e16e71b1cb17ac54" title="Returns the width of the window." alt="" coords="198,224,389,251"/>
+<area shape="rect" id="node1" title="Draws the current screen, based on that screen&#39;s drawing protocol." alt="" coords="5,31,148,57"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_window.html#adce1ecfb27ebd91fd455d1e04f855496" title="Returns the height of the window." alt="" coords="196,5,391,32"/>
+<area shape="rect" id="node3" href="$class_b_a_r_e2_d_1_1_window.html#ae0055549c7e1f9b1e16e71b1cb17ac54" title="Returns the width of the window." alt="" coords="198,56,389,83"/>
 </map>

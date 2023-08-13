@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BARE2D: Source/LuaScriptEngine_impl.tcc Source File</title>
+<title>BARE2D: LuaScriptEngine_impl.tcc Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,6 +29,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="dark_ss.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -103,44 +104,40 @@ $(document).ready(function(){initNavTree('_lua_script_engine__impl_8tcc_source.h
 <div class="title">LuaScriptEngine_impl.tcc</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_lua_script_engine__impl_8tcc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">once</span></div>
+<a href="_lua_script_engine__impl_8tcc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;#pragma once</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;#include &lt;string&gt;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="_b_a_r_e_errors_8hpp.html">&quot;BAREErrors.hpp&quot;</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;#include &quot;BAREErrors.hpp&quot;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace</span> <a class="code" href="namespace_b_a_r_e2_d.html">BARE2D</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_lua_script_engine.html#aef31946bb9843c75229281cdcc8a2031">   10</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_b_a_r_e2_d_1_1_lua_script_engine.html">LuaScriptEngine</a>::<a class="code" href="class_b_a_r_e2_d_1_1_lua_script_engine.html#aef31946bb9843c75229281cdcc8a2031">addValueToRegistry</a>(lua_State* L, T* value, std::string key) {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="comment">// Push the key</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;namespace BARE2D {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    template&lt;class T&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    void LuaScriptEngine::addValueToRegistry(lua_State* L, T* value, std::string key) {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        // Push the key</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        lua_pushstring(L, key.c_str());</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="comment">// Push the data (as a void*)</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        lua_pushlightuserdata(L, <span class="keyword">static_cast</span>&lt;<span class="keywordtype">void</span>*&gt;(value));</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">// Combine name and key in the registry.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        // Push the data (as a void*)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        lua_pushlightuserdata(L, static_cast&lt;void*&gt;(value));</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        // Combine name and key in the registry.</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        lua_settable(L, LUA_REGISTRYINDEX);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_b_a_r_e2_d_1_1_lua_script_engine.html#a7c0707d445e3a0e6068593ddff6e1f4c">   20</a></span>&#160;    T* <a class="code" href="class_b_a_r_e2_d_1_1_lua_script_engine.html">LuaScriptEngine</a>::<a class="code" href="class_b_a_r_e2_d_1_1_lua_script_engine.html#a7c0707d445e3a0e6068593ddff6e1f4c">getValueFromRegistry</a>(lua_State* L, std::string key) {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">// Put the key on the stack</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    template&lt;class T&gt;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    T* LuaScriptEngine::getValueFromRegistry(lua_State* L, std::string key) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        // Put the key on the stack</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        lua_pushstring(L, key.c_str());</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">// Get the element at key in tge registry table</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        // Get the element at key in tge registry table</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        lua_gettable(L, LUA_REGISTRYINDEX);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">// Turn the element into a void*</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span>* ret = lua_touserdata(L, -1);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        // Turn the element into a void*</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        void* ret = lua_touserdata(L, -1);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        lua_pop(L, 1);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">// convert to whatever type</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast</span>&lt;T*&gt;(ret);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        // convert to whatever type</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        return static_cast&lt;T*&gt;(ret);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_lua_script_engine_html"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_lua_script_engine.html">BARE2D::LuaScriptEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_lua_script_engine_8hpp_source.html#l00020">LuaScriptEngine.hpp:20</a></div></div>
-<div class="ttc" id="anamespace_b_a_r_e2_d_html"><div class="ttname"><a href="namespace_b_a_r_e2_d.html">BARE2D</a></div><div class="ttdef"><b>Definition:</b> <a href="_app_8cpp_source.html#l00013">App.cpp:13</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_lua_script_engine_html_aef31946bb9843c75229281cdcc8a2031"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_lua_script_engine.html#aef31946bb9843c75229281cdcc8a2031">BARE2D::LuaScriptEngine::addValueToRegistry</a></div><div class="ttdeci">static void addValueToRegistry(lua_State *L, T *value, std::string key)</div><div class="ttdoc">Adds a value to the Lua registry - this lets any C/C++ code use the value stored in the state (it is ...</div><div class="ttdef"><b>Definition:</b> <a href="_lua_script_engine__impl_8tcc_source.html#l00010">LuaScriptEngine_impl.tcc:10</a></div></div>
-<div class="ttc" id="aclass_b_a_r_e2_d_1_1_lua_script_engine_html_a7c0707d445e3a0e6068593ddff6e1f4c"><div class="ttname"><a href="class_b_a_r_e2_d_1_1_lua_script_engine.html#a7c0707d445e3a0e6068593ddff6e1f4c">BARE2D::LuaScriptEngine::getValueFromRegistry</a></div><div class="ttdeci">static T * getValueFromRegistry(lua_State *L, std::string key)</div><div class="ttdef"><b>Definition:</b> <a href="_lua_script_engine__impl_8tcc_source.html#l00020">LuaScriptEngine_impl.tcc:20</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

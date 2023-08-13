@@ -1,3 +1,4 @@
 <map id="BARE2D::XMLData::XMLData" name="BARE2D::XMLData::XMLData">
-<area shape="rect" id="node1" title="Just adds attributes, using the protected function addAttribute(AttributeBase* attr) or its vector co..." alt="" coords="5,29,208,56"/>
+<area shape="rect" id="node1" title="Just adds attributes, using the protected function addAttribute(AttributeBase* attr) or its vector co..." alt="" coords="5,5,208,32"/>
+<area shape="rect" id="node2" href="$class_b_a_r_e2_d_1_1_x_m_l_data.html#a128262a998e45f6f321de4b12448d02a" title="Constructs and adds an attribute to the data." alt="" coords="256,5,473,32"/>
 </map>
